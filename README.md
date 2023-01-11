@@ -1,3 +1,3 @@
 # Hello there
 
-You're a little early -- we aren't quite ready for visitors. Check back again soon?
+You're a little early -- there's nothing on `main` yet. Check back again soon?
