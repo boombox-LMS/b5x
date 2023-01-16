@@ -10,9 +10,7 @@ What is your name?
 </short-text-question>
 ```
 
-... will display like this in your student's browser:
-
-TODO: image, and add a little bit more markup up top
+... will display a one-line text input in the user's browser below the prompt "What is your name?".
 
 Boombox LMS can store the user's response, execute conditional logic based on the response content, and more.
 
@@ -67,25 +65,25 @@ Boombox LMS (invoked in programmatic commands as `b5x`) is a monorepo that conta
 
 Each of the packages below is written in TypeScript, unless otherwise noted.
 
-### @b5x/api ([docs](code/b5x-api/README.md))
+### @b5x/api
 
 An Express app responsible for receiving, storing, and retrieving content.
 
-### @b5x/cli ([docs](code/b5x-cli/README.md))
+### @b5x/cli
 
 A command-line tool for creating, publishing, and updating topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), then ships it to the server for storage.
 
-### @b5x/viewer ([docs](code/b5x-viewer/README.md))
+### @b5x/viewer
 
 A React app that renders content, receives user interactions, and ships updates to the backend (@b5x/api).
 
 The viewer app is written in JavaScript. It will be migrated to TypeScript eventually, but since the viewer's entire purpose is to fetch and render API data, it's most efficient to wait until the fragment designs have fully settled in the other packages.
 
-### @b5x/types ([docs](code/shared/b5x-types/README.md)) - shared by the other components
+### @b5x/types - shared by the other components
 
 A module of type definitions that are shared by the other components.
 
-### @b5x/conditions-manager ([docs](code/shared/b5x-conditions-manager/README.md)) - shared by the other components
+### @b5x/conditions-manager - shared by the other components
 
 A module responsible for creating, modifying, and checking conditions. Conditions can be used to determine whether a user has access to content, how the content should be rendered, etc.
 
