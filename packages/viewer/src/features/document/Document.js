@@ -79,7 +79,7 @@ export const Document = ({ documentUri }) => {
   } = api.endpoints.getResponses.useQuery(documentUri);
 
   if (documentIsLoading || responsesAreLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (documentHasError || responsesHaveError) {
     if (documentError.status === 403) {
       return (

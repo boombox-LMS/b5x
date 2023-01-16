@@ -60,7 +60,7 @@ export const Catalog = () => {
   let content;
 
   if (catalogIsLoading) {
-    content = <div>Loading ...</div>;
+    content = "";
   } else if (catalogLoadedSuccessfully) {
     let topicsToDisplay = [];
 

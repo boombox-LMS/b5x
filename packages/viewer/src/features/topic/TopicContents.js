@@ -66,7 +66,7 @@ export const TopicContents = () => {
 
   // wait for everything above to finish loading
   if (topicIsLoading || enrollmentIsLoading) {
-    return <LoadingOutlined />;
+    return null;
     // handle any errors
   } else if (topicHasError || enrollmentHasError) {
     return (

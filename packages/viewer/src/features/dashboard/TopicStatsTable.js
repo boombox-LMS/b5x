@@ -118,7 +118,7 @@ export const TopicStatsTable = () => {
   } = useGetTopicStatsQuery();
 
   if (topicsAreLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (isError) {
     return (
       <div>

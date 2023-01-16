@@ -136,7 +136,7 @@ export const UserProfile = () => {
   } = useGetUserProfileQuery({ username });
 
   if (userIsLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (userHasError) {
     return <div>User fetch error: {JSON.stringify(userError)}</div>;
   }

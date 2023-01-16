@@ -15,7 +15,7 @@ export const IssuesTable = () => {
   } = useGetIssuesQuery();
 
   if (issuesAreLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (isError) {
     return (
       <div>

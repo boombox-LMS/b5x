@@ -13,7 +13,7 @@ export const FeedbackTable = () => {
   } = useGetFeedbackQuery();
 
   if (ticketsAreLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (isError) {
     return (
       <div>

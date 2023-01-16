@@ -113,7 +113,7 @@ export const TicketsTable = ({ tickets }) => {
   } = useGetUserEmailsQuery();
 
   if (contributorEmailsAreLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (isError) {
     return (
       <div>

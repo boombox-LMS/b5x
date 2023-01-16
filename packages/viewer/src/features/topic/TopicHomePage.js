@@ -98,7 +98,7 @@ export const TopicHomePage = () => {
 
   // wait for everything above to finish loading
   if (topicIsLoading) {
-    return <LoadingOutlined />;
+    return null;
     // handle any errors
   } else if (topicHasError) {
     return (

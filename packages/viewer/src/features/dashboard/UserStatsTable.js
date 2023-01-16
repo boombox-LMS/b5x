@@ -55,7 +55,7 @@ export const UserStatsTable = () => {
   } = useGetUserStatsQuery();
 
   if (usersAreLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (isError) {
     return (
       <div>

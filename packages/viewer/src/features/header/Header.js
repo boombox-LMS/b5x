@@ -38,7 +38,7 @@ export const Header = () => {
   } = useGetCurrentUserInfoQuery();
 
   if (userIsLoading) {
-    return <LoadingOutlined />;
+    return null;
   } else if (userHasError) {
     return <div>User fetch error: {JSON.stringify(userError)}</div>;
   }
