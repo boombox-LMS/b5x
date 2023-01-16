@@ -1,0 +1,1 @@
+/Users/jengilbert/projects/boombox-lms/code/BOOMBOX-LMS-APP/shared/ConditionsChecker.ts

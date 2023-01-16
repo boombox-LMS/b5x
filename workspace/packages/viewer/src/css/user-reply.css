@@ -1,0 +1,21 @@
+.user-reply p {
+  margin: 0px;
+}
+
+.user-reply {
+  background-color: var(--light-gray);
+  padding: 0.6em 0.7em;
+  border-radius: 0.3em;
+  border: 1.5px solid var(--light-gray); /* TODO: figure out why the global border-box does not seem to be working */
+}
+
+.user-reply--active {
+  background-color: var(--completed-light);
+  border: 1.5px solid var(--completed-dark);
+  color: var(--completed-dark);
+  font-weight: 500;
+}
+
+.user-reply + .user-reply {
+  margin-top: 7px;
+}

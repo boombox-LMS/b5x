@@ -1,0 +1,7 @@
+.activity-indicator {
+  transition: 0.4s;
+}
+
+.activity-indicator:hover {
+  transform: translateY(-3px);
+}

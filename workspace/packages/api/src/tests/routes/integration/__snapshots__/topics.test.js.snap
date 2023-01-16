@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Topic registration flow is operational topics.register allows registration of unique slug 1`] = `
+{
+  "succeeded": true,
+}
+`;
+
+exports[`Topic registration flow is operational topics.register rejects duplicate slug registration 1`] = `
+{
+  "error": "Topic slug brand-new-topic-slug is already in use",
+  "succeeded": false,
+}
+`;

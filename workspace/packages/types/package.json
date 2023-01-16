@@ -1,0 +1,21 @@
+{
+  "name": "@b5x/types",
+  "version": "0.1.0",
+  "description": "A collection of shared Boombox types.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.b5x src/**/db/migrations/*.js dist/",
+    "build": "pnpm clean && tsc && pnpm copy-files"
+  },
+  "dependencies": {
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts"
+  }
+}

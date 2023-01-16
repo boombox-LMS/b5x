@@ -1,0 +1,19 @@
+title: Access Test Topic
+cover-image: padlock.jpg
+slug: access-test-topic
+subtitle: A topic used to test group access configuration.
+group-access-levels:
+  blocked:
+    - att-blocked
+  available:
+    - att-available
+  recommended:
+    - att-recommended
+  assigned:
+    - att-assigned
+  reviewable:
+    - att-reviewable
+  facilitated:
+    - att-facilitated
+  owned:
+    - att-owned

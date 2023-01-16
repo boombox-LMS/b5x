@@ -1,0 +1,216 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Documentation</title><meta name="description" content="Documentation for Documentation"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Documentation</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<h2>Documentation</h2></div>
+<div class="tsd-panel tsd-typography">
+<a href="#boombox-lms" id="boombox-lms" style="color: inherit; text-decoration: none;">
+  <h1>Boombox LMS</h1>
+</a>
+<p>Boombox LMS allows you to build interactive learning experiences using plain text.</p>
+<p>For example, this markup:</p>
+<pre><code><span class="hl-0">&lt;</span><span class="hl-1">short</span><span class="hl-0">-</span><span class="hl-1">text</span><span class="hl-0">-</span><span class="hl-1">question</span><span class="hl-0">&gt;</span><br/><span class="hl-1">What</span><span class="hl-0"> </span><span class="hl-1">is</span><span class="hl-0"> </span><span class="hl-1">your</span><span class="hl-0"> </span><span class="hl-1">name</span><span class="hl-0">?</span><br/><span class="hl-0">&lt;/</span><span class="hl-1">short</span><span class="hl-0">-</span><span class="hl-1">text</span><span class="hl-0">-</span><span class="hl-1">question</span><span class="hl-0">&gt;</span>
+</code></pre>
+<p>... will display like this in your student&#39;s browser:</p>
+<p>TODO: image, and add a little bit more markup up top</p>
+<p>Boombox LMS can store the user&#39;s response, execute conditional logic based on the response content, and more.</p>
+
+<a href="#key-advantages" id="key-advantages" style="color: inherit; text-decoration: none;">
+  <h1>Key advantages</h1>
+</a>
+<ul>
+<li><strong>Speed</strong>. Teach as fast as you can type. (Or use the built-in VSCode snippets to teach even faster.)</li>
+<li><strong>Ease of maintenance</strong>. Search for anything, it&#39;s all there in the markup. Quickly change any content you want. Ship it with a single command in Terminal. Repeat.</li>
+<li><strong>Collaboration</strong>. The markup is designed to be as explicit as possible, so subject-matter experts can contribute without needing to learn an LMS.</li>
+<li><strong>Observability</strong>. Easily monitor the health of a given piece of content. When was it last updated? What issues have been reported? How highly is it rated? How many learners have completed it?</li>
+<li><strong>Customization</strong>. Display content conditionally based on a learner&#39;s answer to a question.</li>
+<li><strong>Content quality</strong>. Boombox automates the production of fun interactions that would take a long time to build by hand.</li>
+</ul>
+
+<a href="#the-markup-format-b-xml" id="the-markup-format-b-xml" style="color: inherit; text-decoration: none;">
+  <h1>The markup format: B-XML</h1>
+</a>
+<p>Boombox markup is just XML markup that upholds four key conventions:</p>
+<ul>
+<li>Interactive, animated, or visual components can be achieved by the supported proprietary XML tags, such as <code>diagram</code>, <code>slideshow</code>, and <code>multi-select-question</code>. Only the supported XML tags are allowed in the markup.</li>
+<li>Markdown is allowed inside of any XML tags that would logically contain user-facing verbiage/images/links etc. This both drastically reduces visual clutter in the file and drastically increases content production speed.</li>
+<li>Each file has an implicit root <code>&lt;document&gt;</code> XML tag. Thanks to that implied root tag, a pure Markdown file is valid B-XML. This flattens the content-creation learning curve: start with Markdown, then learn as you go.</li>
+<li>Because HTML is considered valid Markdown, HTML tags are also allowed anywhere Markdown is allowed. In other words: build whatever you want, even if B-XML doesn&#39;t have a dedicated XML tag for it.</li>
+</ul>
+
+<a href="#warning" id="warning" style="color: inherit; text-decoration: none;">
+  <h1>WARNING</h1>
+</a>
+<p>Boombox authors are the admins of their content; the platform intentionally does not sanitize authored content. Empowering trusted authors is the entire point of the platform.</p>
+<p>While Boombox is versatile enough to be used in a wide range of contexts, it was created for the specific use case of internal corporate knowledge-sharing. It&#39;s designed for use by the employees of a company, and other contexts involving trust, administrative oversight, and accountability.</p>
+<p><strong><span style='color: red'>When deployed in a public context with broad authoring permissions, Boombox has major security vulnerabilities <em>by design</em>. Simply put: Don&#39;t do that.</span></strong></p>
+
+<a href="#architecture-summary" id="architecture-summary" style="color: inherit; text-decoration: none;">
+  <h1>Architecture summary</h1>
+</a>
+
+<a href="#content-abstractions" id="content-abstractions" style="color: inherit; text-decoration: none;">
+  <h2>Content abstractions</h2>
+</a>
+<p>Content is delivered in three layers of abstraction:</p>
+<ul>
+<li><strong>Topics</strong> are modular units of content. All content is delivered within a topic, even if it&#39;s a very short topic.<ul>
+<li>Topics aim to cover an individual subject area, such as &quot;Intro to SQL&quot;.</li>
+<li>Each topic should function independently of other topics, avoiding brittle dependencies such as continuing a particular storyline.</li>
+<li>Topics can be chained into a series using <strong>prerequisites</strong>, but dependencies are still avoided, since a learner may have existing knowledge that prompts them to skip or skim a prerequisite.</li>
+</ul>
+</li>
+<li><strong>Documents</strong> are individual pages (or chapters, if you like) within a topic. They function as modules to break the topic into more manageable pieces.<ul>
+<li>Each document has its own link in the topic&#39;s sidebar nav, which serves as the topic&#39;s table of contents.</li>
+<li>Each document has access to data from the other documents in the same topic.<ul>
+<li>For example, document B can be configured to only be shown if the user makes a specific multiple-choice selection in document A. This is true regardless of which one comes first, though it is logically more common for later documents to depend on earlier ones.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Fragments</strong> are the most granular level of content; each document is made up of one or more fragments.<ul>
+<li>The number of fragments in a document is largely determined by how many different content types it contains.<ul>
+<li>A short-text question is an individual fragment, as is a multiple-choice question. Each of these fragment types has its own compiling and rendering logic.</li>
+</ul>
+</li>
+<li>Fragments are intended to be displayable on their own, independently of the document they belong to. This would be useful in grading flows, analytical dashboards, or other facilitation/administrative contexts that don&#39;t exist quite yet.</li>
+</ul>
+</li>
+</ul>
+
+<a href="#componentspackages-and-their-high-level-responsibilities" id="componentspackages-and-their-high-level-responsibilities" style="color: inherit; text-decoration: none;">
+  <h2>Components/packages and their high-level responsibilities</h2>
+</a>
+<p>Boombox LMS (invoked in programmatic commands as <code>b5x</code>) is a monorepo that contains several Node packages.</p>
+<p>Each of the packages below is written in TypeScript, unless otherwise noted.</p>
+
+<a href="#b5xapi-docs" id="b5xapi-docs" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/api (<a href="code/b5x-api/README.md">docs</a>)</h3>
+</a>
+<p>An Express app responsible for receiving, storing, and retrieving content.</p>
+
+<a href="#b5xcli-docs" id="b5xcli-docs" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/cli (<a href="code/b5x-cli/README.md">docs</a>)</h3>
+</a>
+<p>A command-line tool for creating, publishing, and updating topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), then ships it to the server for storage.</p>
+
+<a href="#b5xviewer-docs" id="b5xviewer-docs" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/viewer (<a href="code/b5x-viewer/README.md">docs</a>)</h3>
+</a>
+<p>A React app that renders content, receives user interactions, and ships updates to the backend (@b5x/api).</p>
+<p>The viewer app is written in JavaScript. It will be migrated to TypeScript eventually, but since the viewer&#39;s entire purpose is to fetch and render API data, it&#39;s most efficient to wait until the fragment designs have fully settled in the other packages.</p>
+
+<a href="#b5xtypes-docs---shared-by-the-other-components" id="b5xtypes-docs---shared-by-the-other-components" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/types (<a href="code/shared/b5x-types/README.md">docs</a>) - shared by the other components</h3>
+</a>
+<p>A module of type definitions that are shared by the other components.</p>
+
+<a href="#b5xconditions-manager-docs---shared-by-the-other-components" id="b5xconditions-manager-docs---shared-by-the-other-components" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/conditions-manager (<a href="code/shared/b5x-conditions-manager/README.md">docs</a>) - shared by the other components</h3>
+</a>
+<p>A module responsible for creating, modifying, and checking conditions. Conditions can be used to determine whether a user has access to content, how the content should be rendered, etc.</p>
+
+<a href="#putting-it-all-together-the-story-of-a-topic-build" id="putting-it-all-together-the-story-of-a-topic-build" style="color: inherit; text-decoration: none;">
+  <h1>Putting it all together: The story of a topic build</h1>
+</a>
+<p><em>This isn&#39;t meant to be a tutorial, just a quick overview of the content-publishing flow. Also, v1 of Boombox LMS doesn&#39;t exist yet, so while the vast majority of this functionality exists today, it&#39;s still being refactored for launch.</em></p>
+<p>Let&#39;s say that Jen wants to create a new topic, &quot;Intro to Boombox LMS.&quot; At a high level, here&#39;s how that would happen.</p>
+
+<a href="#initializing-a-topic" id="initializing-a-topic" style="color: inherit; text-decoration: none;">
+  <h2>Initializing a topic</h2>
+</a>
+<p>Using <code>@b5x/cli</code>, the command-line interface, Jen can initialize a topic within any directory she&#39;d like to work in:</p>
+<pre><code><span class="hl-1">cd</span><br/><span class="hl-1">b5x</span><span class="hl-0"> </span><span class="hl-1">init</span>
+</code></pre>
+<p>The <code>b5x init</code> command will ask Jen a few questions about how the topic should be configured (including what to use as the topic&#39;s identifier -- we&#39;ll go with <code>intro-to-boombox-lms</code>), then create a folder:</p>
+<p>|-- intro-to-boombox-lms
+| |-- cli-data
+| |-- documents
+| |-- images
+| |-- topic-config.yaml</p>
+<p>The <code>cli-data</code> folder is just for <code>@b5x/cli</code>&#39;s use, but Jen can edit the other files and folders.</p>
+
+<a href="#editing-a-topic" id="editing-a-topic" style="color: inherit; text-decoration: none;">
+  <h2>Editing a topic</h2>
+</a>
+<p>From here, Jen has two main tasks:</p>
+<ul>
+<li>Add files to the <code>documents</code> folder, one <code>.md</code> file per document. The files will be written in XML-enhanced Markdown (aka B-XML). Plain Markdown is fine, or Jen can add tags like <code>short-text-question</code> to enhance the content.</li>
+<li>Edit the topic configuration to set access permissions, prerequisites, the cover image, etc.</li>
+</ul>
+<p>To see what the final edited result might look like, view the <a href="code/b5x-cli/example-topics/intro-to-boombox-lms/"><em>Intro to Boombox LMS</em> example topic directory</a>.</p>
+
+<a href="#previewing-and-publishing-a-topic" id="previewing-and-publishing-a-topic" style="color: inherit; text-decoration: none;">
+  <h2>Previewing and publishing a topic</h2>
+</a>
+<p>To preview a topic, Jen can simply publish it without editing its access permissions; the access permissions default to the author only.</p>
+<p><code>b5x publish intro-to-boombox-lms</code></p>
+<p>To publish the topic to a broader audience, Jen can revise the topic&#39;s permissions in its <code>topic-config.yaml</code> file, and publish a new version.</p>
+<p>Either way, the publish command executes the following steps:</p>
+<ul>
+<li>Combine all of the documents as <code>&lt;document&gt;</code> tags nested inside of a <code>&lt;topic&gt;</code> tag</li>
+<li>Parse the resulting XML into API-consumable JSON data (see the <a href="code/b5x-api/src/db/manager/subwrappers/seeder/defaultTopicFiles/intro-to-boombox-lms-vseed.b5x">seed file for <em>Intro to Boombox LMS</em></a>), with an extra step of converting any text content to HTML strings using a Markdown parser, in case they contain Markdown syntax</li>
+<li>Ship the JSON to an instance of <code>@b5x/api</code>, the backend server app.</li>
+</ul>
+
+<a href="#viewing-a-topic" id="viewing-a-topic" style="color: inherit; text-decoration: none;">
+  <h2>Viewing a topic</h2>
+</a>
+<p>Once the topic is published, it can be viewed in <code>@b5x/viewer</code>, the front-end app. The learner can either navigate to the topic from the catalog of topics, or go directly to the topic using its dedicated URL.</p>
+<p>Either way, when the learner launches the topic, they are auto-enrolled in it; the enrollment represents their individual relationship to the topic, and a way to store their challenge responses and other data related to the topic.</p>
+<p>A React component has been defined to render each fragment type (example: <a href="code/b5x-viewer/src/features/fragment/SingleSelectQuestion.js">the React component that renders the <code>SingleSelectQuestion</code> fragment type</a>). The viewer app displays each document by rendering one fragment at a time, looking up the appropriate React component for each fragment it encounters.</p>
+
+<a href="#analyzing-a-topic" id="analyzing-a-topic" style="color: inherit; text-decoration: none;">
+  <h2>Analyzing a topic</h2>
+</a>
+<p>The admin dashboards in <code>@b5x/viewer</code> are still rudimentary, but eventually, an author should be able to view a full report of topic stats in the viewer app, such as</p>
+<ul>
+<li>How many people enrolled in the topic</li>
+<li>How many people completed the topic (and where everyone else stopped)</li>
+<li>The topic&#39;s average NPS score</li>
+<li>The average time taken to complete the topic</li>
+<li>Etc.</li>
+</ul>
+
+<a href="#transitioning-from-learner-to-author" id="transitioning-from-learner-to-author" style="color: inherit; text-decoration: none;">
+  <h2>Transitioning from learner to author</h2>
+</a>
+<p>From their user profile on the <code>@b5x/viewer</code> app, anyone can generate an API key and become a content author themselves. <code>@b5x/cli</code> will authenticate them with that key anytime it publishes content to <code>@b5x/api</code>. Aaand now we&#39;ve come full circle!</p>
+</div></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current selected"><a href="modules.html">Documentation</a>
+<ul>
+<li class="tsd-kind-module"><a href="modules/_b5x_api.html">@b5x/api</a></li>
+<li class="tsd-kind-module"><a href="modules/_b5x_cli.html">@b5x/cli</a></li>
+<li class="tsd-kind-module"><a href="modules/_b5x_conditions_manager.html">@b5x/conditions-<wbr/>manager</a></li>
+<li class="tsd-kind-module"><a href="modules/_b5x_types.html">@b5x/types</a></li></ul></li></ul></div></details></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="assets/main.js"></script></body></html>

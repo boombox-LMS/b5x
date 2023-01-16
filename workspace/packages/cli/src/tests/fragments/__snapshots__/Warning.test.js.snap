@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Warning fragment builds as expected The parsed warning fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Warning",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "1bd17d703e9725c5954092887b7aeae8",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

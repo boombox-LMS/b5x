@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Troubleshooter fragment builds as expected The parsed troubleshooter fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Troubleshooter",
+  "contents": "",
+  "data": Object {
+    "issues": Array [
+      Object {
+        "steps": Array [
+          "<p>Verify that your test file name ends in <code>_test.py</code>.</p>
+",
+          "<p>Use <code>pwd</code> to ensure that you aren&#39;t running tests in the wrong location.</p>
+",
+        ],
+        "title": "<p>I don&#39;t see any failing tests.</p>
+",
+      },
+      Object {
+        "steps": Array [
+          "<p>Verify that you&#39;re on the VPN.</p>
+",
+          "<p>Use <code>which aws-okta</code> to verify that aws-okta is installed on your system.</p>
+",
+        ],
+        "title": "<p>I get a &quot;not authorized&quot; error.</p>
+",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "736b3b85c7e2e2b3a942cb668fa98f07",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;

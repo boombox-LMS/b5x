@@ -1,0 +1,7 @@
+# Ignore all Markdown files
+*.md
+
+# Ignore generated files
+workspace/**/build
+workspace/**/dist
+workspace/docs

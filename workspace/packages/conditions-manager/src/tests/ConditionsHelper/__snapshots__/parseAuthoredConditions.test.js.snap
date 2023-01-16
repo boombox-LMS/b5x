@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConditionsHelper.parseAuthoredConditions is working as expected complex parseAuthoredConditions results match snapshots 1`] = `
+[
+  [
+    {
+      "data": {
+        "alias": "reader-mood",
+        "operator": "is",
+        "targetValue": "good",
+      },
+      "type": "condition",
+    },
+  ],
+  {
+    "data": "and",
+    "type": "conjunction",
+  },
+  [
+    {
+      "data": {
+        "alias": "favorite-color",
+        "operator": "is",
+        "targetValue": "blue",
+      },
+      "type": "condition",
+    },
+  ],
+  {
+    "data": "and",
+    "type": "conjunction",
+  },
+  [
+    {
+      "data": {
+        "alias": "location",
+        "operator": "is",
+        "targetValue": "Seattle",
+      },
+      "type": "condition",
+    },
+  ],
+]
+`;
+
+exports[`ConditionsHelper.parseAuthoredConditions is working as expected complex parseAuthoredConditions results match snapshots 2`] = `
+[
+  [
+    [
+      {
+        "data": {
+          "alias": "reader-mood",
+          "operator": "is",
+          "targetValue": "good",
+        },
+        "type": "condition",
+      },
+    ],
+    {
+      "data": "and",
+      "type": "conjunction",
+    },
+    [
+      {
+        "data": {
+          "alias": "favorite-color",
+          "operator": "is",
+          "targetValue": "blue",
+        },
+        "type": "condition",
+      },
+    ],
+  ],
+  {
+    "data": "or",
+    "type": "conjunction",
+  },
+  [
+    {
+      "data": {
+        "alias": "location",
+        "operator": "is",
+        "targetValue": "Seattle",
+      },
+      "type": "condition",
+    },
+  ],
+]
+`;
+
+exports[`ConditionsHelper.parseAuthoredConditions is working as expected complex parseAuthoredConditions results match snapshots 3`] = `
+[
+  [
+    {
+      "data": {
+        "alias": "reader-mood",
+        "operator": "is",
+        "targetValue": "good",
+      },
+      "type": "condition",
+    },
+  ],
+  {
+    "data": "or",
+    "type": "conjunction",
+  },
+  [
+    [
+      {
+        "data": {
+          "alias": "favorite-color",
+          "operator": "is",
+          "targetValue": "blue",
+        },
+        "type": "condition",
+      },
+    ],
+    {
+      "data": "and",
+      "type": "conjunction",
+    },
+    [
+      {
+        "data": {
+          "alias": "location",
+          "operator": "is",
+          "targetValue": "Seattle",
+        },
+        "type": "condition",
+      },
+    ],
+  ],
+]
+`;

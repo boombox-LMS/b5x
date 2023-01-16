@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The UserReply fragment builds as expected The parsed user-reply fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "UserReply",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "e84f8442e5279f45091e10d8e2ce2088",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

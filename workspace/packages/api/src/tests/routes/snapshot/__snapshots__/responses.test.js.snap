@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Responses routes should match expectations responses.create matches expectations response.create matches the snapshot on file 1`] = `
+{
+  "fragmentUri": "boombox-feature-utopia-vseed_short-text-question_name",
+  "status": "completed",
+  "value": "short-text-answer (edited to add: this text right here)",
+}
+`;

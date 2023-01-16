@@ -1,0 +1,7 @@
+title: Intro to SQL
+cover-image: sql.jpg
+slug: filler-topic-1
+subtitle: A beginner's guide to querying data in Mode
+group-access-levels:
+  available:
+    - all

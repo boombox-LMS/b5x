@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The SelectQuestion fragment returns the expected data for multi-select questions The parsed multi-select-question fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "MultiSelectQuestion",
+  "contents": "",
+  "data": Object {
+    "choices": Array [
+      Object {
+        "contents": "Pink",
+        "value": "pink",
+      },
+      Object {
+        "contents": "Green",
+        "value": "green",
+      },
+      Object {
+        "contents": "Blue",
+        "value": "blue",
+      },
+      Object {
+        "contents": "Purple",
+        "value": "purple",
+      },
+      Object {
+        "contents": "Yellow",
+        "value": "yellow",
+      },
+      Object {
+        "contents": "Orange",
+        "value": "orange",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "ad27999b99f4eac08ffa5ee9df16dd03",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`The SelectQuestion fragment returns the expected data for single-select questions The parsed single-select-question fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "SingleSelectQuestion",
+  "contents": "",
+  "data": Object {
+    "choices": Array [
+      Object {
+        "contents": "the Midwest",
+        "value": "midwest",
+      },
+      Object {
+        "contents": "the South",
+        "value": "south",
+      },
+      Object {
+        "contents": "the East Coast",
+        "value": "east-coast",
+      },
+      Object {
+        "contents": "the West Coast",
+        "value": "west-coast",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "de0fa07e0e4f7eb812e0024f138a7151",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

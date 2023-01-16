@@ -1,0 +1,8 @@
+**/boombox-lms-env
+__pycache__/
+.DS_Store
+.clasp.json
+appsscript.json
+**/*/node_modules
+**/*/dist 
+**/*/.env

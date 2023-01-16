@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  left: 1%;
+  top: 0px;
+  width: 98%;
+  background-color: white;
+  z-index: 100;
+  transition: 0.4s;
+}
+
+.header__spacer {
+  height: 107px;
+  transition: 0.4s;
+  margin-bottom: 0px;
+}
+
+.header__page-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.header__content-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  margin-top: 15px;
+  padding: 8px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.header__logo-container {
+  text-align: center;
+  margin-bottom: -24px;
+  margin-top: 30px;
+  transition: 0.4s;
+}
+
+.header__logo-img {
+  height: 50px;
+  margin: "auto";
+}
+
+.header__menu-icon {
+  display: inline-block;
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: -3px;
+  font-size: 1.3em;
+}
+
+.header__menu-icon:hover {
+  color: var(--pop);
+}
+
+.header__menu-icon--active {
+  color: var(--pop);
+}
+
+.header__right-menu {
+  justify-self: end;
+}
+
+.header__left-menu {
+  justify-self: start;
+}
+
+/* styles for header slide-up effect on scroll */
+
+.header--small {
+  transform: translateY(-75px);
+}
+
+.header--small .header__logo-container {
+  transform: translateY(-9px);
+}
+
+.header--small .header__page-title {
+  font-size: 0.85em;
+  margin-top: -2px;
+}
+
+.header__spacer--small {
+  transform: translateY(-75px);
+}

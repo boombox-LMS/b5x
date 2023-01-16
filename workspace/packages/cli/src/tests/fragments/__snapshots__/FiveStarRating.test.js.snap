@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The FiveStarRating fragment builds as expected The parsed five-star-rating fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "FiveStarRating",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "4e4b92eb709809d174dbc7e147a88888",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

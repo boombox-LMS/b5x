@@ -1,0 +1,319 @@
+{
+    "topic": {
+        "uri": "code-of-conduct-vseed",
+        "slug": "code-of-conduct",
+        "version": "seed",
+        "title": "Code of Conduct",
+        "config": {
+            "slug": "code-of-conduct",
+            "groupAccessLevels": {
+                "assigned": [
+                    "all"
+                ]
+            },
+            "contentMode": "tutorial",
+            "prerequisites": []
+        },
+        "subtitle": "A universal Code of Conduct that can be required by other topics as a prerequisite",
+        "coverImageUrl": "http://localhost:8080/topic-assets/code-of-conduct-vseed/images/code-of-conduct.jpg",
+        "documents": [
+            {
+                "uri": "code-of-conduct-vseed_doc-1",
+                "topicUri": "code-of-conduct-vseed",
+                "slug": "doc-1",
+                "order": 1,
+                "config": {},
+                "title": "Academic integrity",
+                "displayConditions": [],
+                "childUris": [
+                    "code-of-conduct-vseed_doc-1_f1",
+                    "code-of-conduct-vseed_doc-1_f2",
+                    "code-of-conduct-vseed_doc-1_f4"
+                ],
+                "digest": "664801088545b56a31b17a0542e40933",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "code-of-conduct-vseed_doc-1_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "code-of-conduct-vseed_doc-1_f1": {
+                        "uri": "code-of-conduct-vseed_doc-1_f1",
+                        "documentUri": "code-of-conduct-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"academic-integrity\">Academic integrity</h1>\n<p>This is a fake Code of Conduct, but this page could include items like</p>\n<ul>\n<li>Not using someone else&#39;s answers as your own</li>\n<li>Giving each challenge a good-faith effort before viewing the answer</li>\n<li>Grading oneself accurately</li>\n</ul>\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>\n<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\n<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\n<p>This is where they would accept the terms above:</p>\n",
+                        "digest": "a0a36b2d29f3a45be3820425ebc3e2f2",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-1_f2": {
+                        "uri": "code-of-conduct-vseed_doc-1_f2",
+                        "documentUri": "code-of-conduct-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "code-of-conduct-vseed_doc-1_f3"
+                        ],
+                        "contents": "",
+                        "digest": "8f79b7d283cb20726719cf3c0de5dcaf",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-1_f3": {
+                        "uri": "code-of-conduct-vseed_doc-1_f3",
+                        "documentUri": "code-of-conduct-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>I agree to uphold these principles of academic integrity.</p>\n",
+                        "digest": "adc3ac90414dbdada028604eab1ad2b7",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-1_f4": {
+                        "uri": "code-of-conduct-vseed_doc-1_f4",
+                        "documentUri": "code-of-conduct-vseed_doc-1",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "code-of-conduct-vseed_doc-1_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "code-of-conduct-vseed_doc-1_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "code-of-conduct-vseed_doc-2",
+                "topicUri": "code-of-conduct-vseed",
+                "slug": "doc-2",
+                "order": 2,
+                "config": {},
+                "title": "Inclusion",
+                "displayConditions": [],
+                "childUris": [
+                    "code-of-conduct-vseed_doc-2_f1",
+                    "code-of-conduct-vseed_doc-2_f2",
+                    "code-of-conduct-vseed_doc-2_f4"
+                ],
+                "digest": "8f312d931cf29a5f5047241772f03bcd",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "code-of-conduct-vseed_doc-2_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "code-of-conduct-vseed_doc-2_f1": {
+                        "uri": "code-of-conduct-vseed_doc-2_f1",
+                        "documentUri": "code-of-conduct-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"inclusion\">Inclusion</h1>\n<p>This is a fake Code of Conduct, but this page could include items like</p>\n<ul>\n<li>Not making jokes about someone else&#39;s ethnicity, gender, etc.</li>\n<li>Making a good-faith effort to respect one another&#39;s personal preferences</li>\n<li>Following xyz guidelines for inclusive discussions</li>\n</ul>\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>\n<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\n<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\n<p>This is where they would accept the terms above:</p>\n",
+                        "digest": "6ff1b4edc719f9abe5043e4d9d388300",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-2_f2": {
+                        "uri": "code-of-conduct-vseed_doc-2_f2",
+                        "documentUri": "code-of-conduct-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "code-of-conduct-vseed_doc-2_f3"
+                        ],
+                        "contents": "",
+                        "digest": "4720ab71bf989266a5a7cedd5a1ecf6b",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-2_f3": {
+                        "uri": "code-of-conduct-vseed_doc-2_f3",
+                        "documentUri": "code-of-conduct-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>I agree to uphold these principles of inclusion.</p>\n",
+                        "digest": "5ff2bd86b49e8c599e156bf7e2e61a57",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-2_f4": {
+                        "uri": "code-of-conduct-vseed_doc-2_f4",
+                        "documentUri": "code-of-conduct-vseed_doc-2",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "code-of-conduct-vseed_doc-2_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "code-of-conduct-vseed_doc-2_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "code-of-conduct-vseed_doc-3",
+                "topicUri": "code-of-conduct-vseed",
+                "slug": "doc-3",
+                "order": 3,
+                "config": {},
+                "title": "Feedback",
+                "displayConditions": [],
+                "childUris": [
+                    "code-of-conduct-vseed_doc-3_f1",
+                    "code-of-conduct-vseed_doc-3_f2",
+                    "code-of-conduct-vseed_doc-3_f4"
+                ],
+                "digest": "84dc06ca3cf0fd20a092c16fedb5e413",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "code-of-conduct-vseed_doc-3_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "code-of-conduct-vseed_doc-3_f1": {
+                        "uri": "code-of-conduct-vseed_doc-3_f1",
+                        "documentUri": "code-of-conduct-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"feedback\">Feedback</h1>\n<p>This is a fake Code of Conduct, but this page could include items like</p>\n<ul>\n<li>Using the SBI model of feedback</li>\n<li>Making sure that feedback is actionable, specific, and kind</li>\n<li>Giving folks an opportunity to fix the issue before escalating</li>\n</ul>\n<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>\n<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>\n<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>\n<p>This is where they would accept the terms above:</p>\n",
+                        "digest": "782a9a3d418f1483477fe63969b61210",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-3_f2": {
+                        "uri": "code-of-conduct-vseed_doc-3_f2",
+                        "documentUri": "code-of-conduct-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "code-of-conduct-vseed_doc-3_f3"
+                        ],
+                        "contents": "",
+                        "digest": "67449922744815a2b04c9ced10b45a85",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-3_f3": {
+                        "uri": "code-of-conduct-vseed_doc-3_f3",
+                        "documentUri": "code-of-conduct-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>I agree to uphold these principles of giving helpful feedback.</p>\n",
+                        "digest": "951172820b5d7e0e197ff988afdd3a51",
+                        "dependencyUris": []
+                    },
+                    "code-of-conduct-vseed_doc-3_f4": {
+                        "uri": "code-of-conduct-vseed_doc-3_f4",
+                        "documentUri": "code-of-conduct-vseed_doc-3",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "code-of-conduct-vseed_doc-3_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "code-of-conduct-vseed_doc-3_f2"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

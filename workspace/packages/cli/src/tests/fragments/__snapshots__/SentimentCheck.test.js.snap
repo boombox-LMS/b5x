@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The SentimentCheck fragment builds as expected The parsed sentiment-check fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "SentimentCheck",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "d8e9b36ed7cda4b8344250f8c03aa01e",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

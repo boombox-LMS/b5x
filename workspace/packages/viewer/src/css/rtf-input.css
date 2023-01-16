@@ -1,0 +1,11 @@
+.rtf-input__wrapper {
+  height: 100%;
+}
+
+.rtf-input__editor {
+  border: 1px solid var(--medium-gray);
+  padding: 10px;
+  padding-top: 0px;
+  height: 200px;
+  line-height: 1em;
+}

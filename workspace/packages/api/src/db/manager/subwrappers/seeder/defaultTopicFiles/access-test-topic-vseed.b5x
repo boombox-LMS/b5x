@@ -1,0 +1,376 @@
+{
+    "topic": {
+        "uri": "access-test-topic-vseed",
+        "slug": "access-test-topic",
+        "version": "seed",
+        "title": "Access Test Topic",
+        "config": {
+            "slug": "access-test-topic",
+            "groupAccessLevels": {
+                "blocked": [
+                    "att-blocked"
+                ],
+                "available": [
+                    "att-available"
+                ],
+                "recommended": [
+                    "att-recommended"
+                ],
+                "assigned": [
+                    "att-assigned"
+                ],
+                "reviewable": [
+                    "att-reviewable"
+                ],
+                "facilitated": [
+                    "att-facilitated"
+                ],
+                "owned": [
+                    "att-owned"
+                ]
+            },
+            "contentMode": "tutorial",
+            "prerequisites": []
+        },
+        "subtitle": "A topic used to test group access configuration.",
+        "coverImageUrl": "http://localhost:8080/topic-assets/access-test-topic-vseed/images/padlock.jpg",
+        "documents": [
+            {
+                "uri": "access-test-topic-vseed_doc-1",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-1",
+                "order": 1,
+                "config": {},
+                "title": "Prepare for disappointment",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-1_f1",
+                    "access-test-topic-vseed_doc-1_f2"
+                ],
+                "digest": "07ee2ea3414b772fb6beca3f7f816169",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-1_f1": {
+                        "uri": "access-test-topic-vseed_doc-1_f1",
+                        "documentUri": "access-test-topic-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"prepare-for-disappointment\">Prepare for disappointment</h1>\n<p>This is just a demo topic, so there&#39;s not much here.</p>\n",
+                        "digest": "f4b3f2a596dd88f4120349526cf578af",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-1_f2": {
+                        "uri": "access-test-topic-vseed_doc-1_f2",
+                        "documentUri": "access-test-topic-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "access-test-topic-vseed_doc-2",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-2",
+                "order": 2,
+                "config": {},
+                "title": "See?",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-2_f1",
+                    "access-test-topic-vseed_doc-2_f2"
+                ],
+                "digest": "d40242053e6d2ab535c13d7b7c90681e",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-2_f1": {
+                        "uri": "access-test-topic-vseed_doc-2_f1",
+                        "documentUri": "access-test-topic-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"see\">See?</h1>\n<p>I told you.</p>\n",
+                        "digest": "e1485277c6f185134da6f10d989376f4",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-2_f2": {
+                        "uri": "access-test-topic-vseed_doc-2_f2",
+                        "documentUri": "access-test-topic-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "access-test-topic-vseed_doc-3",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-3",
+                "order": 3,
+                "config": {},
+                "title": "There really isn't anything here",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-3_f1",
+                    "access-test-topic-vseed_doc-3_f2"
+                ],
+                "digest": "156d5dac6cecbab49a3e3f00651bc428",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-3_f1": {
+                        "uri": "access-test-topic-vseed_doc-3_f1",
+                        "documentUri": "access-test-topic-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"there-really-isnt-anything-here\">There really isn&#39;t anything here</h1>\n<p>It just goes on like this.</p>\n",
+                        "digest": "8e6cb17e458ba1de45dbbc25fd985902",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-3_f2": {
+                        "uri": "access-test-topic-vseed_doc-3_f2",
+                        "documentUri": "access-test-topic-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "access-test-topic-vseed_doc-4",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-4",
+                "order": 4,
+                "config": {},
+                "title": "Seriously?",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-4_f1",
+                    "access-test-topic-vseed_doc-4_f2"
+                ],
+                "digest": "fc4c12a909afea0d6e6b8bbf585ec35c",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-4_f1": {
+                        "uri": "access-test-topic-vseed_doc-4_f1",
+                        "documentUri": "access-test-topic-vseed_doc-4",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"seriously\">Seriously?</h1>\n<p>You&#39;re still here? What are you expecting to see exactly?</p>\n",
+                        "digest": "f01586de46698b8b8e5c87dfc5f1fda7",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-4_f2": {
+                        "uri": "access-test-topic-vseed_doc-4_f2",
+                        "documentUri": "access-test-topic-vseed_doc-4",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "access-test-topic-vseed_doc-5",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-5",
+                "order": 5,
+                "config": {},
+                "title": "Fine.",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-5_f1",
+                    "access-test-topic-vseed_doc-5_f2"
+                ],
+                "digest": "b1908c619543f3856d7d7f69833531c3",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-5_f1": {
+                        "uri": "access-test-topic-vseed_doc-5_f1",
+                        "documentUri": "access-test-topic-vseed_doc-5",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"fine\">Fine.</h1>\n<p>If this is how you want to spend your time, that&#39;s your call.</p>\n",
+                        "digest": "29fec1cef8a64ea866236a0c6574d3fe",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-5_f2": {
+                        "uri": "access-test-topic-vseed_doc-5_f2",
+                        "documentUri": "access-test-topic-vseed_doc-5",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "access-test-topic-vseed_doc-6",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-6",
+                "order": 6,
+                "config": {},
+                "title": "Some alternatives",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-6_f1",
+                    "access-test-topic-vseed_doc-6_f2"
+                ],
+                "digest": "4ea8617511995c2484f06eb1e6d76297",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-6_f1": {
+                        "uri": "access-test-topic-vseed_doc-6_f1",
+                        "documentUri": "access-test-topic-vseed_doc-6",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"some-alternatives\">Some alternatives</h1>\n<p>Have you considered getting a hobby or two instead, though?</p>\n",
+                        "digest": "882ae7f6e3ecbaf50f931176aa4a2445",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-6_f2": {
+                        "uri": "access-test-topic-vseed_doc-6_f2",
+                        "documentUri": "access-test-topic-vseed_doc-6",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "access-test-topic-vseed_doc-7",
+                "topicUri": "access-test-topic-vseed",
+                "slug": "doc-7",
+                "order": 7,
+                "config": {},
+                "title": "You did it",
+                "displayConditions": [],
+                "childUris": [
+                    "access-test-topic-vseed_doc-7_f1",
+                    "access-test-topic-vseed_doc-7_f2"
+                ],
+                "digest": "5481cbd17baaf68e47308cc768f45ebe",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "access-test-topic-vseed_doc-7_f1": {
+                        "uri": "access-test-topic-vseed_doc-7_f1",
+                        "documentUri": "access-test-topic-vseed_doc-7",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"you-did-it\">You did it</h1>\n<p>You finally made it to the last module. But was it worth it?</p>\n",
+                        "digest": "776e699ac4e5d2f7159f01bcf932bcf5",
+                        "dependencyUris": []
+                    },
+                    "access-test-topic-vseed_doc-7_f2": {
+                        "uri": "access-test-topic-vseed_doc-7_f2",
+                        "documentUri": "access-test-topic-vseed_doc-7",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            }
+        ]
+    }
+}

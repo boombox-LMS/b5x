@@ -1,0 +1,43 @@
+.hoverable:hover {
+  color: var(--pop);
+}
+
+img {
+  max-width: 100%;
+}
+
+.dev-env-highlight {
+  background-color: #fcf9cc;
+}
+
+.radio-wrapper + .radio-wrapper {
+  margin-top: 5px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 7px 13px;
+}
+
+thead {
+  font-weight: bold;
+}
+
+/* TOC */
+
+.document-nav-tile a {
+  text-decoration: none;
+}
+
+.toc {
+  font-size: 0.9rem;
+}

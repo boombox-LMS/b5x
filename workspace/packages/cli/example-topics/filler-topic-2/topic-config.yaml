@@ -1,0 +1,7 @@
+title: Using Redux Toolkit
+cover-image: redux.png
+slug: filler-topic-2
+subtitle: A guide to managing React state with Redux Toolkit
+group-access-levels:
+  available:
+    - all

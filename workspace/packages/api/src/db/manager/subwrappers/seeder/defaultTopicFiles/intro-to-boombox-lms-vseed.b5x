@@ -1,0 +1,3281 @@
+{
+    "topic": {
+        "uri": "intro-to-boombox-lms-vseed",
+        "slug": "intro-to-boombox-lms",
+        "version": "seed",
+        "title": "Intro to Boombox LMS",
+        "config": {
+            "slug": "intro-to-boombox-lms",
+            "groupAccessLevels": {
+                "assigned": [
+                    "all"
+                ]
+            },
+            "contentMode": "tutorial",
+            "prerequisites": []
+        },
+        "subtitle": "What is it? Why is it? How does it work? Your questions, answered.",
+        "coverImageUrl": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/boombox.jpg",
+        "documents": [
+            {
+                "uri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "skills-and-customization",
+                "order": 1,
+                "config": {},
+                "title": "Welcome",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f1",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f2",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f4",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-team",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f7",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f13",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f18",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f20",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f23",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f24"
+                ],
+                "digest": "213f7f14d94464553a81210e3c856a07",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"welcome\">Welcome</h1>\n<p><img src=\"http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/future.jpg\" alt=\"Walking into the future\"></p>\n<p>This course will teach you all about Boombox, ✨the future of knowledge-sharing.✨</p>\n",
+                        "digest": "76c54bf0757da9fdad911f0b92f27e90",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f3"
+                        ],
+                        "contents": "",
+                        "digest": "c8b8c479edcc6db720a5faae2b4fb682",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>That&#39;s a bit dramatic, isn&#39;t it?</p>\n",
+                        "digest": "90c511b77821f8ce328a3dbc0129bdcf",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You&#39;re right. Really we just wanted to demonstrate how to include an image.</p>\n<h2 id=\"introduce-yourself\">Introduce yourself</h2>\n",
+                        "digest": "af8f1f435d27216ff12e4c46409bcea8",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-team": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-team",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "ShortTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f6"
+                        ],
+                        "contents": "",
+                        "digest": "b5e4d9639b2777256022dc85b16f6a84",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f6": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f6",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>What is the name of your team?</p>\n",
+                        "digest": "0531a6b9d2e40a861e7675ee775a4bc1",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f7": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f7",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-team",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": true,
+                            "fragmentUrisByAlias": {
+                                "user-team": "intro-to-boombox-lms-vseed_skills-and-customization_user-team"
+                            }
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>We&#39;re excited that the <echo>user-team</echo> team is interested in using Boombox!</p>\n<h2 id=\"customize-your-experience\">Customize your experience</h2>\n<h3 id=\"role\">Role</h3>\n",
+                        "digest": "864e3178d7af0504c29b597fd547d017",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-team"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-group": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-team",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "ics",
+                                    "contents": "Independent contributor"
+                                },
+                                {
+                                    "value": "managers",
+                                    "contents": "Manager"
+                                },
+                                {
+                                    "value": "leaders",
+                                    "contents": "Director and above"
+                                }
+                            ]
+                        },
+                        "contentType": "SingleSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f12"
+                        ],
+                        "contents": "",
+                        "digest": "bdf0108f4f482f9a2ce5f53a6e18491f",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-team"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f12": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f12",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Which best describes you?</p>\n",
+                        "digest": "df1833cce1f3314f6fe1f1674bfda7ea",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f13": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f13",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            [
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                            "targetValue": "managers",
+                                            "operator": "is"
+                                        }
+                                    }
+                                ],
+                                {
+                                    "type": "conjunction",
+                                    "data": "or"
+                                },
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                            "targetValue": "leaders",
+                                            "operator": "is"
+                                        }
+                                    }
+                                ]
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f14"
+                        ],
+                        "contents": "",
+                        "digest": "5a64bc851bc7042522b5f445118fed68",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f14": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f14",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": true,
+                            "fragmentUrisByAlias": {
+                                "user-group": "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                            }
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Resources for <echo>user-group</echo> have been added to your course.</p>\n",
+                        "digest": "802fdf0f6ecf4c8de8299643f94d5b86",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f18": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f18",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                        "targetValue": "ics",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f19"
+                        ],
+                        "contents": "",
+                        "digest": "cf2124f5e0dae674f7722b165ac08e2e",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f19": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f19",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Got it, we&#39;ll focus on the Boombox features that are most helpful for ICs.</p>\n",
+                        "digest": "772bd11bc69f9470ae43f18ab19bc827",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f20": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f20",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h3 id=\"skills\">Skills</h3>\n",
+                        "digest": "db911bc8c6163a7549f8b88894c60df0",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "markdown",
+                                    "contents": "Markdown"
+                                },
+                                {
+                                    "value": "vscode",
+                                    "contents": "Visual Studio Code"
+                                },
+                                {
+                                    "value": "tags",
+                                    "contents": "HTML tags and attributes"
+                                },
+                                {
+                                    "value": "none",
+                                    "contents": "None of the above"
+                                }
+                            ]
+                        },
+                        "contentType": "MultiSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f22"
+                        ],
+                        "contents": "",
+                        "digest": "61e1c24c50f2be3051241ef99a8255b5",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f22": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f22",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Which technologies are you already comfortable with? You can select more than one.</p>\n",
+                        "digest": "3b16083193f9fa491336fed7d8ffc3e6",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f23": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f23",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thanks for letting us know! This course has been customized to skip the tools you&#39;re already familiar with.</p>\n",
+                        "digest": "3a07528f742ed240100904444dd8b0c8",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f24": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f24",
+                        "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_why-boombox",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "why-boombox",
+                "order": 2,
+                "config": {},
+                "title": "Why Boombox LMS?",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_why-boombox_f1",
+                    "intro-to-boombox-lms-vseed_why-boombox_f2",
+                    "intro-to-boombox-lms-vseed_why-boombox_f4",
+                    "intro-to-boombox-lms-vseed_why-boombox_f5",
+                    "intro-to-boombox-lms-vseed_why-boombox_f6",
+                    "intro-to-boombox-lms-vseed_why-boombox_user-clashes",
+                    "intro-to-boombox-lms-vseed_why-boombox_f9",
+                    "intro-to-boombox-lms-vseed_why-boombox_f10",
+                    "intro-to-boombox-lms-vseed_why-boombox_f11"
+                ],
+                "digest": "57fac13d346621647456ab6f3b751754",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_why-boombox_f9",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_why-boombox_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"why-boombox-lms\">Why Boombox LMS?</h1>\n<p>To understand <em>what</em> Boombox is, you must first understand <em>why</em> Boombox is.</p>\n",
+                        "digest": "9918424da20fd0c83d8324e59c603fbb",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f3"
+                        ],
+                        "contents": "",
+                        "digest": "0b2baefc448cc501ab5bd180ec5f0b33",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Let&#39;s start there, then.</p>\n",
+                        "digest": "69b30423b71f82cc328dd133ee6d11b0",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"the-5-users-of-a-healthy-knowledge-sharing-ecosystem\">The 5 users of a healthy knowledge-sharing ecosystem</h2>\n<p>A proprietary technical knowledge-sharing system has many users:</p>\n",
+                        "digest": "db97660bccfa7f85a2e50bd9bf6d986f",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f5": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f5",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "orientation": "vertical",
+                            "items": [
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/leadership.svg",
+                                    "contents": "<h1 id=\"the-leader\">The Leader</h1>\n<ul>\n<li>Identifies and prioritizes knowledge gaps</li>\n<li>Assesses and recognizes content health at the org level</li>\n</ul>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/developer.svg",
+                                    "contents": "<h1 id=\"the-subject-matter-expert\">The Subject-Matter Expert</h1>\n<ul>\n<li>Contributes information</li>\n<li>Maintains technical accuracy of information</li>\n</ul>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/apple.svg",
+                                    "contents": "<h1 id=\"the-learning-team-member\">The Learning Team Member</h1>\n<ul>\n<li>Enhances/repackages high-priority content</li>\n<li>Assigns or recommends content</li>\n<li>Supports learners, especially new hires</li>\n<li>Analyzes metrics and feedback</li>\n</ul>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/creative-idea.svg",
+                                    "contents": "<h1 id=\"the-learner\">The Learner</h1>\n<ul>\n<li>Consumes technical information</li>\n<li>Demonstrates skills by completing challenges</li>\n<li>Provides feedback on content</li>\n<li>Requests new content</li>\n</ul>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/organization-chart.svg",
+                                    "contents": "<h1 id=\"the-manager\">The Manager</h1>\n<ul>\n<li>Assigns or recommends content to team</li>\n<li>Assesses and recognizes participation in knowledge-sharing</li>\n</ul>\n"
+                                }
+                            ]
+                        },
+                        "contentType": "VisualList",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "206019fe6b1caad27c05f7d8b9a66f81",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f6": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f6",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"the-problem-these-users-want-very-different-things\">The problem: These users want very different things!</h2>\n<p>It&#39;s difficult for one knowledge-sharing system to accommodate all of the above users, because their interests are often in conflict with one another.</p>\n",
+                        "digest": "c5eaf9756347b06bb529e1e9e3e68ddd",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_user-clashes": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_user-clashes",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "LongTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f8"
+                        ],
+                        "contents": "",
+                        "digest": "0913cc7a209f975ddc1c4925f629a4e2",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f8": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f8",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Think of at least two ways that the interests of the above users might clash.</p>\n",
+                        "digest": "660a802d0a04fce95eb83053e84da064",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f9": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f9",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_user-clashes",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "answers": [
+                                {
+                                    "id": "ae306892b3f9c1ed160fd7530634e164",
+                                    "points": 1,
+                                    "htmlContents": "\nTeaching team members want automatic assessments, but learners prefer realistic, open-ended challenges.\n"
+                                },
+                                {
+                                    "id": "244106ffdb88cc12b7df0eeaaa3dddc7",
+                                    "points": 1,
+                                    "htmlContents": "\nLeaders want accountability, but learners want autonomy.\n"
+                                },
+                                {
+                                    "id": "6cface426183659a4c366d6812f78b18",
+                                    "points": 1,
+                                    "htmlContents": "\nSubject-matter experts want to create and maintain content easily, but learners want engaging experiences.\n"
+                                },
+                                {
+                                    "id": "54d429133242298299b3cb1f2af4c7c4",
+                                    "points": 1,
+                                    "htmlContents": "\nTeaching teams want the administrative features of an LMS, but subject-matter experts want to use the authoring technologies they already know.\n"
+                                }
+                            ]
+                        },
+                        "contentType": "Rubric",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "72f387996f190aa96b205646014405c2",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_user-clashes"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f10": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f10",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_f9",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"boomboxs-goal-offer-all-5-users-a-great-experience\">Boombox&#39;s goal: Offer all 5 users a great experience</h2>\n<p>Boombox aims to act as a broker between all of the users of a knowledge-sharing system. Read on to find out how it works.</p>\n",
+                        "digest": "833a7be1be4ddc654aef0c5d05553bbb",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f9"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_why-boombox_f11": {
+                        "uri": "intro-to-boombox-lms-vseed_why-boombox_f11",
+                        "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_why-boombox_f9",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_why-boombox_f9"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "how-boombox-works",
+                "order": 3,
+                "config": {},
+                "title": "How Boombox works",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f1",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f2",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f3",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f4",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f17",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f18",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f20",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f22",
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f23"
+                ],
+                "digest": "24f026fc0e5c17a20ad758a360855dfe",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f20",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"how-boombox-works\">How Boombox works</h1>\n<p>Boombox isn&#39;t just one app -- it&#39;s a set of tools. This section will help you better understand how all of the components work together.</p>\n<h2 id=\"diagram-of-the-publishing-flow\">Diagram of the publishing flow</h2>\n",
+                        "digest": "5a70ad55fbaf756ad88e3b3163f464b7",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "elements": [
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "sme",
+                                        "col": "1",
+                                        "row": "3"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "sme-content",
+                                        "col": "1",
+                                        "row": "3",
+                                        "label": "SME",
+                                        "parent": "sme"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "files",
+                                        "col": "2",
+                                        "row": "3"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "files-content",
+                                        "col": "2",
+                                        "row": "3",
+                                        "label": "Files",
+                                        "parent": "files"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "instructor",
+                                        "col": "3",
+                                        "row": "3"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "instructor-content",
+                                        "col": "3",
+                                        "row": "3",
+                                        "label": "Instructor",
+                                        "parent": "instructor"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "cli",
+                                        "col": "2",
+                                        "row": "2"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "cli-content",
+                                        "col": "2",
+                                        "row": "2",
+                                        "label": "Boombox CLI",
+                                        "parent": "cli"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "api",
+                                        "col": "3",
+                                        "row": "1"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "api-content",
+                                        "col": "3",
+                                        "row": "1",
+                                        "label": "Boombox API",
+                                        "parent": "api"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "viewer",
+                                        "col": "4",
+                                        "row": "2"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "viewer-content",
+                                        "col": "4",
+                                        "row": "2",
+                                        "label": "Boombox viewer app",
+                                        "parent": "viewer"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "learner",
+                                        "col": "4",
+                                        "row": "3"
+                                    },
+                                    "classes": []
+                                },
+                                {
+                                    "group": "nodes",
+                                    "data": {
+                                        "id": "learner-content",
+                                        "col": "4",
+                                        "row": "3",
+                                        "label": "Learner",
+                                        "parent": "learner"
+                                    },
+                                    "classes": [
+                                        "node--icon"
+                                    ]
+                                },
+                                {
+                                    "group": "edges",
+                                    "data": {
+                                        "id": "sme-files-contribute",
+                                        "source": "sme",
+                                        "target": "files",
+                                        "label": "contribute"
+                                    },
+                                    "classes": [
+                                        "edge--target-arrow",
+                                        "edge--horizontal"
+                                    ]
+                                },
+                                {
+                                    "group": "edges",
+                                    "data": {
+                                        "id": "files-cli-compile",
+                                        "source": "files",
+                                        "target": "cli",
+                                        "label": "compile"
+                                    },
+                                    "classes": [
+                                        "edge--target-arrow"
+                                    ]
+                                },
+                                {
+                                    "group": "edges",
+                                    "data": {
+                                        "id": "instructor-files-contribute",
+                                        "source": "instructor",
+                                        "target": "files",
+                                        "label": "contribute"
+                                    },
+                                    "classes": [
+                                        "edge--target-arrow",
+                                        "edge--horizontal"
+                                    ]
+                                },
+                                {
+                                    "group": "edges",
+                                    "data": {
+                                        "id": "cli-api-publish",
+                                        "source": "cli",
+                                        "target": "api",
+                                        "label": "publish"
+                                    },
+                                    "classes": [
+                                        "edge--target-arrow"
+                                    ]
+                                },
+                                {
+                                    "group": "edges",
+                                    "data": {
+                                        "id": "viewer-learner-rendercontent",
+                                        "source": "viewer",
+                                        "target": "learner",
+                                        "label": "render content"
+                                    },
+                                    "classes": [
+                                        "edge--target-arrow"
+                                    ]
+                                },
+                                {
+                                    "group": "edges",
+                                    "data": {
+                                        "id": "api-viewer-downloadcontent/uploaduserdata",
+                                        "source": "api",
+                                        "target": "viewer",
+                                        "label": "download content / upload user data"
+                                    },
+                                    "classes": [
+                                        "edge--source-arrow",
+                                        "edge--target-arrow"
+                                    ]
+                                }
+                            ],
+                            "stylesheet": [
+                                {
+                                    "selector": "#sme-content",
+                                    "style": {
+                                        "backgroundImage": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/programmer-male.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                },
+                                {
+                                    "selector": "#files-content",
+                                    "style": {
+                                        "backgroundImage": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/document.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                },
+                                {
+                                    "selector": "#instructor-content",
+                                    "style": {
+                                        "backgroundImage": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/programmer-female.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                },
+                                {
+                                    "selector": "#cli-content",
+                                    "style": {
+                                        "backgroundImage": "https://api.iconify.design/heroicons/command-line-20-solid.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                },
+                                {
+                                    "selector": "#api-content",
+                                    "style": {
+                                        "backgroundImage": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/database.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                },
+                                {
+                                    "selector": "#viewer-content",
+                                    "style": {
+                                        "backgroundImage": "https://api.iconify.design/openmoji/chrome.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                },
+                                {
+                                    "selector": "#learner-content",
+                                    "style": {
+                                        "backgroundImage": "http://localhost:8080/topic-assets/intro-to-boombox-lms-vseed/images/learner.svg",
+                                        "backgroundFit": "contain"
+                                    }
+                                }
+                            ]
+                        },
+                        "contentType": "Diagram",
+                        "isStateful": true,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "66c48fb0856fd939cfcc94b798200436",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"description-of-the-publishing-flow\">Description of the publishing flow</h2>\n<p>The six steps shown in the diagram are also listed below. If you like, click on a step to learn more about it.</p>\n",
+                        "digest": "759025ecaf081035ee7f0ad846ce5ec6",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Accordion",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f5",
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f7",
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f9",
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f11",
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f13",
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f15"
+                        ],
+                        "contents": "",
+                        "digest": "234f6406dd4ad74e64701b79dd4e0362",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f5": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f5",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "1. SMEs contribute to Markdown files"
+                        },
+                        "contentType": "AccordionItem",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f6"
+                        ],
+                        "contents": "",
+                        "digest": "9a420a0855ca8311dc308e3946ea374f",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f6": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f6",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The SME writes information in files. They can use plain <a href=\"https://www.markdownguide.org/cheat-sheet/\">Markdown</a>, which is a simple way of creating content that has headings, bulleted lists, and so on.</p>\n<p>Most technical SMEs already know Markdown, and already use it to document their work. In cases where Markdown documentation already exists, the SME may not need to do anything at all.</p>\n",
+                        "digest": "fde51fb4f05009dfa338f6f523da8f1e",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f7": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f7",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "2. Tech Learning team members enhance the files"
+                        },
+                        "contentType": "AccordionItem",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f8"
+                        ],
+                        "contents": "",
+                        "digest": "f1b0759d3193965ee6033c8b799e32e8",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f8": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f8",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Tech Learning team members can also create content from scratch -- any Boombox user can.</p>\n<p>If an SME has already created content, a TL team member might collaborate with the SME to enhance the content.</p>\n<p>They might use special Boombox markup to add features to the content, like animations or interactive checklists. Boombox markup can be added into any Markdown file.</p>\n",
+                        "digest": "3770637a80f0bdc6dc15f39ed4306867",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f9": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f9",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "3. The CLI compiles and publishes content"
+                        },
+                        "contentType": "AccordionItem",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f10"
+                        ],
+                        "contents": "",
+                        "digest": "de6ea6569ca617782e4d5da508406bd6",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f10": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f10",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Boombox CLI converts the files into data, and sends the data to the Boombox API for storage.</p>\n",
+                        "digest": "caaedebbc5313256f70be0e10e888847",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f11": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f11",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "4. The API stores and serves content"
+                        },
+                        "contentType": "AccordionItem",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f12"
+                        ],
+                        "contents": "",
+                        "digest": "7f2f92639bcc5fb98ff44f9812aeaa13",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f12": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f12",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The API is responsible for determining whether a given user should have access to content.</p>\n",
+                        "digest": "d92bf81c465699661dc3dcb142f11f37",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f13": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f13",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "5. A learner browses available content on the Boombox viewer app"
+                        },
+                        "contentType": "AccordionItem",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f14"
+                        ],
+                        "contents": "",
+                        "digest": "4091d0bc0670e369ac1e0804e40747eb",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f14": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f14",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The viewer app is responsible for rendering content, and managing user interactions with content.</p>\n",
+                        "digest": "1adbb16f1f5c8f1d5df75a61a2c2f4c3",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f15": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f15",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "6. The viewer app sends user-data updates to the API"
+                        },
+                        "contentType": "AccordionItem",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f16"
+                        ],
+                        "contents": "",
+                        "digest": "6ebae3685964d3652e0a45bdded391ba",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f16": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f16",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>When the learner interacts with content by completing challenges or clicking buttons, the viewer app sends updates to Boombox API, which stores the learner&#39;s activity data.</p>\n",
+                        "digest": "64e7c6202da13b38878d25de0d219f27",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f17": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f17",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Pretty great, right? But with great power comes great responsibility. Speaking of which, we have an important warning for you ...</p>\n",
+                        "digest": "1068f30d5ec3ba4eb21967e9a12e42e4",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f18": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f18",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f19"
+                        ],
+                        "contents": "",
+                        "digest": "d332e53f42e06bcf8e4e864b3f6823df",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f19": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f19",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Let&#39;s have it.</p>\n",
+                        "digest": "c8fd41c7da295fd05452f336a135d417",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f20": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f20",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f18",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "Warning",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f21"
+                        ],
+                        "contents": "",
+                        "digest": "c50207380236109f584953885bfa0c35",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f18"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f21": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f21",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Boombox authors are the admins of their content; the platform intentionally does not sanitize authored content. Empowering trusted authors is the entire point of the platform.</p>\n<p>While Boombox is versatile enough to be used in a wide range of contexts, it was created for the specific use case of internal corporate knowledge-sharing. It&#39;s designed for use by the employees of a company, and other contexts involving trust, administrative oversight, and accountability.</p>\n<p>When deployed in a public context with broad authoring permissions, Boombox has major security vulnerabilities <em>by design</em>. Simply put: <strong>Don&#39;t do that.</strong></p>\n",
+                        "digest": "09ac26a698bde150b8b4a4604e885dc0",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f22": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f22",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f20",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"all-content-in-boombox-is-built-using-plaintext-markup-including-this-page\">All content in Boombox is built using plaintext markup, including this page!</h2>\n<p>Like everything on Boombox, this page was written in plain markup, and published to the API as shown in the diagram. You&#39;re reading it in the viewer app right now! <em>Whoa.</em></p>\n",
+                        "digest": "5bc799f56cfba412c0f449dc84877139",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f20"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_how-boombox-works_f23": {
+                        "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f23",
+                        "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_how-boombox-works_f20",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_how-boombox-works_f20"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_reporting-issues",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "reporting-issues",
+                "order": 4,
+                "config": {},
+                "title": "Reporting issues",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_reporting-issues_f1",
+                    "intro-to-boombox-lms-vseed_reporting-issues_f2"
+                ],
+                "digest": "31bf75ed478fd82762b2e9b9397aa661",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_reporting-issues_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_reporting-issues_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_reporting-issues",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"reporting-issues\">Reporting issues</h1>\n<p>It&#39;s easy to report an issue in Boombox:</p>\n<ol>\n<li>Hover over the round button in the bottom right of the screen.</li>\n<li>Click the bug icon.</li>\n<li>Fill out the form, and submit.</li>\n</ol>\n<p>But where do those issues go? You&#39;ll see on the next page.</p>\n",
+                        "digest": "c8048d78507f22c17797644b32014188",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_reporting-issues_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_reporting-issues_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_reporting-issues",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_observability-in-boombox",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "observability-in-boombox",
+                "order": 5,
+                "config": {},
+                "title": "Observability",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f1",
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f2",
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f4"
+                ],
+                "digest": "22a7751cb698a28258f8e227b9ad8164",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_observability-in-boombox_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_observability-in-boombox_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_observability-in-boombox",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"observability\">Observability</h1>\n<p>To understand observability in Boombox, click on the bar-chart icon in the top left menu and explore the contents of that page.</p>\n",
+                        "digest": "77cd066dbb24a0acf87f7fadc9264a8e",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_observability-in-boombox_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_observability-in-boombox",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_observability-in-boombox_f3"
+                        ],
+                        "contents": "",
+                        "digest": "b09ec3c8531ec4c72c69b72f3dd59a81",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_observability-in-boombox_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_observability-in-boombox",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>All done exploring, let&#39;s move on!</p>\n",
+                        "digest": "51949056db52868e132792e58b6c1c65",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_observability-in-boombox_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_observability-in-boombox_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_observability-in-boombox",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_observability-in-boombox_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_observability-in-boombox_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_VSCode for beginners",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "VSCode for beginners",
+                "order": 6,
+                "config": {},
+                "title": "VSCode for beginners",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                            "targetValue": "vscode",
+                            "operator": "selections-do-not-include"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f1",
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f2",
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f4"
+                ],
+                "digest": "37ba8aed5a1758d0eed4c4221a000266",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_VSCode for beginners_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                ],
+                "dependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                ],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_VSCode for beginners_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_VSCode for beginners",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"vscode-for-beginners\">VSCode for beginners</h1>\n<p>This is just a placeholder doc, actually.</p>\n",
+                        "digest": "725d2b0f1fefe6449e8fcf3ad61c4b31",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_VSCode for beginners_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_VSCode for beginners",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_VSCode for beginners_f3"
+                        ],
+                        "contents": "",
+                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_VSCode for beginners_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_VSCode for beginners",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Okay.</p>\n",
+                        "digest": "bacb025f83756f734769fe94667edee2",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_VSCode for beginners_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_VSCode for beginners_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_VSCode for beginners",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_VSCode for beginners_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_VSCode for beginners_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_a-markdown-primer",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "a-markdown-primer",
+                "order": 7,
+                "config": {},
+                "title": "A Markdown primer",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                            "targetValue": "markdown",
+                            "operator": "selections-do-not-include"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f1",
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f2",
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f4"
+                ],
+                "digest": "3a734c56f49e9e11104adeeeada8a54d",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_a-markdown-primer_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                ],
+                "dependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                ],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_a-markdown-primer_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_a-markdown-primer",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"a-markdown-primer\">A Markdown primer</h1>\n<p>This is just a placeholder doc for now, actually.</p>\n",
+                        "digest": "5d0d1ba8610fc9e2ca0de10bc6de1807",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_a-markdown-primer_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_a-markdown-primer",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_a-markdown-primer_f3"
+                        ],
+                        "contents": "",
+                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_a-markdown-primer_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_a-markdown-primer",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Okay.</p>\n",
+                        "digest": "bacb025f83756f734769fe94667edee2",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_a-markdown-primer_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_a-markdown-primer_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_a-markdown-primer",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_a-markdown-primer_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_a-markdown-primer_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_tags-and-attributes",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "tags-and-attributes",
+                "order": 8,
+                "config": {},
+                "title": "Tags and attributes",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
+                            "targetValue": "tags",
+                            "operator": "selections-do-not-include"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f1",
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f2",
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f4"
+                ],
+                "digest": "dd5f1bb3f2a80dadd2e8f07d0b43ae1c",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_tags-and-attributes_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                ],
+                "dependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
+                ],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_tags-and-attributes_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_tags-and-attributes",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"tags-and-attributes\">Tags and attributes</h1>\n<p>This is just a placeholder doc for now, actually.</p>\n",
+                        "digest": "1b031dc5355d3de05cde0d17b1404272",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_tags-and-attributes_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_tags-and-attributes",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_tags-and-attributes_f3"
+                        ],
+                        "contents": "",
+                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_tags-and-attributes_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_tags-and-attributes",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Okay.</p>\n",
+                        "digest": "bacb025f83756f734769fe94667edee2",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_tags-and-attributes_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_tags-and-attributes_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_tags-and-attributes",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_tags-and-attributes_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_tags-and-attributes_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_markup",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "markup",
+                "order": 9,
+                "config": {},
+                "title": "Boombox markup examples",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_markup_f1",
+                    "intro-to-boombox-lms-vseed_markup_f2",
+                    "intro-to-boombox-lms-vseed_markup_f10",
+                    "intro-to-boombox-lms-vseed_markup_f11",
+                    "intro-to-boombox-lms-vseed_markup_f17"
+                ],
+                "digest": "6d3489ed89aa2f15ecbd0ff548f99e7e",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_markup_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"boombox-markup-examples\">Boombox markup examples</h1>\n<p>Everything you see on this page was created using plaintext markup. Below are a few examples.</p>\n<h2 id=\"short-text-question\">Short text question</h2>\n",
+                        "digest": "7558d1f4c786767bd9df530e47f2dadb",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f3",
+                            "intro-to-boombox-lms-vseed_markup_f5"
+                        ],
+                        "contents": "",
+                        "digest": "710363861b3b92f085c8cf81757a8cf9",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in your .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f4"
+                        ],
+                        "contents": "",
+                        "digest": "8b0afe18ac8ad5fb577ed5432493a78a",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "markdown"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<short-text-question id=\"user-hobbies\">\nWhat are your two favorite hobbies?\n</short-text-question>\n\n<show if=\"user-hobbies matches /writing/ and user-hobbies matches /programming/\">\nWait, writing and programming are your two *favorite* hobbies?! You should publish content on Boombox!\n</show>",
+                        "digest": "9f84942a82d027c4ea95337103182998",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f5": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f5",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in the browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_user-hobbies",
+                            "intro-to-boombox-lms-vseed_markup_f8"
+                        ],
+                        "contents": "",
+                        "digest": "2265f9452d18f08fa3d80fe9f7f4a131",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_user-hobbies": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_user-hobbies",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "ShortTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f7"
+                        ],
+                        "contents": "",
+                        "digest": "037bd7dbf8cbf5da6350f84efb93b5f2",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f7": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f7",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>What are your two favorite hobbies?</p>\n",
+                        "digest": "ed0b38e5c60c59d5cbf806d938736f24",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f8": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f8",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [
+                            [
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "intro-to-boombox-lms-vseed_markup_user-hobbies",
+                                            "targetValue": "/writing/",
+                                            "operator": "matches"
+                                        }
+                                    }
+                                ],
+                                {
+                                    "type": "conjunction",
+                                    "data": "and"
+                                },
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "intro-to-boombox-lms-vseed_markup_user-hobbies",
+                                            "targetValue": "/programming/",
+                                            "operator": "matches"
+                                        }
+                                    }
+                                ]
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "intro-to-boombox-lms-vseed_markup_user-hobbies",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f9"
+                        ],
+                        "contents": "",
+                        "digest": "be422d7cdfb040007f6887874779b374",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_markup_user-hobbies"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f9": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f9",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Wait, writing and programming are your two <em>favorite</em> hobbies?!</p>\n<p>You should publish content on Boombox!</p>\n",
+                        "digest": "be4b8d87c15287415ab9e5b31e1fc823",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f10": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f10",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"mermaid-diagram\">Mermaid diagram</h2>\n",
+                        "digest": "836d20d0fecca0f7d2d18624447eaa18",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f11": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f11",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f12",
+                            "intro-to-boombox-lms-vseed_markup_f14"
+                        ],
+                        "contents": "",
+                        "digest": "1b02a74a85d41fe08299b2535fdc6ad1",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f12": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f12",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in your .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f13"
+                        ],
+                        "contents": "",
+                        "digest": "0bffa315c1f50271a9ac9d55c95501e9",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f13": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f13",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "markdown"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "Below is a **mermaid diagram**.\n\nYou can read more about these on the [Mermaid site](https://mermaid.js.org/#/).\n\n<mermaid-diagram>\nflowchart LR\na --&gt; b --&gt; c\n</mermaid-diagram>",
+                        "digest": "338d76dc8580279dd78c377e6375c261",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f14": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f14",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in the browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_markup_f15",
+                            "intro-to-boombox-lms-vseed_markup_f16"
+                        ],
+                        "contents": "",
+                        "digest": "799465e05f1293af31bfcac03275740c",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f15": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f15",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Below is a <em>mermaid diagram</em>.</p>\n<p>You can read more about these on the <a href=\"https://mermaid.js.org/#/\">Mermaid site</a>.</p>\n",
+                        "digest": "103199127b9ab4ea32a8000749f8bdbf",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f16": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f16",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {
+                            "config": {}
+                        },
+                        "contentType": "MermaidDiagram",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "\nflowchart LR\na --> b --> c\n",
+                        "digest": "f67fb075e33a82c9ce19c4c2dc647419",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_markup_f17": {
+                        "uri": "intro-to-boombox-lms-vseed_markup_f17",
+                        "documentUri": "intro-to-boombox-lms-vseed_markup",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_create-a-topic",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "create-a-topic",
+                "order": 10,
+                "config": {},
+                "title": "Create your own topic",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_create-a-topic_f1",
+                    "intro-to-boombox-lms-vseed_create-a-topic_f2",
+                    "intro-to-boombox-lms-vseed_create-a-topic_f4",
+                    "intro-to-boombox-lms-vseed_create-a-topic_f29"
+                ],
+                "digest": "46cfa2a8d8533082a1a3c88ede2be984",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_create-a-topic_f4",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_create-a-topic_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"create-your-own-topic\">Create your own topic</h1>\n<p>Any Boombox LMS user can become an author. Topics published by the user community appear under the &quot;available&quot; category.</p>\n<p>You can easily publish your own topic <em>right now</em>. Click the button below to get started.</p>\n",
+                        "digest": "d733aa12746ac3601f658e3eb63c1034",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f3"
+                        ],
+                        "contents": "",
+                        "digest": "ef596dec9c7907d8500306ff8e8d0abd",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Start publishing flow</p>\n",
+                        "digest": "0a37b51dd0a5c99a027847f4ae92e9a5",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "completionContent": "You're finished! Nice work."
+                        },
+                        "contentType": "Checklist",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f5",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f11",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f13",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f17",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f21",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f25"
+                        ],
+                        "contents": "",
+                        "digest": "dfbba98082670a117d73d1951b5692f6",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f2"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f5": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f5",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Install the Boombox CLI"
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f6",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f7",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f8",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f9",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f10"
+                        ],
+                        "contents": "",
+                        "digest": "5f536bcc9fec00b029e8826ceae69879",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f6": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f6",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The Boombox CLI helps you create and publish content.</p>\n<p>Install the Boombox CLI on your computer:</p>\n",
+                        "digest": "6c638beac9f61f6868249d871e8d5c4c",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f7": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f7",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "text"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "npm install -g @b5x/cli",
+                        "digest": "9be0bc2e86c1a44ff3f034f217ddab0f",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f8": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f8",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Verify that the installation worked:</p>\n",
+                        "digest": "e8fbe0fa268c7cfd948e5eaa6eab9682",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f9": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f9",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "text"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "b5x help",
+                        "digest": "cdabec060c5254b853623f189af83d38",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f10": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f10",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You should see a list of available <code>b5x</code> commands.</p>\n",
+                        "digest": "41a33982e81d28e6ebeb94612c5389c3",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f11": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f11",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Install the Boombox VSCode extension"
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f12"
+                        ],
+                        "contents": "",
+                        "digest": "605dba6fd6e97ff48473e64d9a90a854",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f12": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f12",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>This doesn&#39;t exist yet, but it will. For now, just mark this step as done.</p>\n",
+                        "digest": "d9a95b651f2eff72ed6bab6ea0f895a3",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f13": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f13",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Log into the Boombox CLI"
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f14",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f15",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f16"
+                        ],
+                        "contents": "",
+                        "digest": "bb485bb75d9c23e8ee84a7992ccebb53",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f14": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f14",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>On the command line, initialize the login flow:</p>\n",
+                        "digest": "b1d893998f1b8afc85b9106e79ba4dac",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f15": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f15",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "text"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "b5x login",
+                        "digest": "15017fd5785d0d4f910e0c9a148fb59c",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f16": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f16",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You&#39;ll be prompted for a key.</p>\n<p>To generate the key:</p>\n<ol>\n<li>Go to your user profile by clicking on the person icon in the top left menu.</li>\n<li>Click <strong>Generate key</strong> button.</li>\n<li>Click <strong>Copy key</strong>.</li>\n</ol>\n<p>Paste the key into your terminal and press Enter.</p>\n<p>You should see a message that you have logged in successfully.</p>\n",
+                        "digest": "489274a7a7ccad32d3dde5a436a9a180",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f17": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f17",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Create your new topic"
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f18",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f19",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f20"
+                        ],
+                        "contents": "",
+                        "digest": "8dd4aa4c561b23c93e026f992802fc12",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f18": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f18",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Navigate to the directory where you&#39;d like your project to be created. <code>b5x</code> will create the entire project for you, including the project folder.</p>\n<p>From the desired parent directory, initialize your topic:</p>\n",
+                        "digest": "44d3b12c5bd07205f5d2871cb95428fe",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f19": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f19",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "text"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "b5x init",
+                        "digest": "1bc0979ef6ad23d58742ca5c9c987373",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f20": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f20",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You&#39;ll be asked to provide the following information:</p>\n<ul>\n<li>Your topic&#39;s identifier, used for its URL. For this one, let&#39;s use <code>my-demo-topic</code>.</li>\n<li>Your topic&#39;s title. Keep it short and sweet.</li>\n<li>Your topic&#39;s subtitle. This is a sentence summarizing what your topic is about.</li>\n</ul>\n",
+                        "digest": "41bd36b0fc7fb68f357663c5d1436437",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f21": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f21",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Edit your topic's documents"
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f22",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f23",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f24"
+                        ],
+                        "contents": "",
+                        "digest": "60405a4a6e279f091baae48a77310901",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f22": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f22",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>To change your topic&#39;s documents, open the topic folder in VSCode:</p>\n",
+                        "digest": "6f94b38131664cbe64fb0ce02a9d704f",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f23": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f23",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "text"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "code my-demo-topic",
+                        "digest": "ce8cfa1954e3bc28eb79a5aebfb78164",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f24": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f24",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Spend some time exploring the contents of this folder, especially <code>my-demo-topic/documents</code>. Make some small changes to the document files.</p>\n",
+                        "digest": "33e8abd93f64fd2219201893645a00fd",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f25": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f25",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Publish and view your topic"
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f26",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f27",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f28"
+                        ],
+                        "contents": "",
+                        "digest": "5a475e424ac9e5b9e696d75d9c1e4614",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f26": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f26",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>It&#39;s time to push your topic from your computer to the Boombox server in the cloud:</p>\n",
+                        "digest": "ecc16874c05975cce9bec35d6124af5c",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f27": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f27",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "text"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "b5x publish my-demo-topic",
+                        "digest": "e13b5bcd2b2e8d5e574487f22cfb5d9e",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f28": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f28",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You&#39;ll receive a URL you can use to view your topic. Congrats, you&#39;re now a published Boombox author!</p>\n",
+                        "digest": "e76eb8c27a0886440dbca83dfe4123fb",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_create-a-topic_f29": {
+                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f29",
+                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f4",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f4"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_managers",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "managers",
+                "order": 11,
+                "config": {},
+                "title": "Boombox for managers",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                            "targetValue": "managers",
+                            "operator": "is"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_managers_f1",
+                    "intro-to-boombox-lms-vseed_managers_f2",
+                    "intro-to-boombox-lms-vseed_managers_f4"
+                ],
+                "digest": "86a5bc772808812c36d5b044413a434e",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_managers_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                ],
+                "dependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                ],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_managers_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_managers_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_managers",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"boombox-for-managers\">Boombox for managers</h1>\n<p>This is just a placeholder doc to demonstrate how course customization works, actually.</p>\n",
+                        "digest": "29d4c842c0012ca63a32c49481391626",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_managers_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_managers_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_managers",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_managers_f3"
+                        ],
+                        "contents": "",
+                        "digest": "84342172527bb2078111a08c70b37a2e",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_managers_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_managers_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_managers",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Oh.</p>\n",
+                        "digest": "4f8f1aad55b21dbdce633b2822629957",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_managers_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_managers_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_managers",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_managers_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_managers_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_leaders",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "leaders",
+                "order": 12,
+                "config": {},
+                "title": "Boombox for leaders",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
+                            "targetValue": "leaders",
+                            "operator": "is"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_leaders_f1",
+                    "intro-to-boombox-lms-vseed_leaders_f2",
+                    "intro-to-boombox-lms-vseed_leaders_f4"
+                ],
+                "digest": "e886accafe096452b22372cecf4a7ce7",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_leaders_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                ],
+                "dependencyUris": [
+                    "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
+                ],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_leaders_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_leaders_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_leaders",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"boombox-for-leaders\">Boombox for leaders</h1>\n<p>This is just a placeholder doc to demonstrate how course customization works, actually.</p>\n",
+                        "digest": "e9547c5db74aa6b22dcfd9c81801aaeb",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_leaders_f2": {
+                        "uri": "intro-to-boombox-lms-vseed_leaders_f2",
+                        "documentUri": "intro-to-boombox-lms-vseed_leaders",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_leaders_f3"
+                        ],
+                        "contents": "",
+                        "digest": "84342172527bb2078111a08c70b37a2e",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_leaders_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_leaders_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_leaders",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Oh.</p>\n",
+                        "digest": "4f8f1aad55b21dbdce633b2822629957",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_leaders_f4": {
+                        "uri": "intro-to-boombox-lms-vseed_leaders_f4",
+                        "documentUri": "intro-to-boombox-lms-vseed_leaders",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_leaders_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_leaders_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "intro-to-boombox-lms-vseed_feedback",
+                "topicUri": "intro-to-boombox-lms-vseed",
+                "slug": "feedback",
+                "order": 13,
+                "config": {},
+                "title": "Leave feedback on this topic",
+                "displayConditions": [],
+                "childUris": [
+                    "intro-to-boombox-lms-vseed_feedback_f1",
+                    "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps",
+                    "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation",
+                    "intro-to-boombox-lms-vseed_feedback_f6",
+                    "intro-to-boombox-lms-vseed_feedback_f7"
+                ],
+                "digest": "960671b7b2f0ce4257aaed1cfbd95d1b",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "intro-to-boombox-lms-vseed_feedback_f1": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_f1",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"leave-feedback-on-this-topic\">Leave feedback on this topic</h1>\n",
+                        "digest": "455fb7fb6f4b7942d66a05a3c7000268",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "NpsQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_feedback_f3"
+                        ],
+                        "contents": "",
+                        "digest": "39d38b6a70a67589d22f2e91e271c3d8",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_feedback_f3": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_f3",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>How likely are you to recommend this topic to a colleague?</p>\n",
+                        "digest": "c9b667a3e7a717758b5d5e80fb92599a",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "LongTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_feedback_f5"
+                        ],
+                        "contents": "",
+                        "digest": "ae09349d85a80a9964f0dead2d3d566b",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_feedback_f5": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_f5",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Please explain your rating:</p>\n",
+                        "digest": "ed11aba948afae067aa553c2fabe1cb8",
+                        "dependencyUris": []
+                    },
+                    "intro-to-boombox-lms-vseed_feedback_f6": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_f6",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thank you for your feedback!</p>\n",
+                        "digest": "0f60e9cb7d440b9655cd2d5271c16897",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation"
+                        ]
+                    },
+                    "intro-to-boombox-lms-vseed_feedback_f7": {
+                        "uri": "intro-to-boombox-lms-vseed_feedback_f7",
+                        "documentUri": "intro-to-boombox-lms-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "intro-to-boombox-lms-vseed_feedback_b5x-topic-nps-explanation"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

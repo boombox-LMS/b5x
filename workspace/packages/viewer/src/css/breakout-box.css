@@ -1,0 +1,33 @@
+.breakout-box {
+  border-left: 3px solid lightgray;
+  padding-left: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.breakout-box__header + p {
+  margin-top: 0px;
+}
+
+.breakout-box__header {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.breakout-box__contents {
+  margin-top: -10px;
+}
+
+.breakout-box.warning.unread {
+  border-left: 3px solid red;
+}
+
+.breakout-box.warning.read {
+  border-left: 3px solid lightgray;
+}
+
+.breakout-box__header.warning {
+  color: red;
+}

@@ -1,0 +1,7 @@
+title: Smoke Testing
+cover-image: smoke-testing.jpg
+slug: smoke-testing
+subtitle: Verify that this topic still works before merging to main.
+group-access-levels:
+  assigned:
+    - all

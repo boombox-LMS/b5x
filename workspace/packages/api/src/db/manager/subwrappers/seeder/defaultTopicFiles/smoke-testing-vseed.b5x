@@ -1,0 +1,1707 @@
+{
+    "topic": {
+        "uri": "smoke-testing-vseed",
+        "slug": "smoke-testing",
+        "version": "seed",
+        "title": "Smoke Testing",
+        "config": {
+            "slug": "smoke-testing",
+            "groupAccessLevels": {
+                "assigned": [
+                    "all"
+                ]
+            },
+            "contentMode": "tutorial",
+            "prerequisites": []
+        },
+        "subtitle": "Verify that this topic still works before merging to main.",
+        "coverImageUrl": "http://localhost:8080/topic-assets/smoke-testing-vseed/images/smoke-testing.jpg",
+        "documents": [
+            {
+                "uri": "smoke-testing-vseed_basic-topic-functionality",
+                "topicUri": "smoke-testing-vseed",
+                "slug": "basic-topic-functionality",
+                "order": 1,
+                "config": {},
+                "title": "Basic topic functionality",
+                "displayConditions": [],
+                "childUris": [
+                    "smoke-testing-vseed_basic-topic-functionality_f1",
+                    "smoke-testing-vseed_basic-topic-functionality_f2",
+                    "smoke-testing-vseed_basic-topic-functionality_f4",
+                    "smoke-testing-vseed_basic-topic-functionality_f6",
+                    "smoke-testing-vseed_basic-topic-functionality_f8",
+                    "smoke-testing-vseed_basic-topic-functionality_f10",
+                    "smoke-testing-vseed_basic-topic-functionality_f12",
+                    "smoke-testing-vseed_basic-topic-functionality_f14",
+                    "smoke-testing-vseed_basic-topic-functionality_f15",
+                    "smoke-testing-vseed_basic-topic-functionality_f17",
+                    "smoke-testing-vseed_basic-topic-functionality_f18"
+                ],
+                "digest": "39f86dd51dc76d74378d87afe5606e73",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "smoke-testing-vseed_basic-topic-functionality_f1": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f1",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"basic-topic-functionality\">Basic topic functionality</h1>\n<p>Please verify:</p>\n",
+                        "digest": "177a22c3d20c44f55f2921fcbde3b0a6",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f2": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f2",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f3"
+                        ],
+                        "contents": "",
+                        "digest": "f98d38136874583b1924b5f167915ba6",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f3": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f3",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The progress bar shows 0%</p>\n",
+                        "digest": "8c410702acbe427e76749afe5c81dc32",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f4": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f4",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f5"
+                        ],
+                        "contents": "",
+                        "digest": "74f940b1b0b41c6945fdb2e163849a4e",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f2"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f5": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f5",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Okay, now the progress bar is cruising along</p>\n",
+                        "digest": "601c2da584ff788638d1b2e405d1a98f",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f6": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f6",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f4",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f7"
+                        ],
+                        "contents": "",
+                        "digest": "8cc0c3dbf7a8db5edc1c857054c44f64",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f4"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f7": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f7",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The correct document (this one) is highlighted in the side nav</p>\n",
+                        "digest": "bd6cef0fd11234582908dffef2293c3b",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f8": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f8",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f6",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f9"
+                        ],
+                        "contents": "",
+                        "digest": "3647dc8be8f8ab59591e27eec5240056",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f6"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f9": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f9",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The subsequent documents are inaccessible</p>\n",
+                        "digest": "fa9125b1b7ade78bb146822a310cddb3",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f10": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f10",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f8",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f11"
+                        ],
+                        "contents": "",
+                        "digest": "d7c57909cf3e5fc2c9993f3a809f1223",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f8"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f11": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f11",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The topic title (Smoke Testing) is displayed in the banner</p>\n",
+                        "digest": "8acfc50dcca800f4fa8a15cfab201eb7",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f12": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f12",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f10",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f13"
+                        ],
+                        "contents": "",
+                        "digest": "84e8db76ea98e7528ed462827f805988",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f10"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f13": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f13",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The About page is fully and correctly populated</p>\n",
+                        "digest": "03ad2d590e84aba91a10e5a1fe313bbe",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f14": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f14",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f12",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Clicking on this last bar should unlock the next topic, so please verify that this happens.</p>\n",
+                        "digest": "8cd2a00df5b96807040412fc7b210e44",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f12"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f15": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f12",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f16"
+                        ],
+                        "contents": "",
+                        "digest": "ee4524b0fb30f7dee945a5a7d96388b5",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f12"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f16": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f16",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Abracadabra!</p>\n",
+                        "digest": "2da36cc4ce66eacf9a3ab0d476054dde",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f17": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f17",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thank you! On to the next one ...</p>\n",
+                        "digest": "6e5cad076098b3e824d873e575f2f7df",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f15"
+                        ]
+                    },
+                    "smoke-testing-vseed_basic-topic-functionality_f18": {
+                        "uri": "smoke-testing-vseed_basic-topic-functionality_f18",
+                        "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_basic-topic-functionality_f15"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "smoke-testing-vseed_select-inputs",
+                "topicUri": "smoke-testing-vseed",
+                "slug": "select-inputs",
+                "order": 2,
+                "config": {},
+                "title": "Select inputs",
+                "displayConditions": [],
+                "childUris": [
+                    "smoke-testing-vseed_select-inputs_f1",
+                    "smoke-testing-vseed_select-inputs_user-region",
+                    "smoke-testing-vseed_select-inputs_f4",
+                    "smoke-testing-vseed_select-inputs_f6",
+                    "smoke-testing-vseed_select-inputs_f8",
+                    "smoke-testing-vseed_select-inputs_f10",
+                    "smoke-testing-vseed_select-inputs_f12",
+                    "smoke-testing-vseed_select-inputs_f17",
+                    "smoke-testing-vseed_select-inputs_f18",
+                    "smoke-testing-vseed_select-inputs_f20",
+                    "smoke-testing-vseed_select-inputs_f21",
+                    "smoke-testing-vseed_select-inputs_f23",
+                    "smoke-testing-vseed_select-inputs_f24"
+                ],
+                "digest": "aa23de1760345824ddbe4636358b1ba0",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "smoke-testing-vseed_select-inputs_f21",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "smoke-testing-vseed_select-inputs_f1": {
+                        "uri": "smoke-testing-vseed_select-inputs_f1",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"select-inputs\">Select inputs</h1>\n<h2 id=\"single-select\">Single select</h2>\n",
+                        "digest": "3a510bdf3e50c8b8638f53c370fc6767",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_user-region": {
+                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "midwest",
+                                    "contents": "the Midwest"
+                                },
+                                {
+                                    "value": "south",
+                                    "contents": "the South"
+                                },
+                                {
+                                    "value": "east-coast",
+                                    "contents": "the East Coast"
+                                },
+                                {
+                                    "value": "west-coast",
+                                    "contents": "the West Coast"
+                                }
+                            ]
+                        },
+                        "contentType": "SingleSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f3"
+                        ],
+                        "contents": "",
+                        "digest": "e68fe22cf4ea4fe5e59a3190c27cf1ff",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f3": {
+                        "uri": "smoke-testing-vseed_select-inputs_f3",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Where are you from?</p>\n",
+                        "digest": "9a38121f7fdff683672189d2fd49c1f9",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f4": {
+                        "uri": "smoke-testing-vseed_select-inputs_f4",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "targetValue": "midwest",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f5"
+                        ],
+                        "contents": "",
+                        "digest": "ec4d495c112b1ef9051f7e57270cc4bd",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_user-region"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f5": {
+                        "uri": "smoke-testing-vseed_select-inputs_f5",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Ope! Midwest is best!</p>\n",
+                        "digest": "e8c3f5b0d629768c69166ce73f9d28e6",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f6": {
+                        "uri": "smoke-testing-vseed_select-inputs_f6",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "targetValue": "south",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f7"
+                        ],
+                        "contents": "",
+                        "digest": "c85b2d977db50e96f780a07bb9e1f50b",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_user-region"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f7": {
+                        "uri": "smoke-testing-vseed_select-inputs_f7",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Let&#39;s go to Waffle House!</p>\n",
+                        "digest": "35b9963b6c607e2a82949d789a7b2a59",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f8": {
+                        "uri": "smoke-testing-vseed_select-inputs_f8",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "targetValue": "west-coast",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f9"
+                        ],
+                        "contents": "",
+                        "digest": "7568754b71404c4a9640e3f7cfa44f7e",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_user-region"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f9": {
+                        "uri": "smoke-testing-vseed_select-inputs_f9",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>The West Coast is the best coast!</p>\n",
+                        "digest": "6377f8c6de604496fd28611a3bec090a",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f10": {
+                        "uri": "smoke-testing-vseed_select-inputs_f10",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "targetValue": "east-coast",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f11"
+                        ],
+                        "contents": "",
+                        "digest": "bbe14ca235fe52990138ca52a95e5e67",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_user-region"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f11": {
+                        "uri": "smoke-testing-vseed_select-inputs_f11",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Ah, so you eat <em>real</em> bagels. Lucky!</p>\n",
+                        "digest": "58127f21f8937bb332772d47e07faef0",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f12": {
+                        "uri": "smoke-testing-vseed_select-inputs_f12",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_user-region",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "completionContent": "You're finished! Nice work."
+                        },
+                        "contentType": "Checklist",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f13",
+                            "smoke-testing-vseed_select-inputs_f15"
+                        ],
+                        "contents": "",
+                        "digest": "3811158ddeadaf7efa309319ba878688",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_user-region"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f13": {
+                        "uri": "smoke-testing-vseed_select-inputs_f13",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Verify that you could only choose one option above."
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f14"
+                        ],
+                        "contents": "",
+                        "digest": "0004d4c60bdb4eb0c2e7e8b2ce23ee6b",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f14": {
+                        "uri": "smoke-testing-vseed_select-inputs_f14",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You should be able to change your selection, but only select one at a time.</p>\n",
+                        "digest": "abaaf54a0f859226bd02df74449a6a60",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f15": {
+                        "uri": "smoke-testing-vseed_select-inputs_f15",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Verify that the correct conditional content displayed."
+                        },
+                        "contentType": "Step",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f16"
+                        ],
+                        "contents": "",
+                        "digest": "376561ce299ebcfc6af5c314d4b48d88",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f16": {
+                        "uri": "smoke-testing-vseed_select-inputs_f16",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>It should update anytime you update your answer.</p>\n",
+                        "digest": "c7cc11396a13d724673387f77d9257ae",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f17": {
+                        "uri": "smoke-testing-vseed_select-inputs_f17",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_f12",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"multi-select\">Multi select</h2>\n",
+                        "digest": "f8ca9ffdf8bafb1d70ad08995c632790",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_f12"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f18": {
+                        "uri": "smoke-testing-vseed_select-inputs_f18",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_f12",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "quick",
+                                    "contents": "Quick"
+                                },
+                                {
+                                    "value": "cheap",
+                                    "contents": "Cheap"
+                                },
+                                {
+                                    "value": "good",
+                                    "contents": "Good"
+                                }
+                            ]
+                        },
+                        "contentType": "MultiSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f19"
+                        ],
+                        "contents": "",
+                        "digest": "d683f07f78e49629acc4fc9c25f31803",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_f12"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f19": {
+                        "uri": "smoke-testing-vseed_select-inputs_f19",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Choose at least two:</p>\n",
+                        "digest": "cabc1b97999aeff35ee5fce180c0c02a",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f20": {
+                        "uri": "smoke-testing-vseed_select-inputs_f20",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_f18",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Were you able to choose more than one option above?</p>\n",
+                        "digest": "17eca71d518dcdc9975c9a969e5f08e8",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_f18"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f21": {
+                        "uri": "smoke-testing-vseed_select-inputs_f21",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_f18",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_select-inputs_f22"
+                        ],
+                        "contents": "",
+                        "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_f18"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f22": {
+                        "uri": "smoke-testing-vseed_select-inputs_f22",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Yep!</p>\n",
+                        "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_select-inputs_f23": {
+                        "uri": "smoke-testing-vseed_select-inputs_f23",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_f21",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Excellent! Moving on ...</p>\n",
+                        "digest": "67c056954669d558cab38c8128d0c6ae",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_f21"
+                        ]
+                    },
+                    "smoke-testing-vseed_select-inputs_f24": {
+                        "uri": "smoke-testing-vseed_select-inputs_f24",
+                        "documentUri": "smoke-testing-vseed_select-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_select-inputs_f21",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_select-inputs_f21"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "smoke-testing-vseed_text-inputs",
+                "topicUri": "smoke-testing-vseed",
+                "slug": "text-inputs",
+                "order": 3,
+                "config": {},
+                "title": "Text inputs and piping",
+                "displayConditions": [],
+                "childUris": [
+                    "smoke-testing-vseed_text-inputs_f1",
+                    "smoke-testing-vseed_text-inputs_typed-name",
+                    "smoke-testing-vseed_text-inputs_f4",
+                    "smoke-testing-vseed_text-inputs_f8",
+                    "smoke-testing-vseed_text-inputs_f10",
+                    "smoke-testing-vseed_text-inputs_f13",
+                    "smoke-testing-vseed_text-inputs_f15",
+                    "smoke-testing-vseed_text-inputs_f16",
+                    "smoke-testing-vseed_text-inputs_f18",
+                    "smoke-testing-vseed_text-inputs_inputted-long-text",
+                    "smoke-testing-vseed_text-inputs_f21",
+                    "smoke-testing-vseed_text-inputs_f22",
+                    "smoke-testing-vseed_text-inputs_f24",
+                    "smoke-testing-vseed_text-inputs_f25",
+                    "smoke-testing-vseed_text-inputs_f27",
+                    "smoke-testing-vseed_text-inputs_f28"
+                ],
+                "digest": "3015454f79cdbd1c00fea3a208a41ed6",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "smoke-testing-vseed_text-inputs_f25",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "smoke-testing-vseed_text-inputs_f1": {
+                        "uri": "smoke-testing-vseed_text-inputs_f1",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"text-inputs-and-piping\">Text inputs and piping</h1>\n<h2 id=\"short-text-question\">Short text question</h2>\n",
+                        "digest": "bd5987ece9b33827f553cb99fb8ecbaa",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_typed-name": {
+                        "uri": "smoke-testing-vseed_text-inputs_typed-name",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "ShortTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f3"
+                        ],
+                        "contents": "",
+                        "digest": "bcbacbbc63b7815f638e783dce05a948",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f3": {
+                        "uri": "smoke-testing-vseed_text-inputs_f3",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Type your name and press Enter:</p>\n",
+                        "digest": "04834dbd68f4228290b242b1c43d50b2",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f4": {
+                        "uri": "smoke-testing-vseed_text-inputs_f4",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_typed-name",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": true,
+                            "fragmentUrisByAlias": {
+                                "typed-name": "smoke-testing-vseed_text-inputs_typed-name"
+                            }
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>You typed &#39;<echo>typed-name</echo>&#39;, correct?</p>\n",
+                        "digest": "33e712cde71a8fb11be02966e42e3fa0",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_typed-name"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f8": {
+                        "uri": "smoke-testing-vseed_text-inputs_f8",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_typed-name",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f9"
+                        ],
+                        "contents": "",
+                        "digest": "ab948d3d23f549df296cdf6330bff956",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_typed-name"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f9": {
+                        "uri": "smoke-testing-vseed_text-inputs_f9",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>That&#39;s correct.</p>\n",
+                        "digest": "5f47122e71a0688bcadadbf9b9312a73",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f10": {
+                        "uri": "smoke-testing-vseed_text-inputs_f10",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f8",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": true,
+                            "fragmentUrisByAlias": {
+                                "typed-name": "smoke-testing-vseed_text-inputs_typed-name"
+                            }
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>What if I put it in a header?</p>\n<h2 id=\"you-said-your-name-is-typed-name\">You said your name is <echo>typed-name</echo></h2>\n",
+                        "digest": "00b108a7ed651f43faa35bdee1dd7a67",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f8",
+                            "smoke-testing-vseed_text-inputs_typed-name"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f13": {
+                        "uri": "smoke-testing-vseed_text-inputs_f13",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f8",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f14"
+                        ],
+                        "contents": "",
+                        "digest": "960821e123cc43ba92456e3c187ba919",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f8"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f14": {
+                        "uri": "smoke-testing-vseed_text-inputs_f14",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Sure, that&#39;s also fine.</p>\n",
+                        "digest": "3c693f05da12174c6ebacc0b29db59fe",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f15": {
+                        "uri": "smoke-testing-vseed_text-inputs_f15",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f13",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Please verify that you can edit your response, and the content updates itself accordingly.</p>\n",
+                        "digest": "c5ac9911369ca842f11bb3b1128d8c2b",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f13"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f16": {
+                        "uri": "smoke-testing-vseed_text-inputs_f16",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f13",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f17"
+                        ],
+                        "contents": "",
+                        "digest": "91aa0a05138febded3e329f12efb9d32",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f13"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f17": {
+                        "uri": "smoke-testing-vseed_text-inputs_f17",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Verified!</p>\n",
+                        "digest": "e822fec67a947738170d90c1fcfe3d02",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f18": {
+                        "uri": "smoke-testing-vseed_text-inputs_f18",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f16",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"long-text-question\">Long text question</h2>\n",
+                        "digest": "cba70638ccffc719435a7a80b36191c7",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f16"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_inputted-long-text": {
+                        "uri": "smoke-testing-vseed_text-inputs_inputted-long-text",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f16",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "LongTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f20"
+                        ],
+                        "contents": "",
+                        "digest": "cf1a8f848b17d7ac274102f3121b4865",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f16"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f20": {
+                        "uri": "smoke-testing-vseed_text-inputs_f20",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Type some letters here, and include line breaks. Submit, then refresh the page to verify persistence.</p>\n",
+                        "digest": "a6153b225587121e71feb2b95c0069f5",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f21": {
+                        "uri": "smoke-testing-vseed_text-inputs_f21",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_inputted-long-text",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Is everything working as expected?</p>\n",
+                        "digest": "65ed9a316320886d53c0de934b45e259",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_inputted-long-text"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f22": {
+                        "uri": "smoke-testing-vseed_text-inputs_f22",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_inputted-long-text",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f23"
+                        ],
+                        "contents": "",
+                        "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_inputted-long-text"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f23": {
+                        "uri": "smoke-testing-vseed_text-inputs_f23",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Yep!</p>\n",
+                        "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f24": {
+                        "uri": "smoke-testing-vseed_text-inputs_f24",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f22",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Please verify that you can edit your response.</p>\n",
+                        "digest": "b24929f3ac93bcf0d952ad9064ee744b",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f22"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f25": {
+                        "uri": "smoke-testing-vseed_text-inputs_f25",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f22",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_text-inputs_f26"
+                        ],
+                        "contents": "",
+                        "digest": "91aa0a05138febded3e329f12efb9d32",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f22"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f26": {
+                        "uri": "smoke-testing-vseed_text-inputs_f26",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Verified!</p>\n",
+                        "digest": "e822fec67a947738170d90c1fcfe3d02",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_text-inputs_f27": {
+                        "uri": "smoke-testing-vseed_text-inputs_f27",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f25",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thank you!</p>\n",
+                        "digest": "41810ed1a3c593092a267c6f8b1eaabb",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f25"
+                        ]
+                    },
+                    "smoke-testing-vseed_text-inputs_f28": {
+                        "uri": "smoke-testing-vseed_text-inputs_f28",
+                        "documentUri": "smoke-testing-vseed_text-inputs",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_text-inputs_f25",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_f25"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "smoke-testing-vseed_response-persistence",
+                "topicUri": "smoke-testing-vseed",
+                "slug": "response-persistence",
+                "order": 4,
+                "config": {},
+                "title": "Piped responses from other documents",
+                "displayConditions": [],
+                "childUris": [
+                    "smoke-testing-vseed_response-persistence_f1",
+                    "smoke-testing-vseed_response-persistence_f8",
+                    "smoke-testing-vseed_response-persistence_f10"
+                ],
+                "digest": "05372d8146b5afec0672ea2eb8b1cf13",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "smoke-testing-vseed_response-persistence_f8",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "smoke-testing-vseed_text-inputs_typed-name",
+                    "smoke-testing-vseed_select-inputs_user-region"
+                ],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "smoke-testing-vseed_response-persistence_f1": {
+                        "uri": "smoke-testing-vseed_response-persistence_f1",
+                        "documentUri": "smoke-testing-vseed_response-persistence",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": true,
+                            "fragmentUrisByAlias": {
+                                "typed-name": "smoke-testing-vseed_text-inputs_typed-name",
+                                "user-region": "smoke-testing-vseed_select-inputs_user-region"
+                            }
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"piped-responses-from-other-documents\">Piped responses from other documents</h1>\n<p>I should still remember that your name is <echo>typed-name</echo>, and you&#39;re from <echo>user-region</echo>. (That second one will look a little funny for now, since displaying the &quot;pretty value&quot; of a question is not a thing yet.)</p>\n<p>Did I get that right?</p>\n",
+                        "digest": "c86fdaee8ba8bddfc260a140f33e0e08",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_text-inputs_typed-name",
+                            "smoke-testing-vseed_select-inputs_user-region"
+                        ]
+                    },
+                    "smoke-testing-vseed_response-persistence_f8": {
+                        "uri": "smoke-testing-vseed_response-persistence_f8",
+                        "documentUri": "smoke-testing-vseed_response-persistence",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "smoke-testing-vseed_response-persistence_f9"
+                        ],
+                        "contents": "",
+                        "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_response-persistence_f9": {
+                        "uri": "smoke-testing-vseed_response-persistence_f9",
+                        "documentUri": "smoke-testing-vseed_response-persistence",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Yep!</p>\n",
+                        "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_response-persistence_f10": {
+                        "uri": "smoke-testing-vseed_response-persistence_f10",
+                        "documentUri": "smoke-testing-vseed_response-persistence",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "smoke-testing-vseed_response-persistence_f8",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "smoke-testing-vseed_response-persistence_f8"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,3 @@
+<short-text-question id='optional-id-here'>
+Your question goes here.
+</short-text-question>

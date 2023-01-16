@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users routes should match expectations users.modifyGroups matches expectations users.modifyGroups matches the snapshot on file 1`] = `
+[
+  {
+    "email": "blank-2@test.com",
+    "groups": [
+      "new-group-1",
+      "new-group-2",
+      "new-group-3",
+    ],
+    "id": 4,
+  },
+  {
+    "email": "totally-new-user@test.com",
+    "groups": [
+      "new-group-1",
+      "new-group-2",
+    ],
+    "id": 5,
+  },
+  {
+    "email": "totally-new-user-2@test.com",
+    "groups": [
+      "new-group-1",
+      "new-group-2",
+      "new-group-3",
+      "new-group-4",
+    ],
+    "id": 6,
+  },
+]
+`;
+
+exports[`Users routes should match expectations users.profile matches expectations users.profile matches the snapshot on file 1`] = `
+{
+  "badges": [
+    {
+      "description": "Bravely refused to be discouraged by failure.",
+      "icon": "https://api.iconify.design/carbon/loop.svg",
+      "title": "Persistence practitioner",
+    },
+  ],
+  "email": "completed-1@test.com",
+  "firstName": "Completed",
+  "lastName": "User",
+  "username": "completed-1",
+}
+`;

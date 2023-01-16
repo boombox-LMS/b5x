@@ -1,0 +1,526 @@
+{
+    "topic": {
+        "uri": "filler-topic-11-vseed",
+        "slug": "filler-topic-11",
+        "version": "seed",
+        "title": "Experimentation",
+        "config": {
+            "slug": "filler-topic-11",
+            "groupAccessLevels": {
+                "available": [
+                    "all"
+                ]
+            },
+            "contentMode": "tutorial",
+            "prerequisites": []
+        },
+        "subtitle": "Building, deploying, and analyzing experiments.",
+        "coverImageUrl": "http://localhost:8080/topic-assets/filler-topic-11-vseed/images/experimentation.jpg",
+        "documents": [
+            {
+                "uri": "filler-topic-11-vseed_doc-1",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-1",
+                "order": 1,
+                "config": {},
+                "title": "Prepare for disappointment",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-1_f1",
+                    "filler-topic-11-vseed_doc-1_f2"
+                ],
+                "digest": "07ee2ea3414b772fb6beca3f7f816169",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-1_f1": {
+                        "uri": "filler-topic-11-vseed_doc-1_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"prepare-for-disappointment\">Prepare for disappointment</h1>\n<p>This is just a demo topic, so there&#39;s not much here.</p>\n",
+                        "digest": "f4b3f2a596dd88f4120349526cf578af",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-1_f2": {
+                        "uri": "filler-topic-11-vseed_doc-1_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-1",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_doc-2",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-2",
+                "order": 2,
+                "config": {},
+                "title": "See?",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-2_f1",
+                    "filler-topic-11-vseed_doc-2_f2"
+                ],
+                "digest": "d40242053e6d2ab535c13d7b7c90681e",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-2_f1": {
+                        "uri": "filler-topic-11-vseed_doc-2_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"see\">See?</h1>\n<p>I told you.</p>\n",
+                        "digest": "e1485277c6f185134da6f10d989376f4",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-2_f2": {
+                        "uri": "filler-topic-11-vseed_doc-2_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-2",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_doc-3",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-3",
+                "order": 3,
+                "config": {},
+                "title": "There really isn't anything here",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-3_f1",
+                    "filler-topic-11-vseed_doc-3_f2"
+                ],
+                "digest": "156d5dac6cecbab49a3e3f00651bc428",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-3_f1": {
+                        "uri": "filler-topic-11-vseed_doc-3_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"there-really-isnt-anything-here\">There really isn&#39;t anything here</h1>\n<p>It just goes on like this.</p>\n",
+                        "digest": "8e6cb17e458ba1de45dbbc25fd985902",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-3_f2": {
+                        "uri": "filler-topic-11-vseed_doc-3_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-3",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_doc-4",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-4",
+                "order": 4,
+                "config": {},
+                "title": "Seriously?",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-4_f1",
+                    "filler-topic-11-vseed_doc-4_f2"
+                ],
+                "digest": "fc4c12a909afea0d6e6b8bbf585ec35c",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-4_f1": {
+                        "uri": "filler-topic-11-vseed_doc-4_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-4",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"seriously\">Seriously?</h1>\n<p>You&#39;re still here? What are you expecting to see exactly?</p>\n",
+                        "digest": "f01586de46698b8b8e5c87dfc5f1fda7",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-4_f2": {
+                        "uri": "filler-topic-11-vseed_doc-4_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-4",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_doc-5",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-5",
+                "order": 5,
+                "config": {},
+                "title": "Fine.",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-5_f1",
+                    "filler-topic-11-vseed_doc-5_f2"
+                ],
+                "digest": "b1908c619543f3856d7d7f69833531c3",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-5_f1": {
+                        "uri": "filler-topic-11-vseed_doc-5_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-5",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"fine\">Fine.</h1>\n<p>If this is how you want to spend your time, that&#39;s your call.</p>\n",
+                        "digest": "29fec1cef8a64ea866236a0c6574d3fe",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-5_f2": {
+                        "uri": "filler-topic-11-vseed_doc-5_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-5",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_doc-6",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-6",
+                "order": 6,
+                "config": {},
+                "title": "Some alternatives",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-6_f1",
+                    "filler-topic-11-vseed_doc-6_f2"
+                ],
+                "digest": "4ea8617511995c2484f06eb1e6d76297",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-6_f1": {
+                        "uri": "filler-topic-11-vseed_doc-6_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-6",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"some-alternatives\">Some alternatives</h1>\n<p>Have you considered getting a hobby or two instead, though?</p>\n",
+                        "digest": "882ae7f6e3ecbaf50f931176aa4a2445",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-6_f2": {
+                        "uri": "filler-topic-11-vseed_doc-6_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-6",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_doc-7",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "doc-7",
+                "order": 7,
+                "config": {},
+                "title": "You did it",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_doc-7_f1",
+                    "filler-topic-11-vseed_doc-7_f2"
+                ],
+                "digest": "5481cbd17baaf68e47308cc768f45ebe",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_doc-7_f1": {
+                        "uri": "filler-topic-11-vseed_doc-7_f1",
+                        "documentUri": "filler-topic-11-vseed_doc-7",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"you-did-it\">You did it</h1>\n<p>You finally made it to the last module. But was it worth it?</p>\n",
+                        "digest": "776e699ac4e5d2f7159f01bcf932bcf5",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_doc-7_f2": {
+                        "uri": "filler-topic-11-vseed_doc-7_f2",
+                        "documentUri": "filler-topic-11-vseed_doc-7",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "filler-topic-11-vseed_feedback",
+                "topicUri": "filler-topic-11-vseed",
+                "slug": "feedback",
+                "order": 8,
+                "config": {},
+                "title": "Leave feedback on this topic",
+                "displayConditions": [],
+                "childUris": [
+                    "filler-topic-11-vseed_feedback_f1",
+                    "filler-topic-11-vseed_feedback_b5x-topic-nps",
+                    "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation",
+                    "filler-topic-11-vseed_feedback_f6",
+                    "filler-topic-11-vseed_feedback_f7"
+                ],
+                "digest": "960671b7b2f0ce4257aaed1cfbd95d1b",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "filler-topic-11-vseed_feedback_f1": {
+                        "uri": "filler-topic-11-vseed_feedback_f1",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"leave-feedback-on-this-topic\">Leave feedback on this topic</h1>\n",
+                        "digest": "455fb7fb6f4b7942d66a05a3c7000268",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_feedback_b5x-topic-nps": {
+                        "uri": "filler-topic-11-vseed_feedback_b5x-topic-nps",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "NpsQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "filler-topic-11-vseed_feedback_f3"
+                        ],
+                        "contents": "",
+                        "digest": "39d38b6a70a67589d22f2e91e271c3d8",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_feedback_f3": {
+                        "uri": "filler-topic-11-vseed_feedback_f3",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>How likely are you to recommend this topic to a colleague?</p>\n",
+                        "digest": "c9b667a3e7a717758b5d5e80fb92599a",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation": {
+                        "uri": "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "filler-topic-11-vseed_feedback_b5x-topic-nps",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "LongTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "filler-topic-11-vseed_feedback_f5"
+                        ],
+                        "contents": "",
+                        "digest": "ae09349d85a80a9964f0dead2d3d566b",
+                        "dependencyUris": [
+                            "filler-topic-11-vseed_feedback_b5x-topic-nps"
+                        ]
+                    },
+                    "filler-topic-11-vseed_feedback_f5": {
+                        "uri": "filler-topic-11-vseed_feedback_f5",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Please explain your rating:</p>\n",
+                        "digest": "ed11aba948afae067aa553c2fabe1cb8",
+                        "dependencyUris": []
+                    },
+                    "filler-topic-11-vseed_feedback_f6": {
+                        "uri": "filler-topic-11-vseed_feedback_f6",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thank you for your feedback!</p>\n",
+                        "digest": "0f60e9cb7d440b9655cd2d5271c16897",
+                        "dependencyUris": [
+                            "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation"
+                        ]
+                    },
+                    "filler-topic-11-vseed_feedback_f7": {
+                        "uri": "filler-topic-11-vseed_feedback_f7",
+                        "documentUri": "filler-topic-11-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "filler-topic-11-vseed_feedback_b5x-topic-nps-explanation"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

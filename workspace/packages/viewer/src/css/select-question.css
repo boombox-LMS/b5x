@@ -1,0 +1,32 @@
+.select-question__choice p {
+  margin: 0px;
+}
+
+.select-question__choice {
+  background-color: var(--light-gray);
+  padding: 0.6em 0.7em;
+  border-radius: 0.3em;
+  border: 1.5px solid var(--light-gray);
+  margin-bottom: 4px;
+}
+
+.select-question__choice--active {
+  background-color: var(--completed-light);
+  border: 1.5px solid var(--completed-dark);
+  color: var(--completed-dark);
+  font-weight: 500;
+}
+
+.select-question__choice + .select-question__choice {
+  margin-top: 7px;
+}
+
+.select-question--collapsed .select-question__choice--inactive {
+  display: none;
+}
+
+/* TODO: Why is the border adding height? */
+.select-question__choice:hover {
+  background-color: var(--completed-light);
+  border: 1.5px solid var(--completed-dark);
+}

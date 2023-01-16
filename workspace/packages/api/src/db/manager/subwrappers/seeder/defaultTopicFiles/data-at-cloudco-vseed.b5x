@@ -1,0 +1,2381 @@
+{
+    "topic": {
+        "uri": "data-at-cloudco-vseed",
+        "slug": "data-at-cloudco",
+        "version": "seed",
+        "title": "Data at CloudCo",
+        "config": {
+            "slug": "data-at-cloudco",
+            "groupAccessLevels": {
+                "recommended": [
+                    "all"
+                ]
+            },
+            "prerequisites": [
+                "code-of-conduct"
+            ],
+            "contentMode": "tutorial"
+        },
+        "subtitle": "An introduction to making data-driven decisions at CloudCo.",
+        "coverImageUrl": "http://localhost:8080/topic-assets/data-at-cloudco-vseed/images/data-at-cloudco.jpg",
+        "documents": [
+            {
+                "uri": "data-at-cloudco-vseed_customization-page",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "customization-page",
+                "order": 1,
+                "config": {},
+                "title": "Let's customize your course",
+                "displayConditions": [],
+                "childUris": [
+                    "data-at-cloudco-vseed_customization-page_f1",
+                    "data-at-cloudco-vseed_customization-page_architecture-level",
+                    "data-at-cloudco-vseed_customization-page_f4",
+                    "data-at-cloudco-vseed_customization-page_f6",
+                    "data-at-cloudco-vseed_customization-page_f8",
+                    "data-at-cloudco-vseed_customization-page_f10",
+                    "data-at-cloudco-vseed_customization-page_sql-level",
+                    "data-at-cloudco-vseed_customization-page_f13",
+                    "data-at-cloudco-vseed_customization-page_f15",
+                    "data-at-cloudco-vseed_customization-page_f17",
+                    "data-at-cloudco-vseed_customization-page_f19",
+                    "data-at-cloudco-vseed_customization-page_f21",
+                    "data-at-cloudco-vseed_customization-page_f23",
+                    "data-at-cloudco-vseed_customization-page_mode-level",
+                    "data-at-cloudco-vseed_customization-page_f26",
+                    "data-at-cloudco-vseed_customization-page_f28",
+                    "data-at-cloudco-vseed_customization-page_f30",
+                    "data-at-cloudco-vseed_customization-page_f32",
+                    "data-at-cloudco-vseed_customization-page_f34"
+                ],
+                "digest": "7cef0d03864392b7a5f75d69b617d369",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_customization-page_f1": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f1",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"lets-customize-your-course\">Let&#39;s customize your course</h1>\n<p>Answering the questions below will help us tailor the course content for your needs. If needed, you can always revise your answers at any point in the course.</p>\n<h2 id=\"cloudco-architecture-familiarity\">CloudCo architecture familiarity</h2>\n",
+                        "digest": "cf01090c6a00d200bf30bd2f5c770634",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_architecture-level": {
+                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "beginner",
+                                    "contents": "I'm completely unfamiliar with it."
+                                },
+                                {
+                                    "value": "intermediate",
+                                    "contents": "I've interacted with some components of it, but don't have the big picture."
+                                },
+                                {
+                                    "value": "advanced",
+                                    "contents": "I could draw you a pretty okay diagram."
+                                }
+                            ]
+                        },
+                        "contentType": "SingleSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f3"
+                        ],
+                        "contents": "",
+                        "digest": "3c5cfe2960dc719287ba729e518c5d7b",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f3": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f3",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>How familiar are you with CloudCo&#39;s data architecture?</p>\n",
+                        "digest": "16eff4c71d3e15f3be77e36007ebe2e9",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f4": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f4",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "targetValue": "beginner",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f5"
+                        ],
+                        "contents": "",
+                        "digest": "e4567659969fee54416250ca1848906e",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f5": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f5",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>We&#39;ll give you the full tour, then!</p>\n",
+                        "digest": "a82eb81a7734c2c498795d8221eabfe6",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f6": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f6",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "targetValue": "intermediate",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f7"
+                        ],
+                        "contents": "",
+                        "digest": "09237fe23c5fa86bb5ae5c27466f950d",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f7": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f7",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Got it. We&#39;ll give you the opportunity to dig into the architecture a bit more.</p>\n",
+                        "digest": "582d60b1134a28f38a984ef08d0b9e2c",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f8": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f8",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "targetValue": "advanced",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f9"
+                        ],
+                        "contents": "",
+                        "digest": "32dfd82f2ef921a178b0b49f992c284d",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f9": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f9",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Nice! We&#39;ll include our own diagram for your reference, but skip the detailed tour.</p>\n",
+                        "digest": "ac2388ce70ce8efec1a955cdabe0ee4c",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f10": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f10",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"sql-skills\">SQL skills</h2>\n",
+                        "digest": "f6e43616ae24a7de95bd26e3ce936033",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_sql-level": {
+                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "beginner",
+                                    "contents": "I've never used SQL."
+                                },
+                                {
+                                    "value": "novice",
+                                    "contents": "I've made progress in a SQL course or tutorial."
+                                },
+                                {
+                                    "value": "intermediate",
+                                    "contents": "I've completed an introductory SQL course."
+                                },
+                                {
+                                    "value": "advanced",
+                                    "contents": "I've completed an in-depth SQL course or track."
+                                },
+                                {
+                                    "value": "expert",
+                                    "contents": "I write SQL professionally."
+                                }
+                            ]
+                        },
+                        "contentType": "SingleSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f12"
+                        ],
+                        "contents": "",
+                        "digest": "7c5f790f20d3abd8c6791edd4a1ff92f",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f12": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f12",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Which best describes your experience with SQL?</p>\n",
+                        "digest": "0b8eebbf6586da248add18fb5cfe32a3",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f13": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f13",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "targetValue": "beginner",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f14"
+                        ],
+                        "contents": "",
+                        "digest": "c3708e15aac47141c82a962df5cada95",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f14": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f14",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>We&#39;re excited for you to start your SQL adventure! We&#39;ll start from the very beginning, with a full introductory SQL module included in this course.</p>\n",
+                        "digest": "5049c6fce928963a6d3b973ea6d760ba",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f15": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f15",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "targetValue": "novice",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f16"
+                        ],
+                        "contents": "",
+                        "digest": "01e33170ce79727fdaeba575e72f84fb",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f16": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f16",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>We&#39;ll assume you know the basics, like SELECT, but still help you with the fancy stuff, like JOINs.</p>\n",
+                        "digest": "3d6a8a830dd79b4bc1036d4095659f1d",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f17": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f17",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "targetValue": "intermediate",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f18"
+                        ],
+                        "contents": "",
+                        "digest": "5750b4115cab0b5db9570891e2427a04",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f18": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f18",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>In that case, you&#39;ll just do a quick review of the basics before diving into more complex queries.</p>\n",
+                        "digest": "6a723a1f917d21ae1126af061d837f6d",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f19": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f19",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "targetValue": "advanced",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f20"
+                        ],
+                        "contents": "",
+                        "digest": "5a8f475f4dcb7a30a9824e1e785450e5",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f20": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f20",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Since you&#39;re already familiar with SQL, we&#39;ll provide a SQL cheat sheet for your reference, but you won&#39;t complete any SQL-specific challenges.</p>\n",
+                        "digest": "7972b7aec663ddf7fc39a6969101edd2",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f21": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f21",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "targetValue": "expert",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f22"
+                        ],
+                        "contents": "",
+                        "digest": "1f03f9a83c8663aea603834373bfad61",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f22": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f22",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Sounds like you won&#39;t be needing any SQL instruction at all! We&#39;ll just skip that part.</p>\n",
+                        "digest": "9c4a50e1467f7573ae3176d02541b29b",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f23": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f23",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"mode-familiarity\">Mode familiarity</h2>\n",
+                        "digest": "5d832005b6b00ce44bdc13fbdfd35986",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_mode-level": {
+                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "beginner",
+                                    "contents": "I've never used Mode."
+                                },
+                                {
+                                    "value": "novice",
+                                    "contents": "I've used existing reports in Mode."
+                                },
+                                {
+                                    "value": "intermediate",
+                                    "contents": "I've created simple reports in Mode."
+                                },
+                                {
+                                    "value": "advanced",
+                                    "contents": "I've created complex reports in Mode."
+                                },
+                                {
+                                    "value": "expert",
+                                    "contents": "I use Mode professionally."
+                                }
+                            ]
+                        },
+                        "contentType": "SingleSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f25"
+                        ],
+                        "contents": "",
+                        "digest": "3aef63bb5cdb8a2ed33a9a371ed77fd5",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_sql-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f25": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f25",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Which best describes your experience with Mode?</p>\n",
+                        "digest": "7b02012befb4dc27f03f3e0e9dfb5ce4",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f26": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f26",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "targetValue": "beginner",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f27"
+                        ],
+                        "contents": "",
+                        "digest": "2439348a4adf106767521d20b66d018b",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_mode-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f27": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f27",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>In that case, we&#39;ll direct you to a few external resources to establish a foundation before you use Mode to query CloudCo data.</p>\n",
+                        "digest": "ec5a513e31f9af31c937ba886239f847",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f28": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f28",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "targetValue": "novice",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f29"
+                        ],
+                        "contents": "",
+                        "digest": "79b22a7d11e4b6120ee4553b7d88498a",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_mode-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f29": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f29",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>We&#39;ll assume you know the basics, but offer you a few external resources that you can use to review if needed.</p>\n",
+                        "digest": "e10b9b309940ceb590f4f6467f1bd878",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f30": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f30",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "targetValue": "intermediate",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f31"
+                        ],
+                        "contents": "",
+                        "digest": "148a1f92a126067419f76648d1697bb4",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_mode-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f31": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f31",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>In that case, we&#39;ll skip the basics and focus on advanced Mode features.</p>\n",
+                        "digest": "820249b60b05dca07c662a5dfc901556",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f32": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f32",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            [
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                            "targetValue": "advanced",
+                                            "operator": "is"
+                                        }
+                                    }
+                                ],
+                                {
+                                    "type": "conjunction",
+                                    "data": "or"
+                                },
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                            "targetValue": "expert",
+                                            "operator": "is"
+                                        }
+                                    }
+                                ]
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_customization-page_f33"
+                        ],
+                        "contents": "",
+                        "digest": "698f28d4441cac8d676c7fff2d2a246f",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_mode-level"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_customization-page_f33": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f33",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Got it -- we&#39;ll skip the Mode challenges.</p>\n",
+                        "digest": "ea40790e9d54ed2722db7daab4d682a9",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_customization-page_f34": {
+                        "uri": "data-at-cloudco-vseed_customization-page_f34",
+                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_customization-page_mode-level"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "b-optional-mentor-signup",
+                "order": 2,
+                "config": {},
+                "title": "Optional mentor signup",
+                "displayConditions": [
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "targetValue": "advanced",
+                                "operator": "is"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "or"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "targetValue": "expert",
+                                "operator": "is"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "or"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "targetValue": "advanced",
+                                "operator": "is"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "or"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "targetValue": "expert",
+                                "operator": "is"
+                            }
+                        }
+                    ]
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f1",
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f3",
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f5",
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f7",
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f8"
+                ],
+                "digest": "96af5940532acdda5edb2788274db539",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level",
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level",
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f1": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f1",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"optional-mentor-signup\">Optional mentor signup</h1>\n<p>Based on your responses, you have advanced data skills that make you a great fit for our mentoring program.</p>\n<p>Is it okay for us to reach out to you about becoming a mentor?</p>\n",
+                        "digest": "eccaf57293d06855440260f42b447053",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [],
+                        "data": {
+                            "choices": [
+                                {
+                                    "value": "high",
+                                    "contents": "Absolutely! I'm passionate about helping my colleagues grow."
+                                },
+                                {
+                                    "value": "medium",
+                                    "contents": "Yes, I'm interested in hearing more."
+                                },
+                                {
+                                    "value": "low",
+                                    "contents": "Not at this time, thank you."
+                                }
+                            ]
+                        },
+                        "contentType": "SingleSelectQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "15cef5f3b9476c8753ebe73aedb799df",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f3": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f3",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [
+                            [
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                            "targetValue": "high",
+                                            "operator": "is"
+                                        }
+                                    }
+                                ],
+                                {
+                                    "type": "conjunction",
+                                    "data": "or"
+                                },
+                                [
+                                    {
+                                        "type": "condition",
+                                        "data": {
+                                            "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                            "targetValue": "medium",
+                                            "operator": "is"
+                                        }
+                                    }
+                                ]
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_b-optional-mentor-signup_f4"
+                        ],
+                        "contents": "",
+                        "digest": "28b6bbb7060453a03f26d4f035255df0",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f4": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f4",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Excellent! You&#39;ll be hearing from us soon.</p>\n",
+                        "digest": "504aad4e96cdb3963407e24f9f7f01b5",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f5": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f5",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                        "targetValue": "low",
+                                        "operator": "is"
+                                    }
+                                }
+                            ],
+                            {
+                                "type": "conjunction",
+                                "data": "and"
+                            },
+                            [
+                                {
+                                    "type": "condition",
+                                    "data": {
+                                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                        "operator": "status-is",
+                                        "targetValue": "completed"
+                                    }
+                                }
+                            ]
+                        ],
+                        "data": {},
+                        "contentType": "Show",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "data-at-cloudco-vseed_b-optional-mentor-signup_f6"
+                        ],
+                        "contents": "",
+                        "digest": "d1f5e562f7d2e873b049cbb7d32db495",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f6": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f6",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href=\"mailto:&#x74;&#101;&#x63;&#104;&#108;&#x65;&#x61;&#114;&#110;&#x69;&#x6e;&#103;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;\">&#x74;&#101;&#x63;&#104;&#108;&#x65;&#x61;&#114;&#110;&#x69;&#x6e;&#103;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>.</p>\n",
+                        "digest": "285603cd21b914ac5138b79b1394fe56",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f7": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f7",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>On to the course!</p>\n",
+                        "digest": "319f424af52f941dba5c10d93dc96007",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_b-optional-mentor-signup_f8": {
+                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f8",
+                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_cloudco-data-architecture",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "cloudco-data-architecture",
+                "order": 3,
+                "config": {},
+                "title": "Deep dive: CloudCo's data architecture",
+                "displayConditions": [
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                "targetValue": "beginner",
+                                "operator": "is"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "or"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                "targetValue": "intermediate",
+                                "operator": "is"
+                            }
+                        }
+                    ]
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_cloudco-data-architecture_f1",
+                    "data-at-cloudco-vseed_cloudco-data-architecture_f2"
+                ],
+                "digest": "275f52a3b8777905fbfc341c6dfb65d5",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_architecture-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_architecture-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_cloudco-data-architecture_f1": {
+                        "uri": "data-at-cloudco-vseed_cloudco-data-architecture_f1",
+                        "documentUri": "data-at-cloudco-vseed_cloudco-data-architecture",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"deep-dive-cloudcos-data-architecture\">Deep dive: CloudCo&#39;s data architecture</h1>\n<p>There&#39;s not actually anything here, since this topic is set up to demo subject-matter customization.</p>\n",
+                        "digest": "6d985749b035af0e39339735adbe9754",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_cloudco-data-architecture_f2": {
+                        "uri": "data-at-cloudco-vseed_cloudco-data-architecture_f2",
+                        "documentUri": "data-at-cloudco-vseed_cloudco-data-architecture",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_data-architecture-diagram",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "data-architecture-diagram",
+                "order": 4,
+                "config": {},
+                "title": "Diagram of CloudCo's data architecture",
+                "displayConditions": [],
+                "childUris": [
+                    "data-at-cloudco-vseed_data-architecture-diagram_f1",
+                    "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                    "data-at-cloudco-vseed_data-architecture-diagram_f4",
+                    "data-at-cloudco-vseed_data-architecture-diagram_f5"
+                ],
+                "digest": "15448a9c321a6eaa796f3ea5f62282c2",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_data-architecture-diagram_f1": {
+                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f1",
+                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"diagram-of-cloudcos-data-architecture\">Diagram of CloudCo&#39;s data architecture</h1>\n<p>Pretend there&#39;s a big diagram here, okay?</p>\n",
+                        "digest": "582281ee7cfb839d576b2255993312ae",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_data-architecture-diagram_f2": {
+                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "UserReply",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "data-at-cloudco-vseed_data-architecture-diagram_f3"
+                        ],
+                        "contents": "",
+                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_data-architecture-diagram_f3": {
+                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f3",
+                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Okay.</p>\n",
+                        "digest": "bacb025f83756f734769fe94667edee2",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_data-architecture-diagram_f4": {
+                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f4",
+                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thanks. We appreciate it.</p>\n",
+                        "digest": "368175900b851382f261e219030dc060",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_data-architecture-diagram_f2"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_data-architecture-diagram_f5": {
+                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f5",
+                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_data-architecture-diagram_f2"
+                        ]
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_introduction-to-sql",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "introduction-to-sql",
+                "order": 5,
+                "config": {},
+                "title": "What is SQL?",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                            "targetValue": "beginner",
+                            "operator": "is"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_introduction-to-sql_f1",
+                    "data-at-cloudco-vseed_introduction-to-sql_f2"
+                ],
+                "digest": "d46597768fc318b4eae2a169593ebad1",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_introduction-to-sql_f1": {
+                        "uri": "data-at-cloudco-vseed_introduction-to-sql_f1",
+                        "documentUri": "data-at-cloudco-vseed_introduction-to-sql",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"what-is-sql\">What is SQL?</h1>\n<p>This would only show if the user was a SQL beginner. It would explain the purpose of SQL and its structure, giving the user a mental model of why SQL exists and how it is formatted.</p>\n",
+                        "digest": "e04f07254e67ef73972330790c525351",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_introduction-to-sql_f2": {
+                        "uri": "data-at-cloudco-vseed_introduction-to-sql_f2",
+                        "documentUri": "data-at-cloudco-vseed_introduction-to-sql",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_basic-SQL-queries",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "basic-SQL-queries",
+                "order": 6,
+                "config": {},
+                "title": "Creating tables, selecting rows, and inserting rows",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                            "targetValue": "beginner",
+                            "operator": "is"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_basic-SQL-queries_f1",
+                    "data-at-cloudco-vseed_basic-SQL-queries_f2"
+                ],
+                "digest": "07061da47eb02293c97ff8acfdfde56b",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_basic-SQL-queries_f1": {
+                        "uri": "data-at-cloudco-vseed_basic-SQL-queries_f1",
+                        "documentUri": "data-at-cloudco-vseed_basic-SQL-queries",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"creating-tables-selecting-rows-and-inserting-rows\">Creating tables, selecting rows, and inserting rows</h1>\n<p>This is shown because the student said they were a beginner at SQL.</p>\n",
+                        "digest": "192dd13823f3b39098b88fa2a0faf672",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_basic-SQL-queries_f2": {
+                        "uri": "data-at-cloudco-vseed_basic-SQL-queries_f2",
+                        "documentUri": "data-at-cloudco-vseed_basic-SQL-queries",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_joins-and-aggregate-functions",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "joins-and-aggregate-functions",
+                "order": 7,
+                "config": {},
+                "title": "Joins and aggregate functions",
+                "displayConditions": [
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "targetValue": "beginner",
+                                "operator": "is"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "or"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "targetValue": "novice",
+                                "operator": "is"
+                            }
+                        }
+                    ]
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f1",
+                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f2"
+                ],
+                "digest": "0314dfbb9f56d3ff14b636f2fbcfe4e0",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f1": {
+                        "uri": "data-at-cloudco-vseed_joins-and-aggregate-functions_f1",
+                        "documentUri": "data-at-cloudco-vseed_joins-and-aggregate-functions",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"joins-and-aggregate-functions\">Joins and aggregate functions</h1>\n<p>The content would go here.</p>\n",
+                        "digest": "15a4bbc6c6e99f84f5564d1313c86211",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f2": {
+                        "uri": "data-at-cloudco-vseed_joins-and-aggregate-functions_f2",
+                        "documentUri": "data-at-cloudco-vseed_joins-and-aggregate-functions",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_advanced-sql-queries",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "advanced-sql-queries",
+                "order": 8,
+                "config": {},
+                "title": "Nested queries, casting, timestamps, and other advanced SQL topics",
+                "displayConditions": [
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "targetValue": "expert",
+                                "operator": "is-not"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "and"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "targetValue": "advanced",
+                                "operator": "is-not"
+                            }
+                        }
+                    ]
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_advanced-sql-queries_f1",
+                    "data-at-cloudco-vseed_advanced-sql-queries_f2"
+                ],
+                "digest": "826d71f8511aaaf0c2014683973356f1",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_advanced-sql-queries_f1": {
+                        "uri": "data-at-cloudco-vseed_advanced-sql-queries_f1",
+                        "documentUri": "data-at-cloudco-vseed_advanced-sql-queries",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"nested-queries-casting-timestamps-and-other-advanced-sql-topics\">Nested queries, casting, timestamps, and other advanced SQL topics</h1>\n<p>The content would go here.</p>\n",
+                        "digest": "6b7ac4673a471045c760ab4b7f824c70",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_advanced-sql-queries_f2": {
+                        "uri": "data-at-cloudco-vseed_advanced-sql-queries_f2",
+                        "documentUri": "data-at-cloudco-vseed_advanced-sql-queries",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_SQL-cheat-sheet",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "SQL-cheat-sheet",
+                "order": 9,
+                "config": {},
+                "title": "SQL cheat sheet",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                            "targetValue": "expert",
+                            "operator": "is-not"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_SQL-cheat-sheet_f1",
+                    "data-at-cloudco-vseed_SQL-cheat-sheet_f2"
+                ],
+                "digest": "a37914226e62f7fde4ddd7c5eaad5247",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_sql-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_SQL-cheat-sheet_f1": {
+                        "uri": "data-at-cloudco-vseed_SQL-cheat-sheet_f1",
+                        "documentUri": "data-at-cloudco-vseed_SQL-cheat-sheet",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"sql-cheat-sheet\">SQL cheat sheet</h1>\n<p>The cheat sheet would go here.</p>\n",
+                        "digest": "9c1d126e6fdf192038ec6080b001e70e",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_SQL-cheat-sheet_f2": {
+                        "uri": "data-at-cloudco-vseed_SQL-cheat-sheet_f2",
+                        "documentUri": "data-at-cloudco-vseed_SQL-cheat-sheet",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_what-is-mode",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "what-is-mode",
+                "order": 10,
+                "config": {},
+                "title": "What is Mode?",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                            "targetValue": "beginner",
+                            "operator": "is"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_what-is-mode_f1",
+                    "data-at-cloudco-vseed_what-is-mode_f2"
+                ],
+                "digest": "318846b2b26f7ff9085221e47a338c0e",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_what-is-mode_f1": {
+                        "uri": "data-at-cloudco-vseed_what-is-mode_f1",
+                        "documentUri": "data-at-cloudco-vseed_what-is-mode",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"what-is-mode\">What is Mode?</h1>\n<p>This would give the user a mental model for Mode, and link to some external resources.</p>\n",
+                        "digest": "11d580e1fb1f87277802f90be47777c8",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_what-is-mode_f2": {
+                        "uri": "data-at-cloudco-vseed_what-is-mode_f2",
+                        "documentUri": "data-at-cloudco-vseed_what-is-mode",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_optional-mode-resources",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "optional-mode-resources",
+                "order": 11,
+                "config": {},
+                "title": "Optional review: Mode basics",
+                "displayConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                            "targetValue": "novice",
+                            "operator": "is"
+                        }
+                    }
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_optional-mode-resources_f1",
+                    "data-at-cloudco-vseed_optional-mode-resources_f2"
+                ],
+                "digest": "78e3475fb9e4760e042427f367f0449e",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_optional-mode-resources_f1": {
+                        "uri": "data-at-cloudco-vseed_optional-mode-resources_f1",
+                        "documentUri": "data-at-cloudco-vseed_optional-mode-resources",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"optional-review-mode-basics\">Optional review: Mode basics</h1>\n<p>Content would go here.</p>\n",
+                        "digest": "64934f73a5414526f90fb1d8b7da3bd8",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_optional-mode-resources_f2": {
+                        "uri": "data-at-cloudco-vseed_optional-mode-resources_f2",
+                        "documentUri": "data-at-cloudco-vseed_optional-mode-resources",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_creating-simple-reports",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "creating-simple-reports",
+                "order": 12,
+                "config": {},
+                "title": "Creating simple reports in Mode",
+                "displayConditions": [
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "targetValue": "beginner",
+                                "operator": "is"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "or"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "targetValue": "novice",
+                                "operator": "is"
+                            }
+                        }
+                    ]
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_creating-simple-reports_f1",
+                    "data-at-cloudco-vseed_creating-simple-reports_f2"
+                ],
+                "digest": "35b938915555ad51601260a5c88ee3a7",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_creating-simple-reports_f1": {
+                        "uri": "data-at-cloudco-vseed_creating-simple-reports_f1",
+                        "documentUri": "data-at-cloudco-vseed_creating-simple-reports",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"creating-simple-reports-in-mode\">Creating simple reports in Mode</h1>\n<p>Content would go here.</p>\n",
+                        "digest": "459a8d46e75c99480cc9dd5917a10425",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_creating-simple-reports_f2": {
+                        "uri": "data-at-cloudco-vseed_creating-simple-reports_f2",
+                        "documentUri": "data-at-cloudco-vseed_creating-simple-reports",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_creating-complex-reports",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "creating-complex-reports",
+                "order": 13,
+                "config": {},
+                "title": "Creating complex reports in Mode",
+                "displayConditions": [
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "targetValue": "advanced",
+                                "operator": "is-not"
+                            }
+                        }
+                    ],
+                    {
+                        "type": "conjunction",
+                        "data": "and"
+                    },
+                    [
+                        {
+                            "type": "condition",
+                            "data": {
+                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "targetValue": "expert",
+                                "operator": "is-not"
+                            }
+                        }
+                    ]
+                ],
+                "childUris": [
+                    "data-at-cloudco-vseed_creating-complex-reports_f1",
+                    "data-at-cloudco-vseed_creating-complex-reports_f2"
+                ],
+                "digest": "af21736f27ec5dc77841b22cb52acc52",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "dependencyUris": [
+                    "data-at-cloudco-vseed_customization-page_mode-level"
+                ],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_creating-complex-reports_f1": {
+                        "uri": "data-at-cloudco-vseed_creating-complex-reports_f1",
+                        "documentUri": "data-at-cloudco-vseed_creating-complex-reports",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"creating-complex-reports-in-mode\">Creating complex reports in Mode</h1>\n<p>The content would go here.</p>\n",
+                        "digest": "aeeba96e109e4fc9854c6d95299fc70c",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_creating-complex-reports_f2": {
+                        "uri": "data-at-cloudco-vseed_creating-complex-reports_f2",
+                        "documentUri": "data-at-cloudco-vseed_creating-complex-reports",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_summary",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "summary",
+                "order": 14,
+                "config": {},
+                "title": "Course concepts summary",
+                "displayConditions": [],
+                "childUris": [
+                    "data-at-cloudco-vseed_summary_f1",
+                    "data-at-cloudco-vseed_summary_f2"
+                ],
+                "digest": "a881edbd12f722bafeeb1cd88a1fc076",
+                "contentMode": "tutorial",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_summary_f1": {
+                        "uri": "data-at-cloudco-vseed_summary_f1",
+                        "documentUri": "data-at-cloudco-vseed_summary",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"course-concepts-summary\">Course concepts summary</h1>\n<p>A summary would go here.</p>\n",
+                        "digest": "8d33a16a36415faee4f27ddf50f75e60",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_summary_f2": {
+                        "uri": "data-at-cloudco-vseed_summary_f2",
+                        "documentUri": "data-at-cloudco-vseed_summary",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
+                "uri": "data-at-cloudco-vseed_feedback",
+                "topicUri": "data-at-cloudco-vseed",
+                "slug": "feedback",
+                "order": 15,
+                "config": {},
+                "title": "Leave feedback on this topic",
+                "displayConditions": [],
+                "childUris": [
+                    "data-at-cloudco-vseed_feedback_f1",
+                    "data-at-cloudco-vseed_feedback_b5x-topic-nps",
+                    "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                    "data-at-cloudco-vseed_feedback_f6",
+                    "data-at-cloudco-vseed_feedback_f7"
+                ],
+                "digest": "960671b7b2f0ce4257aaed1cfbd95d1b",
+                "contentMode": "tutorial",
+                "completionConditions": [
+                    {
+                        "type": "condition",
+                        "data": {
+                            "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                            "operator": "status-is",
+                            "targetValue": "completed"
+                        }
+                    }
+                ],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "data-at-cloudco-vseed_feedback_f1": {
+                        "uri": "data-at-cloudco-vseed_feedback_f1",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"leave-feedback-on-this-topic\">Leave feedback on this topic</h1>\n",
+                        "digest": "455fb7fb6f4b7942d66a05a3c7000268",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_feedback_b5x-topic-nps": {
+                        "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "NpsQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "data-at-cloudco-vseed_feedback_f3"
+                        ],
+                        "contents": "",
+                        "digest": "39d38b6a70a67589d22f2e91e271c3d8",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_feedback_f3": {
+                        "uri": "data-at-cloudco-vseed_feedback_f3",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>How likely are you to recommend this topic to a colleague?</p>\n",
+                        "digest": "c9b667a3e7a717758b5d5e80fb92599a",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation": {
+                        "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "LongTextQuestion",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [
+                            "data-at-cloudco-vseed_feedback_f5"
+                        ],
+                        "contents": "",
+                        "digest": "ae09349d85a80a9964f0dead2d3d566b",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_feedback_b5x-topic-nps"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_feedback_f5": {
+                        "uri": "data-at-cloudco-vseed_feedback_f5",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Please explain your rating:</p>\n",
+                        "digest": "ed11aba948afae067aa553c2fabe1cb8",
+                        "dependencyUris": []
+                    },
+                    "data-at-cloudco-vseed_feedback_f6": {
+                        "uri": "data-at-cloudco-vseed_feedback_f6",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Thank you for your feedback!</p>\n",
+                        "digest": "0f60e9cb7d440b9655cd2d5271c16897",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation"
+                        ]
+                    },
+                    "data-at-cloudco-vseed_feedback_f7": {
+                        "uri": "data-at-cloudco-vseed_feedback_f7",
+                        "documentUri": "data-at-cloudco-vseed_feedback",
+                        "displayConditions": [
+                            {
+                                "type": "condition",
+                                "data": {
+                                    "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                                    "operator": "status-is",
+                                    "targetValue": "completed"
+                                }
+                            }
+                        ],
+                        "data": {},
+                        "contentType": "DocumentCompletionContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+                        "dependencyUris": [
+                            "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

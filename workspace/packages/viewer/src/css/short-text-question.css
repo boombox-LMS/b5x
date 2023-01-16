@@ -1,0 +1,21 @@
+input[type="text"].short-text-question__input.specificity-bump {
+  line-height: 2rem;
+  border-left: 1px solid lightgray;
+}
+
+input[type="text"].short-text-question__input.specificity-bump:focus {
+  line-height: 2rem;
+  border-left: 1px solid var(--pop);
+}
+
+input[type="text"].short-text-question__input--completed.specificity-bump {
+  border-left: 1px solid var(--completed-dark);
+}
+
+.short-text-question__enter-prompt--visible {
+  float: left;
+  height: 11px;
+  font-size: 0.75rem;
+  margin-top: -3px;
+  font-style: italic;
+}
