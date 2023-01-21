@@ -14,6 +14,7 @@ import { selectHeaderProps } from "./headerSlice";
 import Tab from "../ui/Tab";
 import TabPanel from "../ui/TabPanel";
 import Tabs from "../ui/Tabs";
+import PublishIcon from "@mui/icons-material/Publish";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -63,6 +64,10 @@ export const Header = () => {
     "Control panel": {
       url: "/control-panel",
       tabIndex: 3,
+    },
+    "Publish a topic": {
+      url: "/publish",
+      tabIndex: 4,
     },
   };
 
@@ -138,6 +143,15 @@ export const Header = () => {
                   </Tooltip>
                 }
                 index={3}
+              />
+              <Tab
+                sx={tabStyle}
+                icon={
+                  <Tooltip title="Publish a topic" placement="top">
+                    <PublishIcon sx={tabIconStyle} />
+                  </Tooltip>
+                }
+                index={4}
               />
               {/* <Tab label="Create highlight" index={3} /> */}
             </Tabs>

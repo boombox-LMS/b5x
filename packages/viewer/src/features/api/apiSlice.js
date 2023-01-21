@@ -29,19 +29,25 @@ export const api = createApi({
       query: () => "/topics.catalog",
       providesTags: ["Catalog"],
     }),
-    // pull a specific topic
     getTopicInfo: builder.query({
       query: (params) => ({
         url: "/topics.info",
         params,
       }),
     }),
-    // pull a specific topic
     getTopicContents: builder.query({
       query: (uri) => ({
         url: "/topics.contents",
         params: { uri },
       }),
+    }),
+    publishTopic: builder.mutation({
+      query: (topic) => ({
+        url: "/topics.publish",
+        method: "POST",
+        body: topic,
+      }),
+      invalidatesTags: ["Catalog"],
     }),
     verifyTopicCompletion: builder.mutation({
       query: (topicUri) => ({
@@ -254,6 +260,7 @@ export const {
   usePopulateTopicResponsesMutation,
   useClearTopicResponsesMutation,
   useVerifyTopicCompletionMutation,
+  usePublishTopicMutation,
   // documents
   useGetDocumentContentsQuery,
   usePopulateDocumentResponsesMutation,
