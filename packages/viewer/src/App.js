@@ -20,6 +20,7 @@ import { HelpDesk } from "./features/helpdesk/HelpDesk";
 import { ThemeProvider } from "@mui/material/styles";
 import { createTheme } from "@mui/material/styles";
 import { Header } from "./features/header/Header";
+import { TopicPublisher } from "./features/publishing/TopicPublisher";
 
 const muiTheme = createTheme({
   palette: {
@@ -166,6 +167,7 @@ function App() {
                 element={<TopicContents />}
               />
               <Route exact path="/sandbox" element={<Sandbox />} />
+              <Route exact path="/publish" element={<TopicPublisher />} />
             </Routes>
           </React.StrictMode>
           {user && user.email && <HelpDesk />}
