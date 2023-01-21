@@ -16,7 +16,7 @@
 <li><a href="_b5x_api.html">@b5x/api</a></li></ul>
 <h1>Module @b5x/api</h1></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/boombox-LMS/b5x/blob/4b4d2de/packages/api/src/typedocEntryPoint.ts#L1">api/src/typedocEntryPoint.ts:1</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/boombox-LMS/b5x/blob/3a7189f/packages/api/src/typedocEntryPoint.ts#L1">api/src/typedocEntryPoint.ts:1</a></li></ul></aside>
 <section class="tsd-panel-group">
 <section class="tsd-panel tsd-typography">
 <a href="#boombox-backend-server-b5xapi" id="boombox-backend-server-b5xapi" style="color: inherit; text-decoration: none;">
@@ -27,7 +27,7 @@
   <h2>Responsibilities</h2>
 </a>
 <ul>
-<li>Receive new topic data from the CLI content publishing tool, b5x-cli</li>
+<li>Receive new topic data from the viewer app</li>
 <li>Encrypt and store topic data and assets<ul>
 <li>Storage may be in the filesystem, a database, S3, Redis, etc.</li>
 </ul>
@@ -39,6 +39,7 @@
 </ul>
 </li>
 <li>Manage incoming topic updates, such as auto-migrating users to the newest non-breaking topic version</li>
+<li>Manage ongoing versioning of topics</li>
 <li>Store user data, such as a user&#39;s responses to inputs within topics</li>
 </ul>
 

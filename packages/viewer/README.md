@@ -8,6 +8,7 @@ The viewer app facilitates most of a user's relationship with Boombox content, s
 
 Examples:
 
+- Facilitate the uploading of new or updated topic content
 - Allow admins to mass-assign users to groups
 - Guide the user through the available content catalog
 - Fetch requested content from b5x-api (the Boombox server)
