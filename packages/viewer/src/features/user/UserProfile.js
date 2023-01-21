@@ -1,15 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { Header } from "../header/Header";
-import Button from "@mui/material/Button";
 import { useGetUserProfileQuery } from "../api/apiSlice";
-import { api } from "../api/apiSlice";
-import { LoadingOutlined } from "@ant-design/icons";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-import Snackbar from "@mui/material/Snackbar";
-import Alert from "@mui/material/Alert";
 import { setHeaderProps } from "../header/headerSlice";
 import { DisplayBadge } from "../fragment/Badge";
 
