@@ -41,10 +41,11 @@ export const TopicPublisher = () => {
       e.preventDefault();
       const clipboardData = e.clipboardData.getData("text");
       const topicJson = JSON.parse(clipboardData);
-      publishTopicTrigger(JSON.parse(clipboardData)).then((result) => {
+      console.log("Topic JSON:", topicJson);
+      publishTopicTrigger(topicJson).then((result) => {
         console.log("Result:", result);
+        setDropzoneIsActive(false);
       });
-      setDropzoneIsActive(false);
     }
   };
 

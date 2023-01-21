@@ -30,6 +30,7 @@ function copyToClipboard(str: string) {
 export const buildTopic = (topicSlug: string) => {
   // @ts-ignore
   const parser = new BoomboxParser({ commandDir: process.cwd(), topicSlug });
+  publishTopicAssets(parser.topic.uri, parser.topicDir + "/images");
   const topicJson = parser.topic.packageForApi();
   copyToClipboard(JSON.stringify(topicJson));
   console.log("Topic contents copied to clipboard.");

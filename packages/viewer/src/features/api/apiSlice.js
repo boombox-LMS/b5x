@@ -47,6 +47,7 @@ export const api = createApi({
         method: "POST",
         body: topic,
       }),
+      invalidatesTags: ["Catalog"],
     }),
     verifyTopicCompletion: builder.mutation({
       query: (topicUri) => ({
