@@ -30,6 +30,9 @@ export class AppBuilder {
     const logger = require("morgan");
     app.use(logger("dev"));
 
+    // allow large payloads for topic publishing
+    app.use(express.json({ limit: "500mb" }));
+
     // configure the data manager
     const dbConnectionConfig = {
       client: process.env.DB_CLIENT,
