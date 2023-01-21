@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setHeaderProps } from "../header/headerSlice";
+import { api } from "../api/apiSlice";
 
 export const TopicPublisher = () => {
   const dispatch = useDispatch();
@@ -32,10 +33,17 @@ export const TopicPublisher = () => {
     dropzoneStyle.border = "2px dashed #20A7F5";
   }
 
+  const [publishTopicTrigger, publishTopicResult] =
+    api.endpoints.publishTopic.useMutation();
+
   const handleDropzonePaste = (e) => {
     if (dropzoneIsActive) {
       e.preventDefault();
-      console.log("Pasted data:", e.clipboardData.getData("text"));
+      const clipboardData = e.clipboardData.getData("text");
+      const topicJson = JSON.parse(clipboardData);
+      publishTopicTrigger(JSON.parse(clipboardData)).then((result) => {
+        console.log("Result:", result);
+      });
       setDropzoneIsActive(false);
     }
   };
