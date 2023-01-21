@@ -25,28 +25,36 @@ export const TopicPublisher = () => {
     borderRadius: "5px",
     lineHeight: "100px",
     textAlign: "center",
+    cursor: "pointer",
   };
 
   if (dropzoneIsActive) {
-    dropzoneStyle.borderColor = "#20A7F5";
+    dropzoneStyle.border = "2px dashed #20A7F5";
   }
+
+  const handleDropzonePaste = (e) => {
+    if (dropzoneIsActive) {
+      e.preventDefault();
+      console.log("Pasted data:", e.clipboardData.getData("text"));
+      setDropzoneIsActive(false);
+    }
+  };
 
   return (
     <div style={{ padding: "25px 40px" }}>
       <h1>Publish a topic</h1>
       <div
         style={dropzoneStyle}
-        onMouseEnter={() => setDropzoneIsActive(true)}
+        onClick={() => setDropzoneIsActive(true)}
         onMouseLeave={() => setDropzoneIsActive(false)}
+        onPaste={handleDropzonePaste}
       >
         {dropzoneIsActive && (
           <span style={{ color: "#20A7F5" }}>
             Listening for pasted topic data ...
           </span>
         )}
-        {!dropzoneIsActive && (
-          <span>Hover over me, then paste your topic data</span>
-        )}
+        {!dropzoneIsActive && <span>Click me, then paste your topic data</span>}
       </div>
     </div>
   );
