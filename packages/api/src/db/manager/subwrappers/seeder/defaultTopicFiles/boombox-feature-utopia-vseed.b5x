@@ -33,7 +33,7 @@
                     "boombox-feature-utopia-vseed_achievement-badge_f7",
                     "boombox-feature-utopia-vseed_achievement-badge_f8"
                 ],
-                "digest": "1af429fda34af076ce4e95d2474b5726",
+                "digest": "59147f4e2e2711be85357aa0f8ef6627",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -213,8 +213,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "Complete the question correctly on the first try to earn a badge.\n<single-select-question id=\"chosen-strategy\">\nIf at first you don&apos;t succeed ...\n<choice value=\"give-up\">Give up. Immediately.</choice>\n<choice value=\"try-again\">Try, try again!</choice>\n<choice value=\"blame\">Blame it on somebody else.</choice>\n</single-select-question>\n\n<show if=\"chosen-strategy is try-again\">\n<badge title=\"Persistence practitioner\" description=\"Bravely refused to be discouraged by failure.\" icon=\"carbon:loop\"></badge>\n</show>",
-                        "digest": "50c73614c9a346d1173583d53aae4539",
+                        "contents": "Complete the question correctly to earn a badge.\n<single-select-question id=\"chosen-strategy\">\nIf at first you don&apos;t succeed ...\n<choice value=\"give-up\">Give up. Immediately.</choice>\n<choice value=\"try-again\">Try, try again!</choice>\n<choice value=\"blame\">Blame it on somebody else.</choice>\n</single-select-question>\n\n<show if=\"chosen-strategy is try-again\">\n<badge title=\"Persistence practitioner\" description=\"Bravely refused to be discouraged by failure.\" icon=\"carbon:loop\"></badge>\n</show>",
+                        "digest": "125eb8d0d3fcdc5376ce93b27a8958f0",
                         "dependencyUris": [
                             "boombox-feature-utopia-vseed_achievement-badge_chosen-strategy"
                         ]
@@ -246,10 +246,621 @@
                 }
             },
             {
+                "uri": "boombox-feature-utopia-vseed_breakout",
+                "topicUri": "boombox-feature-utopia-vseed",
+                "slug": "breakout",
+                "order": 2,
+                "config": {},
+                "title": "Breakout",
+                "displayConditions": [],
+                "childUris": [
+                    "boombox-feature-utopia-vseed_breakout_f1",
+                    "boombox-feature-utopia-vseed_breakout_f2",
+                    "boombox-feature-utopia-vseed_breakout_f10",
+                    "boombox-feature-utopia-vseed_breakout_f11",
+                    "boombox-feature-utopia-vseed_breakout_f19",
+                    "boombox-feature-utopia-vseed_breakout_f20",
+                    "boombox-feature-utopia-vseed_breakout_f28",
+                    "boombox-feature-utopia-vseed_breakout_f29"
+                ],
+                "digest": "efa38f78cecbcab6305245e4f6c27394",
+                "contentMode": "documentation",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "boombox-feature-utopia-vseed_breakout_f1": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f1",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"breakout\">Breakout</h1>\n<h2 id=\"simple-breakout\">Simple breakout</h2>\n",
+                        "digest": "4913b5208aa6b5c90125e003c2745d76",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f2": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f2",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f3",
+                            "boombox-feature-utopia-vseed_breakout_f8"
+                        ],
+                        "contents": "",
+                        "digest": "21dd3f251d01923cdc7283fa81e62266",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f3": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f3",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f4",
+                            "boombox-feature-utopia-vseed_breakout_f5",
+                            "boombox-feature-utopia-vseed_breakout_f7"
+                        ],
+                        "contents": "",
+                        "digest": "f7ce367a0256e0bb853b9cd9d4adf9f2",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f4": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f4",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Just a bit of filler text so you can see how the breakout looks when it interrupts the content flow.</p>\n",
+                        "digest": "8d064fc2bfc2729b061d00491d4e1bff",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f5": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f5",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Tip",
+                            "iconSize": "small"
+                        },
+                        "contentType": "Breakout",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f6"
+                        ],
+                        "contents": "",
+                        "digest": "966099e12a63bc00fc157c1dc0d03eab",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f6": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f6",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>A helpful tip would go here. Yay for breakouts!</p>\n",
+                        "digest": "47f5ca02de3b1d4759b7ead930b93f6e",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f7": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f7",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>More filler text to provide context to the breakout. To reduce clutter, the filler text is not included in the markup tag.</p>\n",
+                        "digest": "6cc3b3437a856578055e5475b69c8fc2",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f8": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f8",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f9"
+                        ],
+                        "contents": "",
+                        "digest": "0cbee16124c1d87781cff4261d408d90",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f9": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f9",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "xml"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<breakout title=\"Tip\">\nA helpful tip would go here. Yay for breakouts!\n</breakout>",
+                        "digest": "39f0a2dd2f660ebb5b5c4d5658110109",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f10": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f10",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"simple-breakout-with-iconify-icon\">Simple breakout with Iconify icon</h2>\n",
+                        "digest": "da3a33183c0cb80802cfbafb22f25a0a",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f11": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f11",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f12",
+                            "boombox-feature-utopia-vseed_breakout_f17"
+                        ],
+                        "contents": "",
+                        "digest": "7882988243c9440c297198e788e30c2f",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f12": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f12",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f13",
+                            "boombox-feature-utopia-vseed_breakout_f14",
+                            "boombox-feature-utopia-vseed_breakout_f16"
+                        ],
+                        "contents": "",
+                        "digest": "4b3ce11e4b6eed8df2865430d40a91fa",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f13": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f13",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Just a bit of filler text so you can see how the breakout looks when it interrupts the content flow.</p>\n",
+                        "digest": "8d064fc2bfc2729b061d00491d4e1bff",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f14": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f14",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Reminder",
+                            "iconSize": "small",
+                            "icon": "https://api.iconify.design/mdi/hand-wave-outline.svg"
+                        },
+                        "contentType": "Breakout",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f15"
+                        ],
+                        "contents": "",
+                        "digest": "b4381f5c2c1eda68300b84706bf043d3",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f15": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f15",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Remember, you can always ask for help!</p>\n",
+                        "digest": "01a526477d38d6e53790470a90cf1f49",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f16": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f16",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>More filler text to provide context to the breakout. To reduce clutter, the filler text is not included in the markup tag.</p>\n",
+                        "digest": "6cc3b3437a856578055e5475b69c8fc2",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f17": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f17",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f18"
+                        ],
+                        "contents": "",
+                        "digest": "721db400fd37565dfffe87cd633809e5",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f18": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f18",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "xml"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<breakout icon=\"mdi:hand-wave-outline\" title=\"Reminder\">\nRemember, you can always ask for help!\n</breakout>",
+                        "digest": "9ca3b8b042e8e9d80788a0a90fc952c8",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f19": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f19",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"customized-breakout-with-iconify-icon\">Customized breakout with Iconify icon</h2>\n",
+                        "digest": "11637df00ba4e91e003a4ff60d7f6b0e",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f20": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f20",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f21",
+                            "boombox-feature-utopia-vseed_breakout_f26"
+                        ],
+                        "contents": "",
+                        "digest": "c8398df4ad818a921733320c9476708b",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f21": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f21",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f22",
+                            "boombox-feature-utopia-vseed_breakout_f23",
+                            "boombox-feature-utopia-vseed_breakout_f25"
+                        ],
+                        "contents": "",
+                        "digest": "eb9d72214d6785c2f8e4a6526276d2b5",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f22": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f22",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Just a bit of filler text so you can see how the breakout looks when it interrupts the content flow.</p>\n",
+                        "digest": "8d064fc2bfc2729b061d00491d4e1bff",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f23": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f23",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Advice from a cat",
+                            "color": "#f7932a",
+                            "iconSize": "medium",
+                            "icon": "https://api.iconify.design/noto-v1/cat.svg"
+                        },
+                        "contentType": "Breakout",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f24"
+                        ],
+                        "contents": "",
+                        "digest": "0797a0ef652b60687957c7ede6c61d8f",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f24": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f24",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Always keep my food bowl filled to the brim. If you don&#39;t, I will become dangerously malnourished.</p>\n",
+                        "digest": "9ac00b60da2374fae2357723198a0b39",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f25": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f25",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>More filler text to provide context to the breakout. To reduce clutter, the filler text is not included in the markup tag.</p>\n",
+                        "digest": "6cc3b3437a856578055e5475b69c8fc2",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f26": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f26",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f27"
+                        ],
+                        "contents": "",
+                        "digest": "b929923e6f0f45b6843cba00b247c31c",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f27": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f27",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "xml"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<breakout icon=\"noto-v1:cat\" icon-size=\"medium\" title=\"Advice from a cat\" color=\"#f7932a\">\nAlways keep my food bowl filled to the brim. If you don&apos;t, I will become dangerously malnourished.\n</breakout>",
+                        "digest": "3ee842c17d4af46a41f12944521c51e7",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f28": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f28",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"customized-breakout-with-uploaded-asset\">Customized breakout with uploaded asset</h2>\n<p>This will only display correctly if the topic&#39;s <code>images</code> folder contains an asset named <code>cat.svg</code> (or any other filename/type that would be compatible with the browser&#39;s <code>img</code> tag).</p>\n",
+                        "digest": "4c03392cf53ba3ede8cf34fe94932607",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f29": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f29",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f30",
+                            "boombox-feature-utopia-vseed_breakout_f35"
+                        ],
+                        "contents": "",
+                        "digest": "5b910a782a96aa468e9f302bfb6c651f",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f30": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f30",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f31",
+                            "boombox-feature-utopia-vseed_breakout_f32",
+                            "boombox-feature-utopia-vseed_breakout_f34"
+                        ],
+                        "contents": "",
+                        "digest": "678ac891d492c6ad3d8069002253dd2c",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f31": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f31",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Just a bit of filler text so you can see how the breakout looks when it interrupts the content flow.</p>\n",
+                        "digest": "8d064fc2bfc2729b061d00491d4e1bff",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f32": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f32",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Advice from a cat",
+                            "color": "#FF91AB",
+                            "iconSize": "large",
+                            "icon": "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/cat.svg"
+                        },
+                        "contentType": "Breakout",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f33"
+                        ],
+                        "contents": "",
+                        "digest": "683c9819771e7e06b95cce64327bac80",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f33": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f33",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>Always keep my food bowl filled to the brim. If you don&#39;t, I will become dangerously malnourished.</p>\n",
+                        "digest": "9ac00b60da2374fae2357723198a0b39",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f34": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f34",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>More filler text to provide context to the breakout. To reduce clutter, the filler text is not included in the markup tag.</p>\n",
+                        "digest": "6cc3b3437a856578055e5475b69c8fc2",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f35": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f35",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_breakout_f36"
+                        ],
+                        "contents": "",
+                        "digest": "4d85d4e1804ac5f80356a5c3f12af4c0",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_breakout_f36": {
+                        "uri": "boombox-feature-utopia-vseed_breakout_f36",
+                        "documentUri": "boombox-feature-utopia-vseed_breakout",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "xml"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<breakout icon=\"cat.svg\" icon-size=\"large\" title=\"Advice from a cat\" color=\"#FF91AB\">\nAlways keep my food bowl filled to the brim. If you don&apos;t, I will become dangerously malnourished.\n</breakout>",
+                        "digest": "530ceb33e1d53a4929098f00c5ef4d3f",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
                 "uri": "boombox-feature-utopia-vseed_checklist",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "checklist",
-                "order": 2,
+                "order": 3,
                 "config": {},
                 "title": "Checklist",
                 "displayConditions": [],
@@ -464,7 +1075,7 @@
                 "uri": "boombox-feature-utopia-vseed_code-block",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "code-block",
-                "order": 3,
+                "order": 4,
                 "config": {},
                 "title": "Code block",
                 "displayConditions": [],
@@ -579,7 +1190,7 @@
                 "uri": "boombox-feature-utopia-vseed_conditional-content-display",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "conditional-content-display",
-                "order": 4,
+                "order": 5,
                 "config": {},
                 "title": "Conditional content display",
                 "displayConditions": [],
@@ -912,7 +1523,7 @@
                 "uri": "boombox-feature-utopia-vseed_cytoscape-diagram",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "cytoscape-diagram",
-                "order": 5,
+                "order": 6,
                 "config": {},
                 "title": "Cytoscape diagram",
                 "displayConditions": [],
@@ -1666,7 +2277,7 @@
                 "uri": "boombox-feature-utopia-vseed_image",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "image",
-                "order": 6,
+                "order": 7,
                 "config": {},
                 "title": "Image",
                 "displayConditions": [],
@@ -1781,7 +2392,7 @@
                 "uri": "boombox-feature-utopia-vseed_long-text-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "long-text-question",
-                "order": 7,
+                "order": 8,
                 "config": {},
                 "title": "Long text question",
                 "displayConditions": [],
@@ -1911,7 +2522,7 @@
                 "uri": "boombox-feature-utopia-vseed_mermaid-diagram",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "mermaid-diagram",
-                "order": 8,
+                "order": 9,
                 "config": {},
                 "title": "Mermaid diagram",
                 "displayConditions": [],
@@ -2123,7 +2734,7 @@
                 "uri": "boombox-feature-utopia-vseed_multi-select-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "multi-select-question",
-                "order": 9,
+                "order": 10,
                 "config": {},
                 "title": "Multi select question",
                 "displayConditions": [],
@@ -2268,7 +2879,7 @@
                 "uri": "boombox-feature-utopia-vseed_rubric",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "rubric",
-                "order": 10,
+                "order": 11,
                 "config": {},
                 "title": "Rubric",
                 "displayConditions": [],
@@ -2509,7 +3120,7 @@
                 "uri": "boombox-feature-utopia-vseed_short-text-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "short-text-question",
-                "order": 11,
+                "order": 12,
                 "config": {},
                 "title": "Short text question",
                 "displayConditions": [],
@@ -2639,7 +3250,7 @@
                 "uri": "boombox-feature-utopia-vseed_single-select-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "single-select-question",
-                "order": 12,
+                "order": 13,
                 "config": {},
                 "title": "Single select question",
                 "displayConditions": [],
@@ -2784,7 +3395,7 @@
                 "uri": "boombox-feature-utopia-vseed_slideshow",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "slideshow",
-                "order": 13,
+                "order": 14,
                 "config": {},
                 "title": "Slideshow",
                 "displayConditions": [],
@@ -2991,7 +3602,7 @@
                 "uri": "boombox-feature-utopia-vseed_star-rating",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "star-rating",
-                "order": 14,
+                "order": 15,
                 "config": {},
                 "title": "Star rating",
                 "displayConditions": [],
@@ -3121,7 +3732,7 @@
                 "uri": "boombox-feature-utopia-vseed_troubleshooter",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "troubleshooter",
-                "order": 15,
+                "order": 16,
                 "config": {},
                 "title": "Troubleshooter",
                 "displayConditions": [],
@@ -3269,7 +3880,7 @@
                 "uri": "boombox-feature-utopia-vseed_user-reply",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "user-reply",
-                "order": 16,
+                "order": 17,
                 "config": {},
                 "title": "User reply",
                 "displayConditions": [],
@@ -3427,7 +4038,7 @@
                 "uri": "boombox-feature-utopia-vseed_visual-list",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "visual-list",
-                "order": 17,
+                "order": 18,
                 "config": {},
                 "title": "Visual list",
                 "displayConditions": [],
@@ -3596,7 +4207,7 @@
                 "uri": "boombox-feature-utopia-vseed_warning",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "warning",
-                "order": 18,
+                "order": 19,
                 "config": {},
                 "title": "Warning",
                 "displayConditions": [],
@@ -3726,7 +4337,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-custom-html-and-javascript",
-                "order": 19,
+                "order": 20,
                 "config": {},
                 "title": "[TODO] Custom HTML and JavaScript",
                 "displayConditions": [],
@@ -3760,7 +4371,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-field-mission",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-field-mission",
-                "order": 20,
+                "order": 21,
                 "config": {},
                 "title": "[TODO] Field mission",
                 "displayConditions": [],
@@ -3826,7 +4437,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-poll",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-poll",
-                "order": 21,
+                "order": 22,
                 "config": {},
                 "title": "[TODO] Poll",
                 "displayConditions": [],
@@ -3860,7 +4471,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-response-gallery",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-response-gallery",
-                "order": 22,
+                "order": 23,
                 "config": {},
                 "title": "[TODO] Response gallery",
                 "displayConditions": [],
@@ -3894,7 +4505,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-sentiment-check",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-sentiment-check",
-                "order": 23,
+                "order": 24,
                 "config": {},
                 "title": "[TODO] Sentiment check",
                 "displayConditions": [],

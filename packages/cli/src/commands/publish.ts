@@ -5,7 +5,7 @@ import fs from "fs";
 
 // Just for dev purposes, this will be an S3 bucket when code is productionized
 const B5X_API_TOPIC_ASSETS_FOLDER =
-  "/Users/jengilbert/projects/boombox-lms/workspace/packages/api/public/topic-assets";
+  "/Users/jengilbert/projects/b5x/packages/api/public/topic-assets";
 
 export const publishTopicAssets = (
   topicUri: string,

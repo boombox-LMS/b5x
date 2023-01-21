@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The feature catalog topic matches expectations The parsed topic JSON matches the snapshot 1`] = `
+exports[`The component catalog topic matches expectations The parsed topic JSON matches the snapshot 1`] = `
 Object {
   "topic": Object {
     "config": Object {

@@ -41,6 +41,7 @@ import { AccordionItem } from "./fragments/AccordionItem";
 import { Tab } from "./fragments/Tab";
 import { Tabs } from "./fragments/Tabs";
 import { Badge } from "./fragments/Badge";
+import { Breakout } from "./fragments/Breakout";
 
 const fragmentMap = {
   "short-text-question": ShortTextQuestion,
@@ -71,6 +72,7 @@ const fragmentMap = {
   tab: Tab,
   tabs: Tabs,
   badge: Badge,
+  breakout: Breakout,
 };
 
 export class FragmentBuilder {

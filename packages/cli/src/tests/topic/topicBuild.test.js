@@ -25,7 +25,7 @@ describe("The smoke test topic matches expectations", () => {
   });
 });
 
-describe("The feature catalog topic matches expectations", () => {
+describe("The component catalog topic matches expectations", () => {
   const parsedTopicJson = new Topic({
     slug: "boombox-feature-utopia",
     version: "test",

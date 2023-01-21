@@ -266,6 +266,10 @@ exports[`Stats routes match expectations stats.listTopics matches expectations s
       },
       {
         "completionCount": 2,
+        "documentUri": "boombox-feature-utopia-vseed_breakout",
+      },
+      {
+        "completionCount": 2,
         "documentUri": "boombox-feature-utopia-vseed_checklist",
       },
       {
@@ -1118,6 +1122,7 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
       "access-test-topic-vseed_doc-6",
       "access-test-topic-vseed_doc-7",
       "boombox-feature-utopia-vseed_achievement-badge",
+      "boombox-feature-utopia-vseed_breakout",
       "boombox-feature-utopia-vseed_checklist",
       "boombox-feature-utopia-vseed_code-block",
       "boombox-feature-utopia-vseed_conditional-content-display",
@@ -1320,6 +1325,7 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
       "access-test-topic-vseed_doc-6",
       "access-test-topic-vseed_doc-7",
       "boombox-feature-utopia-vseed_achievement-badge",
+      "boombox-feature-utopia-vseed_breakout",
       "boombox-feature-utopia-vseed_checklist",
       "boombox-feature-utopia-vseed_code-block",
       "boombox-feature-utopia-vseed_conditional-content-display",
