@@ -10,6 +10,7 @@ import {
 } from "./commands/componentUsage";
 import { reorderTopic } from "./commands/reorder";
 import { login, logout } from "./commands/session";
+import { buildTopic } from "./commands/build";
 
 program
   .command("login")
@@ -19,6 +20,11 @@ program
 program.command("logout").description("Log out of Boombox.").action(logout);
 
 program.command("init").description("Create a new topic.").action(initTopic);
+
+program
+  .command("build <topicSlug>")
+  .description("Build the topic's data and copy it to the clipboard.")
+  .action(buildTopic);
 
 // TODO: Finish full functionality
 program
@@ -36,7 +42,6 @@ program
   )
   .action(draftTopic);
 
-// TODO: Finish full functionality
 program
   .command("publish <topicSlug>")
   .description(
@@ -44,7 +49,6 @@ program
   )
   .action(publishTopic);
 
-// TODO: Finish full functionality
 program
   .command("reorder <topicSlug>")
   .description(
@@ -52,7 +56,6 @@ program
   )
   .action(reorderTopic);
 
-// TODO: Finish full functionality
 program
   .command("usage [componentName]")
   .description("Display usage documentation for a given component.")
