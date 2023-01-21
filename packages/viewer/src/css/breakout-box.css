@@ -1,5 +1,5 @@
 .breakout-box {
-  border-left: 3px solid lightgray;
+  border-left: 3px solid var(--pop);
   padding-left: 15px;
   padding-top: 4px;
   margin-top: 25px;
@@ -19,6 +19,10 @@
 
 .breakout-box__contents {
   margin-top: -10px;
+}
+
+.breakout-box.warning {
+  padding-top: 0px;
 }
 
 .breakout-box.warning.unread {

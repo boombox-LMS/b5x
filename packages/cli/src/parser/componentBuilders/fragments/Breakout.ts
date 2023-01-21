@@ -21,7 +21,7 @@ A helpful tip would go here. Yay for breakouts!
 `;
 
 export const exampleBreakoutMarkupThree = `
-<breakout icon=noto-v1:cat title='Advice from a cat' color=#f7932a>
+<breakout icon=cat.svg icon-size=large title='Advice from a cat' color=#7694e4>
 Always keep my food bowl filled to the brim. If you don't, I will become dangerously malnourished.
 </breakout>
 `;
@@ -37,6 +37,7 @@ export const BreakoutTagSchema = z
         title: z.string(),
         icon: z.string().optional(),
         color: z.string().optional(),
+        "icon-size": z.string().optional(),
       })
       .strict(),
     children: z.array(z.union([BxmlTagNodeSchema, BxmlTextNodeSchema])).min(1),
@@ -61,6 +62,7 @@ export class Breakout extends FragmentViaBxmlTag {
     this.data = {
       title: this.bxmlNode.attribs.title,
       color: this.bxmlNode.attribs.color,
+      iconSize: this.bxmlNode.attribs["icon-size"] || "small",
     };
     if (this.bxmlNode.attribs.icon) {
       this.data.icon = this.getImageUrlFromAssetName(
