@@ -220,13 +220,6 @@ export const api = createApi({
       }),
       invalidatesTags: ["Users", "UserEmails"],
     }),
-    assignApiKey: builder.mutation({
-      query: ({ username }) => ({
-        url: "/users.assignApiKey",
-        method: "POST",
-        body: { username },
-      }),
-    }),
     // temporary endpoint just to populate ticket assignment mockup
     getUserEmails: builder.query({
       query: () => ({
