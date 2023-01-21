@@ -22,6 +22,7 @@ import { NpsQuestion } from "./NpsQuestion";
 import { Accordion } from "./Accordion";
 import { TabbedContent } from "./TabbedContent";
 import { Badge } from "./Badge";
+import { Breakout } from "./Breakout";
 
 export const contentComponents = {
   HtmlContent: HtmlContent,
@@ -48,4 +49,5 @@ export const contentComponents = {
   Accordion: Accordion,
   Tabs: TabbedContent,
   Badge: Badge,
+  Breakout: Breakout,
 };
