@@ -7,7 +7,6 @@ exports.up = async function (knex) {
       table.increments();
       table.string("first_name");
       table.string("last_name");
-      table.string("api_key");
       table.string("username").index();
       table.unique("username");
       table.string("email").index();

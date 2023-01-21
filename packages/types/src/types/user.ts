@@ -25,7 +25,6 @@ export const SavedUserSchema = z
     username: z.string(),
     firstName: z.string().nullable(),
     lastName: z.string().nullable(),
-    apiKey: z.string().nullable(),
     createdAt: z.date(),
     updatedAt: z.date(),
   })

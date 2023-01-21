@@ -451,40 +451,6 @@ export class UsersDbWrapper extends DbWrapper {
       });
   }
 
-  // AWKWARD: Rename api_key to api_key_hash
-  // in the database?
-  async verifyApiKey(params: {
-    username: string;
-    apiKey: string;
-  }): Promise<boolean> {
-    const hash = await this.knex
-      .select("apiKey")
-      .from("users")
-      .where({ username: params.username })
-      .limit(1)
-      .then((rows: { apiKey: string }[]) => {
-        return rows[0].apiKey;
-      });
-
-    return bcrypt.compare(params.apiKey, hash).then((result: boolean) => {
-      return result;
-    });
-  }
-
-  async assignApiKey(params: {
-    username: string;
-  }): Promise<{ apiKey: string }> {
-    const newApiKey = uuidv4();
-    const salt = await bcrypt.genSalt();
-    const hash = await bcrypt.hash(newApiKey, salt);
-    return this.knex("users")
-      .where({ username: params.username })
-      .update({ apiKey: hash })
-      .then(() => {
-        return { apiKey: newApiKey };
-      });
-  }
-
   // TODO: Will include stats eventually, not bothering to define the interfaces for now
   profile(params: { username: string }): Promise<{
     firstName: string | null;

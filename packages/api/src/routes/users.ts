@@ -122,14 +122,4 @@ router.get(
   }
 );
 
-router.post(
-  "/users.assignApiKey",
-  function (req: Request, res: Response, next: NextFunction) {
-    const username = req.body.username;
-    req.db.users.assignApiKey({ username }).then((result) => {
-      res.send(result);
-    });
-  }
-);
-
 module.exports = router;

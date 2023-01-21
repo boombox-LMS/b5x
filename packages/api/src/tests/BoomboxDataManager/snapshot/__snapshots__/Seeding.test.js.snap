@@ -45183,7 +45183,6 @@ exports[`The seeded data matches the snapshots The sanitized topics data matches
 exports[`The seeded data matches the snapshots The sanitized users data matches the snapshot 1`] = `
 [
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "blank-1@test.com",
     "firstName": "Blank",
@@ -45193,7 +45192,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "blank-1",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "enrolled-1@test.com",
     "firstName": "Enrolled",
@@ -45203,7 +45201,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "enrolled-1",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "blank-2@test.com",
     "firstName": "Blank",
@@ -45213,7 +45210,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "blank-2",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "enrolled-2@test.com",
     "firstName": "Enrolled",
@@ -45223,7 +45219,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "enrolled-2",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "blank-3@test.com",
     "firstName": "Blank",
@@ -45233,7 +45228,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "blank-3",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "enrolled-3@test.com",
     "firstName": "Enrolled",
@@ -45243,7 +45237,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "enrolled-3",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "completed-1@test.com",
     "firstName": "Completed",
@@ -45253,7 +45246,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "completed-1",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "completed-2@test.com",
     "firstName": "Completed",
@@ -45263,7 +45255,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "completed-2",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-1@test.com",
     "firstName": "Variable-catalog",
@@ -45273,7 +45264,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-1",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-2@test.com",
     "firstName": "Variable-catalog",
@@ -45283,7 +45273,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-2",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-3@test.com",
     "firstName": "Variable-catalog",
@@ -45293,7 +45282,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-3",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-4@test.com",
     "firstName": "Variable-catalog",
@@ -45303,7 +45291,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-4",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-5@test.com",
     "firstName": "Variable-catalog",
@@ -45313,7 +45300,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-5",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-6@test.com",
     "firstName": "Variable-catalog",
@@ -45323,7 +45309,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-6",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-7@test.com",
     "firstName": "Variable-catalog",
@@ -45333,7 +45318,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-7",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-8@test.com",
     "firstName": "Variable-catalog",
@@ -45343,7 +45327,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-8",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-9@test.com",
     "firstName": "Variable-catalog",
@@ -45353,7 +45336,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-9",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-10@test.com",
     "firstName": "Variable-catalog",
@@ -45363,7 +45345,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-10",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "variable-catalog-11@test.com",
     "firstName": "Variable-catalog",
@@ -45373,7 +45354,6 @@ exports[`The seeded data matches the snapshots The sanitized users data matches 
     "username": "variable-catalog-11",
   },
   {
-    "apiKey": null,
     "createdAt": "[SANITIZED]",
     "email": "jen@test.com",
     "firstName": "Jen",
