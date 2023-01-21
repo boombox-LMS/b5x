@@ -1,6 +1,7 @@
 .breakout-box {
   border-left: 3px solid lightgray;
   padding-left: 15px;
+  padding-top: 4px;
   margin-top: 25px;
   margin-bottom: 25px;
 }

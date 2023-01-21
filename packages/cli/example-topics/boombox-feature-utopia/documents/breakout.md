@@ -21,13 +21,13 @@ A helpful tip would go here. Yay for breakouts!
 
 <tabs>
 <tab title='Result in browser'>
-<breakout icon=mdi:lightbulb-on-10 title=Tip>
+<breakout icon=ic:outline-lightbulb title=Tip>
 A helpful tip would go here. Yay for breakouts!
 </breakout>
 </tab>
 <tab title='Markup in .md file'>
 <code-block language='xml'>
-<breakout icon=mdi:lightbulb-on-10 title=Tip>
+<breakout icon=ic:outline-lightbulb title=Tip>
 A helpful tip would go here. Yay for breakouts!
 </breakout>
 </code-block>
@@ -57,14 +57,14 @@ This will only display correctly if the topic's `images` folder contains an asse
 
 <tabs>
 <tab title='Result in browser'>
-<breakout icon=cat.svg title='Advice from a cat' color=#6d1f4f>
+<breakout icon=cat.svg title='Advice from a cat' color=#7b557f>
 Always keep my food bowl filled to the brim. If you don't, I will become dangerously malnourished.
 </breakout>
 </tab>
 
 <tab title='Markup in .md file'>
 <code-block language='xml'>
-<breakout icon=cat.svg title='Advice from a cat' color=#6d1f4f>
+<breakout icon=cat.svg title='Advice from a cat' color=#7b557f>
 Always keep my food bowl filled to the brim. If you don't, I will become dangerously malnourished.
 </breakout>
 </code-block>

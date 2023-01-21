@@ -1098,7 +1098,7 @@
                     "data-at-cloudco-vseed_b-optional-mentor-signup_f7",
                     "data-at-cloudco-vseed_b-optional-mentor-signup_f8"
                 ],
-                "digest": "96af5940532acdda5edb2788274db539",
+                "digest": "9847917e2007cb484ac15390a089703f",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1272,7 +1272,7 @@
                             "data-at-cloudco-vseed_b-optional-mentor-signup_f6"
                         ],
                         "contents": "",
-                        "digest": "d1f5e562f7d2e873b049cbb7d32db495",
+                        "digest": "c568ab20da95576c56274fcffea7548d",
                         "dependencyUris": [
                             "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
                         ]
@@ -1288,8 +1288,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href=\"mailto:&#x74;&#101;&#x63;&#104;&#108;&#x65;&#x61;&#114;&#110;&#x69;&#x6e;&#103;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;\">&#x74;&#101;&#x63;&#104;&#108;&#x65;&#x61;&#114;&#110;&#x69;&#x6e;&#103;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>.</p>\n",
-                        "digest": "285603cd21b914ac5138b79b1394fe56",
+                        "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href=\"mailto:&#116;&#101;&#99;&#104;&#108;&#x65;&#x61;&#114;&#110;&#105;&#x6e;&#103;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;\">&#116;&#101;&#99;&#104;&#108;&#x65;&#x61;&#114;&#110;&#105;&#x6e;&#103;&#x40;&#103;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a>.</p>\n",
+                        "digest": "3b100865142e3d033b18145b648b5a43",
                         "dependencyUris": []
                     },
                     "data-at-cloudco-vseed_b-optional-mentor-signup_f7": {
