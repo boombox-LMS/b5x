@@ -15,7 +15,9 @@ export const Breakout = ({ fragment }) => {
       <div className={`breakout-box__header`}>{fragment.data.title}</div>
       <div className={`breakout-box__contents`}>
         {fragment.children.map((childFragment) => {
-          return <FragmentWrapper fragment={childFragment} />;
+          return (
+            <FragmentWrapper key={childFragment.uri} fragment={childFragment} />
+          );
         })}
       </div>
     </div>
