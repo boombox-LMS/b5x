@@ -862,7 +862,7 @@
                     "intro-to-boombox-lms-vseed_how-boombox-works_f22",
                     "intro-to-boombox-lms-vseed_how-boombox-works_f23"
                 ],
-                "digest": "24f026fc0e5c17a20ad758a360855dfe",
+                "digest": "64882539adb0124da7bad5a6932f8252",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1093,9 +1093,9 @@
                                 {
                                     "group": "edges",
                                     "data": {
-                                        "id": "cli-api-publish",
-                                        "source": "cli",
-                                        "target": "api",
+                                        "id": "instructor-viewer-publish",
+                                        "source": "instructor",
+                                        "target": "viewer",
                                         "label": "publish"
                                     },
                                     "classes": [
@@ -1185,7 +1185,7 @@
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "66c48fb0856fd939cfcc94b798200436",
+                        "digest": "a5094370eba6394269a6609b2b51e5b9",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f3": {
@@ -1220,7 +1220,7 @@
                             "intro-to-boombox-lms-vseed_how-boombox-works_f15"
                         ],
                         "contents": "",
-                        "digest": "234f6406dd4ad74e64701b79dd4e0362",
+                        "digest": "8df04222c28e03f9e172fb785c6a9845",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f5": {
@@ -1292,7 +1292,7 @@
                         "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
                         "displayConditions": [],
                         "data": {
-                            "title": "3. The CLI compiles and publishes content"
+                            "title": "3. The CLI compiles content that can be uploaded via the viewer app"
                         },
                         "contentType": "AccordionItem",
                         "isStateful": false,
@@ -1301,7 +1301,7 @@
                             "intro-to-boombox-lms-vseed_how-boombox-works_f10"
                         ],
                         "contents": "",
-                        "digest": "de6ea6569ca617782e4d5da508406bd6",
+                        "digest": "1b49dfd39ed96193cdba2c6654f995d1",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f10": {
@@ -1315,8 +1315,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>Boombox CLI converts the files into data, and sends the data to the Boombox API for storage.</p>\n",
-                        "digest": "caaedebbc5313256f70be0e10e888847",
+                        "contents": "<p>Boombox CLI converts the files into data, and puts the data on the user&#39;s clipboard for easy uploading.</p>\n<p>The user can paste that data into the dropzone located at /publish in the viewer app.</p>\n",
+                        "digest": "6f19a367cf135239390939bdb80478c3",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f11": {
