@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setHeaderProps } from "../header/headerSlice";
 import { api } from "../api/apiSlice";
+import { Link } from "react-router-dom";
 
 export const TopicPublisher = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,8 @@ export const TopicPublisher = () => {
     );
   }, []);
 
-  const [dropzoneIsActive, setDropzoneIsActive] = useState(false);
+  const [dropzoneStatus, setDropzoneStatus] = useState("inactive");
+  const [publishedTopicUri, setPublishedTopicUri] = useState(null);
 
   let dropzoneStyle = {
     width: "100%",
@@ -29,7 +31,7 @@ export const TopicPublisher = () => {
     cursor: "pointer",
   };
 
-  if (dropzoneIsActive) {
+  if (dropzoneStatus !== "inactive") {
     dropzoneStyle.border = "2px dashed #20A7F5";
   }
 
@@ -37,14 +39,17 @@ export const TopicPublisher = () => {
     api.endpoints.publishTopic.useMutation();
 
   const handleDropzonePaste = (e) => {
-    if (dropzoneIsActive) {
+    if (dropzoneStatus === "listening") {
       e.preventDefault();
+      setDropzoneStatus("publishing");
       const clipboardData = e.clipboardData.getData("text");
       const topicJson = JSON.parse(clipboardData);
       console.log("Topic JSON:", topicJson);
+      // TODO: Handle publishing errors
       publishTopicTrigger(topicJson).then((result) => {
         console.log("Result:", result);
-        setDropzoneIsActive(false);
+        setPublishedTopicUri(topicJson.topic.uri);
+        setDropzoneStatus("inactive");
       });
     }
   };
@@ -54,17 +59,29 @@ export const TopicPublisher = () => {
       <h1>Publish a topic</h1>
       <div
         style={dropzoneStyle}
-        onClick={() => setDropzoneIsActive(true)}
-        onMouseLeave={() => setDropzoneIsActive(false)}
+        onClick={() => setDropzoneStatus("listening")}
+        onMouseLeave={() => setDropzoneStatus("inactive")}
         onPaste={handleDropzonePaste}
       >
-        {dropzoneIsActive && (
+        {dropzoneStatus === "listening" && (
           <span style={{ color: "#20A7F5" }}>
             Listening for pasted topic data ...
           </span>
         )}
-        {!dropzoneIsActive && <span>Click me, then paste your topic data</span>}
+        {dropzoneStatus === "inactive" && (
+          <span>Click me, then paste your topic data</span>
+        )}
+        {dropzoneStatus === "publishing" && (
+          <span style={{ color: "#20A7F5" }}>Publishing topic...</span>
+        )}
       </div>
+      {publishedTopicUri && (
+        <p>
+          Topic published successfully! Browse for it in the{" "}
+          <Link to="/">catalog</Link>, or just{" "}
+          <Link to={`/topics/${publishedTopicUri}`}>view it directly</Link>.
+        </p>
+      )}
     </div>
   );
 };
