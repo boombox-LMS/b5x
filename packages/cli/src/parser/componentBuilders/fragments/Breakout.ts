@@ -60,8 +60,12 @@ export class Breakout extends FragmentViaBxmlTag {
     this.childBxmlNodes = this.bxmlNode.children;
     this.data = {
       title: this.bxmlNode.attribs.title,
-      icon: this.bxmlNode.attribs.icon,
       color: this.bxmlNode.attribs.color,
     };
+    if (this.bxmlNode.attribs.icon) {
+      this.data.icon = this.getImageUrlFromAssetName(
+        this.bxmlNode.attribs.icon
+      );
+    }
   }
 }
