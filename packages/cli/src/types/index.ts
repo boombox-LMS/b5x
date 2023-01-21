@@ -13,13 +13,3 @@ export const CliTopicConfigSchema = z
   .strict();
 
 export type CliTopicConfig = z.infer<typeof CliTopicConfigSchema>;
-
-export const AuthorCredentialsSchema = z
-  .object({
-    apiUrl: z.string().url(),
-    username: z.string(),
-    apiKey: z.string(), // TODO: Use regex
-  })
-  .strict();
-
-export type AuthorCredentials = z.infer<typeof AuthorCredentialsSchema>;

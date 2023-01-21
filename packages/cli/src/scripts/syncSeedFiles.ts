@@ -2,7 +2,7 @@ import { BoomboxParser } from "../parser/BoomboxParser";
 import path from "path";
 import fs from "fs";
 import rimraf from "rimraf";
-import { publishTopicAssets } from "../commands/publish";
+import { publishTopicAssets } from "../commands/build";
 
 const SEEDFILES_DIR = path.resolve(
   __dirname,

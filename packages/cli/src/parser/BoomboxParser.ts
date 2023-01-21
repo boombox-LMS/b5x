@@ -1,11 +1,6 @@
 import { Topic } from "./componentBuilders/Topic";
 import fs from "fs";
-import { v4 as uuidv4 } from "uuid";
-import { AuthorCredentials } from "../types";
 import path from "path";
-import axios from "axios";
-import Conf from "conf";
-import { globals } from "../config/globals";
 
 const TOPIC_CONFIG_FILENAME = "topic-config.yaml";
 const SEEDFILE_DIR = path.resolve(
@@ -15,18 +10,15 @@ const SEEDFILE_DIR = path.resolve(
 
 export class BoomboxParser {
   topic: Topic;
-  credentials?: AuthorCredentials;
   targetDir: string;
   topicDir: string;
 
   constructor(params: {
     commandDir: string;
     topicSlug: string;
-    credentials?: AuthorCredentials;
     targetDir?: string;
     topicVersion?: string;
   }) {
-    this.credentials = params.credentials; // apiUrl, authorEmail, authorKey
     this.topicDir = this.#locateTopicDir({
       commandDir: params.commandDir,
       topicSlug: params.topicSlug,
@@ -85,25 +77,6 @@ export class BoomboxParser {
   }
 
   /**
-   *  Send the parsed topic to the API.
-   */
-  publishTopic() {
-    const topic = this.topic;
-    // TODO: Mix in credentials, for now API is just unlocked
-    const config = new Conf();
-    const apiUrl = config.get(globals.API_URL_STORAGE_KEY) + "/topics.publish";
-    axios
-      .post(apiUrl, topic.packageForApi())
-      .then(function (response) {
-        console.log("Topic should now be available at:");
-        console.log(`http://localhost:3000/topics/${topic.uri}`);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-
-  /**
    *  Write the .b5x file to the appropriate place.
    */
   writeTopicFile() {
@@ -117,12 +90,3 @@ export class BoomboxParser {
 module.exports = {
   BoomboxParser,
 };
-
-/*
-
-What jobs do we need the parser or some other part of the CLI to do?
-
-- Compare the requested slug to the current directory to make sure they match
-- Set the 
-
-*/

@@ -1,7 +1,5 @@
 const fs = require("fs");
-const path = require("path");
 const TOPIC_TEMPLATE_FOLDER_PATH = __dirname + "/../../templates/topic";
-import { authorizeUser } from "./session";
 import { copyFolderRecursiveSync } from "./fileUtils";
 import readlineSync from "readline-sync";
 import { NewTopicConfig } from "../types/topics";
@@ -9,10 +7,6 @@ import { spinalcase } from "stringcase";
 import YAML from "yaml";
 
 export const initTopic = () => {
-  authorizeUser();
-  // TODO: Register the slug with the API ...
-  // Skipping this step for now to reduce cleanup
-
   const topicSlug = readlineSync.question(
     "Unique identifier for the topic's URL (e.g., my-new-topic): "
   );
@@ -26,7 +20,7 @@ export const initTopic = () => {
     `Edit the documents in that folder to update your topic's content.`
   );
   console.log(
-    `When the content is ready, you can publish it with 'b5x publish ${topicSlug}'.`
+    `When the content is ready, you can compile it with 'b5x build ${topicSlug}'.`
   );
 };
 
