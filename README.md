@@ -71,9 +71,11 @@ An Express app responsible for receiving, storing, and retrieving content.
 
 ### @b5x/cli
 
-A command-line tool for creating, publishing, and updating topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), then ships it to the server for storage.
+A command-line tool for creating and compiling topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), and puts it on the user's pasteboard for easy transfer into the viewer app's publishing UI.
 
 ### @b5x/viewer
+
+*Note: 'Viewer' is now a bit of misnomer, as the viewer app became responsible for helping users publish content as well. At some point, when the v1 features have settled, this will be renamed.*
 
 A React app that renders content, receives user interactions, and ships updates to the backend (@b5x/api).
 
@@ -104,11 +106,13 @@ b5x init
 
 The `b5x init` command will ask Jen a few questions about how the topic should be configured (including what to use as the topic's identifier -- we'll go with `intro-to-boombox-lms`), then create a folder:
 
+```
 |-- intro-to-boombox-lms
 | |-- cli-data
 | |-- documents
 | |-- images
 | |-- topic-config.yaml
+```
 
 The `cli-data` folder is just for `@b5x/cli`'s use, but Jen can edit the other files and folders.
 
@@ -121,23 +125,17 @@ From here, Jen has two main tasks:
 
 To see what the final edited result might look like, view the [*Intro to Boombox LMS* example topic directory](code/b5x-cli/example-topics/intro-to-boombox-lms/).
 
-## Previewing and publishing a topic
+## Publishing a topic
 
-To preview a topic, Jen can simply publish it without editing its access permissions; the access permissions default to the author only.
+To publish a topic, Jen uses the CLI to build its data, then pastes that into the publishing UI of the viewer app:
 
-`b5x publish intro-to-boombox-lms`
+`b5x build intro-to-boombox-lms`
 
-To publish the topic to a broader audience, Jen can revise the topic's permissions in its `topic-config.yaml` file, and publish a new version.
-
-Either way, the publish command executes the following steps:
-
-- Combine all of the documents as `<document>` tags nested inside of a `<topic>` tag
-- Parse the resulting XML into API-consumable JSON data (see the [seed file for *Intro to Boombox LMS*](code/b5x-api/src/db/manager/subwrappers/seeder/defaultTopicFiles/intro-to-boombox-lms-vseed.b5x)), with an extra step of converting any text content to HTML strings using a Markdown parser, in case they contain Markdown syntax
-- Ship the JSON to an instance of `@b5x/api`, the backend server app.
+Jen can then paste that into the dropzone at /publish on the viewer app to create a new topic or update an existing one.
 
 ## Viewing a topic
 
-Once the topic is published, it can be viewed in `@b5x/viewer`, the front-end app. The learner can either navigate to the topic from the catalog of topics, or go directly to the topic using its dedicated URL.
+Once the topic is published, it can be found in the topic catalog, and also navigated to directly at /topics/intro-to-boombox-lms in the viewer app.
 
 Either way, when the learner launches the topic, they are auto-enrolled in it; the enrollment represents their individual relationship to the topic, and a way to store their challenge responses and other data related to the topic.
 
@@ -155,4 +153,4 @@ The admin dashboards in `@b5x/viewer` are still rudimentary, but eventually, an 
 
 ## Transitioning from learner to author
 
-From their user profile on the `@b5x/viewer` app, anyone can generate an API key and become a content author themselves. `@b5x/cli` will authenticate them with that key anytime it publishes content to `@b5x/api`. Aaand now we've come full circle!
+On Boombox, every user is an author! Anyone can publish a topic from the /publish page in the viewer app. Learning team members and other leaders can have elevated permissions (such as the ability to assign a topic to someone who reports to them), but anyone can publish to the broader "available" category.
