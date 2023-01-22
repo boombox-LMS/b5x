@@ -29,6 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	let buildTopic = vscode.commands.registerCommand('b5x.buildTopicData', (resourceUri) => {
+		// TODO: Actually build the topic data once the parser is ready to be used as a library
 		vscode.window.showInformationMessage('Topic data compiled and copied to clipboard (JK).');
 	});
 

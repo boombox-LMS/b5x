@@ -40,8 +40,6 @@ export async function buildTopicConfig(): Promise<NewTopicConfig> {
 }
 
 export function createTopicFolder(topicParentDir: string, topicConfig: NewTopicConfig) {
-	console.log('createTopicFolder');
-
   // Create the topic folder in the parent directory
   const topicFolderPath = topicParentDir + '/' + topicConfig.slug;
   fs.mkdirSync(topicFolderPath);
