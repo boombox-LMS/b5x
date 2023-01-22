@@ -52,7 +52,9 @@
     "test": "node ./out/test/runTest.js"
   },
   "dependencies": {
-    "@b5x/types": "file:../types"
+    "@b5x/types": "file:../types",
+    "yaml": "^2.1.1",
+    "stringcase": "^4.3.1"
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",

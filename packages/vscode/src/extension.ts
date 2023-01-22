@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { buildTopicConfig, createTopicFolder } from './topicCreation';
 import { listTopicFolders } from './fsHelpers';
+import { NewTopicConfig } from '@b5x/types';
 
 /**
  * Return an array of folder URIs
@@ -22,8 +23,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	let createNewTopic = vscode.commands.registerCommand('b5x.createNewTopic', (resourceUri) => {
-		buildTopicConfig();
-		createTopicFolder(resourceUri.fsPath);
+		const topicConfig = buildTopicConfig();
+		createTopicFolder(resourceUri.fsPath, topicConfig);
 		scanWorkspaceForTopicFolders();
 		vscode.window.showInformationMessage('Topic folder created.');
 	});
