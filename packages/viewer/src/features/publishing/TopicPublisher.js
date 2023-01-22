@@ -69,7 +69,7 @@ export const TopicPublisher = () => {
           </span>
         )}
         {dropzoneStatus === "inactive" && (
-          <span>Click me, then paste your topic data</span>
+          <span>Click here when you're ready to paste your topic data</span>
         )}
         {dropzoneStatus === "publishing" && (
           <span style={{ color: "#20A7F5" }}>Publishing topic...</span>
