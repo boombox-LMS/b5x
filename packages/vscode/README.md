@@ -10,7 +10,8 @@ Still in development.
 
 ## Known issues
 
-The extension does not yet build topic data.
+- The extension does not yet build topic data.
+- The extension does not yet use ESLint.
 
 ## Release notes
 
