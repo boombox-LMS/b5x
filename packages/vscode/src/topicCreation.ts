@@ -7,30 +7,35 @@ import { copyFolderRecursiveSync } from './fsHelpers';
 
 export async function buildTopicConfig(): Promise<NewTopicConfig> {
   let slug: string, title: string, subtitle: string;
-  return vscode.window.showInputBox({prompt: "Enter a topic identifier to use in the topic's URL (example: intro-to-sql):"}).then((value) => {
+  return vscode.window.showInputBox({prompt: "Enter a topic identifier to use in the topic's URL (example: intro-to-sql):"}).then(async (value) => {
     // TODO: Handle blanks and invalid characters
     slug = value || 'no-slug-provided';
-    return vscode.window.showInputBox({prompt: "Enter a title for the topic (example: Intro to SQL):"}).then((value) => {
+
+    // populate title
+    await  vscode.window.showInputBox({prompt: "Enter a title for the topic (example: Intro to SQL):"}).then((value) => {
       // TODO: Handle blanks and invalid characters
       title = value || 'Untitled topic';
-      return vscode.window.showInputBox({prompt: "Enter a subtitle for the topic (example: A guide for complete beginners):"}).then((value) => {
-        // TODO: Handle blanks and invalid characters
-        subtitle = value || 'No subtitle provided';
-        return {
-          title,
-          slug,
-          subtitle,
-          groupAccessLevels: {
-            assigned: ['all'],
-          },
-          // TODO: This should be cover-image in the yaml file,
-          // it should not become coverImageUrl until it hits the server,
-          // but the types are not set up quite correctly and the CLI
-          // still depends on them as well, so just leaving it for the moment.
-          coverImageUrl: '',
-        }
-      });
     });
+
+    // populate subtitle
+    await vscode.window.showInputBox({prompt: "Enter a subtitle for the topic (example: A guide for complete beginners):"}).then((value) => {
+      // TODO: Handle blanks and invalid characters
+      subtitle = value || 'No subtitle provided';
+    });
+
+    return {
+      title,
+      slug,
+      subtitle,
+      groupAccessLevels: {
+        assigned: ['all'],
+      },
+      // TODO: This should be cover-image in the yaml file,
+      // it should not become coverImageUrl until it hits the server,
+      // but the types are not set up quite correctly and the CLI
+      // still depends on them as well, so just leaving it for the moment.
+      coverImageUrl: '',
+    }
   });
 }
 
