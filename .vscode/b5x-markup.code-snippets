@@ -222,7 +222,7 @@
     "scope": "markdown",
     "prefix": ["breakout"],
     "body": [
-      "<breakout title='${1:REQUIRED_BREAKOUT_TITLE}' icon=${2:OPTIONAL_ICON_NAME}> icon-size=${3:OPTIONAL_ICON_SIZE}> color=${4:OPTIONAL_HIGHLIGHT_BAR_COLOR}>",
+      "<breakout title='${1:REQUIRED_BREAKOUT_TITLE}' icon=${2:OPTIONAL_ICON_NAME} icon-size=${3:OPTIONAL_ICON_SIZE} color=${4:OPTIONAL_HIGHLIGHT_BAR_COLOR}>",
       "${5:REQUIRED_BREAKOUT_CONTENTS}",
       "</breakout>"
     ],
