@@ -17,11 +17,11 @@
     "commands": [
       {
         "command": "b5x.createNewTopic",
-        "title": "Create new topic"
+        "title": "Create new Boombox LMS topic"
       },
       {
         "command": "b5x.buildTopicData",
-        "title": "Build topic data"
+        "title": "Build Boombox LMS topic data"
       }
     ],
     "menus": {
