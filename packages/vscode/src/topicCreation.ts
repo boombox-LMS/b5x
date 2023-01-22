@@ -27,6 +27,28 @@ export function buildTopicConfig(): NewTopicConfig {
 
 export function createTopicFolder(topicParentDir: string, topicConfig: NewTopicConfig) {
 	console.log('createTopicFolder');
+
+  // Create the topic folder in the parent directory
+  const topicFolderPath = topicParentDir + '/' + topicConfig.slug;
+  fs.mkdirSync(topicFolderPath);
+
+  // Create the images directory in the topic folder
+  const imagesFolderPath = topicFolderPath + '/images';
+  fs.mkdirSync(imagesFolderPath);
+
+  // Put a .keep file inside the images folder
+  fs.writeFileSync(imagesFolderPath + '/.keep', '');
+
+  // Create the documents directory in the topic folder
+  const documentsFolderPath = topicFolderPath + '/documents';
+  fs.mkdirSync(documentsFolderPath);
+
+  // Put a .keep file inside the documents folder
+  // TODO: This should be the example documents instead
+  fs.writeFileSync(documentsFolderPath + '/.keep', '');
+
+  // Create the topic-config.yaml file
+  writeTopicConfig(topicConfig, topicFolderPath);
 }
 
 function writeTopicConfig(
