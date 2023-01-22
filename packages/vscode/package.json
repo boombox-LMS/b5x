@@ -45,7 +45,8 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm run compile",
-    "compile": "tsc -p ./",
+    "copy-files": "copyfiles -u 1 src/**/*.md out/",
+    "compile": "tsc -p ./; pnpm copy-files",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
@@ -58,6 +59,7 @@
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",
+    "copyfiles": "^2.4.1",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
