@@ -28,11 +28,11 @@
       "explorer/context": [
         {
           "command": "b5x.buildTopicData",
-          "when": "explorerResourceIsRoot"
+          "when": "explorerResourceIsFolder && resourcePath in b5x.topicFolders"
         },
         {
           "command": "b5x.createNewTopic",
-          "when": "explorerResourceIsRoot"
+          "when": "explorerResourceIsFolder && resourcePath not in b5x.topicFolders"
         }
       ]
     },
