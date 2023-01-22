@@ -1,225 +1,221 @@
 {
-	// Place your boombox-lms workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-	"Conditional display tag": {
-		"scope": "markdown",
-		"prefix": ["show"],
-		"body": [
-			"<show if='${1:REQUIRED_CONDITIONS}'>",
-		 "${2:CONTENTS_TO_CONDITIONALLY_DISPLAY}",
-			"</show>"
-		],
-		"description": "A wrapper that controls the display of the contents nested inside of it"
-	},
-	"Long text question": {
-		"scope": "markdown",
-	  "prefix": ["long-text-question", "ltq"],
-	 	"body": [
-	 		"<long-text-question id='${1:OPTIONAL_CUSTOM_ID}'>",
-			"${2:REQUIRED_QUESTION_TEXT}",
-	 		"</long-text-question>"
-	 	],
-	 	"description": "A template for asking the learner a question that has a long text answer"
-	},
-	"User reply": {
-		"scope": "markdown",
-	  "prefix": ["ur", "user-reply"],
-	 	"body": [
-	 		"<user-reply>",
-			"${1:TEXT_SHOWN_ON_CLICK_BAR}",
-	 		"</user-reply>"
-	 	],
-	 	"description": "A bar that the learner has to click to view additional content, often used for confirmation"
-	},
-	"Sentiment check": {
-		"scope": "markdown",
-	  "prefix": ["sentiment-check", "sc"],
-	 	"body": [
-	 		"<sentiment-check topic='{$1:REQUIRED_TOPIC}' id='${2:OPTIONAL_CUSTOM_ID}' />",
-	 	],
-	 	"description": "An element that asks the learner, 'How do you feel about <topic>?' and shows them sad/neutral/happy faces"
-	},
-	"Short text question": {
-		"scope": "markdown",
-	  "prefix": ["short-text-question", "stq"],
-	 	"body": [
-	 		"<short-text-question id='${1:OPTIONAL_CUSTOM_ID}'>",
-			"${2:REQUIRED_QUESTION_TEXT}",
-	 		"</short-text-question>"
-	 	],
-	 	"description": "A template for asking the learner a question that could be answered in a few words"
-	 },
-	 "Single select question": {
-		"scope": "markdown",
-	  "prefix": ["single-select-question", "ssq"],
-	 	"body": [
-	 		"<single-select-question id='${1:OPTIONAL_CUSTOM_ID}'>",
-			"${2:REQUIRED_QUESTION_TEXT}",
-	 		"</single-select-question>"
-	 	],
-	 	"description": "A template for asking the learner a question that could be answered in a few words"
-	 },
-	 "Multi select question": {
-		"scope": "markdown",
-	  "prefix": ["multi-select-question", "msq"],
-	 	"body": [
-	 		"<multi-select-question id='${1:OPTIONAL_CUSTOM_ID}'>",
-			"${2:REQUIRED_QUESTION_TEXT}",
-	 		"</multi-select-question>"
-	 	],
-	 	"description": "A template for asking the learner a question that could be answered in a few words"
-	 },
-	 "Echo": {
-		"scope": "markdown",
-	  "prefix": ["pipe", "echo", "print"],
-	 	"body": [
-	 		"<echo>${1:INPUT_ID}</echo>"
-	 	],
-	 	"description": "A template for piping the learner's answer into text"
-	 },
-	 "Five-star rating": {
-		"scope": "markdown",
-	  "prefix": ["five-star-rating", "fsr"],
-	 	"body": [
-	 		"<five-star-rating>${1:YOUR_MARKDOWN_PROMPT_HERE}</five-star-rating>"
-	 	],
-	 	"description": "A template for piping the learner's answer into text"
-	 },
-	 "Checklist": {
-		"scope": "markdown",
-	  "prefix": ["checklist"],
-	 	"body": [
-	 		"<checklist>",
-			"<step>",
-			"<title>${1:REQUIRED_STEP_1_TITLE}</title>",
-			"<description>",
-			"${2:REQUIRED_STEP_1_DESCRIPTION}",
-			"</description>",
-			"</step>",
-			"<step>",
-			"<title>${3:REQUIRED_STEP_2_TITLE}</title>",
-			"<description>",
-			"${4:REQUIRED_STEP_2_DESCRIPTION}",
-			"</description>",
-			"</step>",
-			"</checklist>",
-	 	],
-	 	"description": "A template for piping the learner's answer into text"
-	 },
-	 "Troubleshooter": {
-		"scope": "markdown",
-	  "prefix": ["troubleshooter"],
-	 	"body": [
-	 		"<troubleshooter>",
-			"",
-			"  <issue>",
-			"    <title>",
-			"    ${1:TITLE_OF_FIRST_COMMON_ISSUE}",
-			"    </title>",
-			"    <step>",
-			"    ${2:FIRST_TROUBLESHOOTING_STEP_TO_TRY}",
-			"    </step>",
-			"    <step>",
-			"    ${3:SECOND_TROUBLESHOOTING_STEP_TO_TRY}",
-			"    </step>",
-			"  </issue>",
-			"",
-			"  <issue>",
-			"    <title>",
-			"    ${4:TITLE_OF_SECOND_COMMON_ISSUE}",
-			"    </title>",
-			"    <step>",
-			"    ${5:FIRST_TROUBLESHOOTING_STEP_TO_TRY}",
-			"    </step>",
-			"    <step>",
-			"    ${6:SECOND_TROUBLESHOOTING_STEP_TO_TRY}",
-			"    </step>",
-			"  </issue>",
-			"",
-	 		"</troubleshooter>"
-	 	],
-	 	"description": "An accordion-style troubleshooter that helps the learner resolve a common issue"
-	},
-	"Visual list": {
-		"scope": "markdown",
-	  "prefix": ["visual-list", "vl"],
-	 	"body": [
-	 		"<visual-list>",
-			"",
-			"<item image='${1:REQUIRED_ASSET_NAME'}>",
-			"${2:REQUIRED_MARKDOWN_CONTENTS}",
-			"</item>",
-			"",
-			"<item image='${3:REQUIRED_ASSET_NAME'}>",
-			"${4:REQUIRED_MARKDOWN_CONTENTS}",
-			"</item>",
-			"",
-	 		"</visual-list>"
-	 	],
-	 	"description": "A list of items that each have an associated icon"
-	},
-	"Code block": {
-		"scope": "markdown",
-	  "prefix": ["code-block", "cb"],
-	 	"body": [
-	 		"<code-block language='${1:OPTIONAL_LANGUAGE}'>",
-			"${2:REQUIRED_CODE_CONTENTS}",
-	 		"</code-block>"
-	 	],
-	 	"description": "A snippet of code that can easily be copy-pasted by the user"
-	},
-	"Accordion": {
-		"scope": "markdown",
-	  "prefix": ["accordion"],
-	 	"body": [
-	 		"<accordion>",
-			"<item title='${1:REQUIRED_ITEM_TITLE}' >",
-			"${2:REQUIRED_ITEM_CONTENTS}",
-			"</item>",
-			"<item title='${3:REQUIRED_ITEM_TITLE}' >",
-			"${4:REQUIRED_ITEM_CONTENTS}",
-			"</item>",
-	 		"</accordion>"
-	 	],
-	 	"description": "A set of collapsible panels that allow sections of content to be expanded"
-	},
-	"NpsQuestion": {
-		"scope": "markdown",
-	  "prefix": ["nps-question", "nps"],
-	 	"body": [
-	 		"<nps-question>",
-			"${1:REQUIRED_QUESTION_CONTENTS}",
-			"</nps-question>"
-	 	],
-	 	"description": "A 0-10 scale intended to be used for NPS feedback"
-	},
-	"Tabs": {
-		"scope": "markdown",
-	  "prefix": ["tabs"],
-	 	"body": [
-	 		"<tabs>",
-			"<tab title='${1:REQUIRED_TAB_TITLE}' >",
-			"${2:REQUIRED_TAB_CONTENTS}",
-			"</tab>",
-			"<tab title='${3:REQUIRED_TAB_TITLE}' >",
-			"${4:REQUIRED_TAB_CONTENTS}",
-			"</tab>",
-	 		"</tabs>"
-	 	],
-	 	"description": "A set of collapsible panels that allow sections of content to be expanded"
-	},
+  // Place your boombox-lms workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Conditional display tag": {
+    "scope": "markdown",
+    "prefix": ["show"],
+    "body": [
+      "<show if='${1:REQUIRED_CONDITIONS}'>",
+      "${2:CONTENTS_TO_CONDITIONALLY_DISPLAY}",
+      "</show>"
+    ],
+    "description": "A wrapper that controls the display of the contents nested inside of it"
+  },
+  "Long text question": {
+    "scope": "markdown",
+    "prefix": ["long-text-question", "ltq"],
+    "body": [
+      "<long-text-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "${2:REQUIRED_QUESTION_TEXT}",
+      "</long-text-question>"
+    ],
+    "description": "A template for asking the learner a question that has a long text answer"
+  },
+  "User reply": {
+    "scope": "markdown",
+    "prefix": ["ur", "user-reply"],
+    "body": ["<user-reply>", "${1:TEXT_SHOWN_ON_CLICK_BAR}", "</user-reply>"],
+    "description": "A bar that the learner has to click to view additional content, often used for confirmation"
+  },
+  "Sentiment check": {
+    "scope": "markdown",
+    "prefix": ["sentiment-check", "sc"],
+    "body": [
+      "<sentiment-check topic='{$1:REQUIRED_TOPIC}' id='${2:OPTIONAL_CUSTOM_ID}' />"
+    ],
+    "description": "An element that asks the learner, 'How do you feel about <topic>?' and shows them sad/neutral/happy faces"
+  },
+  "Short text question": {
+    "scope": "markdown",
+    "prefix": ["short-text-question", "stq"],
+    "body": [
+      "<short-text-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "${2:REQUIRED_QUESTION_TEXT}",
+      "</short-text-question>"
+    ],
+    "description": "A template for asking the learner a question that could be answered in a few words"
+  },
+  "Single select question": {
+    "scope": "markdown",
+    "prefix": ["single-select-question", "ssq"],
+    "body": [
+      "<single-select-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "${2:REQUIRED_QUESTION_TEXT}",
+      "<choice id=${3:OPTIONAL_IDENTIFIER}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "</single-select-question>"
+    ],
+    "description": "A template for asking the learner a question that could be answered in a few words"
+  },
+  "Multi select question": {
+    "scope": "markdown",
+    "prefix": ["multi-select-question", "msq"],
+    "body": [
+      "<multi-select-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "${2:REQUIRED_QUESTION_TEXT}",
+      "<choice id=${3:OPTIONAL_IDENTIFIER}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "</multi-select-question>"
+    ],
+    "description": "A template for asking the learner a question that could be answered in a few words"
+  },
+  "Echo": {
+    "scope": "markdown",
+    "prefix": ["pipe", "echo", "print"],
+    "body": ["<echo>${1:INPUT_ID}</echo>"],
+    "description": "A template for piping the learner's answer into text"
+  },
+  "Five-star rating": {
+    "scope": "markdown",
+    "prefix": ["five-star-rating", "fsr"],
+    "body": [
+      "<five-star-rating>${1:YOUR_MARKDOWN_PROMPT_HERE}</five-star-rating>"
+    ],
+    "description": "A template for piping the learner's answer into text"
+  },
+  "Checklist": {
+    "scope": "markdown",
+    "prefix": ["checklist"],
+    "body": [
+      "<checklist>",
+      "<step>",
+      "<title>${1:REQUIRED_STEP_1_TITLE}</title>",
+      "<description>",
+      "${2:REQUIRED_STEP_1_DESCRIPTION}",
+      "</description>",
+      "</step>",
+      "<step>",
+      "<title>${3:REQUIRED_STEP_2_TITLE}</title>",
+      "<description>",
+      "${4:REQUIRED_STEP_2_DESCRIPTION}",
+      "</description>",
+      "</step>",
+      "</checklist>"
+    ],
+    "description": "A template for piping the learner's answer into text"
+  },
+  "Troubleshooter": {
+    "scope": "markdown",
+    "prefix": ["troubleshooter"],
+    "body": [
+      "<troubleshooter>",
+      "",
+      "  <issue>",
+      "    <title>",
+      "    ${1:TITLE_OF_FIRST_COMMON_ISSUE}",
+      "    </title>",
+      "    <step>",
+      "    ${2:FIRST_TROUBLESHOOTING_STEP_TO_TRY}",
+      "    </step>",
+      "    <step>",
+      "    ${3:SECOND_TROUBLESHOOTING_STEP_TO_TRY}",
+      "    </step>",
+      "  </issue>",
+      "",
+      "  <issue>",
+      "    <title>",
+      "    ${4:TITLE_OF_SECOND_COMMON_ISSUE}",
+      "    </title>",
+      "    <step>",
+      "    ${5:FIRST_TROUBLESHOOTING_STEP_TO_TRY}",
+      "    </step>",
+      "    <step>",
+      "    ${6:SECOND_TROUBLESHOOTING_STEP_TO_TRY}",
+      "    </step>",
+      "  </issue>",
+      "",
+      "</troubleshooter>"
+    ],
+    "description": "An accordion-style troubleshooter that helps the learner resolve a common issue"
+  },
+  "Visual list": {
+    "scope": "markdown",
+    "prefix": ["visual-list", "vl"],
+    "body": [
+      "<visual-list>",
+      "",
+      "<item image='${1:REQUIRED_ASSET_NAME'}>",
+      "${2:REQUIRED_MARKDOWN_CONTENTS}",
+      "</item>",
+      "",
+      "<item image='${3:REQUIRED_ASSET_NAME'}>",
+      "${4:REQUIRED_MARKDOWN_CONTENTS}",
+      "</item>",
+      "",
+      "</visual-list>"
+    ],
+    "description": "A list of items that each have an associated icon"
+  },
+  "Code block": {
+    "scope": "markdown",
+    "prefix": ["code-block", "cb"],
+    "body": [
+      "<code-block language='${1:OPTIONAL_LANGUAGE}'>",
+      "${2:REQUIRED_CODE_CONTENTS}",
+      "</code-block>"
+    ],
+    "description": "A snippet of code that can easily be copy-pasted by the user"
+  },
+  "Accordion": {
+    "scope": "markdown",
+    "prefix": ["accordion"],
+    "body": [
+      "<accordion>",
+      "<item title='${1:REQUIRED_ITEM_TITLE}' >",
+      "${2:REQUIRED_ITEM_CONTENTS}",
+      "</item>",
+      "<item title='${3:REQUIRED_ITEM_TITLE}' >",
+      "${4:REQUIRED_ITEM_CONTENTS}",
+      "</item>",
+      "</accordion>"
+    ],
+    "description": "A set of collapsible panels that allow sections of content to be expanded"
+  },
+  "NpsQuestion": {
+    "scope": "markdown",
+    "prefix": ["nps-question", "nps"],
+    "body": [
+      "<nps-question>",
+      "${1:REQUIRED_QUESTION_CONTENTS}",
+      "</nps-question>"
+    ],
+    "description": "A 0-10 scale intended to be used for NPS feedback"
+  },
+  "Tabs": {
+    "scope": "markdown",
+    "prefix": ["tabs"],
+    "body": [
+      "<tabs>",
+      "<tab title='${1:REQUIRED_TAB_TITLE}' >",
+      "${2:REQUIRED_TAB_CONTENTS}",
+      "</tab>",
+      "<tab title='${3:REQUIRED_TAB_TITLE}' >",
+      "${4:REQUIRED_TAB_CONTENTS}",
+      "</tab>",
+      "</tabs>"
+    ],
+    "description": "A set of collapsible panels that allow sections of content to be expanded"
+  }
 }
