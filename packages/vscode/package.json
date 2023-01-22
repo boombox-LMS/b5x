@@ -10,8 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:b5x.createNewTopic",
-    "onCommand:b5x.buildTopicData"
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
