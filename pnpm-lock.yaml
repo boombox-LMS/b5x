@@ -239,6 +239,7 @@ importers:
 
   packages/vscode:
     specifiers:
+      '@b5x/types': file:../types
       '@types/glob': ^8.0.0
       '@types/mocha': ^10.0.1
       '@types/node': 16.x
@@ -250,6 +251,8 @@ importers:
       glob: ^8.0.3
       mocha: ^10.1.0
       typescript: ^4.9.3
+    dependencies:
+      '@b5x/types': file:packages/types
     devDependencies:
       '@types/glob': 8.0.0
       '@types/mocha': 10.0.1

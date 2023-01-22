@@ -2,7 +2,7 @@ const fs = require("fs");
 const TOPIC_TEMPLATE_FOLDER_PATH = __dirname + "/../../templates/topic";
 import { copyFolderRecursiveSync } from "./fileUtils";
 import readlineSync from "readline-sync";
-import { NewTopicConfig } from "../types/topics";
+import { NewTopicConfig } from "@b5x/types";
 import { spinalcase } from "stringcase";
 import YAML from "yaml";
 

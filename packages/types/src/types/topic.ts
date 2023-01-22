@@ -106,6 +106,29 @@ export const TopicConfigSchema = z
  */
 export type TopicConfig = z.infer<typeof TopicConfigSchema>;
 
+// TODO: Move these into the scope of the vscode extension when the CLI is deprecated.
+// Right now, they're only here so they can be shared during the migration process.
+export const NewTopicConfigSchema = z.object({
+  slug: z.string(),
+  title: z.string(),
+  subtitle: z.string(),
+  coverImageUrl: z.string(),
+  // tags: z.array(z.string()).optional(),
+  groupAccessLevels: z.object({
+    assigned: z.array(z.string()).optional(),
+    recommended: z.array(z.string()).optional(),
+    available: z.array(z.string()).optional(),
+  }),
+});
+
+export type NewTopicConfig = z.infer<typeof NewTopicConfigSchema>;
+
+export const ParsedTopicConfigSchema = NewTopicConfigSchema.extend({
+  coverImageUrl: z.string().optional(),
+});
+
+export type ParsedTopicConfig = z.infer<typeof ParsedTopicConfigSchema>;
+
 // RawTopic ---------------------------------------------------------
 
 export const RawTopicSchema = z
