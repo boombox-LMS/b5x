@@ -18,6 +18,10 @@ import { ContentMode, ContentModeSchema } from "./types/contentMode";
 import {
   TopicConfig,
   TopicConfigSchema,
+  ParsedTopicConfig,
+  ParsedTopicConfigSchema,
+  NewTopicConfig,
+  NewTopicConfigSchema,
   RawTopic,
   RawTopicSchema,
   SavedTopic,
@@ -182,6 +186,10 @@ export {
   // topics ---------------------------------------------------------
   TopicConfig,
   TopicConfigSchema,
+  ParsedTopicConfig,
+  ParsedTopicConfigSchema,
+  NewTopicConfig,
+  NewTopicConfigSchema,
   RawTopic,
   RawTopicSchema,
   SavedTopic,
