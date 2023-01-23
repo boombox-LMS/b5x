@@ -1,0 +1,38 @@
+{
+  "name": "@b5x/parser",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "pnpm run build; jest",
+    "clean": "rimraf dist/",
+    "build": "pnpm run clean && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "@b5x/conditions-manager": "file:../conditions-manager",
+    "@b5x/types": "file:../types",
+    "htmlparser2": "^8.0.1",
+    "uuid": "^8.3.2",
+    "marked": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.0.7",
+    "@types/rimraf": "^3.0.2",
+    "jest": "^28.1.2",
+    "@types/md5": "^2.3.2",
+    "@types/uuid": "^8.3.4"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/tests/setupBeforeEachTestFile.js"
+    ]
+  },
+  "typedoc": {
+    "entryPoint": "./src/typedocEntryPoint.ts"
+  }
+}

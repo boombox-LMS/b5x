@@ -69,9 +69,16 @@ Each of the packages below is written in TypeScript, unless otherwise noted.
 
 An Express app responsible for receiving, storing, and retrieving content.
 
-### @b5x/cli
+### @b5x/cli (soon to be deprecated in favor of the VS Code extension)
 
 A command-line tool for creating and compiling topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), and puts it on the user's pasteboard for easy transfer into the viewer app's publishing UI.
+
+### The `b5x` VS Code extension
+
+This extension is still in development, but eventually it will allow the user to
+
+- Create a new topic folder containing helpful templates
+- Compile topics into data that can be uploaded to the API
 
 ### @b5x/viewer
 
@@ -95,7 +102,7 @@ A module responsible for creating, modifying, and checking conditions. Condition
 
 Let's say that Jen wants to create a new topic, "Intro to Boombox LMS." At a high level, here's how that would happen.
 
-## Initializing a topic
+## Initializing a topic: CLI version
 
 Using `@b5x/cli`, the command-line interface, Jen can initialize a topic within any directory she'd like to work in:
 
@@ -108,13 +115,14 @@ The `b5x init` command will ask Jen a few questions about how the topic should b
 
 ```
 |-- intro-to-boombox-lms
-| |-- cli-data
 | |-- documents
 | |-- images
 | |-- topic-config.yaml
 ```
 
-The `cli-data` folder is just for `@b5x/cli`'s use, but Jen can edit the other files and folders.
+## Initializing a topic: VS Code extension version
+
+If Jen has the `b5x` VS Code extension installed, she can just right-click in the file explorer and choose "Create new Boombox LMS topic," and follow the prompts to create a new topic folder that contains the correct file structure.
 
 ## Editing a topic
 
@@ -127,11 +135,9 @@ To see what the final edited result might look like, view the [*Intro to Boombox
 
 ## Publishing a topic
 
-To publish a topic, Jen uses the CLI to build its data, then pastes that into the publishing UI of the viewer app:
+To publish a topic, Jen uses the CLI to build its data (`b5x build intro-to-boombox-lms`), or the VS Code extension (right-click the topic folder and choose "Build topic data").
 
-`b5x build intro-to-boombox-lms`
-
-Jen can then paste that into the dropzone at /publish on the viewer app to create a new topic or update an existing one.
+Jen can then paste the topic data into the dropzone at /publish on the viewer app to create a new topic or update an existing one.
 
 ## Viewing a topic
 

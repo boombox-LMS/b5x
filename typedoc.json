@@ -3,8 +3,8 @@
   "entryPoints": [
     "packages/types",
     "packages/conditions-manager",
-    "packages/cli",
-    "packages/api"
+    "packages/api",
+    "packages/parser"
   ],
   "out": "./docs"
 }

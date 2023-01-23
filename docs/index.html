@@ -97,10 +97,19 @@
 </a>
 <p>An Express app responsible for receiving, storing, and retrieving content.</p>
 
-<a href="#b5xcli" id="b5xcli" style="color: inherit; text-decoration: none;">
-  <h3>@b5x/cli</h3>
+<a href="#b5xcli-soon-to-be-deprecated-in-favor-of-the-vs-code-extension" id="b5xcli-soon-to-be-deprecated-in-favor-of-the-vs-code-extension" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/cli (soon to be deprecated in favor of the VS Code extension)</h3>
 </a>
 <p>A command-line tool for creating and compiling topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), and puts it on the user&#39;s pasteboard for easy transfer into the viewer app&#39;s publishing UI.</p>
+
+<a href="#the-b5x-vs-code-extension" id="the-b5x-vs-code-extension" style="color: inherit; text-decoration: none;">
+  <h3>The <code>b5x</code> VS Code extension</h3>
+</a>
+<p>This extension is still in development, but eventually it will allow the user to</p>
+<ul>
+<li>Create a new topic folder containing helpful templates</li>
+<li>Compile topics into data that can be uploaded to the API</li>
+</ul>
 
 <a href="#b5xviewer" id="b5xviewer" style="color: inherit; text-decoration: none;">
   <h3>@b5x/viewer</h3>
@@ -125,16 +134,20 @@
 <p><em>This isn&#39;t meant to be a tutorial, just a quick overview of the content-publishing flow. Also, v1 of Boombox LMS doesn&#39;t exist yet, so while the vast majority of this functionality exists today, it&#39;s still being refactored for launch.</em></p>
 <p>Let&#39;s say that Jen wants to create a new topic, &quot;Intro to Boombox LMS.&quot; At a high level, here&#39;s how that would happen.</p>
 
-<a href="#initializing-a-topic" id="initializing-a-topic" style="color: inherit; text-decoration: none;">
-  <h2>Initializing a topic</h2>
+<a href="#initializing-a-topic-cli-version" id="initializing-a-topic-cli-version" style="color: inherit; text-decoration: none;">
+  <h2>Initializing a topic: CLI version</h2>
 </a>
 <p>Using <code>@b5x/cli</code>, the command-line interface, Jen can initialize a topic within any directory she&#39;d like to work in:</p>
 <pre><code><span class="hl-1">cd</span><br/><span class="hl-1">b5x</span><span class="hl-0"> </span><span class="hl-1">init</span>
 </code></pre>
 <p>The <code>b5x init</code> command will ask Jen a few questions about how the topic should be configured (including what to use as the topic&#39;s identifier -- we&#39;ll go with <code>intro-to-boombox-lms</code>), then create a folder:</p>
-<pre><code><span class="hl-0">|-- </span><span class="hl-1">intro</span><span class="hl-0">-</span><span class="hl-1">to</span><span class="hl-0">-</span><span class="hl-1">boombox</span><span class="hl-0">-</span><span class="hl-1">lms</span><br/><span class="hl-0">| |-- </span><span class="hl-1">cli</span><span class="hl-0">-</span><span class="hl-1">data</span><br/><span class="hl-0">| |-- </span><span class="hl-1">documents</span><br/><span class="hl-0">| |-- </span><span class="hl-1">images</span><br/><span class="hl-0">| |-- </span><span class="hl-1">topic</span><span class="hl-0">-</span><span class="hl-1">config</span><span class="hl-0">.</span><span class="hl-1">yaml</span>
+<pre><code><span class="hl-0">|-- </span><span class="hl-1">intro</span><span class="hl-0">-</span><span class="hl-1">to</span><span class="hl-0">-</span><span class="hl-1">boombox</span><span class="hl-0">-</span><span class="hl-1">lms</span><br/><span class="hl-0">| |-- </span><span class="hl-1">documents</span><br/><span class="hl-0">| |-- </span><span class="hl-1">images</span><br/><span class="hl-0">| |-- </span><span class="hl-1">topic</span><span class="hl-0">-</span><span class="hl-1">config</span><span class="hl-0">.</span><span class="hl-1">yaml</span>
 </code></pre>
-<p>The <code>cli-data</code> folder is just for <code>@b5x/cli</code>&#39;s use, but Jen can edit the other files and folders.</p>
+
+<a href="#initializing-a-topic-vs-code-extension-version" id="initializing-a-topic-vs-code-extension-version" style="color: inherit; text-decoration: none;">
+  <h2>Initializing a topic: VS Code extension version</h2>
+</a>
+<p>If Jen has the <code>b5x</code> VS Code extension installed, she can just right-click in the file explorer and choose &quot;Create new Boombox LMS topic,&quot; and follow the prompts to create a new topic folder that contains the correct file structure.</p>
 
 <a href="#editing-a-topic" id="editing-a-topic" style="color: inherit; text-decoration: none;">
   <h2>Editing a topic</h2>
@@ -149,9 +162,8 @@
 <a href="#publishing-a-topic" id="publishing-a-topic" style="color: inherit; text-decoration: none;">
   <h2>Publishing a topic</h2>
 </a>
-<p>To publish a topic, Jen uses the CLI to build its data, then pastes that into the publishing UI of the viewer app:</p>
-<p><code>b5x build intro-to-boombox-lms</code></p>
-<p>Jen can then paste that into the dropzone at /publish on the viewer app to create a new topic or update an existing one.</p>
+<p>To publish a topic, Jen uses the CLI to build its data (<code>b5x build intro-to-boombox-lms</code>), or the VS Code extension (right-click the topic folder and choose &quot;Build topic data&quot;).</p>
+<p>Jen can then paste the topic data into the dropzone at /publish on the viewer app to create a new topic or update an existing one.</p>
 
 <a href="#viewing-a-topic" id="viewing-a-topic" style="color: inherit; text-decoration: none;">
   <h2>Viewing a topic</h2>
@@ -199,8 +211,8 @@
 <li class="current selected"><a href="modules.html">Documentation</a>
 <ul>
 <li class="tsd-kind-module"><a href="modules/_b5x_api.html">@b5x/api</a></li>
-<li class="tsd-kind-module"><a href="modules/_b5x_cli.html">@b5x/cli</a></li>
 <li class="tsd-kind-module"><a href="modules/_b5x_conditions_manager.html">@b5x/conditions-<wbr/>manager</a></li>
+<li class="tsd-kind-module"><a href="modules/_b5x_parser.html">@b5x/parser</a></li>
 <li class="tsd-kind-module"><a href="modules/_b5x_types.html">@b5x/types</a></li></ul></li></ul></div></details></nav></div></div>
 <div class="container tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
