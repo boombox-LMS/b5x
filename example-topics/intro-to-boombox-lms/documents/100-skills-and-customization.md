@@ -4,7 +4,7 @@
 
 This course will teach you all about Boombox, ✨the future of knowledge-sharing.✨
 
-<user-reply>That's a bit dramatic, isn't it?</user-reply>
+<continue-button>That's a bit dramatic, isn't it?</continue-button>
 
 You're right. Really we just wanted to demonstrate how to include an image.
 

@@ -6,6 +6,6 @@ show-if: known-skills selections-do-not-include vscode
 
 This is just a placeholder doc, actually.
 
-<user-reply>
+<continue-button>
 Okay.
-</user-reply>
+</continue-button>

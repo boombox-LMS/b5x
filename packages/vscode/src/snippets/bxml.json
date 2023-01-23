@@ -19,18 +19,20 @@
     ],
     "description": "A template for asking the learner a question that has a long text answer"
   },
-  "User reply": {
+  "Continue button": {
     "scope": "markdown",
-    "prefix": ["ur", "user-reply"],
-    "body": ["<user-reply>", "${1:TEXT_SHOWN_ON_CLICK_BAR}", "</user-reply>"],
+    "prefix": ["cb", "continue-button"],
+    "body": [
+      "<continue-button>",
+      "${1:TEXT_SHOWN_ON_BUTTON}",
+      "</continue-button>"
+    ],
     "description": "A bar that the learner has to click to view additional content, often used for confirmation"
   },
   "Sentiment check": {
     "scope": "markdown",
     "prefix": ["sentiment-check", "sc"],
-    "body": [
-      "<sentiment-check topic='{$1:TOPIC}' ${2:OPTIONAL_CUSTOM_ID} />"
-    ],
+    "body": ["<sentiment-check topic='{$1:TOPIC}' ${2:OPTIONAL_CUSTOM_ID} />"],
     "description": "An element that asks the learner, 'How do you feel about <topic>?' and shows them sad/neutral/happy faces"
   },
   "Short text question": {
@@ -66,7 +68,7 @@
       "<choice value=${3:VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
       "<choice value=${5:VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
       "<choice value=${7:VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",      
+      "<choice value=${9:VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
       "</multi-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -160,7 +162,7 @@
   },
   "Code block": {
     "scope": "markdown",
-    "prefix": ["code-block", "cb"],
+    "prefix": ["code-block"],
     "body": [
       "<code-block language='${1:OPTIONAL_LANGUAGE}'>",
       "${2:CODE_CONTENTS}",
@@ -186,11 +188,7 @@
   "NpsQuestion": {
     "scope": "markdown",
     "prefix": ["nps-question", "nps"],
-    "body": [
-      "<nps-question>",
-      "${1:QUESTION_CONTENTS}",
-      "</nps-question>"
-    ],
+    "body": ["<nps-question>", "${1:QUESTION_CONTENTS}", "</nps-question>"],
     "description": "A 0-10 scale intended to be used for NPS feedback"
   },
   "Tabs": {

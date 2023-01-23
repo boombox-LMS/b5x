@@ -3733,7 +3733,7 @@
                 "slug": "user-reply",
                 "order": 17,
                 "config": {},
-                "title": "User reply",
+                "title": "Continue button",
                 "displayConditions": [],
                 "childUris": [
                     "boombox-feature-utopia-vseed_user-reply_f1",
@@ -3743,7 +3743,7 @@
                     "boombox-feature-utopia-vseed_user-reply_f6",
                     "boombox-feature-utopia-vseed_user-reply_f7"
                 ],
-                "digest": "46732b16de5cc3303c7a40c6f70e7663",
+                "digest": "6ee0159d27deec189a6bf33e82c5be56",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -3769,8 +3769,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<h1 id=\"user-reply\">User reply</h1>\n<p><em>To allow for proper previewing, this document is in tutorial mode, with its inputs blocking the display of any additional content until they are completed. Fill in the inputs to fully preview the content.</em></p>\n<p>The <code>user-reply</code> element prompts the user to click a button in order to advance the content forward.</p>\n<h2 id=\"plain-text-markup\">Plain text markup</h2>\n",
-                        "digest": "c2035448b4c0f3d68112970aed5f3cad",
+                        "contents": "<h1 id=\"continue-button\">Continue button</h1>\n<p><em>To allow for proper previewing, this document is in tutorial mode, with its inputs blocking the display of any additional content until they are completed. Fill in the inputs to fully preview the content.</em></p>\n<p>The <code>continue-button</code> element prompts the user to click a button in order to advance the content forward.</p>\n<h2 id=\"plain-text-markup\">Plain text markup</h2>\n",
+                        "digest": "fecec9fb0a6663cd0d3e291a01dff21d",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_user-reply_f2": {
@@ -3784,8 +3784,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "Here are the terms and conditions:\n- Be kind\n- Stay focused\n- Something something\n\n<user-reply>\nI accept the above terms and conditions.\n</user-reply>\n\nThank you for accepting the terms and conditions! Now we can move on.",
-                        "digest": "c41cd69a5799dc8cc562f20e7d92c4d9",
+                        "contents": "Here are the terms and conditions:\n- Be kind\n- Stay focused\n- Something something\n\n<utton>\nI accept the above terms and conditions.\n\n\nThank you for accepting the terms and conditions! Now we can move on.\n</utton>",
+                        "digest": "eb614f25f6f8884b3c42d0155d49a5c0",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_user-reply_f3": {
@@ -3808,14 +3808,14 @@
                         "documentUri": "boombox-feature-utopia-vseed_user-reply",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "boombox-feature-utopia-vseed_user-reply_f5"
                         ],
                         "contents": "",
-                        "digest": "440f0152c9f84c6a522f57a98ebb7f70",
+                        "digest": "b12393ac98f921654d99738d78b4c172",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_user-reply_f5": {

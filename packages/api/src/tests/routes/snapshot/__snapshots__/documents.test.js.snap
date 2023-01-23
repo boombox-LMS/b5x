@@ -38,7 +38,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f3",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [],
@@ -66,7 +66,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f5",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [
@@ -105,7 +105,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f7",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [
@@ -144,7 +144,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f9",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [
@@ -183,7 +183,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f11",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [
@@ -222,7 +222,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f13",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [
@@ -287,7 +287,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
           "uri": "smoke-testing-vseed_basic-topic-functionality_f16",
         },
       ],
-      "contentType": "UserReply",
+      "contentType": "ContinueButton",
       "contents": "",
       "data": {},
       "dependencyUris": [

@@ -39,7 +39,7 @@
                     "intro-to-boombox-lms-vseed_skills-and-customization_f23",
                     "intro-to-boombox-lms-vseed_skills-and-customization_f24"
                 ],
-                "digest": "213f7f14d94464553a81210e3c856a07",
+                "digest": "7cc77fd35c3f97903d017b394f4967a3",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -74,14 +74,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_skills-and-customization_f3"
                         ],
                         "contents": "",
-                        "digest": "c8b8c479edcc6db720a5faae2b4fb682",
+                        "digest": "8f97498273be3c76f9dfc8d9d7081403",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_skills-and-customization_f3": {
@@ -543,7 +543,7 @@
                     "intro-to-boombox-lms-vseed_why-boombox_f10",
                     "intro-to-boombox-lms-vseed_why-boombox_f11"
                 ],
-                "digest": "57fac13d346621647456ab6f3b751754",
+                "digest": "1ccf6ec6344191b577d51a69d6d9dc6b",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -578,14 +578,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_why-boombox",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_why-boombox_f3"
                         ],
                         "contents": "",
-                        "digest": "0b2baefc448cc501ab5bd180ec5f0b33",
+                        "digest": "95f153ddd1a0b84edfed9f21231ad6ea",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_why-boombox_f3": {
@@ -862,7 +862,7 @@
                     "intro-to-boombox-lms-vseed_how-boombox-works_f22",
                     "intro-to-boombox-lms-vseed_how-boombox-works_f23"
                 ],
-                "digest": "64882539adb0124da7bad5a6932f8252",
+                "digest": "bc69e4701077e0236f8d27f24a42b46d",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1435,14 +1435,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_how-boombox-works_f19"
                         ],
                         "contents": "",
-                        "digest": "d332e53f42e06bcf8e4e864b3f6823df",
+                        "digest": "9fb730d32631006f3bf6c3c2645b46f3",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f19": {
@@ -1614,7 +1614,7 @@
                     "intro-to-boombox-lms-vseed_observability-in-boombox_f2",
                     "intro-to-boombox-lms-vseed_observability-in-boombox_f4"
                 ],
-                "digest": "22a7751cb698a28258f8e227b9ad8164",
+                "digest": "25e04a46482fad4698c415708d44a8fb",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1649,14 +1649,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_observability-in-boombox",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_observability-in-boombox_f3"
                         ],
                         "contents": "",
-                        "digest": "b09ec3c8531ec4c72c69b72f3dd59a81",
+                        "digest": "7e22a32d43d55aaefa37745adf42433b",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_observability-in-boombox_f3": {
@@ -1722,7 +1722,7 @@
                     "intro-to-boombox-lms-vseed_VSCode for beginners_f2",
                     "intro-to-boombox-lms-vseed_VSCode for beginners_f4"
                 ],
-                "digest": "37ba8aed5a1758d0eed4c4221a000266",
+                "digest": "f3709bf5908eeb81ff24afee197feb0e",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1761,14 +1761,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_VSCode for beginners",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_VSCode for beginners_f3"
                         ],
                         "contents": "",
-                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "digest": "10a5e65aec1b6d6561a6dcc30f811ace",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_VSCode for beginners_f3": {
@@ -1834,7 +1834,7 @@
                     "intro-to-boombox-lms-vseed_a-markdown-primer_f2",
                     "intro-to-boombox-lms-vseed_a-markdown-primer_f4"
                 ],
-                "digest": "3a734c56f49e9e11104adeeeada8a54d",
+                "digest": "bf26ef2422684f441ed31208e68e2c6f",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1873,14 +1873,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_a-markdown-primer",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_a-markdown-primer_f3"
                         ],
                         "contents": "",
-                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "digest": "10a5e65aec1b6d6561a6dcc30f811ace",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_a-markdown-primer_f3": {
@@ -1946,7 +1946,7 @@
                     "intro-to-boombox-lms-vseed_tags-and-attributes_f2",
                     "intro-to-boombox-lms-vseed_tags-and-attributes_f4"
                 ],
-                "digest": "dd5f1bb3f2a80dadd2e8f07d0b43ae1c",
+                "digest": "1d337ff54638a02d50e8b4dbcc7e205a",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1985,14 +1985,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_tags-and-attributes",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_tags-and-attributes_f3"
                         ],
                         "contents": "",
-                        "digest": "c109ab2c9ff85cd09f5f0d38916dac9f",
+                        "digest": "10a5e65aec1b6d6561a6dcc30f811ace",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_tags-and-attributes_f3": {
@@ -2381,7 +2381,7 @@
                     "intro-to-boombox-lms-vseed_create-a-topic_f4",
                     "intro-to-boombox-lms-vseed_create-a-topic_f29"
                 ],
-                "digest": "46cfa2a8d8533082a1a3c88ede2be984",
+                "digest": "81705f9a2f37196a7740a91ecc0cf966",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -2416,14 +2416,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_create-a-topic_f3"
                         ],
                         "contents": "",
-                        "digest": "ef596dec9c7907d8500306ff8e8d0abd",
+                        "digest": "80969a2e0635bf58436ac268f924fe4d",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f3": {
@@ -2906,7 +2906,7 @@
                     "intro-to-boombox-lms-vseed_managers_f2",
                     "intro-to-boombox-lms-vseed_managers_f4"
                 ],
-                "digest": "86a5bc772808812c36d5b044413a434e",
+                "digest": "0a9f63d36df0f9330c6a4fbd90bc81fe",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -2945,14 +2945,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_managers",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_managers_f3"
                         ],
                         "contents": "",
-                        "digest": "84342172527bb2078111a08c70b37a2e",
+                        "digest": "86ecdbb52dc2e1ede4649e310cb09b83",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_managers_f3": {
@@ -3018,7 +3018,7 @@
                     "intro-to-boombox-lms-vseed_leaders_f2",
                     "intro-to-boombox-lms-vseed_leaders_f4"
                 ],
-                "digest": "e886accafe096452b22372cecf4a7ce7",
+                "digest": "587efd0bf687608ae0bca04579f378af",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -3057,14 +3057,14 @@
                         "documentUri": "intro-to-boombox-lms-vseed_leaders",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_leaders_f3"
                         ],
                         "contents": "",
-                        "digest": "84342172527bb2078111a08c70b37a2e",
+                        "digest": "86ecdbb52dc2e1ede4649e310cb09b83",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_leaders_f3": {

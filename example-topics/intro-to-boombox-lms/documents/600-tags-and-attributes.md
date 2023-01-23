@@ -6,6 +6,6 @@ show-if: known-skills selections-do-not-include tags
 
 This is just a placeholder doc for now, actually.
 
-<user-reply>
+<continue-button>
 Okay.
-</user-reply>
+</continue-button>

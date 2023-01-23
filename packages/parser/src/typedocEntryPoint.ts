@@ -29,7 +29,7 @@ import { Step } from "./componentBuilders/fragments/Step";
 import { Tab } from "./componentBuilders/fragments/Tab";
 import { Tabs } from "./componentBuilders/fragments/Tabs";
 import { Troubleshooter } from "./componentBuilders/fragments/Troubleshooter";
-import { UserReply } from "./componentBuilders/fragments/UserReply";
+import { ContinueButton } from "./componentBuilders/fragments/ContinueButton";
 import { VisualList } from "./componentBuilders/fragments/VisualList";
 import { Warning } from "./componentBuilders/fragments/Warning";
 
@@ -65,7 +65,7 @@ export {
   Tab,
   Tabs,
   Troubleshooter,
-  UserReply,
+  ContinueButton,
   VisualList,
   Warning,
 };

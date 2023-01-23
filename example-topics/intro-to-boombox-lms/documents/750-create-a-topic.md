@@ -4,7 +4,7 @@ Any Boombox LMS user can become an author. Topics published by the user communit
 
 You can easily publish your own topic _right now_. Click the button below to get started.
 
-<user-reply>Start publishing flow</user-reply>
+<continue-button>Start publishing flow</continue-button>
 
 <checklist>
 

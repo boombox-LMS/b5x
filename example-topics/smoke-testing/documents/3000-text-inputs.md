@@ -7,17 +7,17 @@
 
 You typed '<echo>typed-name</echo>', correct?
 
-<user-reply>That's correct.</user-reply>
+<continue-button>That's correct.</continue-button>
 
 What if I put it in a header?
 
 ## You said your name is <echo>typed-name</echo>
 
-<user-reply>Sure, that's also fine.</user-reply>
+<continue-button>Sure, that's also fine.</continue-button>
 
 Please verify that you can edit your response, and the content updates itself accordingly.
 
-<user-reply>Verified!</user-reply>
+<continue-button>Verified!</continue-button>
 
 ## Long text question
 
@@ -25,10 +25,10 @@ Please verify that you can edit your response, and the content updates itself ac
 
 Is everything working as expected?
 
-<user-reply>Yep!</user-reply>
+<continue-button>Yep!</continue-button>
 
 Please verify that you can edit your response.
 
-<user-reply>Verified!</user-reply>
+<continue-button>Verified!</continue-button>
 
 Thank you!

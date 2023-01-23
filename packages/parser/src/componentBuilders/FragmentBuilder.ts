@@ -28,7 +28,7 @@ import { Echo } from "./fragments/Echo";
 import { spinalcase } from "stringcase";
 import { Checklist } from "./fragments/Checklist";
 import { VisualList } from "./fragments/VisualList";
-import { UserReply } from "./fragments/UserReply";
+import { ContinueButton } from "./fragments/ContinueButton";
 import { ShortTextQuestion } from "./fragments/ShortTextQuestion";
 import { LongTextQuestion } from "./fragments/LongTextQuestion";
 import { FiveStarRating } from "./fragments/FiveStarRating";
@@ -53,7 +53,7 @@ const fragmentMap = {
   "single-select-question": SelectQuestion,
   "multi-select-question": SelectQuestion,
   troubleshooter: Troubleshooter,
-  "user-reply": UserReply,
+  "continue-button": ContinueButton,
   diagram: Diagram,
   slideshow: Slideshow,
   slide: Slide,

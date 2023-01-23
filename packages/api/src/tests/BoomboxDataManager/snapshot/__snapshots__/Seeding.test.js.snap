@@ -1011,13 +1011,13 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "46732b16de5cc3303c7a40c6f70e7663",
+    "digest": "6ee0159d27deec189a6bf33e82c5be56",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
     "order": 17,
     "slug": "user-reply",
-    "title": "User reply",
+    "title": "Continue button",
     "topicUri": "boombox-feature-utopia-vseed",
     "updatedAt": "[SANITIZED]",
     "uri": "boombox-feature-utopia-vseed_user-reply",
@@ -1187,7 +1187,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "664801088545b56a31b17a0542e40933",
+    "digest": "c7b4ca409980e5ac3b6588cbb2321e5a",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -1218,7 +1218,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "8f312d931cf29a5f5047241772f03bcd",
+    "digest": "e9c5c5aa30fbf60d3983d4bf45f58eed",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -1249,7 +1249,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "84dc06ca3cf0fd20a092c16fedb5e413",
+    "digest": "2f29a28dc5aefa5dbd6a23f3585a0319",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -1333,7 +1333,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
       "data-at-cloudco-vseed_customization-page_mode-level",
       "data-at-cloudco-vseed_customization-page_sql-level",
     ],
-    "digest": "a9cc9413f34236c7aa0027a3af059641",
+    "digest": "e686190d5edf969db59b43d5e55bb43c",
     "displayConditions": [
       [
         {
@@ -1471,7 +1471,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "15448a9c321a6eaa796f3ea5f62282c2",
+    "digest": "977c9d16083a47938bcc14e9010a987c",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -1935,7 +1935,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "213f7f14d94464553a81210e3c856a07",
+    "digest": "7cc77fd35c3f97903d017b394f4967a3",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -1972,7 +1972,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "57fac13d346621647456ab6f3b751754",
+    "digest": "1ccf6ec6344191b577d51a69d6d9dc6b",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2009,7 +2009,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "64882539adb0124da7bad5a6932f8252",
+    "digest": "bc69e4701077e0236f8d27f24a42b46d",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2061,7 +2061,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "22a7751cb698a28258f8e227b9ad8164",
+    "digest": "25e04a46482fad4698c415708d44a8fb",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2094,7 +2094,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "dependencyUris": [
       "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
     ],
-    "digest": "37ba8aed5a1758d0eed4c4221a000266",
+    "digest": "f3709bf5908eeb81ff24afee197feb0e",
     "displayConditions": [
       {
         "data": {
@@ -2138,7 +2138,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "dependencyUris": [
       "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
     ],
-    "digest": "3a734c56f49e9e11104adeeeada8a54d",
+    "digest": "bf26ef2422684f441ed31208e68e2c6f",
     "displayConditions": [
       {
         "data": {
@@ -2182,7 +2182,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "dependencyUris": [
       "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
     ],
-    "digest": "dd5f1bb3f2a80dadd2e8f07d0b43ae1c",
+    "digest": "1d337ff54638a02d50e8b4dbcc7e205a",
     "displayConditions": [
       {
         "data": {
@@ -2249,7 +2249,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "46cfa2a8d8533082a1a3c88ede2be984",
+    "digest": "81705f9a2f37196a7740a91ecc0cf966",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2282,7 +2282,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "dependencyUris": [
       "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
     ],
-    "digest": "86a5bc772808812c36d5b044413a434e",
+    "digest": "0a9f63d36df0f9330c6a4fbd90bc81fe",
     "displayConditions": [
       {
         "data": {
@@ -2326,7 +2326,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "dependencyUris": [
       "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
     ],
-    "digest": "e886accafe096452b22372cecf4a7ce7",
+    "digest": "587efd0bf687608ae0bca04579f378af",
     "displayConditions": [
       {
         "data": {
@@ -2409,7 +2409,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "39f86dd51dc76d74378d87afe5606e73",
+    "digest": "e29e1051b10679ccf9b1f75ae49b41ea",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2450,7 +2450,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "aa23de1760345824ddbe4636358b1ba0",
+    "digest": "162091d04e95de1ef5a6b1268c359e33",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2494,7 +2494,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "3015454f79cdbd1c00fea3a208a41ed6",
+    "digest": "466a3c78c98cd4c34e4caa4ba052b8d0",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2525,7 +2525,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "05372d8146b5afec0672ea2eb8b1cf13",
+    "digest": "4d0388153451e6e8b30646558759a6cb",
     "displayConditions": [],
     "externalDependencyUris": [
       "smoke-testing-vseed_text-inputs_typed-name",
@@ -23573,16 +23573,16 @@ Please rate Boombox LMS:
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<h1 id="user-reply">User reply</h1>
+    "contents": "<h1 id="continue-button">Continue button</h1>
 <p><em>To allow for proper previewing, this document is in tutorial mode, with its inputs blocking the display of any additional content until they are completed. Fill in the inputs to fully preview the content.</em></p>
-<p>The <code>user-reply</code> element prompts the user to click a button in order to advance the content forward.</p>
+<p>The <code>continue-button</code> element prompts the user to click a button in order to advance the content forward.</p>
 <h2 id="plain-text-markup">Plain text markup</h2>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "N1A4O0YvyG1jRi6gVnhPPpt/ujr+kPMDT3nERiOHf+M=",
+    "digest": "51xtvbpMl25IF1wyoFtvH3nYiSdqqa+yYU8APvsTPRY=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -23594,16 +23594,17 @@ Please rate Boombox LMS:
 - Stay focused
 - Something something
 
-<user-reply>
+<utton>
 I accept the above terms and conditions.
-</user-reply>
 
-Thank you for accepting the terms and conditions! Now we can move on.",
+
+Thank you for accepting the terms and conditions! Now we can move on.
+</utton>",
     "createdAt": "[SANITIZED]",
     "data": {
       "language": "markdown",
     },
-    "digest": "IvWgnh/CNwEmJYv9fn0L9B6iBWWl/j67r24MxFkEFGw=",
+    "digest": "21sO87eCA4aiLeihfNsA6dbgX4XItIzGE/oyEq9VXsY=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -23628,11 +23629,11 @@ Thank you for accepting the terms and conditions! Now we can move on.",
     "updatedAt": "[SANITIZED]",
   },
   {
-    "contentType": "UserReply",
+    "contentType": "ContinueButton",
     "contents": "",
     "createdAt": "[SANITIZED]",
     "data": {},
-    "digest": "HJTI+TJ4bWH11M63HMBspjkiR6wYsoXKJrlU0MqW50A=",
+    "digest": "k80j7xB+mujCEEcUcfHZ710YvfKU6hLFczbpTWgu/w4=",
     "id": "[SANITIZED]",
     "isStateful": true,
     "updatedAt": "[SANITIZED]",
@@ -24478,13 +24479,13 @@ This is an example warning.
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#x74;&#x65;&#99;&#x68;&#x6c;&#x65;&#x61;&#x72;&#110;&#105;&#x6e;&#103;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#x74;&#x65;&#99;&#x68;&#x6c;&#x65;&#x61;&#x72;&#110;&#105;&#x6e;&#103;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a>.</p>
+    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#116;&#x65;&#99;&#104;&#x6c;&#x65;&#97;&#114;&#x6e;&#x69;&#110;&#x67;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#116;&#x65;&#99;&#104;&#x6c;&#x65;&#97;&#114;&#x6e;&#x69;&#110;&#x67;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a>.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "WVdsxlbTFzefUAVs/mg7TemSSGJXHjK+tnd8GtgM39k=",
+    "digest": "nRtgW6Mfv5tJ13+EWP76VV4R5FoQ/qCGgEoNfG1v9zY=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",

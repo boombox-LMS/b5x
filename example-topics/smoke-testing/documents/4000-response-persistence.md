@@ -4,4 +4,4 @@ I should still remember that your name is <echo>typed-name</echo>, and you're fr
 
 Did I get that right?
 
-<user-reply>Yep!</user-reply>
+<continue-button>Yep!</continue-button>

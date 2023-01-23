@@ -603,7 +603,7 @@ export class UserActivitySeeder {
     }
 
     const defaultResponsesByContentType = {
-      UserReply: "t",
+      ContinueButton: "t",
       ShortTextQuestion: "short-text-answer",
       LongTextQuestion: longTextResponse,
       FiveStarRating: 5,

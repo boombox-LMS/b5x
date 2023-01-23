@@ -14,6 +14,6 @@ Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit la
 
 This is where they would accept the terms above:
 
-<user-reply>
+<continue-button>
 I agree to uphold these principles of giving helpful feedback.
-</user-reply>
+</continue-button>

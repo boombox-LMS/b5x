@@ -46,6 +46,6 @@ Choose at least two:
 
 Were you able to choose more than one option above?
 
-<user-reply>Yep!</user-reply>
+<continue-button>Yep!</continue-button>
 
 Excellent! Moving on ...

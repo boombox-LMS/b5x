@@ -1,7 +1,7 @@
 import { HtmlContent } from "./HtmlContent";
 import { Show } from "./Show";
 import { Troubleshooter } from "./troubleshooter/Troubleshooter";
-import { UserReply } from "./UserReply";
+import { ContinueButton } from "./ContinueButton";
 import { SingleSelectQuestion } from "./SingleSelectQuestion";
 import { MultiSelectQuestion } from "./MultiSelectQuestion";
 import { ShortTextQuestion } from "./ShortTextQuestion";
@@ -30,7 +30,7 @@ export const contentComponents = {
   Slide: Slide,
   Show: Show,
   Troubleshooter: Troubleshooter,
-  UserReply: UserReply,
+  ContinueButton: ContinueButton,
   SingleSelectQuestion: SingleSelectQuestion,
   MultiSelectQuestion: MultiSelectQuestion,
   ShortTextQuestion: ShortTextQuestion,

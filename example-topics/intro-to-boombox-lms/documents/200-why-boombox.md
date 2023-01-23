@@ -2,9 +2,9 @@
 
 To understand _what_ Boombox is, you must first understand _why_ Boombox is.
 
-<user-reply>
+<continue-button>
 Let's start there, then.
-</user-reply>
+</continue-button>
 
 ## The 5 users of a healthy knowledge-sharing ecosystem
 

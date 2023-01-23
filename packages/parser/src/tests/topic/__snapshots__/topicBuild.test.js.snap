@@ -42,7 +42,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "39f86dd51dc76d74378d87afe5606e73",
+        "digest": "e29e1051b10679ccf9b1f75ae49b41ea",
         "displayConditions": Array [],
         "externalDependencyUris": Array [],
         "fragmentsByUri": Object {
@@ -67,13 +67,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f11",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f8",
             ],
-            "digest": "d7c57909cf3e5fc2c9993f3a809f1223",
+            "digest": "d8f2a76041e8c158770d93e4e44ac5b5",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -109,13 +109,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f13",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f10",
             ],
-            "digest": "84e8db76ea98e7528ed462827f805988",
+            "digest": "4698c824e2d8d23c8fb7354501fd7c23",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -178,13 +178,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f16",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
             ],
-            "digest": "ee4524b0fb30f7dee945a5a7d96388b5",
+            "digest": "cb23f46828eed4c7360a6b4e9aa0f9ab",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -271,11 +271,11 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f3",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [],
-            "digest": "f98d38136874583b1924b5f167915ba6",
+            "digest": "eeb73d2f05afed855503d5a24c6cf9b7",
             "displayConditions": Array [],
             "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
             "isRequired": true,
@@ -302,13 +302,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f5",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f2",
             ],
-            "digest": "74f940b1b0b41c6945fdb2e163849a4e",
+            "digest": "375d4c223f86b9c5d2323bef0a95d141",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -344,13 +344,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f7",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f4",
             ],
-            "digest": "8cc0c3dbf7a8db5edc1c857054c44f64",
+            "digest": "2a11a1b6e9d18e5c38eafbd071c1a322",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -386,13 +386,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f9",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_basic-topic-functionality_f6",
             ],
-            "digest": "3647dc8be8f8ab59591e27eec5240056",
+            "digest": "f2c6e2b0ab9ef23dcccd6dd0c5e3865f",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -460,7 +460,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "aa23de1760345824ddbe4636358b1ba0",
+        "digest": "162091d04e95de1ef5a6b1268c359e33",
         "displayConditions": Array [],
         "externalDependencyUris": Array [],
         "fragmentsByUri": Object {
@@ -749,13 +749,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_select-inputs_f22",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_select-inputs_f18",
             ],
-            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "digest": "a11cf257e543215b7ffbde9fa051d742",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1101,7 +1101,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "3015454f79cdbd1c00fea3a208a41ed6",
+        "digest": "466a3c78c98cd4c34e4caa4ba052b8d0",
         "displayConditions": Array [],
         "externalDependencyUris": Array [],
         "fragmentsByUri": Object {
@@ -1158,13 +1158,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f14",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f8",
             ],
-            "digest": "960821e123cc43ba92456e3c187ba919",
+            "digest": "4d08219c7a33ac7904a1c3a296ebd557",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1227,13 +1227,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f17",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f13",
             ],
-            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1339,13 +1339,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f23",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
             ],
-            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "digest": "a11cf257e543215b7ffbde9fa051d742",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1408,13 +1408,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f26",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f22",
             ],
-            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1547,13 +1547,13 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_f9",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "boombox-feature-utopia-vtest_text-inputs_typed-name",
             ],
-            "digest": "ab948d3d23f549df296cdf6330bff956",
+            "digest": "0f7e2bdc940678acabbd6183c9ca7384",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1652,7 +1652,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "05372d8146b5afec0672ea2eb8b1cf13",
+        "digest": "4d0388153451e6e8b30646558759a6cb",
         "displayConditions": Array [],
         "externalDependencyUris": Array [
           "boombox-feature-utopia-vtest_text-inputs_typed-name",
@@ -1712,11 +1712,11 @@ Object {
             "childUris": Array [
               "boombox-feature-utopia-vtest_response-persistence_f9",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [],
-            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "digest": "a11cf257e543215b7ffbde9fa051d742",
             "displayConditions": Array [],
             "documentUri": "boombox-feature-utopia-vtest_response-persistence",
             "isRequired": true,
@@ -1798,7 +1798,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "39f86dd51dc76d74378d87afe5606e73",
+        "digest": "e29e1051b10679ccf9b1f75ae49b41ea",
         "displayConditions": Array [],
         "externalDependencyUris": Array [],
         "fragmentsByUri": Object {
@@ -1823,13 +1823,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f11",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f8",
             ],
-            "digest": "d7c57909cf3e5fc2c9993f3a809f1223",
+            "digest": "d8f2a76041e8c158770d93e4e44ac5b5",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1865,13 +1865,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f13",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f10",
             ],
-            "digest": "84e8db76ea98e7528ed462827f805988",
+            "digest": "4698c824e2d8d23c8fb7354501fd7c23",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -1934,13 +1934,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f16",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f12",
             ],
-            "digest": "ee4524b0fb30f7dee945a5a7d96388b5",
+            "digest": "cb23f46828eed4c7360a6b4e9aa0f9ab",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -2027,11 +2027,11 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f3",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [],
-            "digest": "f98d38136874583b1924b5f167915ba6",
+            "digest": "eeb73d2f05afed855503d5a24c6cf9b7",
             "displayConditions": Array [],
             "documentUri": "smoke-testing-vtest_basic-topic-functionality",
             "isRequired": true,
@@ -2058,13 +2058,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f5",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f2",
             ],
-            "digest": "74f940b1b0b41c6945fdb2e163849a4e",
+            "digest": "375d4c223f86b9c5d2323bef0a95d141",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -2100,13 +2100,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f7",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f4",
             ],
-            "digest": "8cc0c3dbf7a8db5edc1c857054c44f64",
+            "digest": "2a11a1b6e9d18e5c38eafbd071c1a322",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -2142,13 +2142,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f9",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_basic-topic-functionality_f6",
             ],
-            "digest": "3647dc8be8f8ab59591e27eec5240056",
+            "digest": "f2c6e2b0ab9ef23dcccd6dd0c5e3865f",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -2216,7 +2216,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "aa23de1760345824ddbe4636358b1ba0",
+        "digest": "162091d04e95de1ef5a6b1268c359e33",
         "displayConditions": Array [],
         "externalDependencyUris": Array [],
         "fragmentsByUri": Object {
@@ -2505,13 +2505,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_select-inputs_f22",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_select-inputs_f18",
             ],
-            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "digest": "a11cf257e543215b7ffbde9fa051d742",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -2857,7 +2857,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "3015454f79cdbd1c00fea3a208a41ed6",
+        "digest": "466a3c78c98cd4c34e4caa4ba052b8d0",
         "displayConditions": Array [],
         "externalDependencyUris": Array [],
         "fragmentsByUri": Object {
@@ -2914,13 +2914,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_text-inputs_f14",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_text-inputs_f8",
             ],
-            "digest": "960821e123cc43ba92456e3c187ba919",
+            "digest": "4d08219c7a33ac7904a1c3a296ebd557",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -2983,13 +2983,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_text-inputs_f17",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_text-inputs_f13",
             ],
-            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -3095,13 +3095,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_text-inputs_f23",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_text-inputs_inputted-long-text",
             ],
-            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "digest": "a11cf257e543215b7ffbde9fa051d742",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -3164,13 +3164,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_text-inputs_f26",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_text-inputs_f22",
             ],
-            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -3303,13 +3303,13 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_text-inputs_f9",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
               "smoke-testing-vtest_text-inputs_typed-name",
             ],
-            "digest": "ab948d3d23f549df296cdf6330bff956",
+            "digest": "0f7e2bdc940678acabbd6183c9ca7384",
             "displayConditions": Array [
               Object {
                 "data": Object {
@@ -3408,7 +3408,7 @@ Object {
         "config": Object {},
         "contentMode": "tutorial",
         "dependencyUris": Array [],
-        "digest": "05372d8146b5afec0672ea2eb8b1cf13",
+        "digest": "4d0388153451e6e8b30646558759a6cb",
         "displayConditions": Array [],
         "externalDependencyUris": Array [
           "smoke-testing-vtest_text-inputs_typed-name",
@@ -3468,11 +3468,11 @@ Object {
             "childUris": Array [
               "smoke-testing-vtest_response-persistence_f9",
             ],
-            "contentType": "UserReply",
+            "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [],
-            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "digest": "a11cf257e543215b7ffbde9fa051d742",
             "displayConditions": Array [],
             "documentUri": "smoke-testing-vtest_response-persistence",
             "isRequired": true,

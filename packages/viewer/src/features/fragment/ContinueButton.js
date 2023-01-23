@@ -1,7 +1,7 @@
 import React from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
 
-export const UserReply = ({
+export const ContinueButton = ({
   fragment,
   fragmentRef,
   response,
@@ -15,10 +15,10 @@ export const UserReply = ({
     });
   };
 
-  let classStr = "user-reply";
+  let classStr = "continue-button";
 
   if (response && response.value) {
-    classStr += " user-reply--active";
+    classStr += " continue-button--active";
   }
 
   return (

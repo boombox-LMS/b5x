@@ -77,7 +77,7 @@ When the learner interacts with content by completing challenges or clicking but
 
 Pretty great, right? But with great power comes great responsibility. Speaking of which, we have an important warning for you ...
 
-<user-reply>Let's have it.</user-reply>
+<continue-button>Let's have it.</continue-button>
 
 <warning>
 Boombox authors are the admins of their content; the platform intentionally does not sanitize authored content. Empowering trusted authors is the entire point of the platform.

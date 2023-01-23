@@ -2,8 +2,8 @@
 
 Pretend there's a big diagram here, okay?
 
-<user-reply>
+<continue-button>
 Okay.
-</user-reply>
+</continue-button>
 
 Thanks. We appreciate it.

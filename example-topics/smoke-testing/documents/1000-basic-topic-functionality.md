@@ -2,15 +2,15 @@
 
 Please verify:
 
-<user-reply>The progress bar shows 0%</user-reply>
-<user-reply>Okay, now the progress bar is cruising along</user-reply>
-<user-reply>The correct document (this one) is highlighted in the side nav</user-reply>
-<user-reply>The subsequent documents are inaccessible</user-reply>
-<user-reply>The topic title (Smoke Testing) is displayed in the banner</user-reply>
-<user-reply>The About page is fully and correctly populated</user-reply>
+<continue-button>The progress bar shows 0%</continue-button>
+<continue-button>Okay, now the progress bar is cruising along</continue-button>
+<continue-button>The correct document (this one) is highlighted in the side nav</continue-button>
+<continue-button>The subsequent documents are inaccessible</continue-button>
+<continue-button>The topic title (Smoke Testing) is displayed in the banner</continue-button>
+<continue-button>The About page is fully and correctly populated</continue-button>
 
 Clicking on this last bar should unlock the next topic, so please verify that this happens.
 
-<user-reply>Abracadabra!</user-reply>
+<continue-button>Abracadabra!</continue-button>
 
 Thank you! On to the next one ...

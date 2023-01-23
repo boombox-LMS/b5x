@@ -40,6 +40,6 @@ Ask the user a multiple-choice question that allows them to select only one answ
 
 A container tag that allows you to declare a display condition for the content inside of it.
 
-### user-reply, ur
+### continue-button, cb
 
 A button with text on it (e.g., "Sounds good, let's go!") that the user must press to view the content appearing below the button.

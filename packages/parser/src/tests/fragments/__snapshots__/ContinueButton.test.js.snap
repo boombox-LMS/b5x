@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The UserReply fragment builds as expected The parsed user-reply fragment matches the snapshot on file 1`] = `
+exports[`The ContinueButton fragment builds as expected The parsed continue-button fragment matches the snapshot on file 1`] = `
 Object {
   "childUris": Array [],
-  "contentType": "UserReply",
+  "contentType": "ContinueButton",
   "contents": "",
   "data": Object {},
   "dependencyUris": Array [],
-  "digest": "e84f8442e5279f45091e10d8e2ce2088",
+  "digest": "5a575eb15e0f6f702a3d1b7501891acf",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,

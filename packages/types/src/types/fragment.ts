@@ -16,7 +16,7 @@ export const FragmentContentTypeSchema = z.enum([
   "Rubric",
   "HtmlContent",
   "Troubleshooter",
-  "UserReply",
+  "ContinueButton",
   "SentimentCheck",
   "Slideshow",
   "Slide",

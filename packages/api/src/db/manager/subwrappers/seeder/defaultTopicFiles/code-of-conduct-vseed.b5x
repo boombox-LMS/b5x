@@ -30,7 +30,7 @@
                     "code-of-conduct-vseed_doc-1_f2",
                     "code-of-conduct-vseed_doc-1_f4"
                 ],
-                "digest": "664801088545b56a31b17a0542e40933",
+                "digest": "c7b4ca409980e5ac3b6588cbb2321e5a",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -65,14 +65,14 @@
                         "documentUri": "code-of-conduct-vseed_doc-1",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "code-of-conduct-vseed_doc-1_f3"
                         ],
                         "contents": "",
-                        "digest": "8f79b7d283cb20726719cf3c0de5dcaf",
+                        "digest": "e25dd8ea1459d7d153a6c334ca414d78",
                         "dependencyUris": []
                     },
                     "code-of-conduct-vseed_doc-1_f3": {
@@ -87,7 +87,7 @@
                         "isRequired": false,
                         "childUris": [],
                         "contents": "<p>I agree to uphold these principles of academic integrity.</p>\n",
-                        "digest": "adc3ac90414dbdada028604eab1ad2b7",
+                        "digest": "d8fdcfb1a2f2d7c2733664063f57bbf4",
                         "dependencyUris": []
                     },
                     "code-of-conduct-vseed_doc-1_f4": {
@@ -129,7 +129,7 @@
                     "code-of-conduct-vseed_doc-2_f2",
                     "code-of-conduct-vseed_doc-2_f4"
                 ],
-                "digest": "8f312d931cf29a5f5047241772f03bcd",
+                "digest": "e9c5c5aa30fbf60d3983d4bf45f58eed",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -164,14 +164,14 @@
                         "documentUri": "code-of-conduct-vseed_doc-2",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "code-of-conduct-vseed_doc-2_f3"
                         ],
                         "contents": "",
-                        "digest": "4720ab71bf989266a5a7cedd5a1ecf6b",
+                        "digest": "6065d3fdd3e945af3f3bb90588fb70bc",
                         "dependencyUris": []
                     },
                     "code-of-conduct-vseed_doc-2_f3": {
@@ -228,7 +228,7 @@
                     "code-of-conduct-vseed_doc-3_f2",
                     "code-of-conduct-vseed_doc-3_f4"
                 ],
-                "digest": "84dc06ca3cf0fd20a092c16fedb5e413",
+                "digest": "2f29a28dc5aefa5dbd6a23f3585a0319",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -263,14 +263,14 @@
                         "documentUri": "code-of-conduct-vseed_doc-3",
                         "displayConditions": [],
                         "data": {},
-                        "contentType": "UserReply",
+                        "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
                             "code-of-conduct-vseed_doc-3_f3"
                         ],
                         "contents": "",
-                        "digest": "67449922744815a2b04c9ced10b45a85",
+                        "digest": "a4f4f99e9cbd51e62baa4ce142d64292",
                         "dependencyUris": []
                     },
                     "code-of-conduct-vseed_doc-3_f3": {
