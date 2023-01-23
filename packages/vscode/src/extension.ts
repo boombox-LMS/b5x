@@ -14,6 +14,7 @@ function scanWorkspaceForTopicFolders() {
 	const rootFolderUri = vscode.workspace.workspaceFolders[0].uri;
 	const topicFolders = listTopicFolders(rootFolderUri.fsPath);
 	vscode.commands.executeCommand('setContext', 'b5x.topicFolders', topicFolders);
+	console.log("Topic folders are: ", topicFolders);
 }
 
 // This method is called when your extension is activated
@@ -30,8 +31,13 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	let buildTopic = vscode.commands.registerCommand('b5x.buildTopicData', (resourceUri: vscode.Uri) => {
-		const parser = new BoomboxParser({ topicDir: resourceUri.fsPath, topicSlug: resourceUri.fsPath.split('/').slice(-1)[0] });
-		vscode.env.clipboard.writeText(JSON.stringify(parser.topic.packageForApi(), null, 2));
+		const topicSlug = resourceUri.fsPath.split('/').slice(-1)[0];
+		// TODO: How to handle syntax errors? Should those be validated before this runs?
+		// The parser could have a validation function that returns friendly errors, 
+		// but ultimately it would be best to show those errors live in the editor.
+		const parser = new BoomboxParser({ topicDir: resourceUri.fsPath, topicSlug });
+		const topicDataStr = JSON.stringify(parser.topic.packageForApi(), null, 2)
+		vscode.env.clipboard.writeText(topicDataStr);
 		vscode.window.showInformationMessage('Topic data compiled and copied to clipboard.');
 	});
 
