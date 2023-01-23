@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { buildTopicConfig, createTopicFolder } from './topicCreation';
 import { listTopicFolders } from './fsHelpers';
+import { BoomboxParser } from '@b5x/parser';
 
 /**
  * Return an array of folder URIs
@@ -28,9 +29,10 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Topic folder created.');
 	});
 
-	let buildTopic = vscode.commands.registerCommand('b5x.buildTopicData', (resourceUri) => {
-		// TODO: Actually build the topic data once the parser is ready to be used as a library
-		vscode.window.showInformationMessage('Topic data compiled and copied to clipboard (JK).');
+	let buildTopic = vscode.commands.registerCommand('b5x.buildTopicData', (resourceUri: vscode.Uri) => {
+		const parser = new BoomboxParser({ topicDir: resourceUri.fsPath, topicSlug: resourceUri.fsPath.split('/').slice(-1)[0] });
+		vscode.env.clipboard.writeText(JSON.stringify(parser.topic.packageForApi(), null, 2));
+		vscode.window.showInformationMessage('Topic data compiled and copied to clipboard.');
 	});
 
 	context.subscriptions.push(createNewTopic);
