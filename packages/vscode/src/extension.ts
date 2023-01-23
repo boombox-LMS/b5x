@@ -14,7 +14,6 @@ function scanWorkspaceForTopicFolders() {
 	const rootFolderUri = vscode.workspace.workspaceFolders[0].uri;
 	const topicFolders = listTopicFolders(rootFolderUri.fsPath);
 	vscode.commands.executeCommand('setContext', 'b5x.topicFolders', topicFolders);
-	console.log("Topic folders are: ", topicFolders);
 }
 
 // This method is called when your extension is activated
