@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@b5x/types": "file:../types",
+    "@b5x/parser": "file:../parser",
     "yaml": "^2.1.1",
     "stringcase": "^4.3.1"
   },
