@@ -254,6 +254,7 @@ importers:
 
   packages/vscode:
     specifiers:
+      '@b5x/parser': file:../parser
       '@b5x/types': file:../types
       '@types/glob': ^8.0.0
       '@types/mocha': ^10.0.1
@@ -270,6 +271,7 @@ importers:
       typescript: ^4.9.3
       yaml: ^2.1.1
     dependencies:
+      '@b5x/parser': file:packages/parser_biqbaboplfbrettd7655fr4n2y
       '@b5x/types': file:packages/types
       stringcase: 4.3.1
       yaml: 2.1.3

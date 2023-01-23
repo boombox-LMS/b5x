@@ -13,7 +13,7 @@
     "scope": "markdown",
     "prefix": ["long-text-question", "ltq"],
     "body": [
-      "<long-text-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "<long-text-question id=${1:OPTIONAL_CUSTOM_ID}>",
       "${2:REQUIRED_QUESTION_TEXT}",
       "</long-text-question>"
     ],
@@ -29,7 +29,7 @@
     "scope": "markdown",
     "prefix": ["sentiment-check", "sc"],
     "body": [
-      "<sentiment-check topic='{$1:REQUIRED_TOPIC}' id='${2:OPTIONAL_CUSTOM_ID}' />"
+      "<sentiment-check topic='{$1:REQUIRED_TOPIC}' ${2:OPTIONAL_CUSTOM_ID} />"
     ],
     "description": "An element that asks the learner, 'How do you feel about <topic>?' and shows them sad/neutral/happy faces"
   },
@@ -37,7 +37,7 @@
     "scope": "markdown",
     "prefix": ["short-text-question", "stq"],
     "body": [
-      "<short-text-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "<short-text-question id=${1:OPTIONAL_CUSTOM_ID}>",
       "${2:REQUIRED_QUESTION_TEXT}",
       "</short-text-question>"
     ],
@@ -47,9 +47,12 @@
     "scope": "markdown",
     "prefix": ["single-select-question", "ssq"],
     "body": [
-      "<single-select-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "<single-select-question id=${1:OPTIONAL_CUSTOM_ID}>",
       "${2:REQUIRED_QUESTION_TEXT}",
-      "<choice id=${3:OPTIONAL_IDENTIFIER}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${3:OPTIONAL_VALUE}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${5:OPTIONAL_VALUE}>${6:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${7:OPTIONAL_VALUE}>${8:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${9:OPTIONAL_VALUE}>${10:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
       "</single-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -58,9 +61,12 @@
     "scope": "markdown",
     "prefix": ["multi-select-question", "msq"],
     "body": [
-      "<multi-select-question id='${1:OPTIONAL_CUSTOM_ID}'>",
+      "<multi-select-question id=${1:OPTIONAL_CUSTOM_ID}>",
       "${2:REQUIRED_QUESTION_TEXT}",
-      "<choice id=${3:OPTIONAL_IDENTIFIER}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${3:OPTIONAL_VALUE}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${5:OPTIONAL_VALUE}>${6:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${7:OPTIONAL_VALUE}>${8:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${9:OPTIONAL_VALUE}>${10:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",      
       "</multi-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
