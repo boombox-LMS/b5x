@@ -33,6 +33,6 @@
     ]
   },
   "typedoc": {
-    "entryPoint": "./src/index.ts"
+    "entryPoint": "./src/typedocEntryPoint.ts"
   }
 }
