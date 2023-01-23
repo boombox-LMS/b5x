@@ -1,4 +1,4 @@
-import { BoomboxParser } from "../parser/BoomboxParser";
+import { BoomboxParser } from "@b5x/parser";
 import path from "path";
 import fs from "fs";
 import rimraf from "rimraf";

@@ -1,10 +1,9 @@
-import { BoomboxParser } from "../parser/BoomboxParser";
+import { BoomboxParser } from "@b5x/parser";
 import { copyFolderRecursiveSync } from "./fileUtils";
 import fs from "fs";
 
 // Just for dev purposes, this will be an S3 bucket when code is productionized
 
-/* Begin redundant code that also appears in publish.ts */
 const B5X_API_TOPIC_ASSETS_FOLDER =
   "/Users/jengilbert/projects/b5x/packages/api/public/topic-assets";
 
@@ -19,7 +18,6 @@ export const publishTopicAssets = (
   }
   copyFolderRecursiveSync(source, target);
 };
-/* End redundant code that also appears in publish.ts */
 
 function copyToClipboard(str: string) {
   var proc = require("child_process").spawn("pbcopy");

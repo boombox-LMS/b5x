@@ -2,7 +2,8 @@
   "name": "@b5x/parser",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "pnpm run build; jest",
     "clean": "rimraf dist/",
