@@ -1,63 +1,21 @@
 import { Topic } from "./componentBuilders/Topic";
-import fs from "fs";
-import path from "path";
-
-const TOPIC_CONFIG_FILENAME = "topic-config.yaml";
-const SEEDFILE_DIR = path.resolve(
-  __dirname,
-  "../../../api/src/db/manager/subwrappers/seeder/defaultTopicFiles"
-);
 
 export class BoomboxParser {
   topic: Topic;
   topicDir: string;
 
   constructor(params: {
-    commandDir: string;
+    topicDir: string;
     topicSlug: string;
     topicVersion?: string;
   }) {
-    this.topicDir = this.#locateTopicDir({
-      commandDir: params.commandDir,
-      topicSlug: params.topicSlug,
-    });
+    this.topicDir = params.topicDir;
     const topicVersion = params.topicVersion || this.#getNextTopicVersion();
     this.topic = new Topic({
       slug: params.topicSlug,
       version: topicVersion,
       dir: this.topicDir,
     });
-  }
-
-  #locateTopicDir(params: { commandDir: string; topicSlug: string }) {
-    const splitPath = params.commandDir.split("/");
-
-    // If the topic slug is not in the path, check whether the command was run from the topic's parent directory
-    if (!splitPath.includes(params.topicSlug)) {
-      if (
-        fs.existsSync(
-          params.commandDir +
-            "/" +
-            params.topicSlug +
-            "/" +
-            TOPIC_CONFIG_FILENAME
-        )
-      ) {
-        return params.commandDir + "/" + params.topicSlug;
-        // Otherwise, display an error and exit
-        // TODO: Is this the correct approach? Should I actually throw an error instead?
-        // It's less cluttered for the user to print than to actually throw.
-      } else {
-        console.log(
-          `ERROR: Cannot find topic directory for slug ${params.topicSlug}. Please only run 'b5x publish ${params.topicSlug}' from within the topic's directory or its parent directory.`
-        );
-        process.exit();
-      }
-    }
-
-    // If the topic slug is in the path, trim the path to the topic directory
-    const slugIndex = splitPath.indexOf(params.topicSlug);
-    return splitPath.slice(0, slugIndex + 1).join("/");
   }
 
   // TODO: Call the app to get the current version
