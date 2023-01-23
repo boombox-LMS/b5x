@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Step fragment builds as expected The parsed step fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Step",
+  "contents": "",
+  "data": Object {
+    "title": "Initialize your topic",
+  },
+  "dependencyUris": Array [],
+  "digest": "e902a3674b44714da75ade97b77c4167",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;

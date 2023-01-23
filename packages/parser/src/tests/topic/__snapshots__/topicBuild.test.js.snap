@@ -1,0 +1,3513 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The component catalog topic matches expectations The parsed topic JSON matches the snapshot 1`] = `
+Object {
+  "topic": Object {
+    "config": Object {
+      "contentMode": "tutorial",
+      "groupAccessLevels": Object {
+        "assigned": Array [
+          "all",
+        ],
+      },
+      "prerequisites": Array [],
+      "slug": "smoke-testing",
+    },
+    "coverImageUrl": "http://localhost:8080/topic-assets/boombox-feature-utopia-vtest/images/smoke-testing.jpg",
+    "documents": Array [
+      Object {
+        "childUris": Array [
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f1",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f2",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f4",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f6",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f8",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f10",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f14",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f17",
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f18",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "39f86dd51dc76d74378d87afe5606e73",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [],
+        "fragmentsByUri": Object {
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"basic-topic-functionality\\">Basic topic functionality</h1>
+<p>Please verify:</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "177a22c3d20c44f55f2921fcbde3b0a6",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f1",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f10": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f11",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f8",
+            ],
+            "digest": "d7c57909cf3e5fc2c9993f3a809f1223",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f10",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f11": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The topic title (Smoke Testing) is displayed in the banner</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "8acfc50dcca800f4fa8a15cfab201eb7",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f11",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f12": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f13",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f10",
+            ],
+            "digest": "84e8db76ea98e7528ed462827f805988",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f10",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f13": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The About page is fully and correctly populated</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "03ad2d590e84aba91a10e5a1fe313bbe",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f13",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f14": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Clicking on this last bar should unlock the next topic, so please verify that this happens.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
+            ],
+            "digest": "8cd2a00df5b96807040412fc7b210e44",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f14",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f15": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f16",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
+            ],
+            "digest": "ee4524b0fb30f7dee945a5a7d96388b5",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f16": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Abracadabra!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "2da36cc4ce66eacf9a3ab0d476054dde",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f16",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f17": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Thank you! On to the next one ...</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+            ],
+            "digest": "6e5cad076098b3e824d873e575f2f7df",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f17",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f18": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f15",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f18",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f2": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f3",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [],
+            "digest": "f98d38136874583b1924b5f167915ba6",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f2",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f3": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The progress bar shows 0%</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "8c410702acbe427e76749afe5c81dc32",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f3",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f4": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f5",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f2",
+            ],
+            "digest": "74f940b1b0b41c6945fdb2e163849a4e",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f2",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f4",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f5": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Okay, now the progress bar is cruising along</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "601c2da584ff788638d1b2e405d1a98f",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f5",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f6": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f7",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f4",
+            ],
+            "digest": "8cc0c3dbf7a8db5edc1c857054c44f64",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f4",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f6",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f7": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The correct document (this one) is highlighted in the side nav</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "bd6cef0fd11234582908dffef2293c3b",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f7",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f8": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f9",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_basic-topic-functionality_f6",
+            ],
+            "digest": "3647dc8be8f8ab59591e27eec5240056",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f6",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f8",
+          },
+          "boombox-feature-utopia-vtest_basic-topic-functionality_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The subsequent documents are inaccessible</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "fa9125b1b7ade78bb146822a310cddb3",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_basic-topic-functionality_f9",
+          },
+        },
+        "order": 1,
+        "slug": "basic-topic-functionality",
+        "title": "Basic topic functionality",
+        "topicUri": "boombox-feature-utopia-vtest",
+        "uri": "boombox-feature-utopia-vtest_basic-topic-functionality",
+      },
+      Object {
+        "childUris": Array [
+          "boombox-feature-utopia-vtest_select-inputs_f1",
+          "boombox-feature-utopia-vtest_select-inputs_user-region",
+          "boombox-feature-utopia-vtest_select-inputs_f4",
+          "boombox-feature-utopia-vtest_select-inputs_f6",
+          "boombox-feature-utopia-vtest_select-inputs_f8",
+          "boombox-feature-utopia-vtest_select-inputs_f10",
+          "boombox-feature-utopia-vtest_select-inputs_f12",
+          "boombox-feature-utopia-vtest_select-inputs_f17",
+          "boombox-feature-utopia-vtest_select-inputs_f18",
+          "boombox-feature-utopia-vtest_select-inputs_f20",
+          "boombox-feature-utopia-vtest_select-inputs_f21",
+          "boombox-feature-utopia-vtest_select-inputs_f23",
+          "boombox-feature-utopia-vtest_select-inputs_f24",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "boombox-feature-utopia-vtest_select-inputs_f21",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "aa23de1760345824ddbe4636358b1ba0",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [],
+        "fragmentsByUri": Object {
+          "boombox-feature-utopia-vtest_select-inputs_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"select-inputs\\">Select inputs</h1>
+<h2 id=\\"single-select\\">Single select</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "3a510bdf3e50c8b8638f53c370fc6767",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f1",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f10": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f11",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_user-region",
+            ],
+            "digest": "bbe14ca235fe52990138ca52a95e5e67",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "east-coast",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f10",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f11": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Ah, so you eat <em>real</em> bagels. Lucky!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "58127f21f8937bb332772d47e07faef0",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f11",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f12": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f13",
+              "boombox-feature-utopia-vtest_select-inputs_f15",
+            ],
+            "contentType": "Checklist",
+            "contents": "",
+            "data": Object {
+              "completionContent": "You're finished! Nice work.",
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_user-region",
+            ],
+            "digest": "3811158ddeadaf7efa309319ba878688",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f12",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f13": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f14",
+            ],
+            "contentType": "Step",
+            "contents": "",
+            "data": Object {
+              "title": "Verify that you could only choose one option above.",
+            },
+            "dependencyUris": Array [],
+            "digest": "0004d4c60bdb4eb0c2e7e8b2ce23ee6b",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f13",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f14": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>You should be able to change your selection, but only select one at a time.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "abaaf54a0f859226bd02df74449a6a60",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f14",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f15": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f16",
+            ],
+            "contentType": "Step",
+            "contents": "",
+            "data": Object {
+              "title": "Verify that the correct conditional content displayed.",
+            },
+            "dependencyUris": Array [],
+            "digest": "376561ce299ebcfc6af5c314d4b48d88",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f15",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f16": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>It should update anytime you update your answer.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "c7cc11396a13d724673387f77d9257ae",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f16",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f17": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h2 id=\\"multi-select\\">Multi select</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f12",
+            ],
+            "digest": "f8ca9ffdf8bafb1d70ad08995c632790",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f17",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f18": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f19",
+            ],
+            "contentType": "MultiSelectQuestion",
+            "contents": "",
+            "data": Object {
+              "choices": Array [
+                Object {
+                  "contents": "Quick",
+                  "value": "quick",
+                },
+                Object {
+                  "contents": "Cheap",
+                  "value": "cheap",
+                },
+                Object {
+                  "contents": "Good",
+                  "value": "good",
+                },
+              ],
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f12",
+            ],
+            "digest": "d683f07f78e49629acc4fc9c25f31803",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f18",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f19": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Choose at least two:</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "cabc1b97999aeff35ee5fce180c0c02a",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f19",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f20": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Were you able to choose more than one option above?</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f18",
+            ],
+            "digest": "17eca71d518dcdc9975c9a969e5f08e8",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_f18",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f20",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f21": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f22",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f18",
+            ],
+            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_f18",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f21",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f22": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Yep!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f22",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f23": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Excellent! Moving on ...</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f21",
+            ],
+            "digest": "67c056954669d558cab38c8128d0c6ae",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_f21",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f23",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f24": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f21",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_select-inputs_f21",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f24",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f3": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Where are you from?</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "9a38121f7fdff683672189d2fd49c1f9",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f3",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f4": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f5",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_user-region",
+            ],
+            "digest": "ec4d495c112b1ef9051f7e57270cc4bd",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "midwest",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f4",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f5": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Ope! Midwest is best!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "e8c3f5b0d629768c69166ce73f9d28e6",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f5",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f6": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f7",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_user-region",
+            ],
+            "digest": "c85b2d977db50e96f780a07bb9e1f50b",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "south",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f6",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f7": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Let&#39;s go to Waffle House!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "35b9963b6c607e2a82949d789a7b2a59",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f7",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f8": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f9",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_user-region",
+            ],
+            "digest": "7568754b71404c4a9640e3f7cfa44f7e",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "west-coast",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f8",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The West Coast is the best coast!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "6377f8c6de604496fd28611a3bec090a",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_f9",
+          },
+          "boombox-feature-utopia-vtest_select-inputs_user-region": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_select-inputs_f3",
+            ],
+            "contentType": "SingleSelectQuestion",
+            "contents": "",
+            "data": Object {
+              "choices": Array [
+                Object {
+                  "contents": "the Midwest",
+                  "value": "midwest",
+                },
+                Object {
+                  "contents": "the South",
+                  "value": "south",
+                },
+                Object {
+                  "contents": "the East Coast",
+                  "value": "east-coast",
+                },
+                Object {
+                  "contents": "the West Coast",
+                  "value": "west-coast",
+                },
+              ],
+            },
+            "dependencyUris": Array [],
+            "digest": "e68fe22cf4ea4fe5e59a3190c27cf1ff",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_select-inputs_user-region",
+          },
+        },
+        "order": 2,
+        "slug": "select-inputs",
+        "title": "Select inputs",
+        "topicUri": "boombox-feature-utopia-vtest",
+        "uri": "boombox-feature-utopia-vtest_select-inputs",
+      },
+      Object {
+        "childUris": Array [
+          "boombox-feature-utopia-vtest_text-inputs_f1",
+          "boombox-feature-utopia-vtest_text-inputs_typed-name",
+          "boombox-feature-utopia-vtest_text-inputs_f4",
+          "boombox-feature-utopia-vtest_text-inputs_f8",
+          "boombox-feature-utopia-vtest_text-inputs_f10",
+          "boombox-feature-utopia-vtest_text-inputs_f13",
+          "boombox-feature-utopia-vtest_text-inputs_f15",
+          "boombox-feature-utopia-vtest_text-inputs_f16",
+          "boombox-feature-utopia-vtest_text-inputs_f18",
+          "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
+          "boombox-feature-utopia-vtest_text-inputs_f21",
+          "boombox-feature-utopia-vtest_text-inputs_f22",
+          "boombox-feature-utopia-vtest_text-inputs_f24",
+          "boombox-feature-utopia-vtest_text-inputs_f25",
+          "boombox-feature-utopia-vtest_text-inputs_f27",
+          "boombox-feature-utopia-vtest_text-inputs_f28",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "3015454f79cdbd1c00fea3a208a41ed6",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [],
+        "fragmentsByUri": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"text-inputs-and-piping\\">Text inputs and piping</h1>
+<h2 id=\\"short-text-question\\">Short text question</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "bd5987ece9b33827f553cb99fb8ecbaa",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f1",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f10": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>What if I put it in a header?</p>
+<h2 id=\\"you-said-your-name-is-typed-name\\">You said your name is <echo>typed-name</echo></h2>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f8",
+              "boombox-feature-utopia-vtest_text-inputs_typed-name",
+            ],
+            "digest": "00b108a7ed651f43faa35bdee1dd7a67",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f10",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f13": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f14",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f8",
+            ],
+            "digest": "960821e123cc43ba92456e3c187ba919",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f14": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Sure, that&#39;s also fine.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "3c693f05da12174c6ebacc0b29db59fe",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f14",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f15": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Please verify that you can edit your response, and the content updates itself accordingly.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f13",
+            ],
+            "digest": "c5ac9911369ca842f11bb3b1128d8c2b",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f15",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f16": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f17",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f13",
+            ],
+            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f17": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Verified!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "e822fec67a947738170d90c1fcfe3d02",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f17",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f18": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h2 id=\\"long-text-question\\">Long text question</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f16",
+            ],
+            "digest": "cba70638ccffc719435a7a80b36191c7",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f18",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f20": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Type some letters here, and include line breaks. Submit, then refresh the page to verify persistence.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "a6153b225587121e71feb2b95c0069f5",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f20",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f21": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Is everything working as expected?</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
+            ],
+            "digest": "65ed9a316320886d53c0de934b45e259",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f21",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f22": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f23",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
+            ],
+            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f23": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Yep!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f23",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f24": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Please verify that you can edit your response.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f22",
+            ],
+            "digest": "b24929f3ac93bcf0d952ad9064ee744b",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f24",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f25": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f26",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f22",
+            ],
+            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f26": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Verified!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "e822fec67a947738170d90c1fcfe3d02",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f26",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f27": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Thank you!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f25",
+            ],
+            "digest": "41810ed1a3c593092a267c6f8b1eaabb",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f27",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f28": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f25",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f28",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f3": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Type your name and press Enter:</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "04834dbd68f4228290b242b1c43d50b2",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f3",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f4": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>You typed &#39;<echo>typed-name</echo>&#39;, correct?</p>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_typed-name",
+            ],
+            "digest": "33e712cde71a8fb11be02966e42e3fa0",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f4",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f8": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f9",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_typed-name",
+            ],
+            "digest": "ab948d3d23f549df296cdf6330bff956",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>That&#39;s correct.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "5f47122e71a0688bcadadbf9b9312a73",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f9",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_inputted-long-text": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f20",
+            ],
+            "contentType": "LongTextQuestion",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f16",
+            ],
+            "digest": "cf1a8f848b17d7ac274102f3121b4865",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_typed-name": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f3",
+            ],
+            "contentType": "ShortTextQuestion",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [],
+            "digest": "bcbacbbc63b7815f638e783dce05a948",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+          },
+        },
+        "order": 3,
+        "slug": "text-inputs",
+        "title": "Text inputs and piping",
+        "topicUri": "boombox-feature-utopia-vtest",
+        "uri": "boombox-feature-utopia-vtest_text-inputs",
+      },
+      Object {
+        "childUris": Array [
+          "boombox-feature-utopia-vtest_response-persistence_f1",
+          "boombox-feature-utopia-vtest_response-persistence_f8",
+          "boombox-feature-utopia-vtest_response-persistence_f10",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "05372d8146b5afec0672ea2eb8b1cf13",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [
+          "boombox-feature-utopia-vtest_text-inputs_typed-name",
+          "boombox-feature-utopia-vtest_select-inputs_user-region",
+        ],
+        "fragmentsByUri": Object {
+          "boombox-feature-utopia-vtest_response-persistence_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"piped-responses-from-other-documents\\">Piped responses from other documents</h1>
+<p>I should still remember that your name is <echo>typed-name</echo>, and you&#39;re from <echo>user-region</echo>. (That second one will look a little funny for now, since displaying the &quot;pretty value&quot; of a question is not a thing yet.)</p>
+<p>Did I get that right?</p>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+                "user-region": "boombox-feature-utopia-vtest_select-inputs_user-region",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_typed-name",
+              "boombox-feature-utopia-vtest_select-inputs_user-region",
+            ],
+            "digest": "c86fdaee8ba8bddfc260a140f33e0e08",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f1",
+          },
+          "boombox-feature-utopia-vtest_response-persistence_f10": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_response-persistence_f8",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f10",
+          },
+          "boombox-feature-utopia-vtest_response-persistence_f8": Object {
+            "childUris": Array [
+              "boombox-feature-utopia-vtest_response-persistence_f9",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [],
+            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_response-persistence",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
+          },
+          "boombox-feature-utopia-vtest_response-persistence_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Yep!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+            "displayConditions": Array [],
+            "documentUri": "boombox-feature-utopia-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f9",
+          },
+        },
+        "order": 4,
+        "slug": "response-persistence",
+        "title": "Piped responses from other documents",
+        "topicUri": "boombox-feature-utopia-vtest",
+        "uri": "boombox-feature-utopia-vtest_response-persistence",
+      },
+    ],
+    "slug": "boombox-feature-utopia",
+    "subtitle": "Verify that this topic still works before merging to main.",
+    "title": "Smoke Testing",
+    "uri": "boombox-feature-utopia-vtest",
+    "version": "test",
+  },
+}
+`;
+
+exports[`The smoke test topic matches expectations The parsed topic JSON matches the snapshot 1`] = `
+Object {
+  "topic": Object {
+    "config": Object {
+      "contentMode": "tutorial",
+      "groupAccessLevels": Object {
+        "assigned": Array [
+          "all",
+        ],
+      },
+      "prerequisites": Array [],
+      "slug": "smoke-testing",
+    },
+    "coverImageUrl": "http://localhost:8080/topic-assets/smoke-testing-vtest/images/smoke-testing.jpg",
+    "documents": Array [
+      Object {
+        "childUris": Array [
+          "smoke-testing-vtest_basic-topic-functionality_f1",
+          "smoke-testing-vtest_basic-topic-functionality_f2",
+          "smoke-testing-vtest_basic-topic-functionality_f4",
+          "smoke-testing-vtest_basic-topic-functionality_f6",
+          "smoke-testing-vtest_basic-topic-functionality_f8",
+          "smoke-testing-vtest_basic-topic-functionality_f10",
+          "smoke-testing-vtest_basic-topic-functionality_f12",
+          "smoke-testing-vtest_basic-topic-functionality_f14",
+          "smoke-testing-vtest_basic-topic-functionality_f15",
+          "smoke-testing-vtest_basic-topic-functionality_f17",
+          "smoke-testing-vtest_basic-topic-functionality_f18",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "smoke-testing-vtest_basic-topic-functionality_f15",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "39f86dd51dc76d74378d87afe5606e73",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [],
+        "fragmentsByUri": Object {
+          "smoke-testing-vtest_basic-topic-functionality_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"basic-topic-functionality\\">Basic topic functionality</h1>
+<p>Please verify:</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "177a22c3d20c44f55f2921fcbde3b0a6",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f1",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f10": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f11",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f8",
+            ],
+            "digest": "d7c57909cf3e5fc2c9993f3a809f1223",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f10",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f11": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The topic title (Smoke Testing) is displayed in the banner</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "8acfc50dcca800f4fa8a15cfab201eb7",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f11",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f12": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f13",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f10",
+            ],
+            "digest": "84e8db76ea98e7528ed462827f805988",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f10",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f12",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f13": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The About page is fully and correctly populated</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "03ad2d590e84aba91a10e5a1fe313bbe",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f13",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f14": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Clicking on this last bar should unlock the next topic, so please verify that this happens.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f12",
+            ],
+            "digest": "8cd2a00df5b96807040412fc7b210e44",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f14",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f15": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f16",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f12",
+            ],
+            "digest": "ee4524b0fb30f7dee945a5a7d96388b5",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f15",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f16": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Abracadabra!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "2da36cc4ce66eacf9a3ab0d476054dde",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f16",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f17": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Thank you! On to the next one ...</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f15",
+            ],
+            "digest": "6e5cad076098b3e824d873e575f2f7df",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f15",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f17",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f18": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f15",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f15",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f18",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f2": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f3",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [],
+            "digest": "f98d38136874583b1924b5f167915ba6",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f2",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f3": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The progress bar shows 0%</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "8c410702acbe427e76749afe5c81dc32",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f3",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f4": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f5",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f2",
+            ],
+            "digest": "74f940b1b0b41c6945fdb2e163849a4e",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f2",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f4",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f5": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Okay, now the progress bar is cruising along</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "601c2da584ff788638d1b2e405d1a98f",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f5",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f6": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f7",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f4",
+            ],
+            "digest": "8cc0c3dbf7a8db5edc1c857054c44f64",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f4",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f6",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f7": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The correct document (this one) is highlighted in the side nav</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "bd6cef0fd11234582908dffef2293c3b",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f7",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f8": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f9",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_basic-topic-functionality_f6",
+            ],
+            "digest": "3647dc8be8f8ab59591e27eec5240056",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_basic-topic-functionality_f6",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f8",
+          },
+          "smoke-testing-vtest_basic-topic-functionality_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The subsequent documents are inaccessible</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "fa9125b1b7ade78bb146822a310cddb3",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_basic-topic-functionality",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_basic-topic-functionality_f9",
+          },
+        },
+        "order": 1,
+        "slug": "basic-topic-functionality",
+        "title": "Basic topic functionality",
+        "topicUri": "smoke-testing-vtest",
+        "uri": "smoke-testing-vtest_basic-topic-functionality",
+      },
+      Object {
+        "childUris": Array [
+          "smoke-testing-vtest_select-inputs_f1",
+          "smoke-testing-vtest_select-inputs_user-region",
+          "smoke-testing-vtest_select-inputs_f4",
+          "smoke-testing-vtest_select-inputs_f6",
+          "smoke-testing-vtest_select-inputs_f8",
+          "smoke-testing-vtest_select-inputs_f10",
+          "smoke-testing-vtest_select-inputs_f12",
+          "smoke-testing-vtest_select-inputs_f17",
+          "smoke-testing-vtest_select-inputs_f18",
+          "smoke-testing-vtest_select-inputs_f20",
+          "smoke-testing-vtest_select-inputs_f21",
+          "smoke-testing-vtest_select-inputs_f23",
+          "smoke-testing-vtest_select-inputs_f24",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "smoke-testing-vtest_select-inputs_f21",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "aa23de1760345824ddbe4636358b1ba0",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [],
+        "fragmentsByUri": Object {
+          "smoke-testing-vtest_select-inputs_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"select-inputs\\">Select inputs</h1>
+<h2 id=\\"single-select\\">Single select</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "3a510bdf3e50c8b8638f53c370fc6767",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f1",
+          },
+          "smoke-testing-vtest_select-inputs_f10": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f11",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_user-region",
+            ],
+            "digest": "bbe14ca235fe52990138ca52a95e5e67",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "east-coast",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f10",
+          },
+          "smoke-testing-vtest_select-inputs_f11": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Ah, so you eat <em>real</em> bagels. Lucky!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "58127f21f8937bb332772d47e07faef0",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f11",
+          },
+          "smoke-testing-vtest_select-inputs_f12": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f13",
+              "smoke-testing-vtest_select-inputs_f15",
+            ],
+            "contentType": "Checklist",
+            "contents": "",
+            "data": Object {
+              "completionContent": "You're finished! Nice work.",
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_user-region",
+            ],
+            "digest": "3811158ddeadaf7efa309319ba878688",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_user-region",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_select-inputs_f12",
+          },
+          "smoke-testing-vtest_select-inputs_f13": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f14",
+            ],
+            "contentType": "Step",
+            "contents": "",
+            "data": Object {
+              "title": "Verify that you could only choose one option above.",
+            },
+            "dependencyUris": Array [],
+            "digest": "0004d4c60bdb4eb0c2e7e8b2ce23ee6b",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f13",
+          },
+          "smoke-testing-vtest_select-inputs_f14": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>You should be able to change your selection, but only select one at a time.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "abaaf54a0f859226bd02df74449a6a60",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f14",
+          },
+          "smoke-testing-vtest_select-inputs_f15": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f16",
+            ],
+            "contentType": "Step",
+            "contents": "",
+            "data": Object {
+              "title": "Verify that the correct conditional content displayed.",
+            },
+            "dependencyUris": Array [],
+            "digest": "376561ce299ebcfc6af5c314d4b48d88",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f15",
+          },
+          "smoke-testing-vtest_select-inputs_f16": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>It should update anytime you update your answer.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "c7cc11396a13d724673387f77d9257ae",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f16",
+          },
+          "smoke-testing-vtest_select-inputs_f17": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h2 id=\\"multi-select\\">Multi select</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_f12",
+            ],
+            "digest": "f8ca9ffdf8bafb1d70ad08995c632790",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f17",
+          },
+          "smoke-testing-vtest_select-inputs_f18": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f19",
+            ],
+            "contentType": "MultiSelectQuestion",
+            "contents": "",
+            "data": Object {
+              "choices": Array [
+                Object {
+                  "contents": "Quick",
+                  "value": "quick",
+                },
+                Object {
+                  "contents": "Cheap",
+                  "value": "cheap",
+                },
+                Object {
+                  "contents": "Good",
+                  "value": "good",
+                },
+              ],
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_f12",
+            ],
+            "digest": "d683f07f78e49629acc4fc9c25f31803",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_f12",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_select-inputs_f18",
+          },
+          "smoke-testing-vtest_select-inputs_f19": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Choose at least two:</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "cabc1b97999aeff35ee5fce180c0c02a",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f19",
+          },
+          "smoke-testing-vtest_select-inputs_f20": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Were you able to choose more than one option above?</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_f18",
+            ],
+            "digest": "17eca71d518dcdc9975c9a969e5f08e8",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_f18",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f20",
+          },
+          "smoke-testing-vtest_select-inputs_f21": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f22",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_f18",
+            ],
+            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_f18",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_select-inputs_f21",
+          },
+          "smoke-testing-vtest_select-inputs_f22": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Yep!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f22",
+          },
+          "smoke-testing-vtest_select-inputs_f23": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Excellent! Moving on ...</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_f21",
+            ],
+            "digest": "67c056954669d558cab38c8128d0c6ae",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_f21",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f23",
+          },
+          "smoke-testing-vtest_select-inputs_f24": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_f21",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_select-inputs_f21",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f24",
+          },
+          "smoke-testing-vtest_select-inputs_f3": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Where are you from?</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "9a38121f7fdff683672189d2fd49c1f9",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f3",
+          },
+          "smoke-testing-vtest_select-inputs_f4": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f5",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_user-region",
+            ],
+            "digest": "ec4d495c112b1ef9051f7e57270cc4bd",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "midwest",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f4",
+          },
+          "smoke-testing-vtest_select-inputs_f5": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Ope! Midwest is best!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "e8c3f5b0d629768c69166ce73f9d28e6",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f5",
+          },
+          "smoke-testing-vtest_select-inputs_f6": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f7",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_user-region",
+            ],
+            "digest": "c85b2d977db50e96f780a07bb9e1f50b",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "south",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f6",
+          },
+          "smoke-testing-vtest_select-inputs_f7": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Let&#39;s go to Waffle House!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "35b9963b6c607e2a82949d789a7b2a59",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f7",
+          },
+          "smoke-testing-vtest_select-inputs_f8": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f9",
+            ],
+            "contentType": "Show",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_select-inputs_user-region",
+            ],
+            "digest": "7568754b71404c4a9640e3f7cfa44f7e",
+            "displayConditions": Array [
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "is",
+                    "targetValue": "west-coast",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+              Object {
+                "data": "and",
+                "type": "conjunction",
+              },
+              Array [
+                Object {
+                  "data": Object {
+                    "operator": "status-is",
+                    "targetValue": "completed",
+                    "uri": "smoke-testing-vtest_select-inputs_user-region",
+                  },
+                  "type": "condition",
+                },
+              ],
+            ],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f8",
+          },
+          "smoke-testing-vtest_select-inputs_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>The West Coast is the best coast!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "6377f8c6de604496fd28611a3bec090a",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_select-inputs_f9",
+          },
+          "smoke-testing-vtest_select-inputs_user-region": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_select-inputs_f3",
+            ],
+            "contentType": "SingleSelectQuestion",
+            "contents": "",
+            "data": Object {
+              "choices": Array [
+                Object {
+                  "contents": "the Midwest",
+                  "value": "midwest",
+                },
+                Object {
+                  "contents": "the South",
+                  "value": "south",
+                },
+                Object {
+                  "contents": "the East Coast",
+                  "value": "east-coast",
+                },
+                Object {
+                  "contents": "the West Coast",
+                  "value": "west-coast",
+                },
+              ],
+            },
+            "dependencyUris": Array [],
+            "digest": "e68fe22cf4ea4fe5e59a3190c27cf1ff",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_select-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_select-inputs_user-region",
+          },
+        },
+        "order": 2,
+        "slug": "select-inputs",
+        "title": "Select inputs",
+        "topicUri": "smoke-testing-vtest",
+        "uri": "smoke-testing-vtest_select-inputs",
+      },
+      Object {
+        "childUris": Array [
+          "smoke-testing-vtest_text-inputs_f1",
+          "smoke-testing-vtest_text-inputs_typed-name",
+          "smoke-testing-vtest_text-inputs_f4",
+          "smoke-testing-vtest_text-inputs_f8",
+          "smoke-testing-vtest_text-inputs_f10",
+          "smoke-testing-vtest_text-inputs_f13",
+          "smoke-testing-vtest_text-inputs_f15",
+          "smoke-testing-vtest_text-inputs_f16",
+          "smoke-testing-vtest_text-inputs_f18",
+          "smoke-testing-vtest_text-inputs_inputted-long-text",
+          "smoke-testing-vtest_text-inputs_f21",
+          "smoke-testing-vtest_text-inputs_f22",
+          "smoke-testing-vtest_text-inputs_f24",
+          "smoke-testing-vtest_text-inputs_f25",
+          "smoke-testing-vtest_text-inputs_f27",
+          "smoke-testing-vtest_text-inputs_f28",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "smoke-testing-vtest_text-inputs_f25",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "3015454f79cdbd1c00fea3a208a41ed6",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [],
+        "fragmentsByUri": Object {
+          "smoke-testing-vtest_text-inputs_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"text-inputs-and-piping\\">Text inputs and piping</h1>
+<h2 id=\\"short-text-question\\">Short text question</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "bd5987ece9b33827f553cb99fb8ecbaa",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f1",
+          },
+          "smoke-testing-vtest_text-inputs_f10": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>What if I put it in a header?</p>
+<h2 id=\\"you-said-your-name-is-typed-name\\">You said your name is <echo>typed-name</echo></h2>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "smoke-testing-vtest_text-inputs_typed-name",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f8",
+              "smoke-testing-vtest_text-inputs_typed-name",
+            ],
+            "digest": "00b108a7ed651f43faa35bdee1dd7a67",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f10",
+          },
+          "smoke-testing-vtest_text-inputs_f13": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f14",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f8",
+            ],
+            "digest": "960821e123cc43ba92456e3c187ba919",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_f13",
+          },
+          "smoke-testing-vtest_text-inputs_f14": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Sure, that&#39;s also fine.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "3c693f05da12174c6ebacc0b29db59fe",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f14",
+          },
+          "smoke-testing-vtest_text-inputs_f15": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Please verify that you can edit your response, and the content updates itself accordingly.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f13",
+            ],
+            "digest": "c5ac9911369ca842f11bb3b1128d8c2b",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f13",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f15",
+          },
+          "smoke-testing-vtest_text-inputs_f16": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f17",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f13",
+            ],
+            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f13",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_f16",
+          },
+          "smoke-testing-vtest_text-inputs_f17": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Verified!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "e822fec67a947738170d90c1fcfe3d02",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f17",
+          },
+          "smoke-testing-vtest_text-inputs_f18": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h2 id=\\"long-text-question\\">Long text question</h2>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f16",
+            ],
+            "digest": "cba70638ccffc719435a7a80b36191c7",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f16",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f18",
+          },
+          "smoke-testing-vtest_text-inputs_f20": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Type some letters here, and include line breaks. Submit, then refresh the page to verify persistence.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "a6153b225587121e71feb2b95c0069f5",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f20",
+          },
+          "smoke-testing-vtest_text-inputs_f21": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Is everything working as expected?</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_inputted-long-text",
+            ],
+            "digest": "65ed9a316320886d53c0de934b45e259",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_inputted-long-text",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f21",
+          },
+          "smoke-testing-vtest_text-inputs_f22": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f23",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_inputted-long-text",
+            ],
+            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_inputted-long-text",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_f22",
+          },
+          "smoke-testing-vtest_text-inputs_f23": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Yep!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f23",
+          },
+          "smoke-testing-vtest_text-inputs_f24": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Please verify that you can edit your response.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f22",
+            ],
+            "digest": "b24929f3ac93bcf0d952ad9064ee744b",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f22",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f24",
+          },
+          "smoke-testing-vtest_text-inputs_f25": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f26",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f22",
+            ],
+            "digest": "91aa0a05138febded3e329f12efb9d32",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f22",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_f25",
+          },
+          "smoke-testing-vtest_text-inputs_f26": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Verified!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "e822fec67a947738170d90c1fcfe3d02",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f26",
+          },
+          "smoke-testing-vtest_text-inputs_f27": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Thank you!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f25",
+            ],
+            "digest": "41810ed1a3c593092a267c6f8b1eaabb",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f25",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f27",
+          },
+          "smoke-testing-vtest_text-inputs_f28": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f25",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f25",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f28",
+          },
+          "smoke-testing-vtest_text-inputs_f3": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Type your name and press Enter:</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "04834dbd68f4228290b242b1c43d50b2",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f3",
+          },
+          "smoke-testing-vtest_text-inputs_f4": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>You typed &#39;<echo>typed-name</echo>&#39;, correct?</p>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "smoke-testing-vtest_text-inputs_typed-name",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_typed-name",
+            ],
+            "digest": "33e712cde71a8fb11be02966e42e3fa0",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_typed-name",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f4",
+          },
+          "smoke-testing-vtest_text-inputs_f8": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f9",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_typed-name",
+            ],
+            "digest": "ab948d3d23f549df296cdf6330bff956",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_typed-name",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_f8",
+          },
+          "smoke-testing-vtest_text-inputs_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>That&#39;s correct.</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "5f47122e71a0688bcadadbf9b9312a73",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f9",
+          },
+          "smoke-testing-vtest_text-inputs_inputted-long-text": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f20",
+            ],
+            "contentType": "LongTextQuestion",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f16",
+            ],
+            "digest": "cf1a8f848b17d7ac274102f3121b4865",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f16",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_inputted-long-text",
+          },
+          "smoke-testing-vtest_text-inputs_typed-name": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_text-inputs_f3",
+            ],
+            "contentType": "ShortTextQuestion",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [],
+            "digest": "bcbacbbc63b7815f638e783dce05a948",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_text-inputs_typed-name",
+          },
+        },
+        "order": 3,
+        "slug": "text-inputs",
+        "title": "Text inputs and piping",
+        "topicUri": "smoke-testing-vtest",
+        "uri": "smoke-testing-vtest_text-inputs",
+      },
+      Object {
+        "childUris": Array [
+          "smoke-testing-vtest_response-persistence_f1",
+          "smoke-testing-vtest_response-persistence_f8",
+          "smoke-testing-vtest_response-persistence_f10",
+        ],
+        "completionConditions": Array [
+          Object {
+            "data": Object {
+              "operator": "status-is",
+              "targetValue": "completed",
+              "uri": "smoke-testing-vtest_response-persistence_f8",
+            },
+            "type": "condition",
+          },
+        ],
+        "config": Object {},
+        "contentMode": "tutorial",
+        "dependencyUris": Array [],
+        "digest": "05372d8146b5afec0672ea2eb8b1cf13",
+        "displayConditions": Array [],
+        "externalDependencyUris": Array [
+          "smoke-testing-vtest_text-inputs_typed-name",
+          "smoke-testing-vtest_select-inputs_user-region",
+        ],
+        "fragmentsByUri": Object {
+          "smoke-testing-vtest_response-persistence_f1": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<h1 id=\\"piped-responses-from-other-documents\\">Piped responses from other documents</h1>
+<p>I should still remember that your name is <echo>typed-name</echo>, and you&#39;re from <echo>user-region</echo>. (That second one will look a little funny for now, since displaying the &quot;pretty value&quot; of a question is not a thing yet.)</p>
+<p>Did I get that right?</p>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "smoke-testing-vtest_text-inputs_typed-name",
+                "user-region": "smoke-testing-vtest_select-inputs_user-region",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_typed-name",
+              "smoke-testing-vtest_select-inputs_user-region",
+            ],
+            "digest": "c86fdaee8ba8bddfc260a140f33e0e08",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_response-persistence_f1",
+          },
+          "smoke-testing-vtest_response-persistence_f10": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_response-persistence_f8",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_response-persistence_f8",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_response-persistence_f10",
+          },
+          "smoke-testing-vtest_response-persistence_f8": Object {
+            "childUris": Array [
+              "smoke-testing-vtest_response-persistence_f9",
+            ],
+            "contentType": "UserReply",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [],
+            "digest": "b3dc0176fcf4e837ab41af8e6fa97335",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_response-persistence",
+            "isRequired": true,
+            "isStateful": true,
+            "uri": "smoke-testing-vtest_response-persistence_f8",
+          },
+          "smoke-testing-vtest_response-persistence_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>Yep!</p>
+",
+            "data": Object {
+              "isTemplated": false,
+            },
+            "dependencyUris": Array [],
+            "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
+            "displayConditions": Array [],
+            "documentUri": "smoke-testing-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_response-persistence_f9",
+          },
+        },
+        "order": 4,
+        "slug": "response-persistence",
+        "title": "Piped responses from other documents",
+        "topicUri": "smoke-testing-vtest",
+        "uri": "smoke-testing-vtest_response-persistence",
+      },
+    ],
+    "slug": "smoke-testing",
+    "subtitle": "Verify that this topic still works before merging to main.",
+    "title": "Smoke Testing",
+    "uri": "smoke-testing-vtest",
+    "version": "test",
+  },
+}
+`;

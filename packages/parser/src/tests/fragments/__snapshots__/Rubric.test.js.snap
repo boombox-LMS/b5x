@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Rubric fragment builds as expected The parsed rubric fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Rubric",
+  "contents": "",
+  "data": Object {
+    "answers": Array [
+      Object {
+        "htmlContents": "An answer portion goes here. It&apos;s worth 1 point by default.",
+        "id": "81943a7818a461dbf97986f581254743",
+        "points": 1,
+      },
+      Object {
+        "htmlContents": "Another answer portion goes here. It&apos;s also worth 1 point by default.",
+        "id": "24f9ebbbc666a6b5fe1fc3cb7b00f0f8",
+        "points": 1,
+      },
+      Object {
+        "htmlContents": "The last answer portion goes here. It has been configured to be worth 2 points.",
+        "id": "127c9ff02d219c599506f34d1bb6d645",
+        "points": 2,
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "976ea555a39bc90935824f90eeace657",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Accordion fragment builds as expected The parsed accordion fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Accordion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "7af0dac18c127361dc4f9e361abb1035",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;

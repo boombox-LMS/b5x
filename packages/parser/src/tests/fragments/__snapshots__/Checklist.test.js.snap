@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Checklist fragment builds as expected The parsed checklist fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Checklist",
+  "contents": "",
+  "data": Object {
+    "completionContent": "You're finished! Nice work.",
+  },
+  "dependencyUris": Array [],
+  "digest": "92ba3c1e81316b570b09260699671f17",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

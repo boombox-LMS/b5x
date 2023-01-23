@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Slide fragment builds as expected The parsed slide fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Slide",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "15b560681e8c9367ef5211e8e28b4a10",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;

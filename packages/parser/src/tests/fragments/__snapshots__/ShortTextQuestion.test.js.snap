@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The ShortTextQuestion fragment builds as expected The parsed short-text-question fragment matches the snapshot on file 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "ShortTextQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "3d06dcab72f0162f9c5af50d79e13eed",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
