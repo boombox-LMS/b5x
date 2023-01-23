@@ -10,24 +10,17 @@ const SEEDFILE_DIR = path.resolve(
 
 export class BoomboxParser {
   topic: Topic;
-  targetDir: string;
   topicDir: string;
 
   constructor(params: {
     commandDir: string;
     topicSlug: string;
-    targetDir?: string;
     topicVersion?: string;
   }) {
     this.topicDir = this.#locateTopicDir({
       commandDir: params.commandDir,
       topicSlug: params.topicSlug,
     });
-    if (params.targetDir) {
-      this.targetDir = params.targetDir;
-    } else {
-      this.targetDir = `${this.topicDir}/cli-data/shipped`;
-    }
     const topicVersion = params.topicVersion || this.#getNextTopicVersion();
     this.topic = new Topic({
       slug: params.topicSlug,
@@ -74,15 +67,6 @@ export class BoomboxParser {
   #getNextTopicVersion() {
     // TODO: Catch whether anything has changed, if not, do not ship the topic.
     return Math.floor(Date.now() / 1000).toString();
-  }
-
-  /**
-   *  Write the .b5x file to the appropriate place.
-   */
-  writeTopicFile() {
-    const b5xFilename = `${this.targetDir}/${this.topic.uri}.b5x`;
-    const topicDataStr = JSON.stringify(this.topic.packageForApi(), null, 4);
-    fs.writeFileSync(b5xFilename, topicDataStr);
   }
 }
 
