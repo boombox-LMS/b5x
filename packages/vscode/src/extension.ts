@@ -36,8 +36,9 @@ export function activate(context: vscode.ExtensionContext) {
 		// but ultimately it would be best to show those errors live in the editor.
 		const parser = new BoomboxParser({ topicDir: resourceUri.fsPath, topicSlug });
 		const topicDataStr = JSON.stringify(parser.topic.packageForApi(), null, 2)
-		vscode.env.clipboard.writeText(topicDataStr);
-		vscode.window.showInformationMessage('Topic data compiled and copied to clipboard.');
+		vscode.env.clipboard.writeText(topicDataStr).then(() => {
+			vscode.window.showInformationMessage('Topic data compiled and copied to clipboard.');
+		});
 	});
 
 	context.subscriptions.push(createNewTopic);
