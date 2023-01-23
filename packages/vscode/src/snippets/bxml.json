@@ -3,7 +3,7 @@
     "scope": "markdown",
     "prefix": ["show"],
     "body": [
-      "<show if='${1:REQUIRED_CONDITIONS}'>",
+      "<show if='${1:CONDITIONS}'>",
       "${2:CONTENTS_TO_CONDITIONALLY_DISPLAY}",
       "</show>"
     ],
@@ -14,7 +14,7 @@
     "prefix": ["long-text-question", "ltq"],
     "body": [
       "<long-text-question id=${1:OPTIONAL_CUSTOM_ID}>",
-      "${2:REQUIRED_QUESTION_TEXT}",
+      "${2:QUESTION_TEXT}",
       "</long-text-question>"
     ],
     "description": "A template for asking the learner a question that has a long text answer"
@@ -29,7 +29,7 @@
     "scope": "markdown",
     "prefix": ["sentiment-check", "sc"],
     "body": [
-      "<sentiment-check topic='{$1:REQUIRED_TOPIC}' ${2:OPTIONAL_CUSTOM_ID} />"
+      "<sentiment-check topic='{$1:TOPIC}' ${2:OPTIONAL_CUSTOM_ID} />"
     ],
     "description": "An element that asks the learner, 'How do you feel about <topic>?' and shows them sad/neutral/happy faces"
   },
@@ -38,7 +38,7 @@
     "prefix": ["short-text-question", "stq"],
     "body": [
       "<short-text-question id=${1:OPTIONAL_CUSTOM_ID}>",
-      "${2:REQUIRED_QUESTION_TEXT}",
+      "${2:QUESTION_TEXT}",
       "</short-text-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -48,11 +48,11 @@
     "prefix": ["single-select-question", "ssq"],
     "body": [
       "<single-select-question id=${1:OPTIONAL_CUSTOM_ID}>",
-      "${2:REQUIRED_QUESTION_TEXT}",
-      "<choice value=${3:OPTIONAL_VALUE}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${5:OPTIONAL_VALUE}>${6:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${7:OPTIONAL_VALUE}>${8:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:OPTIONAL_VALUE}>${10:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
+      "${2:QUESTION_TEXT}",
+      "<choice value=${3:VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${5:VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${7:VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${9:VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
       "</single-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -62,11 +62,11 @@
     "prefix": ["multi-select-question", "msq"],
     "body": [
       "<multi-select-question id=${1:OPTIONAL_CUSTOM_ID}>",
-      "${2:REQUIRED_QUESTION_TEXT}",
-      "<choice value=${3:OPTIONAL_VALUE}>${4:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${5:OPTIONAL_VALUE}>${6:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${7:OPTIONAL_VALUE}>${8:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:OPTIONAL_VALUE}>${10:REQUIRED_CONTENTS_TO_DISPLAY}</choice>",      
+      "${2:QUESTION_TEXT}",
+      "<choice value=${3:VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${5:VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${7:VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${9:VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",      
       "</multi-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -91,15 +91,15 @@
     "body": [
       "<checklist>",
       "<step>",
-      "<title>${1:REQUIRED_STEP_1_TITLE}</title>",
+      "<title>${1:STEP_1_TITLE}</title>",
       "<description>",
-      "${2:REQUIRED_STEP_1_DESCRIPTION}",
+      "${2:STEP_1_DESCRIPTION}",
       "</description>",
       "</step>",
       "<step>",
-      "<title>${3:REQUIRED_STEP_2_TITLE}</title>",
+      "<title>${3:STEP_2_TITLE}</title>",
       "<description>",
-      "${4:REQUIRED_STEP_2_DESCRIPTION}",
+      "${4:STEP_2_DESCRIPTION}",
       "</description>",
       "</step>",
       "</checklist>"
@@ -146,12 +146,12 @@
     "body": [
       "<visual-list>",
       "",
-      "<item image='${1:REQUIRED_ASSET_NAME'}>",
-      "${2:REQUIRED_MARKDOWN_CONTENTS}",
+      "<item image='${1:ASSET_NAME'}>",
+      "${2:MARKDOWN_CONTENTS}",
       "</item>",
       "",
-      "<item image='${3:REQUIRED_ASSET_NAME'}>",
-      "${4:REQUIRED_MARKDOWN_CONTENTS}",
+      "<item image='${3:ASSET_NAME'}>",
+      "${4:MARKDOWN_CONTENTS}",
       "</item>",
       "",
       "</visual-list>"
@@ -163,7 +163,7 @@
     "prefix": ["code-block", "cb"],
     "body": [
       "<code-block language='${1:OPTIONAL_LANGUAGE}'>",
-      "${2:REQUIRED_CODE_CONTENTS}",
+      "${2:CODE_CONTENTS}",
       "</code-block>"
     ],
     "description": "A snippet of code that can easily be copy-pasted by the user"
@@ -173,11 +173,11 @@
     "prefix": ["accordion"],
     "body": [
       "<accordion>",
-      "<item title='${1:REQUIRED_ITEM_TITLE}' >",
-      "${2:REQUIRED_ITEM_CONTENTS}",
+      "<item title='${1:ITEM_TITLE}' >",
+      "${2:ITEM_CONTENTS}",
       "</item>",
-      "<item title='${3:REQUIRED_ITEM_TITLE}' >",
-      "${4:REQUIRED_ITEM_CONTENTS}",
+      "<item title='${3:ITEM_TITLE}' >",
+      "${4:ITEM_CONTENTS}",
       "</item>",
       "</accordion>"
     ],
@@ -188,7 +188,7 @@
     "prefix": ["nps-question", "nps"],
     "body": [
       "<nps-question>",
-      "${1:REQUIRED_QUESTION_CONTENTS}",
+      "${1:QUESTION_CONTENTS}",
       "</nps-question>"
     ],
     "description": "A 0-10 scale intended to be used for NPS feedback"
@@ -198,11 +198,11 @@
     "prefix": ["tabs"],
     "body": [
       "<tabs>",
-      "<tab title='${1:REQUIRED_TAB_TITLE}' >",
-      "${2:REQUIRED_TAB_CONTENTS}",
+      "<tab title='${1:TAB_TITLE}' >",
+      "${2:TAB_CONTENTS}",
       "</tab>",
-      "<tab title='${3:REQUIRED_TAB_TITLE}' >",
-      "${4:REQUIRED_TAB_CONTENTS}",
+      "<tab title='${3:TAB_TITLE}' >",
+      "${4:TAB_CONTENTS}",
       "</tab>",
       "</tabs>"
     ],
@@ -212,8 +212,8 @@
     "scope": "markdown",
     "prefix": ["breakout"],
     "body": [
-      "<breakout title='${1:REQUIRED_BREAKOUT_TITLE}' icon=${2:OPTIONAL_ICON_NAME} icon-size=${3|small,medium,large|} color=${4:OPTIONAL_HIGHLIGHT_BAR_COLOR}>",
-      "${5:REQUIRED_BREAKOUT_CONTENTS}",
+      "<breakout title='${1:BREAKOUT_TITLE}' icon=${2:OPTIONAL_ICON_NAME} icon-size=${3|small,medium,large|} color=${4:OPTIONAL_HIGHLIGHT_BAR_COLOR}>",
+      "${5:BREAKOUT_CONTENTS}",
       "</breakout>"
     ],
     "description": "A highlighted snippet of text for sharing tips, best practices, or other important information"
