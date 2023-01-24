@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+import { demoVars } from "./demoVars";
 
 const CLOUDCO_MAIN_COLOR = "#004d80"; // midnight blue
 const CLOUDCO_SECONDARY_COLOR = "#0297ed"; // medium sky blue
@@ -6,10 +7,10 @@ const CLOUDCO_SECONDARY_COLOR = "#0297ed"; // medium sky blue
 export const muiTheme = createTheme({
   palette: {
     primary: {
-      main: CLOUDCO_MAIN_COLOR,
+      main: demoVars.primaryColor || CLOUDCO_MAIN_COLOR,
     },
     secondary: {
-      main: CLOUDCO_SECONDARY_COLOR,
+      main: demoVars.secondaryColor || CLOUDCO_SECONDARY_COLOR,
     },
   },
   typography: {
