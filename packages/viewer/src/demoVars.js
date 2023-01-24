@@ -4,4 +4,5 @@ export const demoVars = {
   primaryColor: undefined,
   secondaryColor: undefined,
   headerLogoUrl: undefined,
+  companyName: undefined,
 };
