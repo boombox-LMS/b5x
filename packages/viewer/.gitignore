@@ -10,7 +10,6 @@ node_modules
 
 # demo files
 public/demo-assets
-src/themeOverrides
 
 # testing
 /coverage
