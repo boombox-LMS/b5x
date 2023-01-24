@@ -51,10 +51,10 @@
     "body": [
       "<single-select-question id=${1:OPTIONAL_CUSTOM_ID}>",
       "${2:QUESTION_TEXT}",
-      "<choice value=${3:VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${5:VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${7:VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${3:CHOICE_VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${5:CHOICE_VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${7:CHOICE_VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${9:CHOICE_VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
       "</single-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -65,10 +65,10 @@
     "body": [
       "<multi-select-question id=${1:OPTIONAL_CUSTOM_ID}>",
       "${2:QUESTION_TEXT}",
-      "<choice value=${3:VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${5:VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${7:VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${3:CHOICE_VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${5:CHOICE_VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${7:CHOICE_VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
+      "<choice value=${9:CHOICE_VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
       "</multi-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
