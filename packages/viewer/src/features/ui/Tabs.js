@@ -1,6 +1,7 @@
 import React from "react";
 import MuiTabs from "@mui/material/Tabs";
 import { styled } from "@mui/material/styles";
+import { muiTheme } from "../../theme";
 
 const Tabs = styled((props) => (
   <MuiTabs
@@ -15,7 +16,7 @@ const Tabs = styled((props) => (
   },
   "& .MuiTabs-indicatorSpan": {
     width: "100%",
-    backgroundColor: "#0297ed",
+    backgroundColor: muiTheme.palette.secondary.main,
   },
 });
 

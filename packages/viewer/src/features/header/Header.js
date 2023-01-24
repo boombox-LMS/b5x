@@ -15,6 +15,7 @@ import Tab from "../ui/Tab";
 import TabPanel from "../ui/TabPanel";
 import Tabs from "../ui/Tabs";
 import PublishIcon from "@mui/icons-material/Publish";
+import { demoVars } from "../../../src/demoVars";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -84,6 +85,7 @@ export const Header = () => {
 
   const tabStyle = { minWidth: 20, paddingRight: 1, paddingLeft: 1 };
   const tabIconStyle = { fontSize: "1.7em" };
+  const headerLogoUrl = demoVars.headerLogoUrl || "/img/cloudco.svg";
 
   return (
     <>
@@ -96,7 +98,7 @@ export const Header = () => {
         className={`header ${headerProps.isMinimized ? "header--small" : ""}`}
       >
         <div className="header__logo-container">
-          <img className="header__logo-img" src="/img/cloudco.svg" />
+          <img className="header__logo-img" src={headerLogoUrl} />
         </div>
         <div className="header__content-container">
           <div className="header__left-menu">

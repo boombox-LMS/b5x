@@ -18,74 +18,11 @@ import { useGetCurrentUserInfoQuery } from "./features/api/apiSlice";
 import { LoadingOutlined } from "@ant-design/icons";
 import { HelpDesk } from "./features/helpdesk/HelpDesk";
 import { ThemeProvider } from "@mui/material/styles";
-import { createTheme } from "@mui/material/styles";
 import { Header } from "./features/header/Header";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
+import { muiTheme } from "./theme";
 
-const muiTheme = createTheme({
-  palette: {
-    primary: {
-      main: "#004d80",
-    },
-    secondary: {
-      main: "#008F0F",
-    },
-  },
-  typography: {
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      "Segoe UI",
-      "Roboto",
-      "Oxygen",
-      "Ubuntu",
-      "Cantarell",
-      "Open Sans",
-      "Helvetica Neue",
-      "sans-serif",
-    ].join(","),
-  },
-  components: {
-    MuiTooltip: {
-      styleOverrides: {
-        arrow: {
-          color: "#FFF",
-        },
-        tooltip: {
-          backgroundColor: "#FFF",
-          color: "black",
-          boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: "none",
-          letterSpacing: "0.9px",
-          fontSize: "1em",
-        },
-      },
-    },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          textTransform: "uppercase",
-          fontSize: "0.85em",
-          letterSpacing: "1px",
-          fontWeight: 500,
-        },
-      },
-    },
-    MuiInputBase: {
-      styleOverrides: {
-        input: {
-          fontSize: "0.9em",
-        },
-      },
-    },
-  },
-});
+console.log(muiTheme);
 
 function ScrollToTop() {
   const { pathname } = useLocation();

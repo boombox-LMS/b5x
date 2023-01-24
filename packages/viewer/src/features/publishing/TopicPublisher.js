@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { setHeaderProps } from "../header/headerSlice";
 import { api } from "../api/apiSlice";
 import { Link } from "react-router-dom";
+import { muiTheme } from "../../theme";
 
 export const TopicPublisher = () => {
   const dispatch = useDispatch();
@@ -23,16 +24,16 @@ export const TopicPublisher = () => {
 
   let dropzoneStyle = {
     width: "100%",
-    height: "100px",
+    height: "120px",
     border: "2px dashed #999",
     borderRadius: "5px",
-    lineHeight: "100px",
+    lineHeight: "120px",
     textAlign: "center",
     cursor: "pointer",
   };
 
   if (dropzoneStatus !== "inactive") {
-    dropzoneStyle.border = "2px dashed #20A7F5";
+    dropzoneStyle.border = `2px dashed ${muiTheme.palette.secondary.main}`;
   }
 
   const [publishTopicTrigger, publishTopicResult] =
@@ -64,7 +65,7 @@ export const TopicPublisher = () => {
         onPaste={handleDropzonePaste}
       >
         {dropzoneStatus === "listening" && (
-          <span style={{ color: "#20A7F5" }}>
+          <span style={{ color: muiTheme.palette.secondary.main }}>
             Listening for pasted topic data ...
           </span>
         )}
@@ -72,7 +73,9 @@ export const TopicPublisher = () => {
           <span>Click here when you're ready to paste your topic data</span>
         )}
         {dropzoneStatus === "publishing" && (
-          <span style={{ color: "#20A7F5" }}>Publishing topic...</span>
+          <span style={{ color: muiTheme.palette.secondary.main }}>
+            Publishing topic...
+          </span>
         )}
       </div>
       {publishedTopicUri && (

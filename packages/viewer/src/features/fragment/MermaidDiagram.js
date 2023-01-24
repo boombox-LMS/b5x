@@ -2,14 +2,15 @@ import React, { useEffect } from "react";
 import mermaid from "mermaid";
 // import 'font-awesome/css/font-awesome.min.css';
 import "../../css/mermaid.css";
+import { muiTheme } from "../../theme";
 
 const DEFAULT_CONFIG = {
   startOnLoad: true,
   theme: "default",
   themeVariables: {
-    nodeBorder: "#004990",
+    nodeBorder: muiTheme.palette.primary.main,
     mainBkg: "#f5f5f5",
-    nodeTextColor: "#274059",
+    nodeTextColor: "black",
     fontFamily: "Arial",
     fontSize: "16px",
   },
