@@ -15,7 +15,7 @@ import Tab from "../ui/Tab";
 import TabPanel from "../ui/TabPanel";
 import Tabs from "../ui/Tabs";
 import PublishIcon from "@mui/icons-material/Publish";
-import { demoVars } from "../../../src/demoVars";
+import { demoVars } from "../../themeOverrides/demoVars";
 
 export const Header = () => {
   const navigate = useNavigate();

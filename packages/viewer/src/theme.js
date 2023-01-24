@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { demoVars } from "./demoVars";
+import { demoVars } from "./themeOverrides/demoVars";
 
 const CLOUDCO_MAIN_COLOR = "#004d80"; // midnight blue
 const CLOUDCO_SECONDARY_COLOR = "#0297ed"; // medium sky blue

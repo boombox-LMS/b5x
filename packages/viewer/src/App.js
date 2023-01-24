@@ -22,8 +22,6 @@ import { Header } from "./features/header/Header";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
 import { muiTheme } from "./theme";
 
-console.log(muiTheme);
-
 function ScrollToTop() {
   const { pathname } = useLocation();
 
