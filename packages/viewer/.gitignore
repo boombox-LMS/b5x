@@ -9,7 +9,7 @@ node_modules
 .pnp.js
 
 # demo files
-src/demoColors.js
+src/demoVars.js
 public/demo-assets
 
 # testing
