@@ -8,6 +8,10 @@ node_modules
 /.pnp
 .pnp.js
 
+# demo files
+src/demoColors.js
+public/demo-assets
+
 # testing
 /coverage
 
