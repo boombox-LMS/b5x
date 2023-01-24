@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Paper from "@mui/material/Paper";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import { ReactSVG } from "react-svg";
+import { muiTheme } from "../../theme";
 
 export const DisplayBadge = ({ title, description, icon, isNew }) => {
   const [fireConfetti, setFireConfetti] = useState(false);
@@ -50,7 +51,7 @@ export const DisplayBadge = ({ title, description, icon, isNew }) => {
           <ReactSVG
             src={icon}
             beforeInjection={(svg) => {
-              svg.setAttribute("color", "#0297ed");
+              svg.setAttribute("color", muiTheme.palette.secondary.main);
               svg.setAttribute("style", "width: 75px; height: auto;");
             }}
           />
@@ -64,6 +65,7 @@ export const DisplayBadge = ({ title, description, icon, isNew }) => {
               marginTop: "-9px",
               fontSize: "1em",
               lineHeight: "1.3em",
+              color: muiTheme.palette.secondary.main,
             }}
           >
             {title}
