@@ -19,7 +19,7 @@ Boombox isn't just one app -- it's a set of tools. This section will help you be
   <line to=viewer label=publish arrow=target>
 </item>
 
-<item id=cli shape=logos:visual-studio-code label='VS Code extension' col=2 row=2 />
+<item id=cli shape=heroicons:command-line-20-solid label='Boombox CLI' col=2 row=2 />
 
 <item id=api shape=database.svg label='Boombox API' col=3 row=1>
 </item>
