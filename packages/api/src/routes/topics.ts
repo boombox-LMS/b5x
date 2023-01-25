@@ -179,7 +179,7 @@ router.post(
       const incompleteDocuments = Object.values(
         enrollment.documentStatus
       ).filter((document) => {
-        document.isVisible && !document.isCompleted;
+        return document.isVisible && !document.isCompleted;
       });
 
       if (incompleteDocuments.length === 0) {
