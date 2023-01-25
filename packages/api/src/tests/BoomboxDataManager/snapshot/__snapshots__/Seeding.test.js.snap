@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The seeded data matches the snapshots The fragmentExcerptId field in the fragmentRefs data matches the snapshot 1`] = `"2|3|4|3|6|3|8|3|10|3|12|3|14|3|16|17|18|19|20|21|22|3|24|25|26|27|28|29|30|31|32|33|25|26|27|37|38|30|31|41|42|25|26|27|46|47|30|31|50|51|25|26|54|55|56|57|58|59|60|31|62|63|25|26|66|31|68|69|25|26|72|73|74|19|76|19|78|19|80|19|82|31|84|85|25|26|88|31|90|91|25|26|94|95|96|97|25|26|100|31|102|103|25|26|106|107|31|109|110|25|26|113|31|115|116|25|26|119|31|121|122|25|26|125|126|31|128|129|130|131|132|133|106|135|136|3|138|25|26|141|142|31|144|145|25|26|148|149|31|151|152|25|26|155|156|157|156|159|156|161|31|163|164|25|26|167|168|31|170|171|25|26|174|175|31|177|178|179|180|181|182|183|3|185|25|26|188|189|31|191|192|193|25|26|196|197|31|199|200|201|202|203|204|205|206|207|181|209|3|211|181|213|3|215|181|217|3|219|220|221|19|223|19|225|19|227|228|229|230|19|232|19|234|19|236|19|238|19|240|241|242|243|19|245|19|247|19|249|19|251|3|253|254|19|256|19|258|259|3|261|3|263|181|265|266|3|268|3|270|3|272|3|274|3|276|3|278|3|280|3|282|3|284|3|286|3|288|289|290|106|292|293|3|295|181|297|298|141|300|301|302|303|19|305|19|307|308|309|310|311|3|313|181|315|316|317|318|106|320|321|322|3|324|325|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|181|342|196|344|345|3|347|3|349|181|351|3|353|181|265|3|357|181|265|3|361|181|265|3|365|25|367|368|369|141|371|19|373|374|25|367|377|369|379|380|3|382|181|384|54|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|3|411|181|413|3|415|181|413|3|288|289|290|106|292|293|3|426|181|428|181|430|181|432|181|434|181|436|181|438|439|181|441|442|3|444|73|74|19|76|19|78|19|80|19|82|54|456|457|458|459|460|461|462|463|181|465|466|3|468|141|470|471|181|473|474|181|476|477|181|479|480|106|482|483|181|465|486|181|479|489|3|491|181|465|3"`;
+exports[`The seeded data matches the snapshots The fragmentExcerptId field in the fragmentRefs data matches the snapshot 1`] = `"2|3|4|3|6|3|8|3|10|3|12|3|14|3|16|17|18|19|20|21|22|3|24|25|26|27|28|29|30|31|32|33|25|26|27|37|38|30|31|41|42|25|26|27|46|47|30|31|50|51|25|26|54|55|56|57|58|59|60|31|62|63|25|26|66|31|68|69|25|26|72|73|74|19|76|19|78|19|80|19|82|31|84|85|25|26|88|31|90|91|25|26|94|95|96|97|25|26|100|31|102|103|25|26|106|107|31|109|110|25|26|113|31|115|116|25|26|119|31|121|122|25|26|125|126|31|128|129|130|131|132|133|106|135|136|3|138|25|26|141|142|31|144|145|25|26|148|149|31|151|152|25|26|155|156|157|156|159|156|161|31|163|164|25|26|167|168|31|170|171|25|26|174|175|31|177|178|179|180|181|182|183|3|185|25|26|188|189|31|191|192|193|25|26|196|197|31|199|200|201|202|203|204|205|206|207|181|209|3|211|181|213|3|215|181|217|3|219|220|221|19|223|19|225|19|227|228|229|230|19|232|19|234|19|236|19|238|19|240|241|242|243|19|245|19|247|19|249|19|251|3|253|254|19|256|19|258|259|3|261|3|263|181|265|266|3|268|3|270|3|272|3|274|3|276|3|278|3|280|3|282|3|284|3|286|3|288|289|290|106|292|293|3|295|181|297|298|141|300|301|302|303|19|305|19|307|308|309|310|311|3|313|181|315|316|317|318|106|320|321|322|3|324|325|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|181|342|196|344|345|3|347|3|349|181|351|3|353|181|265|3|357|181|265|3|361|181|265|3|365|25|367|368|369|141|371|19|373|374|25|367|377|369|379|380|3|382|181|384|54|386|387|388|389|390|391|392|393|394|395|3|397|181|399|3|401|181|399|3|288|289|290|106|292|293|3|412|181|414|181|416|181|418|181|420|181|422|181|424|425|181|427|428|3|430|73|74|19|76|19|78|19|80|19|82|54|442|443|444|445|446|447|448|449|181|451|452|3|454|141|456|457|181|459|460|181|462|463|181|465|466|106|468|469|181|451|472|181|465|475|3|477|181|451|3"`;
 
 exports[`The seeded data matches the snapshots The fragmentRefId field in the responses data matches the snapshot 1`] = `""`;
 
@@ -14,9 +14,9 @@ exports[`The seeded data matches the snapshots The row IDs in the enrollments da
 
 exports[`The seeded data matches the snapshots The row IDs in the events data match the snapshot 1`] = `"2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162|163|164|165|166|167|168|169|170|171|172|173|174|175|176|177|178|179|180|181|182|183|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202|203|204|205|206|207|208|209|210|211|212|213|214|215|216|217|218|219|220|221|222|223|224|225|226|227|228|229|230|231|232|233|234|235|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284|285|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306|307|308|309|310|311|312|313|314|315|316|317|318|319|320|321|322|323|324|325|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349|350|351|352|353|354|355|356|357|358|359|360|361|362|363|364|365|366|367|368|369|370|371|372|373|374|375|376|377|378|379|380|381|382|383|384|385|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450|451|452|453|454|455|456|457|458|459|460|461|462|463|464|465|466|467|468|469|470|471|472|473|474|475|476|477|478|479|480|481|482|483|484|485|486|487|488|489|490|491|492|493|494|495|496|497|498|499|500|501|502|503|504|505|506|507|508|509|510|511|512|513|514|515|516|517|518|519|520|521|522|523|524|525|526|527|528|529|530|531|532|533|534|535|536|537|538|539|540|541|542|543|544|545|546|547|548|549|550|551|552|553|554|555|556|557|558|559|560|561|562|563|564|565|566|567|568|569|570|571|572|573|574|575|576|577|578|579|580|581|582|583|584|585|586|587|588|589|590|591|592|593|594|595|596|597|598|599|600|601|602|603|604|605|606|607|608|609|610|611|612|613|614|615|616|617|618|619|620|621|622|623|624|625|626|627|628|629|630|631|632|633|634|635|636|637|638|639|640|641|642|643|644|645|646|647|648|649|650|651|652|653|654|655|656|657|658|659|660|661|662|663|664|665|666|667|668|669|670|671|672|673|674|675|676|677|678|679|680|681|682|683|684|685|686|687|688|689|690|691|692|693|694|695|696|697|698|699|700|701|702|703|704|705|706|707|708|709|710|711|712|713|714|715|716|717|718|719|720|721|722|723|724|725|726|727|728|729|730|731|732|733|734|735|736|737|738|739|740|741|742|743|744|745|746|747|748|749|750|751|752|753|754|755|756|757|758|759|760|761|762|763|764|765|766|767|768|769|770|771|772|773|774|775|776|777|778|779|780|781|782|783|784|785|786|787|788|789|790|791|792|793|794|795|796|797|798|799|800|801|802|803|804|805|806|807|808|809|810|811|812|813|814|815|816|817|818|819|820|821|822|823|824|825|826|827|828|829|830|831|832|833|834|835|836|837|838|839|840|841|842|843|844|845"`;
 
-exports[`The seeded data matches the snapshots The row IDs in the fragmentExcerpts data match the snapshot 1`] = `"2|3|4|6|8|10|12|14|16|17|18|19|20|21|22|24|25|26|27|28|29|30|31|32|33|37|38|41|42|46|47|50|51|54|55|56|57|58|59|60|62|63|66|68|69|72|73|74|76|78|80|82|84|85|88|client|client-content|lb|lb-content|server1|server1-content|server2|server2-content|server3|server3-content|db|db-content|client-lb-http|server1-lb-http|server2-lb-http|server3-lb-http|server1-db-http|server2-db-http|server3-db-http|90|91|94|client|client-content|lb|lb-content|server1|server1-content|server2|server2-content|server3|server3-content|db|db-content|client-lb-http|server1-lb-http|server2-lb-http|server3-lb-http|server1-db-http|server2-db-http|server3-db-http|95|96|97|100|102|103|106|107|109|110|113|115|116|119|121|122|125|126|128|129|130|131|132|133|135|136|6abbcbcc47d3f663b0cfdd28bcf11a59|325608e49fd5dc95efe0981f7aa7bc21|ea4b68a9926d7af2e4a704f3b61e9c46|9cedcc1c121e8ff02f72e8423296a9d0|a04595ec8b610740520c56e0265ec5f0|da03d410d564268454656aa118752a06|b816ab5941ba7b93f32fce6e09ce7dbc|f940098e693780b48dbb1baa6e6666ed|8fba3e229da4ffbc8ad7ddb368a54a9a|a1e902297bb843cdd5b8784d807cc378|138|141|142|144|145|148|149|151|152|155|156|157|159|161|163|164|167|168|170|171|174|175|177|178|179|180|181|182|183|185|188|189|191|192|193|196|197|199|200|201|202|203|204|205|206|207|209|211|213|215|217|219|220|221|223|225|227|228|229|230|232|234|236|238|240|241|242|243|245|247|249|251|253|254|256|258|259|261|263|265|266|268|270|272|274|276|278|280|282|284|286|288|289|290|292|293|295|297|298|300|301|302|303|305|307|308|309|310|311|313|315|316|317|318|320|321|ae306892b3f9c1ed160fd7530634e164|244106ffdb88cc12b7df0eeaaa3dddc7|6cface426183659a4c366d6812f78b18|54d429133242298299b3cb1f2af4c7c4|322|324|325|sme|sme-content|files|files-content|instructor|instructor-content|cli|cli-content|api|api-content|viewer|viewer-content|learner|learner-content|sme-files-contribute|files-cli-compile|instructor-files-contribute|instructor-viewer-publish|viewer-learner-rendercontent|api-viewer-downloadcontent/uploaduserdata|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|342|344|345|347|349|351|353|357|361|365|367|368|369|371|373|374|377|379|380|382|384|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|411|413|415|426|428|430|432|434|436|438|439|441|442|444|456|457|458|459|460|461|462|463|465|466|468|470|471|473|474|476|477|479|480|482|483|486|489|491"`;
+exports[`The seeded data matches the snapshots The row IDs in the fragmentExcerpts data match the snapshot 1`] = `"2|3|4|6|8|10|12|14|16|17|18|19|20|21|22|24|25|26|27|28|29|30|31|32|33|37|38|41|42|46|47|50|51|54|55|56|57|58|59|60|62|63|66|68|69|72|73|74|76|78|80|82|84|85|88|client|client-content|lb|lb-content|server1|server1-content|server2|server2-content|server3|server3-content|db|db-content|client-lb-http|server1-lb-http|server2-lb-http|server3-lb-http|server1-db-http|server2-db-http|server3-db-http|90|91|94|client|client-content|lb|lb-content|server1|server1-content|server2|server2-content|server3|server3-content|db|db-content|client-lb-http|server1-lb-http|server2-lb-http|server3-lb-http|server1-db-http|server2-db-http|server3-db-http|95|96|97|100|102|103|106|107|109|110|113|115|116|119|121|122|125|126|128|129|130|131|132|133|135|136|6abbcbcc47d3f663b0cfdd28bcf11a59|325608e49fd5dc95efe0981f7aa7bc21|ea4b68a9926d7af2e4a704f3b61e9c46|9cedcc1c121e8ff02f72e8423296a9d0|a04595ec8b610740520c56e0265ec5f0|da03d410d564268454656aa118752a06|b816ab5941ba7b93f32fce6e09ce7dbc|f940098e693780b48dbb1baa6e6666ed|8fba3e229da4ffbc8ad7ddb368a54a9a|a1e902297bb843cdd5b8784d807cc378|138|141|142|144|145|148|149|151|152|155|156|157|159|161|163|164|167|168|170|171|174|175|177|178|179|180|181|182|183|185|188|189|191|192|193|196|197|199|200|201|202|203|204|205|206|207|209|211|213|215|217|219|220|221|223|225|227|228|229|230|232|234|236|238|240|241|242|243|245|247|249|251|253|254|256|258|259|261|263|265|266|268|270|272|274|276|278|280|282|284|286|288|289|290|292|293|295|297|298|300|301|302|303|305|307|308|309|310|311|313|315|316|317|318|320|321|ae306892b3f9c1ed160fd7530634e164|244106ffdb88cc12b7df0eeaaa3dddc7|6cface426183659a4c366d6812f78b18|54d429133242298299b3cb1f2af4c7c4|322|324|325|sme|sme-content|files|files-content|instructor|instructor-content|cli|cli-content|api|api-content|viewer|viewer-content|learner|learner-content|sme-files-contribute|files-cli-compile|instructor-files-contribute|instructor-viewer-publish|viewer-learner-rendercontent|api-viewer-downloadcontent/uploaduserdata|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|342|344|345|347|349|351|353|357|361|365|367|368|369|371|373|374|377|379|380|382|384|386|387|388|389|390|391|392|393|394|395|397|399|401|412|414|416|418|420|422|424|425|427|428|430|442|443|444|445|446|447|448|449|451|452|454|456|457|459|460|462|463|465|466|468|469|472|475|477"`;
 
-exports[`The seeded data matches the snapshots The row IDs in the fragmentRefs data match the snapshot 1`] = `"2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162|163|164|165|166|167|168|169|170|171|172|173|174|175|176|177|178|179|180|181|182|183|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202|203|204|205|206|207|208|209|210|211|212|213|214|215|216|217|218|219|220|221|222|223|224|225|226|227|228|229|230|231|232|233|234|235|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284|285|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306|307|308|309|310|311|312|313|314|315|316|317|318|319|320|321|322|323|324|325|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349|350|351|352|353|354|355|356|357|358|359|360|361|362|363|364|365|366|367|368|369|370|371|372|373|374|375|376|377|378|379|380|381|382|383|384|385|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450|451|452|453|454|455|456|457|458|459|460|461|462|463|464|465|466|467|468|469|470|471|472|473|474|475|476|477|478|479|480|481|482|483|484|485|486|487|488|489|490|491|492|493|494"`;
+exports[`The seeded data matches the snapshots The row IDs in the fragmentRefs data match the snapshot 1`] = `"2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162|163|164|165|166|167|168|169|170|171|172|173|174|175|176|177|178|179|180|181|182|183|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202|203|204|205|206|207|208|209|210|211|212|213|214|215|216|217|218|219|220|221|222|223|224|225|226|227|228|229|230|231|232|233|234|235|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284|285|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306|307|308|309|310|311|312|313|314|315|316|317|318|319|320|321|322|323|324|325|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349|350|351|352|353|354|355|356|357|358|359|360|361|362|363|364|365|366|367|368|369|370|371|372|373|374|375|376|377|378|379|380|381|382|383|384|385|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450|451|452|453|454|455|456|457|458|459|460|461|462|463|464|465|466|467|468|469|470|471|472|473|474|475|476|477|478|479|480"`;
 
 exports[`The seeded data matches the snapshots The row IDs in the responses data match the snapshot 1`] = `"2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52|53|54|55|56|57|58|59|60|61|62|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121|122|123|124|125|126|127|128|129|130|131|132|133|134|135|136|137|138|139|140|141|142|143|144|145|146|147|148|149|150|151|152|153|154|155|156|157|158|159|160|161|162|163|164|165|166|167|168|169|170|171|172|173|174|175|176|177|178|179|180|181|182|183|184|185|186|187|188|189|190|191|192|193|194|195|196|197|198|199|200|201|202|203|204|205|206|207|208|209|210|211|212|213|214|215|216|217|218|219|220|221|222|223|224|225|226|227|228|229|230|231|232|233|234|235|236|237|238|239|240|241|242|243|244|245|246|247|248|249|250|251|252|253|254|255|256|257|258|259|260|261|262|263|264|265|266|267|268|269|270|271|272|273|274|275|276|277|278|279|280|281|282|283|284|285|286|287|288|289|290|291|292|293|294|295|296|297|298|299|300|301|302|303|304|305|306|307|308|309|310|311|312|313|314|315|316|317|318|319|320|321|322|323|324|325|326|327|328|329|330|331|332|333|334|335|336|337|338|339|340|341|342|343|344|345|346|347|348|349|350|351|352|353|354|355|356|357|358|359|360|361|362|363|364|365|366|367|368|369|370|371|372|373|374|375|376|377|378|379|380|381|382|383|384|385|386|387|388|389|390|391|392|393|394|395|396|397|398|399|400|401|402|403|404|405|406|407|408|409|410|411|412|413|414|415|416|417|418|419|420|421|422|423|424|425|426|427|428|429|430|431|432|433|434|435|436|437|438|439|440|441|442|443|444|445|446|447|448|449|450|451|452|453|454|455|456|457|458|459|460|461|462|463|464|465|466|467|468|469|470|471|472|473|474|475|476|477|478|479|480|481|482|483|484|485|486|487|488|489|490|491|492|493|494|495|496|497|498|499|500|501|502|503|504|505|506|507|508|509|510|511|512|513|514|515|516|517|518|519|520|521|522|523|524|525|526|527|528|529|530|531|532|533|534|535|536|537|538|539|540|541|542|543|544|545|546|547|548|549|550|551|552"`;
 
@@ -1333,7 +1333,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
       "data-at-cloudco-vseed_customization-page_mode-level",
       "data-at-cloudco-vseed_customization-page_sql-level",
     ],
-    "digest": "e686190d5edf969db59b43d5e55bb43c",
+    "digest": "db8f5ec80466c79f33e20816ec13b52d",
     "displayConditions": [
       [
         {
@@ -2009,7 +2009,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "bc69e4701077e0236f8d27f24a42b46d",
+    "digest": "bcde6abd4cd34d1bd14f6cef544e8f27",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -2233,7 +2233,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
       "intro-to-boombox-lms-vseed_create-a-topic_f1",
       "intro-to-boombox-lms-vseed_create-a-topic_f2",
       "intro-to-boombox-lms-vseed_create-a-topic_f4",
-      "intro-to-boombox-lms-vseed_create-a-topic_f29",
+      "intro-to-boombox-lms-vseed_create-a-topic_f15",
     ],
     "completionConditions": [
       {
@@ -2249,7 +2249,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
     "contentMode": "tutorial",
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
-    "digest": "81705f9a2f37196a7740a91ecc0cf966",
+    "digest": "f7d417fcd7a649ead4566da53699881a",
     "displayConditions": [],
     "externalDependencyUris": [],
     "id": "[SANITIZED]",
@@ -24479,13 +24479,13 @@ This is an example warning.
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#116;&#x65;&#99;&#104;&#x6c;&#x65;&#97;&#114;&#x6e;&#x69;&#110;&#x67;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#116;&#x65;&#99;&#104;&#x6c;&#x65;&#97;&#114;&#x6e;&#x69;&#110;&#x67;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a>.</p>
+    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#x74;&#101;&#x63;&#x68;&#108;&#101;&#x61;&#114;&#110;&#x69;&#x6e;&#103;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;">&#x74;&#101;&#x63;&#x68;&#108;&#101;&#x61;&#114;&#110;&#x69;&#x6e;&#103;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a>.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "nRtgW6Mfv5tJ13+EWP76VV4R5FoQ/qCGgEoNfG1v9zY=",
+    "digest": "Fb0lNpHRqps+031xk2J7YJFVdgBkLxu6ji8gaTq1EW8=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -25256,7 +25256,7 @@ Teaching teams want the administrative features of an LMS, but subject-matter ex
           "data": {
             "col": "2",
             "id": "[SANITIZED]",
-            "label": "Boombox CLI",
+            "label": "VS Code extension",
             "parent": "cli",
             "row": "2",
           },
@@ -25430,7 +25430,7 @@ Teaching teams want the administrative features of an LMS, but subject-matter ex
           "selector": "#cli-content",
           "style": {
             "backgroundFit": "contain",
-            "backgroundImage": "https://api.iconify.design/heroicons/command-line-20-solid.svg",
+            "backgroundImage": "https://api.iconify.design/logos/visual-studio-code.svg",
           },
         },
         {
@@ -25456,7 +25456,7 @@ Teaching teams want the administrative features of an LMS, but subject-matter ex
         },
       ],
     },
-    "digest": "lfWzYDJ2ruUmglCTOU/bPuz+vcFpY9X7/PA8WSU8lz8=",
+    "digest": "dtkbK5oVZwDvQI/1h1b+jDQgAhRK5fO2LLSwgG/ezSQ=",
     "id": "[SANITIZED]",
     "isStateful": true,
     "updatedAt": "[SANITIZED]",
@@ -25543,23 +25543,23 @@ Teaching teams want the administrative features of an LMS, but subject-matter ex
     "contents": "",
     "createdAt": "[SANITIZED]",
     "data": {
-      "title": "3. The CLI compiles content that can be uploaded via the viewer app",
+      "title": "3. The VS Code extension compiles content that can be uploaded via the viewer app",
     },
-    "digest": "j0jfiNBKdVuqdXciVsHv1N2u0tDNenkcoEtL6JMS+5E=",
+    "digest": "MTeacQD3mX65wN9IwvWTfFWCLmyPjL8GRV3hj8GZQ8U=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>Boombox CLI converts the files into data, and puts the data on the user&#39;s clipboard for easy uploading.</p>
+    "contents": "<p>The extension converts the files into data, and puts the data on the user&#39;s clipboard for easy uploading.</p>
 <p>The user can paste that data into the dropzone located at /publish in the viewer app.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "aArxJWsbhVIn8/Vh3/5CyLRDoIhKFslvU174Up1cffM=",
+    "digest": "Glj0G4COKcjVBoccr7GcjbpBV8kIYpYIV7zAisUvPTo=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -25961,156 +25961,23 @@ a --> b --> c
     "contents": "",
     "createdAt": "[SANITIZED]",
     "data": {
-      "title": "Install the Boombox CLI",
+      "title": "Install the b5x VS Code extension",
     },
-    "digest": "eMdsNwz8h0GvJL49/P5xvn/PFoYVgU5iP7uXpn2J6/w=",
+    "digest": "1jSMeagtsif3a1YmqXu07MftU5StDmTccFYOKXyX7pI=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>The Boombox CLI helps you create and publish content.</p>
-<p>Install the Boombox CLI on your computer:</p>
+    "contents": "<p>This extension lets you create and compile content inside of VS Code.</p>
+<p>There would be a link here, but right now the extension is only available locally.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "4dMjxI70rWABvu8CoasowXrUTOV1g3pa3oRxeObNV0g=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "CodeBlock",
-    "contents": "npm install -g @b5x/cli",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "language": "text",
-    },
-    "digest": "g+iSxtmAd1zns2emQKcFmjuxOUW4gBLt3OT2P2PDDBI=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>Verify that the installation worked:</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "vQFcdV+FVdmknJM5wSbQVseIYOLLg9bc5E5wo7fJUmY=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "CodeBlock",
-    "contents": "b5x help",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "language": "text",
-    },
-    "digest": "4uVd8APBlrMcBkZlTwsiuvoobRcN4niWBiJjzY2jLFU=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>You should see a list of available <code>b5x</code> commands.</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "dVVGdMibafdHYZ7MmLXJ2zkd5Aa/m1dJpguNGB8FsEc=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "Step",
-    "contents": "",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "title": "Install the Boombox VSCode extension",
-    },
-    "digest": "AtssWQzZEhrbLQlru/aCYdI48/uskXHS68updrIaZjk=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>This doesn&#39;t exist yet, but it will. For now, just mark this step as done.</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "Cg7JN2JAJO58BFhgqx+kK/YnxLmNsryyfnyf2Gp49Lg=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "Step",
-    "contents": "",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "title": "Log into the Boombox CLI",
-    },
-    "digest": "jjCEQuCrFCO3oJ0hNdZjqXfTsx63Rj70ikfkZjnU4ic=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>On the command line, initialize the login flow:</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "TTLS1Kna6oAPLdsyZ0fauX+hiEwc2oG559m8/rXRaSs=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "CodeBlock",
-    "contents": "b5x login",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "language": "text",
-    },
-    "digest": "3ZtDoo1fC8vjjuwXQYmztFXKZnDZvmUPEgbkjKERbbg=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>You&#39;ll be prompted for a key.</p>
-<p>To generate the key:</p>
-<ol>
-<li>Go to your user profile by clicking on the person icon in the top left menu.</li>
-<li>Click <strong>Generate key</strong> button.</li>
-<li>Click <strong>Copy key</strong>.</li>
-</ol>
-<p>Paste the key into your terminal and press Enter.</p>
-<p>You should see a message that you have logged in successfully.</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "7grARDBQwVVUE5yFF2VuvAWX8bJ3ELiyDx7rrNdOdY4=",
+    "digest": "2ETJl6EAvKWuAMFtK3Z8+dydYaIG4ugyw1z3VcxXn3M=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -26129,44 +25996,20 @@ a --> b --> c
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>Navigate to the directory where you&#39;d like your project to be created. <code>b5x</code> will create the entire project for you, including the project folder.</p>
-<p>From the desired parent directory, initialize your topic:</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "/+L2Ri8vzcLHNFLXM0yQ3e9yTM7xtdxZQCKKwCXdymw=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "CodeBlock",
-    "contents": "b5x init",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "language": "text",
-    },
-    "digest": "un0Wjlb57dI28+jjWPqQaYmEggmb8ZnO16U8ki2sQmE=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>You&#39;ll be asked to provide the following information:</p>
+    "contents": "<p>In VS Code, navigate to the directory where you&#39;d like your topic to be created. (The <code>b5x</code> extension will create the entire topic for you, including its folder.)</p>
+<p>Right-click on the file explorer pane and choose &quot;Create new Boombox LMS topic&quot;. Follow the provided prompts to configure your topic with an identifier (used in URLs), title, etc.</p>
+<p>You&#39;ll know this step has succeeded if ...</p>
 <ul>
-<li>Your topic&#39;s identifier, used for its URL. For this one, let&#39;s use <code>my-demo-topic</code>.</li>
-<li>Your topic&#39;s title. Keep it short and sweet.</li>
-<li>Your topic&#39;s subtitle. This is a sentence summarizing what your topic is about.</li>
+<li>A new folder has been created in the VS Code explorer view.</li>
+<li>You see a &quot;Topic folder created&quot; notification.</li>
+<li>The new folder contains two subfolders, <code>documents</code> and <code>images</code>, and a <code>topic-config.yaml</code> file.</li>
 </ul>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "+OXAtiaevyXFmAFjX8w6rHw8BScwoUgQLeLfwdqri8w=",
+    "digest": "6Z2WZ00jDbmulaz9PFma3FmrEr+0qGBentGafVlIk2A=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -26185,38 +26028,39 @@ a --> b --> c
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>To change your topic&#39;s documents, open the topic folder in VSCode:</p>
+    "contents": "<p>Make some small changes to the contents of the <code>documents</code> folder and save your changes.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "D+W9fi9W0+QQiEMXNLosXAkXbpN1Kux1S2TAsvzk3/8=",
+    "digest": "mHHsZwhtR2wBUXX17zS3CGJUeEMPgjcqrLSZiGfFcLY=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
   },
   {
-    "contentType": "CodeBlock",
-    "contents": "code my-demo-topic",
+    "contentType": "Step",
+    "contents": "",
     "createdAt": "[SANITIZED]",
     "data": {
-      "language": "text",
+      "title": "Compile your topic data",
     },
-    "digest": "AhVkU86SlMnRsUWRpYF4hsDZ7aIXiUoOfUGAun9W+BQ=",
+    "digest": "gCM8kiKgbOKCXUmEIz6B58NwGChGQZBt7q+A5lRHMaE=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>Spend some time exploring the contents of this folder, especially <code>my-demo-topic/documents</code>. Make some small changes to the document files.</p>
+    "contents": "<p>In VS Code, right-click the topic folder and choose &quot;Build Boombox LMS topic data.&quot;</p>
+<p>If this step succeeds, you&#39;ll see a notification that the topic data has been placed on your clipboard.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "1wxJ9LIOtp2ye8xhasl3xFsZQPIe2T/8BoGAGTisCR4=",
+    "digest": "oxRQUVpnKwzIrak3cLDjFSYaZ1ZgU0RNJHd0gCD1ko0=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -26235,38 +26079,14 @@ a --> b --> c
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>It&#39;s time to push your topic from your computer to the Boombox server in the cloud:</p>
+    "contents": "<p>Navigate to <a href="/publish">the Publish page</a>, click the dropzone, and paste your data.</p>
+<p>You&#39;ll see some options for viewing your topic from there.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "+sEuT5oZ/B1ufC2xUK/1jkEXodsjWzxS+/ja2C5nV1E=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "CodeBlock",
-    "contents": "b5x publish my-demo-topic",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "language": "text",
-    },
-    "digest": "jaxBGAqI6JJwSZfavMLryAj1McK5W45OhAsbKBSpj6g=",
-    "id": "[SANITIZED]",
-    "isStateful": false,
-    "updatedAt": "[SANITIZED]",
-  },
-  {
-    "contentType": "HtmlContent",
-    "contents": "<p>You&#39;ll receive a URL you can use to view your topic. Congrats, you&#39;re now a published Boombox author!</p>
-",
-    "createdAt": "[SANITIZED]",
-    "data": {
-      "isTemplated": false,
-    },
-    "digest": "KebizkEKeFqB3w52TsT1UyMWCjFr6MjWbfZkhwecXT0=",
+    "digest": "Re+AihBZbeuZ1Drbq/mbfzAMVEeWHurOBf96jk14K6M=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
@@ -32802,11 +32622,10 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
   {
     "childUris": [
       "intro-to-boombox-lms-vseed_create-a-topic_f5",
+      "intro-to-boombox-lms-vseed_create-a-topic_f7",
+      "intro-to-boombox-lms-vseed_create-a-topic_f9",
       "intro-to-boombox-lms-vseed_create-a-topic_f11",
       "intro-to-boombox-lms-vseed_create-a-topic_f13",
-      "intro-to-boombox-lms-vseed_create-a-topic_f17",
-      "intro-to-boombox-lms-vseed_create-a-topic_f21",
-      "intro-to-boombox-lms-vseed_create-a-topic_f25",
     ],
     "createdAt": "[SANITIZED]",
     "dependencyUris": [
@@ -32832,10 +32651,6 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
   {
     "childUris": [
       "intro-to-boombox-lms-vseed_create-a-topic_f6",
-      "intro-to-boombox-lms-vseed_create-a-topic_f7",
-      "intro-to-boombox-lms-vseed_create-a-topic_f8",
-      "intro-to-boombox-lms-vseed_create-a-topic_f9",
-      "intro-to-boombox-lms-vseed_create-a-topic_f10",
     ],
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
@@ -32860,7 +32675,9 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
     "uri": "intro-to-boombox-lms-vseed_create-a-topic_f6",
   },
   {
-    "childUris": [],
+    "childUris": [
+      "intro-to-boombox-lms-vseed_create-a-topic_f8",
+    ],
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
     "displayConditions": [],
@@ -32884,7 +32701,9 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
     "uri": "intro-to-boombox-lms-vseed_create-a-topic_f8",
   },
   {
-    "childUris": [],
+    "childUris": [
+      "intro-to-boombox-lms-vseed_create-a-topic_f10",
+    ],
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
     "displayConditions": [],
@@ -32936,8 +32755,6 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
   {
     "childUris": [
       "intro-to-boombox-lms-vseed_create-a-topic_f14",
-      "intro-to-boombox-lms-vseed_create-a-topic_f15",
-      "intro-to-boombox-lms-vseed_create-a-topic_f16",
     ],
     "createdAt": "[SANITIZED]",
     "dependencyUris": [],
@@ -32964,186 +32781,6 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
   {
     "childUris": [],
     "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f15",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f16",
-  },
-  {
-    "childUris": [
-      "intro-to-boombox-lms-vseed_create-a-topic_f18",
-      "intro-to-boombox-lms-vseed_create-a-topic_f19",
-      "intro-to-boombox-lms-vseed_create-a-topic_f20",
-    ],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f17",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f18",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f19",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f20",
-  },
-  {
-    "childUris": [
-      "intro-to-boombox-lms-vseed_create-a-topic_f22",
-      "intro-to-boombox-lms-vseed_create-a-topic_f23",
-      "intro-to-boombox-lms-vseed_create-a-topic_f24",
-    ],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f21",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f22",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f23",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f24",
-  },
-  {
-    "childUris": [
-      "intro-to-boombox-lms-vseed_create-a-topic_f26",
-      "intro-to-boombox-lms-vseed_create-a-topic_f27",
-      "intro-to-boombox-lms-vseed_create-a-topic_f28",
-    ],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f25",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f26",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f27",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
-    "dependencyUris": [],
-    "displayConditions": [],
-    "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-    "fragmentExcerptId": "[SANITIZED]",
-    "id": "[SANITIZED]",
-    "isRequired": false,
-    "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f28",
-  },
-  {
-    "childUris": [],
-    "createdAt": "[SANITIZED]",
     "dependencyUris": [
       "intro-to-boombox-lms-vseed_create-a-topic_f4",
     ],
@@ -33162,7 +32799,7 @@ exports[`The seeded data matches the snapshots The sanitized fragmentRefs data m
     "id": "[SANITIZED]",
     "isRequired": false,
     "updatedAt": "[SANITIZED]",
-    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f29",
+    "uri": "intro-to-boombox-lms-vseed_create-a-topic_f15",
   },
   {
     "childUris": [],

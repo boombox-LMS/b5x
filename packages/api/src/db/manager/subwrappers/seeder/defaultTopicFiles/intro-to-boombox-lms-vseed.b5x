@@ -862,7 +862,7 @@
                     "intro-to-boombox-lms-vseed_how-boombox-works_f22",
                     "intro-to-boombox-lms-vseed_how-boombox-works_f23"
                 ],
-                "digest": "bc69e4701077e0236f8d27f24a42b46d",
+                "digest": "bcde6abd4cd34d1bd14f6cef544e8f27",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -979,7 +979,7 @@
                                         "id": "cli-content",
                                         "col": "2",
                                         "row": "2",
-                                        "label": "Boombox CLI",
+                                        "label": "VS Code extension",
                                         "parent": "cli"
                                     },
                                     "classes": [
@@ -1153,7 +1153,7 @@
                                 {
                                     "selector": "#cli-content",
                                     "style": {
-                                        "backgroundImage": "https://api.iconify.design/heroicons/command-line-20-solid.svg",
+                                        "backgroundImage": "https://api.iconify.design/logos/visual-studio-code.svg",
                                         "backgroundFit": "contain"
                                     }
                                 },
@@ -1185,7 +1185,7 @@
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "a5094370eba6394269a6609b2b51e5b9",
+                        "digest": "8d59b214b26f761e77a4880de719d1c2",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f3": {
@@ -1220,7 +1220,7 @@
                             "intro-to-boombox-lms-vseed_how-boombox-works_f15"
                         ],
                         "contents": "",
-                        "digest": "8df04222c28e03f9e172fb785c6a9845",
+                        "digest": "2982703d2f9e41f7d5d3e7bf97bcf868",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f5": {
@@ -1292,7 +1292,7 @@
                         "documentUri": "intro-to-boombox-lms-vseed_how-boombox-works",
                         "displayConditions": [],
                         "data": {
-                            "title": "3. The CLI compiles content that can be uploaded via the viewer app"
+                            "title": "3. The VS Code extension compiles content that can be uploaded via the viewer app"
                         },
                         "contentType": "AccordionItem",
                         "isStateful": false,
@@ -1301,7 +1301,7 @@
                             "intro-to-boombox-lms-vseed_how-boombox-works_f10"
                         ],
                         "contents": "",
-                        "digest": "1b49dfd39ed96193cdba2c6654f995d1",
+                        "digest": "c48868823764c90c4e50e9b49262586b",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f10": {
@@ -1315,8 +1315,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>Boombox CLI converts the files into data, and puts the data on the user&#39;s clipboard for easy uploading.</p>\n<p>The user can paste that data into the dropzone located at /publish in the viewer app.</p>\n",
-                        "digest": "6f19a367cf135239390939bdb80478c3",
+                        "contents": "<p>The extension converts the files into data, and puts the data on the user&#39;s clipboard for easy uploading.</p>\n<p>The user can paste that data into the dropzone located at /publish in the viewer app.</p>\n",
+                        "digest": "210abb8b77bd5f6b396a6f4d4f97331f",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f11": {
@@ -2379,9 +2379,9 @@
                     "intro-to-boombox-lms-vseed_create-a-topic_f1",
                     "intro-to-boombox-lms-vseed_create-a-topic_f2",
                     "intro-to-boombox-lms-vseed_create-a-topic_f4",
-                    "intro-to-boombox-lms-vseed_create-a-topic_f29"
+                    "intro-to-boombox-lms-vseed_create-a-topic_f15"
                 ],
-                "digest": "81705f9a2f37196a7740a91ecc0cf966",
+                "digest": "f7d417fcd7a649ead4566da53699881a",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -2462,14 +2462,13 @@
                         "isRequired": true,
                         "childUris": [
                             "intro-to-boombox-lms-vseed_create-a-topic_f5",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f7",
+                            "intro-to-boombox-lms-vseed_create-a-topic_f9",
                             "intro-to-boombox-lms-vseed_create-a-topic_f11",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f13",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f17",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f21",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f25"
+                            "intro-to-boombox-lms-vseed_create-a-topic_f13"
                         ],
                         "contents": "",
-                        "digest": "dfbba98082670a117d73d1951b5692f6",
+                        "digest": "e9772da70e5418761c2a17016c734105",
                         "dependencyUris": [
                             "intro-to-boombox-lms-vseed_create-a-topic_f2"
                         ]
@@ -2479,20 +2478,16 @@
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [],
                         "data": {
-                            "title": "Install the Boombox CLI"
+                            "title": "Install the b5x VS Code extension"
                         },
                         "contentType": "Step",
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "intro-to-boombox-lms-vseed_create-a-topic_f6",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f7",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f8",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f9",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f10"
+                            "intro-to-boombox-lms-vseed_create-a-topic_f6"
                         ],
                         "contents": "",
-                        "digest": "5f536bcc9fec00b029e8826ceae69879",
+                        "digest": "3ef5bf987663ec7f7a1d5b0192ae5318",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f6": {
@@ -2506,8 +2501,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>The Boombox CLI helps you create and publish content.</p>\n<p>Install the Boombox CLI on your computer:</p>\n",
-                        "digest": "6c638beac9f61f6868249d871e8d5c4c",
+                        "contents": "<p>This extension lets you create and compile content inside of VS Code.</p>\n<p>There would be a link here, but right now the extension is only available locally.</p>\n",
+                        "digest": "3f837d4c52e509c32c051f50a53218c6",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f7": {
@@ -2515,14 +2510,16 @@
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [],
                         "data": {
-                            "language": "text"
+                            "title": "Create your new topic"
                         },
-                        "contentType": "CodeBlock",
+                        "contentType": "Step",
                         "isStateful": false,
                         "isRequired": false,
-                        "childUris": [],
-                        "contents": "npm install -g @b5x/cli",
-                        "digest": "9be0bc2e86c1a44ff3f034f217ddab0f",
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f8"
+                        ],
+                        "contents": "",
+                        "digest": "2dfc3b94c1facf2f48212fa69a72f06c",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f8": {
@@ -2536,8 +2533,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>Verify that the installation worked:</p>\n",
-                        "digest": "e8fbe0fa268c7cfd948e5eaa6eab9682",
+                        "contents": "<p>In VS Code, navigate to the directory where you&#39;d like your topic to be created. (The <code>b5x</code> extension will create the entire topic for you, including its folder.)</p>\n<p>Right-click on the file explorer pane and choose &quot;Create new Boombox LMS topic&quot;. Follow the provided prompts to configure your topic with an identifier (used in URLs), title, etc.</p>\n<p>You&#39;ll know this step has succeeded if ...</p>\n<ul>\n<li>A new folder has been created in the VS Code explorer view.</li>\n<li>You see a &quot;Topic folder created&quot; notification.</li>\n<li>The new folder contains two subfolders, <code>documents</code> and <code>images</code>, and a <code>topic-config.yaml</code> file.</li>\n</ul>\n",
+                        "digest": "4adb18644d3a5c83022bb2bbc4c0c341",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f9": {
@@ -2545,14 +2542,16 @@
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [],
                         "data": {
-                            "language": "text"
+                            "title": "Edit your topic's documents"
                         },
-                        "contentType": "CodeBlock",
+                        "contentType": "Step",
                         "isStateful": false,
                         "isRequired": false,
-                        "childUris": [],
-                        "contents": "b5x help",
-                        "digest": "cdabec060c5254b853623f189af83d38",
+                        "childUris": [
+                            "intro-to-boombox-lms-vseed_create-a-topic_f10"
+                        ],
+                        "contents": "",
+                        "digest": "123d0857a084047c5a5e9ec8214b91a7",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f10": {
@@ -2566,8 +2565,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>You should see a list of available <code>b5x</code> commands.</p>\n",
-                        "digest": "41a33982e81d28e6ebeb94612c5389c3",
+                        "contents": "<p>Make some small changes to the contents of the <code>documents</code> folder and save your changes.</p>\n",
+                        "digest": "a4c41aed12f8faf9aa93baedd5d9bb2d",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f11": {
@@ -2575,7 +2574,7 @@
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [],
                         "data": {
-                            "title": "Install the Boombox VSCode extension"
+                            "title": "Compile your topic data"
                         },
                         "contentType": "Step",
                         "isStateful": false,
@@ -2584,7 +2583,7 @@
                             "intro-to-boombox-lms-vseed_create-a-topic_f12"
                         ],
                         "contents": "",
-                        "digest": "605dba6fd6e97ff48473e64d9a90a854",
+                        "digest": "3d06e7371d5a1be4f9fa546f2444df6a",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f12": {
@@ -2598,8 +2597,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>This doesn&#39;t exist yet, but it will. For now, just mark this step as done.</p>\n",
-                        "digest": "d9a95b651f2eff72ed6bab6ea0f895a3",
+                        "contents": "<p>In VS Code, right-click the topic folder and choose &quot;Build Boombox LMS topic data.&quot;</p>\n<p>If this step succeeds, you&#39;ll see a notification that the topic data has been placed on your clipboard.</p>\n",
+                        "digest": "e3c2d74bc484cd2de44a08bbf968f135",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f13": {
@@ -2607,18 +2606,16 @@
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [],
                         "data": {
-                            "title": "Log into the Boombox CLI"
+                            "title": "Publish and view your topic"
                         },
                         "contentType": "Step",
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "intro-to-boombox-lms-vseed_create-a-topic_f14",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f15",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f16"
+                            "intro-to-boombox-lms-vseed_create-a-topic_f14"
                         ],
                         "contents": "",
-                        "digest": "bb485bb75d9c23e8ee84a7992ccebb53",
+                        "digest": "2fe0454eff4082e532ac1308c46353b4",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f14": {
@@ -2632,234 +2629,12 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>On the command line, initialize the login flow:</p>\n",
-                        "digest": "b1d893998f1b8afc85b9106e79ba4dac",
+                        "contents": "<p>Navigate to <a href=\"/publish\">the Publish page</a>, click the dropzone, and paste your data.</p>\n<p>You&#39;ll see some options for viewing your topic from there.</p>\n",
+                        "digest": "d029e1d9ef47d990696be868287bef30",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_create-a-topic_f15": {
                         "uri": "intro-to-boombox-lms-vseed_create-a-topic_f15",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "language": "text"
-                        },
-                        "contentType": "CodeBlock",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "b5x login",
-                        "digest": "15017fd5785d0d4f910e0c9a148fb59c",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f16": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f16",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>You&#39;ll be prompted for a key.</p>\n<p>To generate the key:</p>\n<ol>\n<li>Go to your user profile by clicking on the person icon in the top left menu.</li>\n<li>Click <strong>Generate key</strong> button.</li>\n<li>Click <strong>Copy key</strong>.</li>\n</ol>\n<p>Paste the key into your terminal and press Enter.</p>\n<p>You should see a message that you have logged in successfully.</p>\n",
-                        "digest": "489274a7a7ccad32d3dde5a436a9a180",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f17": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f17",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "title": "Create your new topic"
-                        },
-                        "contentType": "Step",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [
-                            "intro-to-boombox-lms-vseed_create-a-topic_f18",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f19",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f20"
-                        ],
-                        "contents": "",
-                        "digest": "8dd4aa4c561b23c93e026f992802fc12",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f18": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f18",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>Navigate to the directory where you&#39;d like your project to be created. <code>b5x</code> will create the entire project for you, including the project folder.</p>\n<p>From the desired parent directory, initialize your topic:</p>\n",
-                        "digest": "44d3b12c5bd07205f5d2871cb95428fe",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f19": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f19",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "language": "text"
-                        },
-                        "contentType": "CodeBlock",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "b5x init",
-                        "digest": "1bc0979ef6ad23d58742ca5c9c987373",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f20": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f20",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>You&#39;ll be asked to provide the following information:</p>\n<ul>\n<li>Your topic&#39;s identifier, used for its URL. For this one, let&#39;s use <code>my-demo-topic</code>.</li>\n<li>Your topic&#39;s title. Keep it short and sweet.</li>\n<li>Your topic&#39;s subtitle. This is a sentence summarizing what your topic is about.</li>\n</ul>\n",
-                        "digest": "41bd36b0fc7fb68f357663c5d1436437",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f21": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f21",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "title": "Edit your topic's documents"
-                        },
-                        "contentType": "Step",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [
-                            "intro-to-boombox-lms-vseed_create-a-topic_f22",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f23",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f24"
-                        ],
-                        "contents": "",
-                        "digest": "60405a4a6e279f091baae48a77310901",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f22": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f22",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>To change your topic&#39;s documents, open the topic folder in VSCode:</p>\n",
-                        "digest": "6f94b38131664cbe64fb0ce02a9d704f",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f23": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f23",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "language": "text"
-                        },
-                        "contentType": "CodeBlock",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "code my-demo-topic",
-                        "digest": "ce8cfa1954e3bc28eb79a5aebfb78164",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f24": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f24",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>Spend some time exploring the contents of this folder, especially <code>my-demo-topic/documents</code>. Make some small changes to the document files.</p>\n",
-                        "digest": "33e8abd93f64fd2219201893645a00fd",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f25": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f25",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "title": "Publish and view your topic"
-                        },
-                        "contentType": "Step",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [
-                            "intro-to-boombox-lms-vseed_create-a-topic_f26",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f27",
-                            "intro-to-boombox-lms-vseed_create-a-topic_f28"
-                        ],
-                        "contents": "",
-                        "digest": "5a475e424ac9e5b9e696d75d9c1e4614",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f26": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f26",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>It&#39;s time to push your topic from your computer to the Boombox server in the cloud:</p>\n",
-                        "digest": "ecc16874c05975cce9bec35d6124af5c",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f27": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f27",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "language": "text"
-                        },
-                        "contentType": "CodeBlock",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "b5x publish my-demo-topic",
-                        "digest": "e13b5bcd2b2e8d5e574487f22cfb5d9e",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f28": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f28",
-                        "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p>You&#39;ll receive a URL you can use to view your topic. Congrats, you&#39;re now a published Boombox author!</p>\n",
-                        "digest": "e76eb8c27a0886440dbca83dfe4123fb",
-                        "dependencyUris": []
-                    },
-                    "intro-to-boombox-lms-vseed_create-a-topic_f29": {
-                        "uri": "intro-to-boombox-lms-vseed_create-a-topic_f29",
                         "documentUri": "intro-to-boombox-lms-vseed_create-a-topic",
                         "displayConditions": [
                             {
