@@ -54,7 +54,6 @@
       "<choice value=${3:CHOICE_VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
       "<choice value=${5:CHOICE_VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
       "<choice value=${7:CHOICE_VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:CHOICE_VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
       "</single-select-question>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
@@ -68,8 +67,15 @@
       "<choice value=${3:CHOICE_VALUE}>${4:CONTENTS_TO_DISPLAY}</choice>",
       "<choice value=${5:CHOICE_VALUE}>${6:CONTENTS_TO_DISPLAY}</choice>",
       "<choice value=${7:CHOICE_VALUE}>${8:CONTENTS_TO_DISPLAY}</choice>",
-      "<choice value=${9:CHOICE_VALUE}>${10:CONTENTS_TO_DISPLAY}</choice>",
       "</multi-select-question>"
+    ],
+    "description": "A template for asking the learner a question that could be answered in a few words"
+  },
+  "Choice": {
+    "scope": "markdown",
+    "prefix": ["choice"],
+    "body": [
+      "<choice value=${1:CHOICE_VALUE}>${2:CONTENTS_TO_DISPLAY}</choice>"
     ],
     "description": "A template for asking the learner a question that could be answered in a few words"
   },
