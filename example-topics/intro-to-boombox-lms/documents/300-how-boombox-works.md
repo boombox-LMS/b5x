@@ -19,7 +19,7 @@ Boombox isn't just one app -- it's a set of tools. This section will help you be
   <line to=viewer label=publish arrow=target>
 </item>
 
-<item id=cli shape=heroicons:command-line-20-solid label='Boombox CLI' col=2 row=2 />
+<item id=cli shape=logos:visual-studio-code label='VS Code extension' col=2 row=2 />
 
 <item id=api shape=database.svg label='Boombox API' col=3 row=1>
 </item>
@@ -55,8 +55,8 @@ If an SME has already created content, a TL team member might collaborate with t
 They might use special Boombox markup to add features to the content, like animations or interactive checklists. Boombox markup can be added into any Markdown file.
 </item>
 
-<item title='3. The CLI compiles content that can be uploaded via the viewer app'>
-Boombox CLI converts the files into data, and puts the data on the user's clipboard for easy uploading.
+<item title='3. The VS Code extension compiles content that can be uploaded via the viewer app'>
+The extension converts the files into data, and puts the data on the user's clipboard for easy uploading.
 
 The user can paste that data into the dropzone located at /publish in the viewer app.
 </item>

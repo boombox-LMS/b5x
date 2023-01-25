@@ -8,80 +8,36 @@ You can easily publish your own topic _right now_. Click the button below to get
 
 <checklist>
 
-<step title='Install the Boombox CLI'>
-The Boombox CLI helps you create and publish content.
+<step title='Install the b5x VS Code extension'>
+This extension lets you create and compile content inside of VS Code.
 
-Install the Boombox CLI on your computer:
-<code-block>
-npm install -g @b5x/cli
-</code-block>
-
-Verify that the installation worked:
-<code-block>
-b5x help
-</code-block>
-
-You should see a list of available `b5x` commands.
-</step>
-
-<step title='Install the Boombox VSCode extension'>
-This doesn't exist yet, but it will. For now, just mark this step as done.
-</step>
-
-<step title='Log into the Boombox CLI'>
-On the command line, initialize the login flow:
-
-<code-block>
-b5x login
-</code-block>
-
-You'll be prompted for a key.
-
-To generate the key:
-
-1. Go to your user profile by clicking on the person icon in the top left menu.
-2. Click **Generate key** button.
-3. Click **Copy key**.
-
-Paste the key into your terminal and press Enter.
-
-You should see a message that you have logged in successfully.
+There would be a link here, but right now the extension is only available locally.
 </step>
 
 <step title='Create your new topic'>
-Navigate to the directory where you'd like your project to be created. `b5x` will create the entire project for you, including the project folder.
+In VS Code, navigate to the directory where you'd like your topic to be created. (The `b5x` extension will create the entire topic for you, including its folder.)
 
-From the desired parent directory, initialize your topic:
+Right-click on the file explorer pane and choose "Create new Boombox LMS topic". Follow the provided prompts to configure your topic with an identifier (used in URLs), title, etc.
 
-<code-block>
-b5x init
-</code-block>
-
-You'll be asked to provide the following information:
-
-- Your topic's identifier, used for its URL. For this one, let's use `my-demo-topic`.
-- Your topic's title. Keep it short and sweet.
-- Your topic's subtitle. This is a sentence summarizing what your topic is about.
-  </step>
+You'll know this step has succeeded if ...
+- A new folder has been created in the VS Code explorer view.
+- You see a "Topic folder created" notification.
+- The new folder contains two subfolders, `documents` and `images`, and a `topic-config.yaml` file.
+</step>
 
 <step title="Edit your topic's documents">
-To change your topic's documents, open the topic folder in VSCode:
+Make some small changes to the contents of the `documents` folder and save your changes.
+</step>
 
-<code-block>
-code my-demo-topic
-</code-block>
+<step title="Compile your topic data">
+In VS Code, right-click the topic folder and choose "Build Boombox LMS topic data."
 
-Spend some time exploring the contents of this folder, especially `my-demo-topic/documents`. Make some small changes to the document files.
+If this step succeeds, you'll see a notification that the topic data has been placed on your clipboard.
 </step>
 
 <step title='Publish and view your topic'>
-It's time to push your topic from your computer to the Boombox server in the cloud:
+Navigate to [the Publish page](/publish), click the dropzone, and paste your data.
 
-<code-block>
-b5x publish my-demo-topic
-</code-block>
-
-You'll receive a URL you can use to view your topic. Congrats, you're now a published Boombox author!
+You'll see some options for viewing your topic from there.
 </step>
-
 </checklist>
