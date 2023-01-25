@@ -862,7 +862,7 @@
                     "intro-to-boombox-lms-vseed_how-boombox-works_f22",
                     "intro-to-boombox-lms-vseed_how-boombox-works_f23"
                 ],
-                "digest": "bcde6abd4cd34d1bd14f6cef544e8f27",
+                "digest": "76a559c7c9434b50af468ee38d146fb7",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -967,7 +967,7 @@
                                 {
                                     "group": "nodes",
                                     "data": {
-                                        "id": "cli",
+                                        "id": "vscode",
                                         "col": "2",
                                         "row": "2"
                                     },
@@ -976,11 +976,11 @@
                                 {
                                     "group": "nodes",
                                     "data": {
-                                        "id": "cli-content",
+                                        "id": "vscode-content",
                                         "col": "2",
                                         "row": "2",
                                         "label": "VS Code extension",
-                                        "parent": "cli"
+                                        "parent": "vscode"
                                     },
                                     "classes": [
                                         "node--icon"
@@ -1068,9 +1068,9 @@
                                 {
                                     "group": "edges",
                                     "data": {
-                                        "id": "files-cli-compile",
+                                        "id": "files-vscode-compile",
                                         "source": "files",
-                                        "target": "cli",
+                                        "target": "vscode",
                                         "label": "compile"
                                     },
                                     "classes": [
@@ -1151,7 +1151,7 @@
                                     }
                                 },
                                 {
-                                    "selector": "#cli-content",
+                                    "selector": "#vscode-content",
                                     "style": {
                                         "backgroundImage": "https://api.iconify.design/logos/visual-studio-code.svg",
                                         "backgroundFit": "contain"
@@ -1185,7 +1185,7 @@
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "8d59b214b26f761e77a4880de719d1c2",
+                        "digest": "30f7a067307055634e2e3eae5fc8d83b",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f3": {
