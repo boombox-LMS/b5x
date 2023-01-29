@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`placeholder The example accordion markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Accordion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "4d8ba2b09a0224d8f7c939b743d18c47",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example badge markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Badge",
+  "contents": "",
+  "data": Object {
+    "description": "Viewed the example badge in the component catalog.",
+    "icon": "https://api.iconify.design/mdi/badge-outline.svg",
+    "title": "Example badge",
+  },
+  "dependencyUris": Array [],
+  "digest": "0e05c2757467bbf0b18a620da479c35a",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

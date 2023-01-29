@@ -1,6 +1,7 @@
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -31,6 +32,19 @@ const BadgeTagSchema = z
 
 type BadgeTag = z.infer<typeof BadgeTagSchema>;
 
+export const BadgeApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Badge"),
+  contents: z.literal(''),
+  isRequired: z.literal(false),
+  isStateful: z.literal(true),
+  childUris: z.array(z.string()).length(0),
+  data: z.object({
+    title: z.string(),
+    description: z.string(),
+    icon: z.string(),
+  }).strict(),
+}).strict()
+
 // Class ------------------------------------------------------------
 
 /**
@@ -46,6 +60,15 @@ export class Badge extends FragmentViaBxmlTag {
       ...this.bxmlNode.attribs,
       icon: this.getImageUrlFromAssetName(this.bxmlNode.attribs.icon),
     };
-    this.convertToStatefulFragment();
+    this.convertToStatefulFragment({ isRequired: false });
   }
 }
+
+export const manifest = {
+  contentType: "Badge",
+  tagName: "badge",
+  parsingClass: Badge,
+  exampleMarkupStrings: [exampleBadgeMarkup],
+  tagSchema: BadgeTagSchema,
+  apiDataSchema: BadgeApiDataSchema,
+};

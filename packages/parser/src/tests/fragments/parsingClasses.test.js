@@ -16,6 +16,7 @@ describe("placeholder", () => {
           const parsedMarkup = global.buildFragmentFromMarkupString(exampleMarkupString).packageForApi();
           const validator = () => { manifest.apiDataSchema.parse(parsedMarkup) };
           expect(validator).not.toThrowError();
+          expect(parsedMarkup).toMatchSnapshot();
         });
       })
     }
