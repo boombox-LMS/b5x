@@ -3,6 +3,7 @@ import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { marked } from "marked";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -92,6 +93,15 @@ export const VisualListDataSchema = z.object({
 
 type VisualListData = z.infer<typeof VisualListDataSchema>;
 
+export const VisualListApiDataSchema = RawFragmentSchema.extend({
+  data: VisualListDataSchema,
+  contentType: z.literal("VisualList"),
+  childUris: z.array(z.string()).length(0),
+  isStateful: z.literal(false),
+  isRequired: z.literal(false),
+  contents: z.literal(""),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -127,3 +137,12 @@ export class VisualList extends FragmentViaBxmlTag {
     };
   }
 }
+
+export const manifest = {
+  contentType: "VisualList",
+  tagName: "visual-list",
+  parsingClass: VisualList,
+  exampleMarkupStrings: [exampleVerticalVisualListMarkup],
+  tagSchema: VisualListTagSchema,
+  apiDataSchema: VisualListApiDataSchema,
+};
