@@ -4,6 +4,7 @@ import { render } from "dom-serializer";
 import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 /**
  * Example markup for the `rubric` tag.
@@ -62,6 +63,14 @@ export const RubricDataSchema = z
 
 type RubricData = z.infer<typeof RubricDataSchema>;
 
+export const RubricApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Rubric"),
+  data: RubricDataSchema,
+  childUris: z.array(z.string()).length(0),
+  isStateful: z.literal(true),
+  contents: z.literal(''),
+}).strict();
+
 /**
  * The class responsible for building a self-grading interface
  * that appears below a challenge fragment (such as a long text question).
@@ -116,3 +125,12 @@ export class Rubric extends FragmentViaBxmlTag {
     return htmlStr;
   }
 }
+
+export const manifest = {
+  contentType: "Rubric",
+  tagName: "rubric",
+  exampleMarkupStrings: [exampleRubricMarkup],
+  parsingClass: Rubric,
+  apiDataSchema: RubricApiDataSchema,
+  tagSchema: RubricTagSchema,
+};
