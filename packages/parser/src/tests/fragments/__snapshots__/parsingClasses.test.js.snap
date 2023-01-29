@@ -708,6 +708,48 @@ Object {
 }
 `;
 
+exports[`placeholder The example step markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Step",
+  "contents": "",
+  "data": Object {
+    "title": "Initialize your topic",
+  },
+  "dependencyUris": Array [],
+  "digest": "62192c4f6aafe3dd3b2dd42165126919",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example tab markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Tab",
+  "contents": "",
+  "data": Object {
+    "title": "Tab 1 title",
+  },
+  "dependencyUris": Array [],
+  "digest": "b927b11ce15323c54f79dd25d0aa3300",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [
@@ -741,28 +783,6 @@ Object {
   "documentUri": "mock-document-uri",
   "isRequired": true,
   "isStateful": true,
-  "uri": "test-fragment-uri",
-}
-`;
-
-exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 2`] = `
-Object {
-  "childUris": Array [
-    "test-fragment-uri",
-    "test-fragment-uri",
-    "test-fragment-uri",
-  ],
-  "contentType": "Step",
-  "contents": "",
-  "data": Object {
-    "title": "Initialize your topic",
-  },
-  "dependencyUris": Array [],
-  "digest": "62192c4f6aafe3dd3b2dd42165126919",
-  "displayConditions": Array [],
-  "documentUri": "mock-document-uri",
-  "isRequired": false,
-  "isStateful": false,
   "uri": "test-fragment-uri",
 }
 `;

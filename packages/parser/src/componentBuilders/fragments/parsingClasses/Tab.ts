@@ -5,6 +5,7 @@ import {
   BxmlTagNodeSchema,
   BxmlTextNodeSchema,
 } from "../../../types/bxmlNodes";
+import { RawFragmentSchema } from "@b5x/types";
 
 /**
  * Example markup for the `tab` tag.
@@ -30,11 +31,25 @@ export const TabTagSchema = z
 
 export type TabTag = z.infer<typeof TabTagSchema>;
 
+const TabDataSchema = z.object({ title: z.string() }).strict();
+
+type TabData = z.infer<typeof TabDataSchema>;
+
+export const TabApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Tab"),
+  contents: z.literal(""),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.string()).min(1),
+  data: TabDataSchema,
+}).strict();
+
 /**
  * A fragment that renders as a tab. Used only as a child of the Tabs fragment.
  */
 export class Tab extends FragmentViaBxmlTag {
   bxmlNode: TabTag;
+  data: TabData;
 
   constructor(params: FragmentViaBxmlTagParams) {
     super(params);
@@ -42,3 +57,12 @@ export class Tab extends FragmentViaBxmlTag {
     this.data = { title: this.bxmlNode.attribs.title };
   }
 }
+
+export const manifest = {
+  contentType: "Tab",
+  tagName: "tab",
+  exampleMarkupStrings: [exampleTabMarkup],
+  apiDataSchema: TabApiDataSchema,
+  tagSchema: TabTagSchema,
+  parsingClass: Tab,
+};

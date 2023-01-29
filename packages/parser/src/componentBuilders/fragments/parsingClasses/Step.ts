@@ -68,6 +68,7 @@ export class Step extends FragmentViaBxmlTag {
 
 export const manifest = {
   contentType: "Step",
+  tagName: "step",
   exampleMarkupStrings: [exampleStepMarkup],
   tagSchema: StepTagSchema,
   apiDataSchema: StepTagApiDataSchema,
