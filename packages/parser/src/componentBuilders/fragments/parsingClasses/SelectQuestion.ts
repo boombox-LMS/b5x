@@ -108,7 +108,7 @@ export const SelectQuestionApiDataSchema = RawFragmentSchema.extend({
   data: SelectQuestionDataSchema,
   childUris: z.array(z.string()).min(1),
   isStateful: z.literal(true),
-  contents: z.literal(''),
+  contents: z.literal(""),
 }).strict();
 
 // Class ------------------------------------------------------------
@@ -155,7 +155,7 @@ export class SelectQuestion extends FragmentViaBxmlTag {
   }
 }
 
-// TODO: This is an unusual case (one parsing class supporing two tags), 
+// TODO: This is an unusual case (one parsing class supporing two tags),
 // and the standard manifest format
 // doesn't apply here. Does the manifest format need to change to
 // accommodate cases like this? The manifests may move to their own file
@@ -163,7 +163,10 @@ export class SelectQuestion extends FragmentViaBxmlTag {
 // in order to create two manifests that point to this parsing class
 // and extend its apiData schema.
 export const manifest = {
-  exampleMarkupStrings: [exampleSingleSelectQuestionMarkup, exampleMultiSelectQuestionMarkup],
+  exampleMarkupStrings: [
+    exampleSingleSelectQuestionMarkup,
+    exampleMultiSelectQuestionMarkup,
+  ],
   tagSchema: SelectQuestionTagSchema,
   apiDataSchema: SelectQuestionApiDataSchema,
 };

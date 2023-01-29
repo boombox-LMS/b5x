@@ -1,7 +1,10 @@
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import {
+  BxmlTagNodeSchema,
+  BxmlTextNodeSchema,
+} from "../../../types/bxmlNodes";
 import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
@@ -46,18 +49,20 @@ export const BreakoutTagSchema = z
 
 type BreakoutTag = z.infer<typeof BreakoutTagSchema>;
 
-const BreakoutDataSchema = z.object({
-  title: z.string(),
-  icon: z.string().optional(),
-  color: z.string().optional(),
-  iconSize: iconSizeSchema,
-}).strict();
+const BreakoutDataSchema = z
+  .object({
+    title: z.string(),
+    icon: z.string().optional(),
+    color: z.string().optional(),
+    iconSize: iconSizeSchema,
+  })
+  .strict();
 
 type BreakoutData = z.infer<typeof BreakoutDataSchema>;
 
 export const BreakoutApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("Breakout"),
-  contents: z.literal(''),
+  contents: z.literal(""),
   isRequired: z.literal(false),
   isStateful: z.literal(false),
   childUris: z.array(z.string()).min(1),
@@ -102,4 +107,4 @@ export const manifest = {
   parsingClass: Breakout,
   tagSchema: BreakoutTagSchema,
   apiDataSchema: BreakoutApiDataSchema,
-}
+};

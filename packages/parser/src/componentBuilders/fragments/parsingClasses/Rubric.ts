@@ -68,7 +68,7 @@ export const RubricApiDataSchema = RawFragmentSchema.extend({
   data: RubricDataSchema,
   childUris: z.array(z.string()).length(0),
   isStateful: z.literal(true),
-  contents: z.literal(''),
+  contents: z.literal(""),
 }).strict();
 
 /**

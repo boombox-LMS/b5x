@@ -1,7 +1,10 @@
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import {
+  BxmlTagNodeSchema,
+  BxmlTextNodeSchema,
+} from "../../../types/bxmlNodes";
 
 /**
  * Example markup for the `tab` tag.

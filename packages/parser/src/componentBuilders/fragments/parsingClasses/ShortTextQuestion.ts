@@ -1,6 +1,9 @@
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import {
+  BxmlTagNodeSchema,
+  BxmlTextNodeSchema,
+} from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { RawFragmentSchema } from "@b5x/types";
 
@@ -32,7 +35,7 @@ type ShortTextQuestionTag = z.infer<typeof ShortTextQuestionTagSchema>;
 
 export const ShortTextQuestionApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("ShortTextQuestion"),
-  contents: z.literal(''),
+  contents: z.literal(""),
   isStateful: z.literal(true),
   data: z.object({}).strict(),
   childUris: z.array(z.string()).min(1),

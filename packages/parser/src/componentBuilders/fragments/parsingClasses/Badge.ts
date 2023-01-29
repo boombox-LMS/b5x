@@ -34,16 +34,18 @@ type BadgeTag = z.infer<typeof BadgeTagSchema>;
 
 export const BadgeApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("Badge"),
-  contents: z.literal(''),
+  contents: z.literal(""),
   isRequired: z.literal(false),
   isStateful: z.literal(true),
   childUris: z.array(z.string()).length(0),
-  data: z.object({
-    title: z.string(),
-    description: z.string(),
-    icon: z.string(),
-  }).strict(),
-}).strict()
+  data: z
+    .object({
+      title: z.string(),
+      description: z.string(),
+      icon: z.string(),
+    })
+    .strict(),
+}).strict();
 
 // Class ------------------------------------------------------------
 

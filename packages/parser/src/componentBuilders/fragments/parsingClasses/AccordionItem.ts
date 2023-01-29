@@ -1,7 +1,10 @@
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import {
+  BxmlTagNodeSchema,
+  BxmlTextNodeSchema,
+} from "../../../types/bxmlNodes";
 import { RawFragmentSchema } from "@b5x/types";
 
 /**
@@ -23,7 +26,7 @@ export type AccordionItemTag = z.infer<typeof AccordionItemTagSchema>;
 
 export const AccordionItemApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("AccordionItem"),
-  contents: z.literal(''),
+  contents: z.literal(""),
   isRequired: z.literal(false),
   isStateful: z.literal(false),
   childUris: z.array(z.string()).min(1),

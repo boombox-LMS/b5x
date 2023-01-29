@@ -176,7 +176,7 @@ type DiagramData = z.infer<typeof DiagramDataSchema>;
 export const DiagramApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("Diagram"),
   childUris: z.array(z.string()).length(0),
-  contents: z.literal(''),
+  contents: z.literal(""),
   isRequired: z.literal(false),
   isStateful: z.literal(false),
   data: DiagramDataSchema,

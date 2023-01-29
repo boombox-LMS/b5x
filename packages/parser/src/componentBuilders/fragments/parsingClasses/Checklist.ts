@@ -61,7 +61,7 @@ export type ChecklistData = z.infer<typeof ChecklistDataSchema>;
 
 export const ChecklistApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("Checklist"),
-  contents: z.literal(''),
+  contents: z.literal(""),
   isStateful: z.literal(true),
   childUris: z.array(z.string()).min(1),
   data: ChecklistDataSchema,
