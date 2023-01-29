@@ -1,8 +1,16 @@
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { ConditionsHelper } from "@b5x/conditions-manager";
 import { z } from "zod";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import {
+  BxmlTagNodeSchema,
+  BxmlTextNodeSchema,
+} from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import {
+  RawFragmentSchema,
+  DraftConditionsListSchema,
+  ConditionsListSchema,
+} from "@b5x/types";
 
 // TODO: The resulting fragments from Slide and Show are functionally similar.
 // Have them become Container fragments so they can all be rendered with the same React component?
@@ -32,6 +40,16 @@ const ShowTagSchema = z
 
 type ShowTag = z.infer<typeof ShowTagSchema>;
 
+export const ShowApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Show"),
+  contents: z.literal(""),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.string()).min(1),
+  data: z.object({}).strict(),
+  displayConditions: z.union([DraftConditionsListSchema, ConditionsListSchema]),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -51,3 +69,12 @@ export class Show extends FragmentViaBxmlTag {
     this.childBxmlNodes = this.bxmlNode.children;
   }
 }
+
+export const manifest = {
+  contentType: "Show",
+  exampleMarkupStrings: [exampleShowMarkup],
+  tagName: "show",
+  parsingClass: Show,
+  apiDataSchema: ShowApiDataSchema,
+  tagSchema: ShowTagSchema,
+};

@@ -643,6 +643,33 @@ Object {
 }
 `;
 
+exports[`placeholder The example show markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Show",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "89b8bb9e8d98c83a9e19d98ff9f0f3db",
+  "displayConditions": Array [
+    Object {
+      "data": Object {
+        "alias": "favorite-color",
+        "operator": "is",
+        "targetValue": "hot-pink",
+      },
+      "type": "condition",
+    },
+  ],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [

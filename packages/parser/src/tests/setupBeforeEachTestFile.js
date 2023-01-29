@@ -21,7 +21,7 @@ global.buildFragmentFromMarkupString = (
     uri: "mock-document-uri",
     topic: { uri: "mock-topic-uri" },
   };
-  
+
   // recursively build the fragment
   return buildFragment(uri, bxmlNode, mockDocument);
 };
@@ -32,8 +32,8 @@ function buildFragment(uri, bxmlNode, document) {
     bxmlNode,
     document,
   }).build();
-  fragment.childBxmlNodes.forEach(childBxmlNode => {
-    fragment.childFragments.push(buildFragment(uri, childBxmlNode, document))
-  })
+  fragment.childBxmlNodes.forEach((childBxmlNode) => {
+    fragment.childFragments.push(buildFragment(uri, childBxmlNode, document));
+  });
   return fragment;
 }
