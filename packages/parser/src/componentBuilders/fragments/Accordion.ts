@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../types/fragments";
 import { AccordionItemTagSchema, AccordionItemTag } from "./AccordionItem";
+import { RawFragmentSchema } from "@b5x/types";
 
 /**
  * Example markup for the `accordion` tag.
@@ -35,6 +36,19 @@ const AccordionTagSchema = z
 
 type AccordionTag = z.infer<typeof AccordionTagSchema>;
 
+// TODO: Use the schema to validate the fragment when
+// it's being built for the API? The schema could be
+// added to the class as this.parsedJsonSchema, so
+// it can be checked after the fragment JSON has been built.
+const AccordionApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Accordion"),
+  contents: z.null(),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.string()).min(1),
+  data: z.object({}).strict(),
+}).strict();
+
 /**
  * A fragment that renders as a collapsed accordion,
  * with each section being optionally expandable by the user.
@@ -56,3 +70,12 @@ export class Accordion extends FragmentViaBxmlTag {
     // this.convertToStatefulFragment()   TODO: It might be helpful to remember on page refresh which items were expanded.
   }
 }
+
+export const manifest = {
+  contentType: "Accordion",
+  tagName: "accordion",
+  exampleMarkupStrings: [exampleAccordionMarkup],
+  parsingClass: Accordion,
+  tagSchema: AccordionTagSchema,
+  apiDataSchema: AccordionApiDataSchema
+};
