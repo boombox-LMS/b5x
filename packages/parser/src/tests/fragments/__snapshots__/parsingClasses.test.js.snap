@@ -607,6 +607,24 @@ Object {
 }
 `;
 
+exports[`placeholder The example sentiment-check markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "SentimentCheck",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "baa130f7632fbad6ef8c78f06b77402c",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [
