@@ -1333,7 +1333,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
       "data-at-cloudco-vseed_customization-page_mode-level",
       "data-at-cloudco-vseed_customization-page_sql-level",
     ],
-    "digest": "ea2da655fc53c5f7ff2d30fc18f1509b",
+    "digest": "991e41cd9ee67a99ef0bcc98d411bf29",
     "displayConditions": [
       [
         {
@@ -24479,13 +24479,13 @@ This is an example warning.
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#x74;&#101;&#99;&#x68;&#x6c;&#101;&#x61;&#x72;&#110;&#105;&#x6e;&#x67;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x74;&#101;&#99;&#x68;&#x6c;&#101;&#x61;&#x72;&#110;&#105;&#x6e;&#x67;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a>.</p>
+    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#116;&#x65;&#x63;&#104;&#108;&#x65;&#97;&#x72;&#110;&#105;&#110;&#103;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;">&#116;&#x65;&#x63;&#104;&#108;&#x65;&#97;&#x72;&#110;&#105;&#110;&#103;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a>.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "d1GAVKR/y5ZZsE9rwVmxm36ppr3LQq0GE+hSyMoW26o=",
+    "digest": "SokF6pUZGGEc6wlOE/nKdXauf0dfkXH6gUDIE7LW8Oo=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
