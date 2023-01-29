@@ -5,6 +5,7 @@ import {
   BxmlTagNodeSchema,
   BxmlTextNodeSchema,
 } from "../../../types/bxmlNodes";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -27,6 +28,14 @@ export const WarningTagSchema = z
 
 type WarningTag = z.infer<typeof WarningTagSchema>;
 
+const WarningApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Warning"),
+  data: z.object({}).strict(),
+  childUris: z.array(z.string()).min(1),
+  isStateful: z.literal(true),
+  contents: z.literal(""),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -43,3 +52,12 @@ export class Warning extends FragmentViaBxmlTag {
     this.convertToStatefulFragment();
   }
 }
+
+export const manifest = {
+  contentType: "Warning",
+  tagName: "warning",
+  exampleMarkupStrings: [exampleWarningMarkup],
+  apiDataSchema: WarningApiDataSchema,
+  parsingClass: Warning,
+  tagSchema: WarningTagSchema,
+};

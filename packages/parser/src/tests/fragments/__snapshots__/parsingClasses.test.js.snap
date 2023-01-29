@@ -959,3 +959,21 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example warning markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Warning",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "77565d0278439fc7b265e10c472d160c",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
