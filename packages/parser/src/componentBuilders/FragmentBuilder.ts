@@ -11,38 +11,39 @@
  *  it will be parsed as regular HTML (e.g., <code>).
  */
 
-import { Fragment } from "./fragments/Fragment";
+import { Fragment } from "./fragments/abstractClasses/Fragment";
 import { FragmentParams } from "../types/fragments";
-import { FragmentViaArgs } from "./fragments/FragmentViaArgs";
-import { MermaidDiagram } from "./fragments/MermaidDiagram";
-import { SelectQuestion } from "./fragments/SelectQuestion";
-import { Troubleshooter } from "./fragments/Troubleshooter";
-import { Diagram } from "./fragments/Diagram";
-import { Slideshow } from "./fragments/Slideshow";
-import { Slide } from "./fragments/Slide";
-import { Rubric } from "./fragments/Rubric";
-import { CodeBlock } from "./fragments/CodeBlock";
-import { FragmentViaBxmlText } from "./fragments/FragmentViaBxmlText";
-import { Show } from "./fragments/Show";
-import { Echo } from "./fragments/Echo";
+import { FragmentViaArgs } from "./fragments/parsingClasses/FragmentViaArgs";
+import { MermaidDiagram } from "./fragments/parsingClasses/MermaidDiagram";
+import { SelectQuestion } from "./fragments/parsingClasses/SelectQuestion";
+import { Troubleshooter } from "./fragments/parsingClasses/Troubleshooter";
+import { Diagram } from "./fragments/parsingClasses/Diagram";
+import { Slideshow } from "./fragments/parsingClasses/Slideshow";
+import { Slide } from "./fragments/parsingClasses/Slide";
+import { Rubric } from "./fragments/parsingClasses/Rubric";
+import { CodeBlock } from "./fragments/parsingClasses/CodeBlock";
+import { FragmentViaBxmlText } from "./fragments/abstractClasses/FragmentViaBxmlText";
+import { Show } from "./fragments/parsingClasses/Show";
+import { Echo } from "./fragments/parsingClasses/Echo";
 import { spinalcase } from "stringcase";
-import { Checklist } from "./fragments/Checklist";
-import { VisualList } from "./fragments/VisualList";
-import { ContinueButton } from "./fragments/ContinueButton";
-import { ShortTextQuestion } from "./fragments/ShortTextQuestion";
-import { LongTextQuestion } from "./fragments/LongTextQuestion";
-import { FiveStarRating } from "./fragments/FiveStarRating";
-import { SentimentCheck } from "./fragments/SentimentCheck";
-import { Warning } from "./fragments/Warning";
-import { Step } from "./fragments/Step";
-import { NpsQuestion } from "./fragments/NpsQuestion";
-import { Accordion } from "./fragments/Accordion";
-import { AccordionItem } from "./fragments/AccordionItem";
-import { Tab } from "./fragments/Tab";
-import { Tabs } from "./fragments/Tabs";
-import { Badge } from "./fragments/Badge";
-import { Breakout } from "./fragments/Breakout";
+import { Checklist } from "./fragments/parsingClasses/Checklist";
+import { VisualList } from "./fragments/parsingClasses/VisualList";
+import { ContinueButton } from "./fragments/parsingClasses/ContinueButton";
+import { ShortTextQuestion } from "./fragments/parsingClasses/ShortTextQuestion";
+import { LongTextQuestion } from "./fragments/parsingClasses/LongTextQuestion";
+import { FiveStarRating } from "./fragments/parsingClasses/FiveStarRating";
+import { SentimentCheck } from "./fragments/parsingClasses/SentimentCheck";
+import { Warning } from "./fragments/parsingClasses/Warning";
+import { Step } from "./fragments/parsingClasses/Step";
+import { NpsQuestion } from "./fragments/parsingClasses/NpsQuestion";
+import { Accordion } from "./fragments/parsingClasses/Accordion";
+import { AccordionItem } from "./fragments/parsingClasses/AccordionItem";
+import { Tab } from "./fragments/parsingClasses/Tab";
+import { Tabs } from "./fragments/parsingClasses/Tabs";
+import { Badge } from "./fragments/parsingClasses/Badge";
+import { Breakout } from "./fragments/parsingClasses/Breakout";
 
+// Map the tag name to the parsing class.
 const fragmentMap = {
   "short-text-question": ShortTextQuestion,
   checklist: Checklist,

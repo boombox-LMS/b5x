@@ -1,0 +1,979 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`placeholder The example accordion markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Accordion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "4d8ba2b09a0224d8f7c939b743d18c47",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example badge markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Badge",
+  "contents": "",
+  "data": Object {
+    "description": "Viewed the example badge in the component catalog.",
+    "icon": "https://api.iconify.design/mdi/badge-outline.svg",
+    "title": "Example badge",
+  },
+  "dependencyUris": Array [],
+  "digest": "0e05c2757467bbf0b18a620da479c35a",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example breakout markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Breakout",
+  "contents": "",
+  "data": Object {
+    "color": undefined,
+    "iconSize": "small",
+    "title": "Tip",
+  },
+  "dependencyUris": Array [],
+  "digest": "7f34855b379b45262bd31e051a95daad",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example breakout markup string at index 1 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Breakout",
+  "contents": "",
+  "data": Object {
+    "color": undefined,
+    "icon": "https://api.iconify.design/mdi/lightbulb-on-10.svg",
+    "iconSize": "small",
+    "title": "Tip",
+  },
+  "dependencyUris": Array [],
+  "digest": "f59a0ce29118490d1a647ed5fc41b8be",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example breakout markup string at index 2 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Breakout",
+  "contents": "",
+  "data": Object {
+    "color": "#7694e4",
+    "icon": "http://localhost:8080/topic-assets/mock-topic-uri/images/cat.svg",
+    "iconSize": "large",
+    "title": "Advice from a cat",
+  },
+  "dependencyUris": Array [],
+  "digest": "6498146ca25634fdc5c2f01e7ba935d5",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example checklist markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Checklist",
+  "contents": "",
+  "data": Object {
+    "completionContent": "You're finished! Nice work.",
+  },
+  "dependencyUris": Array [],
+  "digest": "4d68062cfc6ff55be519e7924be24858",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example code-block markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "CodeBlock",
+  "contents": "class Dog {
+  constructor(name) {
+    this.name = name
+  }
+
+  speak() {
+    console.log(&quot;Woof!&quot;)
+  }
+}
+
+const fido = new Dog(&apos;fido&apos;)
+fido.speak()",
+  "data": Object {
+    "language": "javascript",
+  },
+  "dependencyUris": Array [],
+  "digest": "a193478a31ab0f625f1a030168f8d5bc",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example continue-button markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "ContinueButton",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "700437dc9a5218b71e327d06b97fa1d2",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example diagram markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Diagram",
+  "contents": "",
+  "data": Object {
+    "elements": Array [
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "1",
+          "id": "client",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "1",
+          "id": "client-content",
+          "label": "Client",
+          "parent": "client",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "3",
+          "id": "lb",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "3",
+          "id": "lb-content",
+          "label": "Load balancer",
+          "parent": "lb",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "5",
+          "id": "server1",
+          "row": "1",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "5",
+          "id": "server1-content",
+          "label": "App server",
+          "parent": "server1",
+          "row": "1",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "5",
+          "id": "server2",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "5",
+          "id": "server2-content",
+          "label": "App server",
+          "parent": "server2",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "5",
+          "id": "server3",
+          "row": "3",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "5",
+          "id": "server3-content",
+          "label": "App server",
+          "parent": "server3",
+          "row": "3",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "7",
+          "id": "db",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "7",
+          "id": "db-content",
+          "label": "Database",
+          "parent": "db",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+          "edge--horizontal",
+        ],
+        "data": Object {
+          "id": "client-lb-http",
+          "label": "http",
+          "source": "client",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server1-lb-http",
+          "label": "http",
+          "source": "server1",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+          "edge--horizontal",
+        ],
+        "data": Object {
+          "id": "server2-lb-http",
+          "label": "http",
+          "source": "server2",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server3-lb-http",
+          "label": "http",
+          "source": "server3",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server1-db-http",
+          "label": "http",
+          "source": "server1",
+          "target": "db",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+          "edge--horizontal",
+        ],
+        "data": Object {
+          "id": "server2-db-http",
+          "label": "http",
+          "source": "server2",
+          "target": "db",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server3-db-http",
+          "label": "http",
+          "source": "server3",
+          "target": "db",
+        },
+        "group": "edges",
+      },
+    ],
+    "stylesheet": Array [
+      Object {
+        "selector": "#client-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/ic/baseline-phone-android.svg",
+        },
+      },
+      Object {
+        "selector": "#lb-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/carbon/network-2.svg",
+        },
+      },
+      Object {
+        "selector": "#server1-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mingcute/server-line.svg",
+        },
+      },
+      Object {
+        "selector": "#server2-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mingcute/server-line.svg",
+        },
+      },
+      Object {
+        "selector": "#server3-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mingcute/server-line.svg",
+        },
+      },
+      Object {
+        "selector": "#db-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mdi/database-outline.svg",
+        },
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "58a4296b88f8ccd47c698a35ed7c0391",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example echo markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Echo",
+  "contents": "<echo>my-user-inputted-value</echo>",
+  "data": Object {
+    "fragmentUrisByAlias": Object {
+      "my-user-inputted-value": null,
+    },
+  },
+  "dependencyUris": Array [],
+  "digest": "f3cf3606e853b5424f5b83dc8dee6924",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example five-star-rating markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "FiveStarRating",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "859e95c067cab5d1473df8b0e984c15d",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example long-text-question markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "LongTextQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "74e5050636f4cd254100c7f855897db1",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example mermaid-diagram markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "MermaidDiagram",
+  "contents": "
+flowchart TD
+    P1(Person 1 Paycheck)
+    P2(Person 2 Paycheck)
+    P1 --> P1401K(P1 401K contribution)
+    JC(Joint checking account)
+    P1 & P2 ---->|direct deposit| JC
+    P2 --> P2401K(P2 401K contribution)
+    JC --> I1(P1 weekly investment) --scheduled transaction-->P1V(P1 Vanguard account)
+    JC ----> A1(P1 weekly allowance) --scheduled transaction--> C1(P1 checking)
+    JC --> B(\\"All household expenses (utilities, insurance, etc)\\")
+    JC ----> A2(P2 weekly allowance) --scheduled transaction--> C2(P2 checking)
+    JC --> I2(P2 weekly investment) --scheduled transaction-->P2V(P2 Vanguard account)
+    C1 --> PE1(Clothes, shoes, takeout, etc.)
+    C2 --> PE2(Clothes, shoes, takeout, etc.)
+",
+  "data": Object {
+    "config": Object {},
+  },
+  "dependencyUris": Array [],
+  "digest": "6eb9faa9d3ef75150d2e84eef0dbd6ac",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example nps-question markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "NpsQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "68d0504afb2570429a0ff0385fc70719",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example rubric markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Rubric",
+  "contents": "",
+  "data": Object {
+    "answers": Array [
+      Object {
+        "htmlContents": "An answer portion goes here. It&apos;s worth 1 point by default.",
+        "id": "81943a7818a461dbf97986f581254743",
+        "points": 1,
+      },
+      Object {
+        "htmlContents": "Another answer portion goes here. It&apos;s also worth 1 point by default.",
+        "id": "24f9ebbbc666a6b5fe1fc3cb7b00f0f8",
+        "points": 1,
+      },
+      Object {
+        "htmlContents": "The last answer portion goes here. It has been configured to be worth 2 points.",
+        "id": "127c9ff02d219c599506f34d1bb6d645",
+        "points": 2,
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "976ea555a39bc90935824f90eeace657",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example sentiment-check markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "SentimentCheck",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "baa130f7632fbad6ef8c78f06b77402c",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example short-text-question markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "ShortTextQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "8057d32a19a823078fca8232bc154aa0",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example show markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Show",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "89b8bb9e8d98c83a9e19d98ff9f0f3db",
+  "displayConditions": Array [
+    Object {
+      "data": Object {
+        "alias": "favorite-color",
+        "operator": "is",
+        "targetValue": "hot-pink",
+      },
+      "type": "condition",
+    },
+  ],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example slide markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Slide",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "1dca249be373cf344af56f6549c8e465",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example slideshow markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Slideshow",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "b8868ef3c196f3eb247b8bb3c447f749",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example step markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Step",
+  "contents": "",
+  "data": Object {
+    "title": "Initialize your topic",
+  },
+  "dependencyUris": Array [],
+  "digest": "62192c4f6aafe3dd3b2dd42165126919",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example tab markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Tab",
+  "contents": "",
+  "data": Object {
+    "title": "Tab 1 title",
+  },
+  "dependencyUris": Array [],
+  "digest": "b927b11ce15323c54f79dd25d0aa3300",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example tabs markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Tabs",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "2a285ab348be9248219d8d0d8a27e14e",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example troubleshooter markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Troubleshooter",
+  "contents": "",
+  "data": Object {
+    "issues": Array [
+      Object {
+        "steps": Array [
+          "<p>Verify that your test file name ends in <code>_test.py</code>.</p>
+",
+          "<p>Use <code>pwd</code> to ensure that you aren&#39;t running tests in the wrong location.</p>
+",
+        ],
+        "title": "<p>I don&#39;t see any failing tests.</p>
+",
+      },
+      Object {
+        "steps": Array [
+          "<p>Verify that you&#39;re on the VPN.</p>
+",
+          "<p>Use <code>which aws-okta</code> to verify that aws-okta is installed on your system.</p>
+",
+        ],
+        "title": "<p>I get a &quot;not authorized&quot; error.</p>
+",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "736b3b85c7e2e2b3a942cb668fa98f07",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "SingleSelectQuestion",
+  "contents": "",
+  "data": Object {
+    "choices": Array [
+      Object {
+        "contents": "the Midwest",
+        "value": "midwest",
+      },
+      Object {
+        "contents": "the South",
+        "value": "south",
+      },
+      Object {
+        "contents": "the East Coast",
+        "value": "east-coast",
+      },
+      Object {
+        "contents": "the West Coast",
+        "value": "west-coast",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "36689c382439e6bf42c91de3316cb903",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example undefined markup string at index 1 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "MultiSelectQuestion",
+  "contents": "",
+  "data": Object {
+    "choices": Array [
+      Object {
+        "contents": "Pink",
+        "value": "pink",
+      },
+      Object {
+        "contents": "Green",
+        "value": "green",
+      },
+      Object {
+        "contents": "Blue",
+        "value": "blue",
+      },
+      Object {
+        "contents": "Purple",
+        "value": "purple",
+      },
+      Object {
+        "contents": "Yellow",
+        "value": "yellow",
+      },
+      Object {
+        "contents": "Orange",
+        "value": "orange",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "2d7599c6e1289966b462e2f79e50b4d1",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example visual-list markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "VisualList",
+  "contents": "",
+  "data": Object {
+    "items": Array [
+      Object {
+        "contents": "<h1 id=\\"the-leader\\">The Leader</h1>
+<ul>
+<li>Identifies and prioritizes knowledge gaps</li>
+<li>Assesses and recognizes content health at the org level</li>
+</ul>
+",
+        "imageUrl": "http://localhost:8080/topic-assets/mock-topic-uri/images/leadership.svg",
+      },
+      Object {
+        "contents": "<h1 id=\\"the-subject-matter-expert\\">The Subject-Matter Expert</h1>
+<ul>
+<li>Contributes information</li>
+<li>Maintains technical accuracy of information</li>
+</ul>
+",
+        "imageUrl": "http://localhost:8080/topic-assets/mock-topic-uri/images/developer.svg",
+      },
+      Object {
+        "contents": "<h1 id=\\"the-learning-team-member\\">The Learning Team Member</h1>
+<ul>
+<li>Enhances/repackages high-priority content</li>
+<li>Assigns or recommends content</li>
+<li>Supports learners, especially new hires</li>
+<li>Analyzes metrics and feedback</li>
+</ul>
+",
+        "imageUrl": "http://localhost:8080/topic-assets/mock-topic-uri/images/apple.svg",
+      },
+      Object {
+        "contents": "<h1 id=\\"the-learner\\">The Learner</h1>
+<ul>
+<li>Consumes technical information</li>
+<li>Demonstrates skills by completing challenges</li>
+<li>Provides feedback on content</li>
+<li>Requests new content</li>
+</ul>
+",
+        "imageUrl": "http://localhost:8080/topic-assets/mock-topic-uri/images/creative-idea.svg",
+      },
+      Object {
+        "contents": "<h1 id=\\"the-manager\\">The Manager</h1>
+<ul>
+<li>Assigns or recommends content to team</li>
+<li>Assesses and recognizes participation in knowledge-sharing</li>
+</ul>
+",
+        "imageUrl": "http://localhost:8080/topic-assets/mock-topic-uri/images/organization-chart.svg",
+      },
+    ],
+    "orientation": "vertical",
+  },
+  "dependencyUris": Array [],
+  "digest": "6a460acb1180730711015d710affd304",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example warning markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "Warning",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "77565d0278439fc7b265e10c472d160c",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
