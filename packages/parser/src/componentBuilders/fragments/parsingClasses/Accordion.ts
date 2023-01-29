@@ -42,7 +42,7 @@ type AccordionTag = z.infer<typeof AccordionTagSchema>;
 // it can be checked after the fragment JSON has been built.
 const AccordionApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("Accordion"),
-  contents: z.null(),
+  contents: z.literal(''),
   isRequired: z.literal(false),
   isStateful: z.literal(false),
   childUris: z.array(z.string()).min(1),
