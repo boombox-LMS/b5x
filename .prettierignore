@@ -2,6 +2,7 @@
 *.md
 
 # Ignore generated files
-workspace/**/build
-workspace/**/dist
-workspace/docs
+**/build
+**/dist
+**/out
+docs
