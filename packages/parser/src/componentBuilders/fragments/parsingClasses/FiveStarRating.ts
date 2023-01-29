@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -25,6 +26,14 @@ const FiveStarRatingTagSchema = z
 
 type FiveStarRatingTag = z.infer<typeof FiveStarRatingTagSchema>;
 
+export const FiveStarRatingApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("FiveStarRating"),
+  contents: z.literal(''),
+  isStateful: z.literal(true),
+  childUris: z.array(z.string()).min(1),
+  data: z.object({}).strict(),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -39,3 +48,12 @@ export class FiveStarRating extends FragmentViaBxmlTag {
     this.convertToStatefulFragment();
   }
 }
+
+export const manifest = {
+  contentType: "FiveStarRating",
+  tagName: "five-star-rating",
+  exampleMarkupStrings: [exampleFiveStarRatingMarkup],
+  parsingClass: FiveStarRating,
+  apiDataSchema: FiveStarRatingApiDataSchema,
+  tagSchema: FiveStarRatingTagSchema,
+};

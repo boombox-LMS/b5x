@@ -485,3 +485,21 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example five-star-rating markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "FiveStarRating",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "859e95c067cab5d1473df8b0e984c15d",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
