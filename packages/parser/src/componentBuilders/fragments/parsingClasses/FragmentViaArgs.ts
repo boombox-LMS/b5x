@@ -34,3 +34,7 @@ export class FragmentViaArgs extends Fragment {
     }
   }
 }
+
+export const manifest = {
+  exampleMarkupStrings: [],
+};
