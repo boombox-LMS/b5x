@@ -96,20 +96,30 @@
   <h3>@b5x/api</h3>
 </a>
 <p>An Express app responsible for receiving, storing, and retrieving content.</p>
+<p><a href="https://boombox-lms.github.io/b5x/coverage/api">View test coverage report</a></p>
+
+<a href="#b5xparser" id="b5xparser" style="color: inherit; text-decoration: none;">
+  <h3>@b5x/parser</h3>
+</a>
+<p>A library for translating B-XML to topic data.</p>
+<p><a href="https://boombox-lms.github.io/b5x/coverage/parser">View test coverage report</a></p>
 
 <a href="#b5xcli-soon-to-be-deprecated-in-favor-of-the-vs-code-extension" id="b5xcli-soon-to-be-deprecated-in-favor-of-the-vs-code-extension" style="color: inherit; text-decoration: none;">
   <h3>@b5x/cli (soon to be deprecated in favor of the VS Code extension)</h3>
 </a>
-<p>A command-line tool for creating and compiling topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), and puts it on the user&#39;s pasteboard for easy transfer into the viewer app&#39;s publishing UI.</p>
+<p>A command-line tool for creating and compiling topics. This tool is gradually being deprecated, but it&#39;s still used for generating seed files for the api (which will be moved to the api),
+for populating topic assets into the api, and for debugging the parser (since its output is still more verbose than the VS Code extension).</p>
+<p>It doesn&#39;t have test coverage, as its code has become minimal and all of its tests were moved to the parser package.</p>
 
 <a href="#the-b5x-vs-code-extension" id="the-b5x-vs-code-extension" style="color: inherit; text-decoration: none;">
   <h3>The <code>b5x</code> VS Code extension</h3>
 </a>
-<p>This extension is still in development, but eventually it will allow the user to</p>
+<p>This extension is still in development, but it currently allows the user to</p>
 <ul>
 <li>Create a new topic folder containing helpful templates</li>
 <li>Compile topics into data that can be uploaded to the API</li>
 </ul>
+<p>It does not yet have test coverage.</p>
 
 <a href="#b5xviewer" id="b5xviewer" style="color: inherit; text-decoration: none;">
   <h3>@b5x/viewer</h3>
@@ -117,6 +127,7 @@
 <p><em>Note: &#39;Viewer&#39; is now a bit of misnomer, as the viewer app became responsible for helping users publish content as well. At some point, when the v1 features have settled, this will be renamed.</em></p>
 <p>A React app that renders content, receives user interactions, and ships updates to the backend (@b5x/api).</p>
 <p>The viewer app is written in JavaScript. It will be migrated to TypeScript eventually, but since the viewer&#39;s entire purpose is to fetch and render API data, it&#39;s most efficient to wait until the fragment designs have fully settled in the other packages.</p>
+<p>It does not yet have test coverage.</p>
 
 <a href="#b5xtypes---shared-by-the-other-components" id="b5xtypes---shared-by-the-other-components" style="color: inherit; text-decoration: none;">
   <h3>@b5x/types - shared by the other components</h3>
@@ -127,6 +138,7 @@
   <h3>@b5x/conditions-manager - shared by the other components</h3>
 </a>
 <p>A module responsible for creating, modifying, and checking conditions. Conditions can be used to determine whether a user has access to content, how the content should be rendered, etc.</p>
+<p><a href="https://boombox-lms.github.io/b5x/coverage/conditions-manager">View test coverage report</a></p>
 
 <a href="#putting-it-all-together-the-story-of-a-topic-build" id="putting-it-all-together-the-story-of-a-topic-build" style="color: inherit; text-decoration: none;">
   <h1>Putting it all together: The story of a topic build</h1>
@@ -134,18 +146,8 @@
 <p><em>This isn&#39;t meant to be a tutorial, just a quick overview of the content-publishing flow. Also, v1 of Boombox LMS doesn&#39;t exist yet, so while the vast majority of this functionality exists today, it&#39;s still being refactored for launch.</em></p>
 <p>Let&#39;s say that Jen wants to create a new topic, &quot;Intro to Boombox LMS.&quot; At a high level, here&#39;s how that would happen.</p>
 
-<a href="#initializing-a-topic-cli-version" id="initializing-a-topic-cli-version" style="color: inherit; text-decoration: none;">
-  <h2>Initializing a topic: CLI version</h2>
-</a>
-<p>Using <code>@b5x/cli</code>, the command-line interface, Jen can initialize a topic within any directory she&#39;d like to work in:</p>
-<pre><code><span class="hl-1">cd</span><br/><span class="hl-1">b5x</span><span class="hl-0"> </span><span class="hl-1">init</span>
-</code></pre>
-<p>The <code>b5x init</code> command will ask Jen a few questions about how the topic should be configured (including what to use as the topic&#39;s identifier -- we&#39;ll go with <code>intro-to-boombox-lms</code>), then create a folder:</p>
-<pre><code><span class="hl-0">|-- </span><span class="hl-1">intro</span><span class="hl-0">-</span><span class="hl-1">to</span><span class="hl-0">-</span><span class="hl-1">boombox</span><span class="hl-0">-</span><span class="hl-1">lms</span><br/><span class="hl-0">| |-- </span><span class="hl-1">documents</span><br/><span class="hl-0">| |-- </span><span class="hl-1">images</span><br/><span class="hl-0">| |-- </span><span class="hl-1">topic</span><span class="hl-0">-</span><span class="hl-1">config</span><span class="hl-0">.</span><span class="hl-1">yaml</span>
-</code></pre>
-
-<a href="#initializing-a-topic-vs-code-extension-version" id="initializing-a-topic-vs-code-extension-version" style="color: inherit; text-decoration: none;">
-  <h2>Initializing a topic: VS Code extension version</h2>
+<a href="#initializing-a-topic" id="initializing-a-topic" style="color: inherit; text-decoration: none;">
+  <h2>Initializing a topic</h2>
 </a>
 <p>If Jen has the <code>b5x</code> VS Code extension installed, she can just right-click in the file explorer and choose &quot;Create new Boombox LMS topic,&quot; and follow the prompts to create a new topic folder that contains the correct file structure.</p>
 
@@ -162,7 +164,7 @@
 <a href="#publishing-a-topic" id="publishing-a-topic" style="color: inherit; text-decoration: none;">
   <h2>Publishing a topic</h2>
 </a>
-<p>To publish a topic, Jen uses the CLI to build its data (<code>b5x build intro-to-boombox-lms</code>), or the VS Code extension (right-click the topic folder and choose &quot;Build topic data&quot;).</p>
+<p>To publish a topic, Jen uses the VS Code extension (right-click the topic folder and choose &quot;Build topic data&quot;).</p>
 <p>Jen can then paste the topic data into the dropzone at /publish on the viewer app to create a new topic or update an existing one.</p>
 
 <a href="#viewing-a-topic" id="viewing-a-topic" style="color: inherit; text-decoration: none;">
