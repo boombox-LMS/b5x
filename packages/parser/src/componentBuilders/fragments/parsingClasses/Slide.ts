@@ -6,6 +6,7 @@ import {
   BxmlTextNodeSchema,
 } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -30,6 +31,14 @@ export const SlideTagSchema = z
 
 export type SlideTag = z.infer<typeof SlideTagSchema>;
 
+export const SlideTagApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Slide"),
+  data: z.object({}).strict(),
+  childUris: z.array(z.string()).min(1),
+  isStateful: z.literal(false),
+  contents: z.literal(""),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -46,3 +55,12 @@ export class Slide extends FragmentViaBxmlTag {
     this.childBxmlNodes = this.bxmlNode.children;
   }
 }
+
+export const manifest = {
+  contentType: "Slide",
+  tagName: "slide",
+  exampleMarkupStrings: [exampleSlideMarkup],
+  parsingClass: Slide,
+  apiDataSchema: SlideTagApiDataSchema,
+  tagSchema: SlideTagSchema,
+};
