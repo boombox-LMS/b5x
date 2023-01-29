@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "pnpm run build; jest",
+    "test": "pnpm run build; jest --coverage",
     "clean": "rimraf dist/",
     "build": "pnpm run clean && tsc"
   },
@@ -30,7 +30,13 @@
   "jest": {
     "setupFiles": [
       "<rootDir>/src/tests/setupBeforeEachTestFile.js"
-    ]
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "coverageDirectory": "./../../docs/coverage/parser"
   },
   "typedoc": {
     "entryPoint": "./src/typedocEntryPoint.ts"

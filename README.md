@@ -69,16 +69,29 @@ Each of the packages below is written in TypeScript, unless otherwise noted.
 
 An Express app responsible for receiving, storing, and retrieving content.
 
+[View test coverage report](https://boombox-lms.github.io/b5x/coverage/api)
+
+### @b5x/parser
+
+A library for translating B-XML to topic data.
+
+[View test coverage report](https://boombox-lms.github.io/b5x/coverage/parser)
+
 ### @b5x/cli (soon to be deprecated in favor of the VS Code extension)
 
-A command-line tool for creating and compiling topics. The CLI packages local content files into a data format that is readable by the cloud server (b5x-api), and puts it on the user's pasteboard for easy transfer into the viewer app's publishing UI.
+A command-line tool for creating and compiling topics. This tool is gradually being deprecated, but it's still used for generating seed files for the api (which will be moved to the api),
+for populating topic assets into the api, and for debugging the parser (since its output is still more verbose than the VS Code extension).
+
+It doesn't have test coverage, as its code has become minimal and all of its tests were moved to the parser package.
 
 ### The `b5x` VS Code extension
 
-This extension is still in development, but eventually it will allow the user to
+This extension is still in development, but it currently allows the user to
 
 - Create a new topic folder containing helpful templates
 - Compile topics into data that can be uploaded to the API
+
+It does not yet have test coverage.
 
 ### @b5x/viewer
 
@@ -88,6 +101,8 @@ A React app that renders content, receives user interactions, and ships updates 
 
 The viewer app is written in JavaScript. It will be migrated to TypeScript eventually, but since the viewer's entire purpose is to fetch and render API data, it's most efficient to wait until the fragment designs have fully settled in the other packages.
 
+It does not yet have test coverage.
+
 ### @b5x/types - shared by the other components
 
 A module of type definitions that are shared by the other components.
@@ -96,31 +111,15 @@ A module of type definitions that are shared by the other components.
 
 A module responsible for creating, modifying, and checking conditions. Conditions can be used to determine whether a user has access to content, how the content should be rendered, etc.
 
+[View test coverage report](https://boombox-lms.github.io/b5x/coverage/conditions-manager)
+
 # Putting it all together: The story of a topic build
 
 *This isn't meant to be a tutorial, just a quick overview of the content-publishing flow. Also, v1 of Boombox LMS doesn't exist yet, so while the vast majority of this functionality exists today, it's still being refactored for launch.*
 
 Let's say that Jen wants to create a new topic, "Intro to Boombox LMS." At a high level, here's how that would happen.
 
-## Initializing a topic: CLI version
-
-Using `@b5x/cli`, the command-line interface, Jen can initialize a topic within any directory she'd like to work in:
-
-```
-cd
-b5x init
-```
-
-The `b5x init` command will ask Jen a few questions about how the topic should be configured (including what to use as the topic's identifier -- we'll go with `intro-to-boombox-lms`), then create a folder:
-
-```
-|-- intro-to-boombox-lms
-| |-- documents
-| |-- images
-| |-- topic-config.yaml
-```
-
-## Initializing a topic: VS Code extension version
+## Initializing a topic
 
 If Jen has the `b5x` VS Code extension installed, she can just right-click in the file explorer and choose "Create new Boombox LMS topic," and follow the prompts to create a new topic folder that contains the correct file structure.
 
@@ -135,7 +134,7 @@ To see what the final edited result might look like, view the [*Intro to Boombox
 
 ## Publishing a topic
 
-To publish a topic, Jen uses the CLI to build its data (`b5x build intro-to-boombox-lms`), or the VS Code extension (right-click the topic folder and choose "Build topic data").
+To publish a topic, Jen uses the VS Code extension (right-click the topic folder and choose "Build topic data").
 
 Jen can then paste the topic data into the dropzone at /publish on the viewer app to create a new topic or update an existing one.
 

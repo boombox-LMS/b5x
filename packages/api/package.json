@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "devstart": "PORT=8080 tsc-watch --noClear -p ./tsconfig.json --onSuccess 'node ./dist/index.js'",
-    "test": "pnpm build && jest",
+    "test": "pnpm build && jest --coverage",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.b5x src/**/db/migrations/*.js dist/",
     "build": "pnpm clean && tsc && pnpm copy-files",
@@ -51,7 +51,13 @@
     "globalTeardown": "<rootDir>/src/tests/config/globalTeardown.js",
     "setupFiles": [
       "<rootDir>/src/tests/config/setupBeforeEachTestFile.js"
-    ]
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "coverageDirectory": "./../../docs/coverage/api"
   },
   "typedoc": {
     "entryPoint": "./src/typedocEntryPoint.ts"

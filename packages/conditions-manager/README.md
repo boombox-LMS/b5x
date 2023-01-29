@@ -1,5 +1,7 @@
 # Boombox LMS conditions manager (@b5x/conditions-manager)
 
+[View test coverage report](https://boombox-lms.github.io/b5x/coverage/conditions-manager)
+
 ## Responsibilities
 
 - Parse user-authored conditions (e.g., `user-favorite-color is hot-pink`) into machine-readable conditions.

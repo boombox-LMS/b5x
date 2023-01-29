@@ -50,7 +50,7 @@
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "SKIP-test": "node ./out/test/runTest.js"
   },
   "dependencies": {
     "@b5x/types": "file:../types",

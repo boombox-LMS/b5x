@@ -12,13 +12,21 @@
   "scripts": {
     "clean": "rimraf dist/",
     "build": "pnpm clean && tsc",
-    "test": "pnpm build && jest"
+    "test": "pnpm build && jest --coverage"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.17",
     "@types/draft-js": "^0.11.9",
     "rimraf": "^3.0.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "coverageDirectory": "./../../docs/coverage/conditions-manager"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts"
