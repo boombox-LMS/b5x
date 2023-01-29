@@ -688,6 +688,26 @@ Object {
 }
 `;
 
+exports[`placeholder The example slideshow markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Slideshow",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "b8868ef3c196f3eb247b8bb3c447f749",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [

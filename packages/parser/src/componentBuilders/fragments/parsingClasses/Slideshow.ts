@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { SlideTagSchema, SlideTag } from "./Slide";
+import { RawFragmentSchema } from "@b5x/types";
 
 /**
  * Example markup for the `slideshow` tag.
@@ -41,6 +42,14 @@ const SlideshowTagSchema = z
 
 type SlideshowTag = z.infer<typeof SlideshowTagSchema>;
 
+export const SlideshowApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Slideshow"),
+  data: z.object({}).strict(),
+  childUris: z.array(z.string()).min(1),
+  isStateful: z.literal(true),
+  contents: z.literal(""),
+}).strict();
+
 /**
  * A fragment that renders as a slideshow.
  * It's a stateful fragment because the user's place in the slideshow
@@ -57,3 +66,12 @@ export class Slideshow extends FragmentViaBxmlTag {
     this.convertToStatefulFragment();
   }
 }
+
+export const manifest = {
+  contentType: "Slideshow",
+  tagName: "slideshow",
+  exampleMarkupStrings: [exampleSlideshowMarkup],
+  apiDataSchema: SlideshowApiDataSchema,
+  tagSchema: SlideshowTagSchema,
+  parsingClass: Slideshow,
+};
