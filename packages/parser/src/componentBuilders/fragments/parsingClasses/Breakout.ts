@@ -2,6 +2,7 @@ import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -25,6 +26,8 @@ Always keep my food bowl filled to the brim. If you don't, I will become dangero
 
 // Types ------------------------------------------------------------
 
+const iconSizeSchema = z.enum(["small", "medium", "large"]);
+
 export const BreakoutTagSchema = z
   .object({
     type: z.literal("tag"),
@@ -34,7 +37,7 @@ export const BreakoutTagSchema = z
         title: z.string(),
         icon: z.string().optional(),
         color: z.string().optional(),
-        "icon-size": z.string().optional(),
+        "icon-size": z.union([iconSizeSchema, z.undefined()]),
       })
       .strict(),
     children: z.array(z.union([BxmlTagNodeSchema, BxmlTextNodeSchema])).min(1),
@@ -42,6 +45,23 @@ export const BreakoutTagSchema = z
   .strict();
 
 type BreakoutTag = z.infer<typeof BreakoutTagSchema>;
+
+export const BreakoutApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Breakout"),
+  contents: z.literal(''),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.string()).min(1),
+  data: z.object({
+    title: z.string(),
+    icon: z.string().optional(),
+    color: z.string().optional(),
+    // TODO: Move to the viewer once the viewer has types,
+    // so there's no iconSize for nonexistent icons,
+    // and so unnecessary data isn't sent to the server.
+    iconSize: iconSizeSchema,
+  }).strict()
+}).strict();
 
 // Class ------------------------------------------------------------
 
@@ -67,4 +87,17 @@ export class Breakout extends FragmentViaBxmlTag {
       );
     }
   }
+}
+
+export const manifest = {
+  contentType: "Breakout",
+  tagName: "breakout",
+  exampleMarkupStrings: [
+    exampleBreakoutMarkupOne,
+    exampleBreakoutMarkupTwo,
+    exampleBreakoutMarkupThree,
+  ],
+  parsingClass: Breakout,
+  tagSchema: BreakoutTagSchema,
+  apiDataSchema: BreakoutApiDataSchema,
 }
