@@ -2,7 +2,9 @@
 
 exports[`The SelectQuestion fragment returns the expected data for multi-select questions The parsed multi-select-question fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "MultiSelectQuestion",
   "contents": "",
   "data": Object {
@@ -34,7 +36,7 @@ Object {
     ],
   },
   "dependencyUris": Array [],
-  "digest": "ad27999b99f4eac08ffa5ee9df16dd03",
+  "digest": "2d7599c6e1289966b462e2f79e50b4d1",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,
@@ -45,7 +47,9 @@ Object {
 
 exports[`The SelectQuestion fragment returns the expected data for single-select questions The parsed single-select-question fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "SingleSelectQuestion",
   "contents": "",
   "data": Object {
@@ -69,7 +73,7 @@ Object {
     ],
   },
   "dependencyUris": Array [],
-  "digest": "de0fa07e0e4f7eb812e0024f138a7151",
+  "digest": "36689c382439e6bf42c91de3316cb903",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,

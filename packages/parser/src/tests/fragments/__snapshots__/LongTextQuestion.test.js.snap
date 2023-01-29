@@ -2,12 +2,14 @@
 
 exports[`The LongTextQuestion fragment builds as expected The parsed long-text-question fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "LongTextQuestion",
   "contents": "",
   "data": Object {},
   "dependencyUris": Array [],
-  "digest": "177790f9200afec61b04e671f7ebb290",
+  "digest": "74e5050636f4cd254100c7f855897db1",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,

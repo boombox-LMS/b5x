@@ -2,12 +2,14 @@
 
 exports[`The FiveStarRating fragment builds as expected The parsed five-star-rating fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "FiveStarRating",
   "contents": "",
   "data": Object {},
   "dependencyUris": Array [],
-  "digest": "4e4b92eb709809d174dbc7e147a88888",
+  "digest": "859e95c067cab5d1473df8b0e984c15d",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,

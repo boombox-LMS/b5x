@@ -2,12 +2,14 @@
 
 exports[`The Show fragment builds as expected The parsed show fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "Show",
   "contents": "",
   "data": Object {},
   "dependencyUris": Array [],
-  "digest": "fef493b99b46bc6bc00021d82cfe5c08",
+  "digest": "89b8bb9e8d98c83a9e19d98ff9f0f3db",
   "displayConditions": Array [
     Object {
       "data": Object {

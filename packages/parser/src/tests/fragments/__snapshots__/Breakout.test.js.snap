@@ -2,7 +2,9 @@
 
 exports[`The breakout fragment builds as expected when it includes all attributes The parsed breakout fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "Breakout",
   "contents": "",
   "data": Object {
@@ -12,7 +14,7 @@ Object {
     "title": "Advice from a cat",
   },
   "dependencyUris": Array [],
-  "digest": "4f9cced00fc5f6cbf94e3bf1eaab3280",
+  "digest": "6498146ca25634fdc5c2f01e7ba935d5",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": false,
@@ -23,7 +25,9 @@ Object {
 
 exports[`The breakout fragment builds as expected when it includes an icon The parsed breakout fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "Breakout",
   "contents": "",
   "data": Object {
@@ -33,7 +37,7 @@ Object {
     "title": "Tip",
   },
   "dependencyUris": Array [],
-  "digest": "20f22bbd088045d7076380b375a1f359",
+  "digest": "f59a0ce29118490d1a647ed5fc41b8be",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": false,
@@ -44,7 +48,9 @@ Object {
 
 exports[`The simple breakout fragment builds as expected The parsed simple breakout fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "Breakout",
   "contents": "",
   "data": Object {
@@ -53,7 +59,7 @@ Object {
     "title": "Tip",
   },
   "dependencyUris": Array [],
-  "digest": "ef716ba07b3d50254a48a500079c08ec",
+  "digest": "7f34855b379b45262bd31e051a95daad",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": false,

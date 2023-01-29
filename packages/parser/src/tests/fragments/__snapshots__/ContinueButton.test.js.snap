@@ -2,12 +2,14 @@
 
 exports[`The ContinueButton fragment builds as expected The parsed continue-button fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "ContinueButton",
   "contents": "",
   "data": Object {},
   "dependencyUris": Array [],
-  "digest": "5a575eb15e0f6f702a3d1b7501891acf",
+  "digest": "700437dc9a5218b71e327d06b97fa1d2",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,

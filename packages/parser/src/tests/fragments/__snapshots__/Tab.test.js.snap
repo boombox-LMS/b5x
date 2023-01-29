@@ -2,14 +2,16 @@
 
 exports[`The Tab fragment builds as expected The parsed tab fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "Tab",
   "contents": "",
   "data": Object {
     "title": "Tab 1 title",
   },
   "dependencyUris": Array [],
-  "digest": "9677b69ae4266cef0744c7de5ad3c9b4",
+  "digest": "b927b11ce15323c54f79dd25d0aa3300",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": false,

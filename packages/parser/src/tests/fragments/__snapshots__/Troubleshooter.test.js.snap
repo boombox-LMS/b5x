@@ -2,7 +2,10 @@
 
 exports[`The Troubleshooter fragment builds as expected The parsed troubleshooter fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
   "contentType": "Troubleshooter",
   "contents": "",
   "data": Object {
@@ -30,7 +33,7 @@ Object {
     ],
   },
   "dependencyUris": Array [],
-  "digest": "736b3b85c7e2e2b3a942cb668fa98f07",
+  "digest": "e5d8fecede5e5fd9c8185e69af5f8645",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": false,

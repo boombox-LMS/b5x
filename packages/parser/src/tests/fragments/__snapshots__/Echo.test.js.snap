@@ -2,7 +2,9 @@
 
 exports[`The Echo fragment builds as expected The parsed echo fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
   "contentType": "Echo",
   "contents": "<echo>my-user-inputted-value</echo>",
   "data": Object {
@@ -11,7 +13,7 @@ Object {
     },
   },
   "dependencyUris": Array [],
-  "digest": "f3cf3606e853b5424f5b83dc8dee6924",
+  "digest": "486fdac9c698fd540792f065e0e6b33d",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": false,

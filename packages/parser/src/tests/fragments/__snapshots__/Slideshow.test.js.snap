@@ -2,12 +2,16 @@
 
 exports[`The Slideshow fragment builds as expected The parsed slideshow fragment matches the snapshot on file 1`] = `
 Object {
-  "childUris": Array [],
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
   "contentType": "Slideshow",
   "contents": "",
   "data": Object {},
   "dependencyUris": Array [],
-  "digest": "8f88d9ab89e277927ee28507c5fa91f9",
+  "digest": "b8868ef3c196f3eb247b8bb3c447f749",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,
