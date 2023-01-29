@@ -745,6 +745,28 @@ Object {
 }
 `;
 
+exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 2`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Step",
+  "contents": "",
+  "data": Object {
+    "title": "Initialize your topic",
+  },
+  "dependencyUris": Array [],
+  "digest": "62192c4f6aafe3dd3b2dd42165126919",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 1 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [

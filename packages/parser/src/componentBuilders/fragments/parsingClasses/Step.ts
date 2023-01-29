@@ -6,6 +6,7 @@ import {
   BxmlTextNodeSchema,
 } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -34,6 +35,18 @@ export const StepTagSchema = z
 
 export type StepTag = z.infer<typeof StepTagSchema>;
 
+const StepTagDataSchema = z.object({ title: z.string() }).strict();
+
+type StepTagData = z.infer<typeof StepTagDataSchema>;
+
+export const StepTagApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Step"),
+  data: StepTagDataSchema,
+  childUris: z.array(z.string()).min(1),
+  isStateful: z.literal(false),
+  contents: z.literal(""),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -43,6 +56,7 @@ export type StepTag = z.infer<typeof StepTagSchema>;
  */
 export class Step extends FragmentViaBxmlTag {
   bxmlNode: StepTag;
+  data: StepTagData;
 
   constructor(params: FragmentViaBxmlTagParams) {
     super(params);
@@ -51,3 +65,11 @@ export class Step extends FragmentViaBxmlTag {
     this.childBxmlNodes = this.bxmlNode.children;
   }
 }
+
+export const manifest = {
+  contentType: "Step",
+  exampleMarkupStrings: [exampleStepMarkup],
+  tagSchema: StepTagSchema,
+  apiDataSchema: StepTagApiDataSchema,
+  parsingClass: Step,
+};
