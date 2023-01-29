@@ -107,3 +107,25 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example checklist markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Checklist",
+  "contents": "",
+  "data": Object {
+    "completionContent": "You're finished! Nice work.",
+  },
+  "dependencyUris": Array [],
+  "digest": "4d68062cfc6ff55be519e7924be24858",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

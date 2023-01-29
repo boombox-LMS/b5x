@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { StepTagSchema, StepTag } from "./Step";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -------------------------------------------
 
@@ -58,6 +59,14 @@ export const ChecklistDataSchema = z
 
 export type ChecklistData = z.infer<typeof ChecklistDataSchema>;
 
+export const ChecklistApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Checklist"),
+  contents: z.literal(''),
+  isStateful: z.literal(true),
+  childUris: z.array(z.string()).min(1),
+  data: ChecklistDataSchema,
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -71,15 +80,19 @@ export class Checklist extends FragmentViaBxmlTag {
   constructor(params: FragmentViaBxmlTagParams) {
     super(params);
     this.bxmlNode = ChecklistTagSchema.parse(params.bxmlNode);
-    this.data = this.#buildData();
+    this.data = {
+      completionContent: "You're finished! Nice work.",
+    };
     this.convertToStatefulFragment();
     this.childBxmlNodes = this.bxmlNode.children;
   }
-
-  #buildData() {
-    let result: ChecklistData = {
-      completionContent: "You're finished! Nice work.",
-    };
-    return ChecklistDataSchema.parse(result);
-  }
 }
+
+export const manifest = {
+  contentType: "Checklist",
+  tagName: "checklist",
+  parsingClass: Checklist,
+  exampleMarkupStrings: [exampleChecklistMarkup],
+  apiDataSchema: ChecklistApiDataSchema,
+  tagSchema: ChecklistTagSchema,
+};
