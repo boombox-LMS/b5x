@@ -1074,26 +1074,26 @@ Object {
           "boombox-feature-utopia-vtest_text-inputs_f1",
           "boombox-feature-utopia-vtest_text-inputs_typed-name",
           "boombox-feature-utopia-vtest_text-inputs_f4",
-          "boombox-feature-utopia-vtest_text-inputs_f8",
-          "boombox-feature-utopia-vtest_text-inputs_f10",
+          "boombox-feature-utopia-vtest_text-inputs_f7",
+          "boombox-feature-utopia-vtest_text-inputs_f9",
+          "boombox-feature-utopia-vtest_text-inputs_f11",
           "boombox-feature-utopia-vtest_text-inputs_f13",
-          "boombox-feature-utopia-vtest_text-inputs_f15",
+          "boombox-feature-utopia-vtest_text-inputs_f14",
           "boombox-feature-utopia-vtest_text-inputs_f16",
-          "boombox-feature-utopia-vtest_text-inputs_f18",
           "boombox-feature-utopia-vtest_text-inputs_inputted-long-text",
-          "boombox-feature-utopia-vtest_text-inputs_f21",
+          "boombox-feature-utopia-vtest_text-inputs_f19",
+          "boombox-feature-utopia-vtest_text-inputs_f20",
           "boombox-feature-utopia-vtest_text-inputs_f22",
-          "boombox-feature-utopia-vtest_text-inputs_f24",
+          "boombox-feature-utopia-vtest_text-inputs_f23",
           "boombox-feature-utopia-vtest_text-inputs_f25",
-          "boombox-feature-utopia-vtest_text-inputs_f27",
-          "boombox-feature-utopia-vtest_text-inputs_f28",
+          "boombox-feature-utopia-vtest_text-inputs_f26",
         ],
         "completionConditions": Array [
           Object {
             "data": Object {
               "operator": "status-is",
               "targetValue": "completed",
-              "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+              "uri": "boombox-feature-utopia-vtest_text-inputs_f23",
             },
             "type": "condition",
           },
@@ -1122,47 +1122,15 @@ Object {
             "isStateful": false,
             "uri": "boombox-feature-utopia-vtest_text-inputs_f1",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f10": Object {
-            "childUris": Array [],
-            "contentType": "HtmlContent",
-            "contents": "<p>What if I put it in a header?</p>
-<h2 id=\\"you-said-your-name-is-typed-name\\">You said your name is <echo>typed-name</echo></h2>
-",
-            "data": Object {
-              "fragmentUrisByAlias": Object {
-                "typed-name": "boombox-feature-utopia-vtest_text-inputs_typed-name",
-              },
-              "isTemplated": true,
-            },
-            "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f8",
-              "boombox-feature-utopia-vtest_text-inputs_typed-name",
-            ],
-            "digest": "00b108a7ed651f43faa35bdee1dd7a67",
-            "displayConditions": Array [
-              Object {
-                "data": Object {
-                  "operator": "status-is",
-                  "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
-                },
-                "type": "condition",
-              },
-            ],
-            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
-            "isRequired": false,
-            "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f10",
-          },
-          "boombox-feature-utopia-vtest_text-inputs_f13": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f11": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f14",
+              "boombox-feature-utopia-vtest_text-inputs_f12",
             ],
             "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f8",
+              "boombox-feature-utopia-vtest_text-inputs_f7",
             ],
             "digest": "4d08219c7a33ac7904a1c3a296ebd557",
             "displayConditions": Array [
@@ -1170,7 +1138,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f7",
                 },
                 "type": "condition",
               },
@@ -1178,9 +1146,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f11",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f14": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f12": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Sure, that&#39;s also fine.</p>
@@ -1194,9 +1162,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f14",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f12",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f15": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f13": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Please verify that you can edit your response, and the content updates itself accordingly.</p>
@@ -1205,7 +1173,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f13",
+              "boombox-feature-utopia-vtest_text-inputs_f11",
             ],
             "digest": "c5ac9911369ca842f11bb3b1128d8c2b",
             "displayConditions": Array [
@@ -1213,7 +1181,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f11",
                 },
                 "type": "condition",
               },
@@ -1221,17 +1189,17 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f15",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f16": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f14": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f17",
+              "boombox-feature-utopia-vtest_text-inputs_f15",
             ],
             "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f13",
+              "boombox-feature-utopia-vtest_text-inputs_f11",
             ],
             "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
@@ -1239,7 +1207,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f13",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f11",
                 },
                 "type": "condition",
               },
@@ -1247,9 +1215,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f14",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f17": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f15": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Verified!</p>
@@ -1263,9 +1231,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f17",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f15",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f18": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f16": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<h2 id=\\"long-text-question\\">Long text question</h2>
@@ -1274,7 +1242,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f16",
+              "boombox-feature-utopia-vtest_text-inputs_f14",
             ],
             "digest": "cba70638ccffc719435a7a80b36191c7",
             "displayConditions": Array [
@@ -1282,7 +1250,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f14",
                 },
                 "type": "condition",
               },
@@ -1290,9 +1258,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f18",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f20": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f18": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Type some letters here, and include line breaks. Submit, then refresh the page to verify persistence.</p>
@@ -1306,9 +1274,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f20",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f18",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f21": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f19": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Is everything working as expected?</p>
@@ -1333,11 +1301,11 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f21",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f19",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f22": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f20": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f23",
+              "boombox-feature-utopia-vtest_text-inputs_f21",
             ],
             "contentType": "ContinueButton",
             "contents": "",
@@ -1359,9 +1327,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f20",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f23": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f21": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Yep!</p>
@@ -1375,9 +1343,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f23",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f21",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f24": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f22": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Please verify that you can edit your response.</p>
@@ -1386,7 +1354,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f22",
+              "boombox-feature-utopia-vtest_text-inputs_f20",
             ],
             "digest": "b24929f3ac93bcf0d952ad9064ee744b",
             "displayConditions": Array [
@@ -1394,7 +1362,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f20",
                 },
                 "type": "condition",
               },
@@ -1402,17 +1370,17 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f24",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f25": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f23": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f26",
+              "boombox-feature-utopia-vtest_text-inputs_f24",
             ],
             "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f22",
+              "boombox-feature-utopia-vtest_text-inputs_f20",
             ],
             "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
@@ -1420,7 +1388,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f22",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f20",
                 },
                 "type": "condition",
               },
@@ -1428,9 +1396,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f23",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f26": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f24": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Verified!</p>
@@ -1444,9 +1412,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f26",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f24",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f27": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f25": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Thank you!</p>
@@ -1455,7 +1423,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f25",
+              "boombox-feature-utopia-vtest_text-inputs_f23",
             ],
             "digest": "41810ed1a3c593092a267c6f8b1eaabb",
             "displayConditions": Array [
@@ -1463,7 +1431,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f23",
                 },
                 "type": "condition",
               },
@@ -1471,15 +1439,15 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f27",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f28": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f26": Object {
             "childUris": Array [],
             "contentType": "DocumentCompletionContent",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f25",
+              "boombox-feature-utopia-vtest_text-inputs_f23",
             ],
             "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
             "displayConditions": Array [
@@ -1487,7 +1455,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f25",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f23",
                 },
                 "type": "condition",
               },
@@ -1495,7 +1463,7 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f28",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f26",
           },
           "boombox-feature-utopia-vtest_text-inputs_f3": Object {
             "childUris": Array [],
@@ -1543,9 +1511,9 @@ Object {
             "isStateful": false,
             "uri": "boombox-feature-utopia-vtest_text-inputs_f4",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f8": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f7": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f9",
+              "boombox-feature-utopia-vtest_text-inputs_f8",
             ],
             "contentType": "ContinueButton",
             "contents": "",
@@ -1567,9 +1535,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f7",
           },
-          "boombox-feature-utopia-vtest_text-inputs_f9": Object {
+          "boombox-feature-utopia-vtest_text-inputs_f8": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>That&#39;s correct.</p>
@@ -1583,17 +1551,49 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_text-inputs_f8",
+          },
+          "boombox-feature-utopia-vtest_text-inputs_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>What if I put it in a header?</p>
+<h2 id=\\"you-said-your-name-is-typed-name\\">You said your name is <echo>typed-name</echo></h2>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "boombox-feature-utopia-vtest_text-inputs_typed-name",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_text-inputs_f7",
+              "boombox-feature-utopia-vtest_text-inputs_typed-name",
+            ],
+            "digest": "00b108a7ed651f43faa35bdee1dd7a67",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f7",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
             "uri": "boombox-feature-utopia-vtest_text-inputs_f9",
           },
           "boombox-feature-utopia-vtest_text-inputs_inputted-long-text": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f20",
+              "boombox-feature-utopia-vtest_text-inputs_f18",
             ],
             "contentType": "LongTextQuestion",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_text-inputs_f16",
+              "boombox-feature-utopia-vtest_text-inputs_f14",
             ],
             "digest": "cf1a8f848b17d7ac274102f3121b4865",
             "displayConditions": Array [
@@ -1601,7 +1601,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_text-inputs_f16",
+                  "uri": "boombox-feature-utopia-vtest_text-inputs_f14",
                 },
                 "type": "condition",
               },
@@ -1636,15 +1636,15 @@ Object {
       Object {
         "childUris": Array [
           "boombox-feature-utopia-vtest_response-persistence_f1",
+          "boombox-feature-utopia-vtest_response-persistence_f6",
           "boombox-feature-utopia-vtest_response-persistence_f8",
-          "boombox-feature-utopia-vtest_response-persistence_f10",
         ],
         "completionConditions": Array [
           Object {
             "data": Object {
               "operator": "status-is",
               "targetValue": "completed",
-              "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
+              "uri": "boombox-feature-utopia-vtest_response-persistence_f6",
             },
             "type": "condition",
           },
@@ -1684,33 +1684,9 @@ Object {
             "isStateful": false,
             "uri": "boombox-feature-utopia-vtest_response-persistence_f1",
           },
-          "boombox-feature-utopia-vtest_response-persistence_f10": Object {
-            "childUris": Array [],
-            "contentType": "DocumentCompletionContent",
-            "contents": "",
-            "data": Object {},
-            "dependencyUris": Array [
-              "boombox-feature-utopia-vtest_response-persistence_f8",
-            ],
-            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
-            "displayConditions": Array [
-              Object {
-                "data": Object {
-                  "operator": "status-is",
-                  "targetValue": "completed",
-                  "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
-                },
-                "type": "condition",
-              },
-            ],
-            "documentUri": "boombox-feature-utopia-vtest_response-persistence",
-            "isRequired": false,
-            "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_response-persistence_f10",
-          },
-          "boombox-feature-utopia-vtest_response-persistence_f8": Object {
+          "boombox-feature-utopia-vtest_response-persistence_f6": Object {
             "childUris": Array [
-              "boombox-feature-utopia-vtest_response-persistence_f9",
+              "boombox-feature-utopia-vtest_response-persistence_f7",
             ],
             "contentType": "ContinueButton",
             "contents": "",
@@ -1721,9 +1697,9 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_response-persistence",
             "isRequired": true,
             "isStateful": true,
-            "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f6",
           },
-          "boombox-feature-utopia-vtest_response-persistence_f9": Object {
+          "boombox-feature-utopia-vtest_response-persistence_f7": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Yep!</p>
@@ -1737,7 +1713,31 @@ Object {
             "documentUri": "boombox-feature-utopia-vtest_response-persistence",
             "isRequired": false,
             "isStateful": false,
-            "uri": "boombox-feature-utopia-vtest_response-persistence_f9",
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f7",
+          },
+          "boombox-feature-utopia-vtest_response-persistence_f8": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "boombox-feature-utopia-vtest_response-persistence_f6",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "boombox-feature-utopia-vtest_response-persistence_f6",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "boombox-feature-utopia-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "boombox-feature-utopia-vtest_response-persistence_f8",
           },
         },
         "order": 4,
@@ -2830,26 +2830,26 @@ Object {
           "smoke-testing-vtest_text-inputs_f1",
           "smoke-testing-vtest_text-inputs_typed-name",
           "smoke-testing-vtest_text-inputs_f4",
-          "smoke-testing-vtest_text-inputs_f8",
-          "smoke-testing-vtest_text-inputs_f10",
+          "smoke-testing-vtest_text-inputs_f7",
+          "smoke-testing-vtest_text-inputs_f9",
+          "smoke-testing-vtest_text-inputs_f11",
           "smoke-testing-vtest_text-inputs_f13",
-          "smoke-testing-vtest_text-inputs_f15",
+          "smoke-testing-vtest_text-inputs_f14",
           "smoke-testing-vtest_text-inputs_f16",
-          "smoke-testing-vtest_text-inputs_f18",
           "smoke-testing-vtest_text-inputs_inputted-long-text",
-          "smoke-testing-vtest_text-inputs_f21",
+          "smoke-testing-vtest_text-inputs_f19",
+          "smoke-testing-vtest_text-inputs_f20",
           "smoke-testing-vtest_text-inputs_f22",
-          "smoke-testing-vtest_text-inputs_f24",
+          "smoke-testing-vtest_text-inputs_f23",
           "smoke-testing-vtest_text-inputs_f25",
-          "smoke-testing-vtest_text-inputs_f27",
-          "smoke-testing-vtest_text-inputs_f28",
+          "smoke-testing-vtest_text-inputs_f26",
         ],
         "completionConditions": Array [
           Object {
             "data": Object {
               "operator": "status-is",
               "targetValue": "completed",
-              "uri": "smoke-testing-vtest_text-inputs_f25",
+              "uri": "smoke-testing-vtest_text-inputs_f23",
             },
             "type": "condition",
           },
@@ -2878,47 +2878,15 @@ Object {
             "isStateful": false,
             "uri": "smoke-testing-vtest_text-inputs_f1",
           },
-          "smoke-testing-vtest_text-inputs_f10": Object {
-            "childUris": Array [],
-            "contentType": "HtmlContent",
-            "contents": "<p>What if I put it in a header?</p>
-<h2 id=\\"you-said-your-name-is-typed-name\\">You said your name is <echo>typed-name</echo></h2>
-",
-            "data": Object {
-              "fragmentUrisByAlias": Object {
-                "typed-name": "smoke-testing-vtest_text-inputs_typed-name",
-              },
-              "isTemplated": true,
-            },
-            "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f8",
-              "smoke-testing-vtest_text-inputs_typed-name",
-            ],
-            "digest": "00b108a7ed651f43faa35bdee1dd7a67",
-            "displayConditions": Array [
-              Object {
-                "data": Object {
-                  "operator": "status-is",
-                  "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f8",
-                },
-                "type": "condition",
-              },
-            ],
-            "documentUri": "smoke-testing-vtest_text-inputs",
-            "isRequired": false,
-            "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f10",
-          },
-          "smoke-testing-vtest_text-inputs_f13": Object {
+          "smoke-testing-vtest_text-inputs_f11": Object {
             "childUris": Array [
-              "smoke-testing-vtest_text-inputs_f14",
+              "smoke-testing-vtest_text-inputs_f12",
             ],
             "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f8",
+              "smoke-testing-vtest_text-inputs_f7",
             ],
             "digest": "4d08219c7a33ac7904a1c3a296ebd557",
             "displayConditions": Array [
@@ -2926,7 +2894,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f8",
+                  "uri": "smoke-testing-vtest_text-inputs_f7",
                 },
                 "type": "condition",
               },
@@ -2934,9 +2902,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "smoke-testing-vtest_text-inputs_f13",
+            "uri": "smoke-testing-vtest_text-inputs_f11",
           },
-          "smoke-testing-vtest_text-inputs_f14": Object {
+          "smoke-testing-vtest_text-inputs_f12": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Sure, that&#39;s also fine.</p>
@@ -2950,9 +2918,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f14",
+            "uri": "smoke-testing-vtest_text-inputs_f12",
           },
-          "smoke-testing-vtest_text-inputs_f15": Object {
+          "smoke-testing-vtest_text-inputs_f13": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Please verify that you can edit your response, and the content updates itself accordingly.</p>
@@ -2961,7 +2929,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f13",
+              "smoke-testing-vtest_text-inputs_f11",
             ],
             "digest": "c5ac9911369ca842f11bb3b1128d8c2b",
             "displayConditions": Array [
@@ -2969,7 +2937,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f13",
+                  "uri": "smoke-testing-vtest_text-inputs_f11",
                 },
                 "type": "condition",
               },
@@ -2977,17 +2945,17 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f15",
+            "uri": "smoke-testing-vtest_text-inputs_f13",
           },
-          "smoke-testing-vtest_text-inputs_f16": Object {
+          "smoke-testing-vtest_text-inputs_f14": Object {
             "childUris": Array [
-              "smoke-testing-vtest_text-inputs_f17",
+              "smoke-testing-vtest_text-inputs_f15",
             ],
             "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f13",
+              "smoke-testing-vtest_text-inputs_f11",
             ],
             "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
@@ -2995,7 +2963,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f13",
+                  "uri": "smoke-testing-vtest_text-inputs_f11",
                 },
                 "type": "condition",
               },
@@ -3003,9 +2971,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "smoke-testing-vtest_text-inputs_f16",
+            "uri": "smoke-testing-vtest_text-inputs_f14",
           },
-          "smoke-testing-vtest_text-inputs_f17": Object {
+          "smoke-testing-vtest_text-inputs_f15": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Verified!</p>
@@ -3019,9 +2987,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f17",
+            "uri": "smoke-testing-vtest_text-inputs_f15",
           },
-          "smoke-testing-vtest_text-inputs_f18": Object {
+          "smoke-testing-vtest_text-inputs_f16": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<h2 id=\\"long-text-question\\">Long text question</h2>
@@ -3030,7 +2998,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f16",
+              "smoke-testing-vtest_text-inputs_f14",
             ],
             "digest": "cba70638ccffc719435a7a80b36191c7",
             "displayConditions": Array [
@@ -3038,7 +3006,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f16",
+                  "uri": "smoke-testing-vtest_text-inputs_f14",
                 },
                 "type": "condition",
               },
@@ -3046,9 +3014,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f18",
+            "uri": "smoke-testing-vtest_text-inputs_f16",
           },
-          "smoke-testing-vtest_text-inputs_f20": Object {
+          "smoke-testing-vtest_text-inputs_f18": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Type some letters here, and include line breaks. Submit, then refresh the page to verify persistence.</p>
@@ -3062,9 +3030,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f20",
+            "uri": "smoke-testing-vtest_text-inputs_f18",
           },
-          "smoke-testing-vtest_text-inputs_f21": Object {
+          "smoke-testing-vtest_text-inputs_f19": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Is everything working as expected?</p>
@@ -3089,11 +3057,11 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f21",
+            "uri": "smoke-testing-vtest_text-inputs_f19",
           },
-          "smoke-testing-vtest_text-inputs_f22": Object {
+          "smoke-testing-vtest_text-inputs_f20": Object {
             "childUris": Array [
-              "smoke-testing-vtest_text-inputs_f23",
+              "smoke-testing-vtest_text-inputs_f21",
             ],
             "contentType": "ContinueButton",
             "contents": "",
@@ -3115,9 +3083,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "smoke-testing-vtest_text-inputs_f22",
+            "uri": "smoke-testing-vtest_text-inputs_f20",
           },
-          "smoke-testing-vtest_text-inputs_f23": Object {
+          "smoke-testing-vtest_text-inputs_f21": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Yep!</p>
@@ -3131,9 +3099,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f23",
+            "uri": "smoke-testing-vtest_text-inputs_f21",
           },
-          "smoke-testing-vtest_text-inputs_f24": Object {
+          "smoke-testing-vtest_text-inputs_f22": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Please verify that you can edit your response.</p>
@@ -3142,7 +3110,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f22",
+              "smoke-testing-vtest_text-inputs_f20",
             ],
             "digest": "b24929f3ac93bcf0d952ad9064ee744b",
             "displayConditions": Array [
@@ -3150,7 +3118,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f22",
+                  "uri": "smoke-testing-vtest_text-inputs_f20",
                 },
                 "type": "condition",
               },
@@ -3158,17 +3126,17 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f24",
+            "uri": "smoke-testing-vtest_text-inputs_f22",
           },
-          "smoke-testing-vtest_text-inputs_f25": Object {
+          "smoke-testing-vtest_text-inputs_f23": Object {
             "childUris": Array [
-              "smoke-testing-vtest_text-inputs_f26",
+              "smoke-testing-vtest_text-inputs_f24",
             ],
             "contentType": "ContinueButton",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f22",
+              "smoke-testing-vtest_text-inputs_f20",
             ],
             "digest": "898e4da44ecaa7463aad525f007837e5",
             "displayConditions": Array [
@@ -3176,7 +3144,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f22",
+                  "uri": "smoke-testing-vtest_text-inputs_f20",
                 },
                 "type": "condition",
               },
@@ -3184,9 +3152,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "smoke-testing-vtest_text-inputs_f25",
+            "uri": "smoke-testing-vtest_text-inputs_f23",
           },
-          "smoke-testing-vtest_text-inputs_f26": Object {
+          "smoke-testing-vtest_text-inputs_f24": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Verified!</p>
@@ -3200,9 +3168,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f26",
+            "uri": "smoke-testing-vtest_text-inputs_f24",
           },
-          "smoke-testing-vtest_text-inputs_f27": Object {
+          "smoke-testing-vtest_text-inputs_f25": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Thank you!</p>
@@ -3211,7 +3179,7 @@ Object {
               "isTemplated": false,
             },
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f25",
+              "smoke-testing-vtest_text-inputs_f23",
             ],
             "digest": "41810ed1a3c593092a267c6f8b1eaabb",
             "displayConditions": Array [
@@ -3219,7 +3187,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f25",
+                  "uri": "smoke-testing-vtest_text-inputs_f23",
                 },
                 "type": "condition",
               },
@@ -3227,15 +3195,15 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f27",
+            "uri": "smoke-testing-vtest_text-inputs_f25",
           },
-          "smoke-testing-vtest_text-inputs_f28": Object {
+          "smoke-testing-vtest_text-inputs_f26": Object {
             "childUris": Array [],
             "contentType": "DocumentCompletionContent",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f25",
+              "smoke-testing-vtest_text-inputs_f23",
             ],
             "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
             "displayConditions": Array [
@@ -3243,7 +3211,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f25",
+                  "uri": "smoke-testing-vtest_text-inputs_f23",
                 },
                 "type": "condition",
               },
@@ -3251,7 +3219,7 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_text-inputs_f28",
+            "uri": "smoke-testing-vtest_text-inputs_f26",
           },
           "smoke-testing-vtest_text-inputs_f3": Object {
             "childUris": Array [],
@@ -3299,9 +3267,9 @@ Object {
             "isStateful": false,
             "uri": "smoke-testing-vtest_text-inputs_f4",
           },
-          "smoke-testing-vtest_text-inputs_f8": Object {
+          "smoke-testing-vtest_text-inputs_f7": Object {
             "childUris": Array [
-              "smoke-testing-vtest_text-inputs_f9",
+              "smoke-testing-vtest_text-inputs_f8",
             ],
             "contentType": "ContinueButton",
             "contents": "",
@@ -3323,9 +3291,9 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": true,
             "isStateful": true,
-            "uri": "smoke-testing-vtest_text-inputs_f8",
+            "uri": "smoke-testing-vtest_text-inputs_f7",
           },
-          "smoke-testing-vtest_text-inputs_f9": Object {
+          "smoke-testing-vtest_text-inputs_f8": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>That&#39;s correct.</p>
@@ -3339,17 +3307,49 @@ Object {
             "documentUri": "smoke-testing-vtest_text-inputs",
             "isRequired": false,
             "isStateful": false,
+            "uri": "smoke-testing-vtest_text-inputs_f8",
+          },
+          "smoke-testing-vtest_text-inputs_f9": Object {
+            "childUris": Array [],
+            "contentType": "HtmlContent",
+            "contents": "<p>What if I put it in a header?</p>
+<h2 id=\\"you-said-your-name-is-typed-name\\">You said your name is <echo>typed-name</echo></h2>
+",
+            "data": Object {
+              "fragmentUrisByAlias": Object {
+                "typed-name": "smoke-testing-vtest_text-inputs_typed-name",
+              },
+              "isTemplated": true,
+            },
+            "dependencyUris": Array [
+              "smoke-testing-vtest_text-inputs_f7",
+              "smoke-testing-vtest_text-inputs_typed-name",
+            ],
+            "digest": "00b108a7ed651f43faa35bdee1dd7a67",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_text-inputs_f7",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_text-inputs",
+            "isRequired": false,
+            "isStateful": false,
             "uri": "smoke-testing-vtest_text-inputs_f9",
           },
           "smoke-testing-vtest_text-inputs_inputted-long-text": Object {
             "childUris": Array [
-              "smoke-testing-vtest_text-inputs_f20",
+              "smoke-testing-vtest_text-inputs_f18",
             ],
             "contentType": "LongTextQuestion",
             "contents": "",
             "data": Object {},
             "dependencyUris": Array [
-              "smoke-testing-vtest_text-inputs_f16",
+              "smoke-testing-vtest_text-inputs_f14",
             ],
             "digest": "cf1a8f848b17d7ac274102f3121b4865",
             "displayConditions": Array [
@@ -3357,7 +3357,7 @@ Object {
                 "data": Object {
                   "operator": "status-is",
                   "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_text-inputs_f16",
+                  "uri": "smoke-testing-vtest_text-inputs_f14",
                 },
                 "type": "condition",
               },
@@ -3392,15 +3392,15 @@ Object {
       Object {
         "childUris": Array [
           "smoke-testing-vtest_response-persistence_f1",
+          "smoke-testing-vtest_response-persistence_f6",
           "smoke-testing-vtest_response-persistence_f8",
-          "smoke-testing-vtest_response-persistence_f10",
         ],
         "completionConditions": Array [
           Object {
             "data": Object {
               "operator": "status-is",
               "targetValue": "completed",
-              "uri": "smoke-testing-vtest_response-persistence_f8",
+              "uri": "smoke-testing-vtest_response-persistence_f6",
             },
             "type": "condition",
           },
@@ -3440,33 +3440,9 @@ Object {
             "isStateful": false,
             "uri": "smoke-testing-vtest_response-persistence_f1",
           },
-          "smoke-testing-vtest_response-persistence_f10": Object {
-            "childUris": Array [],
-            "contentType": "DocumentCompletionContent",
-            "contents": "",
-            "data": Object {},
-            "dependencyUris": Array [
-              "smoke-testing-vtest_response-persistence_f8",
-            ],
-            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
-            "displayConditions": Array [
-              Object {
-                "data": Object {
-                  "operator": "status-is",
-                  "targetValue": "completed",
-                  "uri": "smoke-testing-vtest_response-persistence_f8",
-                },
-                "type": "condition",
-              },
-            ],
-            "documentUri": "smoke-testing-vtest_response-persistence",
-            "isRequired": false,
-            "isStateful": false,
-            "uri": "smoke-testing-vtest_response-persistence_f10",
-          },
-          "smoke-testing-vtest_response-persistence_f8": Object {
+          "smoke-testing-vtest_response-persistence_f6": Object {
             "childUris": Array [
-              "smoke-testing-vtest_response-persistence_f9",
+              "smoke-testing-vtest_response-persistence_f7",
             ],
             "contentType": "ContinueButton",
             "contents": "",
@@ -3477,9 +3453,9 @@ Object {
             "documentUri": "smoke-testing-vtest_response-persistence",
             "isRequired": true,
             "isStateful": true,
-            "uri": "smoke-testing-vtest_response-persistence_f8",
+            "uri": "smoke-testing-vtest_response-persistence_f6",
           },
-          "smoke-testing-vtest_response-persistence_f9": Object {
+          "smoke-testing-vtest_response-persistence_f7": Object {
             "childUris": Array [],
             "contentType": "HtmlContent",
             "contents": "<p>Yep!</p>
@@ -3493,7 +3469,31 @@ Object {
             "documentUri": "smoke-testing-vtest_response-persistence",
             "isRequired": false,
             "isStateful": false,
-            "uri": "smoke-testing-vtest_response-persistence_f9",
+            "uri": "smoke-testing-vtest_response-persistence_f7",
+          },
+          "smoke-testing-vtest_response-persistence_f8": Object {
+            "childUris": Array [],
+            "contentType": "DocumentCompletionContent",
+            "contents": "",
+            "data": Object {},
+            "dependencyUris": Array [
+              "smoke-testing-vtest_response-persistence_f6",
+            ],
+            "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
+            "displayConditions": Array [
+              Object {
+                "data": Object {
+                  "operator": "status-is",
+                  "targetValue": "completed",
+                  "uri": "smoke-testing-vtest_response-persistence_f6",
+                },
+                "type": "condition",
+              },
+            ],
+            "documentUri": "smoke-testing-vtest_response-persistence",
+            "isRequired": false,
+            "isStateful": false,
+            "uri": "smoke-testing-vtest_response-persistence_f8",
           },
         },
         "order": 4,

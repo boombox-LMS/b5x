@@ -7,6 +7,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { Fragment } from "../abstractClasses/Fragment";
 import { z } from "zod";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -38,6 +39,15 @@ export const EchoDataSchema = z
   .strict();
 
 type EchoData = z.infer<typeof EchoDataSchema>;
+
+export const EchoApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Echo"),
+  contents: z.string().min(1),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.string()).length(0),
+  data: EchoDataSchema,
+}).strict();
 
 // Class ------------------------------------------------------------
 
@@ -73,6 +83,7 @@ export class Echo extends FragmentViaBxmlTag {
 
     // @ts-ignore
     this.contents = render(this.bxmlNode);
+    this.childBxmlNodes = [];
   }
 
   #buildData(bxmlNode: EchoTag) {
@@ -84,3 +95,12 @@ export class Echo extends FragmentViaBxmlTag {
     return EchoDataSchema.parse(result);
   }
 }
+
+export const manifest = {
+  contentType: "Echo",
+  tagName: "echo",
+  exampleMarkupStrings: [exampleEchoMarkup],
+  parsingClass: Echo,
+  tagSchema: EchoTagSchema,
+  apiDataSchema: EchoApiDataSchema,
+};

@@ -465,3 +465,23 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example echo markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Echo",
+  "contents": "<echo>my-user-inputted-value</echo>",
+  "data": Object {
+    "fragmentUrisByAlias": Object {
+      "my-user-inputted-value": null,
+    },
+  },
+  "dependencyUris": Array [],
+  "digest": "f3cf3606e853b5424f5b83dc8dee6924",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
