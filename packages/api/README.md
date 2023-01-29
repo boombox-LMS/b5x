@@ -1,5 +1,7 @@
 # Boombox backend server (@b5x/api)
 
+[View test coverage report](https://boombox-lms.github.io/b5x/coverage/api)
+
 ## Responsibilities
 
 - Receive new topic data from the viewer app

@@ -1,5 +1,7 @@
 # Boombox LMS types (@b5x/types)
 
+No test coverage report is available.
+
 ## Responsibilities
 
 - House any TypeScript interfaces shared by more than one Boombox module, to ensure that these modules are aligned.
