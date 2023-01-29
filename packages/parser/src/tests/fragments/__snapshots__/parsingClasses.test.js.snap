@@ -606,3 +606,85 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "SingleSelectQuestion",
+  "contents": "",
+  "data": Object {
+    "choices": Array [
+      Object {
+        "contents": "the Midwest",
+        "value": "midwest",
+      },
+      Object {
+        "contents": "the South",
+        "value": "south",
+      },
+      Object {
+        "contents": "the East Coast",
+        "value": "east-coast",
+      },
+      Object {
+        "contents": "the West Coast",
+        "value": "west-coast",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "36689c382439e6bf42c91de3316cb903",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
+exports[`placeholder The example undefined markup string at index 1 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "MultiSelectQuestion",
+  "contents": "",
+  "data": Object {
+    "choices": Array [
+      Object {
+        "contents": "Pink",
+        "value": "pink",
+      },
+      Object {
+        "contents": "Green",
+        "value": "green",
+      },
+      Object {
+        "contents": "Blue",
+        "value": "blue",
+      },
+      Object {
+        "contents": "Purple",
+        "value": "purple",
+      },
+      Object {
+        "contents": "Yellow",
+        "value": "yellow",
+      },
+      Object {
+        "contents": "Orange",
+        "value": "orange",
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "2d7599c6e1289966b462e2f79e50b4d1",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

@@ -2,6 +2,7 @@ import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -102,6 +103,14 @@ export const SelectQuestionDataSchema = z
 
 type SelectQuestionData = z.infer<typeof SelectQuestionDataSchema>;
 
+export const SelectQuestionApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.enum(["SingleSelectQuestion", "MultiSelectQuestion"]),
+  data: SelectQuestionDataSchema,
+  childUris: z.array(z.string()).min(1),
+  isStateful: z.literal(true),
+  contents: z.literal(''),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 const CHOICE_TAG_NAME = "choice";
@@ -145,3 +154,16 @@ export class SelectQuestion extends FragmentViaBxmlTag {
     };
   }
 }
+
+// TODO: This is an unusual case (one parsing class supporing two tags), 
+// and the standard manifest format
+// doesn't apply here. Does the manifest format need to change to
+// accommodate cases like this? The manifests may move to their own file
+// anyway, in which case we could just import vars from this file
+// in order to create two manifests that point to this parsing class
+// and extend its apiData schema.
+export const manifest = {
+  exampleMarkupStrings: [exampleSingleSelectQuestionMarkup, exampleMultiSelectQuestionMarkup],
+  tagSchema: SelectQuestionTagSchema,
+  apiDataSchema: SelectQuestionApiDataSchema,
+};
