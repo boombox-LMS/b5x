@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -23,6 +24,14 @@ const ContinueButtonTagSchema = z
 
 type ContinueButtonTag = z.infer<typeof ContinueButtonTagSchema>;
 
+export const ContinueButtonApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("ContinueButton"),
+  contents: z.literal(''),
+  data: z.object({}).strict(),
+  isStateful: z.literal(true),
+  childUris: z.array(z.string()).min(1),
+});
+
 // Class ------------------------------------------------------------
 
 /**
@@ -37,3 +46,12 @@ export class ContinueButton extends FragmentViaBxmlTag {
     this.convertToStatefulFragment();
   }
 }
+
+export const manifest = {
+  contentType: "ContinueButton",
+  tagName: "continue-button",
+  exampleMarkupStrings: [exampleContinueButtonMarkup],
+  parsingClass: ContinueButton,
+  tagSchema: ContinueButtonTagSchema,
+  apiDataSchema: ContinueButtonApiDataSchema,
+};
