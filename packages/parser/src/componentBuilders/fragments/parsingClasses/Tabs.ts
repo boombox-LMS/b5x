@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { TabTagSchema, TabTag } from "./Tab";
+import { RawFragmentSchema } from "@b5x/types";
 
 /**
  * Example markup for the `tabs` tag.
@@ -39,6 +40,15 @@ const TabsTagSchema = z
 
 type TabsTag = z.infer<typeof TabsTagSchema>;
 
+export const TabsApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Tabs"),
+  contents: z.literal(""),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.string()).min(1),
+  data: z.object({}).strict(),
+}).strict();
+
 /**
  * A fragment that renders as a set of tabs
  * that the user can toggle between.
@@ -54,3 +64,12 @@ export class Tabs extends FragmentViaBxmlTag {
     // this.convertToStatefulFragment()   TODO: It might be helpful to remember on page refresh which tab was active.
   }
 }
+
+export const manifest = {
+  contentType: "Tabs",
+  exampleMarkupStrings: [exampleTabsMarkup],
+  apiDataSchema: TabsApiDataSchema,
+  parsingClass: Tabs,
+  tagName: "tabs",
+  tagSchema: TabsTagSchema,
+};

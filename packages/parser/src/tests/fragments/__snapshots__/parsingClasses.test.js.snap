@@ -750,6 +750,26 @@ Object {
 }
 `;
 
+exports[`placeholder The example tabs markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+    "test-fragment-uri",
+    "test-fragment-uri",
+  ],
+  "contentType": "Tabs",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "2a285ab348be9248219d8d0d8a27e14e",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [
