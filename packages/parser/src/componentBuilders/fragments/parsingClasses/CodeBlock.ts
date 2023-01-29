@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { z } from "zod";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -50,6 +51,15 @@ export const CodeBlockDataSchema = z
 
 type CodeBlockData = z.infer<typeof CodeBlockDataSchema>;
 
+export const CodeBlockApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("CodeBlock"),
+  contents: z.string(),
+  data: CodeBlockDataSchema,
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  childUris: z.array(z.any()).length(0),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -74,3 +84,12 @@ export class CodeBlock extends FragmentViaBxmlTag {
     return this.bxmlNode.attribs.language || "text";
   }
 }
+
+export const manifest = {
+  contentType: "CodeBlock",
+  tagName: "code-block",
+  parsingClass: CodeBlock,
+  exampleMarkupStrings: [exampleCodeBlockMarkup],
+  tagSchema: CodeBlockTagSchema,
+  apiDataSchema: CodeBlockApiDataSchema,
+};

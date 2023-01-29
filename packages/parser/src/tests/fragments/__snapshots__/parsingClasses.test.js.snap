@@ -129,3 +129,32 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example code-block markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "CodeBlock",
+  "contents": "class Dog {
+  constructor(name) {
+    this.name = name
+  }
+
+  speak() {
+    console.log(&quot;Woof!&quot;)
+  }
+}
+
+const fido = new Dog(&apos;fido&apos;)
+fido.speak()",
+  "data": Object {
+    "language": "javascript",
+  },
+  "dependencyUris": Array [],
+  "digest": "a193478a31ab0f625f1a030168f8d5bc",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
