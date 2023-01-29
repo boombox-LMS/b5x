@@ -1,6 +1,6 @@
 const {
   exampleSlideMarkup,
-} = require("../../../dist/componentBuilders/fragments/Slide");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Slide");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Slide fragment builds as expected", () => {

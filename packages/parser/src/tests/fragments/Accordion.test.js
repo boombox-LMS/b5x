@@ -1,6 +1,6 @@
 const {
   exampleAccordionMarkup,
-} = require("../../../dist/componentBuilders/fragments/Accordion");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Accordion");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Accordion fragment builds as expected", () => {

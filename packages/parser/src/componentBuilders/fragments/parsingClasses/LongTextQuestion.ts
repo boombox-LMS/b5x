@@ -1,7 +1,7 @@
-import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
+import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../types/bxmlNodes";
-import { FragmentViaBxmlTagParams } from "../../types/fragments";
+import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { ConditionsHelper } from "@b5x/conditions-manager";
 
 // Markup -----------------------------------------------------------

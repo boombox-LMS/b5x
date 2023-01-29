@@ -1,6 +1,6 @@
 const {
   exampleShortTextQuestionMarkup,
-} = require("../../../dist/componentBuilders/fragments/ShortTextQuestion");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/ShortTextQuestion");
 const { RawFragmentSchema } = require("@b5x/types");
 const { z } = require("zod");
 

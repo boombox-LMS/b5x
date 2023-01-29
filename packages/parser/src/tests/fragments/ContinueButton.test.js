@@ -1,6 +1,6 @@
 const {
   exampleContinueButtonMarkup,
-} = require("../../../dist/componentBuilders/fragments/ContinueButton");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/ContinueButton");
 const { RawFragmentSchema } = require("@b5x/types");
 const { z } = require("zod");
 

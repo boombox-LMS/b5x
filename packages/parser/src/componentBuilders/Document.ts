@@ -1,5 +1,5 @@
 import { FragmentBuilder } from "./FragmentBuilder";
-import { Fragment } from "./fragments/Fragment";
+import { Fragment } from "./fragments/abstractClasses/Fragment";
 import { marked } from "marked";
 const htmlparser2 = require("htmlparser2");
 import { parse as parseYaml } from "yaml";

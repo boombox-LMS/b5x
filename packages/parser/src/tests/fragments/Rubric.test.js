@@ -1,7 +1,7 @@
 const {
   exampleRubricMarkup,
   RubricDataSchema,
-} = require("../../../dist/componentBuilders/fragments/Rubric");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Rubric");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Rubric fragment builds as expected", () => {

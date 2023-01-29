@@ -1,7 +1,7 @@
 const {
   exampleEchoMarkup,
   EchoDataSchema,
-} = require("../../../dist/componentBuilders/fragments/Echo");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Echo");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Echo fragment builds as expected", () => {

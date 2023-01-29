@@ -1,7 +1,7 @@
 const {
   exampleChecklistMarkup,
   ChecklistDataSchema,
-} = require("../../../dist/componentBuilders/fragments/Checklist");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Checklist");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Checklist fragment builds as expected", () => {

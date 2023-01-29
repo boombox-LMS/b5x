@@ -1,6 +1,6 @@
 const {
   exampleShowMarkup,
-} = require("../../../dist/componentBuilders/fragments/Show");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Show");
 const { RawFragmentSchema, DraftConditionsListSchema } = require("@b5x/types");
 
 describe("The Show fragment builds as expected", () => {

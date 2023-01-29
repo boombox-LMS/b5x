@@ -2,7 +2,7 @@ const {
   exampleBreakoutMarkupOne,
   exampleBreakoutMarkupTwo,
   exampleBreakoutMarkupThree,
-} = require("../../../dist/componentBuilders/fragments/Breakout");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Breakout");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The simple breakout fragment builds as expected", () => {

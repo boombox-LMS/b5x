@@ -2,11 +2,11 @@ import { pascalcase } from "stringcase";
 import { render } from "dom-serializer";
 import { marked } from "marked";
 import { Fragment } from "./Fragment";
-import { BxmlNode, BxmlTagNode } from "../../types/bxmlNodes";
+import { BxmlNode, BxmlTagNode } from "../../../types/bxmlNodes";
 import {
   FragmentViaBxmlTagParams,
   FragmentViaBxmlTagParamsSchema,
-} from "../../types/fragments";
+} from "../../../types/fragments";
 import { FragmentContentType, FragmentContentTypeSchema } from "@b5x/types";
 
 /**

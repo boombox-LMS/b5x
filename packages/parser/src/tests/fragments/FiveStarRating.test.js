@@ -1,6 +1,6 @@
 const {
   exampleFiveStarRatingMarkup,
-} = require("../../../dist/componentBuilders/fragments/FiveStarRating");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/FiveStarRating");
 const { RawFragmentSchema } = require("@b5x/types");
 const { z } = require("zod");
 

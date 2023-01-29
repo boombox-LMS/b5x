@@ -1,6 +1,6 @@
 const {
   exampleWarningMarkup,
-} = require("../../../dist/componentBuilders/fragments/Warning");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Warning");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Warning fragment builds as expected", () => {

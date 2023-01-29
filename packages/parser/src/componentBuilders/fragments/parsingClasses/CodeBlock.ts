@@ -1,7 +1,7 @@
-import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
-import { BxmlTextNodeSchema } from "../../types/bxmlNodes";
+import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
+import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { z } from "zod";
-import { FragmentViaBxmlTagParams } from "../../types/fragments";
+import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 
 // Markup -----------------------------------------------------------
 

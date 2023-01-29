@@ -6,16 +6,17 @@ import {
   RawFragment,
   ConditionsListSchema,
   FragmentContentType,
+  RawFragmentSchema,
 } from "@b5x/types";
 const htmlparser2 = require("htmlparser2");
 import {
   FragmentParams,
   FragmentParamsSchema,
   FragmentCombinationResult,
-} from "../../types/fragments";
-import { Document } from "../Document";
-import { BxmlNode } from "../../types/bxmlNodes";
-import { coerceToBxmlNode } from "../../types/nodeCoercion";
+} from "../../../types/fragments";
+import { Document } from "../../Document";
+import { BxmlNode } from "../../../types/bxmlNodes";
+import { coerceToBxmlNode } from "../../../types/nodeCoercion";
 const _ = require("lodash");
 
 const IMAGE_REGEX = /\.(gif|jpe?g|tiff?|png|webp|bmp|svg)$/i;
@@ -41,6 +42,7 @@ export class Fragment {
   bxmlNode?: BxmlNode;
   childBxmlNodes: BxmlNode[];
   combinesWith: any; // TODO: Not sure why TS is unhappy with Record<FragmentContentType, Function> here, which is the actual type
+  apiDataSchema: any;
 
   /**
    *  Child fragments should call this constructor function as well
@@ -75,6 +77,7 @@ export class Fragment {
      */
     this.childFragments = [];
     this.childBxmlNodes = [];
+    this.apiDataSchema = RawFragmentSchema;
   }
 
   #detectAlias(params: FragmentParams) {
@@ -271,7 +274,7 @@ export class Fragment {
    *  Represent the fragment as a JSON blob for shipping to the web app.
    */
   packageForApi(): RawFragment {
-    return {
+    const json = {
       uri: this.uri,
       documentUri: this.document.uri,
       displayConditions: this.displayConditions,
@@ -288,5 +291,9 @@ export class Fragment {
         conditions: this.displayConditions,
       }),
     };
+    return json;
+    // TODO: Enable this once all of the fragment schemas have been defined
+    // and set as this.apiDataSchema within the parsing classes
+    // return this.apiDataSchema.parse(json);
   }
 }

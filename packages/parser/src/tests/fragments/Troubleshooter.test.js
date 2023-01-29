@@ -1,7 +1,7 @@
 const {
   exampleTroubleshooterMarkup,
   TroubleshooterDataSchema,
-} = require("../../../dist/componentBuilders/fragments/Troubleshooter");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Troubleshooter");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Troubleshooter fragment builds as expected", () => {

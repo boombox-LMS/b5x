@@ -1,7 +1,7 @@
 const {
   exampleMermaidDiagramMarkup,
   MermaidDiagramDataSchema,
-} = require("../../../dist/componentBuilders/fragments/MermaidDiagram");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/MermaidDiagram");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The MermaidDiagram fragment builds as expected", () => {

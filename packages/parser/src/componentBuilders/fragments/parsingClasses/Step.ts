@@ -1,8 +1,8 @@
 // TODO: Change hasState to hasValue, and StatefulFragment to FragmentWithValue
-import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
+import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../types/bxmlNodes";
-import { FragmentViaBxmlTagParams } from "../../types/fragments";
+import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 
 // Markup -----------------------------------------------------------
 

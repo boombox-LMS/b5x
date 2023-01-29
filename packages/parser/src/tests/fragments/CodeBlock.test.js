@@ -1,6 +1,6 @@
 const {
   exampleCodeBlockMarkup,
-} = require("../../../dist/componentBuilders/fragments/CodeBlock");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/CodeBlock");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The CodeBlock fragment builds as expected", () => {

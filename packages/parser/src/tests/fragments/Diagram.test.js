@@ -1,7 +1,7 @@
 const {
   exampleDiagramMarkup,
   DiagramDataSchema,
-} = require("../../../dist/componentBuilders/fragments/Diagram");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Diagram");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Diagram fragment builds as expected", () => {

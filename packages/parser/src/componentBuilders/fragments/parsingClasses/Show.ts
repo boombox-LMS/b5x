@@ -1,8 +1,8 @@
-import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
+import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { ConditionsHelper } from "@b5x/conditions-manager";
 import { z } from "zod";
-import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../types/bxmlNodes";
-import { FragmentViaBxmlTagParams } from "../../types/fragments";
+import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 
 // TODO: The resulting fragments from Slide and Show are functionally similar.
 // Have them become Container fragments so they can all be rendered with the same React component?

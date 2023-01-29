@@ -1,6 +1,6 @@
 const {
   exampleStepMarkup,
-} = require("../../../dist/componentBuilders/fragments/Step");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Step");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Step fragment builds as expected", () => {

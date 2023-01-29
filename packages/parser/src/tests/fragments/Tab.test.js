@@ -1,6 +1,6 @@
 const {
   exampleTabMarkup,
-} = require("../../../dist/componentBuilders/fragments/Tab");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Tab");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Tab fragment builds as expected", () => {

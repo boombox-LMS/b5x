@@ -1,6 +1,6 @@
 const {
   exampleSentimentCheckMarkup,
-} = require("../../../dist/componentBuilders/fragments/SentimentCheck");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/SentimentCheck");
 const { RawFragmentSchema } = require("@b5x/types");
 const { z } = require("zod");
 

@@ -1,6 +1,6 @@
 const {
   exampleSlideshowMarkup,
-} = require("../../../dist/componentBuilders/fragments/Slideshow");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/Slideshow");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The Slideshow fragment builds as expected", () => {

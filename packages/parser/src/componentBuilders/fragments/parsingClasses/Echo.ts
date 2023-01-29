@@ -2,10 +2,10 @@ import { render } from "dom-serializer";
 import {
   FragmentViaBxmlTagParams,
   FragmentCombinationResult,
-} from "../../types/fragments";
-import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
-import { BxmlTextNodeSchema } from "../../types/bxmlNodes";
-import { Fragment } from "./Fragment";
+} from "../../../types/fragments";
+import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
+import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import { Fragment } from "../abstractClasses/Fragment";
 import { z } from "zod";
 
 // Markup -----------------------------------------------------------

@@ -1,8 +1,8 @@
 import {
   FragmentViaArgsParams,
   FragmentViaArgsParamsSchema,
-} from "../../types/fragments";
-import { Fragment } from "./Fragment";
+} from "../../../types/fragments";
+import { Fragment } from "../abstractClasses/Fragment";
 
 /**
  * This class allows a fragment to be created solely via parameters,

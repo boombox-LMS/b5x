@@ -1,7 +1,7 @@
 const {
   exampleVerticalVisualListMarkup,
   VisualListDataSchema,
-} = require("../../../dist/componentBuilders/fragments/VisualList");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/VisualList");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The VisualList fragment builds as expected", () => {

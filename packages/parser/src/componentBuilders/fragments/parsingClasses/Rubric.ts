@@ -1,9 +1,9 @@
-import { FragmentViaBxmlTag } from "./FragmentViaBxmlTag";
+import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import md5 from "md5";
 import { render } from "dom-serializer";
-import { BxmlTextNodeSchema } from "../../types/bxmlNodes";
+import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { z } from "zod";
-import { FragmentViaBxmlTagParams } from "../../types/fragments";
+import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 
 /**
  * Example markup for the `rubric` tag.

@@ -2,8 +2,8 @@ import { Fragment } from "./Fragment";
 import { render } from "dom-serializer";
 const htmlparser2 = require("htmlparser2");
 import { marked } from "marked";
-import { BxmlChildNode } from "../../types/bxmlNodes";
-import { FragmentCombinationResult } from "../../types/fragments";
+import { BxmlChildNode } from "../../../types/bxmlNodes";
+import { FragmentCombinationResult } from "../../../types/fragments";
 const _ = require("lodash");
 
 const COMPATIBLE_FRAGMENT_TYPES = [

@@ -2,7 +2,7 @@ const {
   exampleSingleSelectQuestionMarkup,
   exampleMultiSelectQuestionMarkup,
   SelectQuestionDataSchema,
-} = require("../../../dist/componentBuilders/fragments/SelectQuestion");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/SelectQuestion");
 const { RawFragmentSchema } = require("@b5x/types");
 
 describe("The SelectQuestion fragment returns the expected data for single-select questions", () => {

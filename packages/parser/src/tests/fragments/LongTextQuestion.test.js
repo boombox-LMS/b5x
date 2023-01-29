@@ -1,6 +1,6 @@
 const {
   exampleLongTextQuestionMarkup,
-} = require("../../../dist/componentBuilders/fragments/LongTextQuestion");
+} = require("../../../dist/componentBuilders/fragments/parsingClasses/LongTextQuestion");
 const { RawFragmentSchema } = require("@b5x/types");
 const { z } = require("zod");
 
