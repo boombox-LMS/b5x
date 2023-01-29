@@ -176,3 +176,292 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example diagram markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "Diagram",
+  "contents": "",
+  "data": Object {
+    "elements": Array [
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "1",
+          "id": "client",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "1",
+          "id": "client-content",
+          "label": "Client",
+          "parent": "client",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "3",
+          "id": "lb",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "3",
+          "id": "lb-content",
+          "label": "Load balancer",
+          "parent": "lb",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "5",
+          "id": "server1",
+          "row": "1",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "5",
+          "id": "server1-content",
+          "label": "App server",
+          "parent": "server1",
+          "row": "1",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "5",
+          "id": "server2",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "5",
+          "id": "server2-content",
+          "label": "App server",
+          "parent": "server2",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "5",
+          "id": "server3",
+          "row": "3",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "5",
+          "id": "server3-content",
+          "label": "App server",
+          "parent": "server3",
+          "row": "3",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [],
+        "data": Object {
+          "col": "7",
+          "id": "db",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "node--icon",
+        ],
+        "data": Object {
+          "col": "7",
+          "id": "db-content",
+          "label": "Database",
+          "parent": "db",
+          "row": "2",
+        },
+        "group": "nodes",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+          "edge--horizontal",
+        ],
+        "data": Object {
+          "id": "client-lb-http",
+          "label": "http",
+          "source": "client",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server1-lb-http",
+          "label": "http",
+          "source": "server1",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+          "edge--horizontal",
+        ],
+        "data": Object {
+          "id": "server2-lb-http",
+          "label": "http",
+          "source": "server2",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server3-lb-http",
+          "label": "http",
+          "source": "server3",
+          "target": "lb",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server1-db-http",
+          "label": "http",
+          "source": "server1",
+          "target": "db",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+          "edge--horizontal",
+        ],
+        "data": Object {
+          "id": "server2-db-http",
+          "label": "http",
+          "source": "server2",
+          "target": "db",
+        },
+        "group": "edges",
+      },
+      Object {
+        "classes": Array [
+          "edge--source-arrow",
+          "edge--target-arrow",
+        ],
+        "data": Object {
+          "id": "server3-db-http",
+          "label": "http",
+          "source": "server3",
+          "target": "db",
+        },
+        "group": "edges",
+      },
+    ],
+    "stylesheet": Array [
+      Object {
+        "selector": "#client-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/ic/baseline-phone-android.svg",
+        },
+      },
+      Object {
+        "selector": "#lb-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/carbon/network-2.svg",
+        },
+      },
+      Object {
+        "selector": "#server1-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mingcute/server-line.svg",
+        },
+      },
+      Object {
+        "selector": "#server2-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mingcute/server-line.svg",
+        },
+      },
+      Object {
+        "selector": "#server3-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mingcute/server-line.svg",
+        },
+      },
+      Object {
+        "selector": "#db-content",
+        "style": Object {
+          "backgroundFit": "contain",
+          "backgroundImage": "https://api.iconify.design/mdi/database-outline.svg",
+        },
+      },
+    ],
+  },
+  "dependencyUris": Array [],
+  "digest": "58a4296b88f8ccd47c698a35ed7c0391",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;

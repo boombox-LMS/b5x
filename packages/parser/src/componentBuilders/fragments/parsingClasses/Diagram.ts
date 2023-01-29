@@ -1,6 +1,7 @@
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -172,6 +173,15 @@ export const DiagramDataSchema = z.object({
 
 type DiagramData = z.infer<typeof DiagramDataSchema>;
 
+export const DiagramApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Diagram"),
+  childUris: z.array(z.string()).length(0),
+  contents: z.literal(''),
+  isRequired: z.literal(false),
+  isStateful: z.literal(false),
+  data: DiagramDataSchema,
+});
+
 // Class ------------------------------------------------------------
 
 const TEXT_ONLY_NODE_CLASS = "node--text-only";
@@ -207,7 +217,6 @@ export class Diagram extends FragmentViaBxmlTag {
     );
     this.data = this.#buildData();
     this.childBxmlNodes = [];
-    this.convertToStatefulFragment({ isRequired: false }); // TODO: Split Diagram into static and stateful versions?
   }
 
   /**
@@ -435,3 +444,12 @@ export class Diagram extends FragmentViaBxmlTag {
     return resultingItems;
   }
 }
+
+export const manifest = {
+  contentType: "Diagram",
+  tagName: "diagram",
+  exampleMarkupStrings: [exampleDiagramMarkup],
+  parsingClass: Diagram,
+  tagSchema: DiagramTagSchema,
+  apiDataSchema: DiagramApiDataSchema,
+};
