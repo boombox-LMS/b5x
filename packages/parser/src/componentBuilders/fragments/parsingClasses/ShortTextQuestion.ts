@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -29,6 +30,14 @@ const ShortTextQuestionTagSchema = z
 
 type ShortTextQuestionTag = z.infer<typeof ShortTextQuestionTagSchema>;
 
+export const ShortTextQuestionApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("ShortTextQuestion"),
+  contents: z.literal(''),
+  isStateful: z.literal(true),
+  data: z.object({}).strict(),
+  childUris: z.array(z.string()).min(1),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -53,3 +62,12 @@ export class ShortTextQuestion extends FragmentViaBxmlTag {
     });
   }
 }
+
+export const manifest = {
+  contentType: "ShortTextQuestion",
+  tagName: "short-text-question",
+  exampleMarkupStrings: [exampleShortTextQuestionMarkup],
+  parsingClass: ShortTextQuestion,
+  tagSchema: ShortTextQuestionTagSchema,
+  apiDataSchema: ShortTextQuestionApiDataSchema,
+};

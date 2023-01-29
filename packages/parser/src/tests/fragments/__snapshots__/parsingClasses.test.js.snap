@@ -625,6 +625,24 @@ Object {
 }
 `;
 
+exports[`placeholder The example short-text-question markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "ShortTextQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "8057d32a19a823078fca8232bc154aa0",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`placeholder The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
 Object {
   "childUris": Array [
