@@ -3,6 +3,7 @@ import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { marked } from "marked";
 import { z } from "zod";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -104,6 +105,14 @@ const TroubleshooterTagSchema = z
 
 type TroubleshooterTag = z.infer<typeof TroubleshooterTagSchema>;
 
+export const TroubleshooterApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("Troubleshooter"),
+  data: TroubleshooterDataSchema,
+  isRequired: z.literal(false),
+  childUris: z.array(z.string()).length(0),
+  contents: z.literal(""),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -118,6 +127,7 @@ export class Troubleshooter extends FragmentViaBxmlTag {
     this.isRequired = false;
     this.bxmlNode = TroubleshooterTagSchema.parse(params.bxmlNode);
     this.data = this.#buildData();
+    this.childBxmlNodes = [];
   }
 
   #buildData(): TroubleshooterData {
@@ -144,3 +154,12 @@ export class Troubleshooter extends FragmentViaBxmlTag {
     return { title, steps };
   }
 }
+
+export const manifest = {
+  contentType: "Troubleshooter",
+  parsingClass: Troubleshooter,
+  apiDataSchema: TroubleshooterApiDataSchema,
+  tagSchema: TroubleshooterTagSchema,
+  tagName: "troubleshooter",
+  exampleMarkupStrings: [exampleTroubleshooterMarkup],
+};
