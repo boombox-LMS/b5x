@@ -80,7 +80,7 @@ export const DocumentCompletionContent = () => {
         nextVisibleDocumentUri={nextVisibleDocumentUri}
       />
     );
-  } else {
+  } else if (documentIsMarkedCompleted) {
     content = <TopicCompletionContent topicUri={topicUri} />;
   }
 
