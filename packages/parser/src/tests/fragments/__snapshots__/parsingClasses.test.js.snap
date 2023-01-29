@@ -554,3 +554,21 @@ flowchart TD
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example nps-question markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "NpsQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "68d0504afb2570429a0ff0385fc70719",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

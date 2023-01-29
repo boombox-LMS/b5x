@@ -2,6 +2,7 @@ import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -24,6 +25,14 @@ const NpsQuestionTagSchema = z
 
 type NpsQuestionTag = z.infer<typeof NpsQuestionTagSchema>;
 
+export const NpsQuestionApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("NpsQuestion"),
+  contents: z.literal(''),
+  isStateful: z.literal(true),
+  childUris: z.array(z.string()).min(1),
+  data: z.object({}).strict(),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -39,3 +48,12 @@ export class NpsQuestion extends FragmentViaBxmlTag {
     this.convertToStatefulFragment();
   }
 }
+
+export const manifest = {
+  contentType: "NpsQuestion",
+  tagName: "nps-question",
+  parsingClass: NpsQuestion,
+  tagSchema: NpsQuestionTagSchema,
+  exampleMarkupStrings: [exampleNpsQuestionMarkup],
+  apiDataSchema: NpsQuestionApiDataSchema,
+};
