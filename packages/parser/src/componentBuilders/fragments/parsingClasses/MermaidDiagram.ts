@@ -2,6 +2,7 @@ import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { FragmentViaBxmlTag } from "../abstractClasses/FragmentViaBxmlTag";
 import { z } from "zod";
 import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -55,6 +56,14 @@ export const MermaidDiagramDataSchema = z.object({
 
 type MermaidDiagramData = z.infer<typeof MermaidDiagramDataSchema>;
 
+export const MermaidDiagramApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("MermaidDiagram"),
+  data: MermaidDiagramDataSchema,
+  childUris: z.array(z.string()).length(0),
+  contents: z.string().min(1),
+  isStateful: z.literal(false),
+}).strict();
+
 // Class ------------------------------------------------------------
 
 /**
@@ -82,3 +91,12 @@ export class MermaidDiagram extends FragmentViaBxmlTag {
     this.childBxmlNodes = [];
   }
 }
+
+export const manifest = {
+  contentType: "MermaidDiagram",
+  tagName: "mermaid-diagram",
+  parsingClass: MermaidDiagram,
+  exampleMarkupStrings: [exampleMermaidDiagramMarkup],
+  tagSchema: MermaidDiagramTagSchema,
+  apiDataSchema: MermaidDiagramApiDataSchema,
+};
