@@ -30,7 +30,7 @@ export const ContinueButtonApiDataSchema = RawFragmentSchema.extend({
   data: z.object({}).strict(),
   isStateful: z.literal(true),
   childUris: z.array(z.string()).min(1),
-});
+}).strict();
 
 // Class ------------------------------------------------------------
 

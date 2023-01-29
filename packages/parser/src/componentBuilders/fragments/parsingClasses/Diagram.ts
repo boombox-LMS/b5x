@@ -180,7 +180,7 @@ export const DiagramApiDataSchema = RawFragmentSchema.extend({
   isRequired: z.literal(false),
   isStateful: z.literal(false),
   data: DiagramDataSchema,
-});
+}).strict();
 
 // Class ------------------------------------------------------------
 

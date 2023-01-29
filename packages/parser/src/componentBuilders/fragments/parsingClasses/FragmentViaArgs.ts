@@ -35,6 +35,7 @@ export class FragmentViaArgs extends Fragment {
   }
 }
 
+// TODO: Write dedicated test for FragmentViaArgs
 export const manifest = {
   exampleMarkupStrings: [],
 };
