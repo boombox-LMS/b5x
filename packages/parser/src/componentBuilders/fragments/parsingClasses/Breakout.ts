@@ -46,21 +46,22 @@ export const BreakoutTagSchema = z
 
 type BreakoutTag = z.infer<typeof BreakoutTagSchema>;
 
+const BreakoutDataSchema = z.object({
+  title: z.string(),
+  icon: z.string().optional(),
+  color: z.string().optional(),
+  iconSize: iconSizeSchema,
+}).strict();
+
+type BreakoutData = z.infer<typeof BreakoutDataSchema>;
+
 export const BreakoutApiDataSchema = RawFragmentSchema.extend({
   contentType: z.literal("Breakout"),
   contents: z.literal(''),
   isRequired: z.literal(false),
   isStateful: z.literal(false),
   childUris: z.array(z.string()).min(1),
-  data: z.object({
-    title: z.string(),
-    icon: z.string().optional(),
-    color: z.string().optional(),
-    // TODO: Move to the viewer once the viewer has types,
-    // so there's no iconSize for nonexistent icons,
-    // and so unnecessary data isn't sent to the server.
-    iconSize: iconSizeSchema,
-  }).strict()
+  data: BreakoutDataSchema,
 }).strict();
 
 // Class ------------------------------------------------------------
@@ -71,6 +72,7 @@ export const BreakoutApiDataSchema = RawFragmentSchema.extend({
  */
 export class Breakout extends FragmentViaBxmlTag {
   bxmlNode: BreakoutTag;
+  data: BreakoutData;
 
   constructor(params: FragmentViaBxmlTagParams) {
     super(params);
