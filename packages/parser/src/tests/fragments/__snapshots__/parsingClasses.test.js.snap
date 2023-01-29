@@ -503,3 +503,21 @@ Object {
   "uri": "test-fragment-uri",
 }
 `;
+
+exports[`placeholder The example long-text-question markup string at index 0 matches the corresponding api data schema 1`] = `
+Object {
+  "childUris": Array [
+    "test-fragment-uri",
+  ],
+  "contentType": "LongTextQuestion",
+  "contents": "",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "74e5050636f4cd254100c7f855897db1",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": true,
+  "isStateful": true,
+  "uri": "test-fragment-uri",
+}
+`;

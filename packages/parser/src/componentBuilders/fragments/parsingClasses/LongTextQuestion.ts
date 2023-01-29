@@ -3,6 +3,7 @@ import { z } from "zod";
 import { BxmlTagNodeSchema, BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { ConditionsHelper } from "@b5x/conditions-manager";
+import { RawFragmentSchema } from "@b5x/types";
 
 // Markup -----------------------------------------------------------
 
@@ -30,6 +31,14 @@ const LongTextQuestionTagSchema = z
 
 type LongTextQuestionTag = z.infer<typeof LongTextQuestionTagSchema>;
 
+export const LongTextQuestionApiDataSchema = RawFragmentSchema.extend({
+  contentType: z.literal("LongTextQuestion"),
+  contents: z.literal(''),
+  isStateful: z.literal(true),
+  data: z.object({}).strict(),
+  childUris: z.array(z.string()).min(1),
+}).strict()
+
 // Class ------------------------------------------------------------
 
 /**
@@ -53,3 +62,12 @@ export class LongTextQuestion extends FragmentViaBxmlTag {
     this.convertToStatefulFragment();
   }
 }
+
+export const manifest = {
+  contentType: "LongTextQuestion",
+  tagName: "long-text-question",
+  exampleMarkupStrings: [exampleLongTextQuestionMarkup],
+  parsingClass: LongTextQuestion,
+  apiDataSchema: LongTextQuestionApiDataSchema,
+  tagSchema: LongTextQuestionTagSchema,
+};
