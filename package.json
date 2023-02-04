@@ -4,6 +4,9 @@
     "typedoc": "^0.23.23"
   },
   "scripts": {
-    "build-docs": "typedoc && pnpm -r test"
+    "build-docs": "typedoc && pnpm -r test",
+    "build-all": "pnpm install && pnpm --filter @b5x/types build && pnpm install && pnpm --filter @b5x/conditions-manager build && pnpm install && pnpm --filter @b5x/parser build && pnpm install && pnpm -r build",
+    "seed-all": "pnpm --filter @b5x/cli seed && pnpm --filter @b5x/api seed",
+    "start-all": "pnpm -r devstart"
   }
 }

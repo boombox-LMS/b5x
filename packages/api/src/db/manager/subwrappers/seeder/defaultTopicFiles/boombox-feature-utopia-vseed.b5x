@@ -33,7 +33,7 @@
                     "boombox-feature-utopia-vseed_achievement-badge_f7",
                     "boombox-feature-utopia-vseed_achievement-badge_f8"
                 ],
-                "digest": "59147f4e2e2711be85357aa0f8ef6627",
+                "digest": "69fd7e60e40fc73721ca6c81d32383f9",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -145,7 +145,7 @@
                             "boombox-feature-utopia-vseed_achievement-badge_f5"
                         ],
                         "contents": "",
-                        "digest": "97940bc69f04dc289d2c352617fd1871",
+                        "digest": "47786e7bdf649a701bfb9290fc2dccc6",
                         "dependencyUris": [
                             "boombox-feature-utopia-vseed_achievement-badge_chosen-strategy"
                         ]
@@ -161,10 +161,10 @@
                         },
                         "contentType": "Badge",
                         "isStateful": true,
-                        "isRequired": true,
+                        "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "fafd6d08a988f068673201e10e58193c",
+                        "digest": "260cf879c41ccf8c033a97ad1c3ea8dc",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_achievement-badge_f6": {
@@ -1384,7 +1384,7 @@
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f7",
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f8"
                 ],
-                "digest": "d92058e964008e03cf9086946d440e9f",
+                "digest": "cd670ea27c66a094919287b8a7aef5f0",
                 "contentMode": "documentation",
                 "completionConditions": [],
                 "externalDependencyUris": [],
@@ -1418,7 +1418,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f5"
                         ],
                         "contents": "",
-                        "digest": "ac149f801a4d74763f30a3b6ca921190",
+                        "digest": "8ebd35e17b9152a4afb280aeda48dea7",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f3": {
@@ -1435,7 +1435,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f4"
                         ],
                         "contents": "",
-                        "digest": "da3e9b706fdcca1250e50016bc8113e3",
+                        "digest": "1d28ad23d613fd1373bc9c59c19298e1",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f4": {
@@ -1717,11 +1717,11 @@
                             ]
                         },
                         "contentType": "Diagram",
-                        "isStateful": true,
+                        "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "5de6690cfd2c3c78df607a2f79005ef7",
+                        "digest": "cdf84fffaff0e03c85a7f5e79732757e",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f5": {
@@ -1784,7 +1784,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f11"
                         ],
                         "contents": "",
-                        "digest": "7e6f9f1532f7bf745535ceda264dbb9b",
+                        "digest": "41c99801c66b271bd93a9ab87c6026db",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f9": {
@@ -1801,7 +1801,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f10"
                         ],
                         "contents": "",
-                        "digest": "0f0be07a438dc6b76b78967665ecd323",
+                        "digest": "2fae89858d0b4231b81ccb43077b1456",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f10": {
@@ -2083,11 +2083,11 @@
                             ]
                         },
                         "contentType": "Diagram",
-                        "isStateful": true,
+                        "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "4ef8e73a034d308c5906dde7b80c1761",
+                        "digest": "a464cb0ee834a84dfc3cc6b9aa91635a",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f11": {
@@ -3591,7 +3591,7 @@
                     "boombox-feature-utopia-vseed_troubleshooter_f1",
                     "boombox-feature-utopia-vseed_troubleshooter_f2"
                 ],
-                "digest": "9ed20de22495f069d2a80282109017f4",
+                "digest": "1c40bf334a0173f40049b155681fa43a",
                 "contentMode": "documentation",
                 "completionConditions": [],
                 "externalDependencyUris": [],
@@ -3622,10 +3622,10 @@
                         "isRequired": false,
                         "childUris": [
                             "boombox-feature-utopia-vseed_troubleshooter_f3",
-                            "boombox-feature-utopia-vseed_troubleshooter_f7"
+                            "boombox-feature-utopia-vseed_troubleshooter_f5"
                         ],
                         "contents": "",
-                        "digest": "f7506d79d1760fe6aa1f86111962b565",
+                        "digest": "5382cd579f12861b5f6b2ff53b128f07",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_troubleshooter_f3": {
@@ -3642,7 +3642,7 @@
                             "boombox-feature-utopia-vseed_troubleshooter_f4"
                         ],
                         "contents": "",
-                        "digest": "83677bce461f1ddd37a6218241622230",
+                        "digest": "69cccdce3d123c7491818f7cd84d0472",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_troubleshooter_f4": {
@@ -3670,31 +3670,13 @@
                         "contentType": "Troubleshooter",
                         "isStateful": false,
                         "isRequired": false,
-                        "childUris": [
-                            "boombox-feature-utopia-vseed_troubleshooter_f5"
-                        ],
+                        "childUris": [],
                         "contents": "",
-                        "digest": "3c769cd40066558862e923babd0e919a",
+                        "digest": "736b3b85c7e2e2b3a942cb668fa98f07",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_troubleshooter_f5": {
                         "uri": "boombox-feature-utopia-vseed_troubleshooter_f5",
-                        "documentUri": "boombox-feature-utopia-vseed_troubleshooter",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false,
-                            "fragmentUrisByAlias": {}
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<p><issue><title>I don&apos;t see any failing tests.</title><step>Verify that your test file name ends in <code>_test.py</code>.</step><step>Use <code>pwd</code> to ensure that you aren&apos;t running tests in the wrong location.</step></issue><issue><title>I get a &quot;not authorized&quot; error.</title><step>Verify that you&apos;re on the VPN.</step><step>Use <code>which aws-okta</code> to verify that aws-okta is installed on your system.</step></issue></p>\n",
-                        "digest": "ea3b290c3488e0c6da5cecf15ecbc73b",
-                        "dependencyUris": []
-                    },
-                    "boombox-feature-utopia-vseed_troubleshooter_f7": {
-                        "uri": "boombox-feature-utopia-vseed_troubleshooter_f7",
                         "documentUri": "boombox-feature-utopia-vseed_troubleshooter",
                         "displayConditions": [],
                         "data": {
@@ -3704,14 +3686,14 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "boombox-feature-utopia-vseed_troubleshooter_f8"
+                            "boombox-feature-utopia-vseed_troubleshooter_f6"
                         ],
                         "contents": "",
                         "digest": "9fae20ac1b872509bfb35784de53f3eb",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_troubleshooter_f8": {
-                        "uri": "boombox-feature-utopia-vseed_troubleshooter_f8",
+                    "boombox-feature-utopia-vseed_troubleshooter_f6": {
+                        "uri": "boombox-feature-utopia-vseed_troubleshooter_f6",
                         "documentUri": "boombox-feature-utopia-vseed_troubleshooter",
                         "displayConditions": [],
                         "data": {

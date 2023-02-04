@@ -32,12 +32,12 @@
                     "intro-to-boombox-lms-vseed_skills-and-customization_user-team",
                     "intro-to-boombox-lms-vseed_skills-and-customization_f7",
                     "intro-to-boombox-lms-vseed_skills-and-customization_user-group",
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f13",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f12",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f16",
                     "intro-to-boombox-lms-vseed_skills-and-customization_f18",
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f20",
                     "intro-to-boombox-lms-vseed_skills-and-customization_known-skills",
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f23",
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f24"
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f21",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f22"
                 ],
                 "digest": "7cc77fd35c3f97903d017b394f4967a3",
                 "contentMode": "tutorial",
@@ -228,7 +228,7 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "intro-to-boombox-lms-vseed_skills-and-customization_f12"
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f11"
                         ],
                         "contents": "",
                         "digest": "bdf0108f4f482f9a2ce5f53a6e18491f",
@@ -236,8 +236,8 @@
                             "intro-to-boombox-lms-vseed_skills-and-customization_user-team"
                         ]
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f12": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f12",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f11": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f11",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [],
                         "data": {
@@ -251,8 +251,8 @@
                         "digest": "df1833cce1f3314f6fe1f1674bfda7ea",
                         "dependencyUris": []
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f13": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f13",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f12": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f12",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [
                             [
@@ -301,7 +301,7 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "intro-to-boombox-lms-vseed_skills-and-customization_f14"
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f13"
                         ],
                         "contents": "",
                         "digest": "5a64bc851bc7042522b5f445118fed68",
@@ -309,8 +309,8 @@
                             "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
                         ]
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f14": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f14",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f13": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f13",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [],
                         "data": {
@@ -329,8 +329,8 @@
                             "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
                         ]
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f18": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f18",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f16": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f16",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [
                             [
@@ -363,7 +363,7 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "intro-to-boombox-lms-vseed_skills-and-customization_f19"
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f17"
                         ],
                         "contents": "",
                         "digest": "cf2124f5e0dae674f7722b165ac08e2e",
@@ -371,8 +371,8 @@
                             "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
                         ]
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f19": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f19",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f17": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f17",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [],
                         "data": {
@@ -386,8 +386,8 @@
                         "digest": "772bd11bc69f9470ae43f18ab19bc827",
                         "dependencyUris": []
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f20": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f20",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f18": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f18",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [
                             {
@@ -449,7 +449,7 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "intro-to-boombox-lms-vseed_skills-and-customization_f22"
+                            "intro-to-boombox-lms-vseed_skills-and-customization_f20"
                         ],
                         "contents": "",
                         "digest": "61e1c24c50f2be3051241ef99a8255b5",
@@ -457,8 +457,8 @@
                             "intro-to-boombox-lms-vseed_skills-and-customization_user-group"
                         ]
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f22": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f22",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f20": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f20",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [],
                         "data": {
@@ -472,8 +472,8 @@
                         "digest": "3b16083193f9fa491336fed7d8ffc3e6",
                         "dependencyUris": []
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f23": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f23",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f21": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f21",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [
                             {
@@ -498,8 +498,8 @@
                             "intro-to-boombox-lms-vseed_skills-and-customization_known-skills"
                         ]
                     },
-                    "intro-to-boombox-lms-vseed_skills-and-customization_f24": {
-                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f24",
+                    "intro-to-boombox-lms-vseed_skills-and-customization_f22": {
+                        "uri": "intro-to-boombox-lms-vseed_skills-and-customization_f22",
                         "documentUri": "intro-to-boombox-lms-vseed_skills-and-customization",
                         "displayConditions": [
                             {
@@ -862,7 +862,7 @@
                     "intro-to-boombox-lms-vseed_how-boombox-works_f22",
                     "intro-to-boombox-lms-vseed_how-boombox-works_f23"
                 ],
-                "digest": "76a559c7c9434b50af468ee38d146fb7",
+                "digest": "72f3e75fefa7cb47ba4ebb06df54a7f3",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1181,11 +1181,11 @@
                             ]
                         },
                         "contentType": "Diagram",
-                        "isStateful": true,
+                        "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "30f7a067307055634e2e3eae5fc8d83b",
+                        "digest": "87ee7e7c8b1569bb2364fb56c530c73a",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f3": {

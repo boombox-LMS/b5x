@@ -1058,19 +1058,19 @@
                     "smoke-testing-vseed_text-inputs_f1",
                     "smoke-testing-vseed_text-inputs_typed-name",
                     "smoke-testing-vseed_text-inputs_f4",
-                    "smoke-testing-vseed_text-inputs_f8",
-                    "smoke-testing-vseed_text-inputs_f10",
+                    "smoke-testing-vseed_text-inputs_f7",
+                    "smoke-testing-vseed_text-inputs_f9",
+                    "smoke-testing-vseed_text-inputs_f11",
                     "smoke-testing-vseed_text-inputs_f13",
-                    "smoke-testing-vseed_text-inputs_f15",
+                    "smoke-testing-vseed_text-inputs_f14",
                     "smoke-testing-vseed_text-inputs_f16",
-                    "smoke-testing-vseed_text-inputs_f18",
                     "smoke-testing-vseed_text-inputs_inputted-long-text",
-                    "smoke-testing-vseed_text-inputs_f21",
+                    "smoke-testing-vseed_text-inputs_f19",
+                    "smoke-testing-vseed_text-inputs_f20",
                     "smoke-testing-vseed_text-inputs_f22",
-                    "smoke-testing-vseed_text-inputs_f24",
+                    "smoke-testing-vseed_text-inputs_f23",
                     "smoke-testing-vseed_text-inputs_f25",
-                    "smoke-testing-vseed_text-inputs_f27",
-                    "smoke-testing-vseed_text-inputs_f28"
+                    "smoke-testing-vseed_text-inputs_f26"
                 ],
                 "digest": "466a3c78c98cd4c34e4caa4ba052b8d0",
                 "contentMode": "tutorial",
@@ -1078,7 +1078,7 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "smoke-testing-vseed_text-inputs_f25",
+                            "uri": "smoke-testing-vseed_text-inputs_f23",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
@@ -1161,8 +1161,8 @@
                             "smoke-testing-vseed_text-inputs_typed-name"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f8": {
-                        "uri": "smoke-testing-vseed_text-inputs_f8",
+                    "smoke-testing-vseed_text-inputs_f7": {
+                        "uri": "smoke-testing-vseed_text-inputs_f7",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
@@ -1179,7 +1179,7 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_text-inputs_f9"
+                            "smoke-testing-vseed_text-inputs_f8"
                         ],
                         "contents": "",
                         "digest": "0f7e2bdc940678acabbd6183c9ca7384",
@@ -1187,8 +1187,8 @@
                             "smoke-testing-vseed_text-inputs_typed-name"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f9": {
-                        "uri": "smoke-testing-vseed_text-inputs_f9",
+                    "smoke-testing-vseed_text-inputs_f8": {
+                        "uri": "smoke-testing-vseed_text-inputs_f8",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [],
                         "data": {
@@ -1202,14 +1202,14 @@
                         "digest": "5f47122e71a0688bcadadbf9b9312a73",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_text-inputs_f10": {
-                        "uri": "smoke-testing-vseed_text-inputs_f10",
+                    "smoke-testing-vseed_text-inputs_f9": {
+                        "uri": "smoke-testing-vseed_text-inputs_f9",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f8",
+                                    "uri": "smoke-testing-vseed_text-inputs_f7",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1228,18 +1228,18 @@
                         "contents": "<p>What if I put it in a header?</p>\n<h2 id=\"you-said-your-name-is-typed-name\">You said your name is <echo>typed-name</echo></h2>\n",
                         "digest": "00b108a7ed651f43faa35bdee1dd7a67",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f8",
+                            "smoke-testing-vseed_text-inputs_f7",
                             "smoke-testing-vseed_text-inputs_typed-name"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f13": {
-                        "uri": "smoke-testing-vseed_text-inputs_f13",
+                    "smoke-testing-vseed_text-inputs_f11": {
+                        "uri": "smoke-testing-vseed_text-inputs_f11",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f8",
+                                    "uri": "smoke-testing-vseed_text-inputs_f7",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1250,16 +1250,16 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_text-inputs_f14"
+                            "smoke-testing-vseed_text-inputs_f12"
                         ],
                         "contents": "",
                         "digest": "4d08219c7a33ac7904a1c3a296ebd557",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f8"
+                            "smoke-testing-vseed_text-inputs_f7"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f14": {
-                        "uri": "smoke-testing-vseed_text-inputs_f14",
+                    "smoke-testing-vseed_text-inputs_f12": {
+                        "uri": "smoke-testing-vseed_text-inputs_f12",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [],
                         "data": {
@@ -1273,14 +1273,14 @@
                         "digest": "3c693f05da12174c6ebacc0b29db59fe",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_text-inputs_f15": {
-                        "uri": "smoke-testing-vseed_text-inputs_f15",
+                    "smoke-testing-vseed_text-inputs_f13": {
+                        "uri": "smoke-testing-vseed_text-inputs_f13",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f13",
+                                    "uri": "smoke-testing-vseed_text-inputs_f11",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1296,17 +1296,17 @@
                         "contents": "<p>Please verify that you can edit your response, and the content updates itself accordingly.</p>\n",
                         "digest": "c5ac9911369ca842f11bb3b1128d8c2b",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f13"
+                            "smoke-testing-vseed_text-inputs_f11"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f16": {
-                        "uri": "smoke-testing-vseed_text-inputs_f16",
+                    "smoke-testing-vseed_text-inputs_f14": {
+                        "uri": "smoke-testing-vseed_text-inputs_f14",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f13",
+                                    "uri": "smoke-testing-vseed_text-inputs_f11",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1317,16 +1317,16 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_text-inputs_f17"
+                            "smoke-testing-vseed_text-inputs_f15"
                         ],
                         "contents": "",
                         "digest": "898e4da44ecaa7463aad525f007837e5",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f13"
+                            "smoke-testing-vseed_text-inputs_f11"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f17": {
-                        "uri": "smoke-testing-vseed_text-inputs_f17",
+                    "smoke-testing-vseed_text-inputs_f15": {
+                        "uri": "smoke-testing-vseed_text-inputs_f15",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [],
                         "data": {
@@ -1340,14 +1340,14 @@
                         "digest": "e822fec67a947738170d90c1fcfe3d02",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_text-inputs_f18": {
-                        "uri": "smoke-testing-vseed_text-inputs_f18",
+                    "smoke-testing-vseed_text-inputs_f16": {
+                        "uri": "smoke-testing-vseed_text-inputs_f16",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f16",
+                                    "uri": "smoke-testing-vseed_text-inputs_f14",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1363,7 +1363,7 @@
                         "contents": "<h2 id=\"long-text-question\">Long text question</h2>\n",
                         "digest": "cba70638ccffc719435a7a80b36191c7",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f16"
+                            "smoke-testing-vseed_text-inputs_f14"
                         ]
                     },
                     "smoke-testing-vseed_text-inputs_inputted-long-text": {
@@ -1373,7 +1373,7 @@
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f16",
+                                    "uri": "smoke-testing-vseed_text-inputs_f14",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1384,16 +1384,16 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_text-inputs_f20"
+                            "smoke-testing-vseed_text-inputs_f18"
                         ],
                         "contents": "",
                         "digest": "cf1a8f848b17d7ac274102f3121b4865",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f16"
+                            "smoke-testing-vseed_text-inputs_f14"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f20": {
-                        "uri": "smoke-testing-vseed_text-inputs_f20",
+                    "smoke-testing-vseed_text-inputs_f18": {
+                        "uri": "smoke-testing-vseed_text-inputs_f18",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [],
                         "data": {
@@ -1407,8 +1407,8 @@
                         "digest": "a6153b225587121e71feb2b95c0069f5",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_text-inputs_f21": {
-                        "uri": "smoke-testing-vseed_text-inputs_f21",
+                    "smoke-testing-vseed_text-inputs_f19": {
+                        "uri": "smoke-testing-vseed_text-inputs_f19",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
@@ -1433,8 +1433,8 @@
                             "smoke-testing-vseed_text-inputs_inputted-long-text"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f22": {
-                        "uri": "smoke-testing-vseed_text-inputs_f22",
+                    "smoke-testing-vseed_text-inputs_f20": {
+                        "uri": "smoke-testing-vseed_text-inputs_f20",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
@@ -1451,7 +1451,7 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_text-inputs_f23"
+                            "smoke-testing-vseed_text-inputs_f21"
                         ],
                         "contents": "",
                         "digest": "a11cf257e543215b7ffbde9fa051d742",
@@ -1459,8 +1459,8 @@
                             "smoke-testing-vseed_text-inputs_inputted-long-text"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f23": {
-                        "uri": "smoke-testing-vseed_text-inputs_f23",
+                    "smoke-testing-vseed_text-inputs_f21": {
+                        "uri": "smoke-testing-vseed_text-inputs_f21",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [],
                         "data": {
@@ -1474,14 +1474,14 @@
                         "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_text-inputs_f24": {
-                        "uri": "smoke-testing-vseed_text-inputs_f24",
+                    "smoke-testing-vseed_text-inputs_f22": {
+                        "uri": "smoke-testing-vseed_text-inputs_f22",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f22",
+                                    "uri": "smoke-testing-vseed_text-inputs_f20",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1497,17 +1497,17 @@
                         "contents": "<p>Please verify that you can edit your response.</p>\n",
                         "digest": "b24929f3ac93bcf0d952ad9064ee744b",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f22"
+                            "smoke-testing-vseed_text-inputs_f20"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f25": {
-                        "uri": "smoke-testing-vseed_text-inputs_f25",
+                    "smoke-testing-vseed_text-inputs_f23": {
+                        "uri": "smoke-testing-vseed_text-inputs_f23",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f22",
+                                    "uri": "smoke-testing-vseed_text-inputs_f20",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1518,16 +1518,16 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_text-inputs_f26"
+                            "smoke-testing-vseed_text-inputs_f24"
                         ],
                         "contents": "",
                         "digest": "898e4da44ecaa7463aad525f007837e5",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f22"
+                            "smoke-testing-vseed_text-inputs_f20"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f26": {
-                        "uri": "smoke-testing-vseed_text-inputs_f26",
+                    "smoke-testing-vseed_text-inputs_f24": {
+                        "uri": "smoke-testing-vseed_text-inputs_f24",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [],
                         "data": {
@@ -1541,14 +1541,14 @@
                         "digest": "e822fec67a947738170d90c1fcfe3d02",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_text-inputs_f27": {
-                        "uri": "smoke-testing-vseed_text-inputs_f27",
+                    "smoke-testing-vseed_text-inputs_f25": {
+                        "uri": "smoke-testing-vseed_text-inputs_f25",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f25",
+                                    "uri": "smoke-testing-vseed_text-inputs_f23",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1564,17 +1564,17 @@
                         "contents": "<p>Thank you!</p>\n",
                         "digest": "41810ed1a3c593092a267c6f8b1eaabb",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f25"
+                            "smoke-testing-vseed_text-inputs_f23"
                         ]
                     },
-                    "smoke-testing-vseed_text-inputs_f28": {
-                        "uri": "smoke-testing-vseed_text-inputs_f28",
+                    "smoke-testing-vseed_text-inputs_f26": {
+                        "uri": "smoke-testing-vseed_text-inputs_f26",
                         "documentUri": "smoke-testing-vseed_text-inputs",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_text-inputs_f25",
+                                    "uri": "smoke-testing-vseed_text-inputs_f23",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1588,7 +1588,7 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "smoke-testing-vseed_text-inputs_f25"
+                            "smoke-testing-vseed_text-inputs_f23"
                         ]
                     }
                 }
@@ -1603,8 +1603,8 @@
                 "displayConditions": [],
                 "childUris": [
                     "smoke-testing-vseed_response-persistence_f1",
-                    "smoke-testing-vseed_response-persistence_f8",
-                    "smoke-testing-vseed_response-persistence_f10"
+                    "smoke-testing-vseed_response-persistence_f6",
+                    "smoke-testing-vseed_response-persistence_f8"
                 ],
                 "digest": "4d0388153451e6e8b30646558759a6cb",
                 "contentMode": "tutorial",
@@ -1612,7 +1612,7 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "smoke-testing-vseed_response-persistence_f8",
+                            "uri": "smoke-testing-vseed_response-persistence_f6",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
@@ -1646,8 +1646,8 @@
                             "smoke-testing-vseed_select-inputs_user-region"
                         ]
                     },
-                    "smoke-testing-vseed_response-persistence_f8": {
-                        "uri": "smoke-testing-vseed_response-persistence_f8",
+                    "smoke-testing-vseed_response-persistence_f6": {
+                        "uri": "smoke-testing-vseed_response-persistence_f6",
                         "documentUri": "smoke-testing-vseed_response-persistence",
                         "displayConditions": [],
                         "data": {},
@@ -1655,14 +1655,14 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "smoke-testing-vseed_response-persistence_f9"
+                            "smoke-testing-vseed_response-persistence_f7"
                         ],
                         "contents": "",
                         "digest": "a11cf257e543215b7ffbde9fa051d742",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_response-persistence_f9": {
-                        "uri": "smoke-testing-vseed_response-persistence_f9",
+                    "smoke-testing-vseed_response-persistence_f7": {
+                        "uri": "smoke-testing-vseed_response-persistence_f7",
                         "documentUri": "smoke-testing-vseed_response-persistence",
                         "displayConditions": [],
                         "data": {
@@ -1676,14 +1676,14 @@
                         "digest": "b9a62f60cce1c4cd8f83e7eafcbfa17a",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_response-persistence_f10": {
-                        "uri": "smoke-testing-vseed_response-persistence_f10",
+                    "smoke-testing-vseed_response-persistence_f8": {
+                        "uri": "smoke-testing-vseed_response-persistence_f8",
                         "documentUri": "smoke-testing-vseed_response-persistence",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_response-persistence_f8",
+                                    "uri": "smoke-testing-vseed_response-persistence_f6",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1697,7 +1697,7 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "smoke-testing-vseed_response-persistence_f8"
+                            "smoke-testing-vseed_response-persistence_f6"
                         ]
                     }
                 }
