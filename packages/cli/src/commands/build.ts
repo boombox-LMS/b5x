@@ -15,7 +15,7 @@ export const publishTopicAssets = (
   let source = topicAssetsDir;
   let target = B5X_API_TOPIC_ASSETS_FOLDER + "/" + topicUri;
   if (!fs.existsSync(target)) {
-    fs.mkdirSync(target);
+    fs.mkdirSync(target, { recursive: true });
   }
   copyFolderRecursiveSync(source, target);
 };
