@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
-    "@b5x/conditions-manager": "file:../conditions-manager",
+    "@b5x/conditions-manager": "workspace:*",
     "@dougmorin0/geopattern": "^1.2.4",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
