@@ -34,13 +34,7 @@ exports[`Users routes should match expectations users.modifyGroups matches expec
 
 exports[`Users routes should match expectations users.profile matches expectations users.profile matches the snapshot on file 1`] = `
 {
-  "badges": [
-    {
-      "description": "Bravely refused to be discouraged by failure.",
-      "icon": "https://api.iconify.design/carbon/loop.svg",
-      "title": "Persistence practitioner",
-    },
-  ],
+  "badges": [],
   "email": "completed-1@test.com",
   "firstName": "Completed",
   "lastName": "User",
