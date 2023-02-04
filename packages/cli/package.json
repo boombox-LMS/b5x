@@ -7,7 +7,7 @@
     "SKIP-test": "pnpm run build; jest",
     "clean": "rimraf dist/",
     "build": "pnpm run clean && tsc",
-    "seed": "pnpm run build; node ./dist/scripts/syncSeedFiles.js"
+    "seed": "node ./dist/scripts/syncSeedFiles.js"
   },
   "keywords": [],
   "author": "",

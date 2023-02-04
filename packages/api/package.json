@@ -9,7 +9,7 @@
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.b5x src/**/db/migrations/*.js dist/",
     "build": "pnpm clean && tsc && pnpm copy-files",
-    "seed": "pnpm build; node ./dist/db/scripts/seedDevelopmentDb.js"
+    "seed": "node ./dist/db/scripts/seedDevelopmentDb.js"
   },
   "dependencies": {
     "@b5x/conditions-manager": "file:../conditions-manager",
