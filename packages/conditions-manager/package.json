@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "rimraf dist/",
     "build": "pnpm clean && tsc",
-    "test": "pnpm build && jest --coverage"
+    "test": "pnpm build; jest --coverage"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.191",
