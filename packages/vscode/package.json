@@ -1,5 +1,5 @@
 {
-  "name": "b5x",
+  "name": "@b5x/vscode",
   "displayName": "Boombox LMS",
   "description": "A toolkit for building Boombox LMS topics in VS Code",
   "version": "0.1.0",
@@ -47,6 +47,7 @@
     "vscode:prepublish": "pnpm run compile",
     "copy-files": "copyfiles -u 1 src/**/*.md out/",
     "compile": "tsc -p ./; pnpm copy-files",
+    "build": "pnpm run compile",
     "watch": "tsc -watch -p ./",
     "pretest": "pnpm run compile && pnpm run lint",
     "lint": "eslint src --ext ts",
