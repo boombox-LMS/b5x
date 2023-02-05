@@ -1098,7 +1098,7 @@
                     "data-at-cloudco-vseed_b-optional-mentor-signup_f7",
                     "data-at-cloudco-vseed_b-optional-mentor-signup_f8"
                 ],
-                "digest": "e9d733b0a675e0a5d4c26fc7910d62c9",
+                "digest": "68ed34cfefd6edff97072946b8f759cf",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1272,7 +1272,7 @@
                             "data-at-cloudco-vseed_b-optional-mentor-signup_f6"
                         ],
                         "contents": "",
-                        "digest": "78c5e950328ab3c8b10bdecaa5fb57f5",
+                        "digest": "1d1d3fd3a21eedd9c703fce5222d099c",
                         "dependencyUris": [
                             "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
                         ]
@@ -1288,8 +1288,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href=\"mailto:&#116;&#x65;&#99;&#x68;&#108;&#101;&#97;&#x72;&#x6e;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;\">&#116;&#x65;&#99;&#x68;&#108;&#101;&#97;&#x72;&#x6e;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a>.</p>\n",
-                        "digest": "ca0ea24e6dc418297094bff6d8f22abc",
+                        "contents": "<p>We understand -- if you ever change your mind, you can always reach out to techlearning at gmail dot com.</p>\n",
+                        "digest": "d79e5e5ec83eddeebf324bd856328aae",
                         "dependencyUris": []
                     },
                     "data-at-cloudco-vseed_b-optional-mentor-signup_f7": {

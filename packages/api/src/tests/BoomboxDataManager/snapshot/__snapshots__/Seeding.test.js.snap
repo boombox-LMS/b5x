@@ -1333,7 +1333,7 @@ exports[`The seeded data matches the snapshots The sanitized documents data matc
       "data-at-cloudco-vseed_customization-page_mode-level",
       "data-at-cloudco-vseed_customization-page_sql-level",
     ],
-    "digest": "e9d733b0a675e0a5d4c26fc7910d62c9",
+    "digest": "68ed34cfefd6edff97072946b8f759cf",
     "displayConditions": [
       [
         {
@@ -24417,13 +24417,13 @@ This is an example warning.
   },
   {
     "contentType": "HtmlContent",
-    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to <a href="mailto:&#116;&#x65;&#99;&#x68;&#108;&#101;&#97;&#x72;&#x6e;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">&#116;&#x65;&#99;&#x68;&#108;&#101;&#97;&#x72;&#x6e;&#105;&#110;&#103;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;</a>.</p>
+    "contents": "<p>We understand -- if you ever change your mind, you can always reach out to techlearning at gmail dot com.</p>
 ",
     "createdAt": "[SANITIZED]",
     "data": {
       "isTemplated": false,
     },
-    "digest": "99U7qj3GW+Ky92zE5yVYy0dLRRQ7sYYTqQyRSDs4sqM=",
+    "digest": "7GsHUOwVk9MiALWK487m38R4jIF6Msukg5G9CgfuFa4=",
     "id": "[SANITIZED]",
     "isStateful": false,
     "updatedAt": "[SANITIZED]",
