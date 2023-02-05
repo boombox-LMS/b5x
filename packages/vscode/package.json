@@ -39,7 +39,7 @@
     "snippets": [
       {
         "language": "markdown",
-        "path": "./src/snippets/bxml.json"
+        "path": "snippets/bxml.json"
       }
     ]
   },
