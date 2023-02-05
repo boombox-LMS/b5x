@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@b5x/conditions-manager": "workspace:*",
-    "@b5x/types": "workspace:*",
     "bcrypt": "^5.1.0",
     "bull": "^4.10.2",
     "connect-session-knex": "^3.0.0",

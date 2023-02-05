@@ -15,7 +15,6 @@
   "dependencies": {
     "rimraf": "^3.0.2",
     "@b5x/conditions-manager": "workspace:*",
-    "@b5x/types": "workspace:*",
     "htmlparser2": "^8.0.1",
     "uuid": "^8.3.2",
     "marked": "^4.0.17"

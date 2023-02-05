@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "@b5x/types": "workspace:*"
+  },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "prettier": "2.8.2",

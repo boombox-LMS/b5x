@@ -53,7 +53,6 @@
     "SKIP-test": "node ./out/test/runTest.js"
   },
   "dependencies": {
-    "@b5x/types": "workspace:*",
     "@b5x/parser": "workspace:*",
     "yaml": "^2.1.1",
     "stringcase": "^4.3.1"
