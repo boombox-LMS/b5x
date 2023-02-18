@@ -1,38 +1,30 @@
 import * as React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import styled from "styled-components/macro";
 
-export const Sandbox = () => {
+const Layout = () => {
+  const mainContentAreaCss = `
+    outline: 2px solid orange;
+    padding: 10px;
+    padding-top: 30px;
+  `;
+
+  const sidebarDrawerCss = `
+    outline: 2px solid green;
+  `;
+
+  const headerCss = `
+    outline: 2px solid blue;
+  `;
+
   return (
     <div>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          Accordion 1
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          Accordion 2
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
+      <div css={headerCss}>Header</div>
+      <div css={sidebarDrawerCss}>Sidebar drawer</div>
+      <div css={mainContentAreaCss}>Main content area</div>
     </div>
   );
+};
+
+export const Sandbox = () => {
+  return <Layout />;
 };
