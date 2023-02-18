@@ -1,37 +1,24 @@
-import * as React from "react";
+import React, { useState } from "react";
 import styled from "styled-components/macro";
 
-const sidebarDrawerIsOpen = false;
-const sidebarDrawerWidth = "300px";
+const openSidebarDrawerWidth = "300px";
+const closedSidebarDrawerWidth = "30px";
 const topHeaderHeight = "75px";
 const stickyHeaderHeight = "35px";
 
-let sidebarDrawerCss = `
-  background-color: green;
-  width: ${sidebarDrawerWidth};
-  display: inline-block;
-  vertical-align: top;
-  max-height: calc(100vh - ${stickyHeaderHeight});
-  position: sticky;
-  top: ${stickyHeaderHeight};
-  overflow: auto;
-`;
-
 const topHeaderCss = `
-  background-color: blue;
-  color: white;
   height: ${topHeaderHeight};
   padding: 5px;
 `;
 
 const stickyHeaderCss = `
-  background-color: red;
-  color: white;
   height: ${stickyHeaderHeight};
+  background-color: white;
   padding: 5px;
   position: sticky;
   top: 0;
   z-index: 1;
+  border-bottom: 1px solid black;
 `;
 
 const fillerMarkup = (
@@ -103,32 +90,78 @@ const fillerMarkup = (
   </div>
 );
 
-const Layout = ({ sidebarContent, mainContent }) => {
+const Layout = ({ sidebarIsOpen, sidebarContent, mainContent }) => {
+  const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
+
   let mainContentAreaCss = `
-    background-color: orange;
     padding: 30px;
     display: inline-block;
     vertical-align: top;
+  `;
+
+  let sidebarDrawerCss = `
+    background-color: lightgray;
+    display: inline-block;
+    vertical-align: top;
+    max-height: calc(100vh - ${stickyHeaderHeight});
+    position: sticky;
+    top: ${stickyHeaderHeight};
+    overflow: auto;
   `;
 
   const layoutContainerCss = ``;
 
   if (!sidebarContent) {
     mainContentAreaCss += `width: 100vw;`;
-  } else {
-    mainContentAreaCss += `width: calc(100vw - ${sidebarDrawerWidth});`;
+  } else if (sidebarIsOpenState) {
+    console.log("sidebar is open");
+    mainContentAreaCss += `width: calc(100vw - ${openSidebarDrawerWidth});`;
+    sidebarDrawerCss += `width: ${openSidebarDrawerWidth};`;
+  } else if (!sidebarIsOpenState) {
+    console.log("sidebar is closed");
+    mainContentAreaCss += `width: calc(100vw - ${closedSidebarDrawerWidth});`;
+    sidebarDrawerCss += `width: ${closedSidebarDrawerWidth};`;
   }
 
   return (
     <div css={layoutContainerCss}>
       <div css={topHeaderCss}>TOP HEADER PORTION</div>
       <div css={stickyHeaderCss}>STICKY HEADER PORTION</div>
-      {sidebarContent && <div css={sidebarDrawerCss}>{sidebarContent}</div>}
+      {sidebarContent && (
+        <div css={sidebarDrawerCss}>
+          {sidebarIsOpenState ? (
+            <div>
+              <div
+                onClick={() => {
+                  setSidebarIsOpenState(false);
+                }}
+              >
+                x
+              </div>
+              {sidebarContent}
+            </div>
+          ) : (
+            <div
+              onClick={() => {
+                setSidebarIsOpenState(true);
+              }}
+            >
+              -&gt;
+            </div>
+          )}
+        </div>
+      )}
       <div css={mainContentAreaCss}>{mainContent}</div>
     </div>
   );
 };
 
 export const Sandbox = () => {
-  return <Layout mainContent={fillerMarkup} sidebarContent={fillerMarkup} />;
+  return (
+    <Layout
+      mainContent={fillerMarkup}
+      sidebarContent={fillerMarkup}
+      sidebarIsOpen={false}
+    />
+  );
 };
