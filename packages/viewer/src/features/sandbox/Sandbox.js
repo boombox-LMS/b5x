@@ -5,8 +5,7 @@ const sidebarDrawerIsOpen = false;
 
 const Layout = () => {
   const layoutContainerCss = `
-    height: 100%;
-    position: relative;
+    /* height: 100%; */
   `;
 
   let mainContentAreaCss = `
@@ -14,8 +13,7 @@ const Layout = () => {
     padding: 30px;
     display: inline-block;
     vertical-align: top;
-    min-height: 2000px;
-    width: 70%;
+    width: calc(100vw - 300px);
   `;
 
   let sidebarDrawerCss = `
@@ -23,8 +21,10 @@ const Layout = () => {
     width: 300px;
     display: inline-block;
     vertical-align: top;
-    min-height: 95%;
-    position: relative;
+    max-height: calc(100vh - 35px);
+    position: sticky;
+    top: 35px;
+    overflow: auto;
   `;
 
   const topHeaderCss = `
@@ -48,8 +48,138 @@ const Layout = () => {
     <div css={layoutContainerCss}>
       <div css={topHeaderCss}>TOP HEADER PORTION</div>
       <div css={stickyHeaderCss}>STICKY HEADER PORTION</div>
-      <div css={sidebarDrawerCss}>SIDEBAR DRAWER</div>
-      <div css={mainContentAreaCss}>MAIN CONTENT AREA</div>
+      <div css={sidebarDrawerCss}>
+        SIDEBAR DRAWER
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+      </div>
+      <div css={mainContentAreaCss}>
+        MAIN CONTENT AREA
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+        <p>filler</p>
+      </div>
     </div>
   );
 };

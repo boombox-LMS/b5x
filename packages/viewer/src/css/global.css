@@ -23,12 +23,16 @@ body {
   color: var(--soft-black);
   line-height: 1.6em;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 #root,
 .App {
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .document input:not([type="submit"]):not([type="file"]):not([type="radio"]),
