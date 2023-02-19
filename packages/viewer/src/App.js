@@ -18,7 +18,7 @@ import { useGetCurrentUserInfoQuery } from "./features/api/apiSlice";
 import { LoadingOutlined } from "@ant-design/icons";
 import { HelpDesk } from "./features/helpdesk/HelpDesk";
 import { ThemeProvider } from "@mui/material/styles";
-import { Header } from "./features/layout/header/Header";
+import { Header } from "./features/layout/header/OldHeader";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
 import { muiTheme } from "./theme";
 

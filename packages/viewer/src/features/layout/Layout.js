@@ -1,27 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components/macro";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import { Tooltip } from "@mui/material";
+import { Header } from "./header/Header";
 
 const openSidebarDrawerWidth = "300px";
 const closedSidebarDrawerWidth = "30px";
-const topHeaderHeight = "75px";
-const stickyHeaderHeight = "35px";
-
-const topHeaderCss = `
-  height: ${topHeaderHeight};
-  padding: 5px;
-`;
-
-const stickyHeaderCss = `
-  height: ${stickyHeaderHeight};
-  background-color: white;
-  padding: 5px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  border-bottom: 1px solid black;
-`;
+const logoHeight = 75;
+const headerMenuHeight = 50;
+const maxHeaderHeight = logoHeight + headerMenuHeight;
 
 export const Layout = ({
   sidebarIsOpen,
@@ -33,41 +20,104 @@ export const Layout = ({
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
   sidebarName = sidebarName || "";
 
-  let mainContentAreaCss = `
-    padding: 30px;
-    display: inline-block;
-    vertical-align: top;
-    transition: width 0.25s;
-  `;
+  const [pageIsScrolled, setPageIsScrolled] = useState(false);
+  const [headerIsHovered, setHeaderIsHovered] = useState(false);
+
+  let currentHeaderHeight = headerMenuHeight;
+  if (headerIsHovered || !pageIsScrolled) {
+    currentHeaderHeight += logoHeight;
+  }
 
   let sidebarDrawerCss = `
     background-color: lightgray;
     display: inline-block;
     vertical-align: top;
-    max-height: calc(100vh - ${stickyHeaderHeight});
+    height: calc(100vh - ${currentHeaderHeight}px);
     position: sticky;
-    top: ${stickyHeaderHeight};
+    top: ${currentHeaderHeight}px;
     overflow: auto;
-    transition: width 0.25s;
+    transition: 0.25s;
+    width: ${
+      sidebarIsOpenState ? openSidebarDrawerWidth : closedSidebarDrawerWidth
+    };
     padding-top: 5px;
   `;
 
-  const layoutContainerCss = ``;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+          setPageIsScrolled(true);
+        } else if (window.pageYOffset <= 100) {
+          setPageIsScrolled(false);
+        }
+      });
+    }
+  }, []);
+
+  let logoCss = `
+    height: ${logoHeight}px;
+  `;
+
+  let headerMenuCss = `
+    height: ${headerMenuHeight}px;
+  `;
+
+  let headerSpacerCss = `
+    height: ${maxHeaderHeight}px;
+    transition: transform 0.25s;
+    outline: 1px solid green;
+  `;
+
+  let headerCss = `
+    position: fixed;
+    height: ${maxHeaderHeight}px;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    transition: transform 0.25s;
+  `;
+
+  if (!headerIsHovered && pageIsScrolled) {
+    headerCss += `
+      transform: translateY(-${logoHeight}px);
+    `;
+    headerSpacerCss += `
+      transform: translateY(-${logoHeight}px);
+    `;
+  }
+
+  let mainContentAreaCss = `
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline-block;
+    vertical-align: top;
+    transition: width 0.25s;
+  `;
 
   if (!sidebarContent) {
     mainContentAreaCss += `width: 100vw;`;
   } else if (sidebarIsOpenState) {
     mainContentAreaCss += `width: calc(100vw - ${openSidebarDrawerWidth});`;
-    sidebarDrawerCss += `width: ${openSidebarDrawerWidth};`;
   } else if (!sidebarIsOpenState) {
     mainContentAreaCss += `width: calc(100vw - ${closedSidebarDrawerWidth});`;
-    sidebarDrawerCss += `width: ${closedSidebarDrawerWidth};`;
   }
 
   return (
-    <div css={layoutContainerCss}>
-      <div css={topHeaderCss}>TOP HEADER PORTION</div>
-      <div css={stickyHeaderCss}>STICKY HEADER PORTION</div>
+    <div>
+      <div css={headerSpacerCss} />
+      <div
+        css={headerCss}
+        onMouseEnter={() => {
+          setHeaderIsHovered(true);
+        }}
+        onMouseLeave={() => {
+          setHeaderIsHovered(false);
+        }}
+      >
+        <div css={logoCss}>LOGO AREA</div>
+        <div css={headerMenuCss}>HEADER MENU</div>
+      </div>
       {sidebarContent && (
         <div css={sidebarDrawerCss}>
           {sidebarIsOpenState ? (
