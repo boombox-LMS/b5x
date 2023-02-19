@@ -6,7 +6,7 @@ import { Header } from "./header/Header";
 
 const openSidebarDrawerWidth = "300px";
 const closedSidebarDrawerWidth = "30px";
-const logoHeight = 75;
+const logoHeight = 60;
 const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
 
@@ -55,18 +55,9 @@ export const Layout = ({
     }
   }, []);
 
-  let logoCss = `
-    height: ${logoHeight}px;
-  `;
-
-  let headerMenuCss = `
-    height: ${headerMenuHeight}px;
-  `;
-
   let headerSpacerCss = `
     height: ${maxHeaderHeight}px;
     transition: transform 0.25s;
-    outline: 1px solid green;
   `;
 
   let headerCss = `
@@ -106,18 +97,17 @@ export const Layout = ({
   return (
     <div>
       <div css={headerSpacerCss} />
-      <div
-        css={headerCss}
-        onMouseEnter={() => {
+      <Header
+        headerCss={headerCss}
+        logoHeight={logoHeight}
+        menuHeight={headerMenuHeight}
+        mouseEnterCallback={() => {
           setHeaderIsHovered(true);
         }}
-        onMouseLeave={() => {
+        mouseLeaveCallback={() => {
           setHeaderIsHovered(false);
         }}
-      >
-        <div css={logoCss}>LOGO AREA</div>
-        <div css={headerMenuCss}>HEADER MENU</div>
-      </div>
+      />
       {sidebarContent && (
         <div css={sidebarDrawerCss}>
           {sidebarIsOpenState ? (

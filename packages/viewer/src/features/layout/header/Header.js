@@ -15,8 +15,15 @@ import Tab from "../../ui/Tab";
 import Tabs from "../../ui/Tabs";
 import PublishIcon from "@mui/icons-material/Publish";
 import { demoVars } from "../../../themeOverrides/demoVars";
+import styled from "styled-components/macro";
 
-export const Header = () => {
+export const Header = ({
+  logoHeight,
+  menuHeight,
+  headerCss,
+  mouseEnterCallback,
+  mouseLeaveCallback,
+}) => {
   const navigate = useNavigate();
   const headerProps = useSelector(selectHeaderProps);
 
@@ -34,9 +41,11 @@ export const Header = () => {
     return <div>User fetch error: {JSON.stringify(userError)}</div>;
   }
 
+  /*
   if (headerProps.isHidden) {
     return null;
   }
+  */
 
   const appPagesByName = {
     Home: {
@@ -77,100 +86,115 @@ export const Header = () => {
   const headerLogoUrl = demoVars.headerLogoUrl || "/img/cloudco.svg";
 
   return (
-    <>
+    <div
+      css={headerCss}
+      onMouseEnter={mouseEnterCallback}
+      onMouseLeave={mouseLeaveCallback}
+    >
       <div
-        className={`header__spacer ${
-          headerProps.isMinimized ? "header__spacer--small" : ""
-        }`}
-      ></div>
-      <div
-        className={`header ${headerProps.isMinimized ? "header--small" : ""}`}
+        css={`
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+          height: ${logoHeight}px;
+        `}
       >
-        <div className="header__logo-container">
-          <img className="header__logo-img" src={headerLogoUrl} />
+        <img
+          css={`
+            height: calc(${logoHeight}px - 10px);
+          `}
+          src={headerLogoUrl}
+        />
+      </div>
+      <div
+        css={`
+          height: ${menuHeight}px;
+          padding-top: 15px;
+        `}
+        className="header__content-container"
+      >
+        <div className="header__left-menu">
+          <Tabs
+            value={activeTabValue}
+            onChange={handleTabChange}
+            sx={{
+              marginBottom: "-6px",
+              marginTop: "-16px",
+            }}
+          >
+            <Tab
+              sx={tabStyle}
+              icon={
+                <Tooltip title="Home (Topic Catalog)" placement="top">
+                  <HomeIcon sx={tabIconStyle} />
+                </Tooltip>
+              }
+              index={0}
+            />
+            <Tab
+              sx={tabStyle}
+              icon={
+                <Tooltip title="View user profile" placement="top">
+                  <PersonIcon sx={tabIconStyle} />
+                </Tooltip>
+              }
+              index={1}
+            />
+            <Tab
+              sx={tabStyle}
+              icon={
+                <Tooltip title="Stats dashboard" placement="top">
+                  <BarChartIcon sx={tabIconStyle} />
+                </Tooltip>
+              }
+              index={2}
+            />
+            <Tab
+              sx={tabStyle}
+              icon={
+                <Tooltip title="Admin control panel" placement="top">
+                  <TuneIcon sx={tabIconStyle} />
+                </Tooltip>
+              }
+              index={3}
+            />
+            <Tab
+              sx={tabStyle}
+              icon={
+                <Tooltip title="Publish a topic" placement="top">
+                  <PublishIcon sx={tabIconStyle} />
+                </Tooltip>
+              }
+              index={4}
+            />
+            {/* <Tab label="Create highlight" index={3} /> */}
+          </Tabs>
         </div>
-        <div className="header__content-container">
-          <div className="header__left-menu">
-            <Tabs
-              value={activeTabValue}
-              onChange={handleTabChange}
-              sx={{
-                marginBottom: "-6px",
-                marginTop: "-16px",
-              }}
-            >
-              <Tab
-                sx={tabStyle}
-                icon={
-                  <Tooltip title="Home (Topic Catalog)" placement="top">
-                    <HomeIcon sx={tabIconStyle} />
-                  </Tooltip>
-                }
-                index={0}
-              />
-              <Tab
-                sx={tabStyle}
-                icon={
-                  <Tooltip title="View user profile" placement="top">
-                    <PersonIcon sx={tabIconStyle} />
-                  </Tooltip>
-                }
-                index={1}
-              />
-              <Tab
-                sx={tabStyle}
-                icon={
-                  <Tooltip title="Stats dashboard" placement="top">
-                    <BarChartIcon sx={tabIconStyle} />
-                  </Tooltip>
-                }
-                index={2}
-              />
-              <Tab
-                sx={tabStyle}
-                icon={
-                  <Tooltip title="Admin control panel" placement="top">
-                    <TuneIcon sx={tabIconStyle} />
-                  </Tooltip>
-                }
-                index={3}
-              />
-              <Tab
-                sx={tabStyle}
-                icon={
-                  <Tooltip title="Publish a topic" placement="top">
-                    <PublishIcon sx={tabIconStyle} />
-                  </Tooltip>
-                }
-                index={4}
-              />
-              {/* <Tab label="Create highlight" index={3} /> */}
-            </Tabs>
-          </div>
-          <div className="header__page-title">{headerProps.title || ""}</div>
-          <div className="header__right-menu">
-            <div
+        <div className="header__page-title">
+          {headerProps.title || "title goes here"}
+        </div>
+        <div className="header__right-menu">
+          <div
+            style={{
+              display: "inline-block",
+              position: "relative",
+              top: "-3.5px",
+            }}
+          >
+            <span
               style={{
-                display: "inline-block",
-                position: "relative",
-                top: "-3.5px",
+                fontSize: "0.8em",
+                fontStyle: "italic",
+                marginRight: "3px",
+                color: "rgba(0, 0, 0, 0.6)",
               }}
             >
-              <span
-                style={{
-                  fontSize: "0.8em",
-                  fontStyle: "italic",
-                  marginRight: "3px",
-                  color: "rgba(0, 0, 0, 0.6)",
-                }}
-              >
-                {user.email}
-              </span>
-            </div>
-            <LogOutButton />
+              {user.email}
+            </span>
           </div>
+          <LogOutButton />
         </div>
       </div>
-    </>
+    </div>
   );
 };
