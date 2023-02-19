@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 import ArrowBack from "@mui/icons-material/ArrowBack";
+import { Tooltip } from "@mui/material";
 
 const openSidebarDrawerWidth = "300px";
 const closedSidebarDrawerWidth = "30px";
@@ -27,8 +28,10 @@ export const Layout = ({
   sidebarOpenIcon,
   sidebarContent,
   mainContent,
+  sidebarName,
 }) => {
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
+  sidebarName = sidebarName || "";
 
   let mainContentAreaCss = `
     padding: 30px;
@@ -54,11 +57,9 @@ export const Layout = ({
   if (!sidebarContent) {
     mainContentAreaCss += `width: 100vw;`;
   } else if (sidebarIsOpenState) {
-    console.log("sidebar is open");
     mainContentAreaCss += `width: calc(100vw - ${openSidebarDrawerWidth});`;
     sidebarDrawerCss += `width: ${openSidebarDrawerWidth};`;
   } else if (!sidebarIsOpenState) {
-    console.log("sidebar is closed");
     mainContentAreaCss += `width: calc(100vw - ${closedSidebarDrawerWidth});`;
     sidebarDrawerCss += `width: ${closedSidebarDrawerWidth};`;
   }
@@ -76,7 +77,9 @@ export const Layout = ({
                   setSidebarIsOpenState(false);
                 }}
               >
-                <ArrowBack />
+                <Tooltip title={`Hide ${sidebarName}`}>
+                  <ArrowBack />
+                </Tooltip>
               </div>
               {sidebarContent}
             </div>
@@ -86,7 +89,7 @@ export const Layout = ({
                 setSidebarIsOpenState(true);
               }}
             >
-              {sidebarOpenIcon}
+              <Tooltip title={`Show ${sidebarName}`}>{sidebarOpenIcon}</Tooltip>
             </div>
           )}
         </div>
