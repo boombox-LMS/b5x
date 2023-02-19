@@ -6,7 +6,7 @@ import { Header } from "./header/Header";
 
 const openSidebarDrawerWidth = "300px";
 const closedSidebarDrawerWidth = "30px";
-const logoHeight = 60;
+const logoHeight = 70;
 const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
 
@@ -36,7 +36,7 @@ export const Layout = ({
     position: sticky;
     top: ${currentHeaderHeight}px;
     overflow: auto;
-    transition: 0.25s;
+    transition: 0.5s;
     width: ${
       sidebarIsOpenState ? openSidebarDrawerWidth : closedSidebarDrawerWidth
     };
@@ -57,7 +57,7 @@ export const Layout = ({
 
   let headerSpacerCss = `
     height: ${maxHeaderHeight}px;
-    transition: transform 0.25s;
+    transition: transform 0.5s;
   `;
 
   let headerCss = `
@@ -66,7 +66,7 @@ export const Layout = ({
     top: 0;
     background-color: white;
     width: 100%;
-    transition: transform 0.25s;
+    transition: transform 0.5s;
   `;
 
   if (!headerIsHovered && pageIsScrolled) {
