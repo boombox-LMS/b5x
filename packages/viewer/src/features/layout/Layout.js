@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-import CloseIcon from "@mui/icons-material/Close";
+import ArrowBack from "@mui/icons-material/ArrowBack";
 
 const openSidebarDrawerWidth = "300px";
 const closedSidebarDrawerWidth = "30px";
@@ -46,6 +46,7 @@ export const Layout = ({
     top: ${stickyHeaderHeight};
     overflow: auto;
     transition: width 0.25s;
+    padding-top: 5px;
   `;
 
   const layoutContainerCss = ``;
@@ -74,11 +75,8 @@ export const Layout = ({
                 onClick={() => {
                   setSidebarIsOpenState(false);
                 }}
-                css={`
-                  text-align: right;
-                `}
               >
-                <CloseIcon />
+                <ArrowBack />
               </div>
               {sidebarContent}
             </div>
