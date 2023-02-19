@@ -2,11 +2,9 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { api } from "../api/apiSlice";
-import { Header } from "../header/Header";
 import { TopicDetails } from "./TopicDetails";
-import { LoadingOutlined } from "@ant-design/icons";
 import Button from "@mui/material/Button";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 
 /**
  *  The topic home page serves as a shareable entry point into a topic;

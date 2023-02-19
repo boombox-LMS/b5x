@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 import { api } from "../api/apiSlice";
 import { Link } from "react-router-dom";
 import { muiTheme } from "../../theme";

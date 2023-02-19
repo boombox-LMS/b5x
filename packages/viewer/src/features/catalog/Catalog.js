@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 import { useGetTopicsCatalogQuery } from "../api/apiSlice";
 import { TopicList } from "./TopicList";
 import { Filter } from "./Filter";
-import { Header } from "../header/Header";
 import "react-tabs/style/react-tabs.css";
 
 export const Catalog = () => {

@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { api } from "../features/api/apiSlice";
 import envReducer from "../envSlice";
-import headerReducer from "../features/header/headerSlice";
+import headerReducer from "../features/layout/header/headerSlice";
 
 export default configureStore({
   reducer: {

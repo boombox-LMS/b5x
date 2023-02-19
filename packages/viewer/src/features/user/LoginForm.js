@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useLogInUserMutation } from "../api/apiSlice";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 
 export const LoginForm = () => {
   const dispatch = useDispatch();

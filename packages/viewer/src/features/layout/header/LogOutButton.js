@@ -1,5 +1,5 @@
 import React from "react";
-import { useLogOutUserMutation } from "../api/apiSlice";
+import { useLogOutUserMutation } from "../../api/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { LogoutOutlined } from "@ant-design/icons";
 import { Tooltip } from "@mui/material";

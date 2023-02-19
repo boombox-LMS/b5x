@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useGetUserProfileQuery } from "../api/apiSlice";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 import { DisplayBadge } from "../fragment/Badge";
 
 // TODO: Make some kind of PageWrapper component that abstracts away the header and the div,

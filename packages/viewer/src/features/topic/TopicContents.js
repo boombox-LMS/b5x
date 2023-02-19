@@ -7,10 +7,7 @@ import { Document } from "../document/Document";
 import { TableOfContents } from "./TableOfContents";
 import { TopicDevTools } from "./TopicDevTools";
 import { TopicDetails } from "./TopicDetails";
-import { Header } from "../header/Header";
-import { LoadingOutlined } from "@ant-design/icons";
-import { Loading } from "../Loading";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 
 export const TopicContents = () => {
   const dispatch = useDispatch();

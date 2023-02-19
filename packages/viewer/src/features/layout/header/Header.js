@@ -9,13 +9,12 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { LogOutButton } from "./LogOutButton";
 import { EnvButton } from "./EnvButton";
-import { useGetCurrentUserInfoQuery } from "../api/apiSlice";
+import { useGetCurrentUserInfoQuery } from "../../api/apiSlice";
 import { selectHeaderProps } from "./headerSlice";
-import Tab from "../ui/Tab";
-import TabPanel from "../ui/TabPanel";
-import Tabs from "../ui/Tabs";
+import Tab from "../../ui/Tab";
+import Tabs from "../../ui/Tabs";
 import PublishIcon from "@mui/icons-material/Publish";
-import { demoVars } from "../../themeOverrides/demoVars";
+import { demoVars } from "../../../themeOverrides/demoVars";
 
 export const Header = () => {
   const navigate = useNavigate();
