@@ -31,8 +31,8 @@ const MainContentArea = styled.div`
   padding-right: 30px;
   display: inline-block;
   vertical-align: top;
-  transition: width 0.5s;
-  width: calc(100vw - ${(props) => props.sidebarWidth}px);
+  transition: 0.5s;
+  width: calc(100% - ${(props) => props.sidebarWidth}px);
 `;
 
 export const Layout = ({
