@@ -20,16 +20,6 @@ export const Header = () => {
   const navigate = useNavigate();
   const headerProps = useSelector(selectHeaderProps);
 
-  /*
-  useEffect(() => {
-    if (typeof window !== "undefined" && shrinkHeaderOnScroll === true) {
-      window.addEventListener("scroll", () => {
-        setSmall(window.pageYOffset > 100)
-      })
-    }
-  }, [])
-  */
-
   const {
     data: user,
     isLoading: userIsLoading,
