@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
+import CloseIcon from "@mui/icons-material/Close";
 
 const openSidebarDrawerWidth = "300px";
 const closedSidebarDrawerWidth = "30px";
@@ -21,7 +22,12 @@ const stickyHeaderCss = `
   border-bottom: 1px solid black;
 `;
 
-export const Layout = ({ sidebarIsOpen, sidebarContent, mainContent }) => {
+export const Layout = ({
+  sidebarIsOpen,
+  sidebarOpenIcon,
+  sidebarContent,
+  mainContent,
+}) => {
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
 
   let mainContentAreaCss = `
@@ -68,8 +74,11 @@ export const Layout = ({ sidebarIsOpen, sidebarContent, mainContent }) => {
                 onClick={() => {
                   setSidebarIsOpenState(false);
                 }}
+                css={`
+                  text-align: right;
+                `}
               >
-                x
+                <CloseIcon />
               </div>
               {sidebarContent}
             </div>
@@ -79,7 +88,7 @@ export const Layout = ({ sidebarIsOpen, sidebarContent, mainContent }) => {
                 setSidebarIsOpenState(true);
               }}
             >
-              -&gt;
+              {sidebarOpenIcon}
             </div>
           )}
         </div>

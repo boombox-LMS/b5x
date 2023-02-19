@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "../layout/Layout";
+import ListIcon from "@mui/icons-material/List";
 
 const fillerMarkup = (
   <div>
@@ -76,6 +77,7 @@ export const Sandbox = () => {
       mainContent={fillerMarkup}
       sidebarContent={fillerMarkup}
       sidebarIsOpen={false}
+      sidebarOpenIcon={<ListIcon />}
     />
   );
 };
