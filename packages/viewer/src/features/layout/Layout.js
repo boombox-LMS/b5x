@@ -4,11 +4,36 @@ import ArrowBack from "@mui/icons-material/ArrowBack";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
 
-const openSidebarDrawerWidth = "300px";
-const closedSidebarDrawerWidth = "30px";
+const openSidebarDrawerWidth = 300;
+const closedSidebarDrawerWidth = 30;
 const logoHeight = 70;
 const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
+
+const SidebarDrawer = styled.div`
+  background-color: lightgray;
+  display: inline-block;
+  vertical-align: top;
+  height: calc(100vh - ${(props) => props.headerHeight}px);
+  position: sticky;
+  top: ${(props) => props.headerHeight}px;
+  overflow: auto;
+  transition: 0.5s;
+  width: ${(props) =>
+    props.sidebarIsOpen
+      ? `${openSidebarDrawerWidth}px`
+      : `${closedSidebarDrawerWidth}px`};
+  padding-top: 5px;
+`;
+
+const MainContentArea = styled.div`
+  padding-left: 30px;
+  padding-right: 30px;
+  display: inline-block;
+  vertical-align: top;
+  transition: width 0.5s;
+  width: calc(100vw - ${(props) => props.sidebarWidth}px);
+`;
 
 export const Layout = ({
   sidebarIsOpen,
@@ -27,21 +52,6 @@ export const Layout = ({
   if (headerIsHovered || !pageIsScrolled) {
     currentHeaderHeight += logoHeight;
   }
-
-  let sidebarDrawerCss = `
-    background-color: lightgray;
-    display: inline-block;
-    vertical-align: top;
-    height: calc(100vh - ${currentHeaderHeight}px);
-    position: sticky;
-    top: ${currentHeaderHeight}px;
-    overflow: auto;
-    transition: 0.5s;
-    width: ${
-      sidebarIsOpenState ? openSidebarDrawerWidth : closedSidebarDrawerWidth
-    };
-    padding-top: 5px;
-  `;
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -78,20 +88,12 @@ export const Layout = ({
     `;
   }
 
-  let mainContentAreaCss = `
-    padding-left: 30px;
-    padding-right: 30px;
-    display: inline-block;
-    vertical-align: top;
-    transition: width 0.25s;
-  `;
+  let sidebarWidth = 0;
 
-  if (!sidebarContent) {
-    mainContentAreaCss += `width: 100vw;`;
-  } else if (sidebarIsOpenState) {
-    mainContentAreaCss += `width: calc(100vw - ${openSidebarDrawerWidth});`;
+  if (sidebarIsOpenState) {
+    sidebarWidth = openSidebarDrawerWidth;
   } else if (!sidebarIsOpenState) {
-    mainContentAreaCss += `width: calc(100vw - ${closedSidebarDrawerWidth});`;
+    sidebarWidth = closedSidebarDrawerWidth;
   }
 
   return (
@@ -109,7 +111,10 @@ export const Layout = ({
         }}
       />
       {sidebarContent && (
-        <div css={sidebarDrawerCss}>
+        <SidebarDrawer
+          headerHeight={currentHeaderHeight}
+          sidebarIsOpen={sidebarIsOpenState}
+        >
           {sidebarIsOpenState ? (
             <div>
               <div
@@ -132,9 +137,11 @@ export const Layout = ({
               <Tooltip title={`Show ${sidebarName}`}>{sidebarOpenIcon}</Tooltip>
             </div>
           )}
-        </div>
+        </SidebarDrawer>
       )}
-      <div css={mainContentAreaCss}>{mainContent}</div>
+      <MainContentArea sidebarWidth={sidebarWidth}>
+        {mainContent}
+      </MainContentArea>
     </div>
   );
 };
