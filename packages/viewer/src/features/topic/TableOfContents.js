@@ -2,6 +2,8 @@ import React from "react";
 import { DocumentNavTile } from "./DocumentNavTile";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { completedDark, lightGray } from "../../app/colors";
+import styled from "styled-components/macro";
+import { useParams } from "react-router-dom";
 
 const CircularProgressBar = ({ progressPercentage }) => {
   if (progressPercentage === null) {
@@ -47,19 +49,17 @@ const CircularProgressBar = ({ progressPercentage }) => {
   );
 };
 
-export const TableOfContents = ({
-  topic,
-  selectedDocumentUri,
-  documentStatus,
-  progressPercentage,
-}) => {
+export const TableOfContents = ({ topic, enrollment }) => {
+  // grab + convert params from URL
+  let { topicUri, documentUri } = useParams();
+
   return (
     <div className="table-of-contents">
-      <CircularProgressBar progressPercentage={progressPercentage} />
+      <CircularProgressBar progressPercentage={enrollment.progressPercentage} />
       <DocumentNavTile
         document={{ title: "About this topic", uri: "about" }}
         topicContentMode={topic.config.contentMode}
-        isSelected={"about" == selectedDocumentUri}
+        isSelected={"about" == documentUri}
         isLocked={false}
         isVisible={true}
         isCompleted={false}
@@ -70,10 +70,10 @@ export const TableOfContents = ({
             key={document.uri}
             document={document}
             topicContentMode={topic.config.contentMode}
-            isSelected={document.uri == selectedDocumentUri}
-            isLocked={documentStatus[document.uri].isLocked}
-            isVisible={documentStatus[document.uri].isVisible}
-            isCompleted={documentStatus[document.uri].isCompleted}
+            isSelected={document.uri == documentUri}
+            isLocked={enrollment.documentStatus[document.uri].isLocked}
+            isVisible={enrollment.documentStatus[document.uri].isVisible}
+            isCompleted={enrollment.documentStatus[document.uri].isCompleted}
           />
         );
       })}
