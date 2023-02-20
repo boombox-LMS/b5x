@@ -17,6 +17,78 @@ import PublishIcon from "@mui/icons-material/Publish";
 import { demoVars } from "../../../themeOverrides/demoVars";
 import styled from "styled-components/macro";
 
+/*
+.header {
+  position: fixed;
+  left: 1%;
+  top: 0px;
+  width: 98%;
+  background-color: white;
+  z-index: 100;
+  transition: 0.4s;
+}
+
+.header__spacer {
+  height: 107px;
+  transition: 0.4s;
+  margin-bottom: 0px;
+}
+
+.header__content-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.header__logo-container {
+  text-align: center;
+  margin-bottom: -24px;
+  margin-top: 30px;
+  transition: 0.4s;
+}
+
+.header__logo-img {
+  height: 50px;
+  margin: "auto";
+}
+
+.header__menu-icon {
+  display: inline-block;
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-top: -3px;
+  font-size: 1.3em;
+}
+
+.header__menu-icon:hover {
+  color: var(--pop);
+}
+
+.header__menu-icon--active {
+  color: var(--pop);
+}
+
+.header__right-menu {
+  justify-self: end;
+}
+
+.header__left-menu {
+  justify-self: start;
+}
+
+*/
+
+const PageTitleContainer = styled.div`
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  text-align: center;
+`;
+
 export const Header = ({
   logoHeight,
   menuHeight,
@@ -173,9 +245,9 @@ export const Header = ({
             {/* <Tab label="Create highlight" index={3} /> */}
           </Tabs>
         </div>
-        <div className="header__page-title">
+        <PageTitleContainer>
           {headerProps.title || "title goes here"}
-        </div>
+        </PageTitleContainer>
         <div className="header__right-menu">
           <div
             style={{
