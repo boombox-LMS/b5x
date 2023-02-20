@@ -93,7 +93,7 @@ export const TopicContents = () => {
       <div className="topic__grid">
         <div></div>
         <div className="topic__toc">
-          <TableOfContents topic={topic} enrollment={enrollment} />
+          <TableOfContents />
         </div>
         <div className="topic__active-document">{documentContent}</div>
         <div></div>
