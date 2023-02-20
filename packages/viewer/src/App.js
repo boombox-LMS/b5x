@@ -64,7 +64,7 @@ function App() {
     content = <LoadingOutlined />;
   } else if (userLoadedSuccessfully) {
     if (user && user.email) {
-      content = <Catalog />;
+      content = <Layout mainContent={<Catalog />} />;
     } else {
       content = <LoginForm />;
     }
@@ -81,7 +81,6 @@ function App() {
             @import
             url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
           </style>
-          {false && <Header logoHeight={80} headerMenuHeight={50}></Header>}
           <React.StrictMode>
             <Routes>
               <Route
