@@ -43,9 +43,9 @@ export const Layout = ({
   mainContent,
   sidebarName,
 }) => {
-  const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
   sidebarName = sidebarName || "";
   sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
+  const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
 
   const [pageIsScrolled, setPageIsScrolled] = useState(false);
   const [headerIsHovered, setHeaderIsHovered] = useState(false);
@@ -95,10 +95,12 @@ export const Layout = ({
 
   let sidebarWidth = 0;
 
-  if (sidebarIsOpenState) {
-    sidebarWidth = openSidebarDrawerWidth;
-  } else if (!sidebarIsOpenState) {
-    sidebarWidth = closedSidebarDrawerWidth;
+  if (sidebarContent) {
+    if (sidebarIsOpenState) {
+      sidebarWidth = openSidebarDrawerWidth;
+    } else if (!sidebarIsOpenState) {
+      sidebarWidth = closedSidebarDrawerWidth;
+    }
   }
 
   return (
