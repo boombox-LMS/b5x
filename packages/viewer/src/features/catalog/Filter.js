@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   PlusCircleOutlined,
   InboxOutlined,
@@ -9,12 +10,14 @@ import {
   FileTextOutlined,
   BuildOutlined,
 } from "@ant-design/icons";
+import {
+  selectCurrentTopicFilter,
+  updateTopicFilter,
+} from "./topicFilterSlice";
 
-const FilterButtonSet = ({
-  filterCategoryName,
-  searchFilters,
-  updateSearchFiltersCallback,
-}) => {
+const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
+  const dispatch = useDispatch();
+
   const icons = {
     priorityLevel: {
       recommended: StarOutlined,
@@ -41,11 +44,13 @@ const FilterButtonSet = ({
             key={statusName}
             className={`filter-button ${value ? "filter-button--active" : ""}`}
             onClick={() => {
-              updateSearchFiltersCallback({
-                filterCategoryName,
-                statusName,
-                value: !value,
-              });
+              dispatch(
+                updateTopicFilter({
+                  filterCategoryName,
+                  statusName,
+                  value: !value,
+                })
+              );
             }}
           >
             {Icon && (
@@ -63,7 +68,9 @@ const FilterButtonSet = ({
 
 // TODO: Style as topics-filter module,
 // and rename the component to TopicsFilter
-export const Filter = ({ searchFilters, updateSearchFiltersCallback }) => {
+export const Filter = () => {
+  const searchFilters = useSelector(selectCurrentTopicFilter);
+
   return (
     <div className="filter">
       {/* Priority levels */}
@@ -71,7 +78,6 @@ export const Filter = ({ searchFilters, updateSearchFiltersCallback }) => {
       <FilterButtonSet
         searchFilters={searchFilters}
         filterCategoryName="priorityLevel"
-        updateSearchFiltersCallback={updateSearchFiltersCallback}
       />
 
       {/* Completion status  */}
@@ -79,7 +85,6 @@ export const Filter = ({ searchFilters, updateSearchFiltersCallback }) => {
       <FilterButtonSet
         searchFilters={searchFilters}
         filterCategoryName="completionStatus"
-        updateSearchFiltersCallback={updateSearchFiltersCallback}
       />
 
       <p className="filter-label">tagged with</p>
