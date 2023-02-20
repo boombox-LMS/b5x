@@ -21,6 +21,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { Header } from "./features/layout/header/Header";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
 import { muiTheme } from "./theme";
+import { Layout } from "./features/layout/Layout";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -89,7 +90,11 @@ function App() {
               />
               <Route exact path="/login" element={<LoginForm />} />
               <Route exact path="/users/:username" element={<UserProfile />} />
-              <Route exact path="/dashboard" element={<Dashboard />} />
+              <Route
+                exact
+                path="/dashboard"
+                element={<Layout mainContent={<Dashboard />} />}
+              />
               <Route exact path="/control-panel" element={<ControlPanel />} />
               <Route
                 exact

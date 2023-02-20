@@ -77,6 +77,7 @@ export const Layout = ({
     background-color: white;
     width: 100%;
     transition: transform 0.5s;
+    z-index: 100;
   `;
 
   if (!headerIsHovered && pageIsScrolled) {
