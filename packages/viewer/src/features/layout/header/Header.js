@@ -18,30 +18,7 @@ import { demoVars } from "../../../themeOverrides/demoVars";
 import styled from "styled-components/macro";
 
 /*
-.header {
-  position: fixed;
-  left: 1%;
-  top: 0px;
-  width: 98%;
-  background-color: white;
-  z-index: 100;
-  transition: 0.4s;
-}
 
-.header__spacer {
-  height: 107px;
-  transition: 0.4s;
-  margin-bottom: 0px;
-}
-
-.header__content-container {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  width: 100%;
-  border-bottom: 1px solid lightgray;
-  font-size: 18px;
-  z-index: 100;
-}
 
 .header__logo-container {
   text-align: center;
@@ -87,6 +64,20 @@ const PageTitleContainer = styled.div`
   letter-spacing: 1px;
   font-size: 0.8em;
   text-align: center;
+`;
+
+const HeaderContentContainer = styled.div`
+  height: ${(props) => props.height}px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  font-size: 18px;
+  z-index: 100;
 `;
 
 export const Header = ({
@@ -178,16 +169,7 @@ export const Header = ({
           src={headerLogoUrl}
         />
       </div>
-      <div
-        css={`
-          height: ${menuHeight}px;
-          padding-top: 15px;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-bottom: 5px;
-        `}
-        className="header__content-container"
-      >
+      <HeaderContentContainer height={menuHeight}>
         <div className="header__left-menu">
           <Tabs
             value={activeTabValue}
@@ -269,7 +251,7 @@ export const Header = ({
           </div>
           <LogOutButton />
         </div>
-      </div>
+      </HeaderContentContainer>
     </div>
   );
 };
