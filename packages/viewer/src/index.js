@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 // TODO: Is there a correct way to import component CSS?
 import "./css/global.css";
-import "./css/header.css";
 import "./css/activity-indicator.css";
 import "./css/circular-progress-bar.css";
 import "./css/login-form.css";
