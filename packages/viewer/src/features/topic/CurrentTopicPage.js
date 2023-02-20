@@ -16,20 +16,10 @@ export const CurrentTopicPage = () => {
 
   const env = useSelector(selectEnv);
 
-  // fetch the enrollment for this topic
-  const {
-    data: enrollment,
-    isLoading: enrollmentIsLoading,
-    isSuccess: enrollmentLoadedSuccessfully,
-    isError: enrollmentHasError,
-    error: enrollmentError,
-  } = api.endpoints.getEnrollment.useQuery(topicUri);
-
   // fetch topic
   const {
     data: topic,
     isLoading: topicIsLoading,
-    isSuccess: topicLoadedSuccessfully,
     isError: topicHasError,
     error: topicError,
   } = api.endpoints.getTopicContents.useQuery(topicUri);
@@ -51,14 +41,13 @@ export const CurrentTopicPage = () => {
   // TODO: update enrollment bookmark if the active document has changed
 
   // wait for everything above to finish loading
-  if (topicIsLoading || enrollmentIsLoading) {
+  if (topicIsLoading) {
     return null;
     // handle any errors
-  } else if (topicHasError || enrollmentHasError) {
+  } else if (topicHasError) {
     return (
       <div>
         <p>Topic Load Error: {JSON.stringify(topicError)}</p>
-        <p>Enrollment Load Error: {JSON.stringify(enrollmentError)}</p>
       </div>
     );
   }
