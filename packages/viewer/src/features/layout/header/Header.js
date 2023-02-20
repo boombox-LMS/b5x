@@ -35,13 +35,13 @@ const ContentContainer = styled.div`
   width: 100%;
   border-bottom: 1px solid lightgray;
   font-size: 18px;
-  z-index: 100;
+  z-index: 1000;
 `;
 
 const LogoContainer = styled.div`
   width: 100%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   height: ${(props) => props.height}px;
 `;
 
@@ -140,7 +140,7 @@ export const Header = ({
       <LogoContainer height={logoHeight}>
         <img
           css={`
-            height: calc(${logoHeight}px - 10px);
+            height: calc(${logoHeight}px - 20px);
           `}
           src={headerLogoUrl}
         />

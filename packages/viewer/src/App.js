@@ -79,7 +79,7 @@ function App() {
             @import
             url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
           </style>
-          <Header logoHeight={70} headerMenuHeight={50}></Header>
+          {false && <Header logoHeight={80} headerMenuHeight={50}></Header>}
           <React.StrictMode>
             <Routes>
               <Route

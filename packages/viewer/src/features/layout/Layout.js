@@ -6,7 +6,7 @@ import { Header } from "./header/Header";
 
 const openSidebarDrawerWidth = 300;
 const closedSidebarDrawerWidth = 30;
-const logoHeight = 70;
+const logoHeight = 80;
 const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
 
@@ -98,7 +98,6 @@ export const Layout = ({
 
   return (
     <div>
-      <div css={headerSpacerCss} />
       <Header
         headerCss={headerCss}
         logoHeight={logoHeight}
@@ -110,6 +109,7 @@ export const Layout = ({
           setHeaderIsHovered(false);
         }}
       />
+      <div css={headerSpacerCss} />
       {sidebarContent && (
         <SidebarDrawer
           headerHeight={currentHeaderHeight}
