@@ -63,38 +63,28 @@ export const CurrentTopicPage = () => {
     );
   }
 
-  let documentContent;
+  const DocumentWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  `;
+
+  const DocumentContent = styled.div`
+    padding-top: 30px;
+    max-width: 900px;
+  `;
+
+  let currentDocument;
 
   if (documentUri === "about") {
-    documentContent = (
-      <div
-        css={`
-          width: 100%;
-          display: flex;
-          justify-content: center;
-        `}
-      >
-        <div
-          css={`
-            padding-top: 30px;
-            max-width: 900px;
-          `}
-        >
-          <TopicDetails topic={topic} />
-        </div>
-      </div>
-    );
+    currentDocument = <TopicDetails topic={topic} />;
   } else {
-    documentContent = <Document documentUri={documentUri} />;
+    currentDocument = <Document documentUri={documentUri} />;
   }
 
   return (
-    <div
-      css={`
-        width: 100%;
-      `}
-    >
-      {documentContent}
-    </div>
+    <DocumentWrapper>
+      <DocumentContent>{currentDocument}</DocumentContent>
+    </DocumentWrapper>
   );
 };
