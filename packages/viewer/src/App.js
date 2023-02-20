@@ -89,7 +89,11 @@ function App() {
                 element={<React.Fragment>{content}</React.Fragment>}
               />
               <Route exact path="/login" element={<LoginForm />} />
-              <Route exact path="/users/:username" element={<UserProfile />} />
+              <Route
+                exact
+                path="/users/:username"
+                element={<Layout mainContent={<UserProfile />} />}
+              />
               <Route
                 exact
                 path="/dashboard"
