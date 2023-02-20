@@ -4,10 +4,9 @@ import { useParams } from "react-router-dom";
 import { api } from "../api/apiSlice";
 import { selectEnv } from "../../envSlice";
 import { Document } from "../document/Document";
-import { TableOfContents } from "./TableOfContents";
-import { TopicDevTools } from "./TopicDevTools";
 import { TopicDetails } from "./TopicDetails";
 import { setHeaderProps } from "../layout/header/headerSlice";
+import styled from "styled-components/macro";
 
 export const CurrentTopicPage = () => {
   const dispatch = useDispatch();
@@ -68,13 +67,34 @@ export const CurrentTopicPage = () => {
 
   if (documentUri === "about") {
     documentContent = (
-      <div className="document">
-        <TopicDetails topic={topic} />
+      <div
+        css={`
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        `}
+      >
+        <div
+          css={`
+            padding-top: 30px;
+            max-width: 900px;
+          `}
+        >
+          <TopicDetails topic={topic} />
+        </div>
       </div>
     );
   } else {
     documentContent = <Document documentUri={documentUri} />;
   }
 
-  return <>{documentContent}</>;
+  return (
+    <div
+      css={`
+        width: 100%;
+      `}
+    >
+      {documentContent}
+    </div>
+  );
 };

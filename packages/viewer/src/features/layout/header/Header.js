@@ -27,8 +27,6 @@ const TitleContainer = styled.div`
 const ContentContainer = styled.div`
   height: ${(props) => props.height}px;
   padding-top: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-bottom: 5px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;

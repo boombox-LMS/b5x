@@ -83,7 +83,7 @@ export const Document = ({ documentUri }) => {
   } else if (documentHasError || responsesHaveError) {
     if (documentError.status === 403) {
       return (
-        <div className="document">
+        <div>
           <h1>Locked Document</h1>
           <p>
             Hmm, looks like you don't have permission to view this document
@@ -102,7 +102,7 @@ export const Document = ({ documentUri }) => {
   }
 
   return (
-    <div ref={documentRef} className="document">
+    <div ref={documentRef}>
       {env === "dev" && <DocumentDevTools />}
       <div>
         {document.fragments.map((fragment) => {

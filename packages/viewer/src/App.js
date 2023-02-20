@@ -117,6 +117,8 @@ function App() {
                   <Layout
                     mainContent={<CurrentTopicPage />}
                     sidebarContent={<TableOfContents />}
+                    sidebarName="table of contents"
+                    sidebarIsOpen={true}
                   />
                 }
               />

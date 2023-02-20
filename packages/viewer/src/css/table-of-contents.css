@@ -1,7 +1,6 @@
 .table-of-contents {
   /* temporary scooch to avoid showing behind the header on scroll,
   eventually the TOC shouldn't scroll into the header unless there is content overflow */
-  padding-left: 8px;
   padding-top: 35px;
 }
 

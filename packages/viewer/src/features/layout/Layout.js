@@ -12,7 +12,6 @@ const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
 
 const SidebarDrawer = styled.div`
-  background-color: lightgray;
   display: inline-block;
   vertical-align: top;
   height: calc(100vh - ${(props) => props.headerHeight}px);
@@ -25,6 +24,7 @@ const SidebarDrawer = styled.div`
       ? `${openSidebarDrawerWidth}px`
       : `${closedSidebarDrawerWidth}px`};
   padding-top: 5px;
+  padding-left: 8px;
 `;
 
 const MainContentArea = styled.div`
@@ -77,9 +77,11 @@ export const Layout = ({
     height: ${maxHeaderHeight}px;
     top: 0;
     background-color: white;
-    width: 100%;
+    width: calc(100% - 16px);
     transition: transform 0.5s;
     z-index: 100;
+    margin-left: 8px;
+    margin-right: 8px;
   `;
 
   if (!headerIsHovered && pageIsScrolled) {
