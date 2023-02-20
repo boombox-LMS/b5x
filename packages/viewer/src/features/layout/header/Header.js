@@ -5,7 +5,6 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import TuneIcon from "@mui/icons-material/Tune";
 import { useSelector } from "react-redux";
 import { Tooltip } from "@mui/material";
-import { LoadingOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { LogOutButton } from "./LogOutButton";
 import { EnvButton } from "./EnvButton";
@@ -17,48 +16,7 @@ import PublishIcon from "@mui/icons-material/Publish";
 import { demoVars } from "../../../themeOverrides/demoVars";
 import styled from "styled-components/macro";
 
-/*
-
-
-.header__logo-container {
-  text-align: center;
-  margin-bottom: -24px;
-  margin-top: 30px;
-  transition: 0.4s;
-}
-
-.header__logo-img {
-  height: 50px;
-  margin: "auto";
-}
-
-.header__menu-icon {
-  display: inline-block;
-  margin-right: 6px;
-  margin-left: 6px;
-  margin-top: -3px;
-  font-size: 1.3em;
-}
-
-.header__menu-icon:hover {
-  color: var(--pop);
-}
-
-.header__menu-icon--active {
-  color: var(--pop);
-}
-
-.header__right-menu {
-  justify-self: end;
-}
-
-.header__left-menu {
-  justify-self: start;
-}
-
-*/
-
-const PageTitleContainer = styled.div`
+const TitleContainer = styled.div`
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
@@ -66,7 +24,7 @@ const PageTitleContainer = styled.div`
   text-align: center;
 `;
 
-const HeaderContentContainer = styled.div`
+const ContentContainer = styled.div`
   height: ${(props) => props.height}px;
   padding-top: 15px;
   padding-left: 10px;
@@ -78,6 +36,21 @@ const HeaderContentContainer = styled.div`
   border-bottom: 1px solid lightgray;
   font-size: 18px;
   z-index: 100;
+`;
+
+const LogoContainer = styled.div`
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  height: ${(props) => props.height}px;
+`;
+
+const RightMenuContainer = styled.div`
+  justify-self: end;
+`;
+
+const LeftMenuContainer = styled.div`
+  justify-self: start;
 `;
 
 export const Header = ({
@@ -110,26 +83,40 @@ export const Header = ({
   }
   */
 
+  const tabStyle = { minWidth: 20, paddingRight: 1, paddingLeft: 1 };
+  const tabIconStyle = { fontSize: "1.7em" };
+  const headerLogoUrl = demoVars.headerLogoUrl || "/img/cloudco.svg";
+
   const appPagesByName = {
     Home: {
       url: "/",
       tabIndex: 0,
+      title: "Home (Topic Catalog)",
+      icon: <HomeIcon sx={tabIconStyle} />,
     },
     "User profile": {
       url: `/users/${user.username}`,
       tabIndex: 1,
+      title: "User profile",
+      icon: <PersonIcon sx={tabIconStyle} />,
     },
     Dashboard: {
       url: "/dashboard",
       tabIndex: 2,
+      title: "Stats dashboard",
+      icon: <BarChartIcon sx={tabIconStyle} />,
     },
     "Control panel": {
       url: "/control-panel",
       tabIndex: 3,
+      title: "Admin control panel",
+      icon: <TuneIcon sx={tabIconStyle} />,
     },
     "Publish a topic": {
       url: "/publish",
       tabIndex: 4,
+      title: "Publish a topic",
+      icon: <PublishIcon sx={tabIconStyle} />,
     },
   };
 
@@ -144,33 +131,22 @@ export const Header = ({
     navigate(urlsInTabOrder[value]);
   };
 
-  const tabStyle = { minWidth: 20, paddingRight: 1, paddingLeft: 1 };
-  const tabIconStyle = { fontSize: "1.7em" };
-  const headerLogoUrl = demoVars.headerLogoUrl || "/img/cloudco.svg";
-
   return (
     <div
       css={headerCss}
       onMouseEnter={mouseEnterCallback}
       onMouseLeave={mouseLeaveCallback}
     >
-      <div
-        css={`
-          width: 100%;
-          text-align: center;
-          padding-top: 10px;
-          height: ${logoHeight}px;
-        `}
-      >
+      <LogoContainer height={logoHeight}>
         <img
           css={`
             height: calc(${logoHeight}px - 10px);
           `}
           src={headerLogoUrl}
         />
-      </div>
-      <HeaderContentContainer height={menuHeight}>
-        <div className="header__left-menu">
+      </LogoContainer>
+      <ContentContainer height={menuHeight}>
+        <LeftMenuContainer>
           <Tabs
             value={activeTabValue}
             onChange={handleTabChange}
@@ -179,58 +155,25 @@ export const Header = ({
               marginTop: "-16px",
             }}
           >
-            <Tab
-              sx={tabStyle}
-              icon={
-                <Tooltip title="Home (Topic Catalog)" placement="top">
-                  <HomeIcon sx={tabIconStyle} />
-                </Tooltip>
-              }
-              index={0}
-            />
-            <Tab
-              sx={tabStyle}
-              icon={
-                <Tooltip title="View user profile" placement="top">
-                  <PersonIcon sx={tabIconStyle} />
-                </Tooltip>
-              }
-              index={1}
-            />
-            <Tab
-              sx={tabStyle}
-              icon={
-                <Tooltip title="Stats dashboard" placement="top">
-                  <BarChartIcon sx={tabIconStyle} />
-                </Tooltip>
-              }
-              index={2}
-            />
-            <Tab
-              sx={tabStyle}
-              icon={
-                <Tooltip title="Admin control panel" placement="top">
-                  <TuneIcon sx={tabIconStyle} />
-                </Tooltip>
-              }
-              index={3}
-            />
-            <Tab
-              sx={tabStyle}
-              icon={
-                <Tooltip title="Publish a topic" placement="top">
-                  <PublishIcon sx={tabIconStyle} />
-                </Tooltip>
-              }
-              index={4}
-            />
-            {/* <Tab label="Create highlight" index={3} /> */}
+            {Object.values(appPagesByName).map((menuOption) => {
+              return (
+                <Tab
+                  sx={tabStyle}
+                  icon={
+                    <Tooltip title={menuOption.title} placement="top">
+                      {menuOption.icon}
+                    </Tooltip>
+                  }
+                  index={menuOption.tabIndex}
+                />
+              );
+            })}
           </Tabs>
-        </div>
-        <PageTitleContainer>
+        </LeftMenuContainer>
+        <TitleContainer>
           {headerProps.title || "title goes here"}
-        </PageTitleContainer>
-        <div className="header__right-menu">
+        </TitleContainer>
+        <RightMenuContainer>
           <div
             style={{
               display: "inline-block",
@@ -250,8 +193,8 @@ export const Header = ({
             </span>
           </div>
           <LogOutButton />
-        </div>
-      </HeaderContentContainer>
+        </RightMenuContainer>
+      </ContentContainer>
     </div>
   );
 };
