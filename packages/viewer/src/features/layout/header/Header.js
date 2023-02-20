@@ -158,6 +158,7 @@ export const Header = ({
             {Object.values(appPagesByName).map((menuOption) => {
               return (
                 <Tab
+                  key={menuOption.title}
                   sx={tabStyle}
                   icon={
                     <Tooltip title={menuOption.title} placement="top">
