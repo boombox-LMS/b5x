@@ -95,7 +95,11 @@ function App() {
                 path="/dashboard"
                 element={<Layout mainContent={<Dashboard />} />}
               />
-              <Route exact path="/control-panel" element={<ControlPanel />} />
+              <Route
+                exact
+                path="/control-panel"
+                element={<Layout mainContent={<ControlPanel />} />}
+              />
               <Route
                 exact
                 path="/topics/:topicSlugOrUri"
