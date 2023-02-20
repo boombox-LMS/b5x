@@ -103,7 +103,7 @@ function App() {
               <Route
                 exact
                 path="/topics/:topicSlugOrUri"
-                element={<TopicHomePage />}
+                element={<Layout mainContent={<TopicHomePage />} />}
               />
               <Route
                 exact
