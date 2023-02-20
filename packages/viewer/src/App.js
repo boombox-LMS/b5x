@@ -11,8 +11,9 @@ import { UserProfile } from "./features/user/UserProfile";
 import { LoginForm } from "./features/user/LoginForm";
 import { ControlPanel } from "./features/control-panel/ControlPanel";
 import { Catalog } from "./features/catalog/Catalog";
-import { TopicContents } from "./features/topic/TopicContents";
+import { CurrentTopicPage } from "./features/topic/CurrentTopicPage";
 import { TopicHomePage } from "./features/topic/TopicHomePage";
+import { TableOfContents } from "./features/topic/TableOfContents";
 import { Dashboard } from "./features/dashboard/Dashboard";
 import { useGetCurrentUserInfoQuery } from "./features/api/apiSlice";
 import { LoadingOutlined } from "@ant-design/icons";
@@ -112,7 +113,12 @@ function App() {
               <Route
                 exact
                 path="/topics/:topicUri/documents/:documentUri"
-                element={<TopicContents />}
+                element={
+                  <Layout
+                    mainContent={<CurrentTopicPage />}
+                    sidebarContent={<TableOfContents />}
+                  />
+                }
               />
               <Route exact path="/sandbox" element={<Sandbox />} />
               <Route

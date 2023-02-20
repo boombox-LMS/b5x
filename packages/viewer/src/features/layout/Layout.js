@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components/macro";
 import ArrowBack from "@mui/icons-material/ArrowBack";
+import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
 
@@ -44,6 +45,7 @@ export const Layout = ({
 }) => {
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
   sidebarName = sidebarName || "";
+  sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
 
   const [pageIsScrolled, setPageIsScrolled] = useState(false);
   const [headerIsHovered, setHeaderIsHovered] = useState(false);

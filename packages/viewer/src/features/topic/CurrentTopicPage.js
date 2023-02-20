@@ -9,7 +9,7 @@ import { TopicDevTools } from "./TopicDevTools";
 import { TopicDetails } from "./TopicDetails";
 import { setHeaderProps } from "../layout/header/headerSlice";
 
-export const TopicContents = () => {
+export const CurrentTopicPage = () => {
   const dispatch = useDispatch();
 
   // grab + convert params from URL
@@ -49,16 +49,6 @@ export const TopicContents = () => {
     dispatch(setHeaderProps(props));
   }, [topic]);
 
-  /*
-  const handleScroll = (e) => {
-    if (e.target.scrollTop > 100 && !headerIsMinimized) {
-      setHeaderIsMinimized(true)
-    } else if (e.target.scrollTop < 100 && headerIsMinimized) {
-      setHeaderIsMinimized(false)
-    }
-  }
-  */
-
   // TODO: update enrollment bookmark if the active document has changed
 
   // wait for everything above to finish loading
@@ -86,18 +76,5 @@ export const TopicContents = () => {
     documentContent = <Document documentUri={documentUri} />;
   }
 
-  return (
-    <>
-      {env === "dev" && <TopicDevTools topicId={topic.id} />}
-      <div className="header-spacer" />
-      <div className="topic__grid">
-        <div></div>
-        <div className="topic__toc">
-          <TableOfContents />
-        </div>
-        <div className="topic__active-document">{documentContent}</div>
-        <div></div>
-      </div>
-    </>
-  );
+  return <>{documentContent}</>;
 };
