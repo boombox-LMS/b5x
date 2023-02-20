@@ -110,6 +110,9 @@ export const Header = ({
         css={`
           height: ${menuHeight}px;
           padding-top: 15px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 5px;
         `}
         className="header__content-container"
       >
