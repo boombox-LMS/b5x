@@ -111,7 +111,11 @@ function App() {
                 element={<TopicContents />}
               />
               <Route exact path="/sandbox" element={<Sandbox />} />
-              <Route exact path="/publish" element={<TopicPublisher />} />
+              <Route
+                exact
+                path="/publish"
+                element={<Layout mainContent={<TopicPublisher />} />}
+              />
             </Routes>
           </React.StrictMode>
           {user && user.email && <HelpDesk />}
