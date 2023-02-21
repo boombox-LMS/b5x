@@ -5,7 +5,7 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
 
-const openSidebarDrawerWidth = 300;
+const defaultOpenSidebarWidth = 300;
 const closedSidebarDrawerWidth = 30;
 const logoHeight = 80;
 const headerMenuHeight = 50;
@@ -21,10 +21,10 @@ const SidebarDrawer = styled.div`
   transition: 0.5s;
   width: ${(props) =>
     props.sidebarIsOpen
-      ? `${openSidebarDrawerWidth}px`
+      ? `${props.openWidth}px`
       : `${closedSidebarDrawerWidth}px`};
   padding-top: 5px;
-  padding-left: 8px;
+  padding-left: 18px;
 `;
 
 const MainContentArea = styled.div`
@@ -38,6 +38,7 @@ const MainContentArea = styled.div`
 
 export const Layout = ({
   sidebarIsOpen,
+  openSidebarWidth,
   sidebarOpenIcon,
   sidebarContent,
   mainContent,
@@ -45,6 +46,7 @@ export const Layout = ({
 }) => {
   sidebarName = sidebarName || "";
   sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
+  openSidebarWidth = openSidebarWidth || defaultOpenSidebarWidth;
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
 
   const [pageIsScrolled, setPageIsScrolled] = useState(false);
@@ -97,7 +99,7 @@ export const Layout = ({
 
   if (sidebarContent) {
     if (sidebarIsOpenState) {
-      sidebarWidth = openSidebarDrawerWidth;
+      sidebarWidth = openSidebarWidth;
     } else if (!sidebarIsOpenState) {
       sidebarWidth = closedSidebarDrawerWidth;
     }
@@ -119,6 +121,7 @@ export const Layout = ({
       <div css={headerSpacerCss} />
       {sidebarContent && (
         <SidebarDrawer
+          openWidth={openSidebarWidth}
           headerHeight={currentHeaderHeight}
           sidebarIsOpen={sidebarIsOpenState}
         >

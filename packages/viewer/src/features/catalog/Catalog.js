@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { setHeaderProps } from "../layout/header/headerSlice";
 import { useGetTopicsCatalogQuery } from "../api/apiSlice";
 import { TopicList } from "./TopicList";
-import { Filter } from "./Filter";
 import "react-tabs/style/react-tabs.css";
 import { selectCurrentTopicFilter } from "./topicFilterSlice";
 
@@ -59,18 +58,13 @@ export const Catalog = () => {
     });
 
     content = (
-      <div className="catalog">
-        <div className="catalog__filter">
-          <Filter />
-        </div>
-        <div className="catalog__results-page">
-          {catalog.topics.length === 0 && <p>No courses to display.</p>}
-          {catalog.topics.length > 0 && (
-            <div className="catalog__topic-list">
-              <TopicList topics={topicsToDisplay} />
-            </div>
-          )}
-        </div>
+      <div>
+        {catalog.topics.length === 0 && <p>No courses to display.</p>}
+        {catalog.topics.length > 0 && (
+          <div style={{ paddingTop: "30px" }}>
+            <TopicList topics={topicsToDisplay} />
+          </div>
+        )}
       </div>
     );
   } else if (catalogHadError) {

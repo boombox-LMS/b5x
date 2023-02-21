@@ -7,6 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Sandbox } from "./features/sandbox/Sandbox";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import { UserProfile } from "./features/user/UserProfile";
 import { LoginForm } from "./features/user/LoginForm";
 import { ControlPanel } from "./features/control-panel/ControlPanel";
@@ -23,6 +24,7 @@ import { Header } from "./features/layout/header/Header";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
 import { muiTheme } from "./theme";
 import { Layout } from "./features/layout/Layout";
+import { TopicsFilter } from "./features/catalog/TopicsFilter";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -64,7 +66,16 @@ function App() {
     content = <LoadingOutlined />;
   } else if (userLoadedSuccessfully) {
     if (user && user.email) {
-      content = <Layout mainContent={<Catalog />} />;
+      content = (
+        <Layout
+          mainContent={<Catalog />}
+          sidebarContent={<TopicsFilter />}
+          sidebarIsOpen={true}
+          sidebarName="topics filter"
+          sidebarOpenIcon={<FilterAltIcon />}
+          openSidebarWidth={200}
+        />
+      );
     } else {
       content = <LoginForm />;
     }

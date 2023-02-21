@@ -14,6 +14,25 @@ import {
   selectCurrentTopicFilter,
   updateTopicFilter,
 } from "./topicFilterSlice";
+import styled from "styled-components/macro";
+
+const FilterButton = styled.div`
+  ${(props) => props.isActive && `font-weight: 500;`}
+  ${(props) => props.isActive && `color: #008f0f;`}
+  text-align: center;
+  margin-bottom: 8px;
+  padding: 0.5em 0.6em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  background-color: ${(props) => (props.isActive ? "#f0fcf2" : "#f0f0f0")};
+  border: 1.5px solid ${(props) => (props.isActive ? "#008f0f" : "#f0f0f0")};
+  ${(props) => props.index === 0 && `margin-top: -7px;`}
+`;
+
+const inputCss = `
+  padding: 0.4em 0.5em;
+  border-radius: 0.3em;
+`;
 
 const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
   const dispatch = useDispatch();
@@ -36,13 +55,14 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
 
   return (
     <>
-      {Object.keys(searchFilters[filterCategoryName]).map((statusName) => {
+      {Object.keys(searchFilters[filterCategoryName]).map((statusName, i) => {
         const value = searchFilters[filterCategoryName][statusName];
         const Icon = icons[filterCategoryName][statusName];
         return (
-          <div
+          <FilterButton
             key={statusName}
-            className={`filter-button ${value ? "filter-button--active" : ""}`}
+            index={i}
+            isActive={value}
             onClick={() => {
               dispatch(
                 updateTopicFilter({
@@ -54,12 +74,18 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
             }}
           >
             {Icon && (
-              <div className="filter-button-icon">
+              <div
+                className="filter-button-icon"
+                css={`
+                  margin-bottom: -3.5px;
+                  font-size: 1.3em;
+                `}
+              >
                 <Icon />
               </div>
             )}
             {statusName}
-          </div>
+          </FilterButton>
         );
       })}
     </>
@@ -68,7 +94,7 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
 
 // TODO: Style as topics-filter module,
 // and rename the component to TopicsFilter
-export const Filter = () => {
+export const TopicsFilter = () => {
   const searchFilters = useSelector(selectCurrentTopicFilter);
 
   return (
@@ -86,12 +112,6 @@ export const Filter = () => {
         searchFilters={searchFilters}
         filterCategoryName="completionStatus"
       />
-
-      <p className="filter-label">tagged with</p>
-      <input type="text" placeholder="search" />
-
-      <p className="filter-label">title/description matching</p>
-      <input type="text" placeholder="search" />
     </div>
   );
 };
