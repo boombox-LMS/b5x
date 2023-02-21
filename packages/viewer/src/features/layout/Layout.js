@@ -6,7 +6,6 @@ import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
 
 const defaultOpenSidebarWidth = 300;
-const closedSidebarDrawerWidth = 0;
 const logoHeight = 80;
 const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
@@ -14,10 +13,10 @@ const maxHeaderHeight = logoHeight + headerMenuHeight;
 const SidebarDrawer = styled.div`
   display: block;
   height: calc(100vh - ${(props) => props.headerHeight}px);
-  position: sticky;
+  position: fixed;
   top: ${(props) => props.headerHeight}px;
   overflow: auto;
-  transition: 0.8s;
+  transition: 0.5s;
   width: ${(props) => `${props.width}px`};
   padding-top: 30px;
   padding-left: 18px;
@@ -25,27 +24,17 @@ const SidebarDrawer = styled.div`
   transform: translateX(
     ${(props) => (props.isOpen ? 0 : -(props.width + 5))}px
   );
-  outline: 1px solid red;
 `;
 
 const MainContentArea = styled.div`
-  padding-left: 30px;
+  padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 30px)`};
   padding-right: 30px;
   position: relative;
   top: 0px;
   left: 0px;
   display: block;
   transition: 0.8s;
-  outline: 1px solid green;
-  ${(props) => {
-    if (props.currentSidebarWidth === 0) {
-      console.log("from main content area css width rule: sidebarWidth is 0");
-      // return `width: calc(100% - ${props.openSidebarWidth}px);`;
-      return `width: 99%;`;
-    } else {
-      return `width: calc(100% - ${props.openSidebarWidth}px);`;
-    }
-  }}
+  width: 100%;
 `;
 
 export const Layout = ({
@@ -173,7 +162,13 @@ export const Layout = ({
         currentSidebarWidth={sidebarWidth}
         openSidebarWidth={openSidebarWidth}
       >
-        {mainContent}
+        <div
+          css={`
+            margin: 0 auto;
+          `}
+        >
+          {mainContent}
+        </div>
       </MainContentArea>
 
       {sidebarContent && (
