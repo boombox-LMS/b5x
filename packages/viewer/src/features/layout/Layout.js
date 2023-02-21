@@ -11,12 +11,11 @@ const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
 
 const SidebarDrawer = styled.div`
-  display: block;
   height: calc(100vh - ${(props) => props.headerHeight}px);
   position: fixed;
   top: ${(props) => props.headerHeight}px;
   overflow: auto;
-  transition: 0.5s;
+  transition: 0.4s;
   width: ${(props) => `${props.width}px`};
   padding-top: 30px;
   padding-left: 18px;
@@ -33,7 +32,7 @@ const MainContentArea = styled.div`
   top: 0px;
   left: 0px;
   display: block;
-  transition: 0.5s;
+  transition: 0.4s;
   width: 100%;
 `;
 
@@ -72,7 +71,6 @@ export const Layout = ({
 
   let headerSpacerCss = `
     height: ${maxHeaderHeight}px;
-    transition: transform 0.5s;
     position: relative;
   `;
 
@@ -82,7 +80,7 @@ export const Layout = ({
     top: 0;
     background-color: white;
     width: calc(100% - 16px);
-    transition: transform 0.5s;
+    transition: transform 0.4s;
     z-index: 100;
     margin-left: 8px;
     margin-right: 8px;
