@@ -6,34 +6,46 @@ import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
 
 const defaultOpenSidebarWidth = 300;
-const closedSidebarDrawerWidth = 30;
+const closedSidebarDrawerWidth = 0;
 const logoHeight = 80;
 const headerMenuHeight = 50;
 const maxHeaderHeight = logoHeight + headerMenuHeight;
 
 const SidebarDrawer = styled.div`
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   height: calc(100vh - ${(props) => props.headerHeight}px);
   position: sticky;
   top: ${(props) => props.headerHeight}px;
   overflow: auto;
-  transition: 0.5s;
-  width: ${(props) =>
-    props.sidebarIsOpen
-      ? `${props.openWidth}px`
-      : `${closedSidebarDrawerWidth}px`};
-  padding-top: 5px;
+  transition: 0.8s;
+  width: ${(props) => `${props.width}px`};
+  padding-top: 30px;
   padding-left: 18px;
+  z-index: 100;
+  transform: translateX(
+    ${(props) => (props.isOpen ? 0 : -(props.width + 5))}px
+  );
+  outline: 1px solid red;
 `;
 
 const MainContentArea = styled.div`
   padding-left: 30px;
   padding-right: 30px;
-  display: inline-block;
-  vertical-align: top;
-  transition: 0.5s;
-  width: calc(100% - ${(props) => props.sidebarWidth}px);
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: block;
+  transition: 0.8s;
+  outline: 1px solid green;
+  ${(props) => {
+    if (props.currentSidebarWidth === 0) {
+      console.log("from main content area css width rule: sidebarWidth is 0");
+      // return `width: calc(100% - ${props.openSidebarWidth}px);`;
+      return `width: 99%;`;
+    } else {
+      return `width: calc(100% - ${props.openSidebarWidth}px);`;
+    }
+  }}
 `;
 
 export const Layout = ({
@@ -72,6 +84,7 @@ export const Layout = ({
   let headerSpacerCss = `
     height: ${maxHeaderHeight}px;
     transition: transform 0.5s;
+    position: relative;
   `;
 
   let headerCss = `
@@ -97,16 +110,18 @@ export const Layout = ({
 
   let sidebarWidth = 0;
 
-  if (sidebarContent) {
-    if (sidebarIsOpenState) {
-      sidebarWidth = openSidebarWidth;
-    } else if (!sidebarIsOpenState) {
-      sidebarWidth = closedSidebarDrawerWidth;
-    }
+  if (sidebarContent && sidebarIsOpenState) {
+    sidebarWidth = openSidebarWidth;
   }
 
+  console.log("sidebarWidth", sidebarWidth);
+
   return (
-    <div>
+    <div
+      css={`
+        position: relative;
+      `}
+    >
       <Header
         headerCss={headerCss}
         logoHeight={logoHeight}
@@ -118,40 +133,59 @@ export const Layout = ({
           setHeaderIsHovered(false);
         }}
       />
-      <div css={headerSpacerCss} />
+      <div css={headerSpacerCss}>
+        {!sidebarIsOpenState && (
+          <div
+            css={`
+              position: absolute;
+              top: ${currentHeaderHeight + 10}px;
+              left: 16px;
+              z-index: 1000;
+            `}
+            onClick={() => {
+              setSidebarIsOpenState(true);
+            }}
+          >
+            <Tooltip title={`Show ${sidebarName}`}>{sidebarOpenIcon}</Tooltip>
+          </div>
+        )}
+        {sidebarIsOpenState && (
+          <div
+            css={`
+              position: absolute;
+              top: ${currentHeaderHeight + 10}px;
+              left: 16px;
+              z-index: 1000;
+            `}
+            onClick={() => {
+              console.log("hide sidebar");
+              setSidebarIsOpenState(false);
+            }}
+          >
+            <Tooltip title={`Hide ${sidebarName}`}>
+              <ArrowBack />
+            </Tooltip>
+          </div>
+        )}
+      </div>
+
+      <MainContentArea
+        currentSidebarWidth={sidebarWidth}
+        openSidebarWidth={openSidebarWidth}
+      >
+        {mainContent}
+      </MainContentArea>
+
       {sidebarContent && (
         <SidebarDrawer
-          openWidth={openSidebarWidth}
+          width={openSidebarWidth}
+          isOpen={sidebarIsOpenState}
           headerHeight={currentHeaderHeight}
           sidebarIsOpen={sidebarIsOpenState}
         >
-          {sidebarIsOpenState ? (
-            <div>
-              <div
-                onClick={() => {
-                  setSidebarIsOpenState(false);
-                }}
-              >
-                <Tooltip title={`Hide ${sidebarName}`}>
-                  <ArrowBack />
-                </Tooltip>
-              </div>
-              {sidebarContent}
-            </div>
-          ) : (
-            <div
-              onClick={() => {
-                setSidebarIsOpenState(true);
-              }}
-            >
-              <Tooltip title={`Show ${sidebarName}`}>{sidebarOpenIcon}</Tooltip>
-            </div>
-          )}
+          <div>{sidebarContent}</div>
         </SidebarDrawer>
       )}
-      <MainContentArea sidebarWidth={sidebarWidth}>
-        {mainContent}
-      </MainContentArea>
     </div>
   );
 };
