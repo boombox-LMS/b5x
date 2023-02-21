@@ -36,6 +36,14 @@ const MainContentArea = styled.div`
   width: 100%;
 `;
 
+const SidebarShowHideIcon = styled.div`
+  position: fixed;
+  top: ${(props) => props.headerHeight + 10}px;
+  left: 16px;
+  z-index: 1000;
+  transition: 0.4s;
+`;
+
 export const Layout = ({
   sidebarIsOpen,
   openSidebarWidth,
@@ -101,8 +109,6 @@ export const Layout = ({
     sidebarWidth = openSidebarWidth;
   }
 
-  console.log("sidebarWidth", sidebarWidth);
-
   return (
     <div
       css={`
@@ -127,29 +133,18 @@ export const Layout = ({
         openSidebarWidth={openSidebarWidth}
       >
         {!sidebarIsOpenState && (
-          <div
-            css={`
-              position: absolute;
-              top: 10px;
-              left: 16px;
-              z-index: 1000;
-            `}
+          <SidebarShowHideIcon
+            headerHeight={currentHeaderHeight}
             onClick={() => {
               setSidebarIsOpenState(true);
             }}
           >
             <Tooltip title={`Show ${sidebarName}`}>{sidebarOpenIcon}</Tooltip>
-          </div>
+          </SidebarShowHideIcon>
         )}
         {sidebarIsOpenState && (
-          <div
-            css={`
-              position: absolute;
-              top: 10px;
-              left: 16px;
-              z-index: 1000;
-              transition: 0.5s;
-            `}
+          <SidebarShowHideIcon
+            headerHeight={currentHeaderHeight}
             onClick={() => {
               setSidebarIsOpenState(false);
             }}
@@ -157,7 +152,7 @@ export const Layout = ({
             <Tooltip title={`Hide ${sidebarName}`}>
               <ArrowBack />
             </Tooltip>
-          </div>
+          </SidebarShowHideIcon>
         )}
         <div
           css={`
