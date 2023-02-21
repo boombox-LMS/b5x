@@ -25,6 +25,7 @@ import { TopicPublisher } from "./features/publishing/TopicPublisher";
 import { muiTheme } from "./theme";
 import { Layout } from "./features/layout/Layout";
 import { TopicsFilter } from "./features/catalog/TopicsFilter";
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -129,6 +130,7 @@ function App() {
                     sidebarContent={<TableOfContents />}
                     sidebarName="table of contents"
                     sidebarIsOpen={true}
+                    sidebarOpenIcon={<FormatListBulletedIcon />}
                   />
                 }
               />

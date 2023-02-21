@@ -27,13 +27,13 @@ const SidebarDrawer = styled.div`
 `;
 
 const MainContentArea = styled.div`
-  padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 30px)`};
-  padding-right: 30px;
+  padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 40px)`};
+  padding-right: 40px;
   position: relative;
   top: 0px;
   left: 0px;
   display: block;
-  transition: 0.8s;
+  transition: 0.5s;
   width: 100%;
 `;
 
@@ -122,12 +122,17 @@ export const Layout = ({
           setHeaderIsHovered(false);
         }}
       />
-      <div css={headerSpacerCss}>
+      <div css={headerSpacerCss} />
+
+      <MainContentArea
+        currentSidebarWidth={sidebarWidth}
+        openSidebarWidth={openSidebarWidth}
+      >
         {!sidebarIsOpenState && (
           <div
             css={`
               position: absolute;
-              top: ${currentHeaderHeight + 10}px;
+              top: 10px;
               left: 16px;
               z-index: 1000;
             `}
@@ -142,12 +147,12 @@ export const Layout = ({
           <div
             css={`
               position: absolute;
-              top: ${currentHeaderHeight + 10}px;
+              top: 10px;
               left: 16px;
               z-index: 1000;
+              transition: 0.5s;
             `}
             onClick={() => {
-              console.log("hide sidebar");
               setSidebarIsOpenState(false);
             }}
           >
@@ -156,12 +161,6 @@ export const Layout = ({
             </Tooltip>
           </div>
         )}
-      </div>
-
-      <MainContentArea
-        currentSidebarWidth={sidebarWidth}
-        openSidebarWidth={openSidebarWidth}
-      >
         <div
           css={`
             margin: 0 auto;
