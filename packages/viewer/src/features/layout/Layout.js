@@ -52,7 +52,7 @@ const MainContentArea = styled.div`
 
 const SidebarShowHideIcon = styled.div`
   position: fixed;
-  top: ${(props) => props.headerHeight + 24}px;
+  top: ${(props) => props.headerHeight + 30}px;
   left: 16px;
   z-index: 1000;
   transition: 0.4s;
