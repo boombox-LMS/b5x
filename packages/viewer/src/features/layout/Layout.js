@@ -4,11 +4,12 @@ import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
-
-const defaultOpenSidebarWidth = 300;
-const logoHeight = 80;
-const headerMenuHeight = 50;
-const maxHeaderHeight = logoHeight + headerMenuHeight;
+import {
+  DEFAULT_OPEN_SIDEBAR_WIDTH,
+  HEADER_LOGO_HEIGHT,
+  HEADER_MENU_HEIGHT,
+  MAX_HEADER_HEIGHT,
+} from "../../theme";
 
 const SidebarDrawer = styled.div`
   height: calc(100vh - ${(props) => props.headerHeight}px);
@@ -54,15 +55,17 @@ export const Layout = ({
 }) => {
   sidebarName = sidebarName || "";
   sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
-  openSidebarWidth = openSidebarWidth || defaultOpenSidebarWidth;
-  const [sidebarIsOpenState, setSidebarIsOpenState] = useState(sidebarIsOpen);
+  openSidebarWidth = openSidebarWidth || DEFAULT_OPEN_SIDEBAR_WIDTH;
+  const [sidebarIsOpenState, setSidebarIsOpenState] = useState(
+    sidebarIsOpen || false
+  );
 
   const [pageIsScrolled, setPageIsScrolled] = useState(false);
   const [headerIsHovered, setHeaderIsHovered] = useState(false);
 
-  let currentHeaderHeight = headerMenuHeight;
+  let currentHeaderHeight = HEADER_MENU_HEIGHT;
   if (headerIsHovered || !pageIsScrolled) {
-    currentHeaderHeight += logoHeight;
+    currentHeaderHeight += HEADER_LOGO_HEIGHT;
   }
 
   useEffect(() => {
@@ -77,31 +80,7 @@ export const Layout = ({
     }
   }, []);
 
-  let headerSpacerCss = `
-    height: ${maxHeaderHeight}px;
-    position: relative;
-  `;
-
-  let headerCss = `
-    position: fixed;
-    height: ${maxHeaderHeight}px;
-    top: 0;
-    background-color: white;
-    width: calc(100% - 16px);
-    transition: transform 0.4s;
-    z-index: 100;
-    margin-left: 8px;
-    margin-right: 8px;
-  `;
-
-  if (!headerIsHovered && pageIsScrolled) {
-    headerCss += `
-      transform: translateY(-${logoHeight}px);
-    `;
-    headerSpacerCss += `
-      transform: translateY(-${logoHeight}px);
-    `;
-  }
+  const headerIsMinimized = !headerIsHovered && pageIsScrolled;
 
   let sidebarWidth = 0;
 
@@ -116,9 +95,7 @@ export const Layout = ({
       `}
     >
       <Header
-        headerCss={headerCss}
-        logoHeight={logoHeight}
-        menuHeight={headerMenuHeight}
+        isMinimized={headerIsMinimized}
         mouseEnterCallback={() => {
           setHeaderIsHovered(true);
         }}
@@ -126,7 +103,6 @@ export const Layout = ({
           setHeaderIsHovered(false);
         }}
       />
-      <div css={headerSpacerCss} />
 
       <MainContentArea
         currentSidebarWidth={sidebarWidth}
