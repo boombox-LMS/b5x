@@ -6,11 +6,8 @@ export const ShortTextQuestion = ({
   response,
   responseUpdateCallback,
 }) => {
-  let inputClass = "short-text-question__input specificity-bump";
   let responseValue;
   if (response && response.value) {
-    // TODO: The completion green doesn't show up anymore, but maybe that's fine?
-    inputClass += " short-text-question__input--completed";
     responseValue = response.value;
   } else {
     responseValue = "";
@@ -44,7 +41,6 @@ export const ShortTextQuestion = ({
       })}
       <input
         type="text"
-        className={inputClass}
         value={localResponse}
         onKeyPress={handleKeyPress}
         onChange={handleChange}
