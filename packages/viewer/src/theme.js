@@ -78,5 +78,25 @@ export const INACTIVE_MENU_ICON_COLOR = "rgba(0, 0, 0, 0.6)";
 export const LAYOUT_RESIZE_TRANSITION_TIME = "0.4s";
 
 export const COLORS = {
+  /*
+    The subtle highlight is used to indicate things like which document
+    in the table of contents is currently being displayed. It is also
+    used as the background for inactive items, like unselected choices
+    in a multiple-choice question. It should be used anytime you want the containing box
+    of an item to be visible, but not distracting.
+  */
   SUBTLE_HIGHLIGHT: "#f0f0f0", // light gray
+  /*
+    'Greenlit' coloring is used to indicate completion of a task.
+    For example, a multiple-choice option that has been selected will be 'greenlit'
+    to indicate the receipt of that selection action.
+    
+    Greenlit items are literally green by default, 
+    regardless of the colors in the MUI theme.
+
+    The dark color is generally used for borders and simple buttons, while the
+    light color is used as a subtle background behind more delicate text/content.
+  */
+  GREENLIT_DARK: "#008f0f", // dark cool green
+  GREENLIT_LIGHT: "#f0fcf2", // light cool green
 };

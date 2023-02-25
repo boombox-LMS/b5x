@@ -12,7 +12,6 @@ import "./css/topic-card.css";
 import "./css/rtf-input.css";
 import "./css/short-text-question.css";
 import "./css/select-question.css";
-import "./css/next-button.css";
 import "./css/continue-button.css";
 import "./css/rubric.css";
 import "./css/visual-list.css";

@@ -5,6 +5,23 @@ import { api } from "../api/apiSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { TopicCompletionContent } from "./TopicCompletionContent";
+import styled from "styled-components/macro";
+import { COLORS, muiTheme } from "../../theme";
+
+const NextButtonContent = styled.span`
+  background-color: ${COLORS.SUBTLE_HIGHLIGHT};
+  color: black;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 25px;
+  width: 50px;
+  padding: 7px;
+  &:hover {
+    background-color: ${muiTheme.palette.primary.main};
+    color: white;
+  }
+`;
 
 const NextButton = ({ topicUri, nextVisibleDocumentUri }) => {
   const buildNextButtonClassStr = ({ isHovered }) => {
@@ -21,8 +38,7 @@ const NextButton = ({ topicUri, nextVisibleDocumentUri }) => {
 
   return (
     <Link to={`/topics/${topicUri}/documents/${nextVisibleDocumentUri}`}>
-      <span
-        className={nextButtonClassStr}
+      <NextButtonContent
         onMouseEnter={() =>
           setNextButtonClassStr(buildNextButtonClassStr({ isHovered: true }))
         }
@@ -31,7 +47,7 @@ const NextButton = ({ topicUri, nextVisibleDocumentUri }) => {
         }
       >
         <FontAwesomeIcon icon={faArrowRight} size="1x" />
-      </span>
+      </NextButtonContent>
     </Link>
   );
 };
