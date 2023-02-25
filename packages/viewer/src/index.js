@@ -25,7 +25,6 @@ import "./css/five-star-rating.css";
 import "./css/visual-list.css";
 import "./css/breakout-box.css";
 import "./css/nps-question.css";
-import "./css/badge.css";
 import App from "./App";
 import store from "./app/store";
 import { Provider } from "react-redux";
