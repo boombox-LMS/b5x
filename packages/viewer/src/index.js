@@ -5,7 +5,6 @@ import "./index.css";
 import "./css/global.css";
 import "./css/activity-indicator.css";
 import "./css/circular-progress-bar.css";
-import "./css/topic.css";
 import "./css/dropzone.css";
 import "./css/table-of-contents.css";
 import "./css/topic-card.css";
