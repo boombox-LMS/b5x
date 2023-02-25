@@ -39,6 +39,7 @@ const SidebarDrawer = styled.div`
 
 const MainContentArea = styled.div`
   padding-top: 22px;
+  padding-bottom: 50px;
   padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 55px)`};
   padding-right: 55px;
   position: relative;

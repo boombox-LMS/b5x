@@ -108,12 +108,10 @@ export const TopicHomePage = () => {
 
   return (
     <>
-      <div className="header-spacer" />
       <div
         style={{
           width: "800px",
           margin: "auto",
-          marginTop: "50px",
           paddingBottom: "100px",
         }}
       >
