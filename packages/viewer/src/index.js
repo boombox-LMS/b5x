@@ -9,7 +9,6 @@ import "./css/login-form.css";
 import "./css/topic.css";
 import "./css/help-desk.css";
 import "./css/dropzone.css";
-import "./css/dashboard.css";
 import "./css/selected-text-menu.css";
 import "./css/table-of-contents.css";
 import "./css/topic-card.css";
