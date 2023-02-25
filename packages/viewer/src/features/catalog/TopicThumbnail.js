@@ -1,6 +1,7 @@
 import React from "react";
 import GeoPattern from "geopattern";
 import tinycolor from "tinycolor2";
+import styled from "styled-components/macro";
 
 const combineTwoShortestLines = (lines) => {
   let indexToCombineWithNextSibling = 0;
@@ -83,11 +84,13 @@ const GeneratedTopicImage = ({ topic }) => {
   return <div style={style}>{title}</div>;
 };
 
+const TopicCardThumbnailImage = styled.img`
+  border-radius: 5px 5px 0px 0px;
+`;
+
 export const TopicThumbnail = ({ topic }) => {
   if (topic.coverImageUrl) {
-    return (
-      <img className="topic-card__cover-image" src={topic.coverImageUrl} />
-    );
+    return <TopicCardThumbnailImage src={topic.coverImageUrl} />;
   } else {
     return <GeneratedTopicImage topic={topic} />;
   }

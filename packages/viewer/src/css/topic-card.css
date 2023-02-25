@@ -59,10 +59,6 @@
   margin-right: 3px;
 }
 
-.topic-card__cover-image {
-  border-radius: 5px 5px 0px 0px;
-}
-
 .topic-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
