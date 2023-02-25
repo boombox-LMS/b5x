@@ -111,7 +111,11 @@ export const TopicCard = ({ topic }) => {
       )}
       <TopicThumbnail topic={topic} />
       <TopicCardInfo>
-        <div className="topic-card__title">
+        <div
+          css={`
+            margin-bottom: 4px;
+          `}
+        >
           {topic.unmetPrerequisites.length > 0 && (
             <>
               <Tooltip title="Prerequisites not met" arrow placement="top">
@@ -124,7 +128,7 @@ export const TopicCard = ({ topic }) => {
           )}
           <strong>{topic.title}</strong>
         </div>
-        <div className="topic-card__subtitle">{topic.subtitle}</div>
+        <div>{topic.subtitle}</div>
       </TopicCardInfo>
     </TopicCardWrapper>
   );
