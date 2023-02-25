@@ -6,7 +6,6 @@ import "./css/global.css";
 import "./css/activity-indicator.css";
 import "./css/circular-progress-bar.css";
 import "./css/topic.css";
-import "./css/help-desk.css";
 import "./css/dropzone.css";
 import "./css/selected-text-menu.css";
 import "./css/table-of-contents.css";

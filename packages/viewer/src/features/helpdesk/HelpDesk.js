@@ -17,7 +17,19 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme, INACTIVE_MENU_ICON_COLOR } from "../../theme";
+
+const HelpDeskExitIconWrapper = styled.div`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+  font-size: 1.4em;
+  color: ${INACTIVE_MENU_ICON_COLOR};
+  &:hover {
+    color: ${muiTheme.palette.secondary.main};
+  }
+`;
 
 const actions = [
   { icon: <HelpOutlineOutlinedIcon />, name: "Ask for help" },
@@ -113,22 +125,14 @@ export const HelpDesk = () => {
             zIndex: "2000",
           }}
         >
-          <div className="help-desk-comms-pane">
-            <div
-              className="help-desk-comms-pane__exit-icon"
+          <div>
+            <HelpDeskExitIconWrapper
               onClick={() => {
                 setCurrentAction(null);
               }}
             >
-              <CloseIcon
-                css={`
-                  fontsize: 1.4em;
-                  &:hover {
-                    color: ${muiTheme.palette.secondary.main};
-                  }
-                `}
-              />
-            </div>
+              <CloseIcon />
+            </HelpDeskExitIconWrapper>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <Tabs centered value={activeTabValue} onChange={handleTabChange}>
                 <Tab
@@ -146,7 +150,6 @@ export const HelpDesk = () => {
                   label="Share feedback"
                   index={2}
                 />
-                {/* <Tab label="Create highlight" index={3} /> */}
               </Tabs>
             </Box>
             <TabPanel value={activeTabValue} index={0}>
