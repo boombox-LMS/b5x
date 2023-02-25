@@ -1,7 +1,7 @@
 .table-of-contents {
   /* temporary scooch to avoid showing behind the header on scroll,
   eventually the TOC shouldn't scroll into the header unless there is content overflow */
-  padding-top: 35px;
+  /* padding-top: 35px; */
 }
 
 .table-of-contents .circular-progress-bar {

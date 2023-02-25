@@ -29,8 +29,8 @@ const SidebarDrawer = styled.div`
   ${(props) =>
     props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
   width: ${(props) => `${props.width}px`};
-  padding-top: 50px;
-  padding-left: 18px;
+  padding-top: 30px;
+  padding-left: 50px;
   z-index: 100;
   transform: translateX(
     ${(props) => (props.isOpen ? 0 : -(props.width + 5))}px
@@ -38,7 +38,7 @@ const SidebarDrawer = styled.div`
 `;
 
 const MainContentArea = styled.div`
-  padding-top: 20px;
+  padding-top: 30px;
   padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 55px)`};
   padding-right: 55px;
   position: relative;
