@@ -34,18 +34,3 @@
   margin-left: -1px;
   z-index: -1;
 }
-
-.nps-question__legend {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-size: 0.9em;
-  font-style: italic;
-}
-
-.nps-question__legend--left {
-  text-align: left;
-}
-
-.nps-question__legend--right {
-  text-align: right;
-}
