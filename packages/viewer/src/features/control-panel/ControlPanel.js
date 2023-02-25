@@ -67,8 +67,6 @@ export const ControlPanel = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Admin control panel",
         currentPage: "Control panel",
       })

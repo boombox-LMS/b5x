@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 export const headerSlice = createSlice({
   name: "header",
   initialState: {
-    isHidden: true,
     title: "",
   },
   reducers: {

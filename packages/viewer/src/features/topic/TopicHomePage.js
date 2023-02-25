@@ -80,18 +80,9 @@ export const TopicHomePage = () => {
   } = api.endpoints.getTopicInfo.useQuery(topicQueryParams);
 
   useEffect(() => {
-    let props = {
-      isHidden: true,
-    };
     if (topic) {
-      props = {
-        isHidden: false,
-        isMinimized: false,
-        title: `Topic details: ${topic.title}`,
-        activeIcon: "topic",
-      };
+      dispatch(setHeaderProps({ title: `Topic details: ${topic.title}` }));
     }
-    dispatch(setHeaderProps(props));
   }, [topic]);
 
   // wait for everything above to finish loading

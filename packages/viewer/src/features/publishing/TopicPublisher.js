@@ -11,8 +11,6 @@ export const TopicPublisher = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Publish a topic",
         currentPage: "Publish a topic",
       })

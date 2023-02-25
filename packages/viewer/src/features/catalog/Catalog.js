@@ -14,8 +14,6 @@ export const Catalog = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Tech Learning Home",
         currentPage: "Home",
       })

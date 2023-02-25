@@ -13,8 +13,6 @@ export const UserProfile = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "User profile",
         currentPage: "User profile",
       })

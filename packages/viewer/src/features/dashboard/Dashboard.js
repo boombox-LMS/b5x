@@ -16,8 +16,6 @@ export const Dashboard = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Dashboard",
         currentPage: "Dashboard",
       })

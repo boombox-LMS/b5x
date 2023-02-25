@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
 import { useLogInUserMutation } from "../api/apiSlice";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { setHeaderProps } from "../layout/header/headerSlice";
 import styled from "styled-components/macro";
 import { COLORS } from "../../theme";
 
@@ -32,12 +30,6 @@ const LoginFormContent = styled.div`
 `;
 
 export const LoginForm = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(setHeaderProps({ isHidden: true }));
-  }, []);
-
   const [logInUser, { isLoading }] = useLogInUserMutation();
   const [email, setEmail] = useState("");
 

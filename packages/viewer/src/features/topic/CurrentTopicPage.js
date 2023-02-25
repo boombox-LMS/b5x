@@ -25,17 +25,9 @@ export const CurrentTopicPage = () => {
   } = api.endpoints.getTopicContents.useQuery(topicUri);
 
   useEffect(() => {
-    let props = {
-      isHidden: true,
-    };
     if (topic) {
-      props = {
-        isHidden: false,
-        isMinimized: false,
-        title: topic.title,
-      };
+      dispatch(setHeaderProps({ title: topic.title }));
     }
-    dispatch(setHeaderProps(props));
   }, [topic]);
 
   // TODO: update enrollment bookmark if the active document has changed
