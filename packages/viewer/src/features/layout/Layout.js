@@ -13,7 +13,7 @@ import {
 } from "../../theme";
 
 const MenuIconWrapper = styled.span`
-  color: rgba(0, 0, 0, 0.6);
+  color: ${INACTIVE_MENU_ICON_COLOR};
   &:hover {
     color: ${muiTheme.palette.secondary.main};
   }
