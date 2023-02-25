@@ -12,6 +12,24 @@ import {
   FileTextOutlined,
 } from "@ant-design/icons";
 import { TopicThumbnail } from "./TopicThumbnail";
+import styled from "styled-components/macro";
+
+const TopicCardWrapper = styled.div`
+  border-radius: 5px;
+  width: 250px;
+  height: 260px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  &:hover {
+    transform: scale(1.03);
+  }
+`;
 
 export const TopicCard = ({ topic }) => {
   const navigate = useNavigate();
@@ -61,7 +79,7 @@ export const TopicCard = ({ topic }) => {
   }
 
   return (
-    <div className="topic-card" onClick={sendToTopicPage}>
+    <TopicCardWrapper onClick={sendToTopicPage}>
       {(PriorityLevelIcon || CompletionStatusIcon) && (
         <>
           <div
@@ -103,6 +121,6 @@ export const TopicCard = ({ topic }) => {
         </div>
         <div className="topic-card__subtitle">{topic.subtitle}</div>
       </div>
-    </div>
+    </TopicCardWrapper>
   );
 };
