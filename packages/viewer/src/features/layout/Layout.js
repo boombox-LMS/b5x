@@ -29,7 +29,7 @@ const SidebarDrawer = styled.div`
   ${(props) =>
     props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
   width: ${(props) => `${props.width}px`};
-  padding-top: 50px;
+  padding-top: 55px;
   padding-left: 20px;
   z-index: 100;
   transform: translateX(
