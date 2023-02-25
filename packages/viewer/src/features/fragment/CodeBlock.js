@@ -5,9 +5,9 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { CopyOutlined, CheckOutlined } from "@ant-design/icons";
 import he from "he";
 import styled from "styled-components/macro";
+import { muiTheme } from "../../theme";
 
-/*
-.code-block .text-copier .text-copier__flash {
+const FlashMessageWrapper = styled.div`
   position: absolute;
   width: 300px;
   text-align: right;
@@ -15,19 +15,10 @@ import styled from "styled-components/macro";
   right: 0px;
   font-size: 0.9em;
   font-style: italic;
-  color: var(--pop);
+  color: ${muiTheme.palette.secondary.main};
   transition: 0.4s;
-}
-
-.text-copier__flash--active {
-  opacity: 100%;
-}
-
-.text-copier__flash--inactive {
-  opacity: 0%;
-}
-
-*/
+  opacity: ${(props) => (props.isActive ? 100 : 0)}%;
+`;
 
 const TextCopierWrapper = styled.div`
   position: absolute;
@@ -60,25 +51,18 @@ export const CodeBlock = ({ fragment }) => {
       css={`
         position: relative;
       `}
-      className="code-block"
     >
-      <TextCopierWrapper className="text-copier">
-        <div
-          className={`text-copier__flash ${
-            copied
-              ? "text-copier__flash--active"
-              : "text-copier__flash--inactive"
-          }`}
-        >
+      <TextCopierWrapper>
+        <FlashMessageWrapper isActive={copied}>
           copied to clipboard
-        </div>
+        </FlashMessageWrapper>
         <CopyToClipboard onCopy={() => setCopied(true)} text={textToCopy}>
           <TextCopierIconWrapper onClick={() => setCopied(true)}>
             <CopyOutlined />
           </TextCopierIconWrapper>
         </CopyToClipboard>
       </TextCopierWrapper>
-      <div className="code-block__contents">
+      <div>
         <SyntaxHighlighter
           language={fragment.data.language}
           style={a11yDark}

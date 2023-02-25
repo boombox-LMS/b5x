@@ -12,7 +12,6 @@ import "./css/dropzone.css";
 import "./css/selected-text-menu.css";
 import "./css/table-of-contents.css";
 import "./css/topic-card.css";
-import "./css/code-block.css";
 import "./css/rtf-input.css";
 import "./css/short-text-question.css";
 import "./css/long-text-question.css";
