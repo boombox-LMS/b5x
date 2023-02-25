@@ -31,6 +31,11 @@ const TopicCardWrapper = styled.div`
   }
 `;
 
+const TopicCardInfo = styled.div`
+  padding: 12px;
+  padding-top: 5px;
+`;
+
 export const TopicCard = ({ topic }) => {
   const navigate = useNavigate();
 
@@ -105,7 +110,7 @@ export const TopicCard = ({ topic }) => {
         </>
       )}
       <TopicThumbnail topic={topic} />
-      <div className="topic-card__info">
+      <TopicCardInfo>
         <div className="topic-card__title">
           {topic.unmetPrerequisites.length > 0 && (
             <>
@@ -120,7 +125,7 @@ export const TopicCard = ({ topic }) => {
           <strong>{topic.title}</strong>
         </div>
         <div className="topic-card__subtitle">{topic.subtitle}</div>
-      </div>
+      </TopicCardInfo>
     </TopicCardWrapper>
   );
 };
