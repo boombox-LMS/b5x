@@ -29,8 +29,8 @@ const SidebarDrawer = styled.div`
   ${(props) =>
     props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
   width: ${(props) => `${props.width}px`};
-  padding-top: 30px;
-  padding-left: 50px;
+  padding-top: 50px;
+  padding-left: 20px;
   z-index: 100;
   transform: translateX(
     ${(props) => (props.isOpen ? 0 : -(props.width + 5))}px
@@ -38,7 +38,7 @@ const SidebarDrawer = styled.div`
 `;
 
 const MainContentArea = styled.div`
-  padding-top: 30px;
+  padding-top: 22px;
   padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 55px)`};
   padding-right: 55px;
   position: relative;
@@ -52,7 +52,7 @@ const MainContentArea = styled.div`
 
 const SidebarShowHideIcon = styled.div`
   position: fixed;
-  top: ${(props) => props.headerHeight + 30}px;
+  top: ${(props) => props.headerHeight + 24}px;
   left: 16px;
   z-index: 1000;
   transition: 0.4s;
@@ -77,6 +77,7 @@ export const Layout = ({
   );
 
   const [pageIsScrolled, setPageIsScrolled] = useState(false);
+  const [sidebarIsScrolled, setSidebarIsScrolled] = useState(false);
   const [headerIsHovered, setHeaderIsHovered] = useState(false);
   const [isNewPage, setIsNewPage] = useState(false);
 
@@ -106,6 +107,14 @@ export const Layout = ({
       setIsNewPage(false);
     }, 1000);
   }, [location.pathname]);
+
+  const handleSidebarScroll = (e) => {
+    if (e.target.scrollTop === 0 && sidebarIsScrolled) {
+      setSidebarIsScrolled(false);
+    } else if (e.target.scrollTop > 0 && !sidebarIsScrolled) {
+      setSidebarIsScrolled(true);
+    }
+  };
 
   const headerIsMinimized = !headerIsHovered && pageIsScrolled;
 
@@ -148,7 +157,7 @@ export const Layout = ({
             </Tooltip>
           </SidebarShowHideIcon>
         )}
-        {sidebarIsOpenState && sidebarContent && (
+        {sidebarIsOpenState && sidebarContent && !sidebarIsScrolled && (
           <SidebarShowHideIcon
             headerHeight={currentHeaderHeight}
             onClick={() => {
@@ -173,6 +182,7 @@ export const Layout = ({
 
       {sidebarContent && (
         <SidebarDrawer
+          onScroll={handleSidebarScroll}
           isLoading={isNewPage}
           width={openSidebarWidth}
           isOpen={sidebarIsOpenState}
