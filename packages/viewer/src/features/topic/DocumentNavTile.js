@@ -54,6 +54,8 @@ export const DocumentNavTile = ({
   };
 
   let documentTitleStyle = {
+    display: "inline-block",
+    verticalAlign: "top",
     maxWidth: "240px",
     paddingTop: "10px",
     paddingBottom: "10px",
