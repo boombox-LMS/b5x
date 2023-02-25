@@ -1,45 +1,36 @@
 import React, { useState } from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
 import styled from "styled-components/macro";
+import { COLORS } from "../../theme";
 
-/*
-.nps-question__selector {
+const Selector = styled.div`
   display: grid;
   margin-top: 12px;
   margin-bottom: 4px;
   grid-template-columns: repeat(11, 1fr);
-}
+`;
 
-.nps-question__option {
-  border: 1.5px solid #e0e0e0;
+const Option = styled.div`
+  position: relative;
+  border: 1.5px solid ${COLORS.SUBTLE_HIGHLIGHT};
   text-align: center;
   padding: 5px;
   margin-right: -1px;
-}
-
-.nps-question__option:last-of-type {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.nps-question__option:first-of-type {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.nps-question__option.nps-question__option--selected {
-  background-color: var(--completed-light);
-  border: 1.5px solid var(--completed-dark);
-  color: var(--completed-dark);
-  font-weight: bold;
-  margin-right: 0px;
-}
-
-.nps-question__option--selected + .nps-question__option {
-  margin-left: -1px;
-  z-index: -1;
-}
-*/
+  ${(props) =>
+    props.isSelected &&
+    `background-color: ${COLORS.GREENLIT_LIGHT}; 
+     border: 1.5px solid ${COLORS.GREENLIT_DARK}; 
+     font-weight: bold;`}
+  ${(props) => (props.isSelected ? `z-index: 1;` : `z-index: 0;`)}
+  &:last-of-type {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  &:first-of-type {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+`;
 
 const LegendLeftItem = styled.div`
   text-align: left;
@@ -84,21 +75,19 @@ export const NpsQuestion = ({ fragment, response, responseUpdateCallback }) => {
           <FragmentWrapper key={childFragment.uri} fragment={childFragment} />
         );
       })}
-      <div className="nps-question__selector">
+      <Selector>
         {choices.map((value) => (
-          <div
+          <Option
             onClick={() => {
               handleSelection(value);
             }}
             key={value}
-            className={`nps-question__option ${
-              value === localResponse ? "nps-question__option--selected" : ""
-            }`}
+            isSelected={localResponse === value}
           >
             {value}
-          </div>
+          </Option>
         ))}
-      </div>
+      </Selector>
       <Legend>
         <LegendLeftItem>Not at all likely</LegendLeftItem>
         <LegendRightItem>Extremely likely</LegendRightItem>

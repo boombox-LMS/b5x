@@ -14,7 +14,6 @@ import "./css/continue-button.css";
 import "./css/rubric.css";
 import "./css/visual-list.css";
 import "./css/breakout-box.css";
-import "./css/nps-question.css";
 import App from "./App";
 import store from "./app/store";
 import { Provider } from "react-redux";
