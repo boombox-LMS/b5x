@@ -19,7 +19,6 @@ import "./css/select-question.css";
 import "./css/next-button.css";
 import "./css/continue-button.css";
 import "./css/rubric.css";
-import "./css/five-star-rating.css";
 import "./css/visual-list.css";
 import "./css/breakout-box.css";
 import "./css/nps-question.css";

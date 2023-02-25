@@ -26,7 +26,7 @@ export const FiveStarRating = ({
   };
 
   return (
-    <div className="five-star-rating">
+    <div>
       {fragment.children.map((childFragment) => {
         return (
           <FragmentWrapper key={childFragment.uri} fragment={childFragment} />

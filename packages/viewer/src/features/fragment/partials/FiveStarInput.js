@@ -1,30 +1,39 @@
 import React from "react";
 import { StarOutlined, StarFilled } from "@ant-design/icons";
+import styled from "styled-components/macro";
+import { muiTheme } from "../../../theme";
+
+const StarWrapper = styled.div`
+  display: inline-block;
+  font-size: 2.5em;
+  margin-right: 5px;
+  color: ${muiTheme.palette.secondary.main};
+`;
 
 export const FiveStarInput = ({ value, onChangeCallback }) => {
   const starValues = [1, 2, 3, 4, 5];
   return (
-    <div className="five-star-input">
+    <div>
       {starValues.map((starValue) => {
         if (value >= starValue) {
           return (
-            <div className="five-star-rating__star" key={starValue}>
+            <StarWrapper key={starValue}>
               <StarFilled
                 onClick={() => {
                   onChangeCallback(starValue);
                 }}
               />
-            </div>
+            </StarWrapper>
           );
         } else {
           return (
-            <div className="five-star-rating__star" key={starValue}>
+            <StarWrapper key={starValue}>
               <StarOutlined
                 onClick={() => {
                   onChangeCallback(starValue);
                 }}
               />
-            </div>
+            </StarWrapper>
           );
         }
       })}
