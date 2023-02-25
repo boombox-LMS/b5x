@@ -102,7 +102,7 @@ export const Document = ({ documentUri }) => {
   }
 
   return (
-    <div ref={documentRef}>
+    <div ref={documentRef} className="document">
       {env === "dev" && <DocumentDevTools />}
       <div>
         {document.fragments.map((fragment) => {
