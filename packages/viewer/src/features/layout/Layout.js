@@ -63,9 +63,11 @@ export const Layout = ({
   sidebarName,
 }) => {
   const location = useLocation();
+
   sidebarName = sidebarName || "";
   sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
   openSidebarWidth = openSidebarWidth || DEFAULT_OPEN_SIDEBAR_WIDTH;
+
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(
     sidebarIsOpen || false
   );

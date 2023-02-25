@@ -16,7 +16,7 @@ import styled from "styled-components/macro";
 
 const TopicCardWrapper = styled.div`
   border-radius: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
   position: relative;
