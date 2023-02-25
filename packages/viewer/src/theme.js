@@ -76,3 +76,7 @@ export const MAX_HEADER_HEIGHT = HEADER_LOGO_HEIGHT + HEADER_MENU_HEIGHT;
 export const DEFAULT_OPEN_SIDEBAR_WIDTH = 300;
 export const INACTIVE_MENU_ICON_COLOR = "rgba(0, 0, 0, 0.6)";
 export const LAYOUT_RESIZE_TRANSITION_TIME = "0.4s";
+
+export const COLORS = {
+  SUBTLE_HIGHLIGHT: "#f0f0f0", // light gray
+};
