@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import mermaid from "mermaid";
-// import 'font-awesome/css/font-awesome.min.css';
-import "../../css/mermaid.css";
 import { muiTheme } from "../../theme";
 
 const DEFAULT_CONFIG = {
