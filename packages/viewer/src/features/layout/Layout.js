@@ -11,6 +11,7 @@ import {
   HEADER_LOGO_HEIGHT,
   HEADER_MENU_HEIGHT,
   INACTIVE_MENU_ICON_COLOR,
+  LAYOUT_RESIZE_TRANSITION_TIME,
 } from "../../theme";
 
 const MenuIconWrapper = styled.span`
@@ -25,7 +26,8 @@ const SidebarDrawer = styled.div`
   position: fixed;
   top: ${(props) => props.headerHeight}px;
   overflow: auto;
-  ${(props) => (props.isLoading ? "" : "transition: 0.4s;")}
+  ${(props) =>
+    props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
   width: ${(props) => `${props.width}px`};
   padding-top: 30px;
   padding-left: 18px;
@@ -42,7 +44,8 @@ const MainContentArea = styled.div`
   top: 0px;
   left: 0px;
   display: block;
-  ${(props) => (props.isLoading ? "" : "transition: 0.4s;")}
+  ${(props) =>
+    props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
   width: 100%;
 `;
 

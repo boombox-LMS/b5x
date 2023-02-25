@@ -19,6 +19,7 @@ import {
   HEADER_MENU_HEIGHT,
   HEADER_LOGO_HEIGHT,
   MAX_HEADER_HEIGHT,
+  LAYOUT_RESIZE_TRANSITION_TIME,
 } from "../../../theme";
 
 const TitleContainer = styled.div`
@@ -62,7 +63,7 @@ const FixedHeaderContainer = styled.div`
   top: 0;
   background-color: white;
   width: calc(100% - 16px);
-  transition: transform 0.4s;
+  transition: transform ${LAYOUT_RESIZE_TRANSITION_TIME};
   z-index: 100;
   margin-left: 8px;
   margin-right: 8px;
