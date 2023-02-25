@@ -16,6 +16,8 @@ import Paper from "@mui/material/Paper";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
+import styled from "styled-components/macro";
+import { muiTheme } from "../../theme";
 
 const actions = [
   { icon: <HelpOutlineOutlinedIcon />, name: "Ask for help" },
@@ -118,7 +120,14 @@ export const HelpDesk = () => {
                 setCurrentAction(null);
               }}
             >
-              <CloseIcon style={{ fontSize: "1.4em" }} />
+              <CloseIcon
+                css={`
+                  fontsize: 1.4em;
+                  &:hover {
+                    color: ${muiTheme.palette.secondary.main};
+                  }
+                `}
+              />
             </div>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <Tabs centered value={activeTabValue} onChange={handleTabChange}>
