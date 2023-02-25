@@ -113,9 +113,9 @@ export const TopicCard = ({ topic }) => {
           {topic.unmetPrerequisites.length > 0 && (
             <>
               <Tooltip title="Prerequisites not met" arrow placement="top">
-                <span>
+                <div style={{ display: "inline", marginRight: "4px" }}>
                   <FontAwesomeIcon icon={faLock} size="1x" />
-                </span>
+                </div>
               </Tooltip>
               &nbsp;
             </>
