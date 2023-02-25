@@ -4,12 +4,20 @@ import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
+import { muiTheme } from "../../theme";
 import {
   DEFAULT_OPEN_SIDEBAR_WIDTH,
   HEADER_LOGO_HEIGHT,
   HEADER_MENU_HEIGHT,
-  MAX_HEADER_HEIGHT,
+  INACTIVE_MENU_ICON_COLOR,
 } from "../../theme";
+
+const MenuIconWrapper = styled.span`
+  color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    color: ${muiTheme.palette.secondary.main};
+  }
+`;
 
 const SidebarDrawer = styled.div`
   height: calc(100vh - ${(props) => props.headerHeight}px);
@@ -115,7 +123,9 @@ export const Layout = ({
               setSidebarIsOpenState(true);
             }}
           >
-            <Tooltip title={`Show ${sidebarName}`}>{sidebarOpenIcon}</Tooltip>
+            <Tooltip title={`Show ${sidebarName}`}>
+              <MenuIconWrapper>{sidebarOpenIcon}</MenuIconWrapper>
+            </Tooltip>
           </SidebarShowHideIcon>
         )}
         {sidebarIsOpenState && (
@@ -126,7 +136,9 @@ export const Layout = ({
             }}
           >
             <Tooltip title={`Hide ${sidebarName}`}>
-              <ArrowBack />
+              <MenuIconWrapper>
+                <ArrowBack />
+              </MenuIconWrapper>
             </Tooltip>
           </SidebarShowHideIcon>
         )}
