@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components/macro";
 import ArrowBack from "@mui/icons-material/ArrowBack";
 import ArrowForward from "@mui/icons-material/ArrowForward";
@@ -24,7 +25,7 @@ const SidebarDrawer = styled.div`
   position: fixed;
   top: ${(props) => props.headerHeight}px;
   overflow: auto;
-  transition: 0.4s;
+  ${(props) => (props.isLoading ? "" : "transition: 0.4s;")}
   width: ${(props) => `${props.width}px`};
   padding-top: 30px;
   padding-left: 18px;
@@ -41,7 +42,7 @@ const MainContentArea = styled.div`
   top: 0px;
   left: 0px;
   display: block;
-  transition: 0.4s;
+  ${(props) => (props.isLoading ? "" : "transition: 0.4s;")}
   width: 100%;
 `;
 
@@ -61,6 +62,7 @@ export const Layout = ({
   mainContent,
   sidebarName,
 }) => {
+  const location = useLocation();
   sidebarName = sidebarName || "";
   sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
   openSidebarWidth = openSidebarWidth || DEFAULT_OPEN_SIDEBAR_WIDTH;
@@ -70,6 +72,7 @@ export const Layout = ({
 
   const [pageIsScrolled, setPageIsScrolled] = useState(false);
   const [headerIsHovered, setHeaderIsHovered] = useState(false);
+  const [isNewPage, setIsNewPage] = useState(false);
 
   let currentHeaderHeight = HEADER_MENU_HEIGHT;
   if (headerIsHovered || !pageIsScrolled) {
@@ -87,6 +90,16 @@ export const Layout = ({
       });
     }
   }, []);
+
+  useEffect(() => {
+    setIsNewPage(true);
+    // TODO: Brainstorm better ways to briefly suppress the CSS transitions
+    // after route changes, since this timeout probably isn't flexible enough
+    // for variable data load times etc.
+    const timeout = setTimeout(() => {
+      setIsNewPage(false);
+    }, 1000);
+  }, [location.pathname]);
 
   const headerIsMinimized = !headerIsHovered && pageIsScrolled;
 
@@ -113,6 +126,7 @@ export const Layout = ({
       />
 
       <MainContentArea
+        isLoading={isNewPage}
         currentSidebarWidth={sidebarWidth}
         openSidebarWidth={openSidebarWidth}
       >
@@ -153,6 +167,7 @@ export const Layout = ({
 
       {sidebarContent && (
         <SidebarDrawer
+          isLoading={isNewPage}
           width={openSidebarWidth}
           isOpen={sidebarIsOpenState}
           headerHeight={currentHeaderHeight}
