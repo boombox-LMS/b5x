@@ -104,7 +104,7 @@ export const Document = ({ documentUri }) => {
   return (
     <div ref={documentRef} className="document">
       {env === "dev" && <DocumentDevTools />}
-      <div>
+      <div style={{ paddingBottom: "500px" }}>
         {document.fragments.map((fragment) => {
           return <FragmentWrapper key={fragment.uri} fragment={fragment} />;
         })}
