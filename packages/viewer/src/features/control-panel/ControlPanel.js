@@ -120,7 +120,7 @@ export const ControlPanel = () => {
   };
 
   return (
-    <div style={{ padding: "25px 40px" }}>
+    <div>
       <h1>Batch-modify user groups</h1>
       <p>Your CSV must have the following columns: </p>
       <ul>

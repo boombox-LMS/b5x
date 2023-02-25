@@ -56,7 +56,7 @@ export const TopicPublisher = () => {
   };
 
   return (
-    <div style={{ padding: "25px 40px" }}>
+    <div>
       <h1>Publish a topic</h1>
       <div
         style={dropzoneStyle}

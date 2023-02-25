@@ -29,7 +29,7 @@ const SidebarDrawer = styled.div`
   ${(props) =>
     props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
   width: ${(props) => `${props.width}px`};
-  padding-top: 30px;
+  padding-top: 50px;
   padding-left: 18px;
   z-index: 100;
   transform: translateX(
@@ -38,6 +38,7 @@ const SidebarDrawer = styled.div`
 `;
 
 const MainContentArea = styled.div`
+  padding-top: 20px;
   padding-left: ${(props) => `calc(${props.currentSidebarWidth}px + 55px)`};
   padding-right: 55px;
   position: relative;
@@ -51,7 +52,7 @@ const MainContentArea = styled.div`
 
 const SidebarShowHideIcon = styled.div`
   position: fixed;
-  top: ${(props) => props.headerHeight + 10}px;
+  top: ${(props) => props.headerHeight + 30}px;
   left: 16px;
   z-index: 1000;
   transition: 0.4s;
@@ -135,7 +136,7 @@ export const Layout = ({
         currentSidebarWidth={sidebarWidth}
         openSidebarWidth={openSidebarWidth}
       >
-        {!sidebarIsOpenState && (
+        {!sidebarIsOpenState && sidebarContent && (
           <SidebarShowHideIcon
             headerHeight={currentHeaderHeight}
             onClick={() => {
@@ -147,7 +148,7 @@ export const Layout = ({
             </Tooltip>
           </SidebarShowHideIcon>
         )}
-        {sidebarIsOpenState && (
+        {sidebarIsOpenState && sidebarContent && (
           <SidebarShowHideIcon
             headerHeight={currentHeaderHeight}
             onClick={() => {

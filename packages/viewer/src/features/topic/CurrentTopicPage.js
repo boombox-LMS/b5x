@@ -59,7 +59,6 @@ export const CurrentTopicPage = () => {
   `;
 
   const DocumentContent = styled.div`
-    padding-top: 30px;
     width: 100%;
     max-width: 900px;
   `;

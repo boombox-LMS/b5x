@@ -61,7 +61,7 @@ export const Catalog = () => {
       <div>
         {catalog.topics.length === 0 && <p>No courses to display.</p>}
         {catalog.topics.length > 0 && (
-          <div style={{ paddingTop: "30px" }}>
+          <div>
             <TopicList topics={topicsToDisplay} />
           </div>
         )}

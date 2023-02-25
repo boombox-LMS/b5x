@@ -46,7 +46,7 @@ export const UserProfile = () => {
   }
 
   return (
-    <div style={{ padding: "25px 40px" }}>
+    <div>
       <h1>User profile for {name}</h1>
       <h2>Badges</h2>
       {user.badges.length === 0 && (
