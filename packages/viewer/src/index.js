@@ -11,7 +11,6 @@ import "./css/help-desk.css";
 import "./css/dropzone.css";
 import "./css/dashboard.css";
 import "./css/selected-text-menu.css";
-import "./css/document.css";
 import "./css/table-of-contents.css";
 import "./css/topic-card.css";
 import "./css/code-block.css";
