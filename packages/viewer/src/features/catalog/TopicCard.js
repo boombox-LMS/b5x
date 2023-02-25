@@ -78,7 +78,7 @@ export const TopicCard = ({ topic }) => {
   }
 
   return (
-    <TopicCardWrapper onClick={sendToTopicPage}>
+    <TopicCardWrapper onClick={sendToTopicPage} className="topic-card">
       {(PriorityLevelIcon || CompletionStatusIcon) && (
         <>
           <div
