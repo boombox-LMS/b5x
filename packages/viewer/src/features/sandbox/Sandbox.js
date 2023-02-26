@@ -5,7 +5,7 @@ import { muiTheme, COLORS } from "../../theme";
 const VerticalVisualListItems = [
   {
     imageUrl:
-      "	http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/leadership.svg",
+      "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/leadership.svg",
     contents:
       "<h1>The Leader</h1><ul><li>Identifies and prioritizes knowledge gaps</li><li>Assesses and recognizes content health at the org level</li></ul>",
   },
@@ -17,7 +17,7 @@ const VerticalVisualListItems = [
   },
   {
     imageUrl:
-      "	http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/apple.svg",
+      "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/apple.svg",
     contents:
       "<h1>The Learning-Team Member</h1><ul><li>Enhances/repackages high-priority content</li><li>Assigns or recommends content</li><li>Supports learners, especially new hires</li><li>Analyzes metrics and feedback</li></ul>",
   },
@@ -38,7 +38,7 @@ const VerticalVisualListItems = [
 const HorizontalVisualListItems = [
   {
     imageUrl:
-      "	http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/leadership.svg",
+      "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/leadership.svg",
     contents:
       "<h1>The Leader</h1><p>Identifies and prioritizes knowledge gaps</p>",
   },
@@ -50,7 +50,7 @@ const HorizontalVisualListItems = [
   },
   {
     imageUrl:
-      "	http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/apple.svg",
+      "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/apple.svg",
     contents:
       "<h1>The Learning-Team Member</h1><p>Enhances/repackages high-priority content</p>",
   },
@@ -95,11 +95,16 @@ const VerticalVisualListItem = ({ item }) => {
     <>
       <div
         css={`
-          background-color: ${COLORS.MEDIUM_GRAY};
+          background-color: ${COLORS.LIGHT_GRAY};
         `}
       ></div>
       <div>
-        <img src={item.imageUrl} />
+        <img
+          src={item.imageUrl}
+          css={`
+            width: 75px;
+          `}
+        />
       </div>
       <div dangerouslySetInnerHTML={{ __html: item.contents }} />
     </>

@@ -100,4 +100,5 @@ export const COLORS = {
   GREENLIT_DARK: "#008f0f", // dark cool green
   GREENLIT_LIGHT: "#f0fcf2", // light cool green
   MEDIUM_GRAY: "#a19f9f", // medium gray
+  LIGHT_GRAY: "#d6d6d6", // light gray
 };
