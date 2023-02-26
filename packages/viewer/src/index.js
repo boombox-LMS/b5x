@@ -11,7 +11,6 @@ import "./css/topic-card.css";
 import "./css/rtf-input.css";
 import "./css/select-question.css";
 import "./css/continue-button.css";
-import "./css/rubric.css";
 import "./css/visual-list.css";
 import "./css/breakout-box.css";
 import App from "./App";
