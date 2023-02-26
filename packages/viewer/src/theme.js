@@ -73,7 +73,7 @@ export const muiTheme = createTheme({
 export const HEADER_LOGO_HEIGHT = 80;
 export const HEADER_MENU_HEIGHT = 50;
 export const MAX_HEADER_HEIGHT = HEADER_LOGO_HEIGHT + HEADER_MENU_HEIGHT;
-export const DEFAULT_OPEN_SIDEBAR_WIDTH = 300;
+export const DEFAULT_OPEN_SIDEBAR_WIDTH = 325;
 export const INACTIVE_MENU_ICON_COLOR = "rgba(0, 0, 0, 0.6)";
 export const LAYOUT_RESIZE_TRANSITION_TIME = "0.4s";
 
