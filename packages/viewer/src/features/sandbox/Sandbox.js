@@ -67,7 +67,7 @@ const HorizontalVisualListItems = [
   },
 ];
 
-const HorizontalVisualListWrapper = styled.div`
+const VerticalVisualListWrapper = styled.div`
   display: grid;
   grid-template-columns: 3px 75px auto;
   grid-gap: 1.2rem;
@@ -90,14 +90,7 @@ const HorizontalVisualListWrapper = styled.div`
   }
 `;
 
-const HorizontalVisualListDivider = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: ${COLORS.SUBTLE_HIGHLIGHT};
-  height: 1px;
-`;
-
-const HorizontalVisualListItem = ({ item }) => {
+const VerticalVisualListItem = ({ item }) => {
   return (
     <>
       <div
@@ -116,15 +109,15 @@ const HorizontalVisualListItem = ({ item }) => {
 export const Sandbox = () => {
   return (
     <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-      <HorizontalVisualListWrapper>
+      <VerticalVisualListWrapper>
         {VerticalVisualListItems.map((item, index) => {
           return (
             <>
-              <HorizontalVisualListItem key={index} item={item} />
+              <VerticalVisualListItem key={index} item={item} />
             </>
           );
         })}
-      </HorizontalVisualListWrapper>
+      </VerticalVisualListWrapper>
     </div>
   );
 };
