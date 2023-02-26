@@ -4,9 +4,10 @@ import styled from "styled-components/macro";
 
 const TopicGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-gap: 30px;
   margin: 15px;
+  padding-bottom: 50px;
 `;
 
 export const TopicList = ({ topics }) => {
