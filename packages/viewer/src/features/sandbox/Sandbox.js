@@ -106,18 +106,22 @@ const VerticalVisualListItem = ({ item }) => {
   );
 };
 
+const VerticalVisualList = ({ items }) => {
+  return (
+    <VerticalVisualListWrapper>
+      {items.map((item, index) => {
+        return <VerticalVisualListItem key={index} item={item} />;
+      })}
+    </VerticalVisualListWrapper>
+  );
+};
+
 export const Sandbox = () => {
   return (
     <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-      <VerticalVisualListWrapper>
-        {VerticalVisualListItems.map((item, index) => {
-          return (
-            <>
-              <VerticalVisualListItem key={index} item={item} />
-            </>
-          );
-        })}
-      </VerticalVisualListWrapper>
+      <hr />
+      <VerticalVisualList items={VerticalVisualListItems} />
+      <hr />
     </div>
   );
 };
