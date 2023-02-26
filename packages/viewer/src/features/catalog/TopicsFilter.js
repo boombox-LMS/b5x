@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   PlusCircleOutlined,
   InboxOutlined,
@@ -9,12 +10,33 @@ import {
   FileTextOutlined,
   BuildOutlined,
 } from "@ant-design/icons";
+import {
+  selectCurrentTopicFilter,
+  updateTopicFilter,
+} from "./topicFilterSlice";
+import styled from "styled-components/macro";
 
-const FilterButtonSet = ({
-  filterCategoryName,
-  searchFilters,
-  updateSearchFiltersCallback,
-}) => {
+const FilterButton = styled.div`
+  ${(props) => props.isActive && `font-weight: 500;`}
+  ${(props) => props.isActive && `color: #008f0f;`}
+  text-align: center;
+  margin-bottom: 8px;
+  padding: 0.5em 0.6em;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  background-color: ${(props) => (props.isActive ? "#f0fcf2" : "#f0f0f0")};
+  border: 1.5px solid ${(props) => (props.isActive ? "#008f0f" : "#f0f0f0")};
+  ${(props) => props.index === 0 && `margin-top: -7px;`}
+`;
+
+const inputCss = `
+  padding: 0.4em 0.5em;
+  border-radius: 0.3em;
+`;
+
+const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
+  const dispatch = useDispatch();
+
   const icons = {
     priorityLevel: {
       recommended: StarOutlined,
@@ -33,28 +55,37 @@ const FilterButtonSet = ({
 
   return (
     <>
-      {Object.keys(searchFilters[filterCategoryName]).map((statusName) => {
+      {Object.keys(searchFilters[filterCategoryName]).map((statusName, i) => {
         const value = searchFilters[filterCategoryName][statusName];
         const Icon = icons[filterCategoryName][statusName];
         return (
-          <div
+          <FilterButton
             key={statusName}
-            className={`filter-button ${value ? "filter-button--active" : ""}`}
+            index={i}
+            isActive={value}
             onClick={() => {
-              updateSearchFiltersCallback({
-                filterCategoryName,
-                statusName,
-                value: !value,
-              });
+              dispatch(
+                updateTopicFilter({
+                  filterCategoryName,
+                  statusName,
+                  value: !value,
+                })
+              );
             }}
           >
             {Icon && (
-              <div className="filter-button-icon">
+              <div
+                className="filter-button-icon"
+                css={`
+                  margin-bottom: -3.5px;
+                  font-size: 1.3em;
+                `}
+              >
                 <Icon />
               </div>
             )}
             {statusName}
-          </div>
+          </FilterButton>
         );
       })}
     </>
@@ -63,7 +94,9 @@ const FilterButtonSet = ({
 
 // TODO: Style as topics-filter module,
 // and rename the component to TopicsFilter
-export const Filter = ({ searchFilters, updateSearchFiltersCallback }) => {
+export const TopicsFilter = () => {
+  const searchFilters = useSelector(selectCurrentTopicFilter);
+
   return (
     <div className="filter">
       {/* Priority levels */}
@@ -71,7 +104,6 @@ export const Filter = ({ searchFilters, updateSearchFiltersCallback }) => {
       <FilterButtonSet
         searchFilters={searchFilters}
         filterCategoryName="priorityLevel"
-        updateSearchFiltersCallback={updateSearchFiltersCallback}
       />
 
       {/* Completion status  */}
@@ -79,14 +111,7 @@ export const Filter = ({ searchFilters, updateSearchFiltersCallback }) => {
       <FilterButtonSet
         searchFilters={searchFilters}
         filterCategoryName="completionStatus"
-        updateSearchFiltersCallback={updateSearchFiltersCallback}
       />
-
-      <p className="filter-label">tagged with</p>
-      <input type="text" placeholder="search" />
-
-      <p className="filter-label">title/description matching</p>
-      <input type="text" placeholder="search" />
     </div>
   );
 };

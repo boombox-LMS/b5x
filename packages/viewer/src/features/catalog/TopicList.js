@@ -1,12 +1,20 @@
 import React from "react";
 import { TopicCard } from "./TopicCard";
+import styled from "styled-components/macro";
+
+const TopicGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 22px;
+  margin: 15px;
+`;
 
 export const TopicList = ({ topics }) => {
   return (
-    <div className="topic-list">
+    <TopicGrid>
       {topics.map((topic) => {
         return <TopicCard topic={topic} key={topic.uri} />;
       })}
-    </div>
+    </TopicGrid>
   );
 };

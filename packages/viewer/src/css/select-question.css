@@ -25,7 +25,6 @@
   display: none;
 }
 
-/* TODO: Why is the border adding height? */
 .select-question__choice:hover {
   background-color: var(--completed-light);
   border: 1.5px solid var(--completed-dark);

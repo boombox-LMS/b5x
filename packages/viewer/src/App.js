@@ -7,20 +7,25 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Sandbox } from "./features/sandbox/Sandbox";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import { UserProfile } from "./features/user/UserProfile";
 import { LoginForm } from "./features/user/LoginForm";
 import { ControlPanel } from "./features/control-panel/ControlPanel";
 import { Catalog } from "./features/catalog/Catalog";
-import { TopicContents } from "./features/topic/TopicContents";
+import { CurrentTopicPage } from "./features/topic/CurrentTopicPage";
 import { TopicHomePage } from "./features/topic/TopicHomePage";
+import { TableOfContents } from "./features/topic/TableOfContents";
 import { Dashboard } from "./features/dashboard/Dashboard";
 import { useGetCurrentUserInfoQuery } from "./features/api/apiSlice";
 import { LoadingOutlined } from "@ant-design/icons";
 import { HelpDesk } from "./features/helpdesk/HelpDesk";
 import { ThemeProvider } from "@mui/material/styles";
-import { Header } from "./features/header/Header";
+import { Header } from "./features/layout/header/Header";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
 import { muiTheme } from "./theme";
+import { Layout } from "./features/layout/Layout";
+import { TopicsFilter } from "./features/catalog/TopicsFilter";
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -62,7 +67,16 @@ function App() {
     content = <LoadingOutlined />;
   } else if (userLoadedSuccessfully) {
     if (user && user.email) {
-      content = <Catalog />;
+      content = (
+        <Layout
+          mainContent={<Catalog />}
+          sidebarContent={<TopicsFilter />}
+          sidebarIsOpen={true}
+          sidebarName="topics filter"
+          sidebarOpenIcon={<FilterAltIcon />}
+          openSidebarWidth={225}
+        />
+      );
     } else {
       content = <LoginForm />;
     }
@@ -79,7 +93,6 @@ function App() {
             @import
             url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
           </style>
-          <Header></Header>
           <React.StrictMode>
             <Routes>
               <Route
@@ -88,21 +101,45 @@ function App() {
                 element={<React.Fragment>{content}</React.Fragment>}
               />
               <Route exact path="/login" element={<LoginForm />} />
-              <Route exact path="/users/:username" element={<UserProfile />} />
-              <Route exact path="/dashboard" element={<Dashboard />} />
-              <Route exact path="/control-panel" element={<ControlPanel />} />
+              <Route
+                exact
+                path="/users/:username"
+                element={<Layout mainContent={<UserProfile />} />}
+              />
+              <Route
+                exact
+                path="/dashboard"
+                element={<Layout mainContent={<Dashboard />} />}
+              />
+              <Route
+                exact
+                path="/control-panel"
+                element={<Layout mainContent={<ControlPanel />} />}
+              />
               <Route
                 exact
                 path="/topics/:topicSlugOrUri"
-                element={<TopicHomePage />}
+                element={<Layout mainContent={<TopicHomePage />} />}
               />
               <Route
                 exact
                 path="/topics/:topicUri/documents/:documentUri"
-                element={<TopicContents />}
+                element={
+                  <Layout
+                    mainContent={<CurrentTopicPage />}
+                    sidebarContent={<TableOfContents />}
+                    sidebarName="table of contents"
+                    sidebarIsOpen={true}
+                    sidebarOpenIcon={<FormatListBulletedIcon />}
+                  />
+                }
               />
               <Route exact path="/sandbox" element={<Sandbox />} />
-              <Route exact path="/publish" element={<TopicPublisher />} />
+              <Route
+                exact
+                path="/publish"
+                element={<Layout mainContent={<TopicPublisher />} />}
+              />
             </Routes>
           </React.StrictMode>
           {user && user.email && <HelpDesk />}

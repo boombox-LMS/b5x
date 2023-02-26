@@ -2,6 +2,9 @@ import React from "react";
 import { DocumentNavTile } from "./DocumentNavTile";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import { completedDark, lightGray } from "../../app/colors";
+import styled from "styled-components/macro";
+import { useParams } from "react-router-dom";
+import { api } from "../api/apiSlice";
 
 const CircularProgressBar = ({ progressPercentage }) => {
   if (progressPercentage === null) {
@@ -47,19 +50,48 @@ const CircularProgressBar = ({ progressPercentage }) => {
   );
 };
 
-export const TableOfContents = ({
-  topic,
-  selectedDocumentUri,
-  documentStatus,
-  progressPercentage,
-}) => {
+export const TableOfContents = () => {
+  // grab + convert params from URL
+  let { topicUri, documentUri } = useParams();
+
+  // fetch the enrollment for this topic
+  const {
+    data: enrollment,
+    isLoading: enrollmentIsLoading,
+    isSuccess: enrollmentLoadedSuccessfully,
+    isError: enrollmentHasError,
+    error: enrollmentError,
+  } = api.endpoints.getEnrollment.useQuery(topicUri);
+
+  // fetch topic
+  const {
+    data: topic,
+    isLoading: topicIsLoading,
+    isSuccess: topicLoadedSuccessfully,
+    isError: topicHasError,
+    error: topicError,
+  } = api.endpoints.getTopicContents.useQuery(topicUri);
+
+  // wait for everything above to finish loading
+  if (topicIsLoading || enrollmentIsLoading) {
+    return null;
+    // handle any errors
+  } else if (topicHasError || enrollmentHasError) {
+    return (
+      <div>
+        <p>Topic Load Error: {JSON.stringify(topicError)}</p>
+        <p>Enrollment Load Error: {JSON.stringify(enrollmentError)}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="table-of-contents">
-      <CircularProgressBar progressPercentage={progressPercentage} />
+      <CircularProgressBar progressPercentage={enrollment.progressPercentage} />
       <DocumentNavTile
         document={{ title: "About this topic", uri: "about" }}
         topicContentMode={topic.config.contentMode}
-        isSelected={"about" == selectedDocumentUri}
+        isSelected={"about" == documentUri}
         isLocked={false}
         isVisible={true}
         isCompleted={false}
@@ -70,10 +102,10 @@ export const TableOfContents = ({
             key={document.uri}
             document={document}
             topicContentMode={topic.config.contentMode}
-            isSelected={document.uri == selectedDocumentUri}
-            isLocked={documentStatus[document.uri].isLocked}
-            isVisible={documentStatus[document.uri].isVisible}
-            isCompleted={documentStatus[document.uri].isCompleted}
+            isSelected={document.uri == documentUri}
+            isLocked={enrollment.documentStatus[document.uri].isLocked}
+            isVisible={enrollment.documentStatus[document.uri].isVisible}
+            isCompleted={enrollment.documentStatus[document.uri].isCompleted}
           />
         );
       })}

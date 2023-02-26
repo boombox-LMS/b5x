@@ -16,7 +16,7 @@ Here are the terms and conditions:
 - Stay focused
 - Something something
 
-<utton>
+<continue-button>
 I accept the above terms and conditions.
 </continue-button>
 

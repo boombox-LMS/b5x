@@ -25,7 +25,9 @@ export const DocumentNavTile = ({
       style={{ color: "black" }}
       to={`/topics/${topicUri}/documents/${document.uri}`}
     >
-      {document.title}
+      <div style={{ width: "100%", height: "100%", display: "block" }}>
+        {document.title}
+      </div>
     </Link>
   );
 
@@ -53,8 +55,8 @@ export const DocumentNavTile = ({
 
   let documentTitleStyle = {
     display: "inline-block",
-    maxWidth: "240px",
     verticalAlign: "top",
+    maxWidth: "240px",
     paddingTop: "10px",
     paddingBottom: "10px",
   };

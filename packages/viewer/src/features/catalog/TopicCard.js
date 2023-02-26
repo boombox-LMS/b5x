@@ -11,89 +11,24 @@ import {
   BuildOutlined,
   FileTextOutlined,
 } from "@ant-design/icons";
-import GeoPattern from "geopattern";
-import tinycolor from "tinycolor2";
+import { TopicThumbnail } from "./TopicThumbnail";
+import styled from "styled-components/macro";
 
-const combineTwoShortestLines = (lines) => {
-  let indexToCombineWithNextSibling = 0;
-  let combinedLine = lines[0] + " " + lines[1];
-  for (let i = 0; i < lines.length - 1; i++) {
-    const thisCombinedLine = lines[i] + " " + lines[i + 1];
-    if (thisCombinedLine.length < combinedLine.length) {
-      combinedLine = thisCombinedLine;
-      indexToCombineWithNextSibling = i;
-    }
+const TopicCardWrapper = styled.div`
+  border-radius: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  &:hover {
+    transform: scale(1.03);
   }
-  lines[indexToCombineWithNextSibling] = combinedLine;
-  lines.splice(indexToCombineWithNextSibling + 1, 1);
-  return lines;
-};
+`;
 
-const splitIntoThreeLines = (str) => {
-  // split into words
-  let lines = str.split(" ");
-  while (lines.length > 3) {
-    lines = combineTwoShortestLines(lines);
-  }
-  return lines;
-};
-
-const GeneratedTopicImage = ({ topic }) => {
-  let title = topic.title;
-  const geopattern = GeoPattern.generate(title);
-  const titleColor = tinycolor(geopattern.color).lighten(30).toString();
-
-  // get the max line length when the title is split into 3 lines
-  const lines = splitIntoThreeLines(title);
-  let maxLineLength;
-  if (lines.length === 1) {
-    maxLineLength = lines[0].length;
-  } else {
-    maxLineLength = lines.reduce((a, b) => {
-      return a.length > b.length ? a.length : b.length;
-    });
-  }
-
-  // the minimum font size
-  let fontSize = 24;
-
-  // don't attempt to display the title at all if it's too long
-  if (maxLineLength > 11) {
-    title = "";
-    // otherwise, bump up the font size by max line length
-  } else {
-    fontSize = fontSize + 3.6 * (11 - maxLineLength);
-  }
-
-  // cap the font size for 3-line titles to ensure vertical fit
-  if (lines.length === 3) {
-    if (fontSize > 36) {
-      fontSize = 36;
-    }
-  }
-
-  const style = {
-    height: "125px",
-    display: "flex",
-    justifyContent: "center",
-    alignContent: "center",
-    flexDirection: "column",
-    whiteSpace: "no-wrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    borderRadius: "5px 5px 0px 0px",
-    textAlign: "center",
-    width: "250px",
-    backgroundImage: geopattern.toDataUrl(),
-    fontFamily: "Bungee Shade",
-    color: titleColor,
-    fontSize: `${fontSize}px`,
-    lineHeight: "0.85em",
-    padding: "10px",
-  };
-
-  return <div style={style}>{title}</div>;
-};
+const TopicCardInfo = styled.div`
+  padding: 12px;
+  padding-top: 5px;
+`;
 
 export const TopicCard = ({ topic }) => {
   const navigate = useNavigate();
@@ -143,7 +78,7 @@ export const TopicCard = ({ topic }) => {
   }
 
   return (
-    <div className="topic-card" onClick={sendToTopicPage}>
+    <TopicCardWrapper onClick={sendToTopicPage} className="topic-card">
       {(PriorityLevelIcon || CompletionStatusIcon) && (
         <>
           <div
@@ -168,26 +103,27 @@ export const TopicCard = ({ topic }) => {
           </div>
         </>
       )}
-      {topic.coverImageUrl !== "" && (
-        <img className="topic-card__cover-image" src={topic.coverImageUrl} />
-      )}
-      {topic.coverImageUrl === "" && <GeneratedTopicImage topic={topic} />}
-      <div className="topic-card__info">
-        <div className="topic-card__title">
+      <TopicThumbnail topic={topic} />
+      <TopicCardInfo>
+        <div
+          css={`
+            margin-bottom: 4px;
+          `}
+        >
           {topic.unmetPrerequisites.length > 0 && (
             <>
               <Tooltip title="Prerequisites not met" arrow placement="top">
-                <span>
+                <div style={{ display: "inline", marginRight: "4px" }}>
                   <FontAwesomeIcon icon={faLock} size="1x" />
-                </span>
+                </div>
               </Tooltip>
               &nbsp;
             </>
           )}
           <strong>{topic.title}</strong>
         </div>
-        <div className="topic-card__subtitle">{topic.subtitle}</div>
-      </div>
-    </div>
+        <div>{topic.subtitle}</div>
+      </TopicCardInfo>
+    </TopicCardWrapper>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useGetUserProfileQuery } from "../api/apiSlice";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 import { DisplayBadge } from "../fragment/Badge";
 
 // TODO: Make some kind of PageWrapper component that abstracts away the header and the div,
@@ -13,8 +13,6 @@ export const UserProfile = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "User profile",
         currentPage: "User profile",
       })
@@ -46,7 +44,7 @@ export const UserProfile = () => {
   }
 
   return (
-    <div style={{ padding: "25px 40px" }}>
+    <div>
       <h1>User profile for {name}</h1>
       <h2>Badges</h2>
       {user.badges.length === 0 && (

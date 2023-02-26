@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import { DataGrid } from "@mui/x-data-grid";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 
 const UserModificationPreview = ({ rows }) => {
   const columns = [
@@ -67,8 +67,6 @@ export const ControlPanel = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Admin control panel",
         currentPage: "Control panel",
       })
@@ -120,7 +118,7 @@ export const ControlPanel = () => {
   };
 
   return (
-    <div style={{ padding: "25px 40px" }}>
+    <div>
       <h1>Batch-modify user groups</h1>
       <p>Your CSV must have the following columns: </p>
       <ul>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 import { useGetTopicsCatalogQuery } from "../api/apiSlice";
 import { TopicList } from "./TopicList";
-import { Filter } from "./Filter";
-import { Header } from "../header/Header";
 import "react-tabs/style/react-tabs.css";
+import { selectCurrentTopicFilter } from "./topicFilterSlice";
 
 export const Catalog = () => {
   // update the header props
@@ -14,8 +14,6 @@ export const Catalog = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Tech Learning Home",
         currentPage: "Home",
       })
@@ -34,28 +32,7 @@ export const Catalog = () => {
   // TODO: Store the user's topic search filters in the session,
   // and return these filters as part of the catalog API response,
   // setting them to defaults if no session data is present from the user
-  const [searchFilters, setSearchFilters] = useState({
-    priorityLevel: {
-      available: false,
-      recommended: true,
-      assigned: true,
-    },
-    completionStatus: {
-      "not started": true,
-      "in progress": true,
-      completed: false,
-    },
-  });
-
-  const updateSearchFiltersCallback = ({
-    filterCategoryName,
-    statusName,
-    value,
-  }) => {
-    let searchFiltersCopy = JSON.parse(JSON.stringify(searchFilters));
-    searchFiltersCopy[filterCategoryName][statusName] = value;
-    setSearchFilters(searchFiltersCopy);
-  };
+  const searchFilters = useSelector(selectCurrentTopicFilter);
 
   let content;
 
@@ -79,21 +56,13 @@ export const Catalog = () => {
     });
 
     content = (
-      <div className="catalog">
-        <div className="catalog__filter">
-          <Filter
-            searchFilters={searchFilters}
-            updateSearchFiltersCallback={updateSearchFiltersCallback}
-          />
-        </div>
-        <div className="catalog__results-page">
-          {catalog.topics.length === 0 && <p>No courses to display.</p>}
-          {catalog.topics.length > 0 && (
-            <div className="catalog__topic-list">
-              <TopicList topics={topicsToDisplay} />
-            </div>
-          )}
-        </div>
+      <div>
+        {catalog.topics.length === 0 && <p>No courses to display.</p>}
+        {catalog.topics.length > 0 && (
+          <div>
+            <TopicList topics={topicsToDisplay} />
+          </div>
+        )}
       </div>
     );
   } else if (catalogHadError) {

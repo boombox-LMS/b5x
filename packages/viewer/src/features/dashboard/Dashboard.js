@@ -8,7 +8,7 @@ import { UserStatsTable } from "./UserStatsTable";
 import { TopicStatsTable } from "./TopicStatsTable";
 import { IssuesTable } from "./IssuesTable";
 import { FeedbackTable } from "./FeedbackTable";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 
 export const Dashboard = () => {
   const dispatch = useDispatch();
@@ -16,8 +16,6 @@ export const Dashboard = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Dashboard",
         currentPage: "Dashboard",
       })

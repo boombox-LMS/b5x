@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectEnv, setEnv } from "../../envSlice";
+import { selectEnv, setEnv } from "../../../envSlice";
 import { CodeOutlined } from "@ant-design/icons";
 import { Tooltip } from "@mui/material";
 

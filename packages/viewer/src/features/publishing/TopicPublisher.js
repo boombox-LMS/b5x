@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setHeaderProps } from "../header/headerSlice";
+import { setHeaderProps } from "../layout/header/headerSlice";
 import { api } from "../api/apiSlice";
 import { Link } from "react-router-dom";
 import { muiTheme } from "../../theme";
@@ -11,8 +11,6 @@ export const TopicPublisher = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        isHidden: false,
-        isMinimized: false,
         title: "Publish a topic",
         currentPage: "Publish a topic",
       })
@@ -56,7 +54,7 @@ export const TopicPublisher = () => {
   };
 
   return (
-    <div style={{ padding: "25px 40px" }}>
+    <div>
       <h1>Publish a topic</h1>
       <div
         style={dropzoneStyle}
