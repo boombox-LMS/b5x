@@ -71,6 +71,9 @@ const VerticalVisualListWrapper = styled.div`
   grid-template-columns: 3px 75px auto;
   grid-gap: 1.2rem;
   margin: 1.2rem 0;
+  // TODO: Break out an explicit title component
+  // in the visual list markup, so we're not needing
+  // to trust the user to use an h1 for the title.
   h1 {
     font-size: 1.2em;
     margin-bottom: 5px;
@@ -117,17 +120,6 @@ const VerticalVisualList = ({ items }) => {
         return <VerticalVisualListItem key={index} item={item} />;
       })}
     </VerticalVisualListWrapper>
-  );
-};
-
-export const Sandbox = () => {
-  return (
-    <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-      <hr />
-      <VerticalVisualList items={VerticalVisualListItems} />
-      <hr />
-      <HorizontalVisualList items={HorizontalVisualListItems} />
-    </div>
   );
 };
 
@@ -183,6 +175,17 @@ const HorizontalVisualListItem = ({ item }) => {
         `}
         dangerouslySetInnerHTML={{ __html: item.contents }}
       />
+    </div>
+  );
+};
+
+export const Sandbox = () => {
+  return (
+    <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+      <hr />
+      <VerticalVisualList items={VerticalVisualListItems} />
+      <hr />
+      <HorizontalVisualList items={HorizontalVisualListItems} />
     </div>
   );
 };
