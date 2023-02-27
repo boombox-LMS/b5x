@@ -68,6 +68,7 @@ const VisualListTagSchema = z.object({
   name: z.literal("visual-list"),
   attribs: z
     .object({
+      // TODO: Add validation that only one of these is present
       vertical: z.literal("").optional(),
       horizontal: z.literal("").optional(),
     })
@@ -121,8 +122,17 @@ export class VisualList extends FragmentViaBxmlTag {
   }
 
   #buildData(): VisualListData {
+    let orientation;
+    // TODO: I think a transform(?) in Zod could allow us to skip this logic altogether
+    if ("vertical" in this.bxmlNode.attribs) {
+      orientation = "vertical";
+    } else if ("horizontal" in this.bxmlNode.attribs) {
+      orientation = "horizontal";
+    } else {
+      orientation = "vertical";
+    }
     const result = {
-      orientation: "vertical",
+      orientation,
       items: this.bxmlNode.children.map((itemTag) => {
         return this.#buildItem(itemTag);
       }),

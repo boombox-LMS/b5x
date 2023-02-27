@@ -104,4 +104,84 @@
 
 ## Horizontal list
 
-TODO
+<tabs>
+
+<tab title='Result in browser' >
+### Boombox users
+
+<visual-list horizontal>
+
+<item image='leadership.svg'>
+# Leader
+
+Identifies and prioritizes knowledge gaps
+</item>
+
+<item image='developer.svg'>
+# SME
+
+Contributes information
+</item>
+
+<item image='apple.svg'>
+# Instructor
+
+Designs high-priority content
+</item>
+
+<item image='creative-idea.svg'>
+# Learner
+
+Consumes information
+</item>
+
+<item image='organization-chart.svg'>
+# Manager
+
+Assigns or recommends content to team
+</item>
+
+</visual-list>
+</tab>
+
+<tab title='Markup in .md file' >
+<code-block language='markdown'>
+### Boombox users
+
+<visual-list horizontal>
+
+<item image='leadership.svg'>
+# Leader
+
+Identifies and prioritizes knowledge gaps
+</item>
+
+<item image='developer.svg'>
+# SME
+
+Contributes information
+</item>
+
+<item image='apple.svg'>
+# Instructor
+
+Designs high-priority content
+</item>
+
+<item image='creative-idea.svg'>
+# Learner
+
+Consumes information
+</item>
+
+<item image='organization-chart.svg'>
+# Manager
+
+Assigns or recommends content to team
+</item>
+
+</visual-list>
+</code-block>
+</tab>
+
+</tabs>

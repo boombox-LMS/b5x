@@ -4188,9 +4188,10 @@
                 "childUris": [
                     "boombox-feature-utopia-vseed_visual-list_f1",
                     "boombox-feature-utopia-vseed_visual-list_f2",
-                    "boombox-feature-utopia-vseed_visual-list_f8"
+                    "boombox-feature-utopia-vseed_visual-list_f8",
+                    "boombox-feature-utopia-vseed_visual-list_f9"
                 ],
-                "digest": "3012feb638caab4a45174feb27bdd536",
+                "digest": "417b8d17a326dd30e025bfb37d0df3e7",
                 "contentMode": "documentation",
                 "completionConditions": [],
                 "externalDependencyUris": [],
@@ -4340,8 +4341,126 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<h2 id=\"horizontal-list\">Horizontal list</h2>\n<p>TODO</p>\n",
-                        "digest": "0edbdc1dcee2a9489d65005e2fe28839",
+                        "contents": "<h2 id=\"horizontal-list\">Horizontal list</h2>\n",
+                        "digest": "c87ed75969075443f3db01fc24b2243d",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_visual-list_f9": {
+                        "uri": "boombox-feature-utopia-vseed_visual-list_f9",
+                        "documentUri": "boombox-feature-utopia-vseed_visual-list",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_visual-list_f10",
+                            "boombox-feature-utopia-vseed_visual-list_f13"
+                        ],
+                        "contents": "",
+                        "digest": "4c1c07076994c0b785690f221a7d9f54",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_visual-list_f10": {
+                        "uri": "boombox-feature-utopia-vseed_visual-list_f10",
+                        "documentUri": "boombox-feature-utopia-vseed_visual-list",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_visual-list_f11",
+                            "boombox-feature-utopia-vseed_visual-list_f12"
+                        ],
+                        "contents": "",
+                        "digest": "a1399fb447413af04c12d3f1fb659d07",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_visual-list_f11": {
+                        "uri": "boombox-feature-utopia-vseed_visual-list_f11",
+                        "documentUri": "boombox-feature-utopia-vseed_visual-list",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h3 id=\"boombox-users\">Boombox users</h3>\n",
+                        "digest": "ed6435bf503436411e767c44943c272d",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_visual-list_f12": {
+                        "uri": "boombox-feature-utopia-vseed_visual-list_f12",
+                        "documentUri": "boombox-feature-utopia-vseed_visual-list",
+                        "displayConditions": [],
+                        "data": {
+                            "orientation": "horizontal",
+                            "items": [
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/leadership.svg",
+                                    "contents": "<h1 id=\"leader\">Leader</h1>\n<p>Identifies and prioritizes knowledge gaps</p>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/developer.svg",
+                                    "contents": "<h1 id=\"sme\">SME</h1>\n<p>Contributes information</p>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/apple.svg",
+                                    "contents": "<h1 id=\"instructor\">Instructor</h1>\n<p>Designs high-priority content</p>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/creative-idea.svg",
+                                    "contents": "<h1 id=\"learner\">Learner</h1>\n<p>Consumes information</p>\n"
+                                },
+                                {
+                                    "imageUrl": "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/organization-chart.svg",
+                                    "contents": "<h1 id=\"manager\">Manager</h1>\n<p>Assigns or recommends content to team</p>\n"
+                                }
+                            ]
+                        },
+                        "contentType": "VisualList",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "908d8006e3513f56b66aea7e10b317bc",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_visual-list_f13": {
+                        "uri": "boombox-feature-utopia-vseed_visual-list_f13",
+                        "documentUri": "boombox-feature-utopia-vseed_visual-list",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_visual-list_f14"
+                        ],
+                        "contents": "",
+                        "digest": "8573cfafaadbd95202407e64e55800de",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_visual-list_f14": {
+                        "uri": "boombox-feature-utopia-vseed_visual-list_f14",
+                        "documentUri": "boombox-feature-utopia-vseed_visual-list",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "markdown"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "### Boombox users\n\n<visual-list horizontal>\n\n<item image=\"leadership.svg\">\n# Leader\n\nIdentifies and prioritizes knowledge gaps\n</item>\n\n<item image=\"developer.svg\">\n# SME\n\nContributes information\n</item>\n\n<item image=\"apple.svg\">\n# Instructor\n\nDesigns high-priority content\n</item>\n\n<item image=\"creative-idea.svg\">\n# Learner\n\nConsumes information\n</item>\n\n<item image=\"organization-chart.svg\">\n# Manager\n\nAssigns or recommends content to team\n</item>\n\n</visual-list>",
+                        "digest": "aa25d05d835cf7ee57c5ecd773d4b479",
                         "dependencyUris": []
                     }
                 }

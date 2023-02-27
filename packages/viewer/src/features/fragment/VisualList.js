@@ -62,6 +62,7 @@ const VerticalVisualList = ({ fragment }) => {
 
 const HorizontalVisualListWrapper = styled.div`
   display: grid;
+  grid-gap: 1.2rem;
   grid-template-columns: repeat(${(props) => props.itemCount}, 1fr);
   h1 {
     font-size: 1.2em;
@@ -103,7 +104,8 @@ const HorizontalVisualListItem = ({ item }) => {
         <img
           src={item.imageUrl}
           css={`
-            max-width: 110px;
+            width: 100%;
+            max-width: 100px;
           `}
         />
       </div>

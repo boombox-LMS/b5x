@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.54% </span>
+                <span class="strong">86.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>29/31</span>
+                <span class='fraction'>31/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.1% </span>
+                <span class="strong">39.13% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/19</span>
+                <span class='fraction'>9/23</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">91.17% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>29/29</span>
+                <span class='fraction'>31/34</span>
             </div>
         
             
@@ -196,7 +196,19 @@
 <a name='L131'></a><a href='#L131'>131</a>
 <a name='L132'></a><a href='#L132'>132</a>
 <a name='L133'></a><a href='#L133'>133</a>
-<a name='L134'></a><a href='#L134'>134</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -273,6 +285,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -308,6 +321,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -400,6 +424,7 @@ const VisualListTagSchema = zod_1.z.object({
     name: zod_1.z.literal("visual-list"),
     attribs: zod_1.z
         .object({
+        // TODO: Add validation that only one of these is present
         vertical: zod_1.z.literal("").optional(),
         horizontal: zod_1.z.literal("").optional(),
     })
@@ -441,8 +466,19 @@ class VisualList extends FragmentViaBxmlTag_1.FragmentViaBxmlTag {
 }
 exports.VisualList = VisualList;
 _VisualList_instances = new WeakSet(), _VisualList_buildData = function _VisualList_buildData() {
+    let orientation;
+    // TODO: I think a transform(?) in Zod could allow us to skip this logic altogether
+    if ("vertical" in this.bxmlNode.attribs) {
+        orientation = "vertical";
+    }
+    else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>if ("horizontal" in this.bxmlNode.attribs) {</span>
+<span class="cstat-no" title="statement not covered" >        orientation = "horizontal";</span>
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >        orientation = "vertical";</span>
+    }
     const result = {
-        orientation: "vertical",
+        orientation,
         items: this.bxmlNode.children.map((itemTag) =&gt; {
             return __classPrivateFieldGet(this, _VisualList_instances, "m", _VisualList_buildItem).call(this, itemTag);
         }),
@@ -469,7 +505,7 @@ exports.manifest = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-14T19:17:42.557Z
+                at 2023-02-27T20:34:09.227Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
