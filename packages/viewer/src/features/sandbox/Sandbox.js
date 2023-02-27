@@ -45,14 +45,13 @@ const HorizontalVisualListItems = [
   {
     imageUrl:
       "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/developer.svg",
-    contents:
-      "<h1>The Subject-Matter-Expert</h1><p>Contributes information</p>",
+    contents: "<h1>The SME</h1><p>Contributes information</p>",
   },
   {
     imageUrl:
       "http://localhost:8080/topic-assets/boombox-feature-utopia-vseed/images/apple.svg",
     contents:
-      "<h1>The Learning-Team Member</h1><p>Enhances/repackages high-priority content</p>",
+      "<h1>The Instructor</h1><p>Enhances/repackages high-priority content</p>",
   },
   {
     imageUrl:
@@ -127,6 +126,63 @@ export const Sandbox = () => {
       <hr />
       <VerticalVisualList items={VerticalVisualListItems} />
       <hr />
+      <HorizontalVisualList items={HorizontalVisualListItems} />
+    </div>
+  );
+};
+
+const HorizontalVisualListWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(${(props) => props.itemCount}, 1fr);
+  h1 {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+  }
+  p {
+    margin-top: 3px;
+  }
+  *:first-child {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  *:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+`;
+
+const HorizontalVisualList = ({ items }) => {
+  return (
+    <HorizontalVisualListWrapper itemCount={items.length}>
+      {items.map((item, index) => {
+        return <HorizontalVisualListItem key={index} item={item} />;
+      })}
+    </HorizontalVisualListWrapper>
+  );
+};
+
+const HorizontalVisualListItem = ({ item }) => {
+  return (
+    <div>
+      <div
+        css={`
+          text-align: center;
+          padding-bottom: 8px;
+        `}
+      >
+        <img
+          src={item.imageUrl}
+          css={`
+            max-width: 110px;
+          `}
+        />
+      </div>
+      <div
+        css={`
+          text-align: center;
+        `}
+        dangerouslySetInnerHTML={{ __html: item.contents }}
+      />
     </div>
   );
 };
