@@ -97,7 +97,7 @@ const VerticalVisualListItem = ({ item }) => {
     <>
       <div
         css={`
-          background-color: ${COLORS.LIGHT_GRAY};
+          background-color: ${muiTheme.palette.gray.light};
         `}
       ></div>
       <div>

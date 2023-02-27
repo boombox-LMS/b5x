@@ -14,6 +14,7 @@ import {
 import { TopicThumbnail } from "./TopicThumbnail";
 import styled from "styled-components/macro";
 import LinearProgress from "@mui/material/LinearProgress";
+import { COLORS } from "../../theme";
 
 const TopicCardWrapper = styled.div`
   border-radius: 5px;

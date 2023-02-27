@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { COLORS } from "../../theme";
+import { muiTheme } from "../../theme";
 
 const VerticalVisualListWrapper = styled.div`
   display: grid;
@@ -29,7 +29,7 @@ const VerticalVisualListWrapper = styled.div`
 `;
 
 const VerticalVisualListItemBorder = styled.div`
-  background-color: ${COLORS.LIGHT_GRAY};
+  background-color: ${muiTheme.palette.gray.light};
 `;
 
 const VerticalVisualListItem = ({ item }) => {

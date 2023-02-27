@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
 import styled from "styled-components/macro";
-import { COLORS } from "../../theme";
+import { muiTheme } from "../../theme";
 
 const Selector = styled.div`
   display: grid;
@@ -12,14 +12,14 @@ const Selector = styled.div`
 
 const Option = styled.div`
   position: relative;
-  border: 1.5px solid ${COLORS.SUBTLE_HIGHLIGHT};
+  border: 1.5px solid ${muiTheme.palette.gray.light};
   text-align: center;
   padding: 5px;
   margin-right: -1px;
   ${(props) =>
     props.isSelected &&
-    `background-color: ${COLORS.GREENLIT_LIGHT}; 
-     border: 1.5px solid ${COLORS.GREENLIT_DARK}; 
+    `background-color: ${muiTheme.palette.greenlit.light}; 
+     border: 1.5px solid ${muiTheme.palette.greenlit.main}; 
      font-weight: bold;`}
   ${(props) => (props.isSelected ? `z-index: 1;` : `z-index: 0;`)}
   &:last-of-type {

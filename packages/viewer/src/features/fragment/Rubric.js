@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "@mui/material/Button";
 import styled from "styled-components/macro";
-import { COLORS, muiTheme } from "../../theme";
+import { muiTheme } from "../../theme";
 
 // TODO: Use CSS grid to lay out the rubric answers / results
 
@@ -43,7 +43,7 @@ const RubricXmark = styled.div`
 `;
 
 const RubricCheckmark = styled.div`
-  color: ${COLORS.GREENLIT_DARK};
+  color: ${muiTheme.palette.greenlit.main};
   margin-left: 3px;
 `;
 
@@ -52,12 +52,13 @@ const GradeIndicator = styled.div`
   vertical-align: top;
   width: 20px;
   font-size: 1.3em;
-  color: ${COLORS.GREENLIT_DARK};
+  color: ${muiTheme.palette.greenlit.main};
 `;
 
 const Answer = styled.div`
   padding: 10px 7px;
-  ${(props) => props.isMet && `background-color: ${COLORS.GREENLIT_LIGHT};`}
+  ${(props) =>
+    props.isMet && `background-color: ${muiTheme.palette.greenlit.light};`}
   & + & {
     margin-top: 8px;
     margin-bottom: 8px;

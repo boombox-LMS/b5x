@@ -3,7 +3,7 @@ import { useLogInUserMutation } from "../api/apiSlice";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import styled from "styled-components/macro";
-import { COLORS } from "../../theme";
+import { muiTheme } from "../../theme";
 
 const LoginFormBackground = styled.div`
   position: absolute;
@@ -11,7 +11,7 @@ const LoginFormBackground = styled.div`
   right: 0px;
   width: 100%;
   height: 100vh;
-  background-color: ${COLORS.SUBTLE_HIGHLIGHT};
+  background-color: ${muiTheme.palette.shaded.main};
 `;
 
 const LoginFormContent = styled.div`
