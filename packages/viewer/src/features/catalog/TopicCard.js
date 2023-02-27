@@ -13,6 +13,7 @@ import {
 } from "@ant-design/icons";
 import { TopicThumbnail } from "./TopicThumbnail";
 import styled from "styled-components/macro";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const TopicCardWrapper = styled.div`
   border-radius: 5px;
@@ -105,9 +106,11 @@ export const TopicCard = ({ topic }) => {
       )}
       <TopicThumbnail topic={topic} />
       <TopicCardInfo>
+        <LinearProgress variant="determinate" color="secondary" value={75} />
         <div
           css={`
             margin-bottom: 4px;
+            margin-top: 6px;
           `}
         >
           {topic.unmetPrerequisites.length > 0 && (
