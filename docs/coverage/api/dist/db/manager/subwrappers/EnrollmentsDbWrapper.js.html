@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.53% </span>
+                <span class="strong">76.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>98/137</span>
+                <span class='fraction'>106/139</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.14% </span>
+                <span class="strong">56.92% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>36/63</span>
+                <span class='fraction'>37/65</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.17% </span>
+                <span class="strong">85.36% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>30/41</span>
+                <span class='fraction'>35/41</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">74.21% </span>
+                <span class="strong">79.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>95/128</span>
+                <span class='fraction'>103/130</span>
             </div>
         
             
@@ -422,14 +422,22 @@
 <a name='L357'></a><a href='#L357'>357</a>
 <a name='L358'></a><a href='#L358'>358</a>
 <a name='L359'></a><a href='#L359'>359</a>
-<a name='L360'></a><a href='#L360'>360</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-yes">29x</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">29x</span>
 <span class="cline-any cline-yes">29x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">55x</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">58x</span>
+<span class="cline-any cline-yes">29x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
@@ -466,20 +474,20 @@
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">17x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -562,6 +570,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -824,21 +840,21 @@ class EnrollmentsDbWrapper extends DbWrapper_1.DbWrapper {
         this.tags = new TagsDbWrapper_1.TagsDbWrapper(knex);
         const databaseName = this.knex.context.client.connectionSettings.database;
         this.progressSaveQueue = new bull_1.default(`progress percentage syncing in database ${databaseName}`, "redis://127.0.0.1:6379");
-        this.progressSaveQueue.process(<span class="fstat-no" title="function not covered" >(j</span>ob, done) =&gt; {
-            const { id, progressPercentage } = <span class="cstat-no" title="statement not covered" >job.data;</span>
-<span class="cstat-no" title="statement not covered" >            this.updateProgressPercentage({ id, progressPercentage }).then(<span class="fstat-no" title="function not covered" >(u</span>pdatedEnrollment) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >                done(updatedEnrollment);</span>
+        this.progressSaveQueue.process((job, done) =&gt; {
+            const { id, progressPercentage } = job.data;
+            this.updateProgressPercentage({ id, progressPercentage }).then((updatedEnrollment) =&gt; {
+                done(updatedEnrollment);
             });
         });
     }
-<span class="fstat-no" title="function not covered" >    up</span>dateProgressPercentage({ id, progressPercentage, }) {
-<span class="cstat-no" title="statement not covered" >        return __awaiter(this, void 0, void 0, <span class="fstat-no" title="function not covered" >fu</span>nction* () {</span>
-<span class="cstat-no" title="statement not covered" >            return this.knex("enrollments")</span>
+    updateProgressPercentage({ id, progressPercentage, }) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.knex("enrollments")
                 .where({ id })
                 .returning(savedEnrollmentAttributes)
                 .update({ progressPercentage })
-                .then(<span class="fstat-no" title="function not covered" >(r</span>ows) =&gt; {
-<span class="cstat-no" title="statement not covered" >                return rows[0];</span>
+                .then((rows) =&gt; {
+                return rows[0];
             });
         });
     }
@@ -921,6 +937,14 @@ class EnrollmentsDbWrapper extends DbWrapper_1.DbWrapper {
             }
             else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >                progressPercentage = __classPrivateFieldGet(this, _EnrollmentsDbWrapper_instances, "m", _EnrollmentsDbWrapper_calculateProgressPercentage).call(this, topicStatefulFragmentCount, documentStatus, statefulFragmentCountByDocumentUri, rawEnrollmentData.responsesByFragmentUri);</span>
+            }
+            // if the progress percentage has changed, queue an update to the database
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (progressPercentage !==
+                rawEnrollmentData.savedEnrollment.progressPercentage) {
+                this.progressSaveQueue.add({
+                    id: rawEnrollmentData.savedEnrollment.id,
+                    progressPercentage,
+                });
             }
             return Object.assign(Object.assign({}, rawEnrollmentData.savedEnrollment), { topicIsCompleted,
                 documentStatus,
@@ -1147,7 +1171,7 @@ _EnrollmentsDbWrapper_instances = new WeakSet(), _EnrollmentsDbWrapper_calculate
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-28T02:01:58.745Z
+                at 2023-02-28T02:15:43.056Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
