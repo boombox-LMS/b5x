@@ -45,8 +45,9 @@ const ContentContainer = styled.div`
 const LogoContainer = styled.div`
   width: 100%;
   text-align: center;
-  padding-top: ${(props) => (props.isMinimized ? "20" : "23")}px;
-  margin-bottom: ${(props) => (props.isMinimized ? "0" : "-3")}px;
+  padding-top: 20px;
+  position: relative;
+  top: ${(props) => (props.isMinimized ? "0" : "7")}px;
   transition: ${LAYOUT_RESIZE_TRANSITION_TIME};
   height: ${(props) => props.height}px;
 `;
