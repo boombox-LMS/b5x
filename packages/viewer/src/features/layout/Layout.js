@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components/macro";
-import ArrowBack from "@mui/icons-material/ArrowBack";
+import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
@@ -166,7 +166,7 @@ export const Layout = ({
           >
             <Tooltip title={`Hide ${sidebarName}`}>
               <MenuIconWrapper>
-                <ArrowBack />
+                <ChevronLeft sx={{ fontSize: "1.8em", marginTop: "-2px" }} />
               </MenuIconWrapper>
             </Tooltip>
           </SidebarShowHideIcon>

@@ -1,12 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  PlusCircleOutlined,
   InboxOutlined,
   HistoryOutlined,
   StarOutlined,
   CheckCircleOutlined,
-  PlayCircleOutlined,
   FileTextOutlined,
   BuildOutlined,
 } from "@ant-design/icons";
@@ -14,19 +12,50 @@ import {
   selectCurrentTopicFilter,
   updateTopicFilter,
 } from "./topicFilterSlice";
+import { muiTheme, INACTIVE_MENU_ICON_COLOR } from "../../theme";
 import styled from "styled-components/macro";
 
 const FilterButton = styled.div`
-  ${(props) => props.isActive && `font-weight: 500;`}
-  ${(props) => props.isActive && `color: #008f0f;`}
+  ${(props) => (props.isActive ? `font-weight: 500;` : `font-weight: 400`)}
+  ${(props) =>
+    props.isActive
+      ? `color: ${muiTheme.palette.greenlit.dark};`
+      : `color: ${INACTIVE_MENU_ICON_COLOR};`}
   text-align: center;
-  margin-bottom: 8px;
-  padding: 0.5em 0.6em;
-  border-radius: 0.3em;
+  border-width: 1px;
+  padding: 0.6em 0.7em;
   font-size: 0.9em;
-  background-color: ${(props) => (props.isActive ? "#f0fcf2" : "#f0f0f0")};
-  border: 1.5px solid ${(props) => (props.isActive ? "#008f0f" : "#f0f0f0")};
-  ${(props) => props.index === 0 && `margin-top: -7px;`}
+  position: relative;
+  ${(props) => {
+    if (props.isActive) {
+      return `z-index: 2; background-color: ${muiTheme.palette.greenlit.light};`;
+    } else {
+      return `z-index: 1;`;
+    }
+  }}
+  ${(props) => {
+    // set the border color
+    let css = `border-color: ${
+      props.isActive
+        ? muiTheme.palette.greenlit.dark
+        : muiTheme.palette.gray.light
+    };`;
+    // round the appropriate corners
+    if (props.position === "top") {
+      css += `border-radius: 5px 5px 0 0;`;
+    } else if (props.position === "bottom") {
+      css += `border-radius: 0 0 5px 5px;`;
+    }
+    // add the border
+    if (props.position !== "bottom") {
+      css += `border-bottom-style: solid;`;
+    }
+    if (props.position !== "top") {
+      css += `margin-top: -1px;`;
+      css += `border-top-style: solid;`;
+    }
+    return css;
+  }}
 `;
 
 const inputCss = `
@@ -53,9 +82,25 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
     },
   };
 
+  const statusNames = Object.keys(searchFilters[filterCategoryName]);
+
+  const getButtonPosition = (i) => {
+    if (i === 0) {
+      return "top";
+    } else if (i === statusNames.length - 1) {
+      return "bottom";
+    } else {
+      return "middle";
+    }
+  };
+
   return (
-    <>
-      {Object.keys(searchFilters[filterCategoryName]).map((statusName, i) => {
+    <div
+      css={`
+        margin-top: -7px;
+      `}
+    >
+      {statusNames.map((statusName, i) => {
         const value = searchFilters[filterCategoryName][statusName];
         const Icon = icons[filterCategoryName][statusName];
         return (
@@ -63,6 +108,7 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
             key={statusName}
             index={i}
             isActive={value}
+            position={getButtonPosition(i)}
             onClick={() => {
               dispatch(
                 updateTopicFilter({
@@ -77,8 +123,8 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
               <div
                 className="filter-button-icon"
                 css={`
-                  margin-bottom: -3.5px;
-                  font-size: 1.3em;
+                  margin-bottom: -2px;
+                  font-size: 1.5em;
                 `}
               >
                 <Icon />
@@ -88,9 +134,20 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
           </FilterButton>
         );
       })}
-    </>
+    </div>
   );
 };
+
+const FilterLabel = styled.div`
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  &:first-child {
+    margin-top: 5px;
+  }
+`;
 
 // TODO: Style as topics-filter module,
 // and rename the component to TopicsFilter
@@ -100,14 +157,14 @@ export const TopicsFilter = () => {
   return (
     <div className="filter">
       {/* Priority levels */}
-      <p className="filter-label">Show content that is</p>
+      <FilterLabel>Show content that is</FilterLabel>
       <FilterButtonSet
         searchFilters={searchFilters}
         filterCategoryName="priorityLevel"
       />
 
       {/* Completion status  */}
-      <p className="filter-label">with a status of</p>
+      <FilterLabel>with a status of</FilterLabel>
       <FilterButtonSet
         searchFilters={searchFilters}
         filterCategoryName="completionStatus"
