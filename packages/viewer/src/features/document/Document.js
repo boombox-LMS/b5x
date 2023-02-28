@@ -9,6 +9,8 @@ import DocumentHighlighter from "./DocumentHighlighter";
 
 export const Document = ({ documentUri }) => {
   const env = useSelector(selectEnv);
+
+  /*
   const documentRef = useRef();
   const [currentTextSelection, setCurrentTextSelection] = useState(null);
 
@@ -54,8 +56,10 @@ export const Document = ({ documentUri }) => {
         highlights: [newHighlight]
       })
       */
+  /*
     });
   });
+  */
 
   // fetch contents
   const {
@@ -102,7 +106,7 @@ export const Document = ({ documentUri }) => {
   }
 
   return (
-    <div ref={documentRef} className="document">
+    <div className="document">
       {env === "dev" && <DocumentDevTools />}
       <div style={{ paddingBottom: "300px" }}>
         {document.fragments.map((fragment) => {
