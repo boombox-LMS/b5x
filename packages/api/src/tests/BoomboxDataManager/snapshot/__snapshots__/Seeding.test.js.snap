@@ -145,7 +145,7 @@ exports[`The seeded data matches the snapshots The sanitized accessRules data ma
     "updatedAt": "[SANITIZED]",
   },
   {
-    "accessLevel": "assigned",
+    "accessLevel": "recommended",
     "createdAt": "[SANITIZED]",
     "groupName": "all",
     "id": "[SANITIZED]",
@@ -45467,7 +45467,7 @@ exports[`The seeded data matches the snapshots The sanitized topics data matches
     "config": {
       "contentMode": "documentation",
       "groupAccessLevels": {
-        "assigned": [
+        "recommended": [
           "all",
         ],
       },

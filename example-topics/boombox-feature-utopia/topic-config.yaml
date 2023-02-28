@@ -4,5 +4,5 @@ slug: boombox-component-catalog
 subtitle: The full list of content components.
 content-mode: documentation
 group-access-levels:
-  assigned:
+  recommended:
     - all

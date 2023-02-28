@@ -22,7 +22,7 @@ exports[`Topics routes should match expectations topics.catalog matches expectat
       "currentDocumentUri": "boombox-feature-utopia-vseed_achievement-badge",
       "firstDocumentUri": "boombox-feature-utopia-vseed_achievement-badge",
       "prerequisites": [],
-      "priorityLevel": "assigned",
+      "priorityLevel": "recommended",
       "progressPercentage": 0,
       "slug": "boombox-feature-utopia",
       "subtitle": "The full list of content components.",
