@@ -103,6 +103,7 @@ exports.up = async function (knex) {
       table.string("current_document_uri");
       table.foreign("current_document_uri").references("documents.uri");
       table.integer("user_id").index();
+      table.integer("progress_percentage").notNullable().defaultTo(0);
       table.foreign("user_id").references("users.id");
       table.string("topic_uri");
       table.foreign("topic_uri").references("topics.uri");

@@ -9,6 +9,7 @@ export const SavedEnrollmentSchema = z
     userId: z.number(),
     topicUri: z.string(),
     currentDocumentUri: z.string(),
+    progressPercentage: z.number().min(0).max(100),
     createdAt: z.date(),
     updatedAt: z.date(),
   })
