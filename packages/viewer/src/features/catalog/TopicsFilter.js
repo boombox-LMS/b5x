@@ -145,7 +145,7 @@ const FilterLabel = styled.div`
   margin-bottom: 10px;
   margin-top: 15px;
   &:first-child {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 `;
 
