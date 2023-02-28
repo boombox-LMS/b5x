@@ -8,6 +8,7 @@ import { UserResponse, UserResponseStatus } from "@b5x/types";
 import { SavedTopic } from "@b5x/types";
 import { TagWithTaggingId } from "@b5x/types";
 import { ConditionsList } from "@b5x/types";
+import Queue from "bull";
 
 type DocumentStatusByDocumentUri = Record<string, DocumentStatus>;
 
@@ -52,6 +53,12 @@ export class EnrollmentsDbWrapper extends DbWrapper {
     this.topics = new TopicsDbWrapper(knex);
     this.tags = new TagsDbWrapper(knex);
   }
+
+  // TODO: Now that we're going to store progress data in the enrollment anyway
+  // for use in the catalog and aggregated data,
+  // it should be calculated when a response is submitted, not every time
+  // the enrollment is pulled. There's no reason to recalculate it every time
+  // when potentially nothing has changed.
 
   async getOrCreateEnrollment(
     userId: number,
