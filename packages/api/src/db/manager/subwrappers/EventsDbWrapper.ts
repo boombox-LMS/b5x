@@ -1,19 +1,19 @@
-const Queue = require("bull");
+import Bull, { Queue, Job } from "bull";
 import { DbWrapper } from "./DbWrapper";
 import { NewEvent, SavedEvent } from "@b5x/types";
 
 export class EventsDbWrapper extends DbWrapper {
-  creationQueue: any;
+  creationQueue: Queue;
 
   constructor(knex: any) {
     super(knex, "events");
     this.knex = knex;
     const databaseName = this.knex.context.client.connectionSettings.database;
-    this.creationQueue = new Queue(
+    this.creationQueue = new Bull(
       `event creation in database ${databaseName}`,
       "redis://127.0.0.1:6379"
     );
-    this.creationQueue.process((job: any, done: any) => {
+    this.creationQueue.process((job: Job, done: any) => {
       const { name, data } = job.data;
       this.create({ name, data }).then((createdEvent) => {
         done(createdEvent);
