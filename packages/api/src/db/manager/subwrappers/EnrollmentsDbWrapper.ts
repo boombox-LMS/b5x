@@ -469,6 +469,17 @@ export class EnrollmentsDbWrapper extends DbWrapper {
       );
     }
 
+    // if the progress percentage has changed, queue an update to the database
+    if (
+      progressPercentage !==
+      rawEnrollmentData.savedEnrollment.progressPercentage
+    ) {
+      this.progressSaveQueue.add({
+        id: rawEnrollmentData.savedEnrollment.id,
+        progressPercentage,
+      });
+    }
+
     return {
       ...rawEnrollmentData.savedEnrollment,
       topicIsCompleted,
