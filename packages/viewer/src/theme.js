@@ -25,6 +25,8 @@ export const muiTheme = createTheme({
     */
     greenlit: {
       main: "#008f0f",
+      dark: "#008f0f",
+      medium: "#2aa136",
       light: "#f0fcf2",
     },
     gray: {

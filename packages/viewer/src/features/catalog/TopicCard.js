@@ -3,18 +3,42 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import Tooltip from "@mui/material/Tooltip";
-import {
-  InboxOutlined,
-  HistoryOutlined,
-  StarOutlined,
-  CheckCircleOutlined,
-  BuildOutlined,
-  FileTextOutlined,
-} from "@ant-design/icons";
+import { InboxOutlined, StarOutlined } from "@ant-design/icons";
 import { TopicThumbnail } from "./TopicThumbnail";
 import styled from "styled-components/macro";
-import LinearProgress from "@mui/material/LinearProgress";
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
 import { muiTheme } from "../../theme";
+
+const PriorityLevelRibbon = styled.div`
+  --f: 7px; /* control the folded part*/
+  --r: 3px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
+
+  position: absolute;
+  font-size: 1.3em;
+  inset: var(--t) calc(-1 * var(--f)) auto auto;
+  padding: 0 10px var(--f) calc(10px + var(--r));
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--f)),
+    calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    0 calc(100% - var(--f)),
+    var(--r) calc(50% - var(--f) / 2)
+  );
+  background: ${muiTheme.palette.secondary.main};
+  color: white;
+  box-shadow: 0 calc(-1 * var(--f)) 0 inset #0005;
+`;
+
+const PriorityLevelIconWrapper = styled.div`
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-left: -2px;
+`;
 
 const TopicCardWrapper = styled.div`
   border-radius: 5px;
@@ -33,9 +57,11 @@ const TopicCardInfo = styled.div`
 `;
 
 const EmptyProgressBar = styled.div`
-  height: 5px;
+  height: 7px;
   background-color: ${muiTheme.palette.gray.light};
-  margin-top: -7px;
+  margin-top: -8px;
+  z-index: 1000;
+  position: relative;
 `;
 
 const TopicProgressBar = ({ progressPercentage }) => {
@@ -43,18 +69,46 @@ const TopicProgressBar = ({ progressPercentage }) => {
     return (
       <LinearProgress
         variant="determinate"
-        color="greenlit"
         value={progressPercentage}
         sx={{
           padding: "0px",
-          marginTop: "-7px",
-          height: "5px",
+          marginTop: "-8px",
+          height: "7px",
+          [`&.${linearProgressClasses.colorPrimary}`]: {
+            backgroundColor: muiTheme.palette.gray.light,
+          },
+          [`& .${linearProgressClasses.bar}`]: {
+            backgroundColor: muiTheme.palette.greenlit.medium,
+          },
         }}
       />
     );
   } else if (progressPercentage === 0) {
     return <EmptyProgressBar />;
   }
+};
+
+const PriorityLevelIndicator = ({ priorityLevel }) => {
+  // AWKWARD: This same data is also in the FilterButtonSet in Filter.js ...
+  // move to the theme?
+  const icons = {
+    priorityLevel: {
+      recommended: StarOutlined,
+      assigned: InboxOutlined,
+    },
+  };
+
+  const PriorityLevelIcon = icons.priorityLevel[priorityLevel];
+
+  return (
+    <Tooltip title={priorityLevel} arrow placement="top">
+      <PriorityLevelRibbon>
+        <PriorityLevelIconWrapper>
+          <PriorityLevelIcon />
+        </PriorityLevelIconWrapper>
+      </PriorityLevelRibbon>
+    </Tooltip>
+  );
 };
 
 export const TopicCard = ({ topic }) => {
@@ -79,56 +133,10 @@ export const TopicCard = ({ topic }) => {
     navigate(topicUrl);
   };
 
-  // AWKWARD: This same data is also in the FilterButtonSet in Filter.js
-  const icons = {
-    priorityLevel: {
-      recommended: StarOutlined,
-      assigned: InboxOutlined,
-    },
-    completionStatus: {
-      "in progress": HistoryOutlined,
-      completed: CheckCircleOutlined,
-    },
-    // not actually in use yet
-    contentType: {
-      activity: BuildOutlined,
-      document: FileTextOutlined,
-    },
-  };
-
-  const CompletionStatusIcon = icons.completionStatus[topic.completionStatus];
-  const PriorityLevelIcon = icons.priorityLevel[topic.priorityLevel];
-
-  let indicatorBackgroundWidth = "double";
-  if (!PriorityLevelIcon || !CompletionStatusIcon) {
-    indicatorBackgroundWidth = "single";
-  }
-
   return (
     <TopicCardWrapper onClick={sendToTopicPage} className="topic-card">
-      {(PriorityLevelIcon || CompletionStatusIcon) && (
-        <>
-          <div
-            className={`topic-card__indicators-background topic-card__indicators-background--${indicatorBackgroundWidth}`}
-          ></div>
-          <div className="topic-card__indicators">
-            {topic.priorityLevel !== "available" && (
-              <div className="topic-card__priority-level-indicator">
-                <Tooltip title={topic.priorityLevel} arrow placement="top">
-                  <PriorityLevelIcon />
-                </Tooltip>
-              </div>
-            )}
-
-            {topic.completionStatus !== "not started" && (
-              <div className="topic-card__completion-status-indicator">
-                <Tooltip title={topic.completionStatus} arrow placement="top">
-                  <CompletionStatusIcon />
-                </Tooltip>
-              </div>
-            )}
-          </div>
-        </>
+      {topic.priorityLevel !== "available" && (
+        <PriorityLevelIndicator priorityLevel={topic.priorityLevel} />
       )}
       <TopicThumbnail topic={topic} />
       <TopicProgressBar progressPercentage={topic.progressPercentage} />
