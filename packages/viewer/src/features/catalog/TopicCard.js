@@ -32,6 +32,31 @@ const TopicCardInfo = styled.div`
   padding-top: 5px;
 `;
 
+const EmptyProgressBar = styled.div`
+  height: 5px;
+  background-color: ${muiTheme.palette.gray.light};
+  margin-top: -7px;
+`;
+
+const TopicProgressBar = ({ progressPercentage }) => {
+  if (progressPercentage > 0) {
+    return (
+      <LinearProgress
+        variant="determinate"
+        color="greenlit"
+        value={progressPercentage}
+        sx={{
+          padding: "0px",
+          marginTop: "-7px",
+          height: "5px",
+        }}
+      />
+    );
+  } else if (progressPercentage === 0) {
+    return <EmptyProgressBar />;
+  }
+};
+
 export const TopicCard = ({ topic }) => {
   const navigate = useNavigate();
 
@@ -106,27 +131,7 @@ export const TopicCard = ({ topic }) => {
         </>
       )}
       <TopicThumbnail topic={topic} />
-      {topic.progressPercentage > 0 && (
-        <LinearProgress
-          variant="determinate"
-          color="greenlit"
-          value={topic.progressPercentage}
-          sx={{
-            padding: "0px",
-            marginTop: "-7px",
-            height: "5px",
-          }}
-        />
-      )}
-      {topic.progressPercentage === 0 && (
-        <div
-          css={`
-            height: 5px;
-            margin-top: -7px;
-            background-color: ${muiTheme.palette.gray.light};
-          `}
-        ></div>
-      )}
+      <TopicProgressBar progressPercentage={topic.progressPercentage} />
       <TopicCardInfo>
         <div
           css={`
