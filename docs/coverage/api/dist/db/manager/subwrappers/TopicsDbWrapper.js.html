@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.58% </span>
+                <span class="strong">88.7% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>163/184</span>
+                <span class='fraction'>165/186</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.06% </span>
+                <span class="strong">63.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>36/58</span>
+                <span class='fraction'>38/60</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.39% </span>
+                <span class="strong">90.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>160/177</span>
+                <span class='fraction'>162/179</span>
             </div>
         
             
@@ -543,7 +543,9 @@
 <a name='L478'></a><a href='#L478'>478</a>
 <a name='L479'></a><a href='#L479'>479</a>
 <a name='L480'></a><a href='#L480'>480</a>
-<a name='L481'></a><a href='#L481'>481</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L481'></a><a href='#L481'>481</a>
+<a name='L482'></a><a href='#L482'>482</a>
+<a name='L483'></a><a href='#L483'>483</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-yes">1056x</span>
 <span class="cline-any cline-yes">942x</span>
@@ -635,6 +637,7 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -644,6 +647,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1114,17 +1118,19 @@ class TopicsDbWrapper extends DbWrapper_1.DbWrapper {
             // Fetch all of the user's enrolled topic uris -- these are in progress
             let currentDocumentUrisByTopicUri = {};
             let enrolledTopicUris = [];
+            let progressPercentagesByTopicUri = {};
             queryPromises.push(
             // TODO: For version pancaking, this query will need to pull more topic data,
             // and when multiple enrollments in the same topic are found, only the
             // most recent topic version should be displayed in the catalog
             this.knex
-                .select("topicUri", "currentDocumentUri")
+                .select("topicUri", "currentDocumentUri", "progressPercentage")
                 .from("enrollments")
                 .where({ userId: params.userId })
                 .then((rows) =&gt; {
-                rows.forEach(({ topicUri, currentDocumentUri }) =&gt; {
+                rows.forEach(({ topicUri, currentDocumentUri, progressPercentage }) =&gt; {
                     enrolledTopicUris.push(topicUri);
+                    progressPercentagesByTopicUri[topicUri] = progressPercentage;
                     currentDocumentUrisByTopicUri[topicUri] = currentDocumentUri;
                 });
                 return { currentDocumentUrisByTopicUri, enrolledTopicUris };
@@ -1289,7 +1295,7 @@ class TopicsDbWrapper extends DbWrapper_1.DbWrapper {
                 }
                 catalog.topics.push(Object.assign(Object.assign({}, precalculatedTopicsBySlug[topicSlug]), { priorityLevel: accessLevelBySlug[topicSlug], firstDocumentUri: yield this.getFirstDocumentUri({
                         topicUri: precalculatedTopicsBySlug[topicSlug].uri,
-                    }), currentDocumentUri: currentDocumentUrisByTopicSlug[topicSlug], unmetPrerequisites: unmetPrerequisitesBySlug[topicSlug], completionStatus: completionStatusBySlug[topicSlug] }));
+                    }), currentDocumentUri: currentDocumentUrisByTopicSlug[topicSlug], unmetPrerequisites: unmetPrerequisitesBySlug[topicSlug], completionStatus: completionStatusBySlug[topicSlug], progressPercentage: progressPercentagesByTopicUri[precalculatedTopicsBySlug[topicSlug].uri] || 0 }));
             }
             return catalog;
         });
@@ -1510,7 +1516,7 @@ _TopicsDbWrapper_instances = new WeakSet(), _TopicsDbWrapper_updateAccessRules =
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-28T02:15:43.056Z
+                at 2023-02-28T02:31:01.347Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

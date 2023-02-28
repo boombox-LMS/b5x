@@ -312,6 +312,7 @@ export const PublicCatalogTopicSchema = RawCatalogTopicSchema.extend({
   completionStatus: z.string(),
   currentDocumentUri: z.string().nullable(),
   unmetPrerequisites: z.array(UnmetTopicPrerequisiteSchema),
+  progressPercentage: z.number().nullable(),
 }).strict();
 
 /**

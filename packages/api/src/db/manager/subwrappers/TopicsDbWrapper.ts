@@ -95,22 +95,34 @@ export class TopicsDbWrapper extends DbWrapper {
     // Fetch all of the user's enrolled topic uris -- these are in progress
     let currentDocumentUrisByTopicUri: Record<string, string> = {};
     let enrolledTopicUris: string[] = [];
+    let progressPercentagesByTopicUri: Record<string, number> = {};
 
     queryPromises.push(
       // TODO: For version pancaking, this query will need to pull more topic data,
       // and when multiple enrollments in the same topic are found, only the
       // most recent topic version should be displayed in the catalog
       this.knex
-        .select("topicUri", "currentDocumentUri")
+        .select("topicUri", "currentDocumentUri", "progressPercentage")
         .from("enrollments")
         .where({ userId: params.userId })
-        .then((rows: { topicUri: string; currentDocumentUri: string }[]) => {
-          rows.forEach(({ topicUri, currentDocumentUri }) => {
-            enrolledTopicUris.push(topicUri);
-            currentDocumentUrisByTopicUri[topicUri] = currentDocumentUri;
-          });
-          return { currentDocumentUrisByTopicUri, enrolledTopicUris };
-        })
+        .then(
+          (
+            rows: {
+              topicUri: string;
+              currentDocumentUri: string;
+              progressPercentage: number;
+            }[]
+          ) => {
+            rows.forEach(
+              ({ topicUri, currentDocumentUri, progressPercentage }) => {
+                enrolledTopicUris.push(topicUri);
+                progressPercentagesByTopicUri[topicUri] = progressPercentage;
+                currentDocumentUrisByTopicUri[topicUri] = currentDocumentUri;
+              }
+            );
+            return { currentDocumentUrisByTopicUri, enrolledTopicUris };
+          }
+        )
     );
 
     // Populate the user's completed topic URIs and slugs
@@ -313,6 +325,10 @@ export class TopicsDbWrapper extends DbWrapper {
         currentDocumentUri: currentDocumentUrisByTopicSlug[topicSlug],
         unmetPrerequisites: unmetPrerequisitesBySlug[topicSlug],
         completionStatus: completionStatusBySlug[topicSlug],
+        progressPercentage:
+          progressPercentagesByTopicUri[
+            precalculatedTopicsBySlug[topicSlug].uri
+          ] || 0,
       });
     }
 

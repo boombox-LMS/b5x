@@ -101,7 +101,7 @@ export const api = createApi({
       }),
       // TODO: Make response tag invalidation more granular
       // to avoid re-rendering everything
-      invalidatesTags: ["Responses", "Enrollment"],
+      invalidatesTags: ["Responses", "Enrollment", "Catalog"],
     }),
     /**
      *  Dev tools -----------------------------------------------
