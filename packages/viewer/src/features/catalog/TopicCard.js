@@ -114,14 +114,14 @@ export const TopicCard = ({ topic }) => {
           sx={{
             padding: "0px",
             marginTop: "-7px",
-            height: "6px",
+            height: "5px",
           }}
         />
       )}
       {topic.progressPercentage === 0 && (
         <div
           css={`
-            height: 6px;
+            height: 5px;
             margin-top: -7px;
             background-color: ${muiTheme.palette.gray.light};
           `}
