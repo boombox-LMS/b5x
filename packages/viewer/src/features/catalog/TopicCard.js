@@ -14,7 +14,7 @@ import {
 import { TopicThumbnail } from "./TopicThumbnail";
 import styled from "styled-components/macro";
 import LinearProgress from "@mui/material/LinearProgress";
-import { COLORS } from "../../theme";
+import { muiTheme } from "../../theme";
 
 const TopicCardWrapper = styled.div`
   border-radius: 5px;
@@ -106,8 +106,28 @@ export const TopicCard = ({ topic }) => {
         </>
       )}
       <TopicThumbnail topic={topic} />
+      {topic.progressPercentage > 0 && (
+        <LinearProgress
+          variant="determinate"
+          color="greenlit"
+          value={topic.progressPercentage}
+          sx={{
+            padding: "0px",
+            marginTop: "-7px",
+            height: "6px",
+          }}
+        />
+      )}
+      {topic.progressPercentage === 0 && (
+        <div
+          css={`
+            height: 6px;
+            margin-top: -7px;
+            background-color: ${muiTheme.palette.gray.light};
+          `}
+        ></div>
+      )}
       <TopicCardInfo>
-        <LinearProgress variant="determinate" color="secondary" value={75} />
         <div
           css={`
             margin-bottom: 4px;
@@ -126,7 +146,13 @@ export const TopicCard = ({ topic }) => {
           )}
           <strong>{topic.title}</strong>
         </div>
-        <div>{topic.subtitle}</div>
+        <div
+          css={`
+            margin-top: -3px;
+          `}
+        >
+          {topic.subtitle}
+        </div>
       </TopicCardInfo>
     </TopicCardWrapper>
   );
