@@ -16,7 +16,7 @@ import { muiTheme, INACTIVE_MENU_ICON_COLOR } from "../../theme";
 import styled from "styled-components/macro";
 
 const FilterButton = styled.div`
-  ${(props) => (props.isActive ? `font-weight: 500;` : `font-weight: 400`)}
+  ${(props) => (props.isActive ? `font-weight: 500;` : ``)}
   ${(props) =>
     props.isActive
       ? `color: ${muiTheme.palette.greenlit.dark};`
@@ -72,8 +72,8 @@ const FilterButtonSet = ({ filterCategoryName, searchFilters }) => {
       assigned: InboxOutlined,
     },
     completionStatus: {
-      "in progress": HistoryOutlined,
-      completed: CheckCircleOutlined,
+      // "in progress": HistoryOutlined,
+      // completed: CheckCircleOutlined,
     },
     // not actually in use yet
     contentType: {
