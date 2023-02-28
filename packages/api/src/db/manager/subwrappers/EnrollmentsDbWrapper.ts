@@ -8,7 +8,7 @@ import { UserResponse, UserResponseStatus } from "@b5x/types";
 import { SavedTopic } from "@b5x/types";
 import { TagWithTaggingId } from "@b5x/types";
 import { ConditionsList } from "@b5x/types";
-import Queue from "bull";
+import Bull, { Queue, Job } from "bull";
 
 type DocumentStatusByDocumentUri = Record<string, DocumentStatus>;
 
@@ -46,12 +46,42 @@ export class EnrollmentsDbWrapper extends DbWrapper {
   topics: TopicsDbWrapper;
   tags: TagsDbWrapper;
   knex: any;
+  progressSaveQueue: Queue;
 
   constructor(knex: any) {
     super(knex, "enrollments");
     this.knex = knex;
     this.topics = new TopicsDbWrapper(knex);
     this.tags = new TagsDbWrapper(knex);
+    const databaseName = this.knex.context.client.connectionSettings.database;
+    this.progressSaveQueue = new Bull(
+      `progress percentage syncing in database ${databaseName}`,
+      "redis://127.0.0.1:6379"
+    );
+    this.progressSaveQueue.process((job: Job, done: any) => {
+      const { id, progressPercentage } = job.data;
+      this.updateProgressPercentage({ id, progressPercentage }).then(
+        (updatedEnrollment) => {
+          done(updatedEnrollment);
+        }
+      );
+    });
+  }
+
+  async updateProgressPercentage({
+    id,
+    progressPercentage,
+  }: {
+    id: number;
+    progressPercentage: number;
+  }): Promise<SavedEnrollment> {
+    return this.knex("enrollments")
+      .where({ id })
+      .returning(savedEnrollmentAttributes)
+      .update({ progressPercentage })
+      .then((rows: SavedEnrollment[]) => {
+        return rows[0];
+      });
   }
 
   // TODO: Now that we're going to store progress data in the enrollment anyway
@@ -506,5 +536,10 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         });
         return responsesByFragmentUri;
       });
+  }
+
+  async destroy() {
+    await this.progressSaveQueue.close();
+    return true;
   }
 }
