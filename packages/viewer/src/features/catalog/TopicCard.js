@@ -42,6 +42,7 @@ const PriorityLevelIconWrapper = styled.div`
 
 const TopicCardWrapper = styled.div`
   border-radius: 5px;
+  isolation: isolate;
   padding-bottom: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
@@ -60,7 +61,7 @@ const EmptyProgressBar = styled.div`
   height: 7px;
   background-color: ${muiTheme.palette.gray.light};
   margin-top: -8px;
-  z-index: 1000;
+  z-index: 2;
   position: relative;
 `;
 
