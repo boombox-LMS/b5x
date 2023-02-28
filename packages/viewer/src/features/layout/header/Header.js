@@ -45,7 +45,9 @@ const ContentContainer = styled.div`
 const LogoContainer = styled.div`
   width: 100%;
   text-align: center;
-  padding-top: 20px;
+  padding-top: ${(props) => (props.isMinimized ? "20" : "23")}px;
+  margin-bottom: ${(props) => (props.isMinimized ? "0" : "-3")}px;
+  transition: ${LAYOUT_RESIZE_TRANSITION_TIME};
   height: ${(props) => props.height}px;
 `;
 
@@ -156,7 +158,7 @@ export const Header = ({
         onMouseEnter={mouseEnterCallback}
         onMouseLeave={mouseLeaveCallback}
       >
-        <LogoContainer height={HEADER_LOGO_HEIGHT}>
+        <LogoContainer height={HEADER_LOGO_HEIGHT} isMinimized={isMinimized}>
           <img
             css={`
               height: calc(${HEADER_LOGO_HEIGHT}px - 20px);
