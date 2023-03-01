@@ -74,7 +74,7 @@ function App() {
           sidebarIsOpen={true}
           sidebarName="topics filter"
           sidebarOpenIcon={<FilterAltIcon />}
-          openSidebarWidth={200}
+          openSidebarWidth={235}
         />
       );
     } else {
