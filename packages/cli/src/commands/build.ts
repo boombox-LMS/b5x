@@ -3,8 +3,7 @@ import { copyFolderRecursiveSync } from "./fileUtils";
 import fs from "fs";
 
 // Just for dev purposes, this will be an S3 bucket when code is productionized
-const B5X_API_TOPIC_ASSETS_FOLDER =
-  "/Users/jengilbert/projects/b5x/packages/api/public/topic-assets";
+const B5X_API_TOPIC_ASSETS_FOLDER = `${__dirname}/../../../api/public/topic-assets`;
 
 const TOPIC_CONFIG_FILENAME = "topic-config.yaml";
 
