@@ -62,7 +62,7 @@ const GeneratedTopicImage = ({ topic }) => {
   }
 
   const style = {
-    height: "125px",
+    height: "179.5px",
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
@@ -72,13 +72,14 @@ const GeneratedTopicImage = ({ topic }) => {
     textOverflow: "ellipsis",
     borderRadius: "5px 5px 0px 0px",
     textAlign: "center",
-    width: "250px",
+    width: "100%",
     backgroundImage: geopattern.toDataUrl(),
     fontFamily: "Bungee Shade",
     color: titleColor,
     fontSize: `${fontSize}px`,
     lineHeight: "0.85em",
     padding: "10px",
+    marginBottom: "8px",
   };
 
   return <div style={style}>{title}</div>;
