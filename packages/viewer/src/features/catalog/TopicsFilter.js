@@ -42,9 +42,9 @@ const FilterButton = styled.div`
     };`;
     // round the appropriate corners
     if (props.position === "top") {
-      css += `border-radius: 5px 5px 0 0;`;
+      css += `border-radius: 7px 7px 0 0;`;
     } else if (props.position === "bottom") {
-      css += `border-radius: 0 0 5px 5px;`;
+      css += `border-radius: 0 0 7px 7px;`;
     }
     // add the border
     if (props.position !== "bottom") {
