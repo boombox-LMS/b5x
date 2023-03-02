@@ -129,13 +129,15 @@ export const TopicStatsTable = () => {
 
   const columns = [
     {
-      field: "uri",
-      headerName: "URI",
-      width: 220,
+      field: "slug",
+      headerName: "Slug",
+      width: 210,
       renderCell: (params) => {
         const topic = params.row;
         return (
-          <a href={`http://localhost:3000/topics/${topic.uri}`}>{topic.uri}</a>
+          <a href={`http://localhost:3000/topics/${topic.slug}`}>
+            {topic.slug}
+          </a>
         );
       },
     },
@@ -155,7 +157,7 @@ export const TopicStatsTable = () => {
     {
       field: "completionCount",
       headerName: "Completions",
-      width: 140,
+      width: 130,
     },
     {
       field: "completionRate",
