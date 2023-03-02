@@ -62,7 +62,8 @@ const GeneratedTopicImage = ({ topic }) => {
   }
 
   const style = {
-    height: "179.5px",
+    aspectRatio: "2/1",
+    objectFit: "cover",
     display: "flex",
     justifyContent: "center",
     alignContent: "center",
@@ -72,7 +73,6 @@ const GeneratedTopicImage = ({ topic }) => {
     textOverflow: "ellipsis",
     borderRadius: "5px 5px 0px 0px",
     textAlign: "center",
-    width: "100%",
     backgroundImage: geopattern.toDataUrl(),
     fontFamily: "Bungee Shade",
     color: titleColor,
