@@ -1,9 +1,0 @@
-title: "Data at CloudCo"
-cover-image: data-at-cloudco.jpg
-slug: data-at-cloudco
-subtitle: "An introduction to making data-driven decisions at CloudCo."
-group-access-levels:
-  recommended:
-    - all
-prerequisites:
-  - code-of-conduct

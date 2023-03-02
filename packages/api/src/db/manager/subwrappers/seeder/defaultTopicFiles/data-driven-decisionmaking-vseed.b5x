@@ -1,11 +1,11 @@
 {
     "topic": {
-        "uri": "data-at-cloudco-vseed",
-        "slug": "data-at-cloudco",
+        "uri": "data-driven-decisionmaking-vseed",
+        "slug": "data-driven-decisionmaking",
         "version": "seed",
-        "title": "Data at CloudCo",
+        "title": "Data-Driven Decisionmaking",
         "config": {
-            "slug": "data-at-cloudco",
+            "slug": "data-driven-decisionmaking",
             "groupAccessLevels": {
                 "recommended": [
                     "all"
@@ -16,37 +16,37 @@
             ],
             "contentMode": "tutorial"
         },
-        "subtitle": "An introduction to making data-driven decisions at CloudCo.",
-        "coverImageUrl": "http://localhost:8080/topic-assets/data-at-cloudco-vseed/images/data-at-cloudco.jpg",
+        "subtitle": "An introduction to SQL, data visualization, and experimentation.",
+        "coverImageUrl": "http://localhost:8080/topic-assets/data-driven-decisionmaking-vseed/images/data-at-cloudco.jpg",
         "documents": [
             {
-                "uri": "data-at-cloudco-vseed_customization-page",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_customization-page",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "customization-page",
                 "order": 1,
                 "config": {},
                 "title": "Let's customize your course",
                 "displayConditions": [],
                 "childUris": [
-                    "data-at-cloudco-vseed_customization-page_f1",
-                    "data-at-cloudco-vseed_customization-page_architecture-level",
-                    "data-at-cloudco-vseed_customization-page_f4",
-                    "data-at-cloudco-vseed_customization-page_f6",
-                    "data-at-cloudco-vseed_customization-page_f8",
-                    "data-at-cloudco-vseed_customization-page_f10",
-                    "data-at-cloudco-vseed_customization-page_sql-level",
-                    "data-at-cloudco-vseed_customization-page_f13",
-                    "data-at-cloudco-vseed_customization-page_f15",
-                    "data-at-cloudco-vseed_customization-page_f17",
-                    "data-at-cloudco-vseed_customization-page_f19",
-                    "data-at-cloudco-vseed_customization-page_f21",
-                    "data-at-cloudco-vseed_customization-page_f23",
-                    "data-at-cloudco-vseed_customization-page_mode-level",
-                    "data-at-cloudco-vseed_customization-page_f26",
-                    "data-at-cloudco-vseed_customization-page_f28",
-                    "data-at-cloudco-vseed_customization-page_f30",
-                    "data-at-cloudco-vseed_customization-page_f32",
-                    "data-at-cloudco-vseed_customization-page_f34"
+                    "data-driven-decisionmaking-vseed_customization-page_f1",
+                    "data-driven-decisionmaking-vseed_customization-page_architecture-level",
+                    "data-driven-decisionmaking-vseed_customization-page_f4",
+                    "data-driven-decisionmaking-vseed_customization-page_f6",
+                    "data-driven-decisionmaking-vseed_customization-page_f8",
+                    "data-driven-decisionmaking-vseed_customization-page_f10",
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level",
+                    "data-driven-decisionmaking-vseed_customization-page_f13",
+                    "data-driven-decisionmaking-vseed_customization-page_f15",
+                    "data-driven-decisionmaking-vseed_customization-page_f17",
+                    "data-driven-decisionmaking-vseed_customization-page_f19",
+                    "data-driven-decisionmaking-vseed_customization-page_f21",
+                    "data-driven-decisionmaking-vseed_customization-page_f23",
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level",
+                    "data-driven-decisionmaking-vseed_customization-page_f26",
+                    "data-driven-decisionmaking-vseed_customization-page_f28",
+                    "data-driven-decisionmaking-vseed_customization-page_f30",
+                    "data-driven-decisionmaking-vseed_customization-page_f32",
+                    "data-driven-decisionmaking-vseed_customization-page_f34"
                 ],
                 "digest": "7cef0d03864392b7a5f75d69b617d369",
                 "contentMode": "tutorial",
@@ -54,7 +54,7 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                            "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
@@ -63,9 +63,9 @@
                 "externalDependencyUris": [],
                 "dependencyUris": [],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_customization-page_f1": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f1",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -78,9 +78,9 @@
                         "digest": "cf01090c6a00d200bf30bd2f5c770634",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_architecture-level": {
-                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_architecture-level": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "choices": [
@@ -102,15 +102,15 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f3"
+                            "data-driven-decisionmaking-vseed_customization-page_f3"
                         ],
                         "contents": "",
                         "digest": "3c5cfe2960dc719287ba729e518c5d7b",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f3": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f3",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f3": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f3",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -123,15 +123,15 @@
                         "digest": "16eff4c71d3e15f3be77e36007ebe2e9",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f4": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f4",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f4": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f4",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                         "targetValue": "beginner",
                                         "operator": "is"
                                     }
@@ -145,7 +145,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -157,17 +157,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f5"
+                            "data-driven-decisionmaking-vseed_customization-page_f5"
                         ],
                         "contents": "",
                         "digest": "e4567659969fee54416250ca1848906e",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                            "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f5": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f5",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f5": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f5",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -180,15 +180,15 @@
                         "digest": "a82eb81a7734c2c498795d8221eabfe6",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f6": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f6",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f6": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f6",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                         "targetValue": "intermediate",
                                         "operator": "is"
                                     }
@@ -202,7 +202,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -214,17 +214,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f7"
+                            "data-driven-decisionmaking-vseed_customization-page_f7"
                         ],
                         "contents": "",
                         "digest": "09237fe23c5fa86bb5ae5c27466f950d",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                            "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f7": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f7",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f7": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f7",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -237,15 +237,15 @@
                         "digest": "582d60b1134a28f38a984ef08d0b9e2c",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f8": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f8",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f8": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f8",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                         "targetValue": "advanced",
                                         "operator": "is"
                                     }
@@ -259,7 +259,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -271,17 +271,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f9"
+                            "data-driven-decisionmaking-vseed_customization-page_f9"
                         ],
                         "contents": "",
                         "digest": "32dfd82f2ef921a178b0b49f992c284d",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                            "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f9": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f9",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f9": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f9",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -294,14 +294,14 @@
                         "digest": "ac2388ce70ce8efec1a955cdabe0ee4c",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f10": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f10",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f10": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f10",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                    "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -317,17 +317,17 @@
                         "contents": "<h2 id=\"sql-skills\">SQL skills</h2>\n",
                         "digest": "f6e43616ae24a7de95bd26e3ce936033",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                            "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_sql-level": {
-                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                    "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -361,17 +361,17 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f12"
+                            "data-driven-decisionmaking-vseed_customization-page_f12"
                         ],
                         "contents": "",
                         "digest": "7c5f790f20d3abd8c6791edd4a1ff92f",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_architecture-level"
+                            "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f12": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f12",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f12": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f12",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -384,15 +384,15 @@
                         "digest": "0b8eebbf6586da248add18fb5cfe32a3",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f13": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f13",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f13": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f13",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "targetValue": "beginner",
                                         "operator": "is"
                                     }
@@ -406,7 +406,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -418,17 +418,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f14"
+                            "data-driven-decisionmaking-vseed_customization-page_f14"
                         ],
                         "contents": "",
                         "digest": "c3708e15aac47141c82a962df5cada95",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f14": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f14",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f14": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f14",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -441,15 +441,15 @@
                         "digest": "5049c6fce928963a6d3b973ea6d760ba",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f15": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f15",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f15": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f15",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "targetValue": "novice",
                                         "operator": "is"
                                     }
@@ -463,7 +463,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -475,17 +475,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f16"
+                            "data-driven-decisionmaking-vseed_customization-page_f16"
                         ],
                         "contents": "",
                         "digest": "01e33170ce79727fdaeba575e72f84fb",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f16": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f16",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f16": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f16",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -498,15 +498,15 @@
                         "digest": "3d6a8a830dd79b4bc1036d4095659f1d",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f17": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f17",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f17": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f17",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "targetValue": "intermediate",
                                         "operator": "is"
                                     }
@@ -520,7 +520,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -532,17 +532,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f18"
+                            "data-driven-decisionmaking-vseed_customization-page_f18"
                         ],
                         "contents": "",
                         "digest": "5750b4115cab0b5db9570891e2427a04",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f18": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f18",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f18": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f18",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -555,15 +555,15 @@
                         "digest": "6a723a1f917d21ae1126af061d837f6d",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f19": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f19",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f19": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f19",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "targetValue": "advanced",
                                         "operator": "is"
                                     }
@@ -577,7 +577,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -589,17 +589,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f20"
+                            "data-driven-decisionmaking-vseed_customization-page_f20"
                         ],
                         "contents": "",
                         "digest": "5a8f475f4dcb7a30a9824e1e785450e5",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f20": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f20",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f20": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f20",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -612,15 +612,15 @@
                         "digest": "7972b7aec663ddf7fc39a6969101edd2",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f21": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f21",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f21": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f21",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "targetValue": "expert",
                                         "operator": "is"
                                     }
@@ -634,7 +634,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -646,17 +646,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f22"
+                            "data-driven-decisionmaking-vseed_customization-page_f22"
                         ],
                         "contents": "",
                         "digest": "1f03f9a83c8663aea603834373bfad61",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f22": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f22",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f22": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f22",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -669,14 +669,14 @@
                         "digest": "9c4a50e1467f7573ae3176d02541b29b",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f23": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f23",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f23": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f23",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                    "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -692,17 +692,17 @@
                         "contents": "<h2 id=\"mode-familiarity\">Mode familiarity</h2>\n",
                         "digest": "5d832005b6b00ce44bdc13fbdfd35986",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_mode-level": {
-                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                    "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -736,17 +736,17 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f25"
+                            "data-driven-decisionmaking-vseed_customization-page_f25"
                         ],
                         "contents": "",
                         "digest": "3aef63bb5cdb8a2ed33a9a371ed77fd5",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_sql-level"
+                            "data-driven-decisionmaking-vseed_customization-page_sql-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f25": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f25",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f25": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f25",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -759,15 +759,15 @@
                         "digest": "7b02012befb4dc27f03f3e0e9dfb5ce4",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f26": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f26",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f26": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f26",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "targetValue": "beginner",
                                         "operator": "is"
                                     }
@@ -781,7 +781,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -793,17 +793,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f27"
+                            "data-driven-decisionmaking-vseed_customization-page_f27"
                         ],
                         "contents": "",
                         "digest": "2439348a4adf106767521d20b66d018b",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_mode-level"
+                            "data-driven-decisionmaking-vseed_customization-page_mode-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f27": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f27",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f27": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f27",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -816,15 +816,15 @@
                         "digest": "ec5a513e31f9af31c937ba886239f847",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f28": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f28",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f28": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f28",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "targetValue": "novice",
                                         "operator": "is"
                                     }
@@ -838,7 +838,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -850,17 +850,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f29"
+                            "data-driven-decisionmaking-vseed_customization-page_f29"
                         ],
                         "contents": "",
                         "digest": "79b22a7d11e4b6120ee4553b7d88498a",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_mode-level"
+                            "data-driven-decisionmaking-vseed_customization-page_mode-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f29": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f29",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f29": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f29",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -873,15 +873,15 @@
                         "digest": "e10b9b309940ceb590f4f6467f1bd878",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f30": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f30",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f30": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f30",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "targetValue": "intermediate",
                                         "operator": "is"
                                     }
@@ -895,7 +895,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -907,17 +907,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f31"
+                            "data-driven-decisionmaking-vseed_customization-page_f31"
                         ],
                         "contents": "",
                         "digest": "148a1f92a126067419f76648d1697bb4",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_mode-level"
+                            "data-driven-decisionmaking-vseed_customization-page_mode-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f31": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f31",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f31": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f31",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -930,16 +930,16 @@
                         "digest": "820249b60b05dca07c662a5dfc901556",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f32": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f32",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f32": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f32",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             [
                                 [
                                     {
                                         "type": "condition",
                                         "data": {
-                                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                            "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                             "targetValue": "advanced",
                                             "operator": "is"
                                         }
@@ -953,7 +953,7 @@
                                     {
                                         "type": "condition",
                                         "data": {
-                                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                            "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                             "targetValue": "expert",
                                             "operator": "is"
                                         }
@@ -968,7 +968,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                        "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -980,17 +980,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_customization-page_f33"
+                            "data-driven-decisionmaking-vseed_customization-page_f33"
                         ],
                         "contents": "",
                         "digest": "698f28d4441cac8d676c7fff2d2a246f",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_mode-level"
+                            "data-driven-decisionmaking-vseed_customization-page_mode-level"
                         ]
                     },
-                    "data-at-cloudco-vseed_customization-page_f33": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f33",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f33": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f33",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1003,14 +1003,14 @@
                         "digest": "ea40790e9d54ed2722db7daab4d682a9",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_customization-page_f34": {
-                        "uri": "data-at-cloudco-vseed_customization-page_f34",
-                        "documentUri": "data-at-cloudco-vseed_customization-page",
+                    "data-driven-decisionmaking-vseed_customization-page_f34": {
+                        "uri": "data-driven-decisionmaking-vseed_customization-page_f34",
+                        "documentUri": "data-driven-decisionmaking-vseed_customization-page",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                    "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1024,14 +1024,14 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_customization-page_mode-level"
+                            "data-driven-decisionmaking-vseed_customization-page_mode-level"
                         ]
                     }
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_b-optional-mentor-signup",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "b-optional-mentor-signup",
                 "order": 2,
                 "config": {},
@@ -1041,7 +1041,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                 "targetValue": "advanced",
                                 "operator": "is"
                             }
@@ -1055,7 +1055,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                 "targetValue": "expert",
                                 "operator": "is"
                             }
@@ -1069,7 +1069,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                 "targetValue": "advanced",
                                 "operator": "is"
                             }
@@ -1083,7 +1083,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                 "targetValue": "expert",
                                 "operator": "is"
                             }
@@ -1091,12 +1091,12 @@
                     ]
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f1",
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f3",
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f5",
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f7",
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f8"
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f1",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f3",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f5",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f7",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f8"
                 ],
                 "digest": "68ed34cfefd6edff97072946b8f759cf",
                 "contentMode": "tutorial",
@@ -1104,24 +1104,24 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                            "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
                     }
                 ],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level",
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level",
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level",
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level",
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f1": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f1",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1134,9 +1134,9 @@
                         "digest": "eccaf57293d06855440260f42b447053",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [],
                         "data": {
                             "choices": [
@@ -1162,16 +1162,16 @@
                         "digest": "15cef5f3b9476c8753ebe73aedb799df",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f3": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f3",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f3": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f3",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [
                             [
                                 [
                                     {
                                         "type": "condition",
                                         "data": {
-                                            "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                            "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                             "targetValue": "high",
                                             "operator": "is"
                                         }
@@ -1185,7 +1185,7 @@
                                     {
                                         "type": "condition",
                                         "data": {
-                                            "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                            "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                             "targetValue": "medium",
                                             "operator": "is"
                                         }
@@ -1200,7 +1200,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -1212,17 +1212,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_b-optional-mentor-signup_f4"
+                            "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f4"
                         ],
                         "contents": "",
                         "digest": "28b6bbb7060453a03f26d4f035255df0",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                            "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest"
                         ]
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f4": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f4",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f4": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f4",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1235,15 +1235,15 @@
                         "digest": "504aad4e96cdb3963407e24f9f7f01b5",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f5": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f5",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f5": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f5",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [
                             [
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                         "targetValue": "low",
                                         "operator": "is"
                                     }
@@ -1257,7 +1257,7 @@
                                 {
                                     "type": "condition",
                                     "data": {
-                                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                         "operator": "status-is",
                                         "targetValue": "completed"
                                     }
@@ -1269,17 +1269,17 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "data-at-cloudco-vseed_b-optional-mentor-signup_f6"
+                            "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f6"
                         ],
                         "contents": "",
                         "digest": "1d1d3fd3a21eedd9c703fce5222d099c",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                            "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest"
                         ]
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f6": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f6",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f6": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f6",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1292,14 +1292,14 @@
                         "digest": "d79e5e5ec83eddeebf324bd856328aae",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f7": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f7",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f7": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f7",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                    "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1315,17 +1315,17 @@
                         "contents": "<p>On to the course!</p>\n",
                         "digest": "319f424af52f941dba5c10d93dc96007",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                            "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest"
                         ]
                     },
-                    "data-at-cloudco-vseed_b-optional-mentor-signup_f8": {
-                        "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_f8",
-                        "documentUri": "data-at-cloudco-vseed_b-optional-mentor-signup",
+                    "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f8": {
+                        "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_f8",
+                        "documentUri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest",
+                                    "uri": "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1339,14 +1339,14 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_b-optional-mentor-signup_mentor-interest"
+                            "data-driven-decisionmaking-vseed_b-optional-mentor-signup_mentor-interest"
                         ]
                     }
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_cloudco-data-architecture",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_cloudco-data-architecture",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "cloudco-data-architecture",
                 "order": 3,
                 "config": {},
@@ -1356,7 +1356,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                 "targetValue": "beginner",
                                 "operator": "is"
                             }
@@ -1370,7 +1370,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_architecture-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_architecture-level",
                                 "targetValue": "intermediate",
                                 "operator": "is"
                             }
@@ -1378,22 +1378,22 @@
                     ]
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_cloudco-data-architecture_f1",
-                    "data-at-cloudco-vseed_cloudco-data-architecture_f2"
+                    "data-driven-decisionmaking-vseed_cloudco-data-architecture_f1",
+                    "data-driven-decisionmaking-vseed_cloudco-data-architecture_f2"
                 ],
                 "digest": "275f52a3b8777905fbfc341c6dfb65d5",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_architecture-level"
+                    "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_architecture-level"
+                    "data-driven-decisionmaking-vseed_customization-page_architecture-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_cloudco-data-architecture_f1": {
-                        "uri": "data-at-cloudco-vseed_cloudco-data-architecture_f1",
-                        "documentUri": "data-at-cloudco-vseed_cloudco-data-architecture",
+                    "data-driven-decisionmaking-vseed_cloudco-data-architecture_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_cloudco-data-architecture_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_cloudco-data-architecture",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1406,9 +1406,9 @@
                         "digest": "6d985749b035af0e39339735adbe9754",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_cloudco-data-architecture_f2": {
-                        "uri": "data-at-cloudco-vseed_cloudco-data-architecture_f2",
-                        "documentUri": "data-at-cloudco-vseed_cloudco-data-architecture",
+                    "data-driven-decisionmaking-vseed_cloudco-data-architecture_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_cloudco-data-architecture_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_cloudco-data-architecture",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1422,18 +1422,18 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_data-architecture-diagram",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "data-architecture-diagram",
                 "order": 4,
                 "config": {},
                 "title": "Diagram of CloudCo's data architecture",
                 "displayConditions": [],
                 "childUris": [
-                    "data-at-cloudco-vseed_data-architecture-diagram_f1",
-                    "data-at-cloudco-vseed_data-architecture-diagram_f2",
-                    "data-at-cloudco-vseed_data-architecture-diagram_f4",
-                    "data-at-cloudco-vseed_data-architecture-diagram_f5"
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f1",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f2",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f4",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f5"
                 ],
                 "digest": "977c9d16083a47938bcc14e9010a987c",
                 "contentMode": "tutorial",
@@ -1441,7 +1441,7 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                            "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f2",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
@@ -1450,9 +1450,9 @@
                 "externalDependencyUris": [],
                 "dependencyUris": [],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_data-architecture-diagram_f1": {
-                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f1",
-                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_data-architecture-diagram",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1465,24 +1465,24 @@
                         "digest": "582281ee7cfb839d576b2255993312ae",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_data-architecture-diagram_f2": {
-                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
-                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_data-architecture-diagram",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "ContinueButton",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "data-at-cloudco-vseed_data-architecture-diagram_f3"
+                            "data-driven-decisionmaking-vseed_data-architecture-diagram_f3"
                         ],
                         "contents": "",
                         "digest": "10a5e65aec1b6d6561a6dcc30f811ace",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_data-architecture-diagram_f3": {
-                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f3",
-                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f3": {
+                        "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f3",
+                        "documentUri": "data-driven-decisionmaking-vseed_data-architecture-diagram",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1495,14 +1495,14 @@
                         "digest": "bacb025f83756f734769fe94667edee2",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_data-architecture-diagram_f4": {
-                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f4",
-                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f4": {
+                        "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f4",
+                        "documentUri": "data-driven-decisionmaking-vseed_data-architecture-diagram",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                                    "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f2",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1518,17 +1518,17 @@
                         "contents": "<p>Thanks. We appreciate it.</p>\n",
                         "digest": "368175900b851382f261e219030dc060",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_data-architecture-diagram_f2"
+                            "data-driven-decisionmaking-vseed_data-architecture-diagram_f2"
                         ]
                     },
-                    "data-at-cloudco-vseed_data-architecture-diagram_f5": {
-                        "uri": "data-at-cloudco-vseed_data-architecture-diagram_f5",
-                        "documentUri": "data-at-cloudco-vseed_data-architecture-diagram",
+                    "data-driven-decisionmaking-vseed_data-architecture-diagram_f5": {
+                        "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f5",
+                        "documentUri": "data-driven-decisionmaking-vseed_data-architecture-diagram",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_data-architecture-diagram_f2",
+                                    "uri": "data-driven-decisionmaking-vseed_data-architecture-diagram_f2",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1542,14 +1542,14 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_data-architecture-diagram_f2"
+                            "data-driven-decisionmaking-vseed_data-architecture-diagram_f2"
                         ]
                     }
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_introduction-to-sql",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_introduction-to-sql",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "introduction-to-sql",
                 "order": 5,
                 "config": {},
@@ -1558,29 +1558,29 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                            "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                             "targetValue": "beginner",
                             "operator": "is"
                         }
                     }
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_introduction-to-sql_f1",
-                    "data-at-cloudco-vseed_introduction-to-sql_f2"
+                    "data-driven-decisionmaking-vseed_introduction-to-sql_f1",
+                    "data-driven-decisionmaking-vseed_introduction-to-sql_f2"
                 ],
                 "digest": "d46597768fc318b4eae2a169593ebad1",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_introduction-to-sql_f1": {
-                        "uri": "data-at-cloudco-vseed_introduction-to-sql_f1",
-                        "documentUri": "data-at-cloudco-vseed_introduction-to-sql",
+                    "data-driven-decisionmaking-vseed_introduction-to-sql_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_introduction-to-sql_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_introduction-to-sql",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1593,9 +1593,9 @@
                         "digest": "e04f07254e67ef73972330790c525351",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_introduction-to-sql_f2": {
-                        "uri": "data-at-cloudco-vseed_introduction-to-sql_f2",
-                        "documentUri": "data-at-cloudco-vseed_introduction-to-sql",
+                    "data-driven-decisionmaking-vseed_introduction-to-sql_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_introduction-to-sql_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_introduction-to-sql",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1609,8 +1609,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_basic-SQL-queries",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_basic-SQL-queries",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "basic-SQL-queries",
                 "order": 6,
                 "config": {},
@@ -1619,29 +1619,29 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                            "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                             "targetValue": "beginner",
                             "operator": "is"
                         }
                     }
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_basic-SQL-queries_f1",
-                    "data-at-cloudco-vseed_basic-SQL-queries_f2"
+                    "data-driven-decisionmaking-vseed_basic-SQL-queries_f1",
+                    "data-driven-decisionmaking-vseed_basic-SQL-queries_f2"
                 ],
                 "digest": "07061da47eb02293c97ff8acfdfde56b",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_basic-SQL-queries_f1": {
-                        "uri": "data-at-cloudco-vseed_basic-SQL-queries_f1",
-                        "documentUri": "data-at-cloudco-vseed_basic-SQL-queries",
+                    "data-driven-decisionmaking-vseed_basic-SQL-queries_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_basic-SQL-queries_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_basic-SQL-queries",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1654,9 +1654,9 @@
                         "digest": "192dd13823f3b39098b88fa2a0faf672",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_basic-SQL-queries_f2": {
-                        "uri": "data-at-cloudco-vseed_basic-SQL-queries_f2",
-                        "documentUri": "data-at-cloudco-vseed_basic-SQL-queries",
+                    "data-driven-decisionmaking-vseed_basic-SQL-queries_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_basic-SQL-queries_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_basic-SQL-queries",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1670,8 +1670,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_joins-and-aggregate-functions",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_joins-and-aggregate-functions",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "joins-and-aggregate-functions",
                 "order": 7,
                 "config": {},
@@ -1681,7 +1681,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                 "targetValue": "beginner",
                                 "operator": "is"
                             }
@@ -1695,7 +1695,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                 "targetValue": "novice",
                                 "operator": "is"
                             }
@@ -1703,22 +1703,22 @@
                     ]
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f1",
-                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f2"
+                    "data-driven-decisionmaking-vseed_joins-and-aggregate-functions_f1",
+                    "data-driven-decisionmaking-vseed_joins-and-aggregate-functions_f2"
                 ],
                 "digest": "0314dfbb9f56d3ff14b636f2fbcfe4e0",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f1": {
-                        "uri": "data-at-cloudco-vseed_joins-and-aggregate-functions_f1",
-                        "documentUri": "data-at-cloudco-vseed_joins-and-aggregate-functions",
+                    "data-driven-decisionmaking-vseed_joins-and-aggregate-functions_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_joins-and-aggregate-functions_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_joins-and-aggregate-functions",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1731,9 +1731,9 @@
                         "digest": "15a4bbc6c6e99f84f5564d1313c86211",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_joins-and-aggregate-functions_f2": {
-                        "uri": "data-at-cloudco-vseed_joins-and-aggregate-functions_f2",
-                        "documentUri": "data-at-cloudco-vseed_joins-and-aggregate-functions",
+                    "data-driven-decisionmaking-vseed_joins-and-aggregate-functions_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_joins-and-aggregate-functions_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_joins-and-aggregate-functions",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1747,8 +1747,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_advanced-sql-queries",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_advanced-sql-queries",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "advanced-sql-queries",
                 "order": 8,
                 "config": {},
@@ -1758,7 +1758,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                 "targetValue": "expert",
                                 "operator": "is-not"
                             }
@@ -1772,7 +1772,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                                 "targetValue": "advanced",
                                 "operator": "is-not"
                             }
@@ -1780,22 +1780,22 @@
                     ]
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_advanced-sql-queries_f1",
-                    "data-at-cloudco-vseed_advanced-sql-queries_f2"
+                    "data-driven-decisionmaking-vseed_advanced-sql-queries_f1",
+                    "data-driven-decisionmaking-vseed_advanced-sql-queries_f2"
                 ],
                 "digest": "826d71f8511aaaf0c2014683973356f1",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_advanced-sql-queries_f1": {
-                        "uri": "data-at-cloudco-vseed_advanced-sql-queries_f1",
-                        "documentUri": "data-at-cloudco-vseed_advanced-sql-queries",
+                    "data-driven-decisionmaking-vseed_advanced-sql-queries_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_advanced-sql-queries_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_advanced-sql-queries",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1808,9 +1808,9 @@
                         "digest": "6b7ac4673a471045c760ab4b7f824c70",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_advanced-sql-queries_f2": {
-                        "uri": "data-at-cloudco-vseed_advanced-sql-queries_f2",
-                        "documentUri": "data-at-cloudco-vseed_advanced-sql-queries",
+                    "data-driven-decisionmaking-vseed_advanced-sql-queries_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_advanced-sql-queries_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_advanced-sql-queries",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1824,8 +1824,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_SQL-cheat-sheet",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_SQL-cheat-sheet",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "SQL-cheat-sheet",
                 "order": 9,
                 "config": {},
@@ -1834,29 +1834,29 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_customization-page_sql-level",
+                            "uri": "data-driven-decisionmaking-vseed_customization-page_sql-level",
                             "targetValue": "expert",
                             "operator": "is-not"
                         }
                     }
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_SQL-cheat-sheet_f1",
-                    "data-at-cloudco-vseed_SQL-cheat-sheet_f2"
+                    "data-driven-decisionmaking-vseed_SQL-cheat-sheet_f1",
+                    "data-driven-decisionmaking-vseed_SQL-cheat-sheet_f2"
                 ],
                 "digest": "a37914226e62f7fde4ddd7c5eaad5247",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_sql-level"
+                    "data-driven-decisionmaking-vseed_customization-page_sql-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_SQL-cheat-sheet_f1": {
-                        "uri": "data-at-cloudco-vseed_SQL-cheat-sheet_f1",
-                        "documentUri": "data-at-cloudco-vseed_SQL-cheat-sheet",
+                    "data-driven-decisionmaking-vseed_SQL-cheat-sheet_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_SQL-cheat-sheet_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_SQL-cheat-sheet",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1869,9 +1869,9 @@
                         "digest": "9c1d126e6fdf192038ec6080b001e70e",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_SQL-cheat-sheet_f2": {
-                        "uri": "data-at-cloudco-vseed_SQL-cheat-sheet_f2",
-                        "documentUri": "data-at-cloudco-vseed_SQL-cheat-sheet",
+                    "data-driven-decisionmaking-vseed_SQL-cheat-sheet_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_SQL-cheat-sheet_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_SQL-cheat-sheet",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1885,8 +1885,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_what-is-mode",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_what-is-mode",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "what-is-mode",
                 "order": 10,
                 "config": {},
@@ -1895,29 +1895,29 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                            "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                             "targetValue": "beginner",
                             "operator": "is"
                         }
                     }
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_what-is-mode_f1",
-                    "data-at-cloudco-vseed_what-is-mode_f2"
+                    "data-driven-decisionmaking-vseed_what-is-mode_f1",
+                    "data-driven-decisionmaking-vseed_what-is-mode_f2"
                 ],
                 "digest": "318846b2b26f7ff9085221e47a338c0e",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_what-is-mode_f1": {
-                        "uri": "data-at-cloudco-vseed_what-is-mode_f1",
-                        "documentUri": "data-at-cloudco-vseed_what-is-mode",
+                    "data-driven-decisionmaking-vseed_what-is-mode_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_what-is-mode_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_what-is-mode",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1930,9 +1930,9 @@
                         "digest": "11d580e1fb1f87277802f90be47777c8",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_what-is-mode_f2": {
-                        "uri": "data-at-cloudco-vseed_what-is-mode_f2",
-                        "documentUri": "data-at-cloudco-vseed_what-is-mode",
+                    "data-driven-decisionmaking-vseed_what-is-mode_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_what-is-mode_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_what-is-mode",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -1946,8 +1946,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_optional-mode-resources",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_optional-mode-resources",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "optional-mode-resources",
                 "order": 11,
                 "config": {},
@@ -1956,29 +1956,29 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                            "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                             "targetValue": "novice",
                             "operator": "is"
                         }
                     }
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_optional-mode-resources_f1",
-                    "data-at-cloudco-vseed_optional-mode-resources_f2"
+                    "data-driven-decisionmaking-vseed_optional-mode-resources_f1",
+                    "data-driven-decisionmaking-vseed_optional-mode-resources_f2"
                 ],
                 "digest": "78e3475fb9e4760e042427f367f0449e",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_optional-mode-resources_f1": {
-                        "uri": "data-at-cloudco-vseed_optional-mode-resources_f1",
-                        "documentUri": "data-at-cloudco-vseed_optional-mode-resources",
+                    "data-driven-decisionmaking-vseed_optional-mode-resources_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_optional-mode-resources_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_optional-mode-resources",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -1991,9 +1991,9 @@
                         "digest": "64934f73a5414526f90fb1d8b7da3bd8",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_optional-mode-resources_f2": {
-                        "uri": "data-at-cloudco-vseed_optional-mode-resources_f2",
-                        "documentUri": "data-at-cloudco-vseed_optional-mode-resources",
+                    "data-driven-decisionmaking-vseed_optional-mode-resources_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_optional-mode-resources_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_optional-mode-resources",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -2007,8 +2007,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_creating-simple-reports",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_creating-simple-reports",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "creating-simple-reports",
                 "order": 12,
                 "config": {},
@@ -2018,7 +2018,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                 "targetValue": "beginner",
                                 "operator": "is"
                             }
@@ -2032,7 +2032,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                 "targetValue": "novice",
                                 "operator": "is"
                             }
@@ -2040,22 +2040,22 @@
                     ]
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_creating-simple-reports_f1",
-                    "data-at-cloudco-vseed_creating-simple-reports_f2"
+                    "data-driven-decisionmaking-vseed_creating-simple-reports_f1",
+                    "data-driven-decisionmaking-vseed_creating-simple-reports_f2"
                 ],
                 "digest": "35b938915555ad51601260a5c88ee3a7",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_creating-simple-reports_f1": {
-                        "uri": "data-at-cloudco-vseed_creating-simple-reports_f1",
-                        "documentUri": "data-at-cloudco-vseed_creating-simple-reports",
+                    "data-driven-decisionmaking-vseed_creating-simple-reports_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_creating-simple-reports_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_creating-simple-reports",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -2068,9 +2068,9 @@
                         "digest": "459a8d46e75c99480cc9dd5917a10425",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_creating-simple-reports_f2": {
-                        "uri": "data-at-cloudco-vseed_creating-simple-reports_f2",
-                        "documentUri": "data-at-cloudco-vseed_creating-simple-reports",
+                    "data-driven-decisionmaking-vseed_creating-simple-reports_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_creating-simple-reports_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_creating-simple-reports",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -2084,8 +2084,8 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_creating-complex-reports",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_creating-complex-reports",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "creating-complex-reports",
                 "order": 13,
                 "config": {},
@@ -2095,7 +2095,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                 "targetValue": "advanced",
                                 "operator": "is-not"
                             }
@@ -2109,7 +2109,7 @@
                         {
                             "type": "condition",
                             "data": {
-                                "uri": "data-at-cloudco-vseed_customization-page_mode-level",
+                                "uri": "data-driven-decisionmaking-vseed_customization-page_mode-level",
                                 "targetValue": "expert",
                                 "operator": "is-not"
                             }
@@ -2117,22 +2117,22 @@
                     ]
                 ],
                 "childUris": [
-                    "data-at-cloudco-vseed_creating-complex-reports_f1",
-                    "data-at-cloudco-vseed_creating-complex-reports_f2"
+                    "data-driven-decisionmaking-vseed_creating-complex-reports_f1",
+                    "data-driven-decisionmaking-vseed_creating-complex-reports_f2"
                 ],
                 "digest": "af21736f27ec5dc77841b22cb52acc52",
                 "contentMode": "tutorial",
                 "completionConditions": [],
                 "externalDependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "dependencyUris": [
-                    "data-at-cloudco-vseed_customization-page_mode-level"
+                    "data-driven-decisionmaking-vseed_customization-page_mode-level"
                 ],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_creating-complex-reports_f1": {
-                        "uri": "data-at-cloudco-vseed_creating-complex-reports_f1",
-                        "documentUri": "data-at-cloudco-vseed_creating-complex-reports",
+                    "data-driven-decisionmaking-vseed_creating-complex-reports_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_creating-complex-reports_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_creating-complex-reports",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -2145,9 +2145,9 @@
                         "digest": "aeeba96e109e4fc9854c6d95299fc70c",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_creating-complex-reports_f2": {
-                        "uri": "data-at-cloudco-vseed_creating-complex-reports_f2",
-                        "documentUri": "data-at-cloudco-vseed_creating-complex-reports",
+                    "data-driven-decisionmaking-vseed_creating-complex-reports_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_creating-complex-reports_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_creating-complex-reports",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -2161,16 +2161,16 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_summary",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_summary",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "summary",
                 "order": 14,
                 "config": {},
                 "title": "Course concepts summary",
                 "displayConditions": [],
                 "childUris": [
-                    "data-at-cloudco-vseed_summary_f1",
-                    "data-at-cloudco-vseed_summary_f2"
+                    "data-driven-decisionmaking-vseed_summary_f1",
+                    "data-driven-decisionmaking-vseed_summary_f2"
                 ],
                 "digest": "a881edbd12f722bafeeb1cd88a1fc076",
                 "contentMode": "tutorial",
@@ -2178,9 +2178,9 @@
                 "externalDependencyUris": [],
                 "dependencyUris": [],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_summary_f1": {
-                        "uri": "data-at-cloudco-vseed_summary_f1",
-                        "documentUri": "data-at-cloudco-vseed_summary",
+                    "data-driven-decisionmaking-vseed_summary_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_summary_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_summary",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -2193,9 +2193,9 @@
                         "digest": "8d33a16a36415faee4f27ddf50f75e60",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_summary_f2": {
-                        "uri": "data-at-cloudco-vseed_summary_f2",
-                        "documentUri": "data-at-cloudco-vseed_summary",
+                    "data-driven-decisionmaking-vseed_summary_f2": {
+                        "uri": "data-driven-decisionmaking-vseed_summary_f2",
+                        "documentUri": "data-driven-decisionmaking-vseed_summary",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "DocumentCompletionContent",
@@ -2209,19 +2209,19 @@
                 }
             },
             {
-                "uri": "data-at-cloudco-vseed_feedback",
-                "topicUri": "data-at-cloudco-vseed",
+                "uri": "data-driven-decisionmaking-vseed_feedback",
+                "topicUri": "data-driven-decisionmaking-vseed",
                 "slug": "feedback",
                 "order": 15,
                 "config": {},
                 "title": "Leave feedback on this topic",
                 "displayConditions": [],
                 "childUris": [
-                    "data-at-cloudco-vseed_feedback_f1",
-                    "data-at-cloudco-vseed_feedback_b5x-topic-nps",
-                    "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
-                    "data-at-cloudco-vseed_feedback_f6",
-                    "data-at-cloudco-vseed_feedback_f7"
+                    "data-driven-decisionmaking-vseed_feedback_f1",
+                    "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps",
+                    "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation",
+                    "data-driven-decisionmaking-vseed_feedback_f6",
+                    "data-driven-decisionmaking-vseed_feedback_f7"
                 ],
                 "digest": "960671b7b2f0ce4257aaed1cfbd95d1b",
                 "contentMode": "tutorial",
@@ -2229,7 +2229,7 @@
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                            "uri": "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
@@ -2238,9 +2238,9 @@
                 "externalDependencyUris": [],
                 "dependencyUris": [],
                 "fragmentsByUri": {
-                    "data-at-cloudco-vseed_feedback_f1": {
-                        "uri": "data-at-cloudco-vseed_feedback_f1",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_f1": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_f1",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -2253,24 +2253,24 @@
                         "digest": "455fb7fb6f4b7942d66a05a3c7000268",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_feedback_b5x-topic-nps": {
-                        "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [],
                         "data": {},
                         "contentType": "NpsQuestion",
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "data-at-cloudco-vseed_feedback_f3"
+                            "data-driven-decisionmaking-vseed_feedback_f3"
                         ],
                         "contents": "",
                         "digest": "39d38b6a70a67589d22f2e91e271c3d8",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_feedback_f3": {
-                        "uri": "data-at-cloudco-vseed_feedback_f3",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_f3": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_f3",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -2283,14 +2283,14 @@
                         "digest": "c9b667a3e7a717758b5d5e80fb92599a",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation": {
-                        "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps",
+                                    "uri": "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -2301,17 +2301,17 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "data-at-cloudco-vseed_feedback_f5"
+                            "data-driven-decisionmaking-vseed_feedback_f5"
                         ],
                         "contents": "",
                         "digest": "ae09349d85a80a9964f0dead2d3d566b",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_feedback_b5x-topic-nps"
+                            "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps"
                         ]
                     },
-                    "data-at-cloudco-vseed_feedback_f5": {
-                        "uri": "data-at-cloudco-vseed_feedback_f5",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_f5": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_f5",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [],
                         "data": {
                             "isTemplated": false
@@ -2324,14 +2324,14 @@
                         "digest": "ed11aba948afae067aa553c2fabe1cb8",
                         "dependencyUris": []
                     },
-                    "data-at-cloudco-vseed_feedback_f6": {
-                        "uri": "data-at-cloudco-vseed_feedback_f6",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_f6": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_f6",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                                    "uri": "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -2347,17 +2347,17 @@
                         "contents": "<p>Thank you for your feedback!</p>\n",
                         "digest": "0f60e9cb7d440b9655cd2d5271c16897",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation"
+                            "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation"
                         ]
                     },
-                    "data-at-cloudco-vseed_feedback_f7": {
-                        "uri": "data-at-cloudco-vseed_feedback_f7",
-                        "documentUri": "data-at-cloudco-vseed_feedback",
+                    "data-driven-decisionmaking-vseed_feedback_f7": {
+                        "uri": "data-driven-decisionmaking-vseed_feedback_f7",
+                        "documentUri": "data-driven-decisionmaking-vseed_feedback",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation",
+                                    "uri": "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -2371,7 +2371,7 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "data-at-cloudco-vseed_feedback_b5x-topic-nps-explanation"
+                            "data-driven-decisionmaking-vseed_feedback_b5x-topic-nps-explanation"
                         ]
                     }
                 }
