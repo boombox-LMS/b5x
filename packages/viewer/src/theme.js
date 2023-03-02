@@ -33,6 +33,9 @@ export const muiTheme = createTheme({
       light: "#d6d6d6",
       medium: "#a19f9f",
     },
+    red: {
+      main: "#FF0000",
+    },
     /*
     'Shaded' coloring is used as a background color for a container that has dark text.
     It can also be used as a subtle highlight.
