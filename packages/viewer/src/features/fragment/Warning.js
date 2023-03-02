@@ -40,7 +40,7 @@ export const Warning = ({ fragment, response, responseUpdateCallback }) => {
         })}
       </div>
       {!isMarkedAsRead && (
-        <Button onClick={markAsRead} variant="outlined" color="red">
+        <Button onClick={markAsRead} variant="outlined" color="critical">
           Mark as read
         </Button>
       )}
