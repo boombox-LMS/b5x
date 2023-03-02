@@ -154,7 +154,7 @@ export const TicketsTable = ({ tickets }) => {
     {
       field: "description",
       headerName: "Description",
-      width: 350,
+      width: 330,
       renderCell: (params) => {
         return <RichTextDescription jsonDescription={params.row.description} />;
       },

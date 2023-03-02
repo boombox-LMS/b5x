@@ -75,18 +75,16 @@ const FixedHeaderContainer = styled.div`
 `;
 
 const HeaderSpacer = styled.div`
-  height: ${MAX_HEADER_HEIGHT}px;
+  height: ${(props) =>
+    props.isMinimized ? HEADER_MENU_HEIGHT : MAX_HEADER_HEIGHT}px;
   position: relative;
+  transition: 0.4s;
   top: 0;
   ${(props) =>
     props.isMinimized ? `transform: translateY(-${HEADER_LOGO_HEIGHT}px);` : ``}
 `;
 
-export const Header = ({
-  mouseEnterCallback,
-  mouseLeaveCallback,
-  isMinimized,
-}) => {
+export const Header = ({ isMinimized }) => {
   const navigate = useNavigate();
   const headerProps = useSelector(selectHeaderProps);
 
@@ -154,11 +152,7 @@ export const Header = ({
 
   return (
     <>
-      <FixedHeaderContainer
-        isMinimized={isMinimized}
-        onMouseEnter={mouseEnterCallback}
-        onMouseLeave={mouseLeaveCallback}
-      >
+      <FixedHeaderContainer isMinimized={isMinimized}>
         <LogoContainer height={HEADER_LOGO_HEIGHT} isMinimized={isMinimized}>
           <img
             css={`
@@ -219,7 +213,7 @@ export const Header = ({
           </RightMenuContainer>
         </ContentContainer>
       </FixedHeaderContainer>
-      <HeaderSpacer />
+      <HeaderSpacer isMinimized={isMinimized} />
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
 import Button from "@mui/material/Button";
 import { Icon } from "@iconify/react";
+import { muiTheme } from "../../theme";
 
 export const Warning = ({ fragment, response, responseUpdateCallback }) => {
   let isMarkedAsRead = false;
@@ -39,7 +40,7 @@ export const Warning = ({ fragment, response, responseUpdateCallback }) => {
         })}
       </div>
       {!isMarkedAsRead && (
-        <Button onClick={markAsRead} variant="contained">
+        <Button onClick={markAsRead} variant="outlined" color="critical">
           Mark as read
         </Button>
       )}

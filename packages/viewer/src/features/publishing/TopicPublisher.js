@@ -22,10 +22,10 @@ export const TopicPublisher = () => {
 
   let dropzoneStyle = {
     width: "100%",
-    height: "120px",
-    border: "2px dashed #999",
+    height: "150px",
+    border: "2px dashed lightgray",
     borderRadius: "5px",
-    lineHeight: "120px",
+    lineHeight: "150px",
     textAlign: "center",
     cursor: "pointer",
   };

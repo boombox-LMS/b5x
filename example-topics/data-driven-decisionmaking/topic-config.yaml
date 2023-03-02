@@ -1,0 +1,9 @@
+title: "Data-Driven Decisionmaking"
+cover-image: data-at-cloudco.jpg
+slug: data-driven-decisionmaking
+subtitle: "An introduction to SQL, data visualization, and experimentation."
+group-access-levels:
+  recommended:
+    - all
+prerequisites:
+  - code-of-conduct

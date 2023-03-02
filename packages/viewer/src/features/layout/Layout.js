@@ -76,23 +76,22 @@ export const Layout = ({
     sidebarIsOpen || false
   );
 
-  const [pageIsScrolled, setPageIsScrolled] = useState(false);
   const [sidebarIsScrolled, setSidebarIsScrolled] = useState(false);
-  const [headerIsHovered, setHeaderIsHovered] = useState(false);
+  const [headerIsMinimized, setHeaderIsMinimized] = useState(false);
   const [isNewPage, setIsNewPage] = useState(false);
 
   let currentHeaderHeight = HEADER_MENU_HEIGHT;
-  if (headerIsHovered || !pageIsScrolled) {
+  if (!headerIsMinimized) {
     currentHeaderHeight += HEADER_LOGO_HEIGHT;
   }
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 100) {
-          setPageIsScrolled(true);
-        } else if (window.pageYOffset <= 100) {
-          setPageIsScrolled(false);
+        if (window.pageYOffset > 100 && !headerIsMinimized) {
+          setHeaderIsMinimized(true);
+        } else if (window.pageYOffset <= 100 && headerIsMinimized) {
+          setHeaderIsMinimized(false);
         }
       });
     }
@@ -116,8 +115,6 @@ export const Layout = ({
     }
   };
 
-  const headerIsMinimized = !headerIsHovered && pageIsScrolled;
-
   let sidebarWidth = 0;
 
   if (sidebarContent && sidebarIsOpenState) {
@@ -130,15 +127,7 @@ export const Layout = ({
         position: relative;
       `}
     >
-      <Header
-        isMinimized={headerIsMinimized}
-        mouseEnterCallback={() => {
-          setHeaderIsHovered(true);
-        }}
-        mouseLeaveCallback={() => {
-          setHeaderIsHovered(false);
-        }}
-      />
+      <Header isMinimized={headerIsMinimized} />
 
       <MainContentArea
         isLoading={isNewPage}
