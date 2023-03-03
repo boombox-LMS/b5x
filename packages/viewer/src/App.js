@@ -63,8 +63,9 @@ function App() {
   }, [window.location.href]);
   */
 
-  // Update favicon
+  // Set favicon and document title from theme settings
   useEffect(() => {
+    document.title = themeSettings.applicationTitle;
     let link = document.querySelector("link[rel~='icon']");
     if (!link) {
       link = document.createElement("link");

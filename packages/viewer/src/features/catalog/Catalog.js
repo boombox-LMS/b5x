@@ -6,6 +6,7 @@ import { useGetTopicsCatalogQuery } from "../api/apiSlice";
 import { TopicList } from "./TopicList";
 import "react-tabs/style/react-tabs.css";
 import { selectCurrentTopicFilter } from "./topicFilterSlice";
+import { themeSettings } from "../../theme/active-theme";
 
 export const Catalog = () => {
   // update the header props
@@ -14,7 +15,7 @@ export const Catalog = () => {
   useEffect(() => {
     dispatch(
       setHeaderProps({
-        title: "Tech Learning Home",
+        title: themeSettings.homePageTitle,
         currentPage: "Home",
       })
     );
