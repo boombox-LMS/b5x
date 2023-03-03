@@ -1,1 +1,0 @@
-A .gitignore-d place to put temporary demo assets (e.g., corporate logos) that should not be checked into version control.

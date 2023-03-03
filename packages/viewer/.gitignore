@@ -8,8 +8,10 @@ node_modules
 /.pnp
 .pnp.js
 
-# demo files
-public/demo-assets
+# theme files
+public/custom-theme-assets/*
+!public/custom-theme-assets/.keep
+!public/custom-theme-assets/README.md
 
 # testing
 /coverage
