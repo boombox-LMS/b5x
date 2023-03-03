@@ -15,6 +15,15 @@ const ShortTextQuestionInput = styled.input`
   }
 `;
 
+const ShortTextQuestionSubmitPrompt = styled.div`
+  position: absolute;
+  font-size: 0.8rem;
+  color: ${themeSettings.muiPalette.primary};
+  font-style: italic;
+  margin-top: -3px;
+  ${(props) => !props.isShown && `display: none;`}
+`;
+
 export const ShortTextQuestion = ({
   fragment,
   response,
@@ -59,14 +68,9 @@ export const ShortTextQuestion = ({
         onKeyPress={handleKeyPress}
         onChange={handleChange}
       />
-      {localResponse !== responseValue && (
-        <div className="short-text-question__enter-prompt short-text-question__enter-prompt--visible">
-          Press Enter to submit
-        </div>
-      )}
-      {localResponse === responseValue && (
-        <div className="short-text-question__enter-prompt short-text-question__enter-prompt--hidden"></div>
-      )}
+      <ShortTextQuestionSubmitPrompt isShown={localResponse !== responseValue}>
+        Press Enter to submit
+      </ShortTextQuestionSubmitPrompt>
     </div>
   );
 };
