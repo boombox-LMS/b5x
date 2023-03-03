@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Button from "@mui/material/Button";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 // TODO: Use CSS grid to lay out the rubric answers / results
 

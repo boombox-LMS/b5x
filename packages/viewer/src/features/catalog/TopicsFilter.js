@@ -12,7 +12,7 @@ import {
   selectCurrentTopicFilter,
   updateTopicFilter,
 } from "./topicFilterSlice";
-import { muiTheme, INACTIVE_MENU_ICON_COLOR } from "../../theme";
+import { muiTheme, themeSettings } from "../../theme/active-theme";
 import styled from "styled-components/macro";
 
 const FilterButton = styled.div`
@@ -20,7 +20,7 @@ const FilterButton = styled.div`
   ${(props) =>
     props.isActive
       ? `color: ${muiTheme.palette.greenlit.dark};`
-      : `color: ${INACTIVE_MENU_ICON_COLOR};`}
+      : `color: ${themeSettings.inactiveMenuIconColor};`}
   text-align: center;
   border-width: 1px;
   padding: 0.6em 0.7em;

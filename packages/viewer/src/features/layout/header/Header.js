@@ -13,14 +13,11 @@ import { selectHeaderProps } from "./headerSlice";
 import Tab from "../../ui/Tab";
 import Tabs from "../../ui/Tabs";
 import PublishIcon from "@mui/icons-material/Publish";
-import { demoVars } from "../../../themeOverrides/demoVars";
 import styled from "styled-components/macro";
-import {
-  HEADER_MENU_HEIGHT,
-  HEADER_LOGO_HEIGHT,
-  MAX_HEADER_HEIGHT,
-  LAYOUT_RESIZE_TRANSITION_TIME,
-} from "../../../theme";
+import { themeSettings } from "../../../theme/active-theme";
+
+const maxHeaderHeight =
+  themeSettings.headerLogoAreaHeight + themeSettings.headerMenuHeight;
 
 const TitleContainer = styled.div`
   text-transform: uppercase;
@@ -48,7 +45,7 @@ const LogoContainer = styled.div`
   padding-top: 20px;
   position: relative;
   top: ${(props) => (props.isMinimized ? "0" : "7")}px;
-  transition: ${LAYOUT_RESIZE_TRANSITION_TIME};
+  transition: ${themeSettings.layoutResizeTransitionTime};
   height: ${(props) => props.height}px;
 `;
 
@@ -62,26 +59,31 @@ const LeftMenuContainer = styled.div`
 
 const FixedHeaderContainer = styled.div`
   position: fixed;
-  height: ${MAX_HEADER_HEIGHT}px;
+  height: ${maxHeaderHeight}px;
   top: 0;
   background-color: white;
   width: calc(100% - 16px);
-  transition: transform ${LAYOUT_RESIZE_TRANSITION_TIME};
+  transition: transform ${themeSettings.layoutResizeTransitionTime};
   z-index: 100;
   margin-left: 8px;
   margin-right: 8px;
   ${(props) =>
-    props.isMinimized ? `transform: translateY(-${HEADER_LOGO_HEIGHT}px);` : ``}
+    props.isMinimized
+      ? `transform: translateY(-${themeSettings.headerLogoAreaHeight}px);`
+      : ``}
 `;
 
 const HeaderSpacer = styled.div`
   height: ${(props) =>
-    props.isMinimized ? HEADER_MENU_HEIGHT : MAX_HEADER_HEIGHT}px;
+    props.isMinimized ? themeSettings.headerMenuHeight : maxHeaderHeight}px;
   position: relative;
   transition: 0.4s;
   top: 0;
+  // hide the logo area when the header is minimized
   ${(props) =>
-    props.isMinimized ? `transform: translateY(-${HEADER_LOGO_HEIGHT}px);` : ``}
+    props.isMinimized
+      ? `transform: translateY(-${themeSettings.headerLogoAreaHeight}px);`
+      : ``}
 `;
 
 export const Header = ({ isMinimized }) => {
@@ -104,7 +106,6 @@ export const Header = ({ isMinimized }) => {
 
   const tabStyle = { minWidth: 20, paddingRight: 1, paddingLeft: 1 };
   const tabIconStyle = { fontSize: "1.7em" };
-  const headerLogoUrl = demoVars.headerLogoUrl || "/img/cloudco.svg";
 
   const appPagesByName = {
     Home: {
@@ -153,15 +154,18 @@ export const Header = ({ isMinimized }) => {
   return (
     <>
       <FixedHeaderContainer isMinimized={isMinimized}>
-        <LogoContainer height={HEADER_LOGO_HEIGHT} isMinimized={isMinimized}>
+        <LogoContainer
+          height={themeSettings.headerLogoAreaHeight}
+          isMinimized={isMinimized}
+        >
           <img
             css={`
-              height: calc(${HEADER_LOGO_HEIGHT}px - 20px);
+              height: calc(${themeSettings.headerLogoAreaHeight}px - 20px);
             `}
-            src={headerLogoUrl}
+            src={themeSettings.headerLogoUrl}
           />
         </LogoContainer>
-        <ContentContainer height={HEADER_MENU_HEIGHT}>
+        <ContentContainer height={themeSettings.headerMenuHeight}>
           <LeftMenuContainer>
             <Tabs
               value={activeTabValue}

@@ -41,10 +41,11 @@
     "tinycolor2": "^1.5.2"
   },
   "scripts": {
-    "devstart": "react-scripts start",
+    "devstart": "npm run build-theme && react-scripts start",
     "SKIP-build": "react-scripts build",
     "SKIP-test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-theme": "cp -n ./src/theme/theme-template.js ./src/theme/active-theme.js || true"
   },
   "eslintConfig": {
     "extends": "react-app"

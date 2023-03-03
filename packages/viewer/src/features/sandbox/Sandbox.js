@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { muiTheme, COLORS } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const VerticalVisualListItems = [
   {

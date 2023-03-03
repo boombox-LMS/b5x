@@ -3,6 +3,7 @@
     "@b5x/types": "workspace:*"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "@types/node": "^18.11.18",
     "prettier": "2.8.2",
     "typedoc": "^0.23.23",

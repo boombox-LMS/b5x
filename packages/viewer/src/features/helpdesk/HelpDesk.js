@@ -17,7 +17,7 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import styled from "styled-components/macro";
-import { muiTheme, INACTIVE_MENU_ICON_COLOR } from "../../theme";
+import { muiTheme, themeSettings } from "../../theme/active-theme";
 
 const HelpDeskExitIconWrapper = styled.div`
   position: absolute;
@@ -25,7 +25,7 @@ const HelpDeskExitIconWrapper = styled.div`
   top: 10px;
   z-index: 1;
   font-size: 1.4em;
-  color: ${INACTIVE_MENU_ICON_COLOR};
+  color: ${themeSettings.inactiveMenuIconColor};
   &:hover {
     color: ${muiTheme.palette.secondary.main};
   }

@@ -9,7 +9,7 @@ import styled from "styled-components/macro";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
-import { muiTheme } from "../../theme";
+import { themeSettings, muiTheme } from "../../theme/active-theme";
 
 const PriorityLevelRibbon = styled.div`
   --f: 7px; /* control the folded part*/
@@ -29,8 +29,8 @@ const PriorityLevelRibbon = styled.div`
     0 calc(100% - var(--f)),
     var(--r) calc(50% - var(--f) / 2)
   );
-  background: ${muiTheme.palette.secondary.main};
-  color: white;
+  background: ${themeSettings.topicPriorityLevelRibbon.backgroundColor};
+  color: ${themeSettings.topicPriorityLevelRibbon.iconColor};
   box-shadow: 0 calc(-1 * var(--f)) 0 inset #0005;
 `;
 

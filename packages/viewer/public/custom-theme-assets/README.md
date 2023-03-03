@@ -1,0 +1,1 @@
+Anything placed in this folder will be ignored by git.

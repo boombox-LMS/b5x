@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
 import Button from "@mui/material/Button";
 import { Icon } from "@iconify/react";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 export const Warning = ({ fragment, response, responseUpdateCallback }) => {
   let isMarkedAsRead = false;

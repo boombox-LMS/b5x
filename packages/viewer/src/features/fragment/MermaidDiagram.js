@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import mermaid from "mermaid";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const DEFAULT_CONFIG = {
   startOnLoad: true,

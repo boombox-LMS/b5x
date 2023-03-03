@@ -5,17 +5,10 @@ import ChevronLeft from "@mui/icons-material/ChevronLeft";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { Tooltip } from "@mui/material";
 import { Header } from "./header/Header";
-import { muiTheme } from "../../theme";
-import {
-  DEFAULT_OPEN_SIDEBAR_WIDTH,
-  HEADER_LOGO_HEIGHT,
-  HEADER_MENU_HEIGHT,
-  INACTIVE_MENU_ICON_COLOR,
-  LAYOUT_RESIZE_TRANSITION_TIME,
-} from "../../theme";
+import { muiTheme, themeSettings } from "../../theme/active-theme";
 
 const MenuIconWrapper = styled.span`
-  color: ${INACTIVE_MENU_ICON_COLOR};
+  color: ${themeSettings.inactiveMenuIconColor};
   &:hover {
     color: ${muiTheme.palette.secondary.main};
   }
@@ -27,7 +20,9 @@ const SidebarDrawer = styled.div`
   top: ${(props) => props.headerHeight}px;
   overflow: auto;
   ${(props) =>
-    props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
+    props.isLoading
+      ? ""
+      : `transition: ${themeSettings.layoutResizeTransitionTime};`}
   width: ${(props) => `${props.width}px`};
   padding-top: 55px;
   padding-left: 20px;
@@ -46,7 +41,9 @@ const MainContentArea = styled.div`
   left: 0px;
   display: block;
   ${(props) =>
-    props.isLoading ? "" : `transition: ${LAYOUT_RESIZE_TRANSITION_TIME};`}
+    props.isLoading
+      ? ""
+      : `transition: ${themeSettings.layoutResizeTransitionTime};`}
   width: 100%;
 `;
 
@@ -70,7 +67,7 @@ export const Layout = ({
 
   sidebarName = sidebarName || "";
   sidebarOpenIcon = sidebarOpenIcon || <ArrowForward />;
-  openSidebarWidth = openSidebarWidth || DEFAULT_OPEN_SIDEBAR_WIDTH;
+  openSidebarWidth = openSidebarWidth || themeSettings.defaultOpenSidebarWidth;
 
   const [sidebarIsOpenState, setSidebarIsOpenState] = useState(
     sidebarIsOpen || false
@@ -80,9 +77,9 @@ export const Layout = ({
   const [headerIsMinimized, setHeaderIsMinimized] = useState(false);
   const [isNewPage, setIsNewPage] = useState(false);
 
-  let currentHeaderHeight = HEADER_MENU_HEIGHT;
+  let currentHeaderHeight = themeSettings.headerMenuHeight;
   if (!headerIsMinimized) {
-    currentHeaderHeight += HEADER_LOGO_HEIGHT;
+    currentHeaderHeight += themeSettings.headerLogoAreaHeight;
   }
 
   useEffect(() => {
