@@ -23,6 +23,8 @@ export const themeSettings = {
   // branding
   faviconUrl: "cloudco_favicon.svg",
   headerLogoUrl: "/img/cloudco.svg",
+  applicationTitle: "CloudCo Tech Learning",
+  homePageTitle: "Tech Learning Home",
 
   // abstract palettes
 
