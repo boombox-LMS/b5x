@@ -1,5 +1,19 @@
 import React, { useState } from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
+import styled from "styled-components/macro";
+import { themeSettings } from "../../theme/active-theme";
+
+const ShortTextQuestionInput = styled.input`
+  border: 1px solid ${themeSettings.grayPalette.light};
+  outline: none;
+  width: 100%;
+  line-height: 30px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  &:focus {
+    border: 1px solid ${themeSettings.muiPalette.primary};
+  }
+`;
 
 export const ShortTextQuestion = ({
   fragment,
@@ -39,7 +53,7 @@ export const ShortTextQuestion = ({
           <FragmentWrapper key={childFragment.uri} fragment={childFragment} />
         );
       })}
-      <input
+      <ShortTextQuestionInput
         type="text"
         value={localResponse}
         onKeyPress={handleKeyPress}

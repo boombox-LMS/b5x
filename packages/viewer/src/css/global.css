@@ -36,27 +36,6 @@ html,
   margin: 0;
 }
 
-.document input:not([type="submit"]):not([type="file"]):not([type="radio"]),
-.document textarea,
-.catalog__filter
-  input:not([type="submit"]):not([type="file"]):not([type="radio"]) {
-  width: 100%;
-  border: 1px solid var(--medium-gray);
-  line-height: 30px;
-  padding: 5px 10px;
-  font-size: 1rem;
-}
-
-.document
-  input:not([type="submit"]):not([type="file"]):not([type="radio"]):focus,
-.document textarea:focus,
-.catalog__filter
-  input:not([type="submit"]):not([type="file"]):not([type="radio"]):focus {
-  border: 1px solid var(--pop);
-  line-height: 30px;
-  outline: none;
-}
-
 .react-tabs {
   z-index: 0;
 }
