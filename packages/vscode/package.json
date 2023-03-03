@@ -61,7 +61,6 @@
   },
   "devDependencies": {
     "@types/vscode": "^1.74.0",
-    "copyfiles": "^2.4.1",
     "@types/glob": "^8.0.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",

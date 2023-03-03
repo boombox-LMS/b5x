@@ -42,7 +42,6 @@
     "tsc-watch": "^6.0.0",
     "supertest": "^6.3.3",
     "rimraf": "^3.0.2",
-    "copyfiles": "^2.4.1",
     "data-sanitizer": "^1.8.1"
   },
   "jest": {
