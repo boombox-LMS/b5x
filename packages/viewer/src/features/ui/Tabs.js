@@ -16,7 +16,7 @@ const Tabs = styled((props) => (
   },
   "& .MuiTabs-indicatorSpan": {
     width: "100%",
-    backgroundColor: themeSettings.selectedTabColor,
+    backgroundColor: themeSettings.activeMenuIconColor,
   },
 });
 

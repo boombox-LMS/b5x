@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLogOutUserMutation } from "../../api/apiSlice";
 import { useNavigate } from "react-router-dom";
-import { LogoutOutlined } from "@ant-design/icons";
 import { Tooltip } from "@mui/material";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../../theme/active-theme";
+import { themeSettings } from "../../../theme/active-theme";
 
 export const LogOutButton = () => {
   const [logOutUser, { isLoading }] = useLogOutUserMutation();
+  const [isClicked, setIsClicked] = useState(false);
 
   const navigate = useNavigate();
 
   const handleClick = async () => {
+    setIsClicked(true);
     try {
       await logOutUser().unwrap();
       navigate("/");
@@ -29,16 +29,17 @@ export const LogOutButton = () => {
     margin-left: 6px;
     margin-top: -3px;
     font-size: 1.3em;
-    color: rgba(0, 0, 0, 0.6);
-    &:hover {
-      color: ${muiTheme.palette.secondary.main};
-    }
+    cursor: pointer;
+    ${(props) =>
+      props.isClicked
+        ? `color: ${themeSettings.activeMenuIconColor};`
+        : `color: ${themeSettings.inactiveMenuIconColor};`}
   `;
 
   return (
     <span id="logout-button" onClick={handleClick}>
       <Tooltip title="Log out" placement="top">
-        <HeaderMenuIconWrapper>
+        <HeaderMenuIconWrapper isClicked={isClicked}>
           <MeetingRoomIcon />
         </HeaderMenuIconWrapper>
       </Tooltip>
