@@ -70,7 +70,7 @@ export const themeSettings = {
 
   // colors of specific entities
   inactiveMenuIconColor: "rgba(0, 0, 0, 0.6)", // TODO: This is the MUI default color for an inactive tab, need to find it in the muiTheme
-  selectedTabColor: CLOUDCO_MEDIUM_BLUE,
+  activeMenuIconColor: CLOUDCO_MEDIUM_BLUE,
   topicPriorityLevelRibbon: {
     backgroundColor: CLOUDCO_MEDIUM_BLUE,
     iconColor: WHITE,

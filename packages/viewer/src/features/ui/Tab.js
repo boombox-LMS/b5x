@@ -14,10 +14,10 @@ const Tab = styled((props) => (
   <MuiTab disableRipple {...props} {...a11yProps(props.index)} />
 ))(({ theme }) => ({
   "&.Mui-selected": {
-    color: themeSettings.selectedTabColor,
+    color: themeSettings.activeMenuIconColor,
   },
   "&.Mui-focusVisible": {
-    backgroundColor: themeSettings.selectedTabColor,
+    backgroundColor: themeSettings.activeMenuIconColor,
   },
 }));
 
