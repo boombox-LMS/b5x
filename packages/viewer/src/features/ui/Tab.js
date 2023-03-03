@@ -1,7 +1,7 @@
 import React from "react";
 import MuiTab from "@mui/material/Tab";
 import { styled } from "@mui/material/styles";
-import { muiTheme } from "../../theme/active-theme";
+import { muiTheme, themeSettings } from "../../theme/active-theme";
 
 function a11yProps(index) {
   return {
@@ -14,10 +14,10 @@ const Tab = styled((props) => (
   <MuiTab disableRipple {...props} {...a11yProps(props.index)} />
 ))(({ theme }) => ({
   "&.Mui-selected": {
-    color: muiTheme.palette.secondary.main,
+    color: themeSettings.selectedTabColor,
   },
   "&.Mui-focusVisible": {
-    backgroundColor: muiTheme.palette.secondary.main,
+    backgroundColor: themeSettings.selectedTabColor,
   },
 }));
 
