@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { setHeaderProps } from "../layout/header/headerSlice";
 import { api } from "../api/apiSlice";
 import { Link } from "react-router-dom";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 export const TopicPublisher = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const VerticalVisualListWrapper = styled.div`
   display: grid;

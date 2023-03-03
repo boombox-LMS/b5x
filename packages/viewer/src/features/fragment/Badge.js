@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Paper from "@mui/material/Paper";
 import ReactCanvasConfetti from "react-canvas-confetti";
 import { ReactSVG } from "react-svg";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 export const DisplayBadge = ({ title, description, icon, isNew }) => {
   const [fireConfetti, setFireConfetti] = useState(false);

@@ -22,7 +22,7 @@ import { HelpDesk } from "./features/helpdesk/HelpDesk";
 import { ThemeProvider } from "@mui/material/styles";
 import { Header } from "./features/layout/header/Header";
 import { TopicPublisher } from "./features/publishing/TopicPublisher";
-import { muiTheme } from "./theme";
+import { muiTheme } from "./theme/active-theme";
 import { Layout } from "./features/layout/Layout";
 import { TopicsFilter } from "./features/catalog/TopicsFilter";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";

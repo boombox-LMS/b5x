@@ -5,7 +5,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { CopyOutlined, CheckOutlined } from "@ant-design/icons";
 import he from "he";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const FlashMessageWrapper = styled.div`
   position: absolute;

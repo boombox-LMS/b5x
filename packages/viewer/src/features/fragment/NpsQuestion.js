@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FragmentWrapper } from "./FragmentWrapper";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const Selector = styled.div`
   display: grid;

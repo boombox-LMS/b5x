@@ -6,7 +6,7 @@ import { Tooltip } from "@mui/material";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../../theme";
+import { muiTheme } from "../../../theme/active-theme";
 
 export const LogOutButton = () => {
   const [logOutUser, { isLoading }] = useLogOutUserMutation();

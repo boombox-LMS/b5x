@@ -9,7 +9,7 @@ import styled from "styled-components/macro";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
-import { themeSettings, muiTheme } from "../../theme";
+import { themeSettings, muiTheme } from "../../theme/active-theme";
 
 const PriorityLevelRibbon = styled.div`
   --f: 7px; /* control the folded part*/

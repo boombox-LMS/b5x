@@ -1,7 +1,7 @@
 import React from "react";
 import MuiTabs from "@mui/material/Tabs";
 import { styled } from "@mui/material/styles";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const Tabs = styled((props) => (
   <MuiTabs

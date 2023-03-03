@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { TopicCompletionContent } from "./TopicCompletionContent";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const NextButtonContent = styled.span`
   background-color: ${muiTheme.palette.shaded.main};

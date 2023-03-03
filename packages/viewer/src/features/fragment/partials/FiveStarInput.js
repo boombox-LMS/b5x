@@ -1,7 +1,7 @@
 import React from "react";
 import { StarOutlined, StarFilled } from "@ant-design/icons";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../../theme";
+import { muiTheme } from "../../../theme/active-theme";
 
 const StarWrapper = styled.div`
   display: inline-block;

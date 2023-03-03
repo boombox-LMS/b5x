@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 
-// literal colors
 const CLOUDCO_DARK_BLUE = "#004d80";
 const CLOUDCO_MEDIUM_BLUE = "#0297ed";
 const DARK_GREEN = "#008f0f";
@@ -12,7 +11,6 @@ const WHITE = "#FFF";
 const HARD_BLACK = "#000";
 const SOFT_BLACK = "#222222";
 
-// TODO: Allow overrides from theme-customization.js
 export const themeSettings = {
   // layout dimensions
   headerLogoAreaHeight: 80, // px
@@ -167,15 +165,3 @@ export const muiTheme = createTheme({
     },
   },
 });
-
-// in pixels
-export const HEADER_LOGO_HEIGHT = 80;
-export const HEADER_MENU_HEIGHT = 50;
-export const MAX_HEADER_HEIGHT = HEADER_LOGO_HEIGHT + HEADER_MENU_HEIGHT;
-export const DEFAULT_OPEN_SIDEBAR_WIDTH = 325;
-export const LAYOUT_RESIZE_TRANSITION_TIME = "0.4s";
-
-// colors
-export const INACTIVE_MENU_ICON_COLOR = "rgba(0, 0, 0, 0.6)";
-export const TOPIC_CARD_RIBBON_COLOR = muiTheme.palette.secondary.main;
-export const FOCUSED_INPUT_BORDER_COLOR = muiTheme.palette.secondary.main;

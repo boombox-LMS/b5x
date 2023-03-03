@@ -1,7 +1,7 @@
 import React from "react";
 import MuiTab from "@mui/material/Tab";
 import { styled } from "@mui/material/styles";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 function a11yProps(index) {
   return {

@@ -3,7 +3,7 @@ import { useLogInUserMutation } from "../api/apiSlice";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import styled from "styled-components/macro";
-import { muiTheme } from "../../theme";
+import { muiTheme } from "../../theme/active-theme";
 
 const LoginFormBackground = styled.div`
   position: absolute;

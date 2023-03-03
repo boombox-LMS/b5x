@@ -14,7 +14,7 @@ import Tab from "../../ui/Tab";
 import Tabs from "../../ui/Tabs";
 import PublishIcon from "@mui/icons-material/Publish";
 import styled from "styled-components/macro";
-import { themeSettings } from "../../../theme";
+import { themeSettings } from "../../../theme/active-theme";
 
 const maxHeaderHeight =
   themeSettings.headerLogoAreaHeight + themeSettings.headerMenuHeight;
