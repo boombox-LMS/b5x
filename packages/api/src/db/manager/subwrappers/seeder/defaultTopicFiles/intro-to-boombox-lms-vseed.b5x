@@ -862,7 +862,7 @@
                     "intro-to-boombox-lms-vseed_how-boombox-works_f22",
                     "intro-to-boombox-lms-vseed_how-boombox-works_f23"
                 ],
-                "digest": "72f3e75fefa7cb47ba4ebb06df54a7f3",
+                "digest": "b1d3893399761cfc9a78d57d2ebc3188",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1178,14 +1178,16 @@
                                         "backgroundFit": "contain"
                                     }
                                 }
-                            ]
+                            ],
+                            "gridColCount": 4,
+                            "gridRowCount": 3
                         },
                         "contentType": "Diagram",
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "87ee7e7c8b1569bb2364fb56c530c73a",
+                        "digest": "3447c78adc9e1a3bc04260e04cf6575e",
                         "dependencyUris": []
                     },
                     "intro-to-boombox-lms-vseed_how-boombox-works_f3": {

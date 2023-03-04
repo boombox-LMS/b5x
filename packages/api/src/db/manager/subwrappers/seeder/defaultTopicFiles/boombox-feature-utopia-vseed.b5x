@@ -1542,7 +1542,7 @@
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f7",
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f8"
                 ],
-                "digest": "cd670ea27c66a094919287b8a7aef5f0",
+                "digest": "240a100ccbeed9a6bf185a95f9905e35",
                 "contentMode": "documentation",
                 "completionConditions": [],
                 "externalDependencyUris": [],
@@ -1576,7 +1576,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f5"
                         ],
                         "contents": "",
-                        "digest": "8ebd35e17b9152a4afb280aeda48dea7",
+                        "digest": "df0ce732ee01eeeb859e321d7c0f11ff",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f3": {
@@ -1593,7 +1593,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f4"
                         ],
                         "contents": "",
-                        "digest": "1d28ad23d613fd1373bc9c59c19298e1",
+                        "digest": "8b628a414a5ecb06c42ee27f14d02ff3",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f4": {
@@ -1872,14 +1872,16 @@
                                         "backgroundFit": "contain"
                                     }
                                 }
-                            ]
+                            ],
+                            "gridColCount": 4,
+                            "gridRowCount": 3
                         },
                         "contentType": "Diagram",
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "cdf84fffaff0e03c85a7f5e79732757e",
+                        "digest": "3c41715ff562440effd910c0d8d61233",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f5": {
@@ -1942,7 +1944,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f11"
                         ],
                         "contents": "",
-                        "digest": "41c99801c66b271bd93a9ab87c6026db",
+                        "digest": "0f1ae2718ad196c0e8df90ac3d771fe1",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f9": {
@@ -1959,7 +1961,7 @@
                             "boombox-feature-utopia-vseed_cytoscape-diagram_f10"
                         ],
                         "contents": "",
-                        "digest": "2fae89858d0b4231b81ccb43077b1456",
+                        "digest": "1ef7ddebb667dc71fa4f1023a8acf9ac",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f10": {
@@ -2238,14 +2240,16 @@
                                         "backgroundFit": "contain"
                                     }
                                 }
-                            ]
+                            ],
+                            "gridColCount": 4,
+                            "gridRowCount": 3
                         },
                         "contentType": "Diagram",
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
                         "contents": "",
-                        "digest": "a464cb0ee834a84dfc3cc6b9aa91635a",
+                        "digest": "c61a797bb066bf01b4745bc63053adbe",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_cytoscape-diagram_f11": {

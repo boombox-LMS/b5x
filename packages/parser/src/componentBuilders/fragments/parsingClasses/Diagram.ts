@@ -169,6 +169,8 @@ export const DiagramDataSchema = z.object({
       style: z.record(z.any()),
     })
   ),
+  gridColCount: z.number(),
+  gridRowCount: z.number(),
 });
 
 type DiagramData = z.infer<typeof DiagramDataSchema>;
@@ -228,6 +230,8 @@ export class Diagram extends FragmentViaBxmlTag {
     let result: DiagramData = {
       elements: [],
       stylesheet: [],
+      gridColCount: 0,
+      gridRowCount: 0,
     };
 
     this.bxmlNode.children.forEach((childTag) => {
@@ -347,6 +351,8 @@ export class Diagram extends FragmentViaBxmlTag {
     const optimizedDiagramData: DiagramData = {
       elements: [],
       stylesheet: [],
+      gridColCount: diagramData.gridColCount,
+      gridRowCount: diagramData.gridRowCount,
     };
 
     let nodesById: Record<string, DiagramNode> = {};
@@ -354,6 +360,20 @@ export class Diagram extends FragmentViaBxmlTag {
     diagramData.elements.forEach((element) => {
       if (element.group === "nodes") {
         nodesById[element.data.id] = element;
+        // TODO: Use Zod schemas to convert attrs to
+        // the correct data type, instead of using parseInt here
+        if (
+          element.data.col &&
+          parseInt(element.data.col) > optimizedDiagramData.gridColCount
+        ) {
+          optimizedDiagramData.gridColCount = parseInt(element.data.col);
+        }
+        if (
+          element.data.row &&
+          parseInt(element.data.row) > optimizedDiagramData.gridRowCount
+        ) {
+          optimizedDiagramData.gridRowCount = parseInt(element.data.row);
+        }
       } else if (element.group === "edges") {
         edges.push(element);
       }
