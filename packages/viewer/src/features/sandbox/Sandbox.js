@@ -34,7 +34,16 @@ export const Sandbox = () => {
     });
   };
 
+  const calculateCheckedBoxColor = () => {
+    if (Object.values(response).every((value) => value)) {
+      return muiTheme.palette.greenlit.main;
+    } else {
+      return muiTheme.palette.primary.main;
+    }
+  };
+
   const [response, setResponse] = useState(buildEmptyResponse(items));
+  const checkedBoxColor = calculateCheckedBoxColor();
 
   return (
     <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
@@ -48,6 +57,12 @@ export const Sandbox = () => {
                   checked={response[item.id]}
                   onClick={() => {
                     toggleResponse(item.id);
+                  }}
+                  sx={{
+                    color: muiTheme.palette.gray.medium,
+                    "&.Mui-checked": {
+                      color: checkedBoxColor,
+                    },
                   }}
                 />
               }
