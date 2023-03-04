@@ -4,26 +4,25 @@ import { muiTheme } from "../../theme/active-theme";
 import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import { Form } from "react-router-dom";
 
 export const Sandbox = () => {
   const fragment = {
     data: {
-      items: [
-        { id: "1", label: "Item 1" },
-        { id: "2", label: "Item 2" },
-        { id: "3", label: "Item 3" },
-        { id: "4", label: "Item 4" },
+      steps: [
+        { id: "1", label: "Step 1" },
+        { id: "2", label: "Step 2" },
+        { id: "3", label: "Step 3" },
+        { id: "4", label: "Step 4" },
       ],
     },
   };
 
-  const { items } = fragment.data;
+  const { steps } = fragment.data;
 
-  const buildEmptyResponse = (items) => {
+  const buildEmptyResponse = (steps) => {
     let response = {};
-    items.forEach((item) => {
-      response[item.id] = false;
+    steps.forEach((step) => {
+      response[step.id] = false;
     });
     return response;
   };
@@ -42,35 +41,33 @@ export const Sandbox = () => {
     }
   };
 
-  const [response, setResponse] = useState(buildEmptyResponse(items));
+  const [response, setResponse] = useState(buildEmptyResponse(steps));
   const checkedBoxColor = calculateCheckedBoxColor();
 
   return (
-    <div style={{ paddingLeft: "30px", paddingRight: "30px" }}>
-      <FormGroup>
-        {items.map((item) => {
-          return (
-            <FormControlLabel
-              key={item.id}
-              control={
-                <Checkbox
-                  checked={response[item.id]}
-                  onClick={() => {
-                    toggleResponse(item.id);
-                  }}
-                  sx={{
-                    color: muiTheme.palette.gray.medium,
-                    "&.Mui-checked": {
-                      color: checkedBoxColor,
-                    },
-                  }}
-                />
-              }
-              label={item.label}
-            />
-          );
-        })}
-      </FormGroup>
-    </div>
+    <FormGroup>
+      {steps.map((step) => {
+        return (
+          <FormControlLabel
+            key={step.id}
+            control={
+              <Checkbox
+                checked={response[step.id]}
+                onClick={() => {
+                  toggleResponse(step.id);
+                }}
+                sx={{
+                  color: muiTheme.palette.gray.medium,
+                  "&.Mui-checked": {
+                    color: checkedBoxColor,
+                  },
+                }}
+              />
+            }
+            label={step.label}
+          />
+        );
+      })}
+    </FormGroup>
   );
 };
