@@ -7,7 +7,7 @@ const defaultLayout = {
   name: "grid",
   condense: true,
   padding: 0,
-  spacingFactor: 2.1,
+  spacingFactor: 2.4,
   position: function (node) {
     return {
       row: node.data("row"),
@@ -83,7 +83,7 @@ const IMAGE_REGEX = /\.(gif|jpe?g|tiff?|png|webp|bmp|svg)$/i;
 export const Diagram = ({ fragment }) => {
   const { topicUri } = useParams();
 
-  let { elements, stylesheet, layout } = JSON.parse(
+  let { elements, stylesheet, gridColCount, gridRowCount, layout } = JSON.parse(
     JSON.stringify(fragment.data)
   );
   stylesheet = defaultStylesheet.concat(stylesheet);
@@ -120,14 +120,25 @@ export const Diagram = ({ fragment }) => {
   }, [cyRef]);
 
   return (
-    <Paper variant="outlined">
+    <Paper
+      variant="outlined"
+      sx={{
+        aspectRatio: `${gridColCount} / ${gridRowCount}`,
+        contentFit: "contain",
+        width: "100%",
+      }}
+    >
       <CytoscapeComponent
         cy={(cy) => {
           cyRef.current = cy;
         }}
         stylesheet={stylesheet}
         elements={elements}
-        style={{ width: "840px", height: "510px", marginBottom: "20px" }}
+        style={{
+          paddingTop: "15px",
+          width: "100%",
+          height: `${205 * gridRowCount}px`,
+        }}
         layout={layout}
       />
     </Paper>
