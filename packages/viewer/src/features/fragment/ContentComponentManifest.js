@@ -23,6 +23,7 @@ import { Accordion } from "./Accordion";
 import { TabbedContent } from "./TabbedContent";
 import { Badge } from "./Badge";
 import { Breakout } from "./Breakout";
+import { SimpleChecklist } from "./SimpleChecklist";
 
 export const contentComponents = {
   HtmlContent: HtmlContent,
@@ -50,4 +51,5 @@ export const contentComponents = {
   Tabs: TabbedContent,
   Badge: Badge,
   Breakout: Breakout,
+  SimpleChecklist: SimpleChecklist,
 };
