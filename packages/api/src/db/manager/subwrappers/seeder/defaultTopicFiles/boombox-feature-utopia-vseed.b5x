@@ -3390,10 +3390,138 @@
                 }
             },
             {
+                "uri": "boombox-feature-utopia-vseed_simple-checklist",
+                "topicUri": "boombox-feature-utopia-vseed",
+                "slug": "simple-checklist",
+                "order": 15,
+                "config": {},
+                "title": "Simple checklist",
+                "displayConditions": [],
+                "childUris": [
+                    "boombox-feature-utopia-vseed_simple-checklist_f1",
+                    "boombox-feature-utopia-vseed_simple-checklist_f2"
+                ],
+                "digest": "bee693b67e09d1bcd280eabf74287490",
+                "contentMode": "documentation",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "boombox-feature-utopia-vseed_simple-checklist_f1": {
+                        "uri": "boombox-feature-utopia-vseed_simple-checklist_f1",
+                        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"simple-checklist\">Simple checklist</h1>\n",
+                        "digest": "1a9dc331ceef4ab087c68e1a41c7318f",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_simple-checklist_f2": {
+                        "uri": "boombox-feature-utopia-vseed_simple-checklist_f2",
+                        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_simple-checklist_f3",
+                            "boombox-feature-utopia-vseed_simple-checklist_f5"
+                        ],
+                        "contents": "",
+                        "digest": "0a2e47f9b151298017dce8f43c16ef68",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_simple-checklist_f3": {
+                        "uri": "boombox-feature-utopia-vseed_simple-checklist_f3",
+                        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_simple-checklist_f4"
+                        ],
+                        "contents": "",
+                        "digest": "1f6edd9014580b33f31c6fdb78156103",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_simple-checklist_f4": {
+                        "uri": "boombox-feature-utopia-vseed_simple-checklist_f4",
+                        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "steps": [
+                                {
+                                    "label": "<p>Pack your bag (see <a href=\"https://www.smartertravel.com/the-ultimate-packing-list/\">packing list</a>)</p>\n",
+                                    "id": "9800771530d596c50b6a30c42f72ab84"
+                                },
+                                {
+                                    "label": "<p>Check in for your flight</p>\n",
+                                    "id": "227ef2cb836151187618fd33ac21744a"
+                                },
+                                {
+                                    "label": "<p><strong>Go to Hawaii!</strong></p>\n",
+                                    "id": "67bd69c1b29cd86e788c60966308cb42"
+                                }
+                            ]
+                        },
+                        "contentType": "SimpleChecklist",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "fb40cc2e35919a2a26fea7eb5dcf8ed2",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_simple-checklist_f5": {
+                        "uri": "boombox-feature-utopia-vseed_simple-checklist_f5",
+                        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_simple-checklist_f6"
+                        ],
+                        "contents": "",
+                        "digest": "c5de38cae451faf438abdcfa1a93e810",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_simple-checklist_f6": {
+                        "uri": "boombox-feature-utopia-vseed_simple-checklist_f6",
+                        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "markdown"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<simple-checklist>\n<step>Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))</step>\n<step>Check in for your flight</step>\n<step>**Go to Hawaii!**</step>\n</simple-checklist>",
+                        "digest": "7b80d42cae4dd48ac4a8abe49473d5ba",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
                 "uri": "boombox-feature-utopia-vseed_single-select-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "single-select-question",
-                "order": 15,
+                "order": 16,
                 "config": {},
                 "title": "Single select question",
                 "displayConditions": [],
@@ -3538,7 +3666,7 @@
                 "uri": "boombox-feature-utopia-vseed_slideshow",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "slideshow",
-                "order": 16,
+                "order": 17,
                 "config": {},
                 "title": "Slideshow",
                 "displayConditions": [],
@@ -3745,7 +3873,7 @@
                 "uri": "boombox-feature-utopia-vseed_star-rating",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "star-rating",
-                "order": 17,
+                "order": 18,
                 "config": {},
                 "title": "Star rating",
                 "displayConditions": [],
@@ -3875,7 +4003,7 @@
                 "uri": "boombox-feature-utopia-vseed_tabbed-content",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "tabbed-content",
-                "order": 18,
+                "order": 19,
                 "config": {},
                 "title": "Tabbed content",
                 "displayConditions": [],
@@ -4055,7 +4183,7 @@
                 "uri": "boombox-feature-utopia-vseed_troubleshooter",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "troubleshooter",
-                "order": 19,
+                "order": 20,
                 "config": {},
                 "title": "Troubleshooter",
                 "displayConditions": [],
@@ -4185,7 +4313,7 @@
                 "uri": "boombox-feature-utopia-vseed_visual-list",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "visual-list",
-                "order": 20,
+                "order": 21,
                 "config": {},
                 "title": "Visual list",
                 "displayConditions": [],
@@ -4473,7 +4601,7 @@
                 "uri": "boombox-feature-utopia-vseed_warning",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "warning",
-                "order": 21,
+                "order": 22,
                 "config": {},
                 "title": "Warning",
                 "displayConditions": [],
@@ -4603,7 +4731,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-custom-html-and-javascript",
-                "order": 22,
+                "order": 23,
                 "config": {},
                 "title": "[TODO] Custom HTML and JavaScript",
                 "displayConditions": [],
@@ -4637,7 +4765,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-field-mission",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-field-mission",
-                "order": 23,
+                "order": 24,
                 "config": {},
                 "title": "[TODO] Field mission",
                 "displayConditions": [],
@@ -4703,7 +4831,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-poll",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-poll",
-                "order": 24,
+                "order": 25,
                 "config": {},
                 "title": "[TODO] Poll",
                 "displayConditions": [],
@@ -4737,7 +4865,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-response-gallery",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-response-gallery",
-                "order": 25,
+                "order": 26,
                 "config": {},
                 "title": "[TODO] Response gallery",
                 "displayConditions": [],
@@ -4771,7 +4899,7 @@
                 "uri": "boombox-feature-utopia-vseed_z-todo-sentiment-check",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "z-todo-sentiment-check",
-                "order": 26,
+                "order": 27,
                 "config": {},
                 "title": "[TODO] Sentiment check",
                 "displayConditions": [],

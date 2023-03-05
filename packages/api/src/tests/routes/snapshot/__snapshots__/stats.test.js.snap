@@ -318,6 +318,10 @@ exports[`Stats routes match expectations stats.listTopics matches expectations s
       },
       {
         "completionCount": 2,
+        "documentUri": "boombox-feature-utopia-vseed_simple-checklist",
+      },
+      {
+        "completionCount": 2,
         "documentUri": "boombox-feature-utopia-vseed_single-select-question",
       },
       {
@@ -1143,6 +1147,7 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
       "boombox-feature-utopia-vseed_nps-question",
       "boombox-feature-utopia-vseed_rubric",
       "boombox-feature-utopia-vseed_short-text-question",
+      "boombox-feature-utopia-vseed_simple-checklist",
       "boombox-feature-utopia-vseed_single-select-question",
       "boombox-feature-utopia-vseed_slideshow",
       "boombox-feature-utopia-vseed_star-rating",
@@ -1320,8 +1325,8 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
     "email": "completed-1@test.com",
     "id": 8,
     "lastSeen": "[SANITIZED]",
-    "responseCount": 128,
-    "responseRetryPercentage": 23,
+    "responseCount": 129,
+    "responseRetryPercentage": 22,
   },
   {
     "activityMap": "[SANITIZED]",
@@ -1348,6 +1353,7 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
       "boombox-feature-utopia-vseed_nps-question",
       "boombox-feature-utopia-vseed_rubric",
       "boombox-feature-utopia-vseed_short-text-question",
+      "boombox-feature-utopia-vseed_simple-checklist",
       "boombox-feature-utopia-vseed_single-select-question",
       "boombox-feature-utopia-vseed_slideshow",
       "boombox-feature-utopia-vseed_star-rating",
@@ -1525,7 +1531,7 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
     "email": "completed-2@test.com",
     "id": 9,
     "lastSeen": "[SANITIZED]",
-    "responseCount": 143,
+    "responseCount": 144,
     "responseRetryPercentage": 31,
   },
   {
