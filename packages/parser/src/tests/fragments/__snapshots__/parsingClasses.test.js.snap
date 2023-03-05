@@ -681,20 +681,23 @@ Object {
     "steps": Array [
       Object {
         "id": "9800771530d596c50b6a30c42f72ab84",
-        "label": "Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))",
+        "label": "<p>Pack your bag (see <a href=\\"https://www.smartertravel.com/the-ultimate-packing-list/\\">packing list</a>)</p>
+",
       },
       Object {
         "id": "227ef2cb836151187618fd33ac21744a",
-        "label": "Check in for your flight",
+        "label": "<p>Check in for your flight</p>
+",
       },
       Object {
         "id": "67bd69c1b29cd86e788c60966308cb42",
-        "label": "**Go to Hawaii!**",
+        "label": "<p><strong>Go to Hawaii!</strong></p>
+",
       },
     ],
   },
   "dependencyUris": Array [],
-  "digest": "680380f8b8e69e6e8d12115b82e55ec2",
+  "digest": "fb40cc2e35919a2a26fea7eb5dcf8ed2",
   "displayConditions": Array [],
   "documentUri": "mock-document-uri",
   "isRequired": true,

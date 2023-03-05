@@ -4,6 +4,7 @@ import { FragmentViaBxmlTagParams } from "../../../types/fragments";
 import { RawFragmentSchema } from "@b5x/types";
 import { BxmlTextNodeSchema } from "../../../types/bxmlNodes";
 import md5 from "md5";
+import { marked } from "marked";
 
 // Markup -------------------------------------------
 
@@ -86,7 +87,7 @@ export class SimpleChecklist extends FragmentViaBxmlTag {
     return {
       steps: this.bxmlNode.children.map((stepTag) => {
         return {
-          label: stepTag.children[0].data,
+          label: marked.parse(stepTag.children[0].data),
           id: md5(stepTag.children[0].data),
         };
       }),

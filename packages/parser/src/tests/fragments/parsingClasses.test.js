@@ -11,7 +11,7 @@ const parsingClassFiles = parsingClassFolderFilenames.filter((filename) =>
   new RegExp(/.*.js/).test(filename)
 );
 
-describe("placeholder", () => {
+describe("Each parsing class parses its own example markup correctly", () => {
   parsingClassFiles.forEach((filename) => {
     const {
       manifest,
