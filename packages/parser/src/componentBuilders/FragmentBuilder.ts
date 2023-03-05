@@ -42,6 +42,7 @@ import { Tab } from "./fragments/parsingClasses/Tab";
 import { Tabs } from "./fragments/parsingClasses/Tabs";
 import { Badge } from "./fragments/parsingClasses/Badge";
 import { Breakout } from "./fragments/parsingClasses/Breakout";
+import { SimpleChecklist } from "./fragments/parsingClasses/SimpleChecklist";
 
 // Map the tag name to the parsing class.
 const fragmentMap = {
@@ -74,6 +75,7 @@ const fragmentMap = {
   tabs: Tabs,
   badge: Badge,
   breakout: Breakout,
+  "simple-checklist": SimpleChecklist,
 };
 
 export class FragmentBuilder {

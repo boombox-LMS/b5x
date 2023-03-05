@@ -75,6 +75,7 @@ export class SimpleChecklist extends FragmentViaBxmlTag {
 
   constructor(params: FragmentViaBxmlTagParams) {
     super(params);
+    console.log("Building SimpleChecklist ...");
     this.bxmlNode = SimpleChecklistTagSchema.parse(params.bxmlNode);
     this.data = this.buildData();
     this.convertToStatefulFragment();
