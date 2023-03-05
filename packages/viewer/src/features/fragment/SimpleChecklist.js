@@ -3,6 +3,14 @@ import { muiTheme } from "../../theme/active-theme";
 import Checkbox from "@mui/material/Checkbox";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import styled from "styled-components/macro";
+
+const CheckboxLabel = styled.span`
+  & p {
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 export const SimpleChecklist = ({
   fragment,
@@ -56,7 +64,9 @@ export const SimpleChecklist = ({
                 }}
               />
             }
-            label={step.label}
+            label={
+              <CheckboxLabel dangerouslySetInnerHTML={{ __html: step.label }} />
+            }
           />
         );
       })}
