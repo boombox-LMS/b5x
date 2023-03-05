@@ -7,7 +7,7 @@ const defaultLayout = {
   name: "grid",
   condense: true,
   padding: 0,
-  spacingFactor: 2.4,
+  spacingFactor: 2.2,
   position: function (node) {
     return {
       row: node.data("row"),
@@ -123,8 +123,6 @@ export const Diagram = ({ fragment }) => {
     <Paper
       variant="outlined"
       sx={{
-        aspectRatio: `${gridColCount} / ${gridRowCount}`,
-        contentFit: "contain",
         width: "100%",
       }}
     >
@@ -135,9 +133,10 @@ export const Diagram = ({ fragment }) => {
         stylesheet={stylesheet}
         elements={elements}
         style={{
-          paddingTop: "15px",
+          paddingTop: "10px",
+          paddingBottom: "15px",
           width: "100%",
-          height: `${205 * gridRowCount}px`,
+          height: `${175 * gridRowCount}px`,
         }}
         layout={layout}
       />
