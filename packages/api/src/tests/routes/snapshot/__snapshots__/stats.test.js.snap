@@ -1320,8 +1320,8 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
     "email": "completed-1@test.com",
     "id": 8,
     "lastSeen": "[SANITIZED]",
-    "responseCount": 128,
-    "responseRetryPercentage": 23,
+    "responseCount": 129,
+    "responseRetryPercentage": 22,
   },
   {
     "activityMap": "[SANITIZED]",
@@ -1525,7 +1525,7 @@ exports[`Stats routes match expectations stats.listUsers matches expectations st
     "email": "completed-2@test.com",
     "id": 9,
     "lastSeen": "[SANITIZED]",
-    "responseCount": 143,
+    "responseCount": 144,
     "responseRetryPercentage": 31,
   },
   {

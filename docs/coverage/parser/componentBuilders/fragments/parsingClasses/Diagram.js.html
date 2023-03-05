@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.1% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>108/116</span>
+                <span class='fraction'>112/120</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60.41% </span>
+                <span class="strong">66.07% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>29/48</span>
+                <span class='fraction'>37/56</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.73% </span>
+                <span class="strong">94.91% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>108/114</span>
+                <span class='fraction'>112/118</span>
             </div>
         
             
@@ -409,7 +409,23 @@
 <a name='L344'></a><a href='#L344'>344</a>
 <a name='L345'></a><a href='#L345'>345</a>
 <a name='L346'></a><a href='#L346'>346</a>
-<a name='L347'></a><a href='#L347'>347</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-yes">26x</span>
@@ -548,6 +564,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -590,6 +608,8 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -676,11 +696,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">7x</span>
@@ -893,6 +925,8 @@ exports.DiagramDataSchema = zod_1.z.object({
         selector: zod_1.z.string(),
         style: zod_1.z.record(zod_1.z.any()),
     })),
+    gridColCount: zod_1.z.number(),
+    gridRowCount: zod_1.z.number(),
 });
 exports.DiagramApiDataSchema = types_1.RawFragmentSchema.extend({
     contentType: zod_1.z.literal("Diagram"),
@@ -938,6 +972,8 @@ _Diagram_instances = new WeakSet(), _Diagram_buildData = function _Diagram_build
     let result = {
         elements: [],
         stylesheet: [],
+        gridColCount: 0,
+        gridRowCount: 0,
     };
     this.bxmlNode.children.forEach((childTag) =&gt; {
         switch (childTag.name) {
@@ -1021,12 +1057,24 @@ _Diagram_instances = new WeakSet(), _Diagram_buildData = function _Diagram_build
     const optimizedDiagramData = {
         elements: [],
         stylesheet: [],
+        gridColCount: diagramData.gridColCount,
+        gridRowCount: diagramData.gridRowCount,
     };
     let nodesById = {};
     let edges = [];
     diagramData.elements.forEach((element) =&gt; {
         if (element.group === "nodes") {
             nodesById[element.data.id] = element;
+            // TODO: Use Zod schemas to convert attrs to
+            // the correct data type, instead of using parseInt here
+            if (element.data.col &amp;&amp;
+                parseInt(element.data.col) &gt; optimizedDiagramData.gridColCount) {
+                optimizedDiagramData.gridColCount = parseInt(element.data.col);
+            }
+            if (element.data.row &amp;&amp;
+                parseInt(element.data.row) &gt; optimizedDiagramData.gridRowCount) {
+                optimizedDiagramData.gridRowCount = parseInt(element.data.row);
+            }
         }
         else <span class="missing-if-branch" title="else path not taken" >E</span>if (element.group === "edges") {
             edges.push(element);
@@ -1108,7 +1156,7 @@ exports.manifest = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-02-27T20:34:09.227Z
+                at 2023-03-05T00:23:57.928Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -35,6 +35,7 @@ export const FragmentContentTypeSchema = z.enum([
   "Tabs",
   "Badge",
   "Breakout",
+  "SimpleChecklist",
 ]);
 
 export type FragmentContentType = z.infer<typeof FragmentContentTypeSchema>;

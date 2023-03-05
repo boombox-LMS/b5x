@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { FragmentWrapper } from "./FragmentWrapper";
+import { themeSettings } from "../../theme/active-theme";
 
 export const Checklist = ({ fragment, response, responseUpdateCallback }) => {
   let responseValue;
@@ -61,14 +62,23 @@ export const Checklist = ({ fragment, response, responseUpdateCallback }) => {
     setActiveStep(0);
   };
 
+  let iconStyle = {};
+  if (calculateStatus(activeStep) === "completed") {
+    iconStyle = {
+      "& .MuiStepLabel-iconContainer .Mui-completed": {
+        color: themeSettings.greenlitPalette.dark,
+      },
+    };
+  }
+
   return (
     <div className="checklist" style={{ marginTop: "15px" }}>
       <Box>
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((stepFragment, index) => (
             <Step key={stepFragment.uri}>
-              <StepLabel>
-                <span style={{ fontSize: "1.2em" }}>
+              <StepLabel sx={iconStyle}>
+                <span style={{ fontSize: "1.2em", color: "black" }}>
                   {stepFragment.data.title}
                 </span>
               </StepLabel>

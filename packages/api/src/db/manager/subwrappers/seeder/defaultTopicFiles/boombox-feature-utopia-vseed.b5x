@@ -717,9 +717,11 @@
                 "displayConditions": [],
                 "childUris": [
                     "boombox-feature-utopia-vseed_checklist_f1",
-                    "boombox-feature-utopia-vseed_checklist_f2"
+                    "boombox-feature-utopia-vseed_checklist_f2",
+                    "boombox-feature-utopia-vseed_checklist_f9",
+                    "boombox-feature-utopia-vseed_checklist_f10"
                 ],
-                "digest": "ea9b40f9c8e402f1104adae77ae2dd87",
+                "digest": "c3bda3620bd0ef978af07244e123c203",
                 "contentMode": "documentation",
                 "completionConditions": [],
                 "externalDependencyUris": [],
@@ -736,8 +738,8 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [],
-                        "contents": "<h1 id=\"checklist\">Checklist</h1>\n",
-                        "digest": "a88499c5d06aafd2074bb6ec450efe12",
+                        "contents": "<h1 id=\"checklist\">Checklist</h1>\n<h2 id=\"simple-checklist\">Simple checklist</h2>\n",
+                        "digest": "a95946a3a66ac5931d01ec83fe5d55db",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_checklist_f2": {
@@ -750,10 +752,11 @@
                         "isRequired": false,
                         "childUris": [
                             "boombox-feature-utopia-vseed_checklist_f3",
-                            "boombox-feature-utopia-vseed_checklist_f11"
+                            "boombox-feature-utopia-vseed_checklist_f5",
+                            "boombox-feature-utopia-vseed_checklist_f7"
                         ],
                         "contents": "",
-                        "digest": "a9c3b4632e4f7f0a7f03b33cefdc22e0",
+                        "digest": "fb1a67977923356c4551c0511ca8ad6c",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_checklist_f3": {
@@ -770,11 +773,151 @@
                             "boombox-feature-utopia-vseed_checklist_f4"
                         ],
                         "contents": "",
-                        "digest": "de8985697887e387443a64c560384a6c",
+                        "digest": "d6169ef44da0afc59f08be3ed95796c6",
                         "dependencyUris": []
                     },
                     "boombox-feature-utopia-vseed_checklist_f4": {
                         "uri": "boombox-feature-utopia-vseed_checklist_f4",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "steps": [
+                                {
+                                    "label": "<p>Pack your bag (see <a href=\"https://www.smartertravel.com/the-ultimate-packing-list/\">packing list</a>)</p>\n",
+                                    "id": "9800771530d596c50b6a30c42f72ab84"
+                                },
+                                {
+                                    "label": "<p>Check in for your flight</p>\n",
+                                    "id": "227ef2cb836151187618fd33ac21744a"
+                                },
+                                {
+                                    "label": "<p>Go to Hawaii!</p>\n",
+                                    "id": "7dfb1ecade84d49cf73d013343ad3548"
+                                }
+                            ]
+                        },
+                        "contentType": "SimpleChecklist",
+                        "isStateful": true,
+                        "isRequired": true,
+                        "childUris": [],
+                        "contents": "",
+                        "digest": "e869ae7bde31856c9d5a11c2d4c737fb",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f5": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f5",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_checklist_f6"
+                        ],
+                        "contents": "",
+                        "digest": "1683de69a1621e2711a5fd77c2045b6e",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f6": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f6",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "markdown"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<simple-checklist>\n<step>Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))</step>\n<step>Check in for your flight</step>\n<step>Go to Hawaii!</step>\n</simple-checklist>",
+                        "digest": "29b43cf8a3445e3be2517bbd0c46d87e",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f7": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f7",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Future markup (TODO)"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_checklist_f8"
+                        ],
+                        "contents": "",
+                        "digest": "387ecbaa84923cda03c9526501a77a0a",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f8": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f8",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "markdown"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<checklist>\n- Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))\n- Check in for your flight\n- Go to Hawaii!\n</checklist>",
+                        "digest": "968af69c9cbc98ce84e8b2e927f241b7",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f9": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f9",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"detailed-checklist\">Detailed checklist</h2>\n",
+                        "digest": "5a7c971dbab1d96a2cf3171614c79c60",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f10": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f10",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_checklist_f11",
+                            "boombox-feature-utopia-vseed_checklist_f19"
+                        ],
+                        "contents": "",
+                        "digest": "a9c3b4632e4f7f0a7f03b33cefdc22e0",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f11": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f11",
+                        "documentUri": "boombox-feature-utopia-vseed_checklist",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_checklist_f12"
+                        ],
+                        "contents": "",
+                        "digest": "de8985697887e387443a64c560384a6c",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_checklist_f12": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f12",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -784,16 +927,16 @@
                         "isStateful": true,
                         "isRequired": true,
                         "childUris": [
-                            "boombox-feature-utopia-vseed_checklist_f5",
-                            "boombox-feature-utopia-vseed_checklist_f7",
-                            "boombox-feature-utopia-vseed_checklist_f9"
+                            "boombox-feature-utopia-vseed_checklist_f13",
+                            "boombox-feature-utopia-vseed_checklist_f15",
+                            "boombox-feature-utopia-vseed_checklist_f17"
                         ],
                         "contents": "",
                         "digest": "3e1d421e6835756bcc174bbe8872209c",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f5": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f5",
+                    "boombox-feature-utopia-vseed_checklist_f13": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f13",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -803,14 +946,14 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "boombox-feature-utopia-vseed_checklist_f6"
+                            "boombox-feature-utopia-vseed_checklist_f14"
                         ],
                         "contents": "",
                         "digest": "0f2259ad6a39b6cc349d094d1b94369b",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f6": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f6",
+                    "boombox-feature-utopia-vseed_checklist_f14": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f14",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -824,8 +967,8 @@
                         "digest": "77df770d3796f96e6fa47f4edb6c97fa",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f7": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f7",
+                    "boombox-feature-utopia-vseed_checklist_f15": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f15",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -835,14 +978,14 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "boombox-feature-utopia-vseed_checklist_f8"
+                            "boombox-feature-utopia-vseed_checklist_f16"
                         ],
                         "contents": "",
                         "digest": "6341a7f22a8266b78021a115322e63b2",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f8": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f8",
+                    "boombox-feature-utopia-vseed_checklist_f16": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f16",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -856,8 +999,8 @@
                         "digest": "55f08c231e7d32d90f85e17b70fa0548",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f9": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f9",
+                    "boombox-feature-utopia-vseed_checklist_f17": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f17",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -867,14 +1010,14 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "boombox-feature-utopia-vseed_checklist_f10"
+                            "boombox-feature-utopia-vseed_checklist_f18"
                         ],
                         "contents": "",
                         "digest": "9dd290a3bb6cd68543beb67bdc6849a1",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f10": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f10",
+                    "boombox-feature-utopia-vseed_checklist_f18": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f18",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -888,8 +1031,8 @@
                         "digest": "567fe0c15a7ca04ecaf6df61050603de",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f11": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f11",
+                    "boombox-feature-utopia-vseed_checklist_f19": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f19",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
@@ -899,14 +1042,14 @@
                         "isStateful": false,
                         "isRequired": false,
                         "childUris": [
-                            "boombox-feature-utopia-vseed_checklist_f12"
+                            "boombox-feature-utopia-vseed_checklist_f20"
                         ],
                         "contents": "",
                         "digest": "485c3aedfda8f5517e71c46989f57abc",
                         "dependencyUris": []
                     },
-                    "boombox-feature-utopia-vseed_checklist_f12": {
-                        "uri": "boombox-feature-utopia-vseed_checklist_f12",
+                    "boombox-feature-utopia-vseed_checklist_f20": {
+                        "uri": "boombox-feature-utopia-vseed_checklist_f20",
                         "documentUri": "boombox-feature-utopia-vseed_checklist",
                         "displayConditions": [],
                         "data": {
