@@ -65,7 +65,7 @@ export const Checklist = ({ fragment, response, responseUpdateCallback }) => {
   let iconStyle = {};
   if (calculateStatus(activeStep) === "completed") {
     iconStyle = {
-      "& .Mui-completed": {
+      "& .MuiStepLabel-iconContainer .Mui-completed": {
         color: themeSettings.greenlitPalette.dark,
       },
     };

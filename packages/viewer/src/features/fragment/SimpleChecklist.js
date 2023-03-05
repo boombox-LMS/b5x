@@ -19,6 +19,24 @@ export const SimpleChecklist = ({
 }) => {
   const { steps } = fragment.data;
 
+  const syncResponse = (updatedResponse) => {
+    responseUpdateCallback({
+      fragmentUri: fragment.uri,
+      value: updatedResponse,
+      status: calculateStatus(),
+    });
+  };
+
+  const calculateStatus = () => {
+    if (Object.values(localResponse).every((value) => value)) {
+      return "completed";
+    } else if (Object.values(localResponse).every((value) => !value)) {
+      return "blank";
+    } else {
+      return "in progress";
+    }
+  };
+
   const buildEmptyResponse = (steps) => {
     let response = {};
     steps.forEach((step) => {
@@ -28,20 +46,24 @@ export const SimpleChecklist = ({
   };
 
   const toggleCheckbox = (id) => {
+    const newCheckboxValue = !localResponse[id];
     setLocalResponse((localResponse) => {
-      return { ...localResponse, [id]: !localResponse[id] };
+      return { ...localResponse, [id]: newCheckboxValue };
     });
+    syncResponse({ ...localResponse, [id]: newCheckboxValue });
   };
 
   const calculateCheckedBoxColor = () => {
-    if (Object.values(localResponse).every((value) => value)) {
+    if (calculateStatus() === "completed") {
       return muiTheme.palette.greenlit.main;
     } else {
       return muiTheme.palette.primary.main;
     }
   };
 
-  const [localResponse, setLocalResponse] = useState(buildEmptyResponse(steps));
+  const [localResponse, setLocalResponse] = useState(
+    response.value || buildEmptyResponse(steps)
+  );
   const checkedBoxColor = calculateCheckedBoxColor();
 
   return (
