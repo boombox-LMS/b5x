@@ -8,7 +8,7 @@
 <simple-checklist>
 <step>Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))</step>
 <step>Check in for your flight</step>
-<step>**Go to Hawaii!**</step>
+<step>Go to Hawaii!</step>
 </simple-checklist>
 </tab>
 
@@ -17,8 +17,18 @@
 <simple-checklist>
 <step>Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))</step>
 <step>Check in for your flight</step>
-<step>**Go to Hawaii!**</step>
+<step>Go to Hawaii!</step>
 </simple-checklist>
+</code-block>
+</tab>
+
+<tab title='Future markup (TODO)' >
+<code-block language="markdown">
+<checklist>
+- Pack your bag (see [packing list](https://www.smartertravel.com/the-ultimate-packing-list/))
+- Check in for your flight
+- Go to Hawaii!
+</checklist>
 </code-block>
 </tab>
 
