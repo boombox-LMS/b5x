@@ -261,8 +261,8 @@ exports[`Topics routes should match expectations topics.catalog matches expectat
       "completionStatus": "completed",
       "contentMode": "tutorial",
       "coverImageUrl": "http://localhost:8080/topic-assets/smoke-testing-vseed/images/smoke-testing.jpg",
-      "currentDocumentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "firstDocumentUri": "smoke-testing-vseed_basic-topic-functionality",
+      "currentDocumentUri": "smoke-testing-vseed_setup",
+      "firstDocumentUri": "smoke-testing-vseed_setup",
       "prerequisites": [],
       "priorityLevel": "assigned",
       "progressPercentage": 0,
@@ -308,24 +308,59 @@ exports[`Topics routes should match expectations topics.contents matches expecta
   "coverImageUrl": "http://localhost:8080/topic-assets/smoke-testing-vseed/images/smoke-testing.jpg",
   "documents": [
     {
-      "title": "Basic topic functionality",
+      "title": "Setup",
       "topicUri": "smoke-testing-vseed",
-      "uri": "smoke-testing-vseed_basic-topic-functionality",
+      "uri": "smoke-testing-vseed_setup",
     },
     {
-      "title": "Select inputs",
+      "title": "Progress bar",
       "topicUri": "smoke-testing-vseed",
-      "uri": "smoke-testing-vseed_select-inputs",
+      "uri": "smoke-testing-vseed_progress-bar",
     },
     {
-      "title": "Text inputs and piping",
+      "title": "Major UI areas",
       "topicUri": "smoke-testing-vseed",
-      "uri": "smoke-testing-vseed_text-inputs",
+      "uri": "smoke-testing-vseed_ui-areas",
     },
     {
-      "title": "Piped responses from other documents",
+      "title": "Header",
       "topicUri": "smoke-testing-vseed",
-      "uri": "smoke-testing-vseed_response-persistence",
+      "uri": "smoke-testing-vseed_header",
+    },
+    {
+      "title": "User state",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_persistence",
+    },
+    {
+      "title": "Conditional content display",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_conditional-display",
+    },
+    {
+      "title": "ONE",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_one",
+    },
+    {
+      "title": "Logging in and out",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_login-logout",
+    },
+    {
+      "title": "Dashboard",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_dashboard-stats",
+    },
+    {
+      "title": "Publishing a topic",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_publishing",
+    },
+    {
+      "title": "Topic completion",
+      "topicUri": "smoke-testing-vseed",
+      "uri": "smoke-testing-vseed_topic-completion",
     },
   ],
   "prerequisites": [],
@@ -338,31 +373,73 @@ exports[`Topics routes should match expectations topics.contents matches expecta
 
 exports[`Topics routes should match expectations topics.enrollment and topics.verifyCompletion match expectations topics.enrollment matches the snapshot on file 1`] = `
 {
-  "currentDocumentUri": "smoke-testing-vseed_basic-topic-functionality",
+  "currentDocumentUri": "smoke-testing-vseed_setup",
   "documentStatus": {
-    "smoke-testing-vseed_basic-topic-functionality": {
+    "smoke-testing-vseed_conditional-display": {
       "isCompleted": true,
       "isLocked": false,
       "isVisible": true,
-      "nextVisibleDocumentUri": "smoke-testing-vseed_select-inputs",
+      "nextVisibleDocumentUri": "smoke-testing-vseed_one",
     },
-    "smoke-testing-vseed_response-persistence": {
+    "smoke-testing-vseed_dashboard-stats": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_publishing",
+    },
+    "smoke-testing-vseed_header": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_persistence",
+    },
+    "smoke-testing-vseed_login-logout": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_dashboard-stats",
+    },
+    "smoke-testing-vseed_one": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_login-logout",
+    },
+    "smoke-testing-vseed_persistence": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_conditional-display",
+    },
+    "smoke-testing-vseed_progress-bar": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_ui-areas",
+    },
+    "smoke-testing-vseed_publishing": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_topic-completion",
+    },
+    "smoke-testing-vseed_setup": {
+      "isCompleted": true,
+      "isLocked": false,
+      "isVisible": true,
+      "nextVisibleDocumentUri": "smoke-testing-vseed_progress-bar",
+    },
+    "smoke-testing-vseed_topic-completion": {
       "isCompleted": true,
       "isLocked": false,
       "isVisible": true,
       "nextVisibleDocumentUri": null,
     },
-    "smoke-testing-vseed_select-inputs": {
+    "smoke-testing-vseed_ui-areas": {
       "isCompleted": true,
       "isLocked": false,
       "isVisible": true,
-      "nextVisibleDocumentUri": "smoke-testing-vseed_text-inputs",
-    },
-    "smoke-testing-vseed_text-inputs": {
-      "isCompleted": true,
-      "isLocked": false,
-      "isVisible": true,
-      "nextVisibleDocumentUri": "smoke-testing-vseed_response-persistence",
+      "nextVisibleDocumentUri": "smoke-testing-vseed_header",
     },
   },
   "id": 20,
@@ -394,10 +471,10 @@ exports[`Topics routes should match expectations topics.info matches expectation
   },
   "coverImageUrl": "http://localhost:8080/topic-assets/smoke-testing-vseed/images/smoke-testing.jpg",
   "enrollmentData": {
-    "currentDocumentUri": "smoke-testing-vseed_basic-topic-functionality",
+    "currentDocumentUri": "smoke-testing-vseed_setup",
     "topicVersion": "seed",
   },
-  "firstDocumentUri": "smoke-testing-vseed_basic-topic-functionality",
+  "firstDocumentUri": "smoke-testing-vseed_setup",
   "prerequisites": [],
   "slug": "smoke-testing",
   "subtitle": "Verify that this topic still works before merging to main.",

@@ -2,9 +2,9 @@
 
 <single-select-question id='number'>
 Choose a number.
-<choice id=one>1</choice>
-<choice id=two>2</choice>
-<choice id=three>3</choice>
+<choice value=one>1</choice>
+<choice value=two>2</choice>
+<choice value=three>3</choice>
 </single-select-question>
 
 <show if='number is one'>

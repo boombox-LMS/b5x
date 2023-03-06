@@ -16,7 +16,7 @@ describe("Documents routes should return a 200", () => {
 
     // TODO: Have seeding functionality in the parser to keep all of these URIs consistent
     // even as the demo content is updated
-    testDocumentUri = "smoke-testing-vseed_basic-topic-functionality";
+    testDocumentUri = "smoke-testing-vseed_setup";
 
     // Log the user in (someone who has completed all topics)
     await supertest(app)

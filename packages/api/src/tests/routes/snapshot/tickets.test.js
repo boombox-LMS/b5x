@@ -32,7 +32,7 @@ describe("Tickets routes should match expectations", () => {
       .get("db")
       .knex.select("id")
       .from("documents")
-      .where({ uri: "smoke-testing-vseed_basic-topic-functionality" })
+      .where({ uri: "smoke-testing-vseed_setup" })
       .then((rows) => {
         return rows[0].id;
       });

@@ -6,9 +6,9 @@ What's your name?
 
 <single-select-question id='favorite-color'>
 What's your favorite color?
-<choice id=pink>pink</choice>
-<choice id=green>green</choice>
-<choice id=blue>blue</choice>
+<choice value=pink>pink</choice>
+<choice value=green>green</choice>
+<choice value=blue>blue</choice>
 </single-select-question>
 
 <simple-checklist>
