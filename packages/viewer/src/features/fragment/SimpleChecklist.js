@@ -23,14 +23,14 @@ export const SimpleChecklist = ({
     responseUpdateCallback({
       fragmentUri: fragment.uri,
       value: updatedResponse,
-      status: calculateStatus(),
+      status: calculateStatus(updatedResponse),
     });
   };
 
-  const calculateStatus = () => {
-    if (Object.values(localResponse).every((value) => value)) {
+  const calculateStatus = (response) => {
+    if (Object.values(response).every((value) => value)) {
       return "completed";
-    } else if (Object.values(localResponse).every((value) => !value)) {
+    } else if (Object.values(response).every((value) => !value)) {
       return "blank";
     } else {
       return "in progress";
@@ -54,7 +54,7 @@ export const SimpleChecklist = ({
   };
 
   const calculateCheckedBoxColor = () => {
-    if (calculateStatus() === "completed") {
+    if (calculateStatus(localResponse) === "completed") {
       return muiTheme.palette.greenlit.main;
     } else {
       return muiTheme.palette.primary.main;
