@@ -7,35 +7,35 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
     {
       "children": [],
       "contentType": "HtmlContent",
-      "contents": "<h1 id="basic-topic-functionality">Basic topic functionality</h1>
-<p>Please verify:</p>
+      "contents": "<h1 id="setup">Setup</h1>
+<p>Please seed the database before proceeding further, just to verify that you&#39;re working with fresh data.</p>
 ",
       "data": {
         "isTemplated": false,
       },
       "dependencyUris": [],
       "displayConditions": [],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+      "documentUri": "smoke-testing-vseed_setup",
       "isRequired": false,
       "isStateful": false,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f1",
+      "uri": "smoke-testing-vseed_setup_f1",
     },
     {
       "children": [
         {
           "children": [],
           "contentType": "HtmlContent",
-          "contents": "<p>The progress bar shows 0%</p>
+          "contents": "<p>The database is freshly seeded.</p>
 ",
           "data": {
             "isTemplated": false,
           },
           "dependencyUris": [],
           "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+          "documentUri": "smoke-testing-vseed_setup",
           "isRequired": false,
           "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f3",
+          "uri": "smoke-testing-vseed_setup_f3",
         },
       ],
       "contentType": "ContinueButton",
@@ -43,296 +43,10 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
       "data": {},
       "dependencyUris": [],
       "displayConditions": [],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+      "documentUri": "smoke-testing-vseed_setup",
       "isRequired": true,
       "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f2",
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "contentType": "HtmlContent",
-          "contents": "<p>Okay, now the progress bar is cruising along</p>
-",
-          "data": {
-            "isTemplated": false,
-          },
-          "dependencyUris": [],
-          "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-          "isRequired": false,
-          "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f5",
-        },
-      ],
-      "contentType": "ContinueButton",
-      "contents": "",
-      "data": {},
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f2",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f2",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": true,
-      "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f4",
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "contentType": "HtmlContent",
-          "contents": "<p>The correct document (this one) is highlighted in the side nav</p>
-",
-          "data": {
-            "isTemplated": false,
-          },
-          "dependencyUris": [],
-          "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-          "isRequired": false,
-          "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f7",
-        },
-      ],
-      "contentType": "ContinueButton",
-      "contents": "",
-      "data": {},
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f4",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f4",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": true,
-      "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f6",
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "contentType": "HtmlContent",
-          "contents": "<p>The subsequent documents are inaccessible</p>
-",
-          "data": {
-            "isTemplated": false,
-          },
-          "dependencyUris": [],
-          "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-          "isRequired": false,
-          "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f9",
-        },
-      ],
-      "contentType": "ContinueButton",
-      "contents": "",
-      "data": {},
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f6",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f6",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": true,
-      "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f8",
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "contentType": "HtmlContent",
-          "contents": "<p>The topic title (Smoke Testing) is displayed in the banner</p>
-",
-          "data": {
-            "isTemplated": false,
-          },
-          "dependencyUris": [],
-          "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-          "isRequired": false,
-          "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f11",
-        },
-      ],
-      "contentType": "ContinueButton",
-      "contents": "",
-      "data": {},
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f8",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f8",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": true,
-      "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f10",
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "contentType": "HtmlContent",
-          "contents": "<p>The About page is fully and correctly populated</p>
-",
-          "data": {
-            "isTemplated": false,
-          },
-          "dependencyUris": [],
-          "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-          "isRequired": false,
-          "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f13",
-        },
-      ],
-      "contentType": "ContinueButton",
-      "contents": "",
-      "data": {},
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f10",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f10",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": true,
-      "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f12",
-    },
-    {
-      "children": [],
-      "contentType": "HtmlContent",
-      "contents": "<p>Clicking on this last bar should unlock the next topic, so please verify that this happens.</p>
-",
-      "data": {
-        "isTemplated": false,
-      },
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f12",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f12",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": false,
-      "isStateful": false,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f14",
-    },
-    {
-      "children": [
-        {
-          "children": [],
-          "contentType": "HtmlContent",
-          "contents": "<p>Abracadabra!</p>
-",
-          "data": {
-            "isTemplated": false,
-          },
-          "dependencyUris": [],
-          "displayConditions": [],
-          "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-          "isRequired": false,
-          "isStateful": false,
-          "uri": "smoke-testing-vseed_basic-topic-functionality_f16",
-        },
-      ],
-      "contentType": "ContinueButton",
-      "contents": "",
-      "data": {},
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f12",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f12",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": true,
-      "isStateful": true,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
-    },
-    {
-      "children": [],
-      "contentType": "HtmlContent",
-      "contents": "<p>Thank you! On to the next one ...</p>
-",
-      "data": {
-        "isTemplated": false,
-      },
-      "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f15",
-      ],
-      "displayConditions": [
-        {
-          "data": {
-            "operator": "status-is",
-            "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
-          },
-          "type": "condition",
-        },
-      ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
-      "isRequired": false,
-      "isStateful": false,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f17",
+      "uri": "smoke-testing-vseed_setup_f2",
     },
     {
       "children": [],
@@ -340,63 +54,33 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
       "contents": "",
       "data": {},
       "dependencyUris": [
-        "smoke-testing-vseed_basic-topic-functionality_f15",
+        "smoke-testing-vseed_setup_f2",
       ],
       "displayConditions": [
         {
           "data": {
             "operator": "status-is",
             "targetValue": "completed",
-            "uri": "smoke-testing-vseed_basic-topic-functionality_f15",
+            "uri": "smoke-testing-vseed_setup_f2",
           },
           "type": "condition",
         },
       ],
-      "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+      "documentUri": "smoke-testing-vseed_setup",
       "isRequired": false,
       "isStateful": false,
-      "uri": "smoke-testing-vseed_basic-topic-functionality_f18",
+      "uri": "smoke-testing-vseed_setup_f4",
     },
   ],
   "topicUri": "smoke-testing-vseed",
-  "uri": "smoke-testing-vseed_basic-topic-functionality",
+  "uri": "smoke-testing-vseed_setup",
 }
 `;
 
 exports[`Documents routes should return a 200 documents.responses matches expectations documents.responses matches the snapshot on file 1`] = `
 {
-  "smoke-testing-vseed_basic-topic-functionality_f10": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f10",
-    "status": "completed",
-    "value": "t",
-  },
-  "smoke-testing-vseed_basic-topic-functionality_f12": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f12",
-    "status": "completed",
-    "value": "t",
-  },
-  "smoke-testing-vseed_basic-topic-functionality_f15": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f15",
-    "status": "completed",
-    "value": "t",
-  },
-  "smoke-testing-vseed_basic-topic-functionality_f2": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f2",
-    "status": "completed",
-    "value": "t",
-  },
-  "smoke-testing-vseed_basic-topic-functionality_f4": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f4",
-    "status": "completed",
-    "value": "t",
-  },
-  "smoke-testing-vseed_basic-topic-functionality_f6": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f6",
-    "status": "completed",
-    "value": "t",
-  },
-  "smoke-testing-vseed_basic-topic-functionality_f8": {
-    "fragmentUri": "smoke-testing-vseed_basic-topic-functionality_f8",
+  "smoke-testing-vseed_setup_f2": {
+    "fragmentUri": "smoke-testing-vseed_setup_f2",
     "status": "completed",
     "value": "t",
   },
@@ -406,6 +90,6 @@ exports[`Documents routes should return a 200 documents.responses matches expect
 exports[`Documents routes should return a 200 documents.verifyCompletion matches the snapshot on file documents.verifyCompletion matches the snapshot on file 1`] = `
 {
   "documentIsCompleted": true,
-  "documentUri": "smoke-testing-vseed_basic-topic-functionality",
+  "documentUri": "smoke-testing-vseed_setup",
 }
 `;
