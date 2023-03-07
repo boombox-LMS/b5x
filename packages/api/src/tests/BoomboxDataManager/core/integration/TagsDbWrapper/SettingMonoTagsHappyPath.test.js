@@ -1,6 +1,6 @@
 const {
   BoomboxDataManager,
-} = require("../../../../../dist/db/manager/BoomboxDataManager");
+} = require(`${global.DIST_PATH}/db/manager/BoomboxDataManager`);
 
 describe("Setting mono tags should work as expected on happy path", () => {
   let db;

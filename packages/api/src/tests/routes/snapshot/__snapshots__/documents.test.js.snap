@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documents routes should return a 200 documents.contents matches expectations documents.contents matches the snapshot on file 1`] = `
+exports[`Documents routes should match their snapshots documents.contents matches the snapshot documents.contents matches the snapshot 1`] = `
 {
   "contentMode": "tutorial",
   "fragments": [
@@ -77,7 +77,7 @@ exports[`Documents routes should return a 200 documents.contents matches expecta
 }
 `;
 
-exports[`Documents routes should return a 200 documents.responses matches expectations documents.responses matches the snapshot on file 1`] = `
+exports[`Documents routes should match their snapshots documents.responses matches the snapshot documents.responses matches the snapshot 1`] = `
 {
   "smoke-testing-vseed_setup_f2": {
     "fragmentUri": "smoke-testing-vseed_setup_f2",
@@ -87,7 +87,7 @@ exports[`Documents routes should return a 200 documents.responses matches expect
 }
 `;
 
-exports[`Documents routes should return a 200 documents.verifyCompletion matches the snapshot on file documents.verifyCompletion matches the snapshot on file 1`] = `
+exports[`Documents routes should match their snapshots documents.verifyCompletion matches the snapshot documents.verifyCompletion matches the snapshot 1`] = `
 {
   "documentIsCompleted": true,
   "documentUri": "smoke-testing-vseed_setup",

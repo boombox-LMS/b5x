@@ -1,6 +1,6 @@
 const {
   BoomboxDataManager,
-} = require("../../../dist/db/manager/BoomboxDataManager");
+} = require(`${global.DIST_PATH}/db/manager/BoomboxDataManager`);
 
 let db;
 

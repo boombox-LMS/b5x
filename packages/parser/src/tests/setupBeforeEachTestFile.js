@@ -1,8 +1,12 @@
+const DIST_PATH = __dirname + "/../../dist";
 const {
   FragmentBuilder,
-} = require("../../dist/componentBuilders/FragmentBuilder");
+} = require(`${DIST_PATH}/componentBuilders/FragmentBuilder`);
 const htmlparser2 = require("htmlparser2");
-const { coerceToBxmlNode } = require("../../dist/types/nodeCoercion");
+const { coerceToBxmlNode } = require(`${DIST_PATH}/types/nodeCoercion`);
+
+global.DIST_PATH = DIST_PATH;
+global.EXAMPLE_TOPICS_DIR = `${__dirname}/../../example-topics`;
 
 global.buildFragmentFromMarkupString = (
   markupStr,

@@ -1,6 +1,6 @@
 const {
   BoomboxDataManager,
-} = require("../../../../dist/db/manager/BoomboxDataManager");
+} = require(`${global.DIST_PATH}/db/manager/BoomboxDataManager`);
 const { DocumentContentsSchema } = require("@b5x/types");
 
 describe("Complex documents wrapper functions return the expected data types", () => {

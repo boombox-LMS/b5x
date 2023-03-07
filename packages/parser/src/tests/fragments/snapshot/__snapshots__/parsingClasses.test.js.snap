@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Each parsing class parses its own example markup correctly The example accordion markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example accordion markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -20,7 +20,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example badge markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example badge markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "Badge",
@@ -40,7 +40,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example breakout markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example breakout markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -62,7 +62,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example breakout markup string at index 1 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example breakout markup string at index 1 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -85,7 +85,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example breakout markup string at index 2 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example breakout markup string at index 2 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -108,7 +108,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example checklist markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example checklist markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -130,7 +130,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example code-block markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example code-block markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "CodeBlock",
@@ -159,7 +159,7 @@ fido.speak()",
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example continue-button markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example continue-button markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -177,7 +177,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example diagram markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example diagram markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "Diagram",
@@ -468,7 +468,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example echo markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example echo markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "Echo",
@@ -488,7 +488,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example five-star-rating markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example five-star-rating markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -506,7 +506,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example long-text-question markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example long-text-question markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -524,7 +524,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example mermaid-diagram markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example mermaid-diagram markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "MermaidDiagram",
@@ -557,7 +557,7 @@ flowchart TD
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example nps-question markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example nps-question markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -575,7 +575,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example rubric markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example rubric markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "Rubric",
@@ -609,7 +609,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example sentiment-check markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example sentiment-check markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -627,7 +627,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example short-text-question markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example short-text-question markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -645,7 +645,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example show markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example show markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -672,7 +672,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example simple-checklist markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example simple-checklist markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "SimpleChecklist",
@@ -706,7 +706,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example slide markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example slide markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -724,7 +724,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example slideshow markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example slideshow markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -744,7 +744,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example step markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example step markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -766,7 +766,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example tab markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example tab markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -786,7 +786,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example tabs markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example tabs markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -806,7 +806,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example troubleshooter markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example troubleshooter markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "Troubleshooter",
@@ -845,7 +845,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example undefined markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example undefined markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -882,7 +882,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example undefined markup string at index 1 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example undefined markup string at index 1 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",
@@ -927,7 +927,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example visual-list markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example visual-list markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [],
   "contentType": "VisualList",
@@ -996,7 +996,7 @@ Object {
 }
 `;
 
-exports[`Each parsing class parses its own example markup correctly The example warning markup string at index 0 matches the corresponding api data schema 1`] = `
+exports[`The output of each parsing class matches the snapshot The example warning markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
     "test-fragment-uri",

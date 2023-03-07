@@ -1,8 +1,6 @@
 const supertest = require("supertest");
-const { z } = require("zod");
-const { DocumentContentsSchema, UserResponseSchema } = require("@b5x/types");
 
-describe("Documents routes should return a 200", () => {
+describe("Documents routes should match their snapshots", () => {
   let app;
   let cookie;
   let testDocumentUri;
@@ -16,7 +14,7 @@ describe("Documents routes should return a 200", () => {
 
     // TODO: Have seeding functionality in the parser to keep all of these URIs consistent
     // even as the demo content is updated
-    testDocumentUri = "smoke-testing-vseed_setup";
+    testDocumentUri = global.FIRST_SMOKE_TEST_TOPIC_DOCUMENT_URI;
 
     // Log the user in (someone who has completed all topics)
     await supertest(app)
@@ -32,93 +30,60 @@ describe("Documents routes should return a 200", () => {
   afterAll(async () => {
     await app.get("db").destroy();
   });
-
   // documents.contents ---------------------------------------------
 
-  describe("documents.contents matches expectations", () => {
+  describe("documents.contents matches the snapshot", () => {
     let responseBody;
 
-    test("documents.contents returns a 200", async () => {
+    test("documents.contents returns a response", async () => {
       await supertest(app)
         .get(apiPrefix + `documents.contents?documentUri=${testDocumentUri}`)
         .set("Cookie", cookie)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("documents.contents returns the correct data type", () => {
-      const validator = () => {
-        DocumentContentsSchema.parse(responseBody);
-      };
-      expect(validator).not.toThrowError();
-    });
-
-    test("documents.contents matches the snapshot on file", () => {
+    test("documents.contents matches the snapshot", () => {
       expect(responseBody).toMatchSnapshot();
     });
   });
 
   // documents.responses --------------------------------------------
 
-  describe("documents.responses matches expectations", () => {
+  describe("documents.responses matches the snapshot", () => {
     let responseBody;
 
-    test("documents.responses returns a 200", async () => {
+    test("documents.responses returns a response", async () => {
       await supertest(app)
         .get(apiPrefix + `documents.responses?documentUri=${testDocumentUri}`)
         .set("Cookie", cookie)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("documents.responses returns the correct data type", () => {
-      // TODO: Not sure why this fails when a minimum length string key is defined
-      const ResponseBodySchema = z.record(UserResponseSchema);
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-
-      expect(validator).not.toThrowError();
-    });
-
-    test("documents.responses matches the snapshot on file", () => {
+    test("documents.responses matches the snapshot", () => {
       expect(responseBody).toMatchSnapshot();
     });
   });
 
   // documents.verifyCompletion -------------------------------------
 
-  describe("documents.verifyCompletion matches the snapshot on file", () => {
+  describe("documents.verifyCompletion matches the snapshot", () => {
     let responseBody;
 
-    test("documents.verifyCompletion returns a 200", async () => {
+    test("documents.verifyCompletion returns a response", async () => {
       await supertest(app)
         .post(apiPrefix + `documents.verifyCompletion`)
         .send({ documentUri: testDocumentUri })
         .set("Cookie", cookie)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("documents.verifyCompletion returns the correct data type", () => {
-      const ResponseBodySchema = z.object({
-        documentUri: z.string().min(1),
-        documentIsCompleted: z.boolean(),
-      });
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-
-      expect(validator).not.toThrowError();
-    });
-
-    test("documents.verifyCompletion matches the snapshot on file", () => {
+    test("documents.verifyCompletion matches the snapshot", () => {
       expect(responseBody).toMatchSnapshot();
     });
   });
