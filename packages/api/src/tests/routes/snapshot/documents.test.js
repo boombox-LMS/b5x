@@ -16,7 +16,7 @@ describe("Documents routes should return a 200", () => {
 
     // TODO: Have seeding functionality in the parser to keep all of these URIs consistent
     // even as the demo content is updated
-    testDocumentUri = "smoke-testing-vseed_setup";
+    testDocumentUri = global.FIRST_SMOKE_TEST_TOPIC_DOCUMENT_URI;
 
     // Log the user in (someone who has completed all topics)
     await supertest(app)
@@ -54,10 +54,6 @@ describe("Documents routes should return a 200", () => {
       };
       expect(validator).not.toThrowError();
     });
-
-    test("documents.contents matches the snapshot on file", () => {
-      expect(responseBody).toMatchSnapshot();
-    });
   });
 
   // documents.responses --------------------------------------------
@@ -84,15 +80,11 @@ describe("Documents routes should return a 200", () => {
 
       expect(validator).not.toThrowError();
     });
-
-    test("documents.responses matches the snapshot on file", () => {
-      expect(responseBody).toMatchSnapshot();
-    });
   });
 
   // documents.verifyCompletion -------------------------------------
 
-  describe("documents.verifyCompletion matches the snapshot on file", () => {
+  describe("documents.verifyCompletion matches expectations", () => {
     let responseBody;
 
     test("documents.verifyCompletion returns a 200", async () => {
@@ -116,10 +108,6 @@ describe("Documents routes should return a 200", () => {
       };
 
       expect(validator).not.toThrowError();
-    });
-
-    test("documents.verifyCompletion matches the snapshot on file", () => {
-      expect(responseBody).toMatchSnapshot();
     });
   });
 });

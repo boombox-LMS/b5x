@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documents routes should return a 200 documents.contents matches expectations documents.contents matches the snapshot on file 1`] = `undefined`;
+
+exports[`Documents routes should return a 200 documents.responses matches expectations documents.responses matches the snapshot on file 1`] = `undefined`;
+
+exports[`Documents routes should return a 200 documents.verifyCompletion matches the snapshot on file documents.verifyCompletion matches the snapshot on file 1`] = `undefined`;
