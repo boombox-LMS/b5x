@@ -1,6 +1,4 @@
 const supertest = require("supertest");
-const { UserProfileSchema, UserWithGroupNamesSchema } = require("@b5x/types");
-const { z } = require("zod");
 
 describe("Users routes should match expectations", () => {
   let app;
@@ -21,37 +19,29 @@ describe("Users routes should match expectations", () => {
 
   // users.profile --------------------------------------------------
 
-  describe("users.profile matches expectations", () => {
+  describe("users.profile matches the snapshot", () => {
     let responseBody;
 
-    test("users.profile returns a 200", async () => {
+    test("users.profile returns a response", async () => {
       await supertest(app)
         .get(apiPrefix + `users.profile?username=completed-1`)
         .set("Cookie", cookie)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("users.profile returns the correct data type", () => {
-      const ResponseBodySchema = UserProfileSchema.extend({
-        username: z.literal("completed-1"),
-      });
-
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-      expect(validator).not.toThrowError();
+    test("users.profile matches the snapshot on file", () => {
+      expect(responseBody).toMatchSnapshot();
     });
   });
 
   // users.modifyGroups ---------------------------------------------
 
-  describe("users.modifyGroups matches expectations", () => {
+  describe("users.modifyGroups matches the snapshot", () => {
     let responseBody;
 
-    test("users.modifyGroups returns a 200", async () => {
+    test("users.modifyGroups returns a response", async () => {
       const requestBody = {
         users: [
           {
@@ -81,18 +71,13 @@ describe("Users routes should match expectations", () => {
         .post(apiPrefix + "users.modifyGroups")
         .set("Cookie", cookie)
         .send(requestBody)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("users.modifyGroups returns the correct data type", () => {
-      const ResponseBodySchema = z.array(UserWithGroupNamesSchema);
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-      expect(validator).not.toThrowError();
+    test("users.modifyGroups matches the snapshot", () => {
+      expect(responseBody).toMatchSnapshot();
     });
   });
 });

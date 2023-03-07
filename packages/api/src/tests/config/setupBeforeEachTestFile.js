@@ -6,6 +6,7 @@ const DIST_PATH = __dirname + "/../../../dist";
 global.DIST_PATH = DIST_PATH;
 
 global.__SUPERTEST_API_PREFIX__ = "/api/v1/";
+global.SMOKE_TEST_TOPIC_URI = "smoke-testing-vseed";
 global.FIRST_SMOKE_TEST_TOPIC_DOCUMENT_URI = "smoke-testing-vseed_setup";
 
 const knexConfig = require(`${DIST_PATH}/db/knexfile`);

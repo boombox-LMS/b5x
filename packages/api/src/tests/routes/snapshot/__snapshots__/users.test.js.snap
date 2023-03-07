@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Users routes should match expectations users.modifyGroups matches expectations users.modifyGroups matches the snapshot on file 1`] = `
+exports[`Users routes should match expectations users.modifyGroups matches the snapshot users.modifyGroups matches the snapshot 1`] = `
 [
   {
     "email": "blank-2@test.com",
@@ -32,7 +32,7 @@ exports[`Users routes should match expectations users.modifyGroups matches expec
 ]
 `;
 
-exports[`Users routes should match expectations users.profile matches expectations users.profile matches the snapshot on file 1`] = `
+exports[`Users routes should match expectations users.profile matches the snapshot users.profile matches the snapshot on file 1`] = `
 {
   "badges": [],
   "email": "completed-1@test.com",
