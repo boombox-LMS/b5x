@@ -1,6 +1,6 @@
 const supertest = require("supertest");
 
-describe("Documents routes should return a 200", () => {
+describe("Documents routes should match their snapshots", () => {
   let app;
   let cookie;
   let testDocumentUri;
@@ -30,33 +30,60 @@ describe("Documents routes should return a 200", () => {
   afterAll(async () => {
     await app.get("db").destroy();
   });
-
   // documents.contents ---------------------------------------------
 
-  describe("documents.contents matches expectations", () => {
+  describe("documents.contents matches the snapshot", () => {
     let responseBody;
 
-    test("documents.contents matches the snapshot on file", () => {
+    test("documents.contents returns a response", async () => {
+      await supertest(app)
+        .get(apiPrefix + `documents.contents?documentUri=${testDocumentUri}`)
+        .set("Cookie", cookie)
+        .then((res) => {
+          responseBody = res.body;
+        });
+    });
+
+    test("documents.contents matches the snapshot", () => {
       expect(responseBody).toMatchSnapshot();
     });
   });
 
   // documents.responses --------------------------------------------
 
-  describe("documents.responses matches expectations", () => {
+  describe("documents.responses matches the snapshot", () => {
     let responseBody;
 
-    test("documents.responses matches the snapshot on file", () => {
+    test("documents.responses returns a response", async () => {
+      await supertest(app)
+        .get(apiPrefix + `documents.responses?documentUri=${testDocumentUri}`)
+        .set("Cookie", cookie)
+        .then((res) => {
+          responseBody = res.body;
+        });
+    });
+
+    test("documents.responses matches the snapshot", () => {
       expect(responseBody).toMatchSnapshot();
     });
   });
 
   // documents.verifyCompletion -------------------------------------
 
-  describe("documents.verifyCompletion matches the snapshot on file", () => {
+  describe("documents.verifyCompletion matches the snapshot", () => {
     let responseBody;
 
-    test("documents.verifyCompletion matches the snapshot on file", () => {
+    test("documents.verifyCompletion returns a response", async () => {
+      await supertest(app)
+        .post(apiPrefix + `documents.verifyCompletion`)
+        .send({ documentUri: testDocumentUri })
+        .set("Cookie", cookie)
+        .then((res) => {
+          responseBody = res.body;
+        });
+    });
+
+    test("documents.verifyCompletion matches the snapshot", () => {
       expect(responseBody).toMatchSnapshot();
     });
   });

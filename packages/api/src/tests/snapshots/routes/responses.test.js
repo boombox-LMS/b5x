@@ -66,25 +66,21 @@ describe("Responses routes should match expectations", () => {
 
   // responses.create -----------------------------------------------
 
-  describe("responses.create matches expectations", () => {
+  describe("responses.create matches the snapshot", () => {
     let responseBody;
 
-    test("responses.create returns a 200", async () => {
+    test("responses.create returns a response", async () => {
       await supertest(app)
         .post(apiPrefix + "responses.create")
         .set("Cookie", cookie)
         .send({ ...response })
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("responses.create returns the correct data type", () => {
-      const validator = () => {
-        UserResponseSchema.parse(responseBody);
-      };
-      expect(validator).not.toThrowError();
+    test("response.create matches the snapshot", () => {
+      expect(responseBody).toMatchSnapshot();
     });
   });
 });

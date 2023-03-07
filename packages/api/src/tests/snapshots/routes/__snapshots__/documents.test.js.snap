@@ -1,7 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documents routes should return a 200 documents.contents matches expectations documents.contents matches the snapshot on file 1`] = `undefined`;
+exports[`Documents routes should match their snapshots documents.contents matches the snapshot documents.contents matches the snapshot 1`] = `
+{
+  "contentMode": "tutorial",
+  "fragments": [
+    {
+      "children": [],
+      "contentType": "HtmlContent",
+      "contents": "<h1 id="setup">Setup</h1>
+<p>Please seed the database before proceeding further, just to verify that you&#39;re working with fresh data.</p>
+",
+      "data": {
+        "isTemplated": false,
+      },
+      "dependencyUris": [],
+      "displayConditions": [],
+      "documentUri": "smoke-testing-vseed_setup",
+      "isRequired": false,
+      "isStateful": false,
+      "uri": "smoke-testing-vseed_setup_f1",
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "contentType": "HtmlContent",
+          "contents": "<p>The database is freshly seeded.</p>
+",
+          "data": {
+            "isTemplated": false,
+          },
+          "dependencyUris": [],
+          "displayConditions": [],
+          "documentUri": "smoke-testing-vseed_setup",
+          "isRequired": false,
+          "isStateful": false,
+          "uri": "smoke-testing-vseed_setup_f3",
+        },
+      ],
+      "contentType": "ContinueButton",
+      "contents": "",
+      "data": {},
+      "dependencyUris": [],
+      "displayConditions": [],
+      "documentUri": "smoke-testing-vseed_setup",
+      "isRequired": true,
+      "isStateful": true,
+      "uri": "smoke-testing-vseed_setup_f2",
+    },
+    {
+      "children": [],
+      "contentType": "DocumentCompletionContent",
+      "contents": "",
+      "data": {},
+      "dependencyUris": [
+        "smoke-testing-vseed_setup_f2",
+      ],
+      "displayConditions": [
+        {
+          "data": {
+            "operator": "status-is",
+            "targetValue": "completed",
+            "uri": "smoke-testing-vseed_setup_f2",
+          },
+          "type": "condition",
+        },
+      ],
+      "documentUri": "smoke-testing-vseed_setup",
+      "isRequired": false,
+      "isStateful": false,
+      "uri": "smoke-testing-vseed_setup_f4",
+    },
+  ],
+  "topicUri": "smoke-testing-vseed",
+  "uri": "smoke-testing-vseed_setup",
+}
+`;
 
-exports[`Documents routes should return a 200 documents.responses matches expectations documents.responses matches the snapshot on file 1`] = `undefined`;
+exports[`Documents routes should match their snapshots documents.responses matches the snapshot documents.responses matches the snapshot 1`] = `
+{
+  "smoke-testing-vseed_setup_f2": {
+    "fragmentUri": "smoke-testing-vseed_setup_f2",
+    "status": "completed",
+    "value": "t",
+  },
+}
+`;
 
-exports[`Documents routes should return a 200 documents.verifyCompletion matches the snapshot on file documents.verifyCompletion matches the snapshot on file 1`] = `undefined`;
+exports[`Documents routes should match their snapshots documents.verifyCompletion matches the snapshot documents.verifyCompletion matches the snapshot 1`] = `
+{
+  "documentIsCompleted": true,
+  "documentUri": "smoke-testing-vseed_setup",
+}
+`;
