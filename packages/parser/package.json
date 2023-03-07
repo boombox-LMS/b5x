@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "pnpm run build; jest --coverage",
+    "test-core": "pnpm run build; jest --coverage --testPathPattern=core",
     "clean": "rimraf dist/",
     "build": "pnpm run clean && tsc"
   },
