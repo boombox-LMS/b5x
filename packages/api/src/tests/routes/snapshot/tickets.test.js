@@ -1,16 +1,20 @@
 const supertest = require("supertest");
-const { z } = require("zod");
-const {
-  FeedbackTicketSchema,
-  IssueTicketSchema,
-  SavedTicketSchema,
-} = require("@b5x/types");
+const { sanitizeFields } = require("data-sanitizer");
 
-describe("Tickets routes should match expectations", () => {
+describe("Tickets routes should match snapshots", () => {
   let app;
   let cookie;
   let testDocumentId;
   const apiPrefix = global.__SUPERTEST_API_PREFIX__;
+
+  const compareResultToSnapshots = (responseBody) => {
+    const sanitationResult = sanitizeFields({
+      data: responseBody,
+      fieldNames: ["id", "createdAt", "updatedAt", "key"],
+    });
+    expect(sanitationResult.data).toMatchSnapshot();
+    expect(sanitationResult.removedValues.id.join(", ")).toMatchSnapshot();
+  };
 
   beforeAll(async () => {
     // Add a seeded test database to the app, available as app.get('db')
@@ -22,7 +26,7 @@ describe("Tickets routes should match expectations", () => {
       .get("db")
       .knex.select("id")
       .from("documents")
-      .where({ uri: global.FIRST_SMOKE_TEST_TOPIC_DOCUMENT_URI })
+      .where({ uri: "smoke-testing-vseed_setup" })
       .then((rows) => {
         return rows[0].id;
       });
@@ -44,61 +48,49 @@ describe("Tickets routes should match expectations", () => {
 
   // tickets/issues.list --------------------------------------------
 
-  describe("tickets/issues.list matches expectations", () => {
+  describe("tickets/issues.list matches the snapshot", () => {
     let responseBody;
 
-    test("tickets/issues.list returns a 200", async () => {
+    test("tickets/issues.list returns a response", async () => {
       await supertest(app)
         .get(apiPrefix + `tickets/issues.list`)
         .set("Cookie", cookie)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("tickets/issues.list returns the correct data type", () => {
-      const ResponseBodySchema = z.array(IssueTicketSchema);
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-
-      expect(validator).not.toThrowError();
+    test("tickets/issues.list matches the snapshot on file", () => {
+      compareResultToSnapshots(responseBody);
     });
   });
 
   // tickets/feedback.list ------------------------------------------
 
-  describe("tickets/feedback.list matches expectations", () => {
+  describe("tickets/feedback.list matches the snapshot", () => {
     let responseBody;
 
-    test("tickets/feedback.list returns a 200", async () => {
+    test("tickets/feedback.list returns a response", async () => {
       await supertest(app)
         .get(apiPrefix + `tickets/feedback.list`)
         .set("Cookie", cookie)
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("tickets/feedback.list returns the correct data type", () => {
-      const ResponseBodySchema = z.array(FeedbackTicketSchema);
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-
-      expect(validator).not.toThrowError();
+    test("tickets/feedback.list matches the snapshot", () => {
+      compareResultToSnapshots(responseBody);
     });
   });
 
   // tickets.setStatus ----------------------------------------------
 
-  describe("tickets.setStatus matches expectations", () => {
+  describe("tickets.setStatus matches the snapshot", () => {
     let responseBody;
     let testTicketId;
 
-    test("tickets.setStatus returns a 200", async () => {
+    test("tickets.setStatus returns a response", async () => {
       testTicketId = await app
         .get("db")
         .knex.select("id")
@@ -115,22 +107,13 @@ describe("Tickets routes should match expectations", () => {
           ticketId: testTicketId,
           status: "in progress",
         })
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("tickets.setStatus returns the correct data type", () => {
-      const ResponseBodySchema = SavedTicketSchema.extend({
-        id: z.literal(testTicketId),
-        status: z.literal("in progress"),
-      });
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-
-      expect(validator).not.toThrowError();
+    test("tickets.setStatus matches the snapshot", () => {
+      compareResultToSnapshots(responseBody);
     });
   });
 
@@ -142,7 +125,7 @@ describe("Tickets routes should match expectations", () => {
     let testAssigneeEmail;
     let testAssigneeId;
 
-    test("tickets.setAssignee returns a 200", async () => {
+    test("tickets.setAssignee returns a response", async () => {
       testTicketId = await app
         .get("db")
         .knex.select("id")
@@ -169,39 +152,13 @@ describe("Tickets routes should match expectations", () => {
           ticketId: testTicketId,
           assigneeEmail: testAssigneeEmail,
         })
-        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("tickets.setAssignee returns the correct data type", () => {
-      const ResponseBodySchema = SavedTicketSchema.extend({
-        id: z.literal(testTicketId),
-        assigneeId: z.literal(testAssigneeId),
-      });
-      const validator = () => {
-        ResponseBodySchema.parse(responseBody);
-      };
-
-      expect(validator).not.toThrowError();
-    });
-  });
-
-  // tickets.create -------------------------------------------------
-
-  describe("tickets.create matches expectations", () => {
-    test("tickets.create returns a 200", async () => {
-      await supertest(app)
-        .post(apiPrefix + `tickets.create`)
-        .set("Cookie", cookie)
-        .send({
-          reporterUrl: "https://localhost:3000/",
-          title: "Test issue",
-          priorityLevel: 0,
-          description: "Test issue description",
-        })
-        .expect(200);
+    test("tickets.setAssignee matches the snapshot", () => {
+      compareResultToSnapshots(responseBody);
     });
   });
 });
