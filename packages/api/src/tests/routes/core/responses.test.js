@@ -1,6 +1,7 @@
 const supertest = require("supertest");
+const { UserResponseSchema } = require("@b5x/types");
 
-describe("Responses routes should match the snapshot", () => {
+describe("Responses routes should match expectations", () => {
   let app;
   let cookie = "";
   let response;
@@ -65,21 +66,25 @@ describe("Responses routes should match the snapshot", () => {
 
   // responses.create -----------------------------------------------
 
-  describe("responses.create matches the snapshot", () => {
+  describe("responses.create matches expectations", () => {
     let responseBody;
 
-    test("responses.create returns a response", async () => {
+    test("responses.create returns a 200", async () => {
       await supertest(app)
         .post(apiPrefix + "responses.create")
         .set("Cookie", cookie)
         .send({ ...response })
+        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("response.create matches the snapshot", () => {
-      expect(responseBody).toMatchSnapshot();
+    test("responses.create returns the correct data type", () => {
+      const validator = () => {
+        UserResponseSchema.parse(responseBody);
+      };
+      expect(validator).not.toThrowError();
     });
   });
 });

@@ -1,7 +1,12 @@
 const supertest = require("supertest");
 const { sanitizeFields } = require("data-sanitizer");
+const {
+  PublicUserWithStatsSchema,
+  PublicTopicWithStatsSchema,
+} = require("@b5x/types");
+const { z } = require("zod");
 
-describe("Stats routes match the snapshot", () => {
+describe("Stats routes match expectations", () => {
   let app;
   let cookie = "";
   const apiPrefix = global.__SUPERTEST_API_PREFIX__;
@@ -29,49 +34,50 @@ describe("Stats routes match the snapshot", () => {
 
   // stats.listUsers ------------------------------------------------
 
-  describe("stats.listUsers matches the snapshot", () => {
+  describe("stats.listUsers matches expectations", () => {
     let responseBody;
 
-    test("stats.listUsers returns a response", async () => {
+    test("stats.listUsers returns a 200", async () => {
       await supertest(app)
         .get(apiPrefix + `stats.listUsers`)
         .set("Cookie", cookie)
+        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("stats.listUsers matches the snapshot", () => {
-      responseBody.forEach((user) => {
-        user.lastSeen = "[SANITIZED]";
-        user.activityMap = "[SANITIZED]";
-        user.createdAt = "[SANITIZED]";
-      });
-      expect(responseBody).toMatchSnapshot();
+    test("stats.listUsers returns the correct data type", () => {
+      const ResponseSchema = z.array(PublicUserWithStatsSchema);
+      const validator = () => {
+        ResponseSchema.parse(responseBody);
+      };
+      expect(validator).not.toThrowError();
     });
   });
 
   // stats.listTopics -----------------------------------------------
 
-  describe("stats.listTopics matches the snapshot", () => {
+  describe("stats.listTopics matches expectations", () => {
     let responseBody;
 
-    test("stats.listTopics returns a response", async () => {
+    test("stats.listTopics returns a 200", async () => {
       await supertest(app)
         .get(apiPrefix + `stats.listTopics`)
         .set("Cookie", cookie)
+        .expect(200)
         .then((res) => {
           responseBody = res.body;
         });
     });
 
-    test("stats.listTopics matches the snapshot", () => {
-      const sanitationResult = sanitizeFields({
-        data: responseBody,
-        fieldNames: ["id", "createdAt"],
-      });
-      expect(sanitationResult.data).toMatchSnapshot();
-      expect(sanitationResult.removedValues.id.join(", ")).toMatchSnapshot();
+    test("stats.listTopics returns the correct data type", () => {
+      const ResponseBodySchema = z.array(PublicTopicWithStatsSchema);
+      const validator = () => {
+        ResponseBodySchema.parse(responseBody);
+      };
+
+      expect(validator).not.toThrowError();
     });
   });
 });
