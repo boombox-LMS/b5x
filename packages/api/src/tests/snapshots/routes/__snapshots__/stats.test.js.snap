@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stats routes match expectations stats.listTopics matches expectations stats.listTopics matches the snapshot on file 1`] = `
+exports[`Stats routes match the snapshot stats.listTopics matches the snapshot stats.listTopics matches the snapshot 1`] = `
 [
   {
     "completionCount": 2,
@@ -1070,9 +1070,9 @@ exports[`Stats routes match expectations stats.listTopics matches expectations s
 ]
 `;
 
-exports[`Stats routes match expectations stats.listTopics matches expectations stats.listTopics matches the snapshot on file 2`] = `""`;
+exports[`Stats routes match the snapshot stats.listTopics matches the snapshot stats.listTopics matches the snapshot 2`] = `""`;
 
-exports[`Stats routes match expectations stats.listUsers matches expectations stats.listUsers matches the snapshot on file 1`] = `
+exports[`Stats routes match the snapshot stats.listUsers matches the snapshot stats.listUsers matches the snapshot 1`] = `
 [
   {
     "activityMap": "[SANITIZED]",

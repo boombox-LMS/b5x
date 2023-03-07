@@ -1,7 +1,6 @@
 const supertest = require("supertest");
-const { UserResponseSchema } = require("@b5x/types");
 
-describe("Responses routes should match expectations", () => {
+describe("Responses routes should match the snapshot", () => {
   let app;
   let cookie = "";
   let response;

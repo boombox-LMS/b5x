@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Responses routes should match expectations responses.create matches the snapshot response.create matches the snapshot 1`] = `
+exports[`Responses routes should match the snapshot responses.create matches the snapshot response.create matches the snapshot 1`] = `
 {
   "fragmentUri": "boombox-feature-utopia-vseed_short-text-question_name",
   "status": "completed",
