@@ -2,14 +2,17 @@
  *  This will run once before each file.
  */
 
+const DIST_PATH = __dirname + "/../../../dist";
+global.DIST_PATH = DIST_PATH;
+
 global.__SUPERTEST_API_PREFIX__ = "/api/v1/";
 
-const knexConfig = require("../../../dist/db/knexfile");
+const knexConfig = require(`${DIST_PATH}/db/knexfile`);
 global.__TEST_DB_CONNECTION_CONFIG__ = knexConfig["test"];
 const {
   DatabaseConnectionBuilder,
-} = require("../../../dist/db/DatabaseConnectionBuilder");
-const { AppBuilder } = require("../../../dist/AppBuilder");
+} = require(`${DIST_PATH}/db/DatabaseConnectionBuilder`);
+const { AppBuilder } = require(`${DIST_PATH}/AppBuilder`);
 
 global.buildKnexConnectionToTestDb = async () => {
   const dbConnectionBuilder = new DatabaseConnectionBuilder("test");
