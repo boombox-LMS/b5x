@@ -2,20 +2,17 @@
 const fs = require("fs");
 const path = require("path");
 const parsingClassFolderFilenames = fs.readdirSync(
-  path.resolve(
-    __dirname,
-    "../../../dist/componentBuilders/fragments/parsingClasses"
-  )
+  `${global.DIST_PATH}/componentBuilders/fragments/parsingClasses`
 );
 const parsingClassFiles = parsingClassFolderFilenames.filter((filename) =>
   new RegExp(/.*.js/).test(filename)
 );
 
-describe("Each parsing class parses its own example markup correctly", () => {
+describe("The output of each parsing class matches the snapshot", () => {
   parsingClassFiles.forEach((filename) => {
     const {
       manifest,
-    } = require(`../../../dist/componentBuilders/fragments/parsingClasses/${filename}`);
+    } = require(`${global.DIST_PATH}/componentBuilders/fragments/parsingClasses/${filename}`);
     if (!manifest) {
       console.warn(
         `No manifest found for ${filename}, skipping parsing test for this fragment.`
@@ -23,14 +20,10 @@ describe("Each parsing class parses its own example markup correctly", () => {
     } else {
       // parse each example markup string and test it against its api data schema
       manifest.exampleMarkupStrings.forEach((exampleMarkupString, index) => {
-        test(`The example ${manifest.tagName} markup string at index ${index} matches the corresponding api data schema`, () => {
+        test(`The example ${manifest.tagName} markup string at index ${index} matches the snapshot`, () => {
           const parsedMarkup = global
             .buildFragmentFromMarkupString(exampleMarkupString)
             .packageForApi();
-          const validator = () => {
-            manifest.apiDataSchema.parse(parsedMarkup);
-          };
-          expect(validator).not.toThrowError();
           expect(parsedMarkup).toMatchSnapshot();
         });
       });
