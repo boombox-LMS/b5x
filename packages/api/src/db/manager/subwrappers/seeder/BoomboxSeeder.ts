@@ -125,7 +125,7 @@ export class BoomboxSeeder {
           return this.#insertTickets();
         })
         .catch((e) => {
-          console.error("Error encountered while seeding:", e);
+          throw e;
         })
     );
   }
@@ -167,7 +167,7 @@ export class BoomboxSeeder {
           resolve(true);
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         });
     });
   }
@@ -175,7 +175,11 @@ export class BoomboxSeeder {
   async deleteTableData() {
     for (let i = 0; i < this.tableNames.length; i++) {
       const tableName = this.tableNames[i];
-      await this.knex(tableName).del();
+      await this.knex(tableName)
+        .del()
+        .catch((e: any) => {
+          throw e;
+        });
     }
 
     return true;
@@ -249,7 +253,7 @@ export class BoomboxSeeder {
         return insertedUsers;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     // add users to their configured access groups
@@ -258,11 +262,15 @@ export class BoomboxSeeder {
       const user = insertedUsers[i];
       for (let n = 0; n < user.groups.length; n++) {
         const groupName = user.groups[n];
-        await this.tags.add({
-          userId: user.id,
-          key: "user-group",
-          value: groupName,
-        });
+        await this.tags
+          .add({
+            userId: user.id,
+            key: "user-group",
+            value: groupName,
+          })
+          .catch((e: any) => {
+            throw e;
+          });
       }
     }
 
@@ -422,7 +430,9 @@ export class BoomboxSeeder {
       if (options.skipFillerTopics && new RegExp(/filler/).test(topic.slug)) {
         continue;
       }
-      const insertedTopic = await this.#insertTopic(topic);
+      const insertedTopic = await this.#insertTopic(topic).catch((e: any) => {
+        throw e;
+      });
       insertedTopics.push(insertedTopic);
     }
     return insertedTopics;

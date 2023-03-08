@@ -189,7 +189,7 @@ export class TagsDbWrapper extends DbWrapper {
         return true;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 

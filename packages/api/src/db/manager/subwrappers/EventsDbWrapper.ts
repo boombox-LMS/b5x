@@ -39,7 +39,7 @@ export class EventsDbWrapper extends DbWrapper {
         return event;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 

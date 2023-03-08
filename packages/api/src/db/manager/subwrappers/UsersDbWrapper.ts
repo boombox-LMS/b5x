@@ -104,7 +104,9 @@ export class UsersDbWrapper extends DbWrapper {
       )
     );
 
-    await Promise.all(tagAndUserCreationPromises);
+    await Promise.all(tagAndUserCreationPromises).catch((e: any) => {
+      throw e;
+    });
 
     // fetch all relevant users and tags
     let tagAndUserFetchPromises: Promise<any>[] = [];
@@ -176,7 +178,7 @@ export class UsersDbWrapper extends DbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -191,11 +193,13 @@ export class UsersDbWrapper extends DbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
-    await Promise.all(tagAndUserFetchPromises);
+    await Promise.all(tagAndUserFetchPromises).catch((e: any) => {
+      throw e;
+    });
 
     // loop through the original submitted list, building the taggings to add and remove
     let taggingsToInsert: NewTagging[] = [];
@@ -235,7 +239,9 @@ export class UsersDbWrapper extends DbWrapper {
       );
     }
 
-    await Promise.all(modificationPromises);
+    await Promise.all(modificationPromises).catch((e: any) => {
+      throw e;
+    });
 
     // verify and return the result
     return this.knex
@@ -260,7 +266,7 @@ export class UsersDbWrapper extends DbWrapper {
         return Object.values(finishedUsersByEmail);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -272,7 +278,10 @@ export class UsersDbWrapper extends DbWrapper {
     // get the user's group list
     const userGroupList = await this.#getUserGroupNames({
       userId: params.userId,
+    }).catch((e: any) => {
+      throw e;
     });
+
     let topicVersion;
     let topicSlug = params.topicSlug;
 
@@ -307,7 +316,7 @@ export class UsersDbWrapper extends DbWrapper {
           }
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -336,7 +345,7 @@ export class UsersDbWrapper extends DbWrapper {
           }
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -355,7 +364,7 @@ export class UsersDbWrapper extends DbWrapper {
             prerequisites = rows[0].config.prerequisites;
           })
           .catch((e: any) => {
-            console.error(e);
+            throw e;
           })
       );
       // otherwise, pull the prereqs for the latest version
@@ -371,7 +380,7 @@ export class UsersDbWrapper extends DbWrapper {
             prerequisites = rows[0].config.prerequisites;
           })
           .catch((e: any) => {
-            console.error(e);
+            throw e;
           })
       );
     }
@@ -386,11 +395,13 @@ export class UsersDbWrapper extends DbWrapper {
           completedTopicSlugs = tags.map((tag) => tag.value);
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
-    await Promise.all(queryPromises);
+    await Promise.all(queryPromises).catch((e: any) => {
+      throw e;
+    });
 
     let unmetPrerequisites: string[] = [];
     for (let i = 0; i < prerequisites.length; i++) {
@@ -441,7 +452,7 @@ export class UsersDbWrapper extends DbWrapper {
         }
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -466,7 +477,7 @@ export class UsersDbWrapper extends DbWrapper {
         return insertedUsers[0];
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -481,7 +492,7 @@ export class UsersDbWrapper extends DbWrapper {
         return selectedUsers[0];
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -529,7 +540,7 @@ export class UsersDbWrapper extends DbWrapper {
           }
         )
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -564,16 +575,19 @@ export class UsersDbWrapper extends DbWrapper {
           }
         )
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
-    // TODO: Add catch block
-    return Promise.all(queryPromises).then(() => {
-      return {
-        ...userData,
-        badges,
-      };
-    });
+    return Promise.all(queryPromises)
+      .then(() => {
+        return {
+          ...userData,
+          badges,
+        };
+      })
+      .catch((e: any) => {
+        throw e;
+      });
   }
 }

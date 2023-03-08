@@ -44,7 +44,7 @@ export class TopicsDbWrapper extends DbWrapper {
         return rows.length === 0;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     if (!slugIsAvailable) {
@@ -94,7 +94,7 @@ export class TopicsDbWrapper extends DbWrapper {
           return userGroupNames;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -130,7 +130,7 @@ export class TopicsDbWrapper extends DbWrapper {
           }
         )
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -150,7 +150,7 @@ export class TopicsDbWrapper extends DbWrapper {
           return completedTopicUris;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         }) // TODO: un-hardcode completed topic key
     );
 
@@ -359,7 +359,7 @@ export class TopicsDbWrapper extends DbWrapper {
         return documentRows[0].uri;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -396,7 +396,7 @@ export class TopicsDbWrapper extends DbWrapper {
           return rows[0].version;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         });
     }
 
@@ -424,7 +424,7 @@ export class TopicsDbWrapper extends DbWrapper {
         }
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     // fetch prereqs and first document ID
@@ -448,7 +448,7 @@ export class TopicsDbWrapper extends DbWrapper {
           }
         )
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -458,7 +458,7 @@ export class TopicsDbWrapper extends DbWrapper {
           topic.firstDocumentUri = documentUri;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -527,7 +527,7 @@ export class TopicsDbWrapper extends DbWrapper {
         return topic;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     const prerequisites = await this.knex
@@ -544,7 +544,7 @@ export class TopicsDbWrapper extends DbWrapper {
         }
       )
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     return topic;
@@ -615,7 +615,7 @@ export class TopicsDbWrapper extends DbWrapper {
           return topic;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
   }
@@ -655,7 +655,7 @@ export class TopicsDbWrapper extends DbWrapper {
         }
       )
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 }

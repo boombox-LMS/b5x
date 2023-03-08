@@ -103,7 +103,7 @@ export class FragmentsDbWrapper {
         });
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     // return the expanded fragments
@@ -130,7 +130,7 @@ export class FragmentsDbWrapper {
         return result.rows;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 

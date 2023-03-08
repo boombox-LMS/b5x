@@ -37,7 +37,7 @@ router.post(
         res.send(user);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -73,7 +73,7 @@ router.get(
         .findById(currentUserId)
         .then((user) => res.send(user))
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         });
     } else {
       res.send({ email: null });
@@ -103,7 +103,7 @@ router.post(
         res.send(result);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -123,7 +123,7 @@ router.get(
         res.send(rows.map((row) => row.email));
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -140,7 +140,7 @@ router.get(
         res.send(profile);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );

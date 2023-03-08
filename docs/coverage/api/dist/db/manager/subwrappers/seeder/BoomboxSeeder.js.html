@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">92.35% </span>
+                <span class="strong">90.17% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>157/170</span>
+                <span class='fraction'>156/173</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.49% </span>
+                <span class="strong">67.79% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>41/59</span>
+                <span class='fraction'>40/59</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.9% </span>
+                <span class="strong">82.97% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>40/44</span>
+                <span class='fraction'>39/47</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.83% </span>
+                <span class="strong">93.03% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>147/155</span>
+                <span class='fraction'>147/158</span>
             </div>
         
             
@@ -448,7 +448,17 @@
 <a name='L383'></a><a href='#L383'>383</a>
 <a name='L384'></a><a href='#L384'>384</a>
 <a name='L385'></a><a href='#L385'>385</a>
-<a name='L386'></a><a href='#L386'>386</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">533x</span>
 <span class="cline-any cline-yes">416x</span>
@@ -602,6 +612,10 @@
 <span class="cline-any cline-yes">208x</span>
 <span class="cline-any cline-yes">208x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -691,6 +705,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -828,6 +846,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">304x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">304x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
@@ -835,7 +855,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
 var __awaiter = (this &amp;&amp; this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    function adopt(value) { return value instanceof P ? value : <span class="branch-1 cbranch-no" title="branch not covered" >new P(<span class="fstat-no" title="function not covered" >fu</span>nction (resolve) { <span class="cstat-no" title="statement not covered" >resolve(value); </span>});</span> }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { <span class="cstat-no" title="statement not covered" >reject(e); </span>} }
         function <span class="fstat-no" title="function not covered" >rejected(</span>value) { <span class="cstat-no" title="statement not covered" >try { <span class="cstat-no" title="statement not covered" >step(generator["throw"](value)); </span>} catch (e) { <span class="cstat-no" title="statement not covered" >reject(e); </span>} </span>}
@@ -985,7 +1005,11 @@ class BoomboxSeeder {
         return __awaiter(this, void 0, void 0, function* () {
             for (let i = 0; i &lt; this.tableNames.length; i++) {
                 const tableName = this.tableNames[i];
-                yield this.knex(tableName).del();
+                yield this.knex(tableName)
+                    .del()
+                    .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
             }
             return true;
         });
@@ -1069,10 +1093,14 @@ _BoomboxSeeder_instances = new WeakSet(), _BoomboxSeeder_mockCliDataFromTopicFil
             const user = insertedUsers[i];
             for (let n = 0; n &lt; user.groups.length; n++) {
                 const groupName = user.groups[n];
-                yield this.tags.add({
+                yield this.tags
+                    .add({
                     userId: user.id,
                     key: "user-group",
                     value: groupName,
+                })
+                    .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
                 });
             }
         }
@@ -1212,7 +1240,9 @@ _BoomboxSeeder_instances = new WeakSet(), _BoomboxSeeder_mockCliDataFromTopicFil
             <span class="missing-if-branch" title="if path not taken" >I</span>if (options.skipFillerTopics &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >new RegExp(/filler/).test(topic.slug))</span> {
 <span class="cstat-no" title="statement not covered" >                continue;</span>
             }
-            const insertedTopic = yield __classPrivateFieldGet(this, _BoomboxSeeder_instances, "m", _BoomboxSeeder_insertTopic).call(this, topic);
+            const insertedTopic = yield __classPrivateFieldGet(this, _BoomboxSeeder_instances, "m", _BoomboxSeeder_insertTopic).call(this, topic).catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                throw e;</span>
+            });
             insertedTopics.push(insertedTopic);
         }
         return insertedTopics;
@@ -1225,7 +1255,7 @@ _BoomboxSeeder_instances = new WeakSet(), _BoomboxSeeder_mockCliDataFromTopicFil
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-08T05:42:02.779Z
+                at 2023-03-08T05:50:06.824Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

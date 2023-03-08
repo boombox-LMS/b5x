@@ -30,7 +30,7 @@ export class DocumentsDbWrapper extends DbWrapper {
         return rows[0].completionConditions;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -249,7 +249,7 @@ export class DocumentsDbWrapper extends DbWrapper {
         });
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     // return the expanded documents

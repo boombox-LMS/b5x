@@ -41,7 +41,7 @@ export class ResponsesDbWrapper extends DbWrapper {
         return rows[0];
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -107,7 +107,7 @@ export class ResponsesDbWrapper extends DbWrapper {
           return Array.from(responsesByFragmentUri.values());
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
   }

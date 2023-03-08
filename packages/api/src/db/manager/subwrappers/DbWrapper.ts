@@ -23,7 +23,7 @@ export class DbWrapper {
         return parseInt(rows[0].count);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 

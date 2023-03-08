@@ -36,7 +36,7 @@ export class TicketsDbWrapper extends DbWrapper {
           done(ticket);
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         });
     });
   }
@@ -57,7 +57,7 @@ export class TicketsDbWrapper extends DbWrapper {
         return rows[0];
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -74,7 +74,7 @@ export class TicketsDbWrapper extends DbWrapper {
         return rows[0].id;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     return this.knex("tickets")
@@ -85,7 +85,7 @@ export class TicketsDbWrapper extends DbWrapper {
         return rows[0];
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -127,7 +127,7 @@ export class TicketsDbWrapper extends DbWrapper {
         return ticket;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 

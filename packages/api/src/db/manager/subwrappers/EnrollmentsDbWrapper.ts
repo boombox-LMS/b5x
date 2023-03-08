@@ -83,7 +83,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         return rows[0];
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -120,12 +120,12 @@ export class EnrollmentsDbWrapper extends DbWrapper {
               return rows[0];
             })
             .catch((e: any) => {
-              console.error(e);
+              throw e;
             });
         }
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
@@ -311,7 +311,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
           savedEnrollment = result;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -368,7 +368,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -380,7 +380,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
           documentCompletionTags = result;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -392,7 +392,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
           topicCompletionTags = result;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -403,7 +403,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
           responsesByFragmentUri = result;
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -435,7 +435,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         };
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
 
     // gather all the needed data from the database
@@ -575,7 +575,7 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         return responsesByFragmentUri;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 

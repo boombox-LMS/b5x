@@ -37,7 +37,7 @@ router.get(
         res.send(publicCatalog);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -97,7 +97,7 @@ router.get(
         }
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -140,7 +140,7 @@ router.get(
         }
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -161,7 +161,7 @@ router.get(
       .find(userId, topicUri)
       .then((enrollment) => res.send(enrollment))
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -182,7 +182,7 @@ router.post(
       .publish({ topic: req.body.topic })
       .then(() => res.status(200).send())
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -208,14 +208,14 @@ router.post(
               res.send({ topicUri, topicIsCompleted: true });
             })
             .catch((e: any) => {
-              console.error(e);
+              throw e;
             });
         } else {
           res.send({ topicUri, topicIsCompleted: false });
         }
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );

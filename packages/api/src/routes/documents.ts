@@ -43,7 +43,7 @@ router.get(
         res.send(Object.fromEntries(responsesByFragmentUri));
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -59,8 +59,11 @@ router.post(
     const userId = req.session.currentUserId;
 
     // retrieve the document's completion conditions
-    const documentCompletionConditions =
-      await req.db.documents.getCompletionConditions({ documentUri });
+    const documentCompletionConditions = await req.db.documents
+      .getCompletionConditions({ documentUri })
+      .catch((e: any) => {
+        throw e;
+      });
 
     // retrieve the user's responses to the document
     req.db.responses
@@ -97,7 +100,7 @@ router.post(
                 resolve(true);
               })
               .catch((e: any) => {
-                console.error(e);
+                throw e;
               });
           }
         });
@@ -106,7 +109,7 @@ router.post(
         res.send({ documentUri, documentIsCompleted: result });
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );

@@ -82,7 +82,7 @@ export class StatsDbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -104,7 +104,7 @@ export class StatsDbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -133,7 +133,7 @@ export class StatsDbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -158,7 +158,7 @@ export class StatsDbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -183,7 +183,7 @@ export class StatsDbWrapper {
           });
         })
         .catch((e: any) => {
-          console.error(e);
+          throw e;
         })
     );
 
@@ -340,17 +340,18 @@ export class StatsDbWrapper {
         .andWhere("taggings.taggable_table_name", "=", "users")
     );
 
-    // TODO: Does this need a catch block as well?
-    return Promise.all(queryPromises).then(
-      ([users, events, responses, tags]) => {
+    return Promise.all(queryPromises)
+      .then(([users, events, responses, tags]) => {
         return {
           users,
           events,
           responses,
           tags,
         };
-      }
-    );
+      })
+      .catch((e: any) => {
+        throw e;
+      });
   }
 
   getTopicsList(): Promise<TopicWithStats[]> {

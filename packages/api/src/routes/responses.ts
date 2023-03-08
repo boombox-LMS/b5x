@@ -20,7 +20,7 @@ router.post(
         res.send(response);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );

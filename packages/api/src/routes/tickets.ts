@@ -13,7 +13,7 @@ router.get(
         res.send(issues);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -27,7 +27,7 @@ router.get(
         res.send(tickets);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -60,7 +60,7 @@ router.post(
         res.send(ticket);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
@@ -76,7 +76,7 @@ router.post(
         res.send(ticket);
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );

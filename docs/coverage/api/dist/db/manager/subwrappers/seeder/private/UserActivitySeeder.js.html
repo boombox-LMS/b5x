@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.57% </span>
+                <span class="strong">92.07% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>209/221</span>
+                <span class='fraction'>209/227</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.58% </span>
+                <span class="strong">79.62% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>43/48</span>
+                <span class='fraction'>43/54</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.11% </span>
+                <span class="strong">94.39% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>202/208</span>
+                <span class='fraction'>202/214</span>
             </div>
         
             
@@ -608,7 +608,25 @@
 <a name='L543'></a><a href='#L543'>543</a>
 <a name='L544'></a><a href='#L544'>544</a>
 <a name='L545'></a><a href='#L545'>545</a>
-<a name='L546'></a><a href='#L546'>546</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L546'></a><a href='#L546'>546</a>
+<a name='L547'></a><a href='#L547'>547</a>
+<a name='L548'></a><a href='#L548'>548</a>
+<a name='L549'></a><a href='#L549'>549</a>
+<a name='L550'></a><a href='#L550'>550</a>
+<a name='L551'></a><a href='#L551'>551</a>
+<a name='L552'></a><a href='#L552'>552</a>
+<a name='L553'></a><a href='#L553'>553</a>
+<a name='L554'></a><a href='#L554'>554</a>
+<a name='L555'></a><a href='#L555'>555</a>
+<a name='L556'></a><a href='#L556'>556</a>
+<a name='L557'></a><a href='#L557'>557</a>
+<a name='L558'></a><a href='#L558'>558</a>
+<a name='L559'></a><a href='#L559'>559</a>
+<a name='L560'></a><a href='#L560'>560</a>
+<a name='L561'></a><a href='#L561'>561</a>
+<a name='L562'></a><a href='#L562'>562</a>
+<a name='L563'></a><a href='#L563'>563</a>
+<a name='L564'></a><a href='#L564'>564</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">3120x</span>
 <span class="cline-any cline-yes">49x</span>
@@ -674,12 +692,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -689,6 +713,10 @@
 <span class="cline-any cline-yes">2631x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">228x</span>
@@ -700,10 +728,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">228x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">16x</span>
@@ -1218,20 +1254,30 @@ class UserActivitySeeder {
             // These cannot be done in parallel,
             // as each one depends on UUID-&gt;ID mappings from the previous one
             if (accEnrollments.length &gt; 0) {
-                yield __classPrivateFieldGet(this, _UserActivitySeeder_instances, "m", _UserActivitySeeder_batchInsertEnrollments).call(this, { enrollments: accEnrollments });
+                yield __classPrivateFieldGet(this, _UserActivitySeeder_instances, "m", _UserActivitySeeder_batchInsertEnrollments).call(this, { enrollments: accEnrollments }).catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
             }
             if (accResponses.length &gt; 0) {
-                yield __classPrivateFieldGet(this, _UserActivitySeeder_instances, "m", _UserActivitySeeder_batchInsertResponses).call(this, { responses: accResponses });
+                yield __classPrivateFieldGet(this, _UserActivitySeeder_instances, "m", _UserActivitySeeder_batchInsertResponses).call(this, { responses: accResponses }).catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
             }
             if (accEvents.length &gt; 0) {
-                yield __classPrivateFieldGet(this, _UserActivitySeeder_instances, "m", _UserActivitySeeder_batchInsertEvents).call(this, { events: accEvents });
+                yield __classPrivateFieldGet(this, _UserActivitySeeder_instances, "m", _UserActivitySeeder_batchInsertEvents).call(this, { events: accEvents }).catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
             }
             // Insert document completions --
             // cannot be done in parallel, or seed data will not be consistent/verifiable
             for (let i = 0; i &lt; accDocumentCompletions.length; i++) {
                 const { insertionData } = accDocumentCompletions[i];
                 const { userId, documentUri } = insertionData;
-                yield this.documents.markAsComplete({ userId, documentUri });
+                yield this.documents
+                    .markAsComplete({ userId, documentUri })
+                    .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
+                });
             }
             // Insert topic completions --
             // cannot be done in parallel, or seed data will not be consistent/verifiable
@@ -1240,15 +1286,23 @@ class UserActivitySeeder {
                 const { userId, topicUri, topicSlug } = insertionData;
                 // these two tag adds mimic the behavior of topics.markAsComplete, which cannot be run here
                 // because it parallelizes its operations, creating unpredictability in the seed data
-                yield this.tags.add({
+                yield this.tags
+                    .add({
                     userId,
                     key: "completed-topic-slug",
                     value: topicSlug,
+                })
+                    .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
                 });
-                yield this.tags.add({
+                yield this.tags
+                    .add({
                     userId,
                     key: "completed-topic-uri",
                     value: topicUri,
+                })
+                    .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                    console.error(e);</span>
                 });
             }
             return true;
@@ -1705,7 +1759,7 @@ _UserActivitySeeder_instances = new WeakSet(), _UserActivitySeeder_getOrderedFra
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-08T05:42:02.779Z
+                at 2023-03-08T05:50:06.824Z
             </div>
         <script src="../../../../../../prettify.js"></script>
         <script>

@@ -17,7 +17,7 @@ router.get(
       .getTopicsList()
       .then((result) => res.send(result))
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 );
