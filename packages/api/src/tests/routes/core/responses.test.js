@@ -32,6 +32,9 @@ describe("Responses routes should match expectations", () => {
       .limit(1)
       .then((rows) => {
         return rows[0];
+      })
+      .catch((e) => {
+        throw e;
       });
 
     response.value = response.value + " (edited to add: this text right here)";
@@ -46,6 +49,9 @@ describe("Responses routes should match expectations", () => {
       .where("enrollments.id", "=", response.enrollmentId)
       .then((rows) => {
         return rows[0].email;
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // Log the user in
@@ -56,6 +62,9 @@ describe("Responses routes should match expectations", () => {
       .then((res) => {
         // Save the cookie to send with later requests
         cookie = global.getCookie(res) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
@@ -77,6 +86,9 @@ describe("Responses routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

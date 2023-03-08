@@ -23,6 +23,9 @@ describe("Complex topics wrapper functions return the expected data types", () =
       .from("users")
       .then((rows) => {
         testUserId = rows[0].id;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 

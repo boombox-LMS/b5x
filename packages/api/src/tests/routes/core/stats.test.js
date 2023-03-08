@@ -24,6 +24,9 @@ describe("Stats routes match expectations", () => {
       .then((res) => {
         // Save the cookie to send with later requests
         cookie = global.getCookie(res) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
@@ -44,6 +47,9 @@ describe("Stats routes match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -68,6 +74,9 @@ describe("Stats routes match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

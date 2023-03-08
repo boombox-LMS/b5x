@@ -38,6 +38,9 @@ describe("Stats routes match the snapshot", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -62,6 +65,9 @@ describe("Stats routes match the snapshot", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

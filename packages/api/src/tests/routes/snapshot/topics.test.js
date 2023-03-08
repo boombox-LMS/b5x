@@ -19,6 +19,9 @@ describe("Topics routes should match expectations", () => {
       .then((res) => {
         // Save the cookie to send with later requests
         cookie = global.getCookie(res) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
@@ -38,6 +41,9 @@ describe("Topics routes should match expectations", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -57,6 +63,9 @@ describe("Topics routes should match expectations", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -76,6 +85,9 @@ describe("Topics routes should match expectations", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -97,6 +109,9 @@ describe("Topics routes should match expectations", () => {
         .set("Cookie", cookie)
         .then((res) => {
           enrollmentResponseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       // verify topic completion
@@ -106,6 +121,9 @@ describe("Topics routes should match expectations", () => {
         .send({ topicUri: testTopicUri })
         .then((res) => {
           completionResponseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

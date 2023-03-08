@@ -30,9 +30,13 @@ const globalTeardown = async () => {
   });
 
   // close the connection when finished
-  Promise.all(deletionPromises).then(() => {
-    knex.destroy();
-  });
+  Promise.all(deletionPromises)
+    .then(() => {
+      knex.destroy();
+    })
+    .catch((e) => {
+      throw e;
+    });
 };
 
 module.exports = globalTeardown;

@@ -27,6 +27,9 @@ test("documents.count returns the correct number of documents", async () => {
         count = rows[0].count;
         return parseInt(count);
       })
+      .catch((e) => {
+        throw e;
+      })
   );
 
   // get the corresponding count from the dbWrapper

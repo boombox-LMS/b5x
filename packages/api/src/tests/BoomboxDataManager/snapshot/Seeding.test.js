@@ -68,6 +68,9 @@ beforeAll(async () => {
               .concat(additionalFieldsToSanitize),
           });
         })
+        .catch((e) => {
+          throw e;
+        })
     );
   }
   await Promise.all(tableQueryPromises);

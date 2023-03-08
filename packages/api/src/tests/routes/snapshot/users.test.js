@@ -28,6 +28,9 @@ describe("Users routes should match expectations", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -73,6 +76,9 @@ describe("Users routes should match expectations", () => {
         .send(requestBody)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

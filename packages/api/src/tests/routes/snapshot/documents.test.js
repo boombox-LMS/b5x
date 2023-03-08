@@ -41,6 +41,9 @@ describe("Documents routes should match their snapshots", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -60,6 +63,9 @@ describe("Documents routes should match their snapshots", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -80,6 +86,9 @@ describe("Documents routes should match their snapshots", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

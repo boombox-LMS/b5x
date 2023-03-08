@@ -29,6 +29,9 @@ describe("Tickets routes should match snapshots", () => {
       .where({ uri: "smoke-testing-vseed_setup" })
       .then((rows) => {
         return rows[0].id;
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // Log the user in
@@ -38,6 +41,9 @@ describe("Tickets routes should match snapshots", () => {
       .then((res) => {
         // Save the cookie to send with later requests
         cookie = global.getCookie(res) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
@@ -57,6 +63,9 @@ describe("Tickets routes should match snapshots", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -76,6 +85,9 @@ describe("Tickets routes should match snapshots", () => {
         .set("Cookie", cookie)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -98,6 +110,9 @@ describe("Tickets routes should match snapshots", () => {
         .limit(1)
         .then((rows) => {
           return rows[0].id;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       await supertest(app)
@@ -109,6 +124,9 @@ describe("Tickets routes should match snapshots", () => {
         })
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -133,6 +151,9 @@ describe("Tickets routes should match snapshots", () => {
         .limit(1)
         .then((rows) => {
           return rows[0].id;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       await app
@@ -143,6 +164,9 @@ describe("Tickets routes should match snapshots", () => {
         .then((rows) => {
           testAssigneeEmail = rows[0].email;
           testAssigneeId = rows[0].id;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       await supertest(app)
@@ -154,6 +178,9 @@ describe("Tickets routes should match snapshots", () => {
         })
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

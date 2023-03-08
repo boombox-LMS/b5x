@@ -57,6 +57,9 @@ describe("Group access to topics should work correctly", () => {
         .where({ email: userEmail })
         .then((rows) => {
           return rows[0];
+        })
+        .catch((e) => {
+          throw e;
         });
       expect(user).not.toBe(undefined);
 
@@ -85,6 +88,9 @@ describe("Group access to topics should work correctly", () => {
       .where({ email: "blocked-user@test.com" })
       .then((rows) => {
         return rows[0];
+      })
+      .catch((e) => {
+        throw e;
       });
     expect(user).not.toBe(undefined);
 
