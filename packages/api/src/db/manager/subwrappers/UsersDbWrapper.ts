@@ -57,7 +57,7 @@ export class UsersDbWrapper extends DbWrapper {
     params.users.forEach((user) => {
       // validate user data
       if (!user.email) {
-        throw "Each user object must have an email key.";
+        throw new Error("Each user object must have an email key.");
       }
 
       const email = user.email;

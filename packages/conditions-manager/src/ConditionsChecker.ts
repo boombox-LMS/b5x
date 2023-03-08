@@ -103,7 +103,7 @@ export class ConditionsChecker {
       return bools.includes(true);
     }
 
-    throw "Conditions checker could not determine a result.";
+    throw new Error("Conditions checker could not determine a result.");
   }
 
   #convertRawContentStateToText(rawContentState: RawDraftContentState) {
