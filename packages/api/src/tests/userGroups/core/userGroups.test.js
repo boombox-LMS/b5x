@@ -34,6 +34,9 @@ describe("User groups should work correctly", () => {
       .where({ email: "test-manager@test.com" })
       .then((rows) => {
         return rows[0];
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // verify the existence of the user

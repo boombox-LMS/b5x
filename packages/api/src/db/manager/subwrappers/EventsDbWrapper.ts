@@ -37,6 +37,9 @@ export class EventsDbWrapper extends DbWrapper {
       .then((rows: SavedEvent[]) => {
         const event = rows[0];
         return event;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 

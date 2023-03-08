@@ -41,6 +41,9 @@ router.get(
           responsesByFragmentUri.set(response.fragmentUri, response);
         });
         res.send(Object.fromEntries(responsesByFragmentUri));
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 );
@@ -56,8 +59,11 @@ router.post(
     const userId = req.session.currentUserId;
 
     // retrieve the document's completion conditions
-    const documentCompletionConditions =
-      await req.db.documents.getCompletionConditions({ documentUri });
+    const documentCompletionConditions = await req.db.documents
+      .getCompletionConditions({ documentUri })
+      .catch((e: any) => {
+        throw e;
+      });
 
     // retrieve the user's responses to the document
     req.db.responses
@@ -92,12 +98,18 @@ router.post(
                   data: { documents: [documentUri], users: [userId] },
                 });
                 resolve(true);
+              })
+              .catch((e: any) => {
+                throw e;
               });
           }
         });
       })
       .then((result) => {
         res.send({ documentUri, documentIsCompleted: result });
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 );

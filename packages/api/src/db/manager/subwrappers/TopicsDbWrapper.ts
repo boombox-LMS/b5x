@@ -42,6 +42,9 @@ export class TopicsDbWrapper extends DbWrapper {
       .where({ slug: params.slug })
       .then((rows: { id: number }[]) => {
         return rows.length === 0;
+      })
+      .catch((e: any) => {
+        throw e;
       });
 
     if (!slugIsAvailable) {
@@ -90,6 +93,9 @@ export class TopicsDbWrapper extends DbWrapper {
           });
           return userGroupNames;
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     // Fetch all of the user's enrolled topic uris -- these are in progress
@@ -123,6 +129,9 @@ export class TopicsDbWrapper extends DbWrapper {
             return { currentDocumentUrisByTopicUri, enrolledTopicUris };
           }
         )
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     // Populate the user's completed topic URIs and slugs
@@ -139,6 +148,9 @@ export class TopicsDbWrapper extends DbWrapper {
             completedTopicSlugs.push(slug);
           });
           return completedTopicUris;
+        })
+        .catch((e: any) => {
+          throw e;
         }) // TODO: un-hardcode completed topic key
     );
 
@@ -345,6 +357,9 @@ export class TopicsDbWrapper extends DbWrapper {
       .cache()
       .then((documentRows: { uri: string }[]) => {
         return documentRows[0].uri;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -379,6 +394,9 @@ export class TopicsDbWrapper extends DbWrapper {
         .limit(1)
         .then((rows: { version: number | string }[]) => {
           return rows[0].version;
+        })
+        .catch((e: any) => {
+          throw e;
         });
     }
 
@@ -404,6 +422,9 @@ export class TopicsDbWrapper extends DbWrapper {
         } else {
           return undefined;
         }
+      })
+      .catch((e: any) => {
+        throw e;
       });
 
     // fetch prereqs and first document ID
@@ -426,12 +447,19 @@ export class TopicsDbWrapper extends DbWrapper {
             });
           }
         )
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     queryPromises.push(
-      this.getFirstDocumentUri({ topicUri: topic.uri }).then((documentUri) => {
-        topic.firstDocumentUri = documentUri;
-      })
+      this.getFirstDocumentUri({ topicUri: topic.uri })
+        .then((documentUri) => {
+          topic.firstDocumentUri = documentUri;
+        })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     await Promise.all(queryPromises);
@@ -497,6 +525,9 @@ export class TopicsDbWrapper extends DbWrapper {
         });
 
         return topic;
+      })
+      .catch((e: any) => {
+        throw e;
       });
 
     const prerequisites = await this.knex
@@ -511,7 +542,10 @@ export class TopicsDbWrapper extends DbWrapper {
             return { slug: prereq.slug, title: prereq.title };
           });
         }
-      );
+      )
+      .catch((e: any) => {
+        throw e;
+      });
 
     return topic;
   }
@@ -580,6 +614,9 @@ export class TopicsDbWrapper extends DbWrapper {
         .then(() => {
           return topic;
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
   }
 
@@ -616,6 +653,9 @@ export class TopicsDbWrapper extends DbWrapper {
           };
           return insertedTopic;
         }
-      );
+      )
+      .catch((e: any) => {
+        throw e;
+      });
   }
 }

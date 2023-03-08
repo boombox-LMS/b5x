@@ -21,6 +21,9 @@ export class DbWrapper {
       .count("id")
       .then((rows: KnexRowCount[]) => {
         return parseInt(rows[0].count);
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 

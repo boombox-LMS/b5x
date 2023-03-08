@@ -37,6 +37,9 @@ describe("User routes should work as expected on happy path", () => {
         expect(beforeUserCount + 1).toEqual(afterUserCount);
         // propagate any cookie updates for next call
         cookie = global.getCookie(response) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // verify that the user is now logged in
@@ -48,6 +51,9 @@ describe("User routes should work as expected on happy path", () => {
         expect(response.body.email).toBe("testuser1@test.com");
         // propagate any cookie updates for next call
         cookie = global.getCookie(response) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // log the user out
@@ -58,6 +64,9 @@ describe("User routes should work as expected on happy path", () => {
       .then((response) => {
         // propagate any cookie updates for next call
         cookie = global.getCookie(response) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // verify that the user is logged out
@@ -67,6 +76,9 @@ describe("User routes should work as expected on happy path", () => {
       .expect(200)
       .then((response) => {
         expect(response.body.email).toBe(null);
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 });

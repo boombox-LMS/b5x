@@ -31,6 +31,9 @@ describe("Users routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -84,6 +87,9 @@ describe("Users routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

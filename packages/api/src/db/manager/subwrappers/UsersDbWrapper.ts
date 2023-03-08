@@ -57,7 +57,7 @@ export class UsersDbWrapper extends DbWrapper {
     params.users.forEach((user) => {
       // validate user data
       if (!user.email) {
-        throw "Each user object must have an email key.";
+        throw new Error("Each user object must have an email key.");
       }
 
       const email = user.email;
@@ -104,7 +104,9 @@ export class UsersDbWrapper extends DbWrapper {
       )
     );
 
-    await Promise.all(tagAndUserCreationPromises);
+    await Promise.all(tagAndUserCreationPromises).catch((e: any) => {
+      throw e;
+    });
 
     // fetch all relevant users and tags
     let tagAndUserFetchPromises: Promise<any>[] = [];
@@ -175,6 +177,9 @@ export class UsersDbWrapper extends DbWrapper {
             }
           });
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     let userGroupTagsByValue: Record<string, SavedTag> = {};
@@ -187,9 +192,14 @@ export class UsersDbWrapper extends DbWrapper {
             userGroupTagsByValue[tag.value] = tag;
           });
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
-    await Promise.all(tagAndUserFetchPromises);
+    await Promise.all(tagAndUserFetchPromises).catch((e: any) => {
+      throw e;
+    });
 
     // loop through the original submitted list, building the taggings to add and remove
     let taggingsToInsert: NewTagging[] = [];
@@ -229,7 +239,9 @@ export class UsersDbWrapper extends DbWrapper {
       );
     }
 
-    await Promise.all(modificationPromises);
+    await Promise.all(modificationPromises).catch((e: any) => {
+      throw e;
+    });
 
     // verify and return the result
     return this.knex
@@ -252,6 +264,9 @@ export class UsersDbWrapper extends DbWrapper {
           }
         });
         return Object.values(finishedUsersByEmail);
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -263,7 +278,10 @@ export class UsersDbWrapper extends DbWrapper {
     // get the user's group list
     const userGroupList = await this.#getUserGroupNames({
       userId: params.userId,
+    }).catch((e: any) => {
+      throw e;
     });
+
     let topicVersion;
     let topicSlug = params.topicSlug;
 
@@ -297,6 +315,9 @@ export class UsersDbWrapper extends DbWrapper {
             };
           }
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     // check whether the topic is blocked, per the access rules
@@ -323,6 +344,9 @@ export class UsersDbWrapper extends DbWrapper {
             topicIsBlocked = true;
           }
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     // get the topic's prerequisites
@@ -339,6 +363,9 @@ export class UsersDbWrapper extends DbWrapper {
           .then((rows: { config: TopicConfig }[]) => {
             prerequisites = rows[0].config.prerequisites;
           })
+          .catch((e: any) => {
+            throw e;
+          })
       );
       // otherwise, pull the prereqs for the latest version
     } else {
@@ -352,6 +379,9 @@ export class UsersDbWrapper extends DbWrapper {
           .then((rows: { config: TopicConfig }[]) => {
             prerequisites = rows[0].config.prerequisites;
           })
+          .catch((e: any) => {
+            throw e;
+          })
       );
     }
 
@@ -364,9 +394,14 @@ export class UsersDbWrapper extends DbWrapper {
         .then((tags) => {
           completedTopicSlugs = tags.map((tag) => tag.value);
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
-    await Promise.all(queryPromises);
+    await Promise.all(queryPromises).catch((e: any) => {
+      throw e;
+    });
 
     let unmetPrerequisites: string[] = [];
     for (let i = 0; i < prerequisites.length; i++) {
@@ -393,6 +428,7 @@ export class UsersDbWrapper extends DbWrapper {
     return result;
   }
 
+  // TODO: Does this need a catch statement?
   #getUserGroupNames(params: { userId: number }): Promise<string[]> {
     return this.tags
       .all({ userId: params.userId, key: "user-group" })
@@ -414,6 +450,9 @@ export class UsersDbWrapper extends DbWrapper {
         } else {
           return this.createByEmail(email);
         }
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -436,6 +475,9 @@ export class UsersDbWrapper extends DbWrapper {
       })
       .then((insertedUsers: { email: string; username: string }[]) => {
         return insertedUsers[0];
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -448,6 +490,9 @@ export class UsersDbWrapper extends DbWrapper {
         }
 
         return selectedUsers[0];
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -494,6 +539,9 @@ export class UsersDbWrapper extends DbWrapper {
             userData = rows[0];
           }
         )
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     // get badges
@@ -526,13 +574,20 @@ export class UsersDbWrapper extends DbWrapper {
             badges = Object.values(badgesByFragmentUri);
           }
         )
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
-    return Promise.all(queryPromises).then(() => {
-      return {
-        ...userData,
-        badges,
-      };
-    });
+    return Promise.all(queryPromises)
+      .then(() => {
+        return {
+          ...userData,
+          badges,
+        };
+      })
+      .catch((e: any) => {
+        throw e;
+      });
   }
 }

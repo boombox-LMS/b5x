@@ -18,6 +18,9 @@ router.post(
       .insert({ fragmentUri, enrollmentId, value, status })
       .then((response) => {
         res.send(response);
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 );

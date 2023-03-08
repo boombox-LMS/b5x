@@ -85,13 +85,23 @@ export class UserActivitySeeder {
     // These cannot be done in parallel,
     // as each one depends on UUID->ID mappings from the previous one
     if (accEnrollments.length > 0) {
-      await this.#batchInsertEnrollments({ enrollments: accEnrollments });
+      await this.#batchInsertEnrollments({ enrollments: accEnrollments }).catch(
+        (e: any) => {
+          throw e;
+        }
+      );
     }
     if (accResponses.length > 0) {
-      await this.#batchInsertResponses({ responses: accResponses });
+      await this.#batchInsertResponses({ responses: accResponses }).catch(
+        (e: any) => {
+          throw e;
+        }
+      );
     }
     if (accEvents.length > 0) {
-      await this.#batchInsertEvents({ events: accEvents });
+      await this.#batchInsertEvents({ events: accEvents }).catch((e: any) => {
+        throw e;
+      });
     }
 
     // Insert document completions --
@@ -99,7 +109,11 @@ export class UserActivitySeeder {
     for (let i = 0; i < accDocumentCompletions.length; i++) {
       const { insertionData } = accDocumentCompletions[i];
       const { userId, documentUri } = insertionData;
-      await this.documents.markAsComplete({ userId, documentUri });
+      await this.documents
+        .markAsComplete({ userId, documentUri })
+        .catch((e: any) => {
+          throw e;
+        });
     }
 
     // Insert topic completions --
@@ -109,16 +123,25 @@ export class UserActivitySeeder {
       const { userId, topicUri, topicSlug } = insertionData;
       // these two tag adds mimic the behavior of topics.markAsComplete, which cannot be run here
       // because it parallelizes its operations, creating unpredictability in the seed data
-      await this.tags.add({
-        userId,
-        key: "completed-topic-slug",
-        value: topicSlug,
-      });
-      await this.tags.add({
-        userId,
-        key: "completed-topic-uri",
-        value: topicUri,
-      });
+      await this.tags
+        .add({
+          userId,
+          key: "completed-topic-slug",
+          value: topicSlug,
+        })
+        .catch((e: any) => {
+          throw e;
+        });
+
+      await this.tags
+        .add({
+          userId,
+          key: "completed-topic-uri",
+          value: topicUri,
+        })
+        .catch((e: any) => {
+          throw e;
+        });
     }
 
     return true;
@@ -392,6 +415,9 @@ export class UserActivitySeeder {
       })
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -496,6 +522,9 @@ export class UserActivitySeeder {
       })
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -522,6 +551,9 @@ export class UserActivitySeeder {
       .insert(eventsToInsert)
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 

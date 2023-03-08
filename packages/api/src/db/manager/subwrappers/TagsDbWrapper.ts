@@ -119,7 +119,7 @@ export class TagsDbWrapper extends DbWrapper {
     let taggableTableName: string;
 
     if ("topicId" in tagSearchCriteria && "userId" in tagSearchCriteria) {
-      throw "Please provide a topicId or userId, not both.";
+      throw new Error("Please provide a topicId or userId, not both.");
     } else if ("topicId" in tagSearchCriteria) {
       taggableId = tagSearchCriteria.topicId;
       taggableTableName = "topics";
@@ -127,7 +127,7 @@ export class TagsDbWrapper extends DbWrapper {
       taggableId = tagSearchCriteria.userId;
       taggableTableName = "users";
     } else {
-      throw "Please provide a topicId or a userId for the search.";
+      throw new Error("Please provide a topicId or a userId for the search.");
     }
 
     if (tagSearchCriteria.key !== undefined) {
@@ -156,19 +156,19 @@ export class TagsDbWrapper extends DbWrapper {
     // TODO: Write validators for these so I don't have to keep putting them in here longhand.
     // These validators can go in the parent DB Wrapper class.
     if ("topicId" in tagRemovalParams && "userId" in tagRemovalParams) {
-      throw "Please provide a topicId or a userId, but not both.";
+      throw new Error("Please provide a topicId or a userId, but not both.");
     } else if ("topicId" in tagRemovalParams || "userId" in tagRemovalParams) {
       tagSearchCriteria = { ...tagRemovalParams };
     } else {
-      throw "Please provide a topicId or a userId.";
+      throw new Error("Please provide a topicId or a userId.");
     }
 
     if (
       !tagRemovalParams.confirmRemoveAll &&
       Object.keys(tagRemovalParams).length === 1
     ) {
-      throw `remove() cannot delete all tags for a given entity unless 
-      the 'confirmRemoveAll' key is passed in with a value of true.`;
+      throw new Error(`remove() cannot delete all tags for a given entity unless 
+      the 'confirmRemoveAll' key is passed in with a value of true.`);
     }
 
     const existingTagsWithTaggingIds = await this.all(tagSearchCriteria);
@@ -187,6 +187,9 @@ export class TagsDbWrapper extends DbWrapper {
       .delete()
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -203,7 +206,7 @@ export class TagsDbWrapper extends DbWrapper {
     // TODO: Write validators for these so I don't have to keep putting them in here longhand.
     // These validators can go in the parent DB Wrapper class.
     if ("topicId" in newTaggingParams && "userId" in newTaggingParams) {
-      throw "Please provide a topicId or a userId, but not both.";
+      throw new Error("Please provide a topicId or a userId, but not both.");
     } else if ("topicId" in newTaggingParams) {
       newTaggingTableName = "topics";
       newTaggingTaggableId = newTaggingParams.topicId;
@@ -211,7 +214,7 @@ export class TagsDbWrapper extends DbWrapper {
       newTaggingTableName = "users";
       newTaggingTaggableId = newTaggingParams.userId;
     } else {
-      throw "Please provide a topicId or a userId.";
+      throw new Error("Please provide a topicId or a userId.");
     }
 
     const existingTagsWithTaggingIds = await this.#getTagsWithTaggingIds({

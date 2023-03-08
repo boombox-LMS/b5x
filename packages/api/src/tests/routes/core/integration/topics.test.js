@@ -26,6 +26,9 @@ describe("Topic registration flow is operational", () => {
       .expect(200)
       .then((res) => {
         expect(res.body).toMatchSnapshot();
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
@@ -41,6 +44,9 @@ describe("Topic registration flow is operational", () => {
       .expect(200)
       .then((res) => {
         expect(res.body).toMatchSnapshot();
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 });

@@ -25,6 +25,9 @@ describe("Tickets routes should match expectations", () => {
       .where({ uri: global.FIRST_SMOKE_TEST_TOPIC_DOCUMENT_URI })
       .then((rows) => {
         return rows[0].id;
+      })
+      .catch((e) => {
+        throw e;
       });
 
     // Log the user in
@@ -34,12 +37,20 @@ describe("Tickets routes should match expectations", () => {
       .then((res) => {
         // Save the cookie to send with later requests
         cookie = global.getCookie(res) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
   // Close the database connection, which allows Jest to exit gracefully
   afterAll(async () => {
-    await app.get("db").destroy();
+    await app
+      .get("db")
+      .destroy()
+      .catch((e) => {
+        throw e;
+      });
   });
 
   // tickets/issues.list --------------------------------------------
@@ -54,6 +65,9 @@ describe("Tickets routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -79,6 +93,9 @@ describe("Tickets routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -106,6 +123,9 @@ describe("Tickets routes should match expectations", () => {
         .limit(1)
         .then((rows) => {
           return rows[0].id;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       await supertest(app)
@@ -118,6 +138,9 @@ describe("Tickets routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -150,6 +173,9 @@ describe("Tickets routes should match expectations", () => {
         .limit(1)
         .then((rows) => {
           return rows[0].id;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       await app
@@ -160,6 +186,9 @@ describe("Tickets routes should match expectations", () => {
         .then((rows) => {
           testAssigneeEmail = rows[0].email;
           testAssigneeId = rows[0].id;
+        })
+        .catch((e) => {
+          throw e;
         });
 
       await supertest(app)
@@ -172,6 +201,9 @@ describe("Tickets routes should match expectations", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

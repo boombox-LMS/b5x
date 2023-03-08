@@ -39,6 +39,9 @@ export class ResponsesDbWrapper extends DbWrapper {
       })
       .then((rows: UserResponse[]) => {
         return rows[0];
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -102,6 +105,9 @@ export class ResponsesDbWrapper extends DbWrapper {
           });
           // return an array of the kept responses
           return Array.from(responsesByFragmentUri.values());
+        })
+        .catch((e: any) => {
+          throw e;
         })
     );
   }

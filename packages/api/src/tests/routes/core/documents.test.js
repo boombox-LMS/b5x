@@ -25,6 +25,9 @@ describe("Documents routes should return a 200", () => {
       .then((res) => {
         // Save the cookie to send with later requests
         cookie = global.getCookie(res) || cookie;
+      })
+      .catch((e) => {
+        throw e;
       });
   });
 
@@ -45,6 +48,9 @@ describe("Documents routes should return a 200", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -68,6 +74,9 @@ describe("Documents routes should return a 200", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 
@@ -95,6 +104,9 @@ describe("Documents routes should return a 200", () => {
         .expect(200)
         .then((res) => {
           responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
         });
     });
 

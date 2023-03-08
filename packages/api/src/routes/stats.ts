@@ -13,7 +13,12 @@ router.get(
   "/stats.listTopics",
   function (req: Request, res: Response, next: NextFunction) {
     // TODO: verify permission to access this data
-    req.db.stats.getTopicsList().then((result) => res.send(result));
+    req.db.stats
+      .getTopicsList()
+      .then((result) => res.send(result))
+      .catch((e: any) => {
+        throw e;
+      });
   }
 );
 

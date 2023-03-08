@@ -29,7 +29,9 @@ export function activate(context: vscode.ExtensionContext) {
   let createNewTopic = vscode.commands.registerCommand(
     "b5x.createNewTopic",
     async (resourceUri) => {
-      const topicConfig = await buildTopicConfig();
+      const topicConfig = await buildTopicConfig().catch((e: any) => {
+        throw e;
+      });
       createTopicFolder(resourceUri.fsPath, topicConfig);
       scanWorkspaceForTopicFolders();
       vscode.window.showInformationMessage("Topic folder created.");

@@ -31,9 +31,13 @@ export class TicketsDbWrapper extends DbWrapper {
       "redis://127.0.0.1:6379"
     );
     this.creationQueue.process((job: any, done: any) => {
-      this.create(job.data).then((ticket: SavedTicket) => {
-        done(ticket);
-      });
+      this.create(job.data)
+        .then((ticket: SavedTicket) => {
+          done(ticket);
+        })
+        .catch((e: any) => {
+          throw e;
+        });
     });
   }
 
@@ -51,6 +55,9 @@ export class TicketsDbWrapper extends DbWrapper {
       .where({ id: ticketId })
       .then((rows: SavedTicket[]) => {
         return rows[0];
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -65,6 +72,9 @@ export class TicketsDbWrapper extends DbWrapper {
       .cache()
       .then((rows: SavedUser[]) => {
         return rows[0].id;
+      })
+      .catch((e: any) => {
+        throw e;
       });
 
     return this.knex("tickets")
@@ -73,6 +83,9 @@ export class TicketsDbWrapper extends DbWrapper {
       .where({ id: ticketId })
       .then((rows: SavedTicket[]) => {
         return rows[0];
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -112,6 +125,9 @@ export class TicketsDbWrapper extends DbWrapper {
       .then((rows: SavedTicket[]) => {
         const ticket = rows[0];
         return ticket;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 

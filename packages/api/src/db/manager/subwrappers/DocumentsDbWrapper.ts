@@ -28,6 +28,9 @@ export class DocumentsDbWrapper extends DbWrapper {
       .cache()
       .then((rows: { completionConditions: any[] }[]) => {
         return rows[0].completionConditions;
+      })
+      .catch((e: any) => {
+        throw e;
       });
   }
 
@@ -139,6 +142,9 @@ export class DocumentsDbWrapper extends DbWrapper {
           fragmentsByUri
         );
         return document;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 
@@ -241,6 +247,9 @@ export class DocumentsDbWrapper extends DbWrapper {
             savedFragment.uri
           ] = savedFragment;
         });
+      })
+      .catch((e: any) => {
+        throw e;
       });
 
     // return the expanded documents

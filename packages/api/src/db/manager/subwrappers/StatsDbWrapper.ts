@@ -81,6 +81,9 @@ export class StatsDbWrapper {
             return { ...r, enrollmentCount: parseInt(r.enrollmentCount) };
           });
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     // get documents
@@ -99,6 +102,9 @@ export class StatsDbWrapper {
             documents.push(statsDocument); // do we even need this anymore?
             documentsByUri[row.uri] = statsDocument;
           });
+        })
+        .catch((e: any) => {
+          throw e;
         })
     );
 
@@ -126,6 +132,9 @@ export class StatsDbWrapper {
             };
           });
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     interface DocumentCompletionTagRow {
@@ -148,6 +157,9 @@ export class StatsDbWrapper {
             return { ...r, count: parseInt(r.count) };
           });
         })
+        .catch((e: any) => {
+          throw e;
+        })
     );
 
     interface TopicCompletionTagRow {
@@ -169,6 +181,9 @@ export class StatsDbWrapper {
           topicCompletionTags = rows.map((r) => {
             return { ...r, count: parseInt(r.count) };
           });
+        })
+        .catch((e: any) => {
+          throw e;
         })
     );
 
@@ -325,16 +340,18 @@ export class StatsDbWrapper {
         .andWhere("taggings.taggable_table_name", "=", "users")
     );
 
-    return Promise.all(queryPromises).then(
-      ([users, events, responses, tags]) => {
+    return Promise.all(queryPromises)
+      .then(([users, events, responses, tags]) => {
         return {
           users,
           events,
           responses,
           tags,
         };
-      }
-    );
+      })
+      .catch((e: any) => {
+        throw e;
+      });
   }
 
   getTopicsList(): Promise<TopicWithStats[]> {
