@@ -162,9 +162,13 @@ export class BoomboxSeeder {
         );
       });
 
-      Promise.all(sequenceResetPromises).then(() => {
-        resolve(true);
-      });
+      Promise.all(sequenceResetPromises)
+        .then(() => {
+          resolve(true);
+        })
+        .catch((e: any) => {
+          console.error(e);
+        });
     });
   }
 
@@ -243,6 +247,9 @@ export class BoomboxSeeder {
           insertedUsers.push(insertedUser);
         });
         return insertedUsers;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
 
     // add users to their configured access groups

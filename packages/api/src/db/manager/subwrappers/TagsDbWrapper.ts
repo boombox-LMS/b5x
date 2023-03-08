@@ -187,6 +187,9 @@ export class TagsDbWrapper extends DbWrapper {
       .delete()
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 

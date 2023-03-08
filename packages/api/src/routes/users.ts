@@ -26,14 +26,19 @@ router.post(
     let session = req.session;
     const email = req.body.email;
 
-    req.db.users.findOrCreateByEmail(email).then((user) => {
-      session.currentUserId = user.id;
-      req.db.events.queueCreate({
-        name: "userLoggedIn",
-        data: { users: [user.id] },
+    req.db.users
+      .findOrCreateByEmail(email)
+      .then((user) => {
+        session.currentUserId = user.id;
+        req.db.events.queueCreate({
+          name: "userLoggedIn",
+          data: { users: [user.id] },
+        });
+        res.send(user);
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
-      res.send(user);
-    });
   }
 );
 
@@ -64,7 +69,12 @@ router.get(
     const currentUserId = req.session.currentUserId;
 
     if (currentUserId) {
-      req.db.users.findById(currentUserId).then((user) => res.send(user));
+      req.db.users
+        .findById(currentUserId)
+        .then((user) => res.send(user))
+        .catch((e: any) => {
+          console.error(e);
+        });
     } else {
       res.send({ email: null });
     }
@@ -87,9 +97,14 @@ router.post(
   [{"email":"front-end@test.com", "add to groups":["tech","software-engineers","frontend-engineers"],"remove from groups":""},{"email":"mobile@test.com","first name":"iOS","last name":"Engineer","add to groups":["tech","software-engineers","mobile-engineers","ios-engineers"],"remove from groups":""},{"email":"back-end@test.com","first name":"Backend","last name":"Engineer","add to groups":["tech","software-engineers","backend-engineers"],"remove from groups":""}]
   */
     const users = req.body.users;
-    req.db.users.modifyGroups({ users }).then((result) => {
-      res.send(result);
-    });
+    req.db.users
+      .modifyGroups({ users })
+      .then((result) => {
+        res.send(result);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
@@ -106,6 +121,9 @@ router.get(
       .orderBy("email")
       .then((rows: { email: string }[]) => {
         res.send(rows.map((row) => row.email));
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 );
@@ -115,10 +133,15 @@ router.get(
   function (req: Request, res: Response, next: NextFunction) {
     const username = req.query.username;
 
-    // @ts-ignore
-    req.db.users.profile({ username }).then((profile) => {
-      res.send(profile);
-    });
+    req.db.users
+      // @ts-ignore
+      .profile({ username })
+      .then((profile) => {
+        res.send(profile);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 

@@ -101,6 +101,9 @@ export class FragmentsDbWrapper {
             fragmentExcerptId: row.fragmentExcerptId,
           });
         });
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
 
     // return the expanded fragments
@@ -125,6 +128,9 @@ export class FragmentsDbWrapper {
       )
       .then((result: { rows: { id: number; digest: string }[] }) => {
         return result.rows;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 

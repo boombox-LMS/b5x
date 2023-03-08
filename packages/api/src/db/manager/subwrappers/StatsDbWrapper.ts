@@ -81,6 +81,9 @@ export class StatsDbWrapper {
             return { ...r, enrollmentCount: parseInt(r.enrollmentCount) };
           });
         })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     // get documents
@@ -99,6 +102,9 @@ export class StatsDbWrapper {
             documents.push(statsDocument); // do we even need this anymore?
             documentsByUri[row.uri] = statsDocument;
           });
+        })
+        .catch((e: any) => {
+          console.error(e);
         })
     );
 
@@ -126,6 +132,9 @@ export class StatsDbWrapper {
             };
           });
         })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     interface DocumentCompletionTagRow {
@@ -148,6 +157,9 @@ export class StatsDbWrapper {
             return { ...r, count: parseInt(r.count) };
           });
         })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     interface TopicCompletionTagRow {
@@ -169,6 +181,9 @@ export class StatsDbWrapper {
           topicCompletionTags = rows.map((r) => {
             return { ...r, count: parseInt(r.count) };
           });
+        })
+        .catch((e: any) => {
+          console.error(e);
         })
     );
 
@@ -325,6 +340,7 @@ export class StatsDbWrapper {
         .andWhere("taggings.taggable_table_name", "=", "users")
     );
 
+    // TODO: Does this need a catch block as well?
     return Promise.all(queryPromises).then(
       ([users, events, responses, tags]) => {
         return {

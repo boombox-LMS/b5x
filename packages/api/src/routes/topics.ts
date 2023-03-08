@@ -27,13 +27,18 @@ router.get(
         },
       };
     }
-    req.db.topics.getCatalog({ userId }).then((catalog) => {
-      const publicCatalog: PublicCatalog = {
-        ...catalog,
-        filters: req.session.filters,
-      };
-      res.send(publicCatalog);
-    });
+    req.db.topics
+      .getCatalog({ userId })
+      .then((catalog) => {
+        const publicCatalog: PublicCatalog = {
+          ...catalog,
+          filters: req.session.filters,
+        };
+        res.send(publicCatalog);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
@@ -90,6 +95,9 @@ router.get(
             .status(403)
             .send("You do not have permission to view this topic.");
         }
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 );
@@ -130,6 +138,9 @@ router.get(
             .status(403)
             .send("You do not have permission to view this topic.");
         }
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 );
@@ -148,7 +159,10 @@ router.get(
     req.db.enrollments
       // @ts-ignore
       .find(userId, topicUri)
-      .then((enrollment) => res.send(enrollment));
+      .then((enrollment) => res.send(enrollment))
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
@@ -166,7 +180,10 @@ router.post(
   function (req: Request, res: Response, next: NextFunction) {
     req.db.topics
       .publish({ topic: req.body.topic })
-      .then(() => res.status(200).send());
+      .then(() => res.status(200).send())
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
@@ -175,21 +192,31 @@ router.post(
   function (req: Request, res: Response, next: NextFunction) {
     const topicUri = req.body.topicUri || req.params.topicUri;
     const userId = req.session.currentUserId;
-    req.db.enrollments.find(userId, topicUri).then((enrollment) => {
-      const incompleteDocuments = Object.values(
-        enrollment.documentStatus
-      ).filter((document) => {
-        return document.isVisible && !document.isCompleted;
-      });
-
-      if (incompleteDocuments.length === 0) {
-        req.db.topics.markAsComplete({ topicUri, userId }).then(() => {
-          res.send({ topicUri, topicIsCompleted: true });
+    req.db.enrollments
+      .find(userId, topicUri)
+      .then((enrollment) => {
+        const incompleteDocuments = Object.values(
+          enrollment.documentStatus
+        ).filter((document) => {
+          return document.isVisible && !document.isCompleted;
         });
-      } else {
-        res.send({ topicUri, topicIsCompleted: false });
-      }
-    });
+
+        if (incompleteDocuments.length === 0) {
+          req.db.topics
+            .markAsComplete({ topicUri, userId })
+            .then(() => {
+              res.send({ topicUri, topicIsCompleted: true });
+            })
+            .catch((e: any) => {
+              console.error(e);
+            });
+        } else {
+          res.send({ topicUri, topicIsCompleted: false });
+        }
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 

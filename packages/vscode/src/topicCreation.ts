@@ -27,6 +27,7 @@ export async function buildTopicConfig(): Promise<NewTopicConfig> {
         });
 
       // populate subtitle
+      // TODO: How to catch rejected promises on a Thenable in VS Code?
       await vscode.window
         .showInputBox({
           prompt:

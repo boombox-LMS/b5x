@@ -81,6 +81,9 @@ export class EnrollmentsDbWrapper extends DbWrapper {
       .update({ progressPercentage })
       .then((rows: SavedEnrollment[]) => {
         return rows[0];
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 
@@ -115,8 +118,14 @@ export class EnrollmentsDbWrapper extends DbWrapper {
             })
             .then((rows: SavedEnrollment[]) => {
               return rows[0];
+            })
+            .catch((e: any) => {
+              console.error(e);
             });
         }
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 
@@ -297,9 +306,13 @@ export class EnrollmentsDbWrapper extends DbWrapper {
 
     // Get/create the enrollment
     queryPromises.push(
-      this.getOrCreateEnrollment(userId, topicUri).then((result) => {
-        savedEnrollment = result;
-      })
+      this.getOrCreateEnrollment(userId, topicUri)
+        .then((result) => {
+          savedEnrollment = result;
+        })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     // Get documents and their stateful fragment counts
@@ -354,6 +367,9 @@ export class EnrollmentsDbWrapper extends DbWrapper {
             };
           });
         })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     // gather document completion tags
@@ -362,6 +378,9 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         .all({ userId, key: "completed-document-uri" })
         .then((result) => {
           documentCompletionTags = result;
+        })
+        .catch((e: any) => {
+          console.error(e);
         })
     );
 
@@ -372,15 +391,20 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         .then((result) => {
           topicCompletionTags = result;
         })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     // gather responses by fragment uri
     queryPromises.push(
-      this.#getCurrentTopicResponsesByFragmentUri({ userId, topicUri }).then(
-        (result) => {
+      this.#getCurrentTopicResponsesByFragmentUri({ userId, topicUri })
+        .then((result) => {
           responsesByFragmentUri = result;
-        }
-      )
+        })
+        .catch((e: any) => {
+          console.error(e);
+        })
     );
 
     await Promise.all(queryPromises);
@@ -409,6 +433,9 @@ export class EnrollmentsDbWrapper extends DbWrapper {
         return {
           topicContentMode: topic.config.contentMode || "tutorial",
         };
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
 
     // gather all the needed data from the database
@@ -546,6 +573,9 @@ export class EnrollmentsDbWrapper extends DbWrapper {
           }
         });
         return responsesByFragmentUri;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 

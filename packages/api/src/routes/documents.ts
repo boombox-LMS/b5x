@@ -41,6 +41,9 @@ router.get(
           responsesByFragmentUri.set(response.fragmentUri, response);
         });
         res.send(Object.fromEntries(responsesByFragmentUri));
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 );
@@ -92,12 +95,18 @@ router.post(
                   data: { documents: [documentUri], users: [userId] },
                 });
                 resolve(true);
+              })
+              .catch((e: any) => {
+                console.error(e);
               });
           }
         });
       })
       .then((result) => {
         res.send({ documentUri, documentIsCompleted: result });
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 );

@@ -392,6 +392,9 @@ export class UserActivitySeeder {
       })
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 
@@ -496,6 +499,9 @@ export class UserActivitySeeder {
       })
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 
@@ -522,6 +528,9 @@ export class UserActivitySeeder {
       .insert(eventsToInsert)
       .then(() => {
         return true;
+      })
+      .catch((e: any) => {
+        console.error(e);
       });
   }
 

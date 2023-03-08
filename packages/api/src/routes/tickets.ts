@@ -7,18 +7,28 @@ const router = express.Router();
 router.get(
   "/tickets/issues.list",
   function (req: Request, res: Response, next: NextFunction) {
-    req.db.tickets.getIssues().then((issues) => {
-      res.send(issues);
-    });
+    req.db.tickets
+      .getIssues()
+      .then((issues) => {
+        res.send(issues);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
 router.get(
   "/tickets/feedback.list",
   function (req: Request, res: Response, next: NextFunction) {
-    req.db.tickets.getFeedback().then((tickets) => {
-      res.send(tickets);
-    });
+    req.db.tickets
+      .getFeedback()
+      .then((tickets) => {
+        res.send(tickets);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
@@ -44,9 +54,14 @@ router.post(
   function (req: Request, res: Response, next: NextFunction) {
     const { ticketId, assigneeEmail } = req.body;
 
-    req.db.tickets.setAssignee(ticketId, assigneeEmail).then((ticket) => {
-      res.send(ticket);
-    });
+    req.db.tickets
+      .setAssignee(ticketId, assigneeEmail)
+      .then((ticket) => {
+        res.send(ticket);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
@@ -55,9 +70,14 @@ router.post(
   function (req: Request, res: Response, next: NextFunction) {
     const { ticketId, status } = req.body;
 
-    req.db.tickets.setStatus(ticketId, status).then((ticket) => {
-      res.send(ticket);
-    });
+    req.db.tickets
+      .setStatus(ticketId, status)
+      .then((ticket) => {
+        res.send(ticket);
+      })
+      .catch((e: any) => {
+        console.error(e);
+      });
   }
 );
 
