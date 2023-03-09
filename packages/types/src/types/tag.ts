@@ -40,6 +40,8 @@ export type NewTag = z.infer<typeof NewTagSchema>;
 // NewUserTagging --------------------------------------------------
 
 export const NewUserTaggingSchema = NewTagSchema.extend({
+  key: z.string(),
+  value: z.any().optional(),
   userId: z.number(),
 }).strict();
 

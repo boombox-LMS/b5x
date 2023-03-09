@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">81.69% </span>
+                <span class="strong">82.35% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>125/153</span>
+                <span class='fraction'>126/153</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.55% </span>
+                <span class="strong">63.8% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>68/107</span>
+                <span class='fraction'>67/105</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.24% </span>
+                <span class="strong">84.93% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>123/146</span>
+                <span class='fraction'>124/146</span>
             </div>
         
             
@@ -486,11 +486,7 @@
 <a name='L421'></a><a href='#L421'>421</a>
 <a name='L422'></a><a href='#L422'>422</a>
 <a name='L423'></a><a href='#L423'>423</a>
-<a name='L424'></a><a href='#L424'>424</a>
-<a name='L425'></a><a href='#L425'>425</a>
-<a name='L426'></a><a href='#L426'>426</a>
-<a name='L427'></a><a href='#L427'>427</a>
-<a name='L428'></a><a href='#L428'>428</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L424'></a><a href='#L424'>424</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-yes">17429x</span>
 <span class="cline-any cline-yes">13857x</span>
@@ -511,6 +507,7 @@
 <span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -524,6 +521,7 @@
 <span class="cline-any cline-yes">408x</span>
 <span class="cline-any cline-yes">408x</span>
 <span class="cline-any cline-yes">408x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -575,16 +573,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -594,6 +585,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -935,6 +927,7 @@ var __classPrivateFieldGet = (this &amp;&amp; this.__classPrivateFieldGet) || fu
 var _TagsDbWrapper_instances, _TagsDbWrapper_createTag, _TagsDbWrapper_getTagsWithTaggingIds, _TagsDbWrapper_add;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TagsDbWrapper = void 0;
+const types_1 = require("@b5x/types");
 const tags_1 = require("./types/tags");
 const DbWrapper_1 = require("./DbWrapper");
 const _ = require("lodash");
@@ -952,7 +945,8 @@ class TagsDbWrapper extends DbWrapper_1.DbWrapper {
         _TagsDbWrapper_instances.add(this);
         this.knex = knex;
     }
-    // TODO: This is a search for a given user or topic, not plain tags themselves.
+    // TODO: This is a search for a given user (and eventually other taggable),
+    // not plain tags themselves.
     // Should it be called allFor to make the intent clearer? .all in ActiveRecord etc.
     // means something much more flexible.
     all(tagSearchCriteria) {
@@ -977,7 +971,7 @@ class TagsDbWrapper extends DbWrapper_1.DbWrapper {
     remove(tagRemovalParams) {
         return __awaiter(this, void 0, void 0, function* () {
             tagRemovalParams = tags_1.UserTagRemovalParamsSchema.parse(tagRemovalParams);
-            const tableSearchCriteria = tags_1.UserTagSearchCriteriaSchema.parse(tagRemovalParams);
+            const tableSearchCriteria = tags_1.UserTagSearchCriteriaSchema.parse(_.omit(tagRemovalParams, "confirmRemoveAll"));
             const existingTagsWithTaggingIds = yield this.all(tableSearchCriteria);
             let taggingIdsToRemove = [];
             existingTagsWithTaggingIds.forEach((tagWithTaggingId) =&gt; {
@@ -1002,16 +996,9 @@ class TagsDbWrapper extends DbWrapper_1.DbWrapper {
      */
     set(newTaggingParams) {
         return __awaiter(this, void 0, void 0, function* () {
-            let newTaggingTableName;
-            let newTaggingTaggableId;
-            // TODO: Use a Zod schema instead
-            if ("userId" in newTaggingParams) {
-                newTaggingTableName = "users";
-                newTaggingTaggableId = newTaggingParams.userId;
-            }
-            else <span class="missing-if-branch" title="else path not taken" >E</span>{
-<span class="cstat-no" title="statement not covered" >                throw new Error("Please provide a userId.");</span>
-            }
+            newTaggingParams = types_1.NewUserTaggingSchema.parse(newTaggingParams);
+            let newTaggingTableName = "users";
+            let newTaggingTaggableId = newTaggingParams.userId;
             const existingTagsWithTaggingIds = yield __classPrivateFieldGet(this, _TagsDbWrapper_instances, "m", _TagsDbWrapper_getTagsWithTaggingIds).call(this, {
                 taggableTableName: newTaggingTableName,
                 taggableId: newTaggingTaggableId,
@@ -1021,13 +1008,14 @@ class TagsDbWrapper extends DbWrapper_1.DbWrapper {
             let existingMatchingTag;
             let existingUserTagWithTaggingId;
             existingTagsWithTaggingIds.forEach((tagWithTaggingId) =&gt; {
-                // collect any existing multi taggings under this key (will cause an error)
+                // collect any existing multi taggings under this key
+                // (will later cause an error if they exist)
                 <span class="missing-if-branch" title="if path not taken" >I</span>if (tagWithTaggingId.mode === "multi" &amp;&amp;
 <span class="branch-1 cbranch-no" title="branch not covered" >                    tagWithTaggingId.value !== newTaggingParams.value)</span> {
 <span class="cstat-no" title="statement not covered" >                    multiTaggings.push(tagWithTaggingId);</span>
                 }
-                // if a tagging ID is found, regardless of whether a tag matches,
-                // save the tagging ID so it can be updated to reflect the new value
+                // if a tagging ID is found, save the tagging ID
+                // so it can be updated to reflect the new value if needed
                 <span class="missing-if-branch" title="else path not taken" >E</span>if (tagWithTaggingId.taggingId) {
                     existingUserTagWithTaggingId = tagWithTaggingId;
                 }
@@ -1351,7 +1339,7 @@ _TagsDbWrapper_instances = new WeakSet(), _TagsDbWrapper_createTag = function _T
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-09T04:58:14.704Z
+                at 2023-03-09T19:06:45.558Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

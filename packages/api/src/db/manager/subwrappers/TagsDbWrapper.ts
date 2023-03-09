@@ -4,6 +4,7 @@ import {
   NewUserTagging,
   SavedTag,
   TagWithTaggingId,
+  NewUserTaggingSchema,
 } from "@b5x/types";
 
 import {
@@ -116,7 +117,8 @@ export class TagsDbWrapper extends DbWrapper {
     );
   }
 
-  // TODO: This is a search for a given user or topic, not plain tags themselves.
+  // TODO: This is a search for a given user (and eventually other taggable),
+  // not plain tags themselves.
   // Should it be called allFor to make the intent clearer? .all in ActiveRecord etc.
   // means something much more flexible.
   all(tagSearchCriteria: UserTagSearchCriteria): Promise<TagWithTaggingId[]> {
@@ -144,8 +146,10 @@ export class TagsDbWrapper extends DbWrapper {
 
   async remove(tagRemovalParams: UserTagRemovalParams): Promise<boolean> {
     tagRemovalParams = UserTagRemovalParamsSchema.parse(tagRemovalParams);
-    const tableSearchCriteria =
-      UserTagSearchCriteriaSchema.parse(tagRemovalParams);
+
+    const tableSearchCriteria = UserTagSearchCriteriaSchema.parse(
+      _.omit(tagRemovalParams, "confirmRemoveAll")
+    );
 
     const existingTagsWithTaggingIds = await this.all(tableSearchCriteria);
 
@@ -174,16 +178,9 @@ export class TagsDbWrapper extends DbWrapper {
    */
 
   async set(newTaggingParams: NewUserTagging): Promise<TagWithTaggingId> {
-    let newTaggingTableName: string;
-    let newTaggingTaggableId: number;
-
-    // TODO: Use a Zod schema instead
-    if ("userId" in newTaggingParams) {
-      newTaggingTableName = "users";
-      newTaggingTaggableId = newTaggingParams.userId;
-    } else {
-      throw new Error("Please provide a userId.");
-    }
+    newTaggingParams = NewUserTaggingSchema.parse(newTaggingParams);
+    let newTaggingTableName = "users";
+    let newTaggingTaggableId = newTaggingParams.userId;
 
     const existingTagsWithTaggingIds = await this.#getTagsWithTaggingIds({
       taggableTableName: newTaggingTableName,
@@ -196,7 +193,8 @@ export class TagsDbWrapper extends DbWrapper {
     let existingUserTagWithTaggingId: TagWithTaggingId | undefined;
 
     existingTagsWithTaggingIds.forEach((tagWithTaggingId) => {
-      // collect any existing multi taggings under this key (will cause an error)
+      // collect any existing multi taggings under this key
+      // (will later cause an error if they exist)
       if (
         tagWithTaggingId.mode === "multi" &&
         tagWithTaggingId.value !== newTaggingParams.value
@@ -204,8 +202,8 @@ export class TagsDbWrapper extends DbWrapper {
         multiTaggings.push(tagWithTaggingId);
       }
 
-      // if a tagging ID is found, regardless of whether a tag matches,
-      // save the tagging ID so it can be updated to reflect the new value
+      // if a tagging ID is found, save the tagging ID
+      // so it can be updated to reflect the new value if needed
       if (tagWithTaggingId.taggingId) {
         existingUserTagWithTaggingId = tagWithTaggingId;
       }

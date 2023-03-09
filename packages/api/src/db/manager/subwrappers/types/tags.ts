@@ -1,10 +1,12 @@
 import { z } from "zod";
 
-export const UserTagSearchCriteriaSchema = z.object({
-  key: z.string().optional(),
-  value: z.any().optional(),
-  userId: z.number(),
-});
+export const UserTagSearchCriteriaSchema = z
+  .object({
+    key: z.string().optional(),
+    value: z.any().optional(),
+    userId: z.number(),
+  })
+  .strict();
 
 export const UserTagRemovalParamsSchema = UserTagSearchCriteriaSchema.extend({
   confirmRemoveAll: z.boolean().optional(),
