@@ -1,6 +1,5 @@
 import {
   NewMultiTagging,
-  NewTopicTagging,
   NewUserTagging,
   SavedTag,
   TagWithTaggingId,
@@ -195,10 +194,7 @@ export class TagsDbWrapper extends DbWrapper {
     existingTagsWithTaggingIds.forEach((tagWithTaggingId) => {
       // collect any existing multi taggings under this key
       // (will later cause an error if they exist)
-      if (
-        tagWithTaggingId.mode === "multi" &&
-        tagWithTaggingId.value !== newTaggingParams.value
-      ) {
+      if (tagWithTaggingId.mode === "multi") {
         multiTaggings.push(tagWithTaggingId);
       }
 
@@ -275,128 +271,6 @@ export class TagsDbWrapper extends DbWrapper {
       taggingId: insertedTaggings[0].id,
       mode: insertedTaggings[0].mode,
     };
-  }
-
-  async increment(tagIncrementParams: {
-    userId: number;
-    key: string;
-    by?: number;
-  }) {
-    let result: TagWithTaggingId;
-
-    if (tagIncrementParams.by === undefined) {
-      tagIncrementParams.by = 1;
-    }
-
-    const incrementByValue = tagIncrementParams.by;
-
-    const existingUserTagsWithTaggingIds = await this.#getTagsWithTaggingIds({
-      taggableTableName: "users",
-      taggableId: tagIncrementParams.userId,
-      key: tagIncrementParams.key,
-    });
-
-    let existingUserTag: SavedTag | undefined;
-    let existingUserTaggingId: number | undefined;
-
-    /*
-    let existingUserTagWithTagging: TagWithTagging | undefined;
-    */
-    let multiTaggings: TagWithTaggingId[] = [];
-
-    existingUserTagsWithTaggingIds.forEach((existingTagWithTaggingId) => {
-      // collect any existing multi taggings under this key (will cause an error)
-      if (existingTagWithTaggingId.mode === "multi") {
-        multiTaggings.push(existingTagWithTaggingId);
-      }
-
-      // if a tagging ID is found, regardless of whether a tag matches,
-      // save the tagging ID so it can be updated to reflect the new value
-      if (existingTagWithTaggingId.taggingId) {
-        existingUserTag = _.omit(existingTagWithTaggingId, ["taggingId"]);
-        existingUserTaggingId = existingTagWithTaggingId.taggingId;
-      }
-    });
-
-    // throw an error if multi taggings were detected
-    if (multiTaggings.length > 0) {
-      throw new Error(`Cannot overwrite existing multi taggings: 
-        ${multiTaggings.forEach((tagging) => {
-          return `\n{ id: ${tagging.taggingId}, key: ${tagging.key}, value: ${tagging.value} }\n`;
-        })} 
-        To switch to mono tagging, first use remove() to delete the multi taggings, then use set().
-        `);
-    }
-
-    // calculate the intended updated value of the user's tag
-    let targetValue: number;
-
-    // if the user is already tagged, update the associated value
-    if (existingUserTag) {
-      // TODO: Verify that currentlyTaggedTag.value is incrementable (is an integer)
-      targetValue = existingUserTag.value + incrementByValue;
-    } else {
-      targetValue = incrementByValue;
-    }
-
-    // look for an existing tag with the desired value that can be associated with the user
-    let existingTag: SavedTag | undefined;
-
-    /*
-    const existingTagsWithTaggings = await this.#getTagsWithTaggings({
-      key: tagIncrementParams.key,
-      value: targetValue
-    })
-    */
-
-    // TODO: This is wrong but tests accidentally pass,
-    // should just pull tags not taggings.
-    // Need to make above code work, and use that.
-    existingUserTagsWithTaggingIds.forEach((tagWithTaggingId) => {
-      if (tagWithTaggingId.value === targetValue) {
-        existingTag = _.omit(tagWithTaggingId, ["taggingId"]);
-      }
-    });
-
-    // if there is no existing tag, create one
-    if (!existingTag) {
-      existingTag = await this.#createTag(tagIncrementParams.key, targetValue);
-    }
-
-    // update the tagging if one exists
-    if (existingUserTaggingId) {
-      const taggingUpdateResult = await this.knex("taggings")
-        .where({ id: existingUserTaggingId })
-        .update({ tagId: existingTag.id }, ["id", "mode"]);
-
-      result = {
-        ...existingTag,
-        taggingId: taggingUpdateResult[0].id,
-        mode: taggingUpdateResult[0].mode,
-      };
-
-      return result;
-    }
-
-    // otherwise, create the tagging
-    const insertedTaggings = await this.knex("taggings")
-      .returning(["id", "mode"])
-      .insert({
-        taggableTableName: "users",
-        taggableId: tagIncrementParams.userId,
-        tagId: existingTag.id,
-        mode: "mono",
-      });
-
-    let tagging = insertedTaggings[0];
-
-    result = {
-      ...existingTag,
-      taggingId: tagging.id,
-      mode: tagging.mode,
-    };
-
-    return result;
   }
 
   /**

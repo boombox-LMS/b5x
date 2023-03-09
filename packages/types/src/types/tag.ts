@@ -50,17 +50,6 @@ export const NewUserTaggingSchema = NewTagSchema.extend({
  */
 export type NewUserTagging = z.infer<typeof NewUserTaggingSchema>;
 
-// NewTopicTagging --------------------------------------------------
-
-export const NewTopicTaggingSchema = NewTagSchema.extend({
-  topicId: z.number(),
-}).strict();
-
-/**
- * The data required to associate a tag with a topic.
- */
-export type NewTopicTagging = z.infer<typeof NewTopicTaggingSchema>;
-
 // NewTagging -------------------------------------------------------
 
 export const NewTaggingSchema = z
