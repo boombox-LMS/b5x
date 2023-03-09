@@ -40,6 +40,8 @@ export type NewTag = z.infer<typeof NewTagSchema>;
 // NewUserTagging --------------------------------------------------
 
 export const NewUserTaggingSchema = NewTagSchema.extend({
+  key: z.string(),
+  value: z.any().optional(),
   userId: z.number(),
 }).strict();
 
@@ -47,17 +49,6 @@ export const NewUserTaggingSchema = NewTagSchema.extend({
  * The data required to associate a tag with a user.
  */
 export type NewUserTagging = z.infer<typeof NewUserTaggingSchema>;
-
-// NewTopicTagging --------------------------------------------------
-
-export const NewTopicTaggingSchema = NewTagSchema.extend({
-  topicId: z.number(),
-}).strict();
-
-/**
- * The data required to associate a tag with a topic.
- */
-export type NewTopicTagging = z.infer<typeof NewTopicTaggingSchema>;
 
 // NewTagging -------------------------------------------------------
 

@@ -112,7 +112,9 @@ const parseAuthoredConditions = (
     try {
       operator = ConditionOperatorSchema.parse(operator);
     } catch (e) {
-      throw `Unable to parse operator in condition string: ${formattedExpression}`;
+      throw new Error(
+        `Unable to parse operator in condition string: ${formattedExpression}`
+      );
     }
     const condition: DraftCondition = {
       type: "condition",

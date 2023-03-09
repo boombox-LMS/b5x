@@ -167,7 +167,9 @@ export class ConditionsChecker {
           const matchResult = value.match(regex);
           return !!matchResult; // false if no match, true if match
         } else {
-          throw `Invalid targetValue provided to the 'matches' operator: ${targetValue}`;
+          throw new Error(
+            `Invalid targetValue provided to the 'matches' operator: ${targetValue}`
+          );
         }
       default:
         throw (

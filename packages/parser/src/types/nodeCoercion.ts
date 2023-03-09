@@ -140,7 +140,7 @@ export const coerceToBxmlTagNode = (
   element: DomHandlerElement
 ): BxmlTagNode => {
   if (element.type !== "tag") {
-    throw `Unsupported element type: ${element.type}`;
+    throw new Error(`Unsupported element type: ${element.type}`);
   }
 
   let bxmlTagNode: BxmlTagNode = {
@@ -189,6 +189,8 @@ export const coerceToBxmlNode = (node: DomHandlerAnyNode): BxmlNode => {
     return BxmlNodeSchema.parse(result);
   } else {
     console.log(node);
-    throw `Cannot coerce above node: the node has an unrecognized type`;
+    throw new Error(
+      `Cannot coerce above node: the node has an unrecognized type`
+    );
   }
 };

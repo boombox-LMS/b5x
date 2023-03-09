@@ -220,20 +220,4 @@ router.post(
   }
 );
 
-// TODO: Write tests
-router.post(
-  "/topics.register",
-  function (req: Request, res: Response, next: NextFunction) {
-    const slug = req.body.slug;
-    req.db.topics
-      .register({ slug })
-      .then(() => {
-        res.send({ succeeded: true });
-      })
-      .catch((error) => {
-        res.send({ succeeded: false, error });
-      });
-  }
-);
-
 module.exports = router;

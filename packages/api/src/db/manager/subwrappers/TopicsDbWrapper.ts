@@ -31,32 +31,6 @@ export class TopicsDbWrapper extends DbWrapper {
     this.documents = new DocumentsDbWrapper(knex);
   }
 
-  async register(params: { slug: string }) {
-    // verify that the slug is not already taken
-    // if the slug is not taken, publish an MVP draft to reserve the slug
-    // return the version of the MVP draft,
-    // so the CLI tool can store that as the current version
-    const slugIsAvailable = await this.knex
-      .select("id")
-      .from("topics")
-      .where({ slug: params.slug })
-      .then((rows: { id: number }[]) => {
-        return rows.length === 0;
-      })
-      .catch((e: any) => {
-        throw e;
-      });
-
-    if (!slugIsAvailable) {
-      throw `Topic slug ${params.slug} is already in use`; // TODO: Make a custom error for this sort of thing?
-    }
-
-    // create essentially empty topic
-    await this.knex("topics").insert({ slug: params.slug });
-
-    return true;
-  }
-
   async markAsComplete(params: { userId: number; topicUri: string }) {
     const { slug, version } = this.parseTopicUri(params.topicUri);
     const taggingPromises = [
@@ -372,7 +346,7 @@ export class TopicsDbWrapper extends DbWrapper {
         version: match[2],
       };
     } else {
-      throw `Unable to parse topic uri: ${uri}`;
+      throw new Error(`Unable to parse topic uri: ${uri}`);
     }
   }
 

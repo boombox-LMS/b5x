@@ -88,7 +88,9 @@ export class Fragment {
         return null;
       } else {
         console.log(params.bxmlNode);
-        throw `Invalid id attribute on above tag: ${params.bxmlNode.attribs.id}`;
+        throw new Error(
+          `Invalid id attribute on above tag: ${params.bxmlNode.attribs.id}`
+        );
       }
     } else {
       return null;
@@ -131,7 +133,9 @@ export class Fragment {
    */
   combineWith(fragment: Fragment) {
     if (!(fragment.contentType in this.combinesWith)) {
-      throw `Cannot run combineWith against fragment of an incompatible type of ${fragment}`;
+      throw new Error(
+        `Cannot run combineWith against fragment of an incompatible type of ${fragment}`
+      );
     }
 
     let result: FragmentCombinationResult;
@@ -163,7 +167,9 @@ export class Fragment {
     const combinationCallback =
       this.combinesWith[fragment.contentType].combinationCallback;
     if (!combinationCallback) {
-      throw `No combination callback found for the combination of ${fragment.contentType} with ${this.contentType} (this fragment).`;
+      throw new Error(
+        `No combination callback found for the combination of ${fragment.contentType} with ${this.contentType} (this fragment).`
+      );
     }
 
     result = this.combinesWith[fragment.contentType].combinationCallback(
@@ -266,7 +272,9 @@ export class Fragment {
       const iconName = match[2];
       return `https://api.iconify.design/${iconPrefix}/${iconName}.svg`;
     } else {
-      throw `Unable to build image URL from asset name: unrecognized asset '${assetName}'.`;
+      throw new Error(
+        `Unable to build image URL from asset name: unrecognized asset '${assetName}'.`
+      );
     }
   }
 

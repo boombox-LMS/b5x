@@ -1,21 +1,29 @@
 import {
   NewMultiTagging,
-  NewTopicTagging,
   NewUserTagging,
   SavedTag,
   TagWithTaggingId,
+  NewUserTaggingSchema,
 } from "@b5x/types";
 
 import {
   UserTagRemovalParams,
-  TopicTagRemovalParams,
-  TopicTagSearchCriteria,
+  UserTagRemovalParamsSchema,
   UserTagSearchCriteria,
+  UserTagSearchCriteriaSchema,
 } from "./types/tags";
 
 import { DbWrapper } from "./DbWrapper";
 const _ = require("lodash");
 
+/**
+ * This class is for managing tags and taggings. While the only valid
+ * type of taggable right now is a user, this functionality is expected to expand
+ * to topics and other types of taggables in the future. At that point,
+ * a portion of the code will need to be refactored to be more generic,
+ * though most of the tagging functions should still work properly as-is.
+ * The relevant data tables are also already set up to be generic.
+ */
 export class TagsDbWrapper extends DbWrapper {
   knex: any;
 
@@ -108,33 +116,22 @@ export class TagsDbWrapper extends DbWrapper {
     );
   }
 
-  // TODO: This is a search for a given user or topic, not plain tags themselves.
+  // TODO: This is a search for a given user (and eventually other taggable),
+  // not plain tags themselves.
   // Should it be called allFor to make the intent clearer? .all in ActiveRecord etc.
   // means something much more flexible.
-  all(
-    tagSearchCriteria: TopicTagSearchCriteria | UserTagSearchCriteria
-  ): Promise<TagWithTaggingId[]> {
-    let searchCriteria: { key?: string; value?: any } = {};
-    let taggableId: number;
-    let taggableTableName: string;
+  all(tagSearchCriteria: UserTagSearchCriteria): Promise<TagWithTaggingId[]> {
+    tagSearchCriteria = UserTagSearchCriteriaSchema.parse(tagSearchCriteria);
+    const taggableId = tagSearchCriteria.userId;
+    const taggableTableName = "users";
 
-    if ("topicId" in tagSearchCriteria && "userId" in tagSearchCriteria) {
-      throw new Error("Please provide a topicId or userId, not both.");
-    } else if ("topicId" in tagSearchCriteria) {
-      taggableId = tagSearchCriteria.topicId;
-      taggableTableName = "topics";
-    } else if ("userId" in tagSearchCriteria) {
-      taggableId = tagSearchCriteria.userId;
-      taggableTableName = "users";
-    } else {
-      throw new Error("Please provide a topicId or a userId for the search.");
-    }
+    let tableSearchCriteria: { key?: string; value?: any } = {};
 
-    if (tagSearchCriteria.key !== undefined) {
-      searchCriteria.key = tagSearchCriteria.key;
+    if ("key" in tagSearchCriteria) {
+      tableSearchCriteria.key = tagSearchCriteria.key;
     }
-    if (tagSearchCriteria.value !== undefined) {
-      searchCriteria.value = JSON.stringify(tagSearchCriteria.value);
+    if ("value" in tagSearchCriteria) {
+      tableSearchCriteria.value = JSON.stringify(tagSearchCriteria.value);
     }
 
     return this.knex
@@ -143,35 +140,17 @@ export class TagsDbWrapper extends DbWrapper {
       .leftJoin("taggings", "taggings.tagId", "tags.id")
       .where("taggings.taggableTableName", "=", taggableTableName)
       .andWhere("taggings.taggableId", "=", taggableId)
-      .andWhere(searchCriteria);
+      .andWhere(tableSearchCriteria);
   }
 
-  // This method is for topics and users. Use removeFor to make that clearer?
-  // Also, does not return false if something goes wrong, but it probably should,
-  // or just return nothing. Or the remaining tags?
-  async remove(
-    tagRemovalParams: UserTagRemovalParams | TopicTagRemovalParams
-  ): Promise<boolean> {
-    let tagSearchCriteria: TopicTagSearchCriteria | UserTagSearchCriteria;
-    // TODO: Write validators for these so I don't have to keep putting them in here longhand.
-    // These validators can go in the parent DB Wrapper class.
-    if ("topicId" in tagRemovalParams && "userId" in tagRemovalParams) {
-      throw new Error("Please provide a topicId or a userId, but not both.");
-    } else if ("topicId" in tagRemovalParams || "userId" in tagRemovalParams) {
-      tagSearchCriteria = { ...tagRemovalParams };
-    } else {
-      throw new Error("Please provide a topicId or a userId.");
-    }
+  async remove(tagRemovalParams: UserTagRemovalParams): Promise<boolean> {
+    tagRemovalParams = UserTagRemovalParamsSchema.parse(tagRemovalParams);
 
-    if (
-      !tagRemovalParams.confirmRemoveAll &&
-      Object.keys(tagRemovalParams).length === 1
-    ) {
-      throw new Error(`remove() cannot delete all tags for a given entity unless 
-      the 'confirmRemoveAll' key is passed in with a value of true.`);
-    }
+    const tableSearchCriteria = UserTagSearchCriteriaSchema.parse(
+      _.omit(tagRemovalParams, "confirmRemoveAll")
+    );
 
-    const existingTagsWithTaggingIds = await this.all(tagSearchCriteria);
+    const existingTagsWithTaggingIds = await this.all(tableSearchCriteria);
 
     let taggingIdsToRemove: number[] = [];
 
@@ -197,25 +176,10 @@ export class TagsDbWrapper extends DbWrapper {
    *  Mono tag functions
    */
 
-  async set(
-    newTaggingParams: NewTopicTagging | NewUserTagging
-  ): Promise<TagWithTaggingId> {
-    let newTaggingTableName: string;
-    let newTaggingTaggableId: number;
-
-    // TODO: Write validators for these so I don't have to keep putting them in here longhand.
-    // These validators can go in the parent DB Wrapper class.
-    if ("topicId" in newTaggingParams && "userId" in newTaggingParams) {
-      throw new Error("Please provide a topicId or a userId, but not both.");
-    } else if ("topicId" in newTaggingParams) {
-      newTaggingTableName = "topics";
-      newTaggingTaggableId = newTaggingParams.topicId;
-    } else if ("userId" in newTaggingParams) {
-      newTaggingTableName = "users";
-      newTaggingTaggableId = newTaggingParams.userId;
-    } else {
-      throw new Error("Please provide a topicId or a userId.");
-    }
+  async set(newTaggingParams: NewUserTagging): Promise<TagWithTaggingId> {
+    newTaggingParams = NewUserTaggingSchema.parse(newTaggingParams);
+    let newTaggingTableName = "users";
+    let newTaggingTaggableId = newTaggingParams.userId;
 
     const existingTagsWithTaggingIds = await this.#getTagsWithTaggingIds({
       taggableTableName: newTaggingTableName,
@@ -228,16 +192,14 @@ export class TagsDbWrapper extends DbWrapper {
     let existingUserTagWithTaggingId: TagWithTaggingId | undefined;
 
     existingTagsWithTaggingIds.forEach((tagWithTaggingId) => {
-      // collect any existing multi taggings under this key (will cause an error)
-      if (
-        tagWithTaggingId.mode === "multi" &&
-        tagWithTaggingId.value !== newTaggingParams.value
-      ) {
+      // collect any existing multi taggings under this key
+      // (will later cause an error if they exist)
+      if (tagWithTaggingId.mode === "multi") {
         multiTaggings.push(tagWithTaggingId);
       }
 
-      // if a tagging ID is found, regardless of whether a tag matches,
-      // save the tagging ID so it can be updated to reflect the new value
+      // if a tagging ID is found, save the tagging ID
+      // so it can be updated to reflect the new value if needed
       if (tagWithTaggingId.taggingId) {
         existingUserTagWithTaggingId = tagWithTaggingId;
       }
@@ -251,12 +213,12 @@ export class TagsDbWrapper extends DbWrapper {
 
     // throw an error if multi taggings were detected
     if (multiTaggings.length > 0) {
-      throw `Cannot overwrite existing multi taggings: 
+      throw new Error(`Cannot overwrite existing multi taggings: 
         ${multiTaggings.forEach((tagging) => {
           return `\n{ id: ${tagging.taggingId}, key: ${tagging.key}, value: ${tagging.value} }\n`;
         })} 
         To switch to mono tagging, first use remove() to delete the multi taggings, then use set().
-        `;
+        `);
     }
 
     // if a tag exists, and a tagging exists, and they already align,
@@ -311,166 +273,17 @@ export class TagsDbWrapper extends DbWrapper {
     };
   }
 
-  // TODO: Should also work for topics?
-  async increment(tagIncrementParams: {
-    userId: number;
-    key: string;
-    by?: number;
-  }) {
-    let result: TagWithTaggingId;
-
-    if (tagIncrementParams.by === undefined) {
-      tagIncrementParams.by = 1;
-    }
-
-    const incrementByValue = tagIncrementParams.by;
-
-    const existingUserTagsWithTaggingIds = await this.#getTagsWithTaggingIds({
-      taggableTableName: "users",
-      taggableId: tagIncrementParams.userId,
-      key: tagIncrementParams.key,
-    });
-
-    let existingUserTag: SavedTag | undefined;
-    let existingUserTaggingId: number | undefined;
-
-    /*
-    let existingUserTagWithTagging: TagWithTagging | undefined;
-    */
-    let multiTaggings: TagWithTaggingId[] = [];
-
-    existingUserTagsWithTaggingIds.forEach((existingTagWithTaggingId) => {
-      // collect any existing multi taggings under this key (will cause an error)
-      if (existingTagWithTaggingId.mode === "multi") {
-        multiTaggings.push(existingTagWithTaggingId);
-      }
-
-      // if a tagging ID is found, regardless of whether a tag matches,
-      // save the tagging ID so it can be updated to reflect the new value
-      if (existingTagWithTaggingId.taggingId) {
-        existingUserTag = _.omit(existingTagWithTaggingId, ["taggingId"]);
-        existingUserTaggingId = existingTagWithTaggingId.taggingId;
-      }
-    });
-
-    // throw an error if multi taggings were detected
-    if (multiTaggings.length > 0) {
-      throw `Cannot overwrite existing multi taggings: 
-        ${multiTaggings.forEach((tagging) => {
-          return `\n{ id: ${tagging.taggingId}, key: ${tagging.key}, value: ${tagging.value} }\n`;
-        })} 
-        To switch to mono tagging, first use remove() to delete the multi taggings, then use set().
-        `;
-    }
-
-    // calculate the intended updated value of the user's tag
-    let targetValue: number;
-
-    // if the user is already tagged, update the associated value
-    if (existingUserTag) {
-      // TODO: Verify that currentlyTaggedTag.value is incrementable (is an integer)
-      targetValue = existingUserTag.value + incrementByValue;
-    } else {
-      targetValue = incrementByValue;
-    }
-
-    // look for an existing tag with the desired value that can be associated with the user
-    let existingTag: SavedTag | undefined;
-
-    /*
-    const existingTagsWithTaggings = await this.#getTagsWithTaggings({
-      key: tagIncrementParams.key,
-      value: targetValue
-    })
-    */
-
-    // TODO: This is wrong but tests accidentally pass,
-    // should just pull tags not taggings.
-    // Need to make above code work, and use that.
-    existingUserTagsWithTaggingIds.forEach((tagWithTaggingId) => {
-      if (tagWithTaggingId.value === targetValue) {
-        existingTag = _.omit(tagWithTaggingId, ["taggingId"]);
-      }
-    });
-
-    // if there is no existing tag, create one
-    if (!existingTag) {
-      existingTag = await this.#createTag(tagIncrementParams.key, targetValue);
-    }
-
-    // update the tagging if one exists
-    if (existingUserTaggingId) {
-      const taggingUpdateResult = await this.knex("taggings")
-        .where({ id: existingUserTaggingId })
-        .update({ tagId: existingTag.id }, ["id", "mode"]);
-
-      result = {
-        ...existingTag,
-        taggingId: taggingUpdateResult[0].id,
-        mode: taggingUpdateResult[0].mode,
-      };
-
-      return result;
-    }
-
-    // otherwise, create the tagging
-    const insertedTaggings = await this.knex("taggings")
-      .returning(["id", "mode"])
-      .insert({
-        taggableTableName: "users",
-        taggableId: tagIncrementParams.userId,
-        tagId: existingTag.id,
-        mode: "mono",
-      });
-
-    let tagging = insertedTaggings[0];
-
-    result = {
-      ...existingTag,
-      taggingId: tagging.id,
-      mode: tagging.mode,
-    };
-
-    return result;
-  }
-
   /**
    *  Multi tag functions
    */
-  // TODO: Write tests verifying the errors this function throws
-  async add(
-    newTagging: NewTopicTagging | NewUserTagging
-  ): Promise<TagWithTaggingId> {
-    // Ensure that only one taggable ID has been provided
-    const supportedTaggableIds = ["userId", "topicId"];
-    const supportedTaggableCount = Object.keys(newTagging).filter((key) => {
-      supportedTaggableIds.includes(key);
-    }).length;
-    if (supportedTaggableCount > 1) {
-      throw `Too many taggable IDs provided. You must provide only one of the following: ${supportedTaggableIds}`;
-    }
-
-    let newMultiTagging: NewMultiTagging;
-
-    // Forward the request to the private add function
-    if ("topicId" in newTagging) {
-      newMultiTagging = {
-        taggableTableName: "topics",
-        taggableId: newTagging.topicId,
-        key: newTagging.key,
-        value: newTagging.value,
-      };
-      return this.#add(newMultiTagging);
-    } else if ("userId" in newTagging) {
-      newMultiTagging = {
-        taggableTableName: "users",
-        taggableId: newTagging.userId,
-        key: newTagging.key,
-        value: newTagging.value,
-      };
-    } else {
-      throw `Unable to add tag using provided arguments: ${newTagging}. Please provide one supported taggable id: ${supportedTaggableIds}.`;
-    }
+  async add(newTagging: NewUserTagging): Promise<TagWithTaggingId> {
+    newTagging = NewUserTaggingSchema.parse(newTagging);
+    const newMultiTagging = {
+      taggableTableName: "users",
+      taggableId: newTagging.userId,
+      key: newTagging.key,
+      value: newTagging.value,
+    };
     return this.#add(newMultiTagging);
   }
 
@@ -494,11 +307,11 @@ export class TagsDbWrapper extends DbWrapper {
         tagWithTaggingId.mode === "mono" &&
         tagWithTaggingId.value !== newMultiTagging.value
       ) {
-        throw `Cannot overwrite existing mono tagging: 
+        throw new Error(`Cannot overwrite existing mono tagging: 
         { id: ${tagWithTaggingId.taggingId}, key: ${tagWithTaggingId.key}, value: ${tagWithTaggingId.value} }. 
         To overwrite the value of a mono tagging, use set(), update(), or increment(). 
         To switch to a multi tagging, first use remove() to delete the mono tagging, then use add().
-        `;
+        `);
       }
 
       // if a tag already exists but in mono mode, throw an error.
@@ -506,10 +319,10 @@ export class TagsDbWrapper extends DbWrapper {
         tagWithTaggingId.mode === "mono" &&
         tagWithTaggingId.value === newMultiTagging.value
       ) {
-        throw `You called add(), which creates taggings in 'multi' mode, 
+        throw new Error(`You called add(), which creates taggings in 'multi' mode, 
         but a tagging for the requested key/value pair already exists in 'mono' mode:
         { id: ${tagWithTaggingId.taggingId}, key: ${tagWithTaggingId.key}, value: ${tagWithTaggingId.value} }. 
-        First use remove() to delete the above tagging.`;
+        First use remove() to delete the above tagging.`);
       }
 
       if (
@@ -570,8 +383,8 @@ export class TagsDbWrapper extends DbWrapper {
             tagId: savedTag.id,
             mode: "multi",
           });
-        // throw the error if it's not an expected one
       } else {
+        // throw the error if it's not an expected one
         throw e;
       }
     }

@@ -42,7 +42,9 @@ export class Topic {
    */
   registerFragmentAlias(params: { alias: string; uri: string }) {
     if (this.fragmentUrisByAlias[params.alias]) {
-      throw `Cannot register author-assigned alias for fragment ${params.uri}: alias ${params.alias} has already been taken.`;
+      throw new Error(
+        `Cannot register author-assigned alias for fragment ${params.uri}: alias ${params.alias} has already been taken.`
+      );
     }
     this.fragmentUrisByAlias[params.alias] = params.uri;
   }
@@ -120,7 +122,9 @@ export class Topic {
       .toString();
     const match = params.filename.match(/\d*-?(.*).md/);
     if (match === null) {
-      throw `Could not derive document slug from filename '${params.filename}'.`;
+      throw new Error(
+        `Could not derive document slug from filename '${params.filename}'.`
+      );
     }
     const slug = match[1];
     const domHandlerDocument: DomHandlerDocument = htmlparser2.parseDocument(
@@ -171,7 +175,9 @@ export class Topic {
             (fragmentAliasEntry) => {
               const fragmentUri = this.fragmentUrisByAlias[fragmentAliasEntry];
               if (!fragmentUri) {
-                throw `Unable to populate a fragment uri for the requested alias ${fragmentAliasEntry}`;
+                throw new Error(
+                  `Unable to populate a fragment uri for the requested alias ${fragmentAliasEntry}`
+                );
               }
               fragment.data.fragmentUrisByAlias[fragmentAliasEntry] =
                 fragmentUri;
