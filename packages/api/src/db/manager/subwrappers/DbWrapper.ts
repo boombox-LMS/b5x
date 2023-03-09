@@ -27,26 +27,10 @@ export class DbWrapper {
       });
   }
 
-  all(criteria: any) {
-    if (!criteria) {
-      return this.knex(this.tableName);
-    } else {
-      return this.knex(this.tableName).where(criteria);
-    }
-  }
-
   // can be overridden in individual wrapper that require
   // their own destruction logic, such as destroying a queue
   // that is internal to the wrapper
   async destroy() {
     return true;
   }
-
-  /* TODO
-  all(criteria) {
-  }
-
-  findOne(criteria) {
-  }
-  */
 }
