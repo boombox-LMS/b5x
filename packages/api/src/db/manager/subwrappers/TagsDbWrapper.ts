@@ -277,7 +277,6 @@ export class TagsDbWrapper extends DbWrapper {
     };
   }
 
-  // TODO: Should also work for topics?
   async increment(tagIncrementParams: {
     userId: number;
     key: string;
@@ -403,38 +402,14 @@ export class TagsDbWrapper extends DbWrapper {
   /**
    *  Multi tag functions
    */
-  // TODO: Write tests verifying the errors this function throws
-  async add(
-    newTagging: NewTopicTagging | NewUserTagging
-  ): Promise<TagWithTaggingId> {
-    // Ensure that only one taggable ID has been provided
-    // TODO: Use a Zod schema for this
-    const supportedTaggableIds = ["userId"];
-    const supportedTaggableCount = Object.keys(newTagging).filter((key) => {
-      supportedTaggableIds.includes(key);
-    }).length;
-    if (supportedTaggableCount > 1) {
-      throw new Error(
-        `Too many taggable IDs provided. You must provide only one of the following: ${supportedTaggableIds}`
-      );
-    }
-
-    let newMultiTagging: NewMultiTagging;
-
-    // Forward the request to the private add function
-    // TODO: Use Zod here instead
-    if ("userId" in newTagging) {
-      newMultiTagging = {
-        taggableTableName: "users",
-        taggableId: newTagging.userId,
-        key: newTagging.key,
-        value: newTagging.value,
-      };
-    } else {
-      throw new Error(
-        `Unable to add tag using provided arguments: ${newTagging}. Please provide one supported taggable id: ${supportedTaggableIds}.`
-      );
-    }
+  async add(newTagging: NewUserTagging): Promise<TagWithTaggingId> {
+    newTagging = NewUserTaggingSchema.parse(newTagging);
+    const newMultiTagging = {
+      taggableTableName: "users",
+      taggableId: newTagging.userId,
+      key: newTagging.key,
+      value: newTagging.value,
+    };
     return this.#add(newMultiTagging);
   }
 
@@ -534,8 +509,8 @@ export class TagsDbWrapper extends DbWrapper {
             tagId: savedTag.id,
             mode: "multi",
           });
-        // throw the error if it's not an expected one
       } else {
+        // throw the error if it's not an expected one
         throw e;
       }
     }
