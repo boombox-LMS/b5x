@@ -8,14 +8,22 @@ import {
 
 import {
   UserTagRemovalParams,
-  TopicTagRemovalParams,
-  TopicTagSearchCriteria,
+  UserTagRemovalParamsSchema,
   UserTagSearchCriteria,
+  UserTagSearchCriteriaSchema,
 } from "./types/tags";
 
 import { DbWrapper } from "./DbWrapper";
 const _ = require("lodash");
 
+/**
+ * This class is for managing tags and taggings. While the only valid
+ * type of taggable right now is a user, this functionality is expected to expand
+ * to topics and other types of taggables in the future. At that point,
+ * a portion of the code will need to be refactored to be more generic,
+ * though most of the tagging functions should still work properly as-is.
+ * The relevant data tables are also already set up to be generic.
+ */
 export class TagsDbWrapper extends DbWrapper {
   knex: any;
 
@@ -111,30 +119,18 @@ export class TagsDbWrapper extends DbWrapper {
   // TODO: This is a search for a given user or topic, not plain tags themselves.
   // Should it be called allFor to make the intent clearer? .all in ActiveRecord etc.
   // means something much more flexible.
-  all(
-    tagSearchCriteria: TopicTagSearchCriteria | UserTagSearchCriteria
-  ): Promise<TagWithTaggingId[]> {
-    let searchCriteria: { key?: string; value?: any } = {};
-    let taggableId: number;
-    let taggableTableName: string;
+  all(tagSearchCriteria: UserTagSearchCriteria): Promise<TagWithTaggingId[]> {
+    tagSearchCriteria = UserTagSearchCriteriaSchema.parse(tagSearchCriteria);
+    const taggableId = tagSearchCriteria.userId;
+    const taggableTableName = "users";
 
-    if ("topicId" in tagSearchCriteria && "userId" in tagSearchCriteria) {
-      throw new Error("Please provide a topicId or userId, not both.");
-    } else if ("topicId" in tagSearchCriteria) {
-      taggableId = tagSearchCriteria.topicId;
-      taggableTableName = "topics";
-    } else if ("userId" in tagSearchCriteria) {
-      taggableId = tagSearchCriteria.userId;
-      taggableTableName = "users";
-    } else {
-      throw new Error("Please provide a topicId or a userId for the search.");
-    }
+    let tableSearchCriteria: { key?: string; value?: any } = {};
 
-    if (tagSearchCriteria.key !== undefined) {
-      searchCriteria.key = tagSearchCriteria.key;
+    if ("key" in tagSearchCriteria) {
+      tableSearchCriteria.key = tagSearchCriteria.key;
     }
-    if (tagSearchCriteria.value !== undefined) {
-      searchCriteria.value = JSON.stringify(tagSearchCriteria.value);
+    if ("value" in tagSearchCriteria) {
+      tableSearchCriteria.value = JSON.stringify(tagSearchCriteria.value);
     }
 
     return this.knex
@@ -143,35 +139,15 @@ export class TagsDbWrapper extends DbWrapper {
       .leftJoin("taggings", "taggings.tagId", "tags.id")
       .where("taggings.taggableTableName", "=", taggableTableName)
       .andWhere("taggings.taggableId", "=", taggableId)
-      .andWhere(searchCriteria);
+      .andWhere(tableSearchCriteria);
   }
 
-  // This method is for topics and users. Use removeFor to make that clearer?
-  // Also, does not return false if something goes wrong, but it probably should,
-  // or just return nothing. Or the remaining tags?
-  async remove(
-    tagRemovalParams: UserTagRemovalParams | TopicTagRemovalParams
-  ): Promise<boolean> {
-    let tagSearchCriteria: TopicTagSearchCriteria | UserTagSearchCriteria;
-    // TODO: Write validators for these so I don't have to keep putting them in here longhand.
-    // These validators can go in the parent DB Wrapper class.
-    if ("topicId" in tagRemovalParams && "userId" in tagRemovalParams) {
-      throw new Error("Please provide a topicId or a userId, but not both.");
-    } else if ("topicId" in tagRemovalParams || "userId" in tagRemovalParams) {
-      tagSearchCriteria = { ...tagRemovalParams };
-    } else {
-      throw new Error("Please provide a topicId or a userId.");
-    }
+  async remove(tagRemovalParams: UserTagRemovalParams): Promise<boolean> {
+    tagRemovalParams = UserTagRemovalParamsSchema.parse(tagRemovalParams);
+    const tableSearchCriteria =
+      UserTagSearchCriteriaSchema.parse(tagRemovalParams);
 
-    if (
-      !tagRemovalParams.confirmRemoveAll &&
-      Object.keys(tagRemovalParams).length === 1
-    ) {
-      throw new Error(`remove() cannot delete all tags for a given entity unless 
-      the 'confirmRemoveAll' key is passed in with a value of true.`);
-    }
-
-    const existingTagsWithTaggingIds = await this.all(tagSearchCriteria);
+    const existingTagsWithTaggingIds = await this.all(tableSearchCriteria);
 
     let taggingIdsToRemove: number[] = [];
 
@@ -197,24 +173,16 @@ export class TagsDbWrapper extends DbWrapper {
    *  Mono tag functions
    */
 
-  async set(
-    newTaggingParams: NewTopicTagging | NewUserTagging
-  ): Promise<TagWithTaggingId> {
+  async set(newTaggingParams: NewUserTagging): Promise<TagWithTaggingId> {
     let newTaggingTableName: string;
     let newTaggingTaggableId: number;
 
-    // TODO: Write validators for these so I don't have to keep putting them in here longhand.
-    // These validators can go in the parent DB Wrapper class.
-    if ("topicId" in newTaggingParams && "userId" in newTaggingParams) {
-      throw new Error("Please provide a topicId or a userId, but not both.");
-    } else if ("topicId" in newTaggingParams) {
-      newTaggingTableName = "topics";
-      newTaggingTaggableId = newTaggingParams.topicId;
-    } else if ("userId" in newTaggingParams) {
+    // TODO: Use a Zod schema instead
+    if ("userId" in newTaggingParams) {
       newTaggingTableName = "users";
       newTaggingTaggableId = newTaggingParams.userId;
     } else {
-      throw new Error("Please provide a topicId or a userId.");
+      throw new Error("Please provide a userId.");
     }
 
     const existingTagsWithTaggingIds = await this.#getTagsWithTaggingIds({
@@ -442,7 +410,8 @@ export class TagsDbWrapper extends DbWrapper {
     newTagging: NewTopicTagging | NewUserTagging
   ): Promise<TagWithTaggingId> {
     // Ensure that only one taggable ID has been provided
-    const supportedTaggableIds = ["userId", "topicId"];
+    // TODO: Use a Zod schema for this
+    const supportedTaggableIds = ["userId"];
     const supportedTaggableCount = Object.keys(newTagging).filter((key) => {
       supportedTaggableIds.includes(key);
     }).length;
@@ -455,15 +424,8 @@ export class TagsDbWrapper extends DbWrapper {
     let newMultiTagging: NewMultiTagging;
 
     // Forward the request to the private add function
-    if ("topicId" in newTagging) {
-      newMultiTagging = {
-        taggableTableName: "topics",
-        taggableId: newTagging.topicId,
-        key: newTagging.key,
-        value: newTagging.value,
-      };
-      return this.#add(newMultiTagging);
-    } else if ("userId" in newTagging) {
+    // TODO: Use Zod here instead
+    if ("userId" in newTagging) {
       newMultiTagging = {
         taggableTableName: "users",
         taggableId: newTagging.userId,
