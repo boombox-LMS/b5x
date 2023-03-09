@@ -314,11 +314,15 @@ export class Document {
   #parseConfig(configTag: BxmlTagNode) {
     if (configTag.children.length === 0) {
       console.log(configTag);
-      throw `Cannot parse above configTag: tag appears to have no children.`;
+      throw new Error(
+        `Cannot parse above configTag: tag appears to have no children.`
+      );
     }
     if (configTag.children[0].type !== "text") {
       console.log(configTag);
-      throw `Cannot parse above configTag: expected text contents only.`;
+      throw new Error(
+        `Cannot parse above configTag: expected text contents only.`
+      );
     }
     const yamlStr = configTag.children[0].data;
     let config = parseYaml(yamlStr);

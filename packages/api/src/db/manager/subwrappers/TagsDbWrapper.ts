@@ -251,12 +251,12 @@ export class TagsDbWrapper extends DbWrapper {
 
     // throw an error if multi taggings were detected
     if (multiTaggings.length > 0) {
-      throw `Cannot overwrite existing multi taggings: 
+      throw new Error(`Cannot overwrite existing multi taggings: 
         ${multiTaggings.forEach((tagging) => {
           return `\n{ id: ${tagging.taggingId}, key: ${tagging.key}, value: ${tagging.value} }\n`;
         })} 
         To switch to mono tagging, first use remove() to delete the multi taggings, then use set().
-        `;
+        `);
     }
 
     // if a tag exists, and a tagging exists, and they already align,
@@ -355,12 +355,12 @@ export class TagsDbWrapper extends DbWrapper {
 
     // throw an error if multi taggings were detected
     if (multiTaggings.length > 0) {
-      throw `Cannot overwrite existing multi taggings: 
+      throw new Error(`Cannot overwrite existing multi taggings: 
         ${multiTaggings.forEach((tagging) => {
           return `\n{ id: ${tagging.taggingId}, key: ${tagging.key}, value: ${tagging.value} }\n`;
         })} 
         To switch to mono tagging, first use remove() to delete the multi taggings, then use set().
-        `;
+        `);
     }
 
     // calculate the intended updated value of the user's tag
@@ -447,7 +447,9 @@ export class TagsDbWrapper extends DbWrapper {
       supportedTaggableIds.includes(key);
     }).length;
     if (supportedTaggableCount > 1) {
-      throw `Too many taggable IDs provided. You must provide only one of the following: ${supportedTaggableIds}`;
+      throw new Error(
+        `Too many taggable IDs provided. You must provide only one of the following: ${supportedTaggableIds}`
+      );
     }
 
     let newMultiTagging: NewMultiTagging;
@@ -469,7 +471,9 @@ export class TagsDbWrapper extends DbWrapper {
         value: newTagging.value,
       };
     } else {
-      throw `Unable to add tag using provided arguments: ${newTagging}. Please provide one supported taggable id: ${supportedTaggableIds}.`;
+      throw new Error(
+        `Unable to add tag using provided arguments: ${newTagging}. Please provide one supported taggable id: ${supportedTaggableIds}.`
+      );
     }
     return this.#add(newMultiTagging);
   }
@@ -494,11 +498,11 @@ export class TagsDbWrapper extends DbWrapper {
         tagWithTaggingId.mode === "mono" &&
         tagWithTaggingId.value !== newMultiTagging.value
       ) {
-        throw `Cannot overwrite existing mono tagging: 
+        throw new Error(`Cannot overwrite existing mono tagging: 
         { id: ${tagWithTaggingId.taggingId}, key: ${tagWithTaggingId.key}, value: ${tagWithTaggingId.value} }. 
         To overwrite the value of a mono tagging, use set(), update(), or increment(). 
         To switch to a multi tagging, first use remove() to delete the mono tagging, then use add().
-        `;
+        `);
       }
 
       // if a tag already exists but in mono mode, throw an error.
@@ -506,10 +510,10 @@ export class TagsDbWrapper extends DbWrapper {
         tagWithTaggingId.mode === "mono" &&
         tagWithTaggingId.value === newMultiTagging.value
       ) {
-        throw `You called add(), which creates taggings in 'multi' mode, 
+        throw new Error(`You called add(), which creates taggings in 'multi' mode, 
         but a tagging for the requested key/value pair already exists in 'mono' mode:
         { id: ${tagWithTaggingId.taggingId}, key: ${tagWithTaggingId.key}, value: ${tagWithTaggingId.value} }. 
-        First use remove() to delete the above tagging.`;
+        First use remove() to delete the above tagging.`);
       }
 
       if (
