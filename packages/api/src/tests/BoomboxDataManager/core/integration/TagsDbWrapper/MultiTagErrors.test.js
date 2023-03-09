@@ -34,7 +34,7 @@ describe("Multi tag operations throw errors as expected", () => {
         value: "testvalue1",
       });
     };
-    expect(disallowedOperation).rejects.toThrow(ZodError);
+    expect(disallowedOperation()).rejects.toThrow(ZodError);
   });
 
   test("A multi tag cannot be created with the same key as an existing mono tag", () => {
@@ -45,6 +45,6 @@ describe("Multi tag operations throw errors as expected", () => {
         value: "testvalue1",
       });
     };
-    expect(disallowedOperation).rejects.toThrow();
+    expect(disallowedOperation()).rejects.toThrow();
   });
 });

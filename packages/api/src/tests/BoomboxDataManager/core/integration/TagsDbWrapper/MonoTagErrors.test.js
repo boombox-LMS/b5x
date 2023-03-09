@@ -33,6 +33,6 @@ describe("Mono tag operations throw errors as expected", () => {
         value: "testvalue1",
       });
     };
-    expect(disallowedOperation).rejects.toThrow();
+    expect(disallowedOperation()).rejects.toThrow();
   });
 });
