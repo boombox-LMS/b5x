@@ -1,7 +1,7 @@
 import express, { Request, NextFunction, Response } from "express";
 import { PublicCatalog } from "@b5x/types";
 import { z } from "zod";
-import { RawTopicSchema } from "@b5x/types";
+import { RawTopicSchema, DocumentStatus } from "@b5x/types";
 
 const router = express.Router();
 
@@ -233,10 +233,11 @@ router.post(
     req.db.enrollments
       .find(userId, topicUri)
       .then((enrollment) => {
+        // TODO: The nested notions of document status are smurfy, find a better name at the enrollment level
         const incompleteDocuments = Object.values(
           enrollment.documentStatus
-        ).filter((document) => {
-          return document.isVisible && !document.isCompleted;
+        ).filter((documentStatus: DocumentStatus) => {
+          return documentStatus.isVisible && !documentStatus.isCompleted;
         });
 
         if (incompleteDocuments.length === 0) {
