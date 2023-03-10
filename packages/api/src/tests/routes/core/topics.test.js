@@ -129,6 +129,16 @@ describe("Topics routes should match expectations", () => {
     });
   });
 
+  // topics.publish -------------------------------------------------
+  describe("topics.publish matches expectations", () => {
+    // parse the smoke test topic under a new slug
+    // count the entities in the compiled topic data
+    // publish the smoke test topic again
+    test.todo("topics.publish returns a 200");
+    // verify that the correct number of entities were created
+    test.todo("topics.publish creates the expected entities");
+  });
+
   // topics.enrollment + topics.verifyCompletion --------------------
 
   describe("topics.enrollment and topics.verifyCompletion match expectations", () => {
