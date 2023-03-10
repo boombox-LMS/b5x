@@ -1,11 +1,23 @@
 import express, { Request, NextFunction, Response } from "express";
+import { z } from "zod";
 
 const router = express.Router();
+
+const responsesCreateBodySchema = z
+  .object({
+    fragmentUri: z.string(),
+    enrollmentId: z.number(),
+    value: z.string(),
+    status: z.enum(["completed", "in progress"]),
+  })
+  .strict();
 
 router.post(
   "/responses.create",
   function (req: Request, res: Response, next: NextFunction) {
-    const { fragmentUri, enrollmentId, value, status } = req.body;
+    const body = responsesCreateBodySchema.parse(req.body);
+    const { fragmentUri, enrollmentId, value, status } = body;
+
     req.db.events.queueCreate({
       name: "responseSubmitted",
       data: {
