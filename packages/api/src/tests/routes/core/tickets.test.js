@@ -268,7 +268,10 @@ describe("Tickets routes should match expectations", () => {
         .post(apiPrefix + `tickets.create`)
         .set("Cookie", cookie)
         .send({
-          badKey: "The route does not recognize this key!",
+          reporterUrl: undefined,
+          title: undefined,
+          priorityLevel: undefined,
+          description: undefined,
         })
         .expect(422)
         .catch((e) => {

@@ -1,11 +1,12 @@
 import express, { Request, NextFunction, Response } from "express";
 import { z } from "zod";
+import { QueryStringValueSchema } from "../types/queryData";
 
 const router = express.Router();
 
 const ResponsesCreateBodySchema = z
   .object({
-    fragmentUri: z.string(),
+    fragmentUri: QueryStringValueSchema,
     enrollmentId: z.number(),
     value: z.any(),
     status: z.enum(["completed", "in progress"]),

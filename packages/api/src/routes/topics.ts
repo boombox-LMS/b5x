@@ -2,14 +2,12 @@ import express, { Request, NextFunction, Response } from "express";
 import { PublicCatalog } from "@b5x/types";
 import { z } from "zod";
 import { RawTopicSchema, DocumentStatus } from "@b5x/types";
+import { QueryStringValueSchema } from "../types/queryData";
 
 const router = express.Router();
 
 /**
  *  Get the catalog of topics available to the current user.
- *
- *  TODO:
- *  - Cache route?
  */
 router.get(
   "/topics.catalog",
@@ -47,6 +45,7 @@ router.get(
 /**
  *  Not in use yet, but will be used to make catalog filters persistent
  */
+/*
 router.post(
   "/topics.updateCatalogFilters",
   function (req: Request, res: Response, next: NextFunction) {
@@ -56,6 +55,7 @@ router.post(
     res.send(filters);
   }
 );
+*/
 
 /**
  *  Get the details of one specific topic.
@@ -68,8 +68,8 @@ router.post(
 
 const TopicsInfoQuerySchema = z
   .object({
-    uri: z.string().optional(),
-    slug: z.string().optional(),
+    uri: QueryStringValueSchema.optional(),
+    slug: QueryStringValueSchema.optional(),
   })
   .strict()
   .refine((val) => {
@@ -85,7 +85,15 @@ const TopicsInfoQuerySchema = z
 router.get(
   "/topics.info",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri, slug } = TopicsInfoQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = TopicsInfoQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
+    const { uri, slug } = query;
     return req.db.users
       .getTopicAccessStatus({
         // @ts-ignore
@@ -121,20 +129,26 @@ router.get(
 
 /**
  *  Get the contents of one specific topic.
- *
- *  TODO: Write smoke test for endpoint.
  */
 
 const TopicContentsQuerySchema = z
   .object({
-    uri: z.string(),
+    uri: QueryStringValueSchema,
   })
   .strict();
 
 router.get(
   "/topics.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri } = TopicContentsQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = TopicContentsQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
+    const { uri } = query;
 
     return req.db.users
       .getTopicAccessStatus({
@@ -172,14 +186,22 @@ router.get(
 
 const TopicsEnrollmentQuerySchema = z
   .object({
-    uri: z.string(),
+    uri: QueryStringValueSchema,
   })
   .strict();
 
 router.get(
   "/topics.enrollment",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri: topicUri } = TopicsEnrollmentQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = TopicsEnrollmentQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
+    const { uri: topicUri } = query;
     const userId = req.session.currentUserId;
     // TODO: This returns a saved enrollment, but we don't want database IDs out there in public,
     // so this should go through the data manager instead, like everything else.
@@ -200,12 +222,19 @@ router.get(
  *
  *  TODO:
  *  - Implement permissions
- */ //
+ */
 
 router.post(
   "/topics.publish",
   function (req: Request, res: Response, next: NextFunction) {
-    const topic = RawTopicSchema.parse(req.body.topic);
+    let topic;
+    try {
+      topic = RawTopicSchema.parse(req.body);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
     req.db.topics
       .publish({ topic })
       .then(() => res.status(200).send())
@@ -217,14 +246,23 @@ router.post(
 
 const TopicsVerifyCompletionBodySchema = z
   .object({
-    topicUri: z.string(),
+    // TODO: Use a more specific schema throughout once the format of topic identifiers is settled
+    topicUri: QueryStringValueSchema,
   })
   .strict();
 
 router.post(
   "/topics.verifyCompletion",
   function (req: Request, res: Response, next: NextFunction) {
-    const { topicUri } = TopicsVerifyCompletionBodySchema.parse(req.body);
+    let body;
+    try {
+      body = TopicsVerifyCompletionBodySchema.parse(req.body);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
+    const { topicUri } = body;
     const userId = req.session.currentUserId;
     req.db.enrollments
       .find(userId, topicUri)

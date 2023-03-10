@@ -92,7 +92,7 @@ describe("Documents routes should return a 200", () => {
 
     test("documents.responses returns a 422 if an invalid data schema is sent", async () => {
       await supertest(app)
-        .get(apiPrefix + `documents.responses?badKey=badValue`)
+        .get(apiPrefix + `documents.responses?documentUri=undefined`)
         .set("Cookie", cookie)
         .expect(422)
         .catch((e) => {
@@ -133,7 +133,7 @@ describe("Documents routes should return a 200", () => {
     test("documents.verifyCompletion returns a 422 when given a bad data schema", async () => {
       await supertest(app)
         .post(apiPrefix + `documents.verifyCompletion`)
-        .send({ badKey: "badValue" })
+        .send({ documentUri: "undefined" })
         .set("Cookie", cookie)
         .expect(422)
         .catch((e) => {

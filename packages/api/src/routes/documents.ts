@@ -1,6 +1,7 @@
 import express, { Request, NextFunction, Response } from "express";
 import { UserResponse } from "@b5x/types";
 import { ConditionsChecker } from "@b5x/conditions-manager";
+import { QueryStringValueSchema } from "../types/queryData";
 import { z } from "zod";
 
 const router = express.Router();
@@ -9,7 +10,8 @@ const router = express.Router();
 
 const DocumentsContentsQuerySchema = z
   .object({
-    documentUri: z.string(),
+    // TODO: Use a more specific schema throughout when the document identifiers are more settled
+    documentUri: QueryStringValueSchema,
   })
   .strict();
 
@@ -39,7 +41,7 @@ router.get(
 
 const DocumentsResponsesQuerySchema = z
   .object({
-    documentUri: z.string(),
+    documentUri: QueryStringValueSchema,
   })
   .strict();
 
@@ -78,7 +80,7 @@ router.get(
 
 const DocumentsVerifyCompletionBodySchema = z
   .object({
-    documentUri: z.string(),
+    documentUri: QueryStringValueSchema,
   })
   .strict();
 
