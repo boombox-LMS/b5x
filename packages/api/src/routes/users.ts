@@ -1,4 +1,5 @@
 import express, { Request, NextFunction, Response } from "express";
+import { z } from "zod";
 
 const router = express.Router();
 
@@ -90,13 +91,21 @@ router.get(
  *  - add to groups
  *  - remove from groups
  */
+
+const UsersModifyGroupsBodySchema = z.object({
+  users: z.array(
+    z.object({
+      email: z.string(),
+      addToGroups: z.array(z.string()),
+      removeFromGroups: z.array(z.string()),
+    })
+  ),
+});
+
 router.post(
   "/users.modifyGroups",
   function (req: Request, res: Response, next: NextFunction) {
-    /*
-  [{"email":"front-end@test.com", "add to groups":["tech","software-engineers","frontend-engineers"],"remove from groups":""},{"email":"mobile@test.com","first name":"iOS","last name":"Engineer","add to groups":["tech","software-engineers","mobile-engineers","ios-engineers"],"remove from groups":""},{"email":"back-end@test.com","first name":"Backend","last name":"Engineer","add to groups":["tech","software-engineers","backend-engineers"],"remove from groups":""}]
-  */
-    const users = req.body.users;
+    const { users } = UsersModifyGroupsBodySchema.parse(req.body);
     req.db.users
       .modifyGroups({ users })
       .then((result) => {
@@ -128,13 +137,18 @@ router.get(
   }
 );
 
+const UsersProfileQuerySchema = z
+  .object({
+    username: z.string(),
+  })
+  .strict();
+
 router.get(
   "/users.profile",
   function (req: Request, res: Response, next: NextFunction) {
-    const username = req.query.username;
+    const { username } = UsersProfileQuerySchema.parse(req.query);
 
     req.db.users
-      // @ts-ignore
       .profile({ username })
       .then((profile) => {
         res.send(profile);
