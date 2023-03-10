@@ -121,6 +121,16 @@ describe("Topics routes should match expectations", () => {
         });
     });
 
+    test("topics.contents returns a 422 when given an invalid data schema", async () => {
+      await supertest(app)
+        .get(apiPrefix + `topics.contents?uri=undefined`)
+        .set("Cookie", cookie)
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
+    });
+
     test("topics.contents returns the correct data type", () => {
       const validator = () => {
         PublicTopicSchema.parse(responseBody);

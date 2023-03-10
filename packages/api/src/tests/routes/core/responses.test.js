@@ -92,6 +92,17 @@ describe("Responses routes should match expectations", () => {
         });
     });
 
+    test("responses.create returns a 422 when an invalid data schema is sent", async () => {
+      await supertest(app)
+        .post(apiPrefix + "responses.create")
+        .set("Cookie", cookie)
+        .send({ ...response, badKey: "badValue" })
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
+    });
+
     test("responses.create returns the correct data type", () => {
       const validator = () => {
         UserResponseSchema.parse(responseBody);

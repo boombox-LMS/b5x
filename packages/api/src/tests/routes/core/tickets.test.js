@@ -144,6 +144,17 @@ describe("Tickets routes should match expectations", () => {
         });
     });
 
+    test("tickets.setStatus returns a 422 if the data schema is invalid", async () => {
+      await supertest(app)
+        .post(apiPrefix + `tickets.setStatus`)
+        .set("Cookie", cookie)
+        .send({
+          ticketId: "not a valid ticketId",
+          status: "not a valid status",
+        })
+        .expect(422);
+    });
+
     test("tickets.setStatus returns the correct data type", () => {
       const ResponseBodySchema = SavedTicketSchema.extend({
         id: z.literal(testTicketId),
@@ -165,7 +176,7 @@ describe("Tickets routes should match expectations", () => {
     let testAssigneeEmail;
     let testAssigneeId;
 
-    test("tickets.setAssignee returns a 200", async () => {
+    test("A valid tickets.setAssignee call returns a 200", async () => {
       testTicketId = await app
         .get("db")
         .knex.select("id")
@@ -207,6 +218,19 @@ describe("Tickets routes should match expectations", () => {
         });
     });
 
+    test("An tickets.setAssignee call with an invalid data schema returns a 422", async () => {
+      await supertest(app)
+        .post(apiPrefix + `tickets.setAssignee`)
+        .set("Cookie", cookie)
+        .send({
+          badKey: "The route does not recognize this key!",
+        })
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
+    });
+
     test("tickets.setAssignee returns the correct data type", () => {
       const ResponseBodySchema = SavedTicketSchema.extend({
         id: z.literal(testTicketId),
@@ -223,7 +247,7 @@ describe("Tickets routes should match expectations", () => {
   // tickets.create -------------------------------------------------
 
   describe("tickets.create matches expectations", () => {
-    test("tickets.create returns a 200", async () => {
+    test("A valid tickets.create call returns a 200", async () => {
       await supertest(app)
         .post(apiPrefix + `tickets.create`)
         .set("Cookie", cookie)
@@ -233,7 +257,26 @@ describe("Tickets routes should match expectations", () => {
           priorityLevel: 0,
           description: "Test issue description",
         })
-        .expect(200);
+        .expect(200)
+        .catch((e) => {
+          throw e;
+        });
+    });
+
+    test("A tickets.create call with an invalid data schema returns a 422", async () => {
+      await supertest(app)
+        .post(apiPrefix + `tickets.create`)
+        .set("Cookie", cookie)
+        .send({
+          reporterUrl: undefined,
+          title: undefined,
+          priorityLevel: undefined,
+          description: undefined,
+        })
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
     });
   });
 });

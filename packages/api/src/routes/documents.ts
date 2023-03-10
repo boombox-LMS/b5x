@@ -1,6 +1,7 @@
 import express, { Request, NextFunction, Response } from "express";
 import { UserResponse } from "@b5x/types";
 import { ConditionsChecker } from "@b5x/conditions-manager";
+import { QueryStringValueSchema } from "../types/queryData";
 import { z } from "zod";
 
 const router = express.Router();
@@ -9,14 +10,22 @@ const router = express.Router();
 
 const DocumentsContentsQuerySchema = z
   .object({
-    documentUri: z.string(),
+    // TODO: Use a more specific schema throughout when the document identifiers are more settled
+    documentUri: QueryStringValueSchema,
   })
   .strict();
 
 router.get(
   "/documents.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const { documentUri } = DocumentsContentsQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = DocumentsContentsQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+    const { documentUri } = query;
 
     req.db.events.queueCreate({
       name: "documentRetrieved",
@@ -32,15 +41,23 @@ router.get(
 
 const DocumentsResponsesQuerySchema = z
   .object({
-    documentUri: z.string(),
+    documentUri: QueryStringValueSchema,
   })
   .strict();
 
 router.get(
   "/documents.responses",
   function (req: Request, res: Response, next: NextFunction) {
-    // TODO: Do we want to return a certain status code when the Zod validation fails?
-    const { documentUri } = DocumentsContentsQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = DocumentsResponsesQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      // TODO: Return seems to be considered acceptable practice, but should it be next() instead?
+      return;
+    }
+
+    const { documentUri } = query;
 
     const userId = req.session.currentUserId;
     req.db.responses
@@ -63,7 +80,7 @@ router.get(
 
 const DocumentsVerifyCompletionBodySchema = z
   .object({
-    documentUri: z.string(),
+    documentUri: QueryStringValueSchema,
   })
   .strict();
 
@@ -74,7 +91,15 @@ const DocumentsVerifyCompletionBodySchema = z
 router.post(
   "/documents.verifyCompletion",
   async function (req: Request, res: Response, next: NextFunction) {
-    const { documentUri } = DocumentsVerifyCompletionBodySchema.parse(req.body);
+    let body;
+    try {
+      body = DocumentsVerifyCompletionBodySchema.parse(req.body);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
+    const { documentUri } = body;
     const userId = req.session.currentUserId;
 
     // retrieve the document's completion conditions
