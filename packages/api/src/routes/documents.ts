@@ -16,8 +16,7 @@ const documentsContentsQuerySchema = z
 router.get(
   "/documents.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const query = documentsContentsQuerySchema.parse(req.query);
-    const documentUri = query.documentUri;
+    const { documentUri } = documentsContentsQuerySchema.parse(req.query);
 
     req.db.events.queueCreate({
       name: "documentRetrieved",
@@ -41,8 +40,7 @@ router.get(
   "/documents.responses",
   function (req: Request, res: Response, next: NextFunction) {
     // TODO: Do we want to return a certain status code when the Zod validation fails?
-    const query = documentsContentsQuerySchema.parse(req.query);
-    const documentUri = query.documentUri;
+    const { documentUri } = documentsContentsQuerySchema.parse(req.query);
 
     const userId = req.session.currentUserId;
     req.db.responses
@@ -76,8 +74,7 @@ const documentsVerifyCompletionBodySchema = z
 router.post(
   "/documents.verifyCompletion",
   async function (req: Request, res: Response, next: NextFunction) {
-    const body = documentsVerifyCompletionBodySchema.parse(req.body);
-    const documentUri = body.documentUri;
+    const { documentUri } = documentsVerifyCompletionBodySchema.parse(req.body);
     const userId = req.session.currentUserId;
 
     // retrieve the document's completion conditions

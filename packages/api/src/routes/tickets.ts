@@ -71,8 +71,9 @@ const ticketsSetAssigneeBodySchema = z
 router.post(
   "/tickets.setAssignee",
   function (req: Request, res: Response, next: NextFunction) {
-    const body = ticketsSetAssigneeBodySchema.parse(req.body);
-    const { ticketId, assigneeEmail } = body;
+    const { ticketId, assigneeEmail } = ticketsSetAssigneeBodySchema.parse(
+      req.body
+    );
 
     req.db.tickets
       .setAssignee(ticketId, assigneeEmail)
@@ -95,8 +96,7 @@ const ticketsSetStatusBodySchema = z
 router.post(
   "/tickets.setStatus",
   function (req: Request, res: Response, next: NextFunction) {
-    const body = ticketsSetStatusBodySchema.parse(req.body);
-    const { ticketId, status } = body;
+    const { ticketId, status } = ticketsSetStatusBodySchema.parse(req.body);
 
     req.db.tickets
       .setStatus(ticketId, status)
