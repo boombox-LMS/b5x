@@ -1,5 +1,7 @@
 import express, { Request, NextFunction, Response } from "express";
 import { PublicCatalog } from "@b5x/types";
+import { z } from "zod";
+import { RawTopicSchema } from "@b5x/types";
 
 const router = express.Router();
 
@@ -63,12 +65,27 @@ router.post(
  *  since this endpoint is currently used for both
  *  the topic details page and the topic contents.
  */
+
+const topicsInfoQuerySchema = z
+  .object({
+    uri: z.string().optional(),
+    slug: z.string().optional(),
+  })
+  .strict()
+  .refine((val) => {
+    if (val.uri && val.slug) {
+      return false;
+    }
+    if (!val.uri && !val.slug) {
+      return false;
+    }
+    return true;
+  });
+
 router.get(
   "/topics.info",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri, slug } = req.query; // only one of these should actually be present
-    // TODO: Write a general library for verifying these sorts of things (one and only one is present)
-    // TODO: Throw server errors instead of generic errors, so you can provide a status code
+    const { uri, slug } = topicsInfoQuerySchema.parse(req.query);
     return req.db.users
       .getTopicAccessStatus({
         // @ts-ignore
@@ -107,10 +124,17 @@ router.get(
  *
  *  TODO: Write smoke test for endpoint.
  */
+
+const topicContentsQuerySchema = z
+  .object({
+    uri: z.string(),
+  })
+  .strict();
+
 router.get(
   "/topics.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri } = req.query;
+    const { uri } = topicContentsQuerySchema.parse(req.query);
     if (typeof uri !== "string") {
       // TODO: Figure out how to throw server error with status code,
       // there is a ServerError in Express but I was having trouble finding it
@@ -149,15 +173,21 @@ router.get(
  *  Calculate the visibility, completion, and locked/unlocked
  *  status of each document in the topic.
  */
+
+const topicsEnrollmentQuerySchema = z
+  .object({
+    uri: z.string(),
+  })
+  .strict();
+
 router.get(
   "/topics.enrollment",
   function (req: Request, res: Response, next: NextFunction) {
-    let topicUri = req.query.uri || req.params.uri;
+    const { uri: topicUri } = topicsEnrollmentQuerySchema.parse(req.query);
     const userId = req.session.currentUserId;
     // TODO: This returns a saved enrollment, but we don't want database IDs out there in public,
     // so this should go through the data manager instead, like everything else.
     req.db.enrollments
-      // @ts-ignore
       .find(userId, topicUri)
       .then((enrollment) => res.send(enrollment))
       .catch((e: any) => {
@@ -175,11 +205,13 @@ router.get(
  *  TODO:
  *  - Implement permissions
  */ //
+
 router.post(
   "/topics.publish",
   function (req: Request, res: Response, next: NextFunction) {
+    const topic = RawTopicSchema.parse(req.body.topic);
     req.db.topics
-      .publish({ topic: req.body.topic })
+      .publish({ topic })
       .then(() => res.status(200).send())
       .catch((e: any) => {
         throw e;
@@ -187,10 +219,16 @@ router.post(
   }
 );
 
+const topicsVerifyCompletionBodySchema = z
+  .object({
+    topicUri: z.string(),
+  })
+  .strict();
+
 router.post(
   "/topics.verifyCompletion",
   function (req: Request, res: Response, next: NextFunction) {
-    const topicUri = req.body.topicUri || req.params.topicUri;
+    const { topicUri } = topicsVerifyCompletionBodySchema.parse(req.body);
     const userId = req.session.currentUserId;
     req.db.enrollments
       .find(userId, topicUri)

@@ -2,13 +2,15 @@ import { z } from "zod";
 
 // NewTicket --------------------------------------------------------
 
+export const TicketPriorityLevelSchema = z.number().min(0).max(5);
+
 export const NewTicketSchema = z
   .object({
     reporterId: z.number(),
     reporterUrl: z.string().url(),
     description: z.any(), // TODO: Use the correct type from the RTF editor here, if Zod can derive it
     title: z.string(),
-    priorityLevel: z.number().min(0).max(5),
+    priorityLevel: TicketPriorityLevelSchema,
   })
   .strict();
 
