@@ -1,17 +1,24 @@
 import express, { Request, NextFunction, Response } from "express";
 import { UserResponse } from "@b5x/types";
 import { ConditionsChecker } from "@b5x/conditions-manager";
+import { z } from "zod";
 
 const router = express.Router();
+
+// documents.contents ===============================================
+
+const documentsContentsQuerySchema = z
+  .object({
+    documentUri: z.string(),
+  })
+  .strict();
 
 router.get(
   "/documents.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const documentUri = req.query.documentUri || req.params.documentUri;
-    if (typeof documentUri !== "string") {
-      // TODO: How to throw a ServerError that allows a status code?
-      throw new Error("Query param 'documentUri' has to be of type string");
-    }
+    const query = documentsContentsQuerySchema.parse(req.query);
+    const documentUri = query.documentUri;
+
     req.db.events.queueCreate({
       name: "documentRetrieved",
       data: { documents: [documentUri], users: [req.session.currentUserId] },
@@ -22,14 +29,20 @@ router.get(
   }
 );
 
+// documents.responses ===============================================
+
+const documentsResponsesQuerySchema = z
+  .object({
+    documentUri: z.string(),
+  })
+  .strict();
+
 router.get(
   "/documents.responses",
   function (req: Request, res: Response, next: NextFunction) {
-    const documentUri = req.params.documentUri || req.query.documentUri;
-    if (typeof documentUri !== "string") {
-      // TODO: How to throw a ServerError that allows a status code?
-      throw new Error("Query param 'documentUri' has to be of type string");
-    }
+    // TODO: Do we want to return a certain status code when the Zod validation fails?
+    const query = documentsContentsQuerySchema.parse(req.query);
+    const documentUri = query.documentUri;
 
     const userId = req.session.currentUserId;
     req.db.responses
@@ -48,6 +61,14 @@ router.get(
   }
 );
 
+// documents.verifyCompletion =======================================
+
+const documentsVerifyCompletionBodySchema = z
+  .object({
+    documentUri: z.string(),
+  })
+  .strict();
+
 /**
  *  Verify that the document's completion requirements are met,
  *  and create a document completion if one does not already exist.
@@ -55,7 +76,8 @@ router.get(
 router.post(
   "/documents.verifyCompletion",
   async function (req: Request, res: Response, next: NextFunction) {
-    const documentUri = req.body.documentUri || req.params.documentUri;
+    const body = documentsVerifyCompletionBodySchema.parse(req.body);
+    const documentUri = body.documentUri;
     const userId = req.session.currentUserId;
 
     // retrieve the document's completion conditions
