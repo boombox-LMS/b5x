@@ -68,6 +68,7 @@ export class Topic {
     const keysToHoist = [
       "title",
       "subtitle",
+      "coverImageUrl",
       // 'slug',
     ]; // AWKWARD: Slug is set twice, should it just not appear in the config file?
 

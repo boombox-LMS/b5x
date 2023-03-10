@@ -34,7 +34,7 @@ router.get(
   }
 );
 
-const ticketsCreateBodySchema = z
+const TicketsCreateBodySchema = z
   .object({
     description: z.any(), // This should be the object created by the RTF editor, but that's not in the types package yet
     title: z.string(),
@@ -46,7 +46,7 @@ const ticketsCreateBodySchema = z
 router.post(
   "/tickets.create",
   function (req: Request, res: Response, next: NextFunction) {
-    const body = ticketsCreateBodySchema.parse(req.body);
+    const body = TicketsCreateBodySchema.parse(req.body);
     const { description, title, priorityLevel, reporterUrl } = body;
 
     req.db.tickets.queueCreate({
@@ -61,7 +61,7 @@ router.post(
   }
 );
 
-const ticketsSetAssigneeBodySchema = z
+const TicketsSetAssigneeBodySchema = z
   .object({
     ticketId: z.number(),
     assigneeEmail: z.string(),
@@ -71,7 +71,7 @@ const ticketsSetAssigneeBodySchema = z
 router.post(
   "/tickets.setAssignee",
   function (req: Request, res: Response, next: NextFunction) {
-    const { ticketId, assigneeEmail } = ticketsSetAssigneeBodySchema.parse(
+    const { ticketId, assigneeEmail } = TicketsSetAssigneeBodySchema.parse(
       req.body
     );
 
@@ -86,7 +86,7 @@ router.post(
   }
 );
 
-const ticketsSetStatusBodySchema = z
+const TicketsSetStatusBodySchema = z
   .object({
     ticketId: z.number(),
     status: z.string(),
@@ -96,7 +96,7 @@ const ticketsSetStatusBodySchema = z
 router.post(
   "/tickets.setStatus",
   function (req: Request, res: Response, next: NextFunction) {
-    const { ticketId, status } = ticketsSetStatusBodySchema.parse(req.body);
+    const { ticketId, status } = TicketsSetStatusBodySchema.parse(req.body);
 
     req.db.tickets
       .setStatus(ticketId, status)
