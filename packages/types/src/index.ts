@@ -127,6 +127,7 @@ import {
   IssueTicketSchema,
   FeedbackTicket,
   FeedbackTicketSchema,
+  TicketPriorityLevelSchema,
 } from "./types/ticket";
 
 import {
@@ -279,6 +280,7 @@ export {
   IssueTicketSchema,
   FeedbackTicket,
   FeedbackTicketSchema,
+  TicketPriorityLevelSchema,
   // users ----------------------------------------------------------
   NewUser,
   NewUserSchema,
