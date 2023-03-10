@@ -7,7 +7,7 @@ const responsesCreateBodySchema = z
   .object({
     fragmentUri: z.string(),
     enrollmentId: z.number(),
-    value: z.string(),
+    value: z.any(),
     status: z.enum(["completed", "in progress"]),
   })
   .strict();
