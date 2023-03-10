@@ -225,7 +225,10 @@ describe("Tickets routes should match expectations", () => {
         .send({
           badKey: "The route does not recognize this key!",
         })
-        .expect(422);
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
     });
 
     test("tickets.setAssignee returns the correct data type", () => {
@@ -254,7 +257,10 @@ describe("Tickets routes should match expectations", () => {
           priorityLevel: 0,
           description: "Test issue description",
         })
-        .expect(200);
+        .expect(200)
+        .catch((e) => {
+          throw e;
+        });
     });
 
     test("A tickets.create call with an invalid data schema returns a 422", async () => {
@@ -264,7 +270,10 @@ describe("Tickets routes should match expectations", () => {
         .send({
           badKey: "The route does not recognize this key!",
         })
-        .expect(422);
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
     });
   });
 });

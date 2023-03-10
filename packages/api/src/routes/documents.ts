@@ -16,7 +16,14 @@ const DocumentsContentsQuerySchema = z
 router.get(
   "/documents.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const { documentUri } = DocumentsContentsQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = DocumentsContentsQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+    const { documentUri } = query;
 
     req.db.events.queueCreate({
       name: "documentRetrieved",
@@ -39,8 +46,16 @@ const DocumentsResponsesQuerySchema = z
 router.get(
   "/documents.responses",
   function (req: Request, res: Response, next: NextFunction) {
-    // TODO: Do we want to return a certain status code when the Zod validation fails?
-    const { documentUri } = DocumentsContentsQuerySchema.parse(req.query);
+    let query;
+    try {
+      query = DocumentsResponsesQuerySchema.parse(req.query);
+    } catch {
+      res.sendStatus(422);
+      // TODO: Return seems to be considered acceptable practice, but should it be next() instead?
+      return;
+    }
+
+    const { documentUri } = query;
 
     const userId = req.session.currentUserId;
     req.db.responses
@@ -74,7 +89,15 @@ const DocumentsVerifyCompletionBodySchema = z
 router.post(
   "/documents.verifyCompletion",
   async function (req: Request, res: Response, next: NextFunction) {
-    const { documentUri } = DocumentsVerifyCompletionBodySchema.parse(req.body);
+    let body;
+    try {
+      body = DocumentsVerifyCompletionBodySchema.parse(req.body);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
+    const { documentUri } = body;
     const userId = req.session.currentUserId;
 
     // retrieve the document's completion conditions

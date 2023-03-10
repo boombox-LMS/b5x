@@ -54,6 +54,16 @@ describe("Documents routes should return a 200", () => {
         });
     });
 
+    test("documents.contents returns a 422 if an invalid data schema is sent", async () => {
+      await supertest(app)
+        .get(apiPrefix + `documents.contents?badKey=badValue`)
+        .set("Cookie", cookie)
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
+    });
+
     test("documents.contents returns the correct data type", () => {
       const validator = () => {
         DocumentContentsSchema.parse(responseBody);
@@ -75,6 +85,16 @@ describe("Documents routes should return a 200", () => {
         .then((res) => {
           responseBody = res.body;
         })
+        .catch((e) => {
+          throw e;
+        });
+    });
+
+    test("documents.responses returns a 422 if an invalid data schema is sent", async () => {
+      await supertest(app)
+        .get(apiPrefix + `documents.responses?badKey=badValue`)
+        .set("Cookie", cookie)
+        .expect(422)
         .catch((e) => {
           throw e;
         });
@@ -105,6 +125,17 @@ describe("Documents routes should return a 200", () => {
         .then((res) => {
           responseBody = res.body;
         })
+        .catch((e) => {
+          throw e;
+        });
+    });
+
+    test("documents.verifyCompletion returns a 422 when given a bad data schema", async () => {
+      await supertest(app)
+        .post(apiPrefix + `documents.verifyCompletion`)
+        .send({ badKey: "badValue" })
+        .set("Cookie", cookie)
+        .expect(422)
         .catch((e) => {
           throw e;
         });
