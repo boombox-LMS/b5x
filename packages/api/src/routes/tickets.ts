@@ -36,7 +36,7 @@ router.get(
 
 const ticketsCreateBodySchema = z
   .object({
-    description: z.string(),
+    description: z.any(), // This should be the object created by the RTF editor, but that's not in the types package yet
     title: z.string(),
     priorityLevel: TicketPriorityLevelSchema,
     reporterUrl: z.string(),
