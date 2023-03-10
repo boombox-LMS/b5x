@@ -135,11 +135,7 @@ router.get(
   "/topics.contents",
   function (req: Request, res: Response, next: NextFunction) {
     const { uri } = TopicContentsQuerySchema.parse(req.query);
-    if (typeof uri !== "string") {
-      // TODO: Figure out how to throw server error with status code,
-      // there is a ServerError in Express but I was having trouble finding it
-      throw new Error("Query param 'uri' has to be of type string");
-    }
+
     return req.db.users
       .getTopicAccessStatus({
         topicUri: uri,
