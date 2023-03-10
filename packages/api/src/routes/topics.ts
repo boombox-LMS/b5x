@@ -66,7 +66,7 @@ router.post(
  *  the topic details page and the topic contents.
  */
 
-const topicsInfoQuerySchema = z
+const TopicsInfoQuerySchema = z
   .object({
     uri: z.string().optional(),
     slug: z.string().optional(),
@@ -85,7 +85,7 @@ const topicsInfoQuerySchema = z
 router.get(
   "/topics.info",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri, slug } = topicsInfoQuerySchema.parse(req.query);
+    const { uri, slug } = TopicsInfoQuerySchema.parse(req.query);
     return req.db.users
       .getTopicAccessStatus({
         // @ts-ignore
