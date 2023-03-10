@@ -3,7 +3,7 @@ import { z } from "zod";
 
 const router = express.Router();
 
-const responsesCreateBodySchema = z
+const ResponsesCreateBodySchema = z
   .object({
     fragmentUri: z.string(),
     enrollmentId: z.number(),
@@ -15,7 +15,7 @@ const responsesCreateBodySchema = z
 router.post(
   "/responses.create",
   function (req: Request, res: Response, next: NextFunction) {
-    const body = responsesCreateBodySchema.parse(req.body);
+    const body = ResponsesCreateBodySchema.parse(req.body);
     const { fragmentUri, enrollmentId, value, status } = body;
 
     req.db.events.queueCreate({

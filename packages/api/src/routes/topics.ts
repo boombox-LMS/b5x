@@ -125,7 +125,7 @@ router.get(
  *  TODO: Write smoke test for endpoint.
  */
 
-const topicContentsQuerySchema = z
+const TopicContentsQuerySchema = z
   .object({
     uri: z.string(),
   })
@@ -134,7 +134,7 @@ const topicContentsQuerySchema = z
 router.get(
   "/topics.contents",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri } = topicContentsQuerySchema.parse(req.query);
+    const { uri } = TopicContentsQuerySchema.parse(req.query);
     if (typeof uri !== "string") {
       // TODO: Figure out how to throw server error with status code,
       // there is a ServerError in Express but I was having trouble finding it
@@ -174,7 +174,7 @@ router.get(
  *  status of each document in the topic.
  */
 
-const topicsEnrollmentQuerySchema = z
+const TopicsEnrollmentQuerySchema = z
   .object({
     uri: z.string(),
   })
@@ -183,7 +183,7 @@ const topicsEnrollmentQuerySchema = z
 router.get(
   "/topics.enrollment",
   function (req: Request, res: Response, next: NextFunction) {
-    const { uri: topicUri } = topicsEnrollmentQuerySchema.parse(req.query);
+    const { uri: topicUri } = TopicsEnrollmentQuerySchema.parse(req.query);
     const userId = req.session.currentUserId;
     // TODO: This returns a saved enrollment, but we don't want database IDs out there in public,
     // so this should go through the data manager instead, like everything else.
@@ -219,7 +219,7 @@ router.post(
   }
 );
 
-const topicsVerifyCompletionBodySchema = z
+const TopicsVerifyCompletionBodySchema = z
   .object({
     topicUri: z.string(),
   })
@@ -228,7 +228,7 @@ const topicsVerifyCompletionBodySchema = z
 router.post(
   "/topics.verifyCompletion",
   function (req: Request, res: Response, next: NextFunction) {
-    const { topicUri } = topicsVerifyCompletionBodySchema.parse(req.body);
+    const { topicUri } = TopicsVerifyCompletionBodySchema.parse(req.body);
     const userId = req.session.currentUserId;
     req.db.enrollments
       .find(userId, topicUri)
