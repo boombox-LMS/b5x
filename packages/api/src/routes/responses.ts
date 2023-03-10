@@ -15,7 +15,14 @@ const ResponsesCreateBodySchema = z
 router.post(
   "/responses.create",
   function (req: Request, res: Response, next: NextFunction) {
-    const body = ResponsesCreateBodySchema.parse(req.body);
+    let body;
+    try {
+      body = ResponsesCreateBodySchema.parse(req.body);
+    } catch {
+      res.sendStatus(422);
+      return;
+    }
+
     const { fragmentUri, enrollmentId, value, status } = body;
 
     req.db.events.queueCreate({
