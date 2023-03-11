@@ -55,12 +55,7 @@ export class UsersDbWrapper extends DbWrapper {
     let tagsToInsert: NewTag[] = [];
 
     params.users.forEach((user) => {
-      // validate user data
-      if (!user.email) {
-        throw new Error("Each user object must have an email key.");
-      }
-
-      const email = user.email;
+      const { email } = user;
 
       // collect users to create in bulk
       usersToInsert.push({ email, username: this.#generateUsername() });
