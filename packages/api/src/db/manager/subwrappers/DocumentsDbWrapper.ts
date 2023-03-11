@@ -144,7 +144,7 @@ export class DocumentsDbWrapper extends DbWrapper {
         return document;
       })
       .catch((e: any) => {
-        console.error(e);
+        throw e;
       });
   }
 
