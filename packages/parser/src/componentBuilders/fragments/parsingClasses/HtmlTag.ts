@@ -45,7 +45,7 @@ export class HtmlTag extends FragmentViaBxmlTag {
   bxmlNode: HtmlBxmlTag;
 
   constructor(params: FragmentViaBxmlTagParams) {
-    super(params);
+    super({ ...params, contentType: "HtmlTag" });
     this.bxmlNode = HtmlBxmlTagSchema.parse(params.bxmlNode);
     this.contents = this.bxmlNode.children[0].data.trim();
     this.childBxmlNodes = [];

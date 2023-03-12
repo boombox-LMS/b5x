@@ -37,6 +37,10 @@ import {
 
 import domSerializer from "dom-serializer";
 
+// Tags that should have their contents left completely alone,
+// to be handled exclusively by the dedicated parsing class
+const VERBATIM_TAGS = ["code-block", "html"];
+
 const removeWhitespaceBetweenTags = (bxmlNode: BxmlNode) => {
   let filteredChildren: BxmlChildNode[] = [];
 
@@ -153,7 +157,7 @@ export const coerceToBxmlTagNode = (
   // if it's a code block, compress its children to one
   // child node containing the entire code block's content,
   // no recursive parsing needed
-  if ("name" in element && element.name === "code-block") {
+  if ("name" in element && VERBATIM_TAGS.includes(element.name)) {
     bxmlTagNode.children.push({
       type: "text",
       data: domSerializer(element.childNodes),
