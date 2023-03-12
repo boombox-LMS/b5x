@@ -27,6 +27,7 @@ import { SimpleChecklist } from "./SimpleChecklist";
 
 export const contentComponents = {
   HtmlContent: HtmlContent,
+  HtmlTag: HtmlContent,
   Slideshow: Slideshow,
   Slide: Slide,
   Show: Show,
