@@ -41,6 +41,7 @@ export type FragmentViaArgsParams = z.infer<typeof FragmentViaArgsParamsSchema>;
 export const FragmentViaBxmlTagParamsSchema = FragmentParamsSchema.omit({
   contentType: true,
 }).extend({
+  contentType: FragmentContentTypeSchema.optional(),
   bxmlNode: BxmlTagNodeSchema,
 });
 

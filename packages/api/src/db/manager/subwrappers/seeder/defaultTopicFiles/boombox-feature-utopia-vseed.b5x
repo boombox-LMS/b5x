@@ -2430,10 +2430,218 @@
                 }
             },
             {
+                "uri": "boombox-feature-utopia-vseed_html",
+                "topicUri": "boombox-feature-utopia-vseed",
+                "slug": "html",
+                "order": 8,
+                "config": {},
+                "title": "Html content",
+                "displayConditions": [],
+                "childUris": [
+                    "boombox-feature-utopia-vseed_html_f1",
+                    "boombox-feature-utopia-vseed_html_f2",
+                    "boombox-feature-utopia-vseed_html_f7",
+                    "boombox-feature-utopia-vseed_html_f8"
+                ],
+                "digest": "621912f4aaac02e8d03dde53e8090804",
+                "contentMode": "documentation",
+                "completionConditions": [],
+                "externalDependencyUris": [],
+                "dependencyUris": [],
+                "fragmentsByUri": {
+                    "boombox-feature-utopia-vseed_html_f1": {
+                        "uri": "boombox-feature-utopia-vseed_html_f1",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h1 id=\"html-content\">Html content</h1>\n<h2 id=\"embedded-video-example\">Embedded video example</h2>\n",
+                        "digest": "680783ed99a456bce64bc723f3d5b65a",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f2": {
+                        "uri": "boombox-feature-utopia-vseed_html_f2",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_html_f3",
+                            "boombox-feature-utopia-vseed_html_f5"
+                        ],
+                        "contents": "",
+                        "digest": "54626492ad00498593098bb400a26b22",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f3": {
+                        "uri": "boombox-feature-utopia-vseed_html_f3",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_html_f4"
+                        ],
+                        "contents": "",
+                        "digest": "be19a667a9cefbb5369cfd61bf48bd0a",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f4": {
+                        "uri": "boombox-feature-utopia-vseed_html_f4",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "HtmlTag",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<iframe src=\"https://player.vimeo.com/video/15069551?h=d7a440a3ca\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen></iframe>\n<p><a href=\"https://vimeo.com/15069551\">The Unseen Sea</a> from <a href=\"https://vimeo.com/simonchristen\">Simon Christen</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>",
+                        "digest": "dc29ad27c7e89c6150d26d71e5d4a954",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f5": {
+                        "uri": "boombox-feature-utopia-vseed_html_f5",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_html_f6"
+                        ],
+                        "contents": "",
+                        "digest": "e9f9aef46041f029c1a91a2d532e58bc",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f6": {
+                        "uri": "boombox-feature-utopia-vseed_html_f6",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "html"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<html>\n<iframe src=\"https://player.vimeo.com/video/15069551?h=d7a440a3ca\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen></iframe>\n<p><a href=\"https://vimeo.com/15069551\">The Unseen Sea</a> from <a href=\"https://vimeo.com/simonchristen\">Simon Christen</a> on <a href=\"https://vimeo.com\">Vimeo</a>.</p>\n</html>",
+                        "digest": "56e9ac346e35db74792e14c43ebceb6a",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f7": {
+                        "uri": "boombox-feature-utopia-vseed_html_f7",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<h2 id=\"javascript-example-todo\">JavaScript example (TODO)</h2>\n",
+                        "digest": "8a96f1ae9271b87e7a458a0e644474d1",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f8": {
+                        "uri": "boombox-feature-utopia-vseed_html_f8",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "Tabs",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_html_f9",
+                            "boombox-feature-utopia-vseed_html_f11"
+                        ],
+                        "contents": "",
+                        "digest": "264248f3c6fa8321f29787fbf98c3848",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f9": {
+                        "uri": "boombox-feature-utopia-vseed_html_f9",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Result in browser"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_html_f10"
+                        ],
+                        "contents": "",
+                        "digest": "d7373176c0cad0b5a87ab9642445c497",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f10": {
+                        "uri": "boombox-feature-utopia-vseed_html_f10",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {},
+                        "contentType": "HtmlTag",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<button id=\"clickable-button\">Click me!</button>\n<script>\nconst button = document.getElementById(\"clickable-button\");\nbutton.addEventListener(\"click\", function() {\n  alert(\"Clicked!\");\n});\n</script>",
+                        "digest": "a1134f07c3ee30c7c3156e1645ac1bcf",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f11": {
+                        "uri": "boombox-feature-utopia-vseed_html_f11",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "title": "Markup in .md file"
+                        },
+                        "contentType": "Tab",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "boombox-feature-utopia-vseed_html_f12"
+                        ],
+                        "contents": "",
+                        "digest": "8876f1c5bdfea430facf3a73ddbb08e5",
+                        "dependencyUris": []
+                    },
+                    "boombox-feature-utopia-vseed_html_f12": {
+                        "uri": "boombox-feature-utopia-vseed_html_f12",
+                        "documentUri": "boombox-feature-utopia-vseed_html",
+                        "displayConditions": [],
+                        "data": {
+                            "language": "html"
+                        },
+                        "contentType": "CodeBlock",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<html>\n<button id=\"clickable-button\">Click me!</button>\n<script>\nconst button = document.getElementById(\"clickable-button\");\nbutton.addEventListener(\"click\", function() {\n  alert(\"Clicked!\");\n});\n</script>\n</html>",
+                        "digest": "2cd555f0bcd37ed4d2d628f0f40d69e9",
+                        "dependencyUris": []
+                    }
+                }
+            },
+            {
                 "uri": "boombox-feature-utopia-vseed_image",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "image",
-                "order": 8,
+                "order": 9,
                 "config": {},
                 "title": "Image",
                 "displayConditions": [],
@@ -2548,7 +2756,7 @@
                 "uri": "boombox-feature-utopia-vseed_long-text-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "long-text-question",
-                "order": 9,
+                "order": 10,
                 "config": {},
                 "title": "Long text question",
                 "displayConditions": [],
@@ -2678,7 +2886,7 @@
                 "uri": "boombox-feature-utopia-vseed_mermaid-diagram",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "mermaid-diagram",
-                "order": 10,
+                "order": 11,
                 "config": {},
                 "title": "Mermaid diagram",
                 "displayConditions": [],
@@ -2890,7 +3098,7 @@
                 "uri": "boombox-feature-utopia-vseed_multi-select-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "multi-select-question",
-                "order": 11,
+                "order": 12,
                 "config": {},
                 "title": "Multi select question",
                 "displayConditions": [],
@@ -3035,7 +3243,7 @@
                 "uri": "boombox-feature-utopia-vseed_nps-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "nps-question",
-                "order": 12,
+                "order": 13,
                 "config": {},
                 "title": "NPS question",
                 "displayConditions": [],
@@ -3165,7 +3373,7 @@
                 "uri": "boombox-feature-utopia-vseed_rubric",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "rubric",
-                "order": 13,
+                "order": 14,
                 "config": {},
                 "title": "Rubric",
                 "displayConditions": [],
@@ -3406,7 +3614,7 @@
                 "uri": "boombox-feature-utopia-vseed_short-text-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "short-text-question",
-                "order": 14,
+                "order": 15,
                 "config": {},
                 "title": "Short text question",
                 "displayConditions": [],
@@ -3536,7 +3744,7 @@
                 "uri": "boombox-feature-utopia-vseed_single-select-question",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "single-select-question",
-                "order": 15,
+                "order": 16,
                 "config": {},
                 "title": "Single select question",
                 "displayConditions": [],
@@ -3681,7 +3889,7 @@
                 "uri": "boombox-feature-utopia-vseed_slideshow",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "slideshow",
-                "order": 16,
+                "order": 17,
                 "config": {},
                 "title": "Slideshow",
                 "displayConditions": [],
@@ -3888,7 +4096,7 @@
                 "uri": "boombox-feature-utopia-vseed_star-rating",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "star-rating",
-                "order": 17,
+                "order": 18,
                 "config": {},
                 "title": "Star rating",
                 "displayConditions": [],
@@ -4018,7 +4226,7 @@
                 "uri": "boombox-feature-utopia-vseed_tabbed-content",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "tabbed-content",
-                "order": 18,
+                "order": 19,
                 "config": {},
                 "title": "Tabbed content",
                 "displayConditions": [],
@@ -4198,7 +4406,7 @@
                 "uri": "boombox-feature-utopia-vseed_troubleshooter",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "troubleshooter",
-                "order": 19,
+                "order": 20,
                 "config": {},
                 "title": "Troubleshooter",
                 "displayConditions": [],
@@ -4328,7 +4536,7 @@
                 "uri": "boombox-feature-utopia-vseed_visual-list",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "visual-list",
-                "order": 20,
+                "order": 21,
                 "config": {},
                 "title": "Visual list",
                 "displayConditions": [],
@@ -4616,7 +4824,7 @@
                 "uri": "boombox-feature-utopia-vseed_warning",
                 "topicUri": "boombox-feature-utopia-vseed",
                 "slug": "warning",
-                "order": 21,
+                "order": 22,
                 "config": {},
                 "title": "Warning",
                 "displayConditions": [],
@@ -4738,40 +4946,6 @@
                         "childUris": [],
                         "contents": "<warning>\nThis is an example warning.\n</warning>",
                         "digest": "6e984e81c524c5ade332e6995726c3fe",
-                        "dependencyUris": []
-                    }
-                }
-            },
-            {
-                "uri": "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript",
-                "topicUri": "boombox-feature-utopia-vseed",
-                "slug": "z-todo-custom-html-and-javascript",
-                "order": 22,
-                "config": {},
-                "title": "[TODO] Custom HTML and JavaScript",
-                "displayConditions": [],
-                "childUris": [
-                    "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript_f1"
-                ],
-                "digest": "376b6918d74d9d83a96dc89d9a5356c1",
-                "contentMode": "documentation",
-                "completionConditions": [],
-                "externalDependencyUris": [],
-                "dependencyUris": [],
-                "fragmentsByUri": {
-                    "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript_f1": {
-                        "uri": "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript_f1",
-                        "documentUri": "boombox-feature-utopia-vseed_z-todo-custom-html-and-javascript",
-                        "displayConditions": [],
-                        "data": {
-                            "isTemplated": false
-                        },
-                        "contentType": "HtmlContent",
-                        "isStateful": false,
-                        "isRequired": false,
-                        "childUris": [],
-                        "contents": "<h1 id=\"todo-custom-html-and-javascript\">[TODO] Custom HTML and JavaScript</h1>\n<p>TODO</p>\n",
-                        "digest": "a4591ba2bdef7bffa5e737c63e6904ca",
                         "dependencyUris": []
                     }
                 }

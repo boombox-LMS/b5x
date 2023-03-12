@@ -506,6 +506,23 @@ Object {
 }
 `;
 
+exports[`The output of each parsing class matches the snapshot The example html markup string at index 0 matches the snapshot 1`] = `
+Object {
+  "childUris": Array [],
+  "contentType": "HtmlTag",
+  "contents": "<iframe src=\\"https://player.vimeo.com/video/15069551?h=d7a440a3ca\\" width=\\"640\\" height=\\"360\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen></iframe>
+<p><a href=\\"https://vimeo.com/15069551\\">The Unseen Sea</a> from <a href=\\"https://vimeo.com/simonchristen\\">Simon Christen</a> on <a href=\\"https://vimeo.com\\">Vimeo</a>.</p>",
+  "data": Object {},
+  "dependencyUris": Array [],
+  "digest": "dc29ad27c7e89c6150d26d71e5d4a954",
+  "displayConditions": Array [],
+  "documentUri": "mock-document-uri",
+  "isRequired": false,
+  "isStateful": false,
+  "uri": "test-fragment-uri",
+}
+`;
+
 exports[`The output of each parsing class matches the snapshot The example long-text-question markup string at index 0 matches the snapshot 1`] = `
 Object {
   "childUris": Array [
