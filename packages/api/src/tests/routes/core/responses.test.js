@@ -1,6 +1,19 @@
 const supertest = require("supertest");
 const { UserResponseSchema } = require("@b5x/types");
 
+const getResponseCount = async (app) => {
+  return app
+    .get("db")
+    .knex("responses")
+    .count()
+    .then((rows) => {
+      return parseInt(rows[0].count);
+    })
+    .catch((e) => {
+      throw e;
+    });
+};
+
 describe("Responses routes should match expectations", () => {
   let app;
   let cookie = "";
@@ -36,8 +49,6 @@ describe("Responses routes should match expectations", () => {
       .catch((e) => {
         throw e;
       });
-
-    response.value = response.value + " (edited to add: this text right here)";
     response.status = "completed";
 
     // Log in as the user who posted the original response
@@ -75,14 +86,16 @@ describe("Responses routes should match expectations", () => {
 
   // responses.create -----------------------------------------------
 
-  describe("responses.create matches expectations", () => {
+  describe("responses.create handles a variety of inputs correctly", () => {
     let responseBody;
 
-    test("responses.create returns a 200", async () => {
+    test("it accepts a string value and creates a response", async () => {
+      const oldResponseCount = await getResponseCount(app);
+
       await supertest(app)
         .post(apiPrefix + "responses.create")
         .set("Cookie", cookie)
-        .send({ ...response })
+        .send({ ...response, value: "A new string value" })
         .expect(200)
         .then((res) => {
           responseBody = res.body;
@@ -90,9 +103,80 @@ describe("Responses routes should match expectations", () => {
         .catch((e) => {
           throw e;
         });
+
+      const newResponseCount = await getResponseCount(app);
+      expect(newResponseCount).toBe(oldResponseCount + 1);
     });
 
-    test("responses.create returns a 422 when an invalid data schema is sent", async () => {
+    /**
+     * It's odd to submit a boolean value or an object value in response
+     * to a ShortTextQuestion, but at the moment, the API doesn't consider
+     * the Content Type of the fragment when validating the value. So we're
+     * really just making sure that a value of any common type is accepted and stored.
+     *
+     * TODO: When the fragment libraries are more defined, the API should be updated
+     * to only accept values that are appropriate for the Content Type of the fragment.
+     * These tests will then have to be updated as well.
+     */
+
+    test("it accepts a boolean value and creates a response", async () => {
+      const oldResponseCount = await getResponseCount(app);
+
+      await supertest(app)
+        .post(apiPrefix + "responses.create")
+        .set("Cookie", cookie)
+        .send({ ...response, value: true })
+        .expect(200)
+        .then((res) => {
+          responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
+
+      const newResponseCount = await getResponseCount(app);
+      expect(newResponseCount).toBe(oldResponseCount + 1);
+    });
+
+    test("it accepts an object value and creates a response", async () => {
+      const oldResponseCount = await getResponseCount(app);
+
+      await supertest(app)
+        .post(apiPrefix + "responses.create")
+        .set("Cookie", cookie)
+        .send({ ...response, value: { someKey: { someNestedKey: 99 } } })
+        .expect(200)
+        .then((res) => {
+          responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
+
+      const newResponseCount = await getResponseCount(app);
+      expect(newResponseCount).toBe(oldResponseCount + 1);
+    });
+
+    test("it accepts an integer value and creates a response", async () => {
+      const oldResponseCount = await getResponseCount(app);
+
+      await supertest(app)
+        .post(apiPrefix + "responses.create")
+        .set("Cookie", cookie)
+        .send({ ...response, value: 4 })
+        .expect(200)
+        .then((res) => {
+          responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
+
+      const newResponseCount = await getResponseCount(app);
+      expect(newResponseCount).toBe(oldResponseCount + 1);
+    });
+
+    test("it returns a 422 when an invalid data schema is sent", async () => {
       await supertest(app)
         .post(apiPrefix + "responses.create")
         .set("Cookie", cookie)
@@ -103,7 +187,7 @@ describe("Responses routes should match expectations", () => {
         });
     });
 
-    test("responses.create returns the correct data type", () => {
+    test("it returns the correct data type", () => {
       const validator = () => {
         UserResponseSchema.parse(responseBody);
       };

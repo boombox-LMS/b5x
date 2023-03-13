@@ -1,4 +1,4 @@
-describe("A haunting backlog for API tests that should exist but don't yet (pulled from the coverage report)", () => {
+describe("A haunting backlog for API tests that should exist but don't yet (from the coverage report + smoke testing)", () => {
   test.todo(
     "topics.info should return 422 if neither the uri nor the slug are present"
   );
@@ -82,4 +82,6 @@ describe("A haunting backlog for API tests that should exist but don't yet (pull
   test.todo(
     "The user's profile data includes any badges that have been earned"
   );
+
+  // TODO: Test status updates for fragments after the new fragment model is implemented
 });
