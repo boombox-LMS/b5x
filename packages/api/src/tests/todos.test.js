@@ -40,14 +40,6 @@ describe("A haunting backlog for API tests that should exist but don't yet (from
     "If any of a user's access level rules for a topic includes a block rule, that one will override all other rules"
   );
 
-  test.todo(
-    "topics.getCatalog returns the correct data schema for a mix of not started, in progress, and completed topics"
-  );
-
-  test.todo(
-    "topics.getCatalog lists prerequisites correctly when they are present"
-  );
-
   test.todo("modifyGroups can remove users from groups");
 
   test.todo(

@@ -9,7 +9,8 @@ const {
 
 describe("Topics routes should match expectations", () => {
   let app;
-  let cookie = "";
+  let completedUserCookie = "";
+  let variableCatalogUserCookie = "";
   const forbiddenTopicUri = "access-test-topic-vseed";
   let testTopicUri = global.SMOKE_TEST_TOPIC_URI;
   const apiPrefix = global.__SUPERTEST_API_PREFIX__;
@@ -17,16 +18,29 @@ describe("Topics routes should match expectations", () => {
   beforeAll(async () => {
     // Add a seeded test database to the app, available as app.get('db')
     app = await global.buildAppWithSeededTestDatabase({
-      users: [{ persona: "completed" }],
+      users: [{ persona: "completed" }, { persona: "variable-catalog" }],
     });
 
-    // Log the user in
+    // Log the completed user in
     await supertest(app)
       .post(apiPrefix + "users.logIn")
       .send({ email: "completed-1@test.com" })
       .then((res) => {
         // Save the cookie to send with later requests
-        cookie = global.getCookie(res) || cookie;
+        completedUserCookie = global.getCookie(res) || completedUserCookie;
+      })
+      .catch((e) => {
+        throw e;
+      });
+
+    // Log the variable catalog user in
+    await supertest(app)
+      .post(apiPrefix + "users.logIn")
+      .send({ email: "variable-catalog-1@test.com" })
+      .then((res) => {
+        // Save the cookie to send with later requests
+        variableCatalogUserCookie =
+          global.getCookie(res) || variableCatalogUserCookie;
       })
       .catch((e) => {
         throw e;
@@ -43,10 +57,14 @@ describe("Topics routes should match expectations", () => {
   describe("topics.catalog matches expectations", () => {
     let responseBody;
 
+    test.todo(
+      "topics.getCatalog lists unmet prerequisites correctly when they are present"
+    );
+
     test("topics.catalog returns a 200", async () => {
       await supertest(app)
         .get(apiPrefix + "topics.catalog")
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(200)
         .then((res) => {
           responseBody = res.body;
@@ -56,10 +74,31 @@ describe("Topics routes should match expectations", () => {
         });
     });
 
-    test("topics.catalog returns the correct data type", () => {
+    test("topics.catalog returns the correct data type for a completed user", () => {
       const validator = () => {
         PublicCatalogSchema.parse(responseBody);
       };
+      expect(validator).not.toThrowError();
+    });
+
+    test("topics.catalog returns the correct data type for a variable catalog user", async () => {
+      let variableCatalogResponseBody;
+
+      await supertest(app)
+        .get(apiPrefix + "topics.catalog")
+        .set("Cookie", variableCatalogUserCookie)
+        .expect(200)
+        .then((res) => {
+          variableCatalogResponseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
+
+      const validator = () => {
+        PublicCatalogSchema.parse(variableCatalogResponseBody);
+      };
+
       expect(validator).not.toThrowError();
     });
   });
@@ -72,7 +111,7 @@ describe("Topics routes should match expectations", () => {
     test("topics.info returns a 200", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.info?uri=${testTopicUri}`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(200)
         .then((res) => {
           responseBody = res.body;
@@ -87,7 +126,7 @@ describe("Topics routes should match expectations", () => {
     test("it returns a 422 when no slug or uri is present", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.info?uri=undefined`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(422)
         .catch((e) => {
           throw e;
@@ -97,7 +136,7 @@ describe("Topics routes should match expectations", () => {
     test("it returns a 422 when both the slug and uri are present", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.info?uri=fakeTopicUri&slug=fakeTopicSlug`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(422)
         .catch((e) => {
           throw e;
@@ -108,7 +147,7 @@ describe("Topics routes should match expectations", () => {
   test("topics.info throws an error if the user tries to access a forbidden topic", async () => {
     await supertest(app)
       .get(apiPrefix + `topics.info?uri=${forbiddenTopicUri}`)
-      .set("Cookie", cookie)
+      .set("Cookie", completedUserCookie)
       .expect(403)
       .then((res) => {
         expect(res.body).toMatchSnapshot();
@@ -130,7 +169,7 @@ describe("Topics routes should match expectations", () => {
     test("topics.contents returns a 200", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.contents?uri=${testTopicUri}`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(200)
         .then((res) => {
           responseBody = res.body;
@@ -150,7 +189,7 @@ describe("Topics routes should match expectations", () => {
     test("topics.contents returns 403 if the user does not have access to the topic", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.contents?uri=${forbiddenTopicUri}`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(403)
         .then((res) => {
           responseBody = res.body;
@@ -163,7 +202,7 @@ describe("Topics routes should match expectations", () => {
     test("topics.contents returns a 422 when given an invalid data schema", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.contents?uri=undefined`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(422)
         .catch((e) => {
           throw e;
@@ -191,7 +230,7 @@ describe("Topics routes should match expectations", () => {
       // trigger enrollment creation
       await supertest(app)
         .get(apiPrefix + `topics.enrollment?uri=${testTopicUri}`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(200)
         .then((res) => {
           enrollmentResponseBody = res.body;
@@ -203,7 +242,7 @@ describe("Topics routes should match expectations", () => {
       // verify topic completion
       await supertest(app)
         .post(apiPrefix + "topics.verifyCompletion")
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .send({ topicUri: testTopicUri })
         .expect(200)
         .then((res) => {
@@ -241,7 +280,7 @@ describe("Topics routes should match expectations", () => {
     test("topics.verifyCompletion should return 422 if the topicUri is undefined", async () => {
       await supertest(app)
         .post(apiPrefix + "topics.verifyCompletion")
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .send({ topicUri: undefined })
         .expect(422)
         .catch((e) => {
@@ -254,7 +293,7 @@ describe("Topics routes should match expectations", () => {
     test("topics.enrollment should return 422 if the uri is undefined", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.enrollment?uri=undefined`)
-        .set("Cookie", cookie)
+        .set("Cookie", completedUserCookie)
         .expect(422)
         .catch((e) => {
           throw e;
