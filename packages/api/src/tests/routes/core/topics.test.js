@@ -10,6 +10,7 @@ const {
 describe("Topics routes should match expectations", () => {
   let app;
   let cookie = "";
+  const forbiddenTopicUri = "access-test-topic-vseed";
   let testTopicUri = global.SMOKE_TEST_TOPIC_URI;
   const apiPrefix = global.__SUPERTEST_API_PREFIX__;
 
@@ -105,7 +106,6 @@ describe("Topics routes should match expectations", () => {
   });
 
   test("topics.info throws an error if the user tries to access a forbidden topic", async () => {
-    const forbiddenTopicUri = "access-test-topic-vseed";
     await supertest(app)
       .get(apiPrefix + `topics.info?uri=${forbiddenTopicUri}`)
       .set("Cookie", cookie)
@@ -117,6 +117,10 @@ describe("Topics routes should match expectations", () => {
         throw e;
       });
   });
+
+  test.todo(
+    "topics.verifyCompletion should return false if the topic does not pass the completion check"
+  );
 
   // topics.contents ------------------------------------------------
 
@@ -136,6 +140,26 @@ describe("Topics routes should match expectations", () => {
         });
     });
 
+    test("topics.contents returns the correct data type", () => {
+      const validator = () => {
+        PublicTopicSchema.parse(responseBody);
+      };
+      expect(validator).not.toThrowError();
+    });
+
+    test("topics.contents returns 403 if the user does not have access to the topic", async () => {
+      await supertest(app)
+        .get(apiPrefix + `topics.contents?uri=${forbiddenTopicUri}`)
+        .set("Cookie", cookie)
+        .expect(403)
+        .then((res) => {
+          responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
+    });
+
     test("topics.contents returns a 422 when given an invalid data schema", async () => {
       await supertest(app)
         .get(apiPrefix + `topics.contents?uri=undefined`)
@@ -144,13 +168,6 @@ describe("Topics routes should match expectations", () => {
         .catch((e) => {
           throw e;
         });
-    });
-
-    test("topics.contents returns the correct data type", () => {
-      const validator = () => {
-        PublicTopicSchema.parse(responseBody);
-      };
-      expect(validator).not.toThrowError();
     });
   });
 

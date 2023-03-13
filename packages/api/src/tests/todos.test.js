@@ -1,13 +1,5 @@
 describe("A haunting backlog for API tests that should exist but don't yet (from the coverage report + smoke testing)", () => {
   test.todo(
-    "topics.contents should return 403 if the user does not have access to the topic"
-  );
-
-  test.todo(
-    "topics.verifyCompletion should return false if the topic does not pass the completion check"
-  );
-
-  test.todo(
     "User tag removal should throw an error if a value is given without a key"
   );
 
