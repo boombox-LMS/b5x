@@ -4,14 +4,6 @@ describe("A haunting backlog for API tests that should exist but don't yet (from
   );
 
   test.todo(
-    "topics.enrollment should return 422 if the query data schema is invalid"
-  );
-
-  test.todo(
-    "topics.verifyCompletion should return 422 if the query data schema is invalid"
-  );
-
-  test.todo(
     "topics.verifyCompletion should return false if the topic does not pass the completion check"
   );
 

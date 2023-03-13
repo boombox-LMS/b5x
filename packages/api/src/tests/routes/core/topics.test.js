@@ -88,9 +88,6 @@ describe("Topics routes should match expectations", () => {
         .get(apiPrefix + `topics.info?uri=undefined`)
         .set("Cookie", cookie)
         .expect(422)
-        .then((res) => {
-          responseBody = res.body;
-        })
         .catch((e) => {
           throw e;
         });
@@ -101,9 +98,6 @@ describe("Topics routes should match expectations", () => {
         .get(apiPrefix + `topics.info?uri=fakeTopicUri&slug=fakeTopicSlug`)
         .set("Cookie", cookie)
         .expect(422)
-        .then((res) => {
-          responseBody = res.body;
-        })
         .catch((e) => {
           throw e;
         });
@@ -172,7 +166,7 @@ describe("Topics routes should match expectations", () => {
 
   // topics.enrollment + topics.verifyCompletion --------------------
 
-  describe("topics.enrollment and topics.verifyCompletion match expectations", () => {
+  describe("topics.enrollment and topics.verifyCompletion match expectations when given valid input", () => {
     let enrollmentResponseBody;
     let completionResponseBody;
 
@@ -223,6 +217,31 @@ describe("Topics routes should match expectations", () => {
         ResponseBodySchema.parse(completionResponseBody);
       };
       expect(validator).not.toThrowError();
+    });
+  });
+
+  describe("topics.verifyCompletion refuses bad input", () => {
+    test("topics.verifyCompletion should return 422 if the topicUri is undefined", async () => {
+      await supertest(app)
+        .post(apiPrefix + "topics.verifyCompletion")
+        .set("Cookie", cookie)
+        .send({ topicUri: undefined })
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
+    });
+  });
+
+  describe("topics.enrollment refuses bad input", () => {
+    test("topics.enrollment should return 422 if the uri is undefined", async () => {
+      await supertest(app)
+        .get(apiPrefix + `topics.enrollment?uri=undefined`)
+        .set("Cookie", cookie)
+        .expect(422)
+        .catch((e) => {
+          throw e;
+        });
     });
   });
 });
