@@ -82,4 +82,10 @@ describe("A haunting backlog for API tests that should exist but don't yet (pull
   test.todo(
     "The user's profile data includes any badges that have been earned"
   );
+
+  test.todo("A boolean is a valid response value");
+
+  test.todo("An object is a valid response value");
+
+  // TODO: Test status updates for fragments after the new fragment model is implemented
 });
