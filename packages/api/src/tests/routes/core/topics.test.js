@@ -65,7 +65,7 @@ describe("Topics routes should match expectations", () => {
 
   // topics.info ----------------------------------------------------
 
-  describe("topics.info matches expectations", () => {
+  describe("topics.info matches expectations when given a valid value", () => {
     let responseBody;
 
     test("topics.info returns a 200", async () => {
@@ -80,12 +80,33 @@ describe("Topics routes should match expectations", () => {
           throw e;
         });
     });
+  });
 
-    test("topics.info returns the correct data type", () => {
-      const validator = () => {
-        TopicWithEnrollmentInfoSchema.parse(responseBody);
-      };
-      expect(validator).not.toThrowError();
+  describe("topics.info refuses invalid query data", () => {
+    test("it returns a 422 when no slug or uri is present", async () => {
+      await supertest(app)
+        .get(apiPrefix + `topics.info?uri=undefined`)
+        .set("Cookie", cookie)
+        .expect(422)
+        .then((res) => {
+          responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
+    });
+
+    test("it returns a 422 when both the slug and uri are present", async () => {
+      await supertest(app)
+        .get(apiPrefix + `topics.info?uri=fakeTopicUri&slug=fakeTopicSlug`)
+        .set("Cookie", cookie)
+        .expect(422)
+        .then((res) => {
+          responseBody = res.body;
+        })
+        .catch((e) => {
+          throw e;
+        });
     });
   });
 

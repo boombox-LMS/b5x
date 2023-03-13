@@ -1,18 +1,5 @@
 describe("A haunting backlog for API tests that should exist but don't yet (from the coverage report + smoke testing)", () => {
   test.todo(
-    "topics.info should return 422 if neither the uri nor the slug are present"
-  );
-
-  test.todo(
-    "topics.info should return 422 if both the uri and the slug are present"
-  );
-
-  // use uri=undefined for this one
-  test.todo(
-    "topics.info should return 422 if the query data schema is invalid"
-  );
-
-  test.todo(
     "topics.contents should return 403 if the user does not have access to the topic"
   );
 
