@@ -1228,15 +1228,16 @@
                 "childUris": [
                     "smoke-testing-vseed_login-logout_f1",
                     "smoke-testing-vseed_login-logout_f2",
-                    "smoke-testing-vseed_login-logout_f3"
+                    "smoke-testing-vseed_login-logout_f4",
+                    "smoke-testing-vseed_login-logout_f5"
                 ],
-                "digest": "fedc427f88b507b266e954a08ddfc9d4",
+                "digest": "fab97e7401aaa42cdfdfe15b87875d49",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
                         "type": "condition",
                         "data": {
-                            "uri": "smoke-testing-vseed_login-logout_f2",
+                            "uri": "smoke-testing-vseed_login-logout_f4",
                             "operator": "status-is",
                             "targetValue": "completed"
                         }
@@ -1265,6 +1266,39 @@
                         "documentUri": "smoke-testing-vseed_login-logout",
                         "displayConditions": [],
                         "data": {
+                            "title": "Test placeholder",
+                            "iconSize": "small"
+                        },
+                        "contentType": "Breakout",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [
+                            "smoke-testing-vseed_login-logout_f3"
+                        ],
+                        "contents": "",
+                        "digest": "431b7a3b5357cdab95b52bc83165c56d",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_login-logout_f3": {
+                        "uri": "smoke-testing-vseed_login-logout_f3",
+                        "documentUri": "smoke-testing-vseed_login-logout",
+                        "displayConditions": [],
+                        "data": {
+                            "isTemplated": false
+                        },
+                        "contentType": "HtmlContent",
+                        "isStateful": false,
+                        "isRequired": false,
+                        "childUris": [],
+                        "contents": "<p>These tests aren&#39;t very important until Okta auth is implemented, but they&#39;re included so they aren&#39;t overlooked later.</p>\n<p>For now, you can just check them off as long as you are able to log in and log out, even if you have to manually go to the login page after logout, or the home page after login, rather than being automatically redirected.</p>\n",
+                        "digest": "13be1dab05de9cb4a43358e787481d11",
+                        "dependencyUris": []
+                    },
+                    "smoke-testing-vseed_login-logout_f4": {
+                        "uri": "smoke-testing-vseed_login-logout_f4",
+                        "documentUri": "smoke-testing-vseed_login-logout",
+                        "displayConditions": [],
+                        "data": {
                             "steps": [
                                 {
                                     "label": "<p>You can log out without errors.</p>\n",
@@ -1288,14 +1322,14 @@
                         "digest": "fa840d8e6adaf3a411f8ed2b5a55ab9d",
                         "dependencyUris": []
                     },
-                    "smoke-testing-vseed_login-logout_f3": {
-                        "uri": "smoke-testing-vseed_login-logout_f3",
+                    "smoke-testing-vseed_login-logout_f5": {
+                        "uri": "smoke-testing-vseed_login-logout_f5",
                         "documentUri": "smoke-testing-vseed_login-logout",
                         "displayConditions": [
                             {
                                 "type": "condition",
                                 "data": {
-                                    "uri": "smoke-testing-vseed_login-logout_f2",
+                                    "uri": "smoke-testing-vseed_login-logout_f4",
                                     "operator": "status-is",
                                     "targetValue": "completed"
                                 }
@@ -1309,7 +1343,7 @@
                         "contents": "",
                         "digest": "ac3b56fe9a950ac7ca42f08ab5bf5d01",
                         "dependencyUris": [
-                            "smoke-testing-vseed_login-logout_f2"
+                            "smoke-testing-vseed_login-logout_f4"
                         ]
                     }
                 }
@@ -1327,7 +1361,7 @@
                     "smoke-testing-vseed_dashboard-stats_f2",
                     "smoke-testing-vseed_dashboard-stats_f3"
                 ],
-                "digest": "355758e60793a2de6f2cb0af7beb6577",
+                "digest": "41ce08bba2c85fc351afc0c60095f329",
                 "contentMode": "tutorial",
                 "completionConditions": [
                     {
@@ -1376,10 +1410,6 @@
                                     "id": "dfde7c4b5d13f540dca78e90607ce1b3"
                                 },
                                 {
-                                    "label": "<p>Your progress on this topic is shown in the Topics dashboard.</p>\n",
-                                    "id": "91671822b845b9d0cdd4dcdd803f9f1f"
-                                },
-                                {
                                     "label": "<p>Your activities as a user (at a high level) are shown in the Users dashboard.</p>\n",
                                     "id": "2686d6182cef63dc9fc9f368b5187848"
                                 },
@@ -1398,7 +1428,7 @@
                         "isRequired": true,
                         "childUris": [],
                         "contents": "",
-                        "digest": "b0f4e7d16905a3bb98298818d641664f",
+                        "digest": "73d252e6657a18d9addac2909119517a",
                         "dependencyUris": []
                     },
                     "smoke-testing-vseed_dashboard-stats_f3": {
