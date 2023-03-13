@@ -27,7 +27,7 @@ export class FragmentViaBxmlTag extends Fragment {
     super(params);
     this.contents = "";
     this.bxmlNode = params.bxmlNode;
-    this.contentType = this.#detectContentType();
+    this.contentType = params.contentType || this.#detectContentType();
     this.bxmlNode.children.forEach((childBxmlNode) => {
       if (!("name" in childBxmlNode) || childBxmlNode.name !== "config") {
         // TODO: Hoist config later, or just kill it at the fragment level
